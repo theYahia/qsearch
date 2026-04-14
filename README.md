@@ -11,14 +11,14 @@ This repo is the follow-through. **A search API built on the QVAC SDK**, where B
 
 We call it **the open-web hop for QVAC agents**.
 
-> 🚧 **Day 1 of a 7-day public build.** This README is the thesis; code ships this week.
+> 🚧 **Day 1 of a 7-day public build (2026-04-14).** Everything here is the thesis and the plan — no runnable code in the repo yet. v0.1 ships 2026-04-17.
 > Daily log: [@TheTieTieTies](https://x.com/TheTieTieTies) · Roadmap: [ROADMAP.md](./ROADMAP.md)
 
 ---
 
 ## Why qsearch exists
 
-Tether just shipped an edge-first open-source stack:
+Tether's edge-first open-source stack came together over the past week:
 
 - **QVAC SDK** (2026-04-09) — local LLM inference on phones, laptops, Raspberry Pi
 - **WDK** (2026-04-13) — self-custodial wallet toolkit
@@ -53,7 +53,7 @@ Not because it's trendy. Because it's the only search backend where the whole ar
 - **Data-for-AI tier, BYOK.** Brave's commercial tier explicitly supports AI transformation of results, removing the ToS grey zone that blocks agent apps on other providers.
 - **No query profiling upstream.** Brave's business model doesn't depend on tracking queries. The data-hygiene story is consistent end-to-end: Brave doesn't track, qsearch doesn't clean in the cloud, the agent stays local.
 - **Not owned by a cloud giant.** Using Google/Bing to power a *Tether-aligned, edge-first* primitive would be architecturally incoherent. Brave is independent — that matches the ethos of the stack we're building on.
-- **Stable API, good docs.** Practical bonus: every hour spent fighting the provider is an hour not spent on the cleaning layer, which is where the actual differentiation lives.
+- **Stable API, good docs.** Less time fighting the backend, more time on the cleaning layer — which is where the differentiation lives.
 
 We're not locked to Brave forever — v2 may add SearXNG or Mullvad Leta as drop-in providers. But for the MVP, **one backend that fits the thesis end-to-end > three backends that fight it**.
 
