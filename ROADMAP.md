@@ -15,8 +15,8 @@ This roadmap is the public accountability contract. Every day ships one visible 
 - [x] README.md — thesis, three differentiators, MVP API shape
 - [x] ROADMAP.md — this file
 - [x] LICENSE — Apache-2.0
-- [ ] Follow-up tweet in the WDK-reposted thread linking this repo
-- [ ] QVAC issue #1508 / #1492 technical reproduction comment (stretch)
+- [x] Follow-up tweet in the WDK-reposted thread linking this repo
+- [x] QVAC issue #1508 technical reproduction comment (stretch ✅)
 
 **Output to the world:** "Repo is live. Here's the thesis. Code ships this week."
 
