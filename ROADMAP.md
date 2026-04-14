@@ -1,6 +1,6 @@
 # qsearch — 7-day build-in-public roadmap
 
-**Commitment:** *"Planning to build a search API with QVAC SDK"*
+**Commitment:** *["Planning to build a search API with QVAC SDK"](https://x.com/TheTieTieTies/status/2044039772981576181)*
 (Posted from [@TheTieTieTies](https://x.com/TheTieTieTies), reposted by [@WDK_tether](https://x.com/WDK_tether) on 2026-04-14.)
 
 **Pitch day:** 2026-04-21 (Tether hiring conversation).
