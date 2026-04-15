@@ -20,14 +20,14 @@ This roadmap is the public accountability contract. Every day ships one visible 
 
 **Output to the world:** "Repo is live. Here's the thesis. Code ships this week."
 
-## Day 2 — 2026-04-15 · Bare + Brave working
+## Day 2 — 2026-04-15 · Bare + Brave working ✅
 
-- `@qvac/sdk` installed on Windows (or WSL fallback documented)
-- Bare-runtime HTTP server skeleton: `POST /search` echoing the query
-- First real Brave API call returning raw results to stdout
-- No LLM yet — the raw pipe works end-to-end
+- [x] HTTP server skeleton: `POST /search` returning raw Brave JSON (Node runtime; Bare port lands Day 3 with `@qvac/sdk`)
+- [x] First real Brave API call wired through the server, end-to-end
+- [x] Raw pipe works — `curl localhost:8080/search` returns live Brave results
+- [ ] `@qvac/sdk` install on Windows — **deferred to Day 3**, lands together with the cleaning layer
 
-**Output:** screenshot of `curl localhost:8080/search` returning Brave JSON.
+**Output:** [`docs/day2-demo.json`](./docs/day2-demo.json) — live Brave response captured from the running server. First hit on `"qvac sdk release notes"`: *Show HN: QVAC SDK*. Commit: `40996e8`.
 
 ## Day 3 — 2026-04-16 · QVAC cleaning integrated
 
