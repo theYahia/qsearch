@@ -3,7 +3,7 @@
 > *"[Planning to build a search API with QVAC SDK.](https://x.com/TheTieTieTies/status/2044039772981576181)"*
 
 ![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)
-![Status: Day 1 of 7](https://img.shields.io/badge/status-day%201%20of%207-yellow.svg)
+![Status: v0.1 live](https://img.shields.io/badge/status-v0.1%20live-brightgreen.svg)
 ![Built on @qvac/sdk](https://img.shields.io/badge/built%20on-%40qvac%2Fsdk-16a34a.svg)
 ![Pitch day 2026-04-21](https://img.shields.io/badge/pitch%20day-2026--04--21-ef4444.svg)
 
@@ -11,8 +11,8 @@ This repo is the follow-through. **A search API built on the QVAC SDK**, where B
 
 We call it **the open-web hop for QVAC agents**.
 
-> 🚧 **Day 1 of a 7-day public build (2026-04-14).** Everything here is the thesis and the plan — no runnable code in the repo yet. v0.1 ships 2026-04-17.
-> Daily log: [@TheTieTieTies](https://x.com/TheTieTieTies) · Roadmap: [ROADMAP.md](./ROADMAP.md)
+> ✅ **v0.1 live (2026-04-15).** `git clone && npm install && npm start` — full pipeline working: Brave fetch → local Qwen3-0.6B cleaning → structured JSON.
+> Daily log: [@TheTieTieTies](https://x.com/TheTieTieTies) · Roadmap: [ROADMAP.md](./ROADMAP.md) · PRD: [docs/PRD.md](./docs/PRD.md)
 
 ---
 
@@ -70,33 +70,44 @@ We're not locked to Brave forever — v2 may add SearXNG or Mullvad Leta as drop
 
 qsearch is the first row where *all* of these are checked. That's the wedge — not better snippets, not faster ranking. **Local cleaning on OSS, as a primitive for agents.** The intersection didn't exist until now.
 
-## MVP API (target shape for v0.1)
-
-> ⚠️ **Status:** shipping 2026-04-17. The example below is the target shape, not a live endpoint yet. Current repo state: skeleton + thesis.
+## API — v0.1 (live)
 
 ```bash
 curl -X POST http://localhost:8080/search \
   -H "Content-Type: application/json" \
-  -d '{"query": "latest QVAC SDK release notes", "n_results": 5}'
+  -d '{"query": "qvac sdk", "n_results": 2}'
 ```
 
 ```json
 {
+  "query": "qvac sdk",
+  "model": "QWEN3_600M_INST_Q4",
+  "brave_ms": 819,
   "results": [
     {
-      "url": "https://...",
-      "title": "...",
-      "cleaned_markdown": "QVAC SDK 0.9.0 shipped on 2026-04-09...",
-      "source_score": 0.87
+      "url": "https://qvac.tether.io/",
+      "title": "QVAC - Decentralized, Local AI in a Single API",
+      "description": "QVAC is Tether's answer to centralized AI...",
+      "cleaned_markdown": "QVAC is a decentralized, local AI platform built on Tether, offering a new paradigm where intelligence runs privately, locally, and without permission on any device.",
+      "clean_ms": 1420
+    },
+    {
+      "url": "https://tether.io/news/tether-launches-qvac-sdk...",
+      "title": "Tether Launches QVAC SDK...",
+      "description": "QVAC SDK is a unified software development kit...",
+      "cleaned_markdown": "Tether.io launched the QVAC SDK, a unified AI development kit enabling AI training and evolution across any device and platform.",
+      "clean_ms": 1008
     }
   ]
 }
 ```
 
+`brave_ms` = Brave fetch latency. `clean_ms` = local LLM inference per result. The green node in the diagram above — that's where `clean_ms` happens, on your machine.
+
 **Stack:**
-- **Runtime:** Node.js via Bare (required by `@qvac/sdk`)
-- **Backend:** Brave Search API, BYOK (`BRAVE_API_KEY` env var)
-- **LLM:** `@qvac/sdk` with a small quantized model (Llama 3.2 1B or Qwen 0.5B)
+- **Runtime:** Node.js ≥20 (`@qvac/sdk` bundles bare worker — no system install needed)
+- **Backend:** Brave Search API, BYOK (`BRAVE_API_KEY` in `.env.local`)
+- **LLM:** `@qvac/sdk` with Qwen3-0.6B Q4 (~364MB, downloads once, cached locally)
 - **License:** Apache-2.0
 
 ## Honest trade-offs
@@ -110,7 +121,7 @@ curl -X POST http://localhost:8080/search \
 
 A new commit, demo, or writeup ships every day until **2026-04-21**.
 
-- ⭐ **Star this repo** to get notified when v0.1 lands (target: 2026-04-17)
+- ⭐ **Star this repo** — v0.1 is live, v0.2 ships with PII redaction + configurable model
 - 🐦 **X thread:** [@TheTieTieTies](https://x.com/TheTieTieTies) — daily updates
 - 🗺️ **Full 7-day plan:** [ROADMAP.md](./ROADMAP.md)
 - 📝 **Feature requests for v2:** open an issue
