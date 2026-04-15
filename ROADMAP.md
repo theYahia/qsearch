@@ -40,22 +40,22 @@ This roadmap is the public accountability contract. Every day ships one visible 
 
 **Output:** live JSON with `cleaned_markdown` — full pipeline on local machine. Shipped Day 2 night (ahead of schedule).
 
-## Day 4 — 2026-04-17 · v0.1 ships
+## Day 4 — 2026-04-15 · v0.1 ships ✅ (shipped early, same day as Day 3)
 
-- `npx` bootstrap path OR `bare` command documented
-- README updated with real `curl` example (not the aspirational one)
-- Tag `v0.1.0`
-- Post release in the WDK thread
+- [x] README updated with real `curl` output (live `cleaned_markdown`, real latency numbers)
+- [x] Tag `v0.1.0` — pushed to GitHub, visible in Releases
+- [x] `npm install && npm start` bootstrap documented — bare worker bundled, no system install
+- [x] `git clone && npm install && npm start` works on Windows 11 x64, tested
 
-**Output:** "qsearch v0.1 is live — `git clone && npm run start`, works on your machine."
+**Output:** `v0.1.0` tag live on GitHub. Full pipeline: Brave fetch → Qwen3-0.6B local cleaning → structured JSON.
 
-## Day 5 — 2026-04-18 · Write the blog post
+## Day 5 — 2026-04-15 · Write the blog post ✅ (shipped early)
 
-- Technical write-up: *"Why cleaning needs to run on your hardware, not ours"*
-- Covers: the open-web hop gap, the architectural difference vs Exa/Tavily/Sonar, the QVAC cleaning step line-by-line
-- Drafted end-of-day, reviewed, not yet published
+- [x] Technical write-up: *"Why cleaning needs to run on your hardware, not ours"*
+- [x] Covers: half-sovereign problem, three-step pipeline, vs Exa/Tavily, cleaning step line-by-line, honest trade-offs
+- [x] Code snippets from actual `src/server.js` — no aspirational examples
 
-**Output:** draft blog post, pushed as `BLOG.md` or a Gist.
+**Output:** [`BLOG.md`](./BLOG.md) — shipped as part of the repo.
 
 ## Day 6 — 2026-04-19 · Public launch
 
