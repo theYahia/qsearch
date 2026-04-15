@@ -25,9 +25,9 @@ if (!BRAVE_KEY) {
 
 const BRAVE_ENDPOINT = 'https://api.search.brave.com/res/v1/web/search'
 
-const CLEAN_SYSTEM = `You are a search result cleaner for a local AI agent.
-Given a web search result, extract the key information as clean dense markdown.
-Be concise — 2-3 sentences max. Return only the cleaned content, no preamble.`
+const CLEAN_SYSTEM = `You are a search result cleaner for a local AI agent. /no_think
+Given a web search result, extract the key information as 1-2 concise sentences of plain prose.
+No bullet points. No headers. No thinking. Return only the cleaned sentences.`
 
 let modelIdPromise = null
 
@@ -109,7 +109,8 @@ async function handleSearch (req, res) {
     const cleanStart = Date.now()
     let cleaned_markdown = null
     try {
-      cleaned_markdown = await cleanResult(item)
+      const raw = await cleanResult(item)
+      cleaned_markdown = raw.replace(/<think>[\s\S]*?<\/think>/g, '').trim()
     } catch (err) {
       console.error('QVAC clean error:', String(err))
       // graceful degradation — return raw snippet if local LLM fails
