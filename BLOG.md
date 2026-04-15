@@ -35,7 +35,7 @@ The pipeline has three steps, and the key is where each step runs.
 **Step 1 — Brave fetch (outbound, BYOK)**
 
 ```
-POST /search { "query": "qvac sdk release notes", "n_results": 3 }
+POST /search { "query": "qvac sdk", "n_results": 2 }
     ↓
 Brave Search API (your key, your quota, no intermediary)
     ↓
@@ -60,21 +60,29 @@ This is the green node. The model — 364MB, quantized, cached at `~/.qvac/model
 
 ```json
 {
-  "query": "qvac sdk release notes",
+  "query": "qvac sdk",
   "model": "QWEN3_600M_INST_Q4",
   "brave_ms": 819,
   "results": [
     {
       "url": "https://qvac.tether.io/",
       "title": "QVAC - Decentralized, Local AI in a Single API",
+      "description": "QVAC is Tether's answer to centralized AI...",
       "cleaned_markdown": "QVAC is a decentralized, local AI platform built on Tether, offering a new paradigm where intelligence runs privately, locally, and without permission on any device.",
       "clean_ms": 1420
+    },
+    {
+      "url": "https://tether.io/news/tether-launches-qvac-sdk...",
+      "title": "Tether Launches QVAC SDK...",
+      "description": "QVAC SDK is a unified software development kit...",
+      "cleaned_markdown": "Tether.io launched the QVAC SDK, a unified AI development kit enabling AI training and evolution across any device and platform.",
+      "clean_ms": 1008
     }
   ]
 }
 ```
 
-`brave_ms` is the Brave fetch latency — the only outbound network hop. `clean_ms` is inference time — 1.4 seconds on a laptop CPU for Qwen3-0.6B. That's the whole pipeline. The agent gets structured, readable content without any cleaning happening outside its hardware boundary.
+`brave_ms` is the Brave fetch latency — the only outbound network hop. `clean_ms` is inference time per result — 1.4s and 1.0s on a laptop CPU for Qwen3-0.6B. This is real output from the Day 3 run. That's the whole pipeline. The agent gets structured, readable content without any cleaning happening outside its hardware boundary.
 
 ---
 
@@ -158,7 +166,7 @@ Three things worth noting:
 
 **Single provider.** Brave only in v0.1. SearXNG as a self-hosted fallback is planned for v0.2 — no API key required, runs on your own index.
 
-**Cold start.** The bare worker spawns and the model loads when the server starts. On a cold machine this takes 3-5 seconds. Once warm, inference is ~1s per result. Run it as a long-lived daemon, not a cold lambda.
+**Cold start.** The bare worker spawns and the model loads when the server starts. On a cold machine this takes a few seconds (364MB gguf loaded to RAM + bare worker init). Once warm, inference is ~1s per result. Run it as a long-lived daemon, not a cold lambda.
 
 ---
 
