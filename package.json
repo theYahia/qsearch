@@ -14,5 +14,8 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "@qvac/sdk": "^0.8.3"
   }
 }

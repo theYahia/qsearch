@@ -1,10 +1,11 @@
-// qsearch — Day 2 skeleton: POST /search → raw Brave Search API JSON.
-// Node runtime for now; Bare port lands Day 3 with @qvac/sdk.
+// qsearch — Day 3: Brave fetch + QVAC local LLM cleaning pipeline.
+// Model: Qwen3-0.6B Q4 (~364MB, downloads once on first request).
 
 import http from 'node:http'
 import { readFileSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
+import { loadModel, completion, QWEN3_600M_INST_Q4 } from '@qvac/sdk'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const envPath = join(__dirname, '..', '.env.local')
@@ -24,6 +25,45 @@ if (!BRAVE_KEY) {
 
 const BRAVE_ENDPOINT = 'https://api.search.brave.com/res/v1/web/search'
 
+const CLEAN_SYSTEM = `You are a search result cleaner for a local AI agent.
+Given a web search result, extract the key information as clean dense markdown.
+Be concise — 2-3 sentences max. Return only the cleaned content, no preamble.`
+
+let modelIdPromise = null
+
+function warmModel () {
+  if (modelIdPromise) return modelIdPromise
+  console.log('Loading QVAC model (Qwen3-0.6B Q4, ~364MB — downloads once)...')
+  modelIdPromise = loadModel({
+    modelSrc: QWEN3_600M_INST_Q4,
+    modelType: 'llamacpp-completion',
+    onProgress: (p) => {
+      const pct = typeof p === 'number' ? p : p.percentage
+      process.stdout.write(`\rModel: ${pct ?? '?'}%   `)
+    }
+  }).then((id) => {
+    console.log(`\nModel ready: ${id}`)
+    return id
+  })
+  return modelIdPromise
+}
+
+async function cleanResult (raw) {
+  const mid = await warmModel()
+  const result = completion({
+    modelId: mid,
+    history: [
+      { role: 'system', content: CLEAN_SYSTEM },
+      {
+        role: 'user',
+        content: `Title: ${raw.title}\nURL: ${raw.url}\nDescription: ${raw.description || ''}`
+      }
+    ],
+    stream: false
+  })
+  return result.text
+}
+
 function readBody (req) {
   return new Promise((resolve, reject) => {
     const chunks = []
@@ -42,28 +82,53 @@ async function handleSearch (req, res) {
     res.end(JSON.stringify({ error: 'invalid JSON body' }))
     return
   }
+
   const query = (body.query || '').trim()
   if (!query) {
     res.writeHead(400, { 'Content-Type': 'application/json' })
     res.end(JSON.stringify({ error: 'query is required' }))
     return
   }
-  const count = Math.min(Math.max(Number(body.n_results) || 5, 1), 20)
-  const url = `${BRAVE_ENDPOINT}?q=${encodeURIComponent(query)}&count=${count}`
-  const started = Date.now()
-  const r = await fetch(url, {
-    headers: {
-      Accept: 'application/json',
-      'X-Subscription-Token': BRAVE_KEY
-    }
+
+  const count = Math.min(Math.max(Number(body.n_results) || 3, 1), 10)
+
+  // Step 1 — Brave fetch
+  const braveStart = Date.now()
+  const braveUrl = `${BRAVE_ENDPOINT}?q=${encodeURIComponent(query)}&count=${count}`
+  const r = await fetch(braveUrl, {
+    headers: { Accept: 'application/json', 'X-Subscription-Token': BRAVE_KEY }
   })
-  const raw = await r.json()
-  res.writeHead(r.status, { 'Content-Type': 'application/json' })
+  const braveData = await r.json()
+  const brave_ms = Date.now() - braveStart
+
+  const webResults = braveData?.web?.results?.slice(0, count) || []
+
+  // Step 2 — QVAC local cleaning (sequential — one inference at a time)
+  const results = []
+  for (const item of webResults) {
+    const cleanStart = Date.now()
+    let cleaned_markdown = null
+    try {
+      cleaned_markdown = await cleanResult(item)
+    } catch (err) {
+      console.error('QVAC clean error:', String(err))
+      // graceful degradation — return raw snippet if local LLM fails
+    }
+    results.push({
+      url: item.url,
+      title: item.title,
+      description: item.description || null,
+      cleaned_markdown,
+      clean_ms: Date.now() - cleanStart
+    })
+  }
+
+  res.writeHead(200, { 'Content-Type': 'application/json' })
   res.end(JSON.stringify({
     query,
-    upstream_status: r.status,
-    took_ms: Date.now() - started,
-    raw
+    model: QWEN3_600M_INST_Q4.name,
+    brave_ms,
+    results
   }, null, 2))
 }
 
@@ -71,7 +136,7 @@ const server = http.createServer((req, res) => {
   if (req.method === 'POST' && req.url === '/search') {
     handleSearch(req, res).catch((err) => {
       res.writeHead(502, { 'Content-Type': 'application/json' })
-      res.end(JSON.stringify({ error: 'brave fetch failed', detail: String(err) }))
+      res.end(JSON.stringify({ error: 'request failed', detail: String(err) }))
     })
     return
   }
@@ -80,6 +145,8 @@ const server = http.createServer((req, res) => {
 })
 
 server.listen(PORT, () => {
-  console.log(`qsearch skeleton listening on http://localhost:${PORT}`)
-  console.log('POST /search { "query": "..." }')
+  console.log(`qsearch listening on http://localhost:${PORT}`)
+  console.log('POST /search { "query": "...", "n_results": 3 }')
+  // Kick off model load in background so first real request is faster
+  warmModel().catch(() => {})
 })
