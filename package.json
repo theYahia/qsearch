@@ -1,0 +1,18 @@
+{
+  "name": "qsearch",
+  "version": "0.0.1",
+  "description": "The open-web hop for QVAC agents — OSS search API where cleaning runs on your local LLM.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theYahia/qsearch.git"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
