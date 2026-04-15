@@ -29,14 +29,16 @@ This roadmap is the public accountability contract. Every day ships one visible 
 
 **Output:** [`docs/day2-demo.json`](./docs/day2-demo.json) — live Brave response captured from the running server. First hit on `"qvac sdk release notes"`: *Show HN: QVAC SDK*. Commit: `40996e8`.
 
-## Day 3 — 2026-04-16 · QVAC cleaning integrated
+## Day 3 — 2026-04-15 · QVAC cleaning integrated ✅ (shipped early)
 
-- `@qvac/sdk` loaded with a small quantized model (Llama 3.2 1B or Qwen 0.5B)
-- Cleaning prompt template written (single prompt, no pluggable interface yet)
-- Pipeline: Brave raw → QVAC local clean → structured JSON out
-- One real query end-to-end, recorded
+- [x] `@qvac/sdk` 0.8.3 installed — bare worker bundled, no system install needed
+- [x] Model: `QWEN3_600M_INST_Q4` (Qwen3-0.6B Q4, ~364MB, cached to `~/.qvac/models/`)
+- [x] Cleaning prompt template — single system prompt, plain prose output, `/no_think`
+- [x] Pipeline: Brave raw → sequential QVAC local inference → `cleaned_markdown` per result
+- [x] Graceful degradation: QVAC failure returns raw Brave snippet, server stays up
+- [x] End-to-end live: `brave_ms` ~800ms + `clean_ms` ~1.1s per result on laptop CPU
 
-**Output:** demo clip (30s) of a query → cleaned markdown, running fully local.
+**Output:** live JSON with `cleaned_markdown` — full pipeline on local machine. Shipped Day 2 night (ahead of schedule).
 
 ## Day 4 — 2026-04-17 · v0.1 ships
 
