@@ -21,12 +21,12 @@ We call it **the open-web hop for QVAC agents**.
 git clone https://github.com/theYahia/qsearch.git
 cd qsearch
 
-# 2. Get a Brave Search API key (free $5/month credit)
+# 2. Get a Brave Search API key ($5/month, ~1000 queries)
 #    → https://brave.com/search/api/ → sign up → copy key
 
-# 3. Create .env.local with your key
+# 3. Create .env.local and paste your key
 cp .env.example .env.local
-# Edit .env.local and replace "your_brave_data_for_ai_key_here" with your real key
+# Open .env.local and replace "your_brave_data_for_ai_key_here" with your actual key
 
 # 4. Install & run
 npm install    # first run downloads Qwen3-0.6B (~364MB, cached after)
