@@ -3,7 +3,7 @@
 > *"[Planning to build a search API with QVAC SDK.](https://x.com/TheTieTieTies/status/2044039772981576181)"*
 
 ![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)
-![Status: v0.1 live](https://img.shields.io/badge/status-v0.1%20live-brightgreen.svg)
+![Status: v0.2.1 live](https://img.shields.io/badge/status-v0.2.1%20live-brightgreen.svg)
 ![Built on @qvac/sdk](https://img.shields.io/badge/built%20on-%40qvac%2Fsdk-16a34a.svg)
 ![Pitch day 2026-04-21](https://img.shields.io/badge/pitch%20day-2026--04--21-ef4444.svg)
 
@@ -11,8 +11,34 @@ This repo is the follow-through. **A search API built on the QVAC SDK**, where B
 
 We call it **the open-web hop for QVAC agents**.
 
-> ✅ **v0.1 live (2026-04-15).** `git clone && npm install && npm start` — full pipeline working: Brave fetch → local Qwen3-0.6B cleaning → structured JSON.
+> ✅ **v0.2.1 live (2026-04-16).** 4 endpoints: `/search`, `/news`, `/context`, `/health` + MCP tool.
 > Daily log: [@TheTieTieTies](https://x.com/TheTieTieTies) · Roadmap: [ROADMAP.md](./ROADMAP.md) · PRD: [docs/PRD.md](./docs/PRD.md)
+
+## Quick start
+
+```bash
+# 1. Clone
+git clone https://github.com/theYahia/qsearch.git
+cd qsearch
+
+# 2. Get a Brave Search API key (free $5/month credit)
+#    → https://brave.com/search/api/ → sign up → copy key
+
+# 3. Create .env.local with your key
+cp .env.example .env.local
+# Edit .env.local and replace "your_brave_data_for_ai_key_here" with your real key
+
+# 4. Install & run
+npm install    # first run downloads Qwen3-0.6B (~364MB, cached after)
+npm start      # → qsearch v0.2.1 listening on http://localhost:8080
+
+# 5. Test
+curl -X POST http://localhost:8080/search \
+  -H "Content-Type: application/json" \
+  -d '{"query": "qvac sdk", "n_results": 2}'
+```
+
+**Brave API key is BYOK** — you get your own key, it stays in your `.env.local`, never leaves your machine. qsearch doesn't proxy, relay, or store your key.
 
 ---
 
@@ -70,7 +96,28 @@ We're not locked to Brave forever — v2 may add SearXNG or Mullvad Leta as drop
 
 qsearch is the first row where *all* of these are checked. That's the wedge — not better snippets, not faster ranking. **Local cleaning on OSS, as a primitive for agents.** The intersection didn't exist until now.
 
-## API — v0.1 (live)
+## API — v0.2.1 (live)
+
+### Endpoints
+
+| Endpoint | What | Brave source |
+|----------|------|-------------|
+| `POST /search` | Web search + QVAC cleaning | `/web/search` (1-20 results) |
+| `POST /news` | News search + cleaning | `/news/search` (1-50 results) |
+| `POST /context` | Deep page extraction + cleaning | `/llm/context` (2-28 snippets/source) |
+| `GET /health` | Server status | — |
+
+### Optional parameters (all endpoints)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `query` | string | Search query (required) |
+| `n_results` | number | Results count (default: 3) |
+| `freshness` | string | `pd` (day), `pw` (week), `pm` (month), `py` (year), or `YYYY-MM-DDtoYYYY-MM-DD` |
+| `search_lang` | string | Language: `"en"`, `"ru"`, etc. |
+| `country` | string | Country: `"us"`, `"ru"`, etc. |
+
+### Example
 
 ```bash
 curl -X POST http://localhost:8080/search \
@@ -121,7 +168,7 @@ curl -X POST http://localhost:8080/search \
 
 A new commit, demo, or writeup ships every day until **2026-04-21**.
 
-- ⭐ **Star this repo** — v0.1 is live, v0.2 ships with PII redaction + configurable model
+- ⭐ **Star this repo** — v0.2.1 live with 4 endpoints + MCP tool
 - 🐦 **X thread:** [@TheTieTieTies](https://x.com/TheTieTieTies) — daily updates
 - 🗺️ **Full 7-day plan:** [ROADMAP.md](./ROADMAP.md)
 - 📝 **Feature requests for v2:** open an issue
