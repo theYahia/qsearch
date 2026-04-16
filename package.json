@@ -16,6 +16,8 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@qvac/sdk": "^0.8.3"
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@qvac/sdk": "^0.8.3",
+    "zod": "^4.3.6"
   }
 }
