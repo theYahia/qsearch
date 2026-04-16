@@ -1,6 +1,6 @@
 # qsearch — Product Requirements Document v1
 
-> **Status:** Day 3 draft — living document, updated daily.
+> **Status:** v0.1 shipped (2026-04-15) — living document.
 > **Pitch day:** 2026-04-21 (Tether QVAC Technical PM conversation).
 
 ---
@@ -51,7 +51,7 @@ Ship `qsearch` as the open-web hop for QVAC agents: a local HTTP search server w
 
 | ID | Requirement | Target |
 |---|---|---|
-| NF1 | Cold start (model already loaded) | < 3s per query |
+| NF1 | Single-result latency (model warm) | < 2s per result (brave ~800ms + clean ~1.1s) |
 | NF2 | First-run model download | ~364MB one-time |
 | NF3 | Runs on Node.js ≥20 | No system Bare install required |
 | NF4 | License | Apache-2.0 |
@@ -91,7 +91,7 @@ curl -X POST http://localhost:8080/search \
 Anchored to Tether's own verbatim KPI categories from the TPM vacancy:
 
 ### App engagement
-- **Time-to-first-result (TTFR):** cold start (model warm) < 3s
+- **Time-to-first-result (TTFR):** model warm, single result < 2s (brave ~800ms + clean ~1.1s)
 - **Error rate:** < 5% (Brave 4xx / QVAC inference failure)
 - **Requests/day:** tracked via server logs (Day 5 user research baseline)
 
@@ -153,4 +153,4 @@ POST /search
 
 ---
 
-*PRD owner: Timur Mamatov (YAHIA). Last updated: 2026-04-15.*
+*PRD owner: Timur Mamatov (YAHIA). Last updated: 2026-04-16.*

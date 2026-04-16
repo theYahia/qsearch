@@ -57,6 +57,18 @@ This roadmap is the public accountability contract. Every day ships one visible 
 
 **Output:** [`BLOG.md`](./BLOG.md) — shipped as part of the repo.
 
+## Days 5.5 — 2026-04-16 through 2026-04-18 · Polish & prep
+
+Buffer zone — code is shipped, launch is Saturday. Use for:
+
+- [ ] Publish blog post on Dev.to / Medium
+- [ ] Finalize HN Show post ([draft](./docs/HN_POST_DRAFT.md))
+- [ ] Second upstream PR to `tetherto/*` (docs, examples, or issue repro)
+- [ ] Tweet thread recap: "Days 1-5 shipped in 48h — here's the pipeline"
+- [ ] Polish pitch note and outreach materials
+
+---
+
 ## Day 6 — 2026-04-19 · Public launch
 
 - HN Show post: *"qsearch — OSS search API where cleaning runs on your local LLM"*
