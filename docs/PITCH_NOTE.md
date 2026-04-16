@@ -151,7 +151,7 @@ QVAC SDK has embeddings but **no RAG module**. Hyperbee has P2P storage but **no
 
 **"Mobile NAT broken on cell networks?"** — "Correct. v0.6 P2P is desktop-first. Mobile via relay peers. Honest about this."
 
-**"Why does local matter, really?"** — "Anthropic уже требует KYC (госудостоверение) для новых подписчиков Claude. Не регуляторы — сами. Регуляция на подходе. Local QVAC inference + local qsearch cleaning = AI без KYC, без tracking, без привязки к identity. Это не паранойя — это уже происходит."
+**"Why does local matter, really?"** — "Anthropic already requires government ID for new Claude subscribers. Not regulators — their own decision. Regulation is coming. Local QVAC inference + local qsearch cleaning = AI without KYC, without tracking, without identity binding. This is not paranoia — it's already happening."
 
 **"How is this different from Context Overflow / clawmem?"** — "They're centralized. qsearch runs on your P2P stack — Hyperswarm, Hyperbee, QVAC. No central server. The index lives on the network."
 
