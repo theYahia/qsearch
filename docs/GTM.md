@@ -41,9 +41,7 @@ Everything else (Exa, Tavily, Sonar) cleans server-side. qsearch cleans locally 
 
 **Target landing:** >30 points, HN front page for the QVAC/local-AI thread. Apache-2.0 + working code + honest trade-offs = HN-friendly framing.
 
-**Submit time:** Tuesday 2026-04-21 08:00–09:00 UTC (peak East Coast AM, HN algo window).
-
-Wait — pitch day is April 21. Submit HN post **Day 6 (April 19, Sunday PM UTC)** to let it breathe before the pitch conversation. Tether team can see "Show HN, 80 points" by Monday.
+**Submit time:** Sunday 2026-04-19, ~16:00–18:00 UTC (peak US afternoon, HN algo window). Two days before pitch day — Tether team sees live points by Monday morning, not the same day as the conversation.
 
 ### Channel 2: X thread — Day 6 recap
 
