@@ -1,6 +1,6 @@
-# qsearch — 6-Slide Pitch Deck
+# qsearch — 8-Slide Pitch Deck
 
-*For Tether conversation 2026-04-21. Visual script — convert to slides in Canva/Keynote.*
+*For Tether conversation 2026-04-21. Visual script — convert to slides.*
 
 ---
 
@@ -9,7 +9,7 @@
 **qsearch**
 *The open-web hop for QVAC agents*
 
-`github.com/theYahia/qsearch` · Apache-2.0 · v0.1.0 · Built in 7 days
+`github.com/theYahia/qsearch` · Apache-2.0 · v0.1 live, v0.2 in testing · Built in 7 days
 
 ---
 
@@ -22,14 +22,10 @@ QVAC agent
   ├── local documents      ← QVAC Workbench  ✅
   ├── local wallet         ← WDK             ✅
   ├── local inference      ← @qvac/sdk       ✅
-  └── live web             ← ???             ❌
+  └── live web search      ← ???             ❌
 ```
 
-> Every search API available today does the same thing:
-> your query → their server → their LLM → their answer back.
->
-> An agent that keeps your health data local but sends your search queries
-> to a cloud API is **half-sovereign**. The architecture doesn't hold end-to-end.
+Every search API (Exa $700M, Tavily/Nebius, Sonar) cleans results on **their** server. An agent that keeps health data local but sends search queries to a cloud API is **half-sovereign**.
 
 ---
 
@@ -38,38 +34,33 @@ QVAC agent
 **Two hops. One of them is yours.**
 
 ```
-Your agent
-  → POST /search { "query": "...", "n_results": 3 }
-
-Hop 1 (outbound):   Brave Search API
-                    BYOK — your key, your quota
+Hop 1 (outbound):   Brave Search API — BYOK, $5/1K
                     brave_ms: 819ms
 
-Hop 2 (local):      @qvac/sdk — Qwen3-0.6B Q4
-                    364MB, cached on your machine
-                    clean_ms: 1420ms
+Hop 2 (local):      @qvac/sdk — Qwen3-0.6B Q4, 364MB
+                    clean_ms: 1420ms — YOUR CPU
 ```
 
-**The green node** — cleaning runs on your hardware.
-Not a privacy-policy promise. Verifiable in 15 lines of code.
+3 endpoints: `/search` (web), `/news` (50+ results), `/context` (2-28 snippets/result).
+MCP tool for QVAC Workbench. Verifiable in `src/server.js`.
 
 ---
 
-## Slide 4 — Real output (Day 3 terminal)
+## Slide 4 — Real output
 
 ```json
 {
   "query": "qvac sdk",
   "model": "QWEN3_600M_INST_Q4",
   "brave_ms": 819,
+  "total_clean_ms": 2428,
   "results": [
     {
       "url": "https://qvac.tether.io/",
-      "title": "QVAC - Decentralized, Local AI in a Single API",
-      "cleaned_markdown": "QVAC is a decentralized, local AI platform built
-        on Tether, offering a new paradigm where intelligence runs privately,
-        locally, and without permission on any device.",
-      "clean_ms": 1420
+      "title": "QVAC - Decentralized, Local AI",
+      "cleaned_markdown": "QVAC is a decentralized local AI platform...",
+      "clean_ms": 1420,
+      "page_age": "2026-04-10T12:45:05"
     }
   ]
 }
@@ -79,44 +70,72 @@ Not a privacy-policy promise. Verifiable in 15 lines of code.
 
 ---
 
-## Slide 5 — Why qsearch vs Exa/Tavily
+## Slide 5 — vs Competitors
 
-|  | Exa | Tavily | **qsearch** |
-|--|-----|--------|-------------|
-| LLM cleaning | ✅ cloud | ✅ cloud | ✅ **local** |
-| OSS auditable | ❌ | ❌ | ✅ |
-| QVAC-native | ❌ | ❌ | ✅ |
-| Self-hostable | ❌ | ❌ | ✅ |
-| BYOK upstream | ❌ | ❌ | ✅ |
-
-> qsearch doesn't beat them on snippet quality.
-> It wins when the *architecture* of where cleaning runs matters.
+|  | Exa ($700M) | Tavily (Nebius) | Sonar | **qsearch** |
+|--|------------|-----------------|-------|-------------|
+| LLM cleaning | Cloud GPU | Cloud | Cloud | **Your CPU** |
+| OSS auditable | ❌ | ❌ | ❌ | ✅ |
+| QVAC-native | ❌ | ❌ | ❌ | ✅ |
+| Self-hostable | ❌ | ❌ | ❌ | ✅ |
+| Cost/1K | $7-15 | $8 | $5-22 | **$5 (BYOK)** |
+| P2P cache | ❌ | ❌ | ❌ | **✅ (planned)** |
+| Network effect | ❌ | ❌ | ❌ | **✅ (planned)** |
 
 ---
 
-## Slide 6 — The ask
+## Slide 6 — The vision (where this goes)
 
-**7 days. No insider access. Full pipeline shipped.**
+**qsearch is not a search API. It's a P2P knowledge network.**
 
-- Apache-2.0 — same license as QVAC, zero-friction to upstream
-- WDK repost on day zero, public accountability contract held
-- PRD anchored to Tether's verbatim TPM KPI language
-- Workbench integration doc (MCP sidecar pattern) already written
+```
+Agent query
+  → Local Hyperbee cache (instant, $0)
+    miss → Hyperswarm peers (sparse query, <10ms)
+      miss → Brave API → QVAC cleaning → cache → replicate to peers
+```
 
-> "Give me insider access and I ship 10x faster on things that actually matter to you."
+**Each query makes the network smarter.** Network effect = moat.
+
+Built on YOUR stack: Hyperswarm, Hyperbee, Corestore, @qvac/sdk, WDK.
+Same P2P infrastructure that runs MiningOS (100K+ ASICs, 15 sites).
+
+QVAC SDK has embeddings but **no RAG module**. qsearch = the RAG layer.
+
+---
+
+## Slide 7 — What I did in 7 days
+
+- 22+ commits, v0.2 shipped
+- 4 API endpoints (search, news, context, health)
+- MCP tool for Workbench integration
+- 7 deep research sprints (120+ Brave queries)
+- Competitive analysis (35 WDK hackathon semifinalists scanned)
+- Pricing deep-dive (8 providers, exact unit economics)
+- P2P stack code review (Hypercore, Hyperswarm, Hyperbee API)
+- Blog post with real benchmarks, honest trade-offs
+- Apache-2.0, public roadmap, WDK repost day zero
+
+---
+
+## Slide 8 — The ask
+
+> **Give me insider access and I ship the P2P knowledge network in two months. All the building blocks are your repos.**
 
 `github.com/theYahia/qsearch` · `@TheTieTieTies`
 
 ---
 
-## Speaker notes (not on slides)
+## Speaker notes
 
-**Slide 2** — Don't explain the half-sovereign problem at length. Say "half-sovereign" once and let it land. If they nod, move on. If they ask — then expand.
+**Slide 2** — Say "half-sovereign" once. If they nod, move on.
 
-**Slide 3** — The `brave_ms` / `clean_ms` split is the proof. It shows you understand where each millisecond lives. Don't skip past it.
+**Slide 3** — The `brave_ms` / `clean_ms` split is the proof. Don't skip past it.
 
-**Slide 4** — If there's a screen in the room, show the actual terminal or GitHub README. Live demo > slides.
+**Slide 5** — "We're not competing with Exa. This wins on a different dimension."
 
-**Slide 5** — Lead with "we're not competing with Exa — this wins on a different dimension." Prevents the "but Exa is better" deflection.
+**Slide 6** — Only show if they ask "what's next." Lead with shipped code, not vision.
 
-**Slide 6** — The ask is a one-liner. Say it, stop talking. Don't soften it.
+**Slide 7** — "I understand your stack. Not just QVAC — Hyperswarm, Hyperbee, MiningOS architecture, WDK MCP toolkit."
+
+**Slide 8** — Say it, stop talking. Don't soften.

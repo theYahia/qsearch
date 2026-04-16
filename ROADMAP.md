@@ -57,15 +57,31 @@ This roadmap is the public accountability contract. Every day ships one visible 
 
 **Output:** [`BLOG.md`](./BLOG.md) — shipped as part of the repo.
 
-## Days 5.5 — 2026-04-16 through 2026-04-18 · Polish & prep
+## Days 5.5 — 2026-04-16 · v0.2 shipped
 
-Buffer zone — code is shipped, launch is Saturday. Use for:
+- [x] `POST /news` — Brave News API, up to 50 results, source attribution
+- [x] `POST /context` — Brave LLM Context API, 2-28 snippets per result (deep page extraction)
+- [x] `GET /health` — status endpoint
+- [x] MCP tool wrapper (`src/mcp.js`) — 3 tools: web_search, news_search, context_search
+- [x] `freshness` parameter — filter by day/week/month/year/date range
+- [x] `search_lang` + `country` — multilingual search support
+- [x] `extra_snippets` enabled by default — 5x more content for cleaning
+- [x] Cleaning prompt rewritten based on prompt engineering research (24 Brave queries)
+- [x] Model retry on failure (server no longer bricks permanently)
+- [x] `n_results` max raised from 10 to 20
 
+**Output:** v0.2.1 tested locally. 4 endpoints, all working.
+
+---
+
+## Days 5.5b — 2026-04-17 through 2026-04-18 · Launch prep
+
+- [ ] Push v0.2.1 to GitHub + tag
 - [ ] Publish blog post on Dev.to / Medium
 - [ ] Finalize HN Show post ([draft](./docs/HN_POST_DRAFT.md))
 - [ ] Second upstream PR to `tetherto/*` (docs, examples, or issue repro)
-- [ ] Tweet thread recap: "Days 1-5 shipped in 48h — here's the pipeline"
-- [ ] Polish pitch note and outreach materials
+- [ ] Tweet thread recap
+- [ ] Polish pitch materials
 
 ---
 
