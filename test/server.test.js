@@ -500,12 +500,12 @@ describe('qsearch server', () => {
   test('HTML has footer with GitHub link', async () => {
     const res = await request(QSEARCH_PORT, 'GET', '/')
     assert.ok(res.raw.includes('github.com/theYahia/qsearch'))
-    assert.ok(res.raw.includes('Built for agents'))
+    assert.ok(res.raw.includes('Built for agents, humans welcome'))
   })
 
   test('HTML has footer motto', async () => {
     const res = await request(QSEARCH_PORT, 'GET', '/')
-    assert.ok(res.raw.includes('Built for agents'))
+    assert.ok(res.raw.includes('Built for agents, humans welcome'))
   })
 
   test('HTML does not leak API keys or secrets', async () => {

@@ -96,7 +96,7 @@ footer a:hover{color:#2ec98a}
 <body>
 
 <header>
-  <div class="logo"><span>q</span>search</div>
+  <div class="logo"><span>q</span>search <span style="font-size:12px;font-weight:400;color:#2ec98a;vertical-align:super;letter-spacing:0">alpha</span></div>
   <div class="tagline">Search API built with <a href="https://qvac.tether.io" style="color:#2ec98a;text-decoration:none">QVAC</a> SDK</div>
 </header>
 
@@ -113,7 +113,7 @@ footer a:hover{color:#2ec98a}
       <button id="btn" onclick="search()">Search</button>
     </div>
     <div id="results"></div>
-    <div id="loading" class="hidden"><span class="spinner"></span> <span id="loading-text">Fetching from Brave Search...</span><div id="loading-hint" class="hidden" style="color:#555;font-size:11px;margin-top:8px">Local LLM on CPU — takes time</div><div id="loading-bored" class="hidden" style="color:#444;font-size:11px;margin-top:6px">While you wait — <a href="#" onclick="document.getElementById('rm-wait').classList.toggle('hidden');return false" style="color:#2ec98a">roadmap</a> · <a href="https://github.com/theYahia/qsearch" target="_blank" rel="noopener" style="color:#2ec98a">github</a><div id="rm-wait" class="hidden" style="margin-top:8px"><span class="rm-step done">Brave + QVAC cleaning</span> <span class="rm-arrow">→</span> <span class="rm-step">Own corpus</span> <span class="rm-arrow">→</span> <span class="rm-step">x402 USDT</span> <span class="rm-arrow">→</span> <span class="rm-step">HyperDHT</span></div></div></div>
+    <div id="loading" class="hidden"><span class="spinner"></span> <span id="loading-text">Fetching from Brave Search...</span><div id="loading-hint" class="hidden" style="color:#555;font-size:13px;margin-top:8px">Local LLM on CPU — takes time</div><div id="loading-bored" class="hidden" style="color:#444;font-size:13px;margin-top:6px">While you wait — <a href="#" onclick="document.getElementById('rm-wait').classList.toggle('hidden');return false" style="color:#2ec98a">roadmap</a> · <a href="https://github.com/theYahia/qsearch" target="_blank" rel="noopener" style="color:#2ec98a">github</a><div id="rm-wait" class="hidden" style="margin-top:8px"><span class="rm-step done">Brave + QVAC cleaning</span> <span class="rm-arrow">→</span> <span class="rm-step">Own corpus</span> <span class="rm-arrow">→</span> <span class="rm-step">x402 USDT</span> <span class="rm-arrow">→</span> <span class="rm-step">HyperDHT</span></div></div></div>
   </div>
 
   <!-- Agent mode -->
@@ -133,7 +133,7 @@ footer a:hover{color:#2ec98a}
 </div>
 
 <footer>
-  <div class="footer-motto">Built for agents. Humans welcome.</div>
+  <div class="footer-motto">Built for agents, humans welcome.</div>
 </footer>
 
 <script>
@@ -170,7 +170,7 @@ footer a:hover{color:#2ec98a}
     try {
       var data = await Promise.race([
         fetch('/search?q=' + encodeURIComponent(q) + '&n=2').then(function(r) { return r.json() }),
-        new Promise(function(_, reject) { setTimeout(function() { reject(new Error('timeout')) }, 60000) })
+        new Promise(function(_, reject) { setTimeout(function() { reject(new Error('timeout')) }, 90000) })
       ])
       if (data.error) { results.innerHTML = '<div class="stats">' + esc(data.error) + '</div>'; return }
       var html = ''
@@ -188,7 +188,7 @@ footer a:hover{color:#2ec98a}
       html += '<div class="stats">Brave: ' + data.brave_ms + 'ms · Clean: ' + data.total_clean_ms + 'ms · ' + data.total_results + ' results</div>'
       results.innerHTML = html
     } catch (e) {
-      results.innerHTML = '<div class="stats">' + (e.message === 'timeout' ? 'Request timed out — try again' : 'Request failed — try again') + '</div>'
+      results.innerHTML = '<div class="stats">' + (e.message === 'timeout' ? 'that took a while… please try again 🫠' : 'something tripped — please try again') + '</div>'
     } finally {
       clearTimeout(stepTimer)
       clearInterval(stepTimer)
