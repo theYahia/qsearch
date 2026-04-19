@@ -451,6 +451,9 @@ const server = http.createServer((req, res) => {
   res.end(JSON.stringify({ error: 'not found' }))
 })
 
+server.keepAliveTimeout = 65000
+server.headersTimeout = 66000
+
 server.listen(PORT, () => {
   console.log(`qsearch v0.2.2 listening on http://localhost:${PORT}`)
   console.log('POST /search  { "query": "...", "n_results": 3, "freshness": "pw", "search_lang": "en", "country": "us" }')
