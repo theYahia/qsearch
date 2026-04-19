@@ -114,7 +114,7 @@ footer a:hover{color:#2ec98a}
       <button id="btn" onclick="search()">Search</button>
     </div>
     <div id="results"></div>
-    <div id="loading" class="hidden"><span class="spinner"></span> Searching</div>
+    <div id="loading" class="hidden"><span class="spinner"></span> <span id="loading-text">Fetching from Brave Search...</span></div>
   </div>
 
   <!-- Agent mode -->
@@ -173,9 +173,12 @@ footer a:hover{color:#2ec98a}
     btn.disabled = true
     results.innerHTML = ''
     loading.classList.remove('hidden')
+    var lt = document.getElementById('loading-text')
+    lt.textContent = 'Fetching from Brave Search...'
+    var stepTimer = setTimeout(function() { lt.textContent = 'Cleaning results with local LLM (Qwen3-0.6B)...' }, 3000)
     try {
       var data = await Promise.race([
-        fetch('/search?q=' + encodeURIComponent(q) + '&n=3').then(function(r) { return r.json() }),
+        fetch('/search?q=' + encodeURIComponent(q) + '&n=2').then(function(r) { return r.json() }),
         new Promise(function(_, reject) { setTimeout(function() { reject(new Error('timeout')) }, 60000) })
       ])
       if (data.error) { results.innerHTML = '<div class="stats">' + esc(data.error) + '</div>'; return }
@@ -196,6 +199,7 @@ footer a:hover{color:#2ec98a}
     } catch (e) {
       results.innerHTML = '<div class="stats">' + (e.message === 'timeout' ? 'Request timed out — try again' : 'Request failed — try again') + '</div>'
     } finally {
+      clearTimeout(stepTimer)
       loading.classList.add('hidden')
       btn.disabled = false
     }
