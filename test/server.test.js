@@ -503,12 +503,9 @@ describe('qsearch server', () => {
     assert.ok(res.raw.includes('Built for agents'))
   })
 
-  test('HTML has roadmap panel', async () => {
+  test('HTML has footer motto', async () => {
     const res = await request(QSEARCH_PORT, 'GET', '/')
-    assert.ok(res.raw.includes('rm-panel'))
-    assert.ok(res.raw.includes('QVAC Provider'))
-    assert.ok(res.raw.includes('x402 USDT'))
-    assert.ok(res.raw.includes('HyperDHT'))
+    assert.ok(res.raw.includes('Built for agents'))
   })
 
   test('HTML does not leak API keys or secrets', async () => {

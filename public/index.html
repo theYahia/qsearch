@@ -52,10 +52,6 @@ header{text-align:center;padding:80px 0 40px}
 .stats{text-align:center;color:#555;font-size:12px;margin:20px 0}
 
 /* Footer */
-.roadmap-footer{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;font-size:12px}
-.rm-step{color:#666}
-.rm-step.done{color:#2ec98a}
-.rm-arrow{color:#333}
 
 /* Onboard card */
 .onboard-card{background:#141414;border:1px solid #2ec98a;border-radius:12px;padding:28px;margin-bottom:24px;text-align:center}
@@ -68,7 +64,6 @@ header{text-align:center;padding:80px 0 40px}
 footer{padding:48px 24px 28px;color:#333;font-size:12px;border-top:1px solid #141414;max-width:720px;margin:0 auto;width:100%}
 footer a{color:#555;text-decoration:none}
 footer a:hover{color:#2ec98a}
-.footer-nav{display:flex;justify-content:center;gap:16px;margin-bottom:14px;font-size:12px}
 .footer-motto{text-align:center;color:#2ec98a;font-size:13px}
 
 .hidden{display:none}
@@ -90,7 +85,6 @@ footer a:hover{color:#2ec98a}
   .cleaned{font-size:12px}
   .onboard-code pre{font-size:13px}
   .onboard-steps{font-size:13px}
-  .footer-nav{gap:24px}
 }
 </style>
 </head>
@@ -114,7 +108,7 @@ footer a:hover{color:#2ec98a}
       <button id="btn" onclick="search()">Search</button>
     </div>
     <div id="results"></div>
-    <div id="loading" class="hidden"><span class="spinner"></span> <span id="loading-text">Fetching from Brave Search...</span><div id="loading-hint" class="hidden" style="color:#555;font-size:11px;margin-top:8px">Each result is cleaned by a local Qwen3-0.6B model running on CPU — no cloud APIs</div><div id="loading-bored" class="hidden" style="color:#444;font-size:11px;margin-top:6px">While you wait — check the <a href="#" onclick="document.getElementById('rm-panel').classList.toggle('hidden');return false" style="color:#2ec98a">roadmap</a> or <a href="https://github.com/theYahia/qsearch" target="_blank" rel="noopener" style="color:#2ec98a">source code</a></div></div>
+    <div id="loading" class="hidden"><span class="spinner"></span> <span id="loading-text">Fetching from Brave Search...</span><div id="loading-hint" class="hidden" style="color:#555;font-size:11px;margin-top:8px">Each result is cleaned by a local Qwen3-0.6B model running on CPU — no cloud LLM</div><div id="loading-bored" class="hidden" style="color:#444;font-size:11px;margin-top:6px">While you wait — check the <a href="https://github.com/theYahia/qsearch#roadmap" target="_blank" rel="noopener" style="color:#2ec98a">roadmap</a> or <a href="https://github.com/theYahia/qsearch" target="_blank" rel="noopener" style="color:#2ec98a">GitHub</a></div></div>
   </div>
 
   <!-- Agent mode -->
@@ -134,19 +128,6 @@ footer a:hover{color:#2ec98a}
 </div>
 
 <footer>
-  <div class="footer-nav">
-    <a href="https://github.com/theYahia/qsearch">GitHub</a>
-    <a href="#" onclick="document.getElementById('rm-panel').classList.toggle('hidden');return false">Roadmap</a>
-  </div>
-  <div id="rm-panel" class="hidden roadmap-footer">
-    <span class="rm-step done">Brave + QVAC cleaning</span>
-    <span class="rm-arrow">→</span>
-    <span class="rm-step">QVAC Provider</span>
-    <span class="rm-arrow">→</span>
-    <span class="rm-step">x402 USDT</span>
-    <span class="rm-arrow">→</span>
-    <span class="rm-step">HyperDHT</span>
-  </div>
   <div class="footer-motto">Built for agents. Humans welcome.</div>
 </footer>
 
