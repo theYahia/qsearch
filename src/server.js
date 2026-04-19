@@ -117,7 +117,7 @@ async function cleanResult (raw) {
       ],
       stream: false
     })
-    return result.text
+    return await result.text
   } finally {
     resolve()
   }

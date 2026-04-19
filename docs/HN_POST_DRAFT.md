@@ -37,7 +37,7 @@ Trade-offs I'm upfront about:
 - Brave-only in v0.1 (SearXNG planned for v0.2)
 - Requires ~400MB disk for the quantized model
 
-The code is ~120 lines. Apache-2.0. Works on Windows/Mac/Linux.
+The code is ~500 lines. Apache-2.0. Works on Windows/Mac/Linux.
 
 GitHub: https://github.com/theYahia/qsearch
 Technical deep-dive: https://github.com/theYahia/qsearch/blob/main/BLOG.md
