@@ -174,10 +174,7 @@ footer a:hover{color:#2ec98a}
     try {
       var ctrl = new AbortController()
       var timer = setTimeout(function(){ ctrl.abort() }, 15000)
-      var r = await fetch('/search', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: q, n_results: 3 }),
+      var r = await fetch('/search?q=' + encodeURIComponent(q) + '&n=3', {
         signal: ctrl.signal
       })
       clearTimeout(timer)

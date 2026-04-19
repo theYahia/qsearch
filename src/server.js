@@ -199,25 +199,44 @@ async function cleanResults (items) {
   return results
 }
 
+function parseSearchParams (req) {
+  if (req.method === 'GET') {
+    const url = new URL(req.url, `http://${req.headers.host}`)
+    return {
+      query: (url.searchParams.get('q') || '').trim(),
+      n_results: url.searchParams.get('n') || url.searchParams.get('n_results'),
+      freshness: url.searchParams.get('freshness'),
+      search_lang: url.searchParams.get('search_lang'),
+      country: url.searchParams.get('country'),
+      safesearch: url.searchParams.get('safesearch')
+    }
+  }
+  return null
+}
+
 async function handleSearch (req, res) {
   let body
-  try {
-    body = JSON.parse((await readBody(req)) || '{}')
-  } catch {
-    res.writeHead(400, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ error: 'invalid JSON body' }))
-    return
+  const getParams = parseSearchParams(req)
+  if (getParams) {
+    body = getParams
+  } else {
+    try {
+      body = JSON.parse((await readBody(req)) || '{}')
+    } catch {
+      res.writeHead(400, { 'Content-Type': 'application/json' })
+      res.end(JSON.stringify({ error: 'invalid JSON body' }))
+      return
+    }
   }
 
-  const query = (body.query || '').trim()
+  const query = (body.query || body.q || '').trim()
   if (!query) {
     res.writeHead(400, { 'Content-Type': 'application/json' })
     res.end(JSON.stringify({ error: 'query is required' }))
     return
   }
 
-  // Backward-compatible: old {query, n_results} still works
-  const count = Math.min(Math.max(Number(body.n_results) || 3, 1), 20)
+  const count = Math.min(Math.max(Number(body.n_results || body.n) || 3, 1), 20)
 
   let data, brave_ms
   try {
@@ -423,7 +442,7 @@ const server = http.createServer((req, res) => {
     res.end(JSON.stringify({ status: 'ok', version: '0.2.2', qvac_available: qvacAvailable, model_loaded: modelReady }))
     return
   }
-  if (req.method === 'POST' && req.url === '/search') {
+  if ((req.method === 'POST' && req.url === '/search') || (req.method === 'GET' && req.url.startsWith('/search?'))) {
     handleSearch(req, res).catch((err) => {
       if (res.headersSent) return
       res.writeHead(502, { 'Content-Type': 'application/json' })
