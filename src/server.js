@@ -10,6 +10,7 @@ import { dirname, join } from 'node:path'
 
 let loadModel, completion, QWEN3_600M_INST_Q4
 let qvacAvailable = false
+let inferLock = Promise.resolve()
 
 const _hasBareRuntime = (() => {
   try {
@@ -97,21 +98,29 @@ function warmModel () {
 // Cleans a single web/news result item using QVAC local LLM.
 // Uses description + extra_snippets (up to 4 bonus snippets from Brave).
 async function cleanResult (raw) {
-  const mid = await warmModel()
-  const result = completion({
-    modelId: mid,
-    history: [
-      { role: 'system', content: CLEAN_SYSTEM },
-      {
-        role: 'user',
-        content: `Title: ${raw.title}\nURL: ${raw.url}\nDescription: ${raw.description || ''}\n${
-          (raw.extra_snippets || []).map((s, i) => `Snippet ${i + 1}: ${s}`).join('\n')
-        }`
-      }
-    ],
-    stream: false
-  })
-  return result.text
+  let resolve
+  const prev = inferLock
+  inferLock = new Promise((r) => { resolve = r })
+  await prev
+
+  try {
+    const mid = await warmModel()
+    let userContent = `Title: ${raw.title}\nURL: ${raw.url}\nDescription: ${raw.description || ''}\n${
+      (raw.extra_snippets || []).map((s, i) => `Snippet ${i + 1}: ${s}`).join('\n')
+    }`
+    if (userContent.length > 1800) userContent = userContent.slice(0, 1800)
+    const result = completion({
+      modelId: mid,
+      history: [
+        { role: 'system', content: CLEAN_SYSTEM },
+        { role: 'user', content: userContent }
+      ],
+      stream: false
+    })
+    return result.text
+  } finally {
+    resolve()
+  }
 }
 
 function readBody (req) {
