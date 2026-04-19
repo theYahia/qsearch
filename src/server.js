@@ -175,11 +175,13 @@ async function cleanResults (items) {
   for (const item of items) {
     const start = Date.now()
     let cleaned_markdown = null
-    try {
-      const raw = await cleanResult(item)
-      cleaned_markdown = raw.replace(/<think>[\s\S]*?<\/think>/g, '').trim()
-    } catch (err) {
-      console.error('QVAC clean error:', String(err))
+    if (qvacAvailable) {
+      try {
+        const raw = await cleanResult(item)
+        cleaned_markdown = raw.replace(/<think>[\s\S]*?<\/think>/g, '').trim()
+      } catch (err) {
+        console.error('QVAC clean error:', String(err))
+      }
     }
     results.push({
       url: item.url,
@@ -354,25 +356,27 @@ async function handleContext (req, res) {
     const allSnippets = cleanSnippets.join('\n\n')
     const itemStart = Date.now()
     let cleaned_markdown = null
-    try {
-      const mid = await warmModel()
-      const result = completion({
-        modelId: mid,
-        history: [
-          { role: 'system', content: CLEAN_SYSTEM },
-          {
-            role: 'user',
-            // ⚠️ Truncate to 1500 chars — 0.6B model degrades on long input (copies instead of cleaning)
-            // 1500 chars ≈ 500-700 tokens, leaves room for system prompt + output within 8192 context
-            content: `Title: ${item.title}\nURL: ${item.url}\nContent:\n${allSnippets.slice(0, 1500)}`
-          }
-        ],
-        stream: false
-      })
-      cleaned_markdown = (await result.text).replace(/<think>[\s\S]*?<\/think>/g, '').trim()
-    } catch (err) {
-      console.error('QVAC clean error:', String(err))
-      cleaned_markdown = allSnippets.slice(0, 500)
+    if (qvacAvailable) {
+      try {
+        const mid = await warmModel()
+        const result = completion({
+          modelId: mid,
+          history: [
+            { role: 'system', content: CLEAN_SYSTEM },
+            {
+              role: 'user',
+              content: `Title: ${item.title}\nURL: ${item.url}\nContent:\n${allSnippets.slice(0, 1500)}`
+            }
+          ],
+          stream: false
+        })
+        cleaned_markdown = (await result.text).replace(/<think>[\s\S]*?<\/think>/g, '').trim()
+      } catch (err) {
+        console.error('QVAC clean error:', String(err))
+        cleaned_markdown = allSnippets.slice(0, 500)
+      }
+    } else {
+      cleaned_markdown = allSnippets.slice(0, 500) || null
     }
     results.push({
       url: item.url,
