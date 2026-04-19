@@ -10,14 +10,28 @@ import { dirname, join } from 'node:path'
 
 let loadModel, completion, QWEN3_600M_INST_Q4
 let qvacAvailable = false
-try {
-  const qvac = await import('@qvac/sdk')
-  loadModel = qvac.loadModel
-  completion = qvac.completion
-  QWEN3_600M_INST_Q4 = qvac.QWEN3_600M_INST_Q4
-  qvacAvailable = true
-} catch (err) {
-  console.warn(`QVAC SDK unavailable (${err.message}) — running without LLM cleaning`)
+
+const _hasBareRuntime = (() => {
+  try {
+    const idx = join(dirname(fileURLToPath(import.meta.url)), '..', 'node_modules', 'bare-runtime', 'index.js')
+    if (!existsSync(idx)) return false
+    const src = readFileSync(idx, 'utf8')
+    return src.includes(`${process.platform}-${process.arch}`)
+  } catch { return false }
+})()
+
+if (_hasBareRuntime) {
+  try {
+    const qvac = await import('@qvac/sdk')
+    loadModel = qvac.loadModel
+    completion = qvac.completion
+    QWEN3_600M_INST_Q4 = qvac.QWEN3_600M_INST_Q4
+    qvacAvailable = true
+  } catch (err) {
+    console.warn(`QVAC SDK load error (${err.message}) — running without LLM cleaning`)
+  }
+} else {
+  console.warn(`QVAC SDK skipped — bare-runtime has no ${process.platform}-${process.arch} binary`)
 }
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
