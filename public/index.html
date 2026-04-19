@@ -33,8 +33,10 @@ header{text-align:center;padding:80px 0 40px}
 
 /* Results */
 .result{background:#141414;border:1px solid #1a1a1a;border-radius:8px;padding:20px;margin-bottom:12px}
-.result .title{color:#e0e0e0;font-weight:600;font-size:15px}
-.result .url{color:#2ec98a;font-size:12px;margin-top:4px;word-break:break-all}
+.result .title{color:#e0e0e0;font-weight:600;font-size:15px;text-decoration:none;display:block}
+.result .title:hover{color:#2ec98a}
+.result .url{color:#2ec98a;font-size:12px;margin-top:4px;word-break:break-all;text-decoration:none;display:block}
+.result .url:hover{text-decoration:underline}
 .result .desc{color:#999;font-size:13px;margin-top:8px;line-height:1.5}
 .result .meta{color:#555;font-size:11px;margin-top:8px}
 .cleaned{border-left:2px solid #2ec98a;padding-left:12px;margin-top:10px;color:#ccc;font-size:13px;line-height:1.5}
@@ -166,7 +168,7 @@ async function search() {
     const r = await fetch('/search', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: q, n_results: 5 })
+      body: JSON.stringify({ query: q, n_results: 3 })
     })
     const data = await r.json()
     loading.classList.add('hidden')
@@ -174,8 +176,8 @@ async function search() {
     let html = ''
     for (const item of data.results || []) {
       html += '<div class="result">'
-      html += '<div class="title">' + esc(item.title) + '</div>'
-      html += '<div class="url">' + esc(item.url) + '</div>'
+      html += '<a class="title" href="' + esc(item.url) + '" target="_blank" rel="noopener">' + esc(item.title) + '</a>'
+      html += '<a class="url" href="' + esc(item.url) + '" target="_blank" rel="noopener">' + esc(item.url) + '</a>'
       if (item.description) html += '<div class="desc">' + esc(item.description) + '</div>'
       if (item.cleaned_markdown) html += '<div class="cleaned">' + esc(item.cleaned_markdown) + '</div>'
       const meta = [item.age, item.source, item.language].filter(Boolean).join(' · ')
