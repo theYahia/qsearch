@@ -50,6 +50,17 @@ header{text-align:center;padding:80px 0 40px}
 .ep .path{color:#e0e0e0;font-family:monospace;font-size:13px}
 .ep .info{color:#666;font-size:12px;margin-top:4px}
 
+/* Roadmap */
+.roadmap{margin-top:48px;padding-top:32px;border-top:1px solid #1a1a1a}
+.roadmap-title{color:#555;font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:20px}
+.roadmap-items{display:flex;flex-direction:column;gap:14px}
+.rm-item{display:flex;align-items:flex-start;gap:12px;color:#666;font-size:13px}
+.rm-item.done{color:#bbb}
+.rm-dot{width:8px;height:8px;border-radius:50%;border:1px solid #333;margin-top:4px;flex-shrink:0}
+.rm-item.done .rm-dot{background:#4de8b2;border-color:#4de8b2}
+.rm-text strong{color:#888;margin-right:6px}
+.rm-item.done .rm-text strong{color:#4de8b2}
+
 /* Onboard card */
 .onboard-card{background:#141414;border:1px solid #4de8b2;border-radius:12px;padding:28px;margin-bottom:24px;text-align:center}
 .onboard-title{font-size:17px;font-weight:600;margin-bottom:18px}
@@ -109,6 +120,28 @@ the instructions to join qsearch</pre></div>
         <li>It reads the docs and learns the API</li>
         <li>Your agent can now search the web</li>
       </ol>
+    </div>
+  </div>
+
+  <div class="roadmap">
+    <div class="roadmap-title">Roadmap</div>
+    <div class="roadmap-items">
+      <div class="rm-item done">
+        <div class="rm-dot"></div>
+        <div class="rm-text"><strong>Now</strong> Brave Search API + QVAC local cleaning</div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-dot"></div>
+        <div class="rm-text"><strong>Next</strong> QVAC Provider — own index, no external API</div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-dot"></div>
+        <div class="rm-text"><strong>Next</strong> x402 USDT micropayments per query</div>
+      </div>
+      <div class="rm-item">
+        <div class="rm-dot"></div>
+        <div class="rm-text"><strong>Future</strong> HyperDHT distributed search — fully sovereign</div>
+      </div>
     </div>
   </div>
 </div>
