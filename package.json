@@ -1,6 +1,6 @@
 {
   "name": "qsearch",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "The open-web hop for QVAC agents — OSS search API where cleaning runs on your local LLM.",
   "type": "module",
   "main": "src/server.js",

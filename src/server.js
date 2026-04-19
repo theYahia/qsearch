@@ -1,13 +1,24 @@
-// qsearch v0.2.1 — Brave fetch + QVAC local LLM cleaning pipeline.
+// qsearch v0.2.2 — Brave fetch + optional QVAC local LLM cleaning pipeline.
 // Endpoints: POST /search, POST /news, POST /context, GET /health
 // Model: Qwen3-0.6B Q4 (~364MB, downloads once on first request).
-// v0.2.1: improved cleaning prompt — strips HTML artifacts, nav menus, image tags.
+// v0.2.2: graceful degradation when QVAC SDK unavailable (bare-runtime linux-x64).
 
 import http from 'node:http'
 import { readFileSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
-import { loadModel, completion, QWEN3_600M_INST_Q4 } from '@qvac/sdk'
+
+let loadModel, completion, QWEN3_600M_INST_Q4
+let qvacAvailable = false
+try {
+  const qvac = await import('@qvac/sdk')
+  loadModel = qvac.loadModel
+  completion = qvac.completion
+  QWEN3_600M_INST_Q4 = qvac.QWEN3_600M_INST_Q4
+  qvacAvailable = true
+} catch (err) {
+  console.warn(`QVAC SDK unavailable (${err.message}) — running without LLM cleaning`)
+}
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const envPath = join(__dirname, '..', '.env.local')
@@ -50,6 +61,7 @@ let modelIdPromise = null
 // v0.2.1 fix: clear modelIdPromise on failure so retry is possible.
 // Without this, one network hiccup during model download bricks the server permanently.
 function warmModel () {
+  if (!qvacAvailable) return Promise.reject(new Error('QVAC unavailable'))
   if (modelIdPromise) return modelIdPromise
   console.log('Loading QVAC model (Qwen3-0.6B Q4, ~364MB — downloads once)...')
   modelIdPromise = loadModel({
@@ -64,7 +76,7 @@ function warmModel () {
     return id
   }).catch((err) => {
     console.error('Model load failed:', String(err))
-    modelIdPromise = null // clear so next request retries
+    modelIdPromise = null
     throw err
   })
   return modelIdPromise
@@ -207,7 +219,7 @@ async function handleSearch (req, res) {
     brave_endpoint: 'web',
     freshness: body.freshness || null,
     total_results: results.length,
-    model: QWEN3_600M_INST_Q4.name,
+    model: qvacAvailable ? QWEN3_600M_INST_Q4.name : null,
     brave_ms,
     total_clean_ms,
     results
@@ -260,7 +272,7 @@ async function handleNews (req, res) {
     brave_endpoint: 'news',
     freshness: body.freshness || 'pw',
     total_results: results.length,
-    model: QWEN3_600M_INST_Q4.name,
+    model: qvacAvailable ? QWEN3_600M_INST_Q4.name : null,
     brave_ms,
     total_clean_ms,
     results
@@ -353,7 +365,7 @@ async function handleContext (req, res) {
     brave_endpoint: 'llm/context',
     freshness: body.freshness || null,
     total_results: results.length,
-    model: QWEN3_600M_INST_Q4.name,
+    model: qvacAvailable ? QWEN3_600M_INST_Q4.name : null,
     brave_ms,
     total_clean_ms,
     results
@@ -364,7 +376,7 @@ const server = http.createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/health') {
     const modelReady = modelIdPromise !== null
     res.writeHead(200, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ status: 'ok', model_loaded: modelReady }))
+    res.end(JSON.stringify({ status: 'ok', version: '0.2.2', qvac_available: qvacAvailable, model_loaded: modelReady }))
     return
   }
   if (req.method === 'POST' && req.url === '/search') {
@@ -396,7 +408,7 @@ const server = http.createServer((req, res) => {
 })
 
 server.listen(PORT, () => {
-  console.log(`qsearch v0.2.1 listening on http://localhost:${PORT}`)
+  console.log(`qsearch v0.2.2 listening on http://localhost:${PORT}`)
   console.log('POST /search  { "query": "...", "n_results": 3, "freshness": "pw", "search_lang": "en", "country": "us" }')
   console.log('POST /news    { "query": "...", "n_results": 5, "freshness": "pd" }')
   console.log('POST /context { "query": "...", "n_results": 3 }')
