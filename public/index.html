@@ -114,7 +114,7 @@ footer a:hover{color:#2ec98a}
       <button id="btn" onclick="search()">Search</button>
     </div>
     <div id="results"></div>
-    <div id="loading" class="hidden"><span class="spinner"></span> <span id="loading-text">Fetching from Brave Search...</span><div id="loading-hint" class="hidden" style="color:#555;font-size:11px;margin-top:8px">Each result is cleaned by a local Qwen3-0.6B model running on CPU — no cloud APIs</div></div>
+    <div id="loading" class="hidden"><span class="spinner"></span> <span id="loading-text">Fetching from Brave Search...</span><div id="loading-hint" class="hidden" style="color:#555;font-size:11px;margin-top:8px">Each result is cleaned by a local Qwen3-0.6B model running on CPU — no cloud APIs</div><div id="loading-bored" class="hidden" style="color:#444;font-size:11px;margin-top:6px">While you wait — check the <a href="#" onclick="document.getElementById('rm-panel').classList.toggle('hidden');return false" style="color:#2ec98a">roadmap</a> or <a href="https://github.com/theYahia/qsearch" target="_blank" rel="noopener" style="color:#2ec98a">source code</a></div></div>
   </div>
 
   <!-- Agent mode -->
@@ -179,7 +179,7 @@ footer a:hover{color:#2ec98a}
     var stepTimer = setTimeout(function() {
       lt.textContent = 'Cleaning with local LLM (Qwen3-0.6B)... 0s'
       document.getElementById('loading-hint').classList.remove('hidden')
-      stepTimer = setInterval(function() { cleanSec++; lt.textContent = 'Cleaning with local LLM (Qwen3-0.6B)... ' + cleanSec + 's' }, 1000)
+      stepTimer = setInterval(function() { cleanSec++; lt.textContent = 'Cleaning with local LLM (Qwen3-0.6B)... ' + cleanSec + 's'; if (cleanSec === 15) document.getElementById('loading-bored').classList.remove('hidden') }, 1000)
     }, 3000)
     try {
       var data = await Promise.race([
@@ -208,6 +208,7 @@ footer a:hover{color:#2ec98a}
       clearInterval(stepTimer)
       loading.classList.add('hidden')
       document.getElementById('loading-hint').classList.add('hidden')
+      document.getElementById('loading-bored').classList.add('hidden')
       btn.disabled = false
     }
   }
