@@ -182,7 +182,7 @@ async function search() {
     })
     const data = await r.json()
     loading.classList.add('hidden')
-    if (data.error) { results.innerHTML = '<div class="stats">' + data.error + '</div>'; return }
+    if (data.error) { results.innerHTML = '<div class="stats">' + esc(data.error) + '</div>'; btn.disabled = false; return }
     let html = ''
     for (const item of data.results || []) {
       html += '<div class="result">'
