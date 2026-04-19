@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>qsearch — the open-web hop for AI agents</title>
+<meta name="description" content="Open-source search API for AI agents. Brave Search + QVAC local LLM cleaning. No cloud, no tracking.">
+<meta property="og:title" content="qsearch — search API for AI agents">
+<meta property="og:description" content="Brave Search + QVAC local LLM cleaning. Open-source, zero cloud dependencies.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://qsearch.pro">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="qsearch — search API for AI agents">
+<meta name="twitter:description" content="Brave Search + QVAC local LLM cleaning. Open-source, zero cloud dependencies.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='42' cy='42' r='28' fill='none' stroke='%232ec98a' stroke-width='8'/%3E%3Cline x1='62' y1='62' x2='90' y2='90' stroke='%232ec98a' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -43,21 +51,7 @@ header{text-align:center;padding:80px 0 40px}
 .cleaned{border-left:2px solid #2ec98a;padding-left:12px;margin-top:10px;color:#ccc;font-size:13px;line-height:1.5}
 .stats{text-align:center;color:#555;font-size:12px;margin:20px 0}
 
-/* Agent mode */
-.code-block{background:#141414;border:1px solid #1a1a1a;border-radius:8px;padding:18px;margin-bottom:16px;overflow-x:auto}
-.code-block pre{color:#ccc;font-family:ui-monospace,'SF Mono','Cascadia Code',monospace;font-size:13px;line-height:1.6;white-space:pre-wrap;word-break:break-all}
-.code-block .label{color:#555;font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
-.endpoints{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
-.ep{background:#141414;border:1px solid #1a1a1a;border-radius:8px;padding:14px}
-.ep .method{color:#2ec98a;font-family:monospace;font-size:13px;font-weight:600}
-.ep .path{color:#e0e0e0;font-family:monospace;font-size:13px}
-.ep .info{color:#666;font-size:12px;margin-top:4px}
-
 /* Footer */
-.footer-links{margin-bottom:12px;font-size:13px}
-.footer-links a{color:#555}
-.footer-links a:hover{color:#2ec98a}
-.footer-sep{color:#333;margin:0 8px}
 .roadmap-footer{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;font-size:12px}
 .rm-step{color:#666}
 .rm-step.done{color:#2ec98a}
@@ -70,8 +64,6 @@ header{text-align:center;padding:80px 0 40px}
 .onboard-code pre{color:#e0e0e0;font-family:ui-monospace,'SF Mono','Cascadia Code',monospace;font-size:16px;line-height:1.6;white-space:normal;word-break:break-word}
 .onboard-steps{text-align:left;padding-left:20px;color:#bbb;font-size:14px;line-height:2}
 .onboard-steps strong{color:#e0e0e0}
-.dim{color:#555}
-
 /* Footer */
 footer{padding:48px 24px 28px;color:#333;font-size:12px;border-top:1px solid #141414;max-width:720px;margin:0 auto;width:100%}
 footer a{color:#555;text-decoration:none}

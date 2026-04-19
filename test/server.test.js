@@ -452,4 +452,100 @@ describe('qsearch server', () => {
       assert.ok('cleaned_markdown' in item)
     }
   })
+
+  // ── Frontend tests ─────────────────────────────────────────────────
+
+  test('GET / returns HTML with correct structure', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/')
+    assert.equal(res.status, 200)
+    assert.ok(res.raw.includes('<!DOCTYPE html>'))
+    assert.ok(res.raw.includes('<meta charset="utf-8">'))
+    assert.ok(res.raw.includes('viewport'))
+  })
+
+  test('HTML has favicon', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/')
+    assert.ok(res.raw.includes('rel="icon"'))
+    assert.ok(res.raw.includes('image/svg+xml'))
+  })
+
+  test('HTML has Open Graph and Twitter meta tags', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/')
+    assert.ok(res.raw.includes('og:title'))
+    assert.ok(res.raw.includes('og:description'))
+    assert.ok(res.raw.includes('twitter:card'))
+    assert.ok(res.raw.includes('twitter:title'))
+  })
+
+  test('HTML has meta description', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/')
+    assert.ok(res.raw.includes('name="description"'))
+  })
+
+  test('HTML contains search input and button', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/')
+    assert.ok(res.raw.includes('id="q"'))
+    assert.ok(res.raw.includes('id="btn"'))
+    assert.ok(res.raw.includes('placeholder='))
+  })
+
+  test('HTML has Human/Agent toggle', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/')
+    assert.ok(res.raw.includes('id="human"'))
+    assert.ok(res.raw.includes('id="agent"'))
+    assert.ok(res.raw.includes('Human'))
+    assert.ok(res.raw.includes('Agent'))
+  })
+
+  test('HTML has footer with GitHub link', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/')
+    assert.ok(res.raw.includes('github.com/theYahia/qsearch'))
+    assert.ok(res.raw.includes('Built for agents'))
+  })
+
+  test('HTML has roadmap panel', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/')
+    assert.ok(res.raw.includes('rm-panel'))
+    assert.ok(res.raw.includes('QVAC Provider'))
+    assert.ok(res.raw.includes('x402 USDT'))
+    assert.ok(res.raw.includes('HyperDHT'))
+  })
+
+  test('HTML does not leak API keys or secrets', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/')
+    assert.ok(!res.raw.includes('BRAVE_API_KEY'))
+    assert.ok(!res.raw.match(/BSA[a-zA-Z0-9]{20}/))
+    assert.ok(!res.raw.includes('test-key-12345'))
+  })
+
+  test('Agent onboard uses qsearch.pro not raw IP', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/')
+    assert.ok(res.raw.includes('qsearch.pro/skill.md'))
+    assert.ok(!res.raw.includes('185.246.223.7'))
+  })
+
+  test('HTML has XSS protection via esc() function', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/')
+    assert.ok(res.raw.includes('function esc(s)'))
+    assert.ok(res.raw.includes('textContent'))
+  })
+
+  test('GET /search works with query params', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/search?q=test&n=2')
+    assert.equal(res.status, 200)
+    assert.ok(res.json.results)
+    assert.ok(res.json.brave_ms >= 0)
+  })
+
+  test('GET /skill.md returns docs', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/skill.md')
+    assert.equal(res.status, 200)
+    assert.ok(res.raw.includes('qsearch API'))
+  })
+
+  test('skill.md uses qsearch.pro not raw IP', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/skill.md')
+    assert.ok(!res.raw.includes('185.246.223.7'))
+    assert.ok(res.raw.includes('qsearch.pro'))
+  })
 })
