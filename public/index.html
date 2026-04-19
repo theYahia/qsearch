@@ -114,7 +114,7 @@ footer a:hover{color:#2ec98a}
       <button id="btn" onclick="search()">Search</button>
     </div>
     <div id="results"></div>
-    <div id="loading" class="hidden"><span class="spinner"></span> <span id="loading-text">Fetching from Brave Search...</span></div>
+    <div id="loading" class="hidden"><span class="spinner"></span> <span id="loading-text">Fetching from Brave Search...</span><div id="loading-hint" class="hidden" style="color:#555;font-size:11px;margin-top:8px">Each result is cleaned by a local Qwen3-0.6B model running on CPU — no cloud APIs</div></div>
   </div>
 
   <!-- Agent mode -->
@@ -178,6 +178,7 @@ footer a:hover{color:#2ec98a}
     var cleanSec = 0
     var stepTimer = setTimeout(function() {
       lt.textContent = 'Cleaning with local LLM (Qwen3-0.6B)... 0s'
+      document.getElementById('loading-hint').classList.remove('hidden')
       stepTimer = setInterval(function() { cleanSec++; lt.textContent = 'Cleaning with local LLM (Qwen3-0.6B)... ' + cleanSec + 's' }, 1000)
     }, 3000)
     try {
@@ -206,6 +207,7 @@ footer a:hover{color:#2ec98a}
       clearTimeout(stepTimer)
       clearInterval(stepTimer)
       loading.classList.add('hidden')
+      document.getElementById('loading-hint').classList.add('hidden')
       btn.disabled = false
     }
   }
