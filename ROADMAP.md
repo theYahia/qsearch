@@ -115,3 +115,24 @@ This roadmap is the public accountability contract. Every day ships one visible 
 - **Screenshots > prose.** Terminal output, diffs, clips — they carry further than explanation.
 - **No venting, no meta.** The thread is a build log, not a diary.
 - **Scope discipline.** If something isn't on this roadmap, it goes to `v2-ideas.md` and ships after Apr 21.
+
+---
+
+## What's next
+
+### v0.3 — Own corpus
+
+Curated, crawled knowledge base scoped to ~20 crypto/DeFi protocols (Tether, USDT, WDK, QVAC, Holepunch, Keet, LayerZero, and others). Replaces Brave dependency for covered topics — queries hit a local index first (<10ms), Brave only for uncovered queries.
+
+- **Index:** Tantivy (full-text) + Qdrant (vector)
+- **Embeddings:** QVAC Qwen3-Embed-0.6B on-device
+- **Crawl:** Scrapling, incremental, robots.txt honored
+- **License:** Apache-2.0 end-to-end
+
+### v0.4 — [WDK x402 USDT](https://x.com/WDK_tether) payments
+
+Pay-per-query micropayments via WDK x402 facilitator. Agents pay 0.01 USDT per search — same HTTP 402 flow the ecosystem already uses, but USDT-native.
+
+### v1.0 — [HyperDHT](https://x.com/paoloardoino/status/2041507715046887589) decentralized search
+
+P2P sharing of qsearch's own crawled corpus via Hyperswarm. Brave results are never cached or shared. Federated multi-writer with trusted operators — progressive decentralization, not full P2P on day one.
