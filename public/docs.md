@@ -7,7 +7,7 @@ The open-web hop for AI agents. Brave Search + QVAC local LLM cleaning.
 ### POST /search
 Web search with optional LLM cleaning.
 ```bash
-curl -X POST http://185.246.223.7:8080/search \
+curl -X POST https://qsearch.pro/search \
   -H "Content-Type: application/json" \
   -d '{"query": "QVAC SDK", "n_results": 3}'
 ```
@@ -17,7 +17,7 @@ Parameters: `query` (required), `n_results` (1-20, default 3), `freshness` (pd/p
 ### POST /news
 News search with freshness filters.
 ```bash
-curl -X POST http://185.246.223.7:8080/news \
+curl -X POST https://qsearch.pro/news \
   -H "Content-Type: application/json" \
   -d '{"query": "tether", "n_results": 5, "freshness": "pd"}'
 ```
@@ -27,7 +27,7 @@ Parameters: `query` (required), `n_results` (1-50, default 5), `freshness` (defa
 ### POST /context
 Deep context with multi-snippet sources for RAG.
 ```bash
-curl -X POST http://185.246.223.7:8080/context \
+curl -X POST https://qsearch.pro/context \
   -H "Content-Type: application/json" \
   -d '{"query": "x402 protocol", "n_results": 3}'
 ```
@@ -37,7 +37,7 @@ Parameters: `query` (required), `n_results` (1-10, default 3), `freshness`
 ### GET /health
 Server status.
 ```bash
-curl http://185.246.223.7:8080/health
+curl https://qsearch.pro/health
 ```
 
 Response: `{"status":"ok","version":"0.2.2","qvac_available":false,"model_loaded":false}`
