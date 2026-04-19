@@ -50,6 +50,15 @@ header{text-align:center;padding:80px 0 40px}
 .ep .path{color:#e0e0e0;font-family:monospace;font-size:13px}
 .ep .info{color:#666;font-size:12px;margin-top:4px}
 
+/* Onboard card */
+.onboard-card{background:#141414;border:1px solid #4de8b2;border-radius:12px;padding:28px;margin-bottom:24px;text-align:center}
+.onboard-title{font-size:17px;font-weight:600;margin-bottom:18px}
+.onboard-code{background:#0a0a0a;border-radius:8px;padding:14px 18px;margin-bottom:18px;text-align:left}
+.onboard-code pre{color:#ccc;font-family:ui-monospace,'SF Mono','Cascadia Code',monospace;font-size:13px;line-height:1.6;white-space:pre-wrap;word-break:break-all}
+.onboard-steps{text-align:left;padding-left:20px;color:#bbb;font-size:14px;line-height:2}
+.onboard-steps strong{color:#e0e0e0}
+.dim{color:#555}
+
 /* Footer */
 footer{text-align:center;padding:60px 0 40px;color:#333;font-size:12px}
 footer a{color:#555}
@@ -91,11 +100,16 @@ footer a{color:#555}
 
   <!-- Agent mode -->
   <div id="agent" class="hidden">
-    <div class="code-block">
-      <div class="label">Quick Start</div>
-      <pre>curl -X POST http://185.246.223.7:8080/search \
+    <div class="onboard-card">
+      <div class="onboard-title">Connect your AI agent to qsearch</div>
+      <div class="onboard-code"><pre>curl -X POST http://185.246.223.7:8080/search \
   -H "Content-Type: application/json" \
-  -d '{"query": "QVAC SDK", "n_results": 3}'</pre>
+  -d '{"query": "QVAC SDK", "n_results": 3}'</pre></div>
+      <ol class="onboard-steps">
+        <li><strong>HTTP API</strong> — no auth, no signup, just call</li>
+        <li><strong>MCP</strong> — add config to Claude / Cursor <span class="dim">(see below)</span></li>
+        <li>Brave Search + QVAC cleaning in one endpoint</li>
+      </ol>
     </div>
 
     <div class="endpoints">
