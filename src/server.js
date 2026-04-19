@@ -137,13 +137,26 @@ async function braveFetch (endpoint, query, params) {
     if (v != null) url.searchParams.set(k, String(v))
   }
   const start = Date.now()
+  const ctrl = new AbortController()
+  const timer = setTimeout(() => ctrl.abort(), 10000)
   const r = await fetch(url.toString(), {
     headers: {
       Accept: 'application/json',
       'Accept-Encoding': 'gzip',
       'X-Subscription-Token': BRAVE_KEY
+    },
+    signal: ctrl.signal
+  }).catch((err) => {
+    clearTimeout(timer)
+    if (err.name === 'AbortError') {
+      const e = new Error('Brave API timeout (10s)')
+      e.status = 504
+      e.detail = 'Request to Brave Search API timed out after 10 seconds'
+      throw e
     }
+    throw err
   })
+  clearTimeout(timer)
   if (!r.ok) {
     const err = await r.json().catch(() => ({}))
     const e = new Error(`Brave API error ${r.status}`)
