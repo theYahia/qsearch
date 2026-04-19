@@ -1,7 +1,6 @@
 # qsearch — Product Requirements Document v1
 
-> **Status:** v0.1 shipped (2026-04-15) — living document.
-> **Pitch day:** 2026-04-21 (Tether QVAC Technical PM conversation).
+> **Status:** v0.2.2 live at [qsearch.pro](https://qsearch.pro) (2026-04-19) — living document.
 
 ---
 
@@ -17,7 +16,7 @@ Tether's edge-first open-source stack (QVAC SDK, WDK) lets agents run fully on-d
 
 Ship `qsearch` as the open-web hop for QVAC agents: a local HTTP search server where Brave results are cleaned by a local LLM, never a cloud server. The architecture enforces the privacy guarantee; the code makes it auditable.
 
-**Not a business.** This is a hire-artifact and an OSS primitive. Optimise for: working code, narrative fit to Tether stack, build-in-public visibility.
+**OSS primitive first.** Optimise for: working code, fit to Tether's edge-first stack, build-in-public visibility.
 
 ---
 
@@ -88,7 +87,7 @@ curl -X POST http://localhost:8080/search \
 
 ## 6. KPIs
 
-Anchored to Tether's own verbatim KPI categories from the TPM vacancy:
+Grouped by product area:
 
 ### App engagement
 - **Time-to-first-result (TTFR):** model warm, single result < 2s (brave ~800ms + clean ~1.1s)
@@ -103,7 +102,7 @@ Anchored to Tether's own verbatim KPI categories from the TPM vacancy:
 ### Privacy compliance
 - **Zero-retention guarantee:** Brave Data-for-AI tier — no query storage upstream
 - **BYOK enforced:** BRAVE_API_KEY never leaves local machine
-- **No-training clause:** confirmed in Brave ToS research (Gate 3 closed 2026-04-15)
+- **No-training clause:** confirmed per Brave Data-for-AI tier documentation
 - **PII redaction (v0.2):** `redact-pii-core@4.0.2` for query sanitization
 
 ### Performance efficiency
@@ -142,15 +141,16 @@ POST /search
 
 ---
 
-## 9. Roadmap (post-v0.1)
+## 9. Roadmap
 
-| Version | Feature |
-|---|---|
-| v0.1 (Day 4) | Brave + QVAC local cleaning, `npm run start` |
-| v0.2 | PII redactor (`redact-pii-core`), configurable model via env |
-| v0.3 | SearXNG as drop-in provider alongside Brave |
-| v1.0 | Workbench Integration JSON schema, MCP-over-HTTP transport |
+| Version | Feature | Status |
+|---|---|---|
+| v0.1 (Day 4) | Brave + QVAC local cleaning, `npm start` | ✅ shipped |
+| v0.2.2 (Day 6) | `/news`, `/context`, MCP tool, production deploy at qsearch.pro, 46 tests | ✅ live |
+| v0.3 | Own corpus (domain-specific knowledge base) | planned |
+| v0.4 | x402 USDT micropayments for API access | planned |
+| v1.0 | HyperDHT P2P distribution | planned |
 
 ---
 
-*PRD owner: Timur Mamatov (YAHIA). Last updated: 2026-04-16.*
+*PRD owner: Timur Mamatov. Last updated: 2026-04-19.*

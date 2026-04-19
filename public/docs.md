@@ -34,13 +34,21 @@ curl -X POST https://qsearch.pro/context \
 
 Parameters: `query` (required), `n_results` (1-10, default 3), `freshness`
 
+### GET /search?q=...
+Quick search via query params.
+```bash
+curl "https://qsearch.pro/search?q=QVAC+SDK&n=3"
+```
+
+Parameters: `q` (required), `n` (results count, default 3)
+
 ### GET /health
 Server status.
 ```bash
 curl https://qsearch.pro/health
 ```
 
-Response: `{"status":"ok","version":"0.2.2","qvac_available":false,"model_loaded":false}`
+Response: `{"status":"ok","version":"0.2.2","qvac_available":true,"model_loaded":true}`
 
 ## MCP Config
 

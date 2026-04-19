@@ -122,4 +122,4 @@ The MCP-over-HTTP transport is the integration primitive. Workbench is the first
 
 ---
 
-*Integration design: Timur Mamatov (YAHIA). Target: qsearch v1.0, post-2026-04-21.*
+*Integration design: Timur Mamatov. Target: qsearch v1.0.*

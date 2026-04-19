@@ -72,7 +72,7 @@ Built this in a week as part of a build-in-public experiment. Feedback welcome �
 A: If you're building SaaS, use them — better quality, zero ops. qsearch is for when you've already committed to local inference and don't want to break that contract for web search.
 
 **Q: Why Brave specifically?**
-A: Data-for-AI tier allows API usage with caching. Google/Bing ToS are hostile to this use case. SearXNG support planned for v0.2 (fully self-hosted option).
+A: Data-for-AI tier explicitly permits AI transformation of results (caching/re-use is not permitted — results must be processed in-memory). Google/Bing ToS are hostile to this use case. SearXNG support planned for a future release (fully self-hosted option).
 
 **Q: 600M model seems small, is the quality good enough?**
 A: For extracting key facts from search snippets, yes. It's not summarizing novels — it's pulling "version 0.8.3 released April 9" from a 200-char snippet. Bigger models (`QWEN3_1_7B`) available if you want better quality.

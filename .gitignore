@@ -3,3 +3,12 @@ node_modules/
 *.log
 .DS_Store
 test-mcp.js
+
+docs/GTM.md
+docs/KPI_DASHBOARD.md
+docs/OUTREACH.md
+docs/PITCH_DECK.md
+docs/PITCH_NOTE.md
+docs/PORTFOLIO.md
+docs/TWEETS.md
+docs/day2-demo.json

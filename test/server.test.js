@@ -240,8 +240,8 @@ describe('qsearch server', () => {
     assert.equal(res.json.total_results, 3)
     assert.ok(Array.isArray(res.json.results))
     assert.equal(res.json.results.length, 3)
-    assert.ok(typeof res.json.brave_ms, 'number')
-    assert.ok(typeof res.json.total_clean_ms, 'number')
+    assert.equal(typeof res.json.brave_ms, 'number')
+    assert.equal(typeof res.json.total_clean_ms, 'number')
   })
 
   test('POST /search result items have correct shape', async () => {

@@ -1,9 +1,4 @@
-# Show HN: qsearch — draft
-
-*Ready to submit: Sunday 2026-04-19, ~16:00–18:00 UTC*
-*URL to submit: https://github.com/theYahia/qsearch*
-
----
+# Show HN: qsearch
 
 ## Title
 
@@ -36,7 +31,7 @@ Honest trade-offs:
 - Snippet quality is lower than Exa/Tavily — a 600M model can't beat a datacenter GPU
 - Cold start takes a few seconds (364MB model load)
 - Brave only in v0.1; SearXNG self-hosted is v0.2
-- Self-host only — no hosted tier
+- Self-host first — public demo at qsearch.pro, but designed for your own instance
 
 The wedge is architectural, not quality. qsearch wins when you care that the cleaning step runs on your hardware end-to-end — not as a privacy policy promise, but as a property you can audit in the code.
 
@@ -44,16 +39,6 @@ Apache-2.0. Works on Windows/macOS/Linux. npm install && npm start.
 
 Blog post with pipeline details: [BLOG.md in repo]
 ```
-
----
-
-## Pre-submit checklist
-
-- [ ] Repo has ≥5 stars before submitting (social proof)
-- [ ] README `npm install && npm start` tested fresh on clean machine
-- [ ] BLOG.md link in body updated to direct URL if GitHub renders it
-- [ ] Submit from personal account (not a throwaway)
-- [ ] Don't submit on a Friday or Saturday — Sunday PM UTC is optimal
 
 ---
 

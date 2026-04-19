@@ -3,7 +3,7 @@
 **Commitment:** *["Planning to build a search API with QVAC SDK"](https://x.com/TheTieTieTies/status/2044039772981576181)*
 (Posted from [@TheTieTieTies](https://x.com/TheTieTieTies), reposted by [@WDK_tether](https://x.com/WDK_tether) on 2026-04-14.)
 
-**Pitch day:** 2026-04-21 (Tether hiring conversation).
+**Target:** 2026-04-21 — week 1 complete.
 
 This roadmap is the public accountability contract. Every day ships one visible artifact. Every day the thread updates.
 
@@ -27,7 +27,7 @@ This roadmap is the public accountability contract. Every day ships one visible 
 - [x] Raw pipe works — `curl localhost:8080/search` returns live Brave results
 - [ ] `@qvac/sdk` install on Windows — **deferred to Day 3**, lands together with the cleaning layer
 
-**Output:** [`docs/day2-demo.json`](./docs/day2-demo.json) — live Brave response captured from the running server. First hit on `"qvac sdk release notes"`: *Show HN: QVAC SDK*. Commit: `40996e8`.
+**Output:** live Brave response from the running server. First hit on `"qvac sdk release notes"`: *Show HN: QVAC SDK*. Commit: `40996e8`.
 
 ## Day 3 — 2026-04-15 · QVAC cleaning integrated ✅ (shipped early)
 
@@ -70,41 +70,40 @@ This roadmap is the public accountability contract. Every day ships one visible 
 - [x] Model retry on failure (server no longer bricks permanently)
 - [x] `n_results` max raised from 10 to 20
 
-**Output:** v0.2.1 tested locally. 4 endpoints, all working.
+**Output:** v0.2.2 — 4 endpoints, MCP tool, all working.
 
 ---
 
 ## Days 5.5b — 2026-04-17 through 2026-04-18 · Launch prep
 
-- [ ] Push v0.2.1 to GitHub + tag
+- [x] Push v0.2.2 to GitHub
+- [x] VISION_V4 document — full strategic framing with 4-phase roadmap
 - [ ] Publish blog post on Dev.to / Medium
 - [ ] Finalize HN Show post ([draft](./docs/HN_POST_DRAFT.md))
 - [ ] Second upstream PR to `tetherto/*` (docs, examples, or issue repro)
 - [ ] Tweet thread recap
-- [ ] Polish pitch materials
+- [x] Polish documentation and demos
 
 ---
 
-## Day 6 — 2026-04-19 · Public launch
+## Day 6 — 2026-04-19 · Live at qsearch.pro ✅
 
-- HN Show post: *"qsearch — OSS search API where cleaning runs on your local LLM"*
-- Blog post published
-- Thread recap in the WDK-reposted thread: "Day 6 recap — here's what shipped"
-- Second PR opportunity into a Tether repo (QVAC docs fix, WDK example, or issue repro)
+- [x] **Production deploy** — VPS with Nginx reverse proxy + Cloudflare HTTPS
+- [x] **Custom domain** — [qsearch.pro](https://qsearch.pro) live with Full Strict SSL
+- [x] **QVAC on production** — `@qvac/sdk` running on VPS, model loaded, `cleaned_markdown` generated in ~25s on CPU
+- [x] **Frontend** — human search UI + agent onboarding card, mobile-responsive, OG/Twitter meta tags
+- [x] **46 automated tests** passing (server + frontend coverage)
+- [x] Graceful loading UX — staged progress text with timer for slow LLM inference
+- [ ] Day 6 tweet in build thread
 
-**Output:** HN submission + thread recap + second upstream PR.
+**Output:** qsearch.pro live — first public-facing QVAC-powered search with working UI.
 
-## Day 7 — 2026-04-20 · Portfolio + pitch prep
+## Day 7 — 2026-04-20 · Week 1 wrap-up
 
 - Portfolio landing page / README top-level pointer collecting: repo, blog, thread, upstream PRs
-- Pitch note drafted (why Tether, what qsearch proves, what a week of build-in-public looked like)
 - Final thread recap: "Week 1 done. Here's everything."
 
-**Output:** one link that collects everything, ready to drop into a DM/email.
-
-## Day 8 — 2026-04-21 · Pitch day
-
-- Tether conversation.
+**Output:** one link that collects everything.
 
 ---
 

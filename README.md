@@ -3,15 +3,15 @@
 > *"[Planning to build a search API with QVAC SDK.](https://x.com/TheTieTieTies/status/2044039772981576181)"*
 
 ![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)
-![Status: v0.2.1 live](https://img.shields.io/badge/status-v0.2.1%20live-brightgreen.svg)
+![Status: v0.2.2 live](https://img.shields.io/badge/status-v0.2.2%20live-brightgreen.svg)
 ![Built on @qvac/sdk](https://img.shields.io/badge/built%20on-%40qvac%2Fsdk-16a34a.svg)
-![Pitch day 2026-04-21](https://img.shields.io/badge/pitch%20day-2026--04--21-ef4444.svg)
+![Demo: qsearch.pro](https://img.shields.io/badge/demo-qsearch.pro-ef4444.svg)
 
 This repo is the follow-through. **A search API built on the QVAC SDK**, where Brave results get cleaned by your own local QVAC LLM — never a cloud server — so agents running on Tether's edge stack can read the live web without breaking the *"data never leaves your hardware"* principle.
 
 We call it **the open-web hop for QVAC agents**.
 
-> ✅ **v0.2.1 live (2026-04-16).** 4 endpoints: `/search`, `/news`, `/context`, `/health` + MCP tool.
+> ✅ **v0.2.2 live at [qsearch.pro](https://qsearch.pro) (2026-04-19).** 4 endpoints: `/search`, `/news`, `/context`, `/health` + MCP tool. The live demo cleans on the demo server so you can try it without installing. Self-hosted instances clean on your own machine — that's the design.
 > Daily log: [@TheTieTieTies](https://x.com/TheTieTieTies) · Roadmap: [ROADMAP.md](./ROADMAP.md) · PRD: [docs/PRD.md](./docs/PRD.md)
 
 ## Quick start
@@ -30,7 +30,7 @@ cp .env.example .env.local
 
 # 4. Install & run
 npm install    # first run downloads Qwen3-0.6B (~364MB, cached after)
-npm start      # → qsearch v0.2.1 listening on http://localhost:8080
+npm start      # → qsearch v0.2.2 listening on http://localhost:8080
 
 # 5. Test
 curl -X POST http://localhost:8080/search \
@@ -96,7 +96,7 @@ We're not locked to Brave forever — v2 may add SearXNG or Mullvad Leta as drop
 
 qsearch is the first row where *all* of these are checked. That's the wedge — not better snippets, not faster ranking. **Local cleaning on OSS, as a primitive for agents.** The intersection didn't exist until now.
 
-## API — v0.2.1 (live)
+## API — v0.2.2 (live)
 
 ### Endpoints
 
@@ -161,14 +161,15 @@ curl -X POST http://localhost:8080/search \
 
 - **Cold start.** Loading a local LLM takes seconds. qsearch is best run as a long-lived local daemon, not a cold-fired lambda.
 - **Single provider in v1.** Brave only. More providers are v2.
-- **Self-host only.** No hosted tier. If you want zero-ops, Exa and Tavily exist and are good.
+- **Self-host first.** [qsearch.pro](https://qsearch.pro) is a public demo, but the design assumes you run your own instance. If you want zero-ops, Exa and Tavily exist and are good.
 - **The wedge is architecture, not ranking.** qsearch won't out-rank Exa on snippet quality. It wins when *you* care that cleaning runs on your hardware, not theirs.
 
 ## Follow the build
 
 A new commit, demo, or writeup ships every day until **2026-04-21**.
 
-- ⭐ **Star this repo** — v0.2.1 live with 4 endpoints + MCP tool
+- 🌐 **Live demo:** [qsearch.pro](https://qsearch.pro) — try it in your browser
+- ⭐ **Star this repo** — v0.2.2 live with 4 endpoints + MCP tool
 - 🐦 **X thread:** [@TheTieTieTies](https://x.com/TheTieTieTies) — daily updates
 - 🗺️ **Full 7-day plan:** [ROADMAP.md](./ROADMAP.md)
 - 📝 **Feature requests for v2:** open an issue

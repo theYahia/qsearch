@@ -164,7 +164,7 @@ Three things worth noting:
 
 **No PII redaction yet.** The query and snippets pass through the model as-is. v0.2 adds `redact-pii-core@4.0.2` before the inference call to strip emails, phone numbers, and identifiers from the cleaning context.
 
-**Single provider.** Brave only in v0.1. SearXNG as a self-hosted fallback is planned for v0.2 — no API key required, runs on your own index.
+**Single provider.** Brave only for now. SearXNG as a self-hosted fallback is on the roadmap — no API key required, runs on your own index.
 
 **Cold start.** The bare worker spawns and the model loads when the server starts. On a cold machine this takes a few seconds (364MB gguf loaded to RAM + bare worker init). Once warm, inference is ~1s per result. Run it as a long-lived daemon, not a cold lambda.
 
@@ -188,5 +188,5 @@ qsearch is the open-web hop. The rest of the stack already exists.
 
 ---
 
-*Code: [github.com/theYahia/qsearch](https://github.com/theYahia/qsearch) — Apache-2.0, v0.1.0 live.*
+*Code: [github.com/theYahia/qsearch](https://github.com/theYahia/qsearch) — Apache-2.0, v0.2.2 live at [qsearch.pro](https://qsearch.pro).*
 *Follow the build: [@TheTieTieTies](https://x.com/TheTieTieTies)*
