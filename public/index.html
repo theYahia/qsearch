@@ -175,7 +175,11 @@ footer a:hover{color:#2ec98a}
     loading.classList.remove('hidden')
     var lt = document.getElementById('loading-text')
     lt.textContent = 'Fetching from Brave Search...'
-    var stepTimer = setTimeout(function() { lt.textContent = 'Cleaning results with local LLM (Qwen3-0.6B)...' }, 3000)
+    var cleanSec = 0
+    var stepTimer = setTimeout(function() {
+      lt.textContent = 'Cleaning with local LLM (Qwen3-0.6B)... 0s'
+      stepTimer = setInterval(function() { cleanSec++; lt.textContent = 'Cleaning with local LLM (Qwen3-0.6B)... ' + cleanSec + 's' }, 1000)
+    }, 3000)
     try {
       var data = await Promise.race([
         fetch('/search?q=' + encodeURIComponent(q) + '&n=2').then(function(r) { return r.json() }),
@@ -200,6 +204,7 @@ footer a:hover{color:#2ec98a}
       results.innerHTML = '<div class="stats">' + (e.message === 'timeout' ? 'Request timed out — try again' : 'Request failed — try again') + '</div>'
     } finally {
       clearTimeout(stepTimer)
+      clearInterval(stepTimer)
       loading.classList.add('hidden')
       btn.disabled = false
     }
