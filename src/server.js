@@ -13,10 +13,8 @@ let qvacAvailable = false
 
 const _hasBareRuntime = (() => {
   try {
-    const idx = join(dirname(fileURLToPath(import.meta.url)), '..', 'node_modules', 'bare-runtime', 'index.js')
-    if (!existsSync(idx)) return false
-    const src = readFileSync(idx, 'utf8')
-    return src.includes(`${process.platform}-${process.arch}`)
+    const pkg = join(dirname(fileURLToPath(import.meta.url)), '..', 'node_modules', `bare-runtime-${process.platform}-${process.arch}`)
+    return existsSync(pkg)
   } catch { return false }
 })()
 
