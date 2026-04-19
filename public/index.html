@@ -177,8 +177,7 @@ async function search() {
     })
     clearTimeout(timer)
     const data = await r.json()
-    loading.classList.add('hidden')
-    if (data.error) { results.innerHTML = '<div class="stats">' + esc(data.error) + '</div>'; btn.disabled = false; return }
+    if (data.error) { results.innerHTML = '<div class="stats">' + esc(data.error) + '</div>'; return }
     let html = ''
     for (const item of data.results || []) {
       html += '<div class="result">'
@@ -193,10 +192,11 @@ async function search() {
     html += '<div class="stats">Brave: ' + data.brave_ms + 'ms · Clean: ' + data.total_clean_ms + 'ms · ' + data.total_results + ' results</div>'
     results.innerHTML = html
   } catch (e) {
+    results.innerHTML = '<div class="stats">' + (e.name === 'AbortError' ? 'Request timed out — try again' : 'Request failed — try again') + '</div>'
+  } finally {
     loading.classList.add('hidden')
-    results.innerHTML = '<div class="stats">' + (e.name === 'AbortError' ? 'Request timed out — try again' : 'Request failed') + '</div>'
+    btn.disabled = false
   }
-  btn.disabled = false
 }
 
 function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML }
