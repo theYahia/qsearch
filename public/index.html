@@ -176,7 +176,7 @@ footer a:hover{color:#2ec98a}
     try {
       var data = await Promise.race([
         fetch('/search?q=' + encodeURIComponent(q) + '&n=3').then(function(r) { return r.json() }),
-        new Promise(function(_, reject) { setTimeout(function() { reject(new Error('timeout')) }, 12000) })
+        new Promise(function(_, reject) { setTimeout(function() { reject(new Error('timeout')) }, 60000) })
       ])
       if (data.error) { results.innerHTML = '<div class="stats">' + esc(data.error) + '</div>'; return }
       var html = ''
