@@ -395,7 +395,7 @@ const server = http.createServer((req, res) => {
     res.end(indexHtml)
     return
   }
-  if (req.method === 'GET' && req.url === '/docs') {
+  if (req.method === 'GET' && (req.url === '/skill.md' || req.url === '/docs')) {
     res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' })
     res.end(docsMd)
     return
