@@ -172,13 +172,10 @@ footer a:hover{color:#2ec98a}
     results.innerHTML = ''
     loading.classList.remove('hidden')
     try {
-      var ctrl = new AbortController()
-      var timer = setTimeout(function(){ ctrl.abort() }, 15000)
-      var r = await fetch('/search?q=' + encodeURIComponent(q) + '&n=3', {
-        signal: ctrl.signal
-      })
-      clearTimeout(timer)
-      var data = await r.json()
+      var data = await Promise.race([
+        fetch('/search?q=' + encodeURIComponent(q) + '&n=3').then(function(r) { return r.json() }),
+        new Promise(function(_, reject) { setTimeout(function() { reject(new Error('timeout')) }, 12000) })
+      ])
       if (data.error) { results.innerHTML = '<div class="stats">' + esc(data.error) + '</div>'; return }
       var html = ''
       for (var i = 0; i < (data.results || []).length; i++) {
@@ -195,7 +192,7 @@ footer a:hover{color:#2ec98a}
       html += '<div class="stats">Brave: ' + data.brave_ms + 'ms · Clean: ' + data.total_clean_ms + 'ms · ' + data.total_results + ' results</div>'
       results.innerHTML = html
     } catch (e) {
-      results.innerHTML = '<div class="stats">' + (e.name === 'AbortError' ? 'Request timed out — try again' : 'Request failed — try again') + '</div>'
+      results.innerHTML = '<div class="stats">' + (e.message === 'timeout' ? 'Request timed out — try again' : 'Request failed — try again') + '</div>'
     } finally {
       loading.classList.add('hidden')
       btn.disabled = false
