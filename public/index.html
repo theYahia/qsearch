@@ -111,7 +111,7 @@ footer a:hover{color:#2ec98a}
   <!-- Human mode -->
   <div id="human">
     <div class="search-box">
-      <input type="text" id="q" placeholder="Ask me anything — try 'What is QVAC SDK?'" onkeydown="if(event.key==='Enter')search()">
+      <input type="text" id="q" placeholder="Ask me anything in English — try 'What is QVAC SDK?'" onkeydown="if(event.key==='Enter')search()">
       <button id="btn" onclick="search()">Search</button>
     </div>
     <div id="results"></div>
@@ -190,7 +190,7 @@ footer a:hover{color:#2ec98a}
       html += '<div class="stats">Brave: ' + data.brave_ms + 'ms · Clean: ' + data.total_clean_ms + 'ms · ' + data.total_results + ' results</div>'
       results.innerHTML = html
     } catch (e) {
-      results.innerHTML = '<div class="stats">' + (e.message === 'timeout' ? 'that took a while… please try again 🫠' : 'something tripped — please try again') + '</div>'
+      results.innerHTML = '<div class="stats">' + (e.message === 'timeout' ? 'that took a while… please try again 🫠' : 'something tripped — please try again 🫠') + '</div>'
     } finally {
       clearTimeout(stepTimer)
       clearInterval(stepTimer)
