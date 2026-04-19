@@ -80,6 +80,8 @@ footer a:hover{color:#2ec98a}
 
 .hidden{display:none}
 #loading{text-align:center;color:#555;padding:40px 0}
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid #333;border-top-color:#2ec98a;border-radius:50%;animation:spin .8s linear infinite;vertical-align:middle;margin-right:6px}
+@keyframes spin{to{transform:rotate(360deg)}}
 
 @media(max-width:600px){
   header{padding:48px 0 24px}
@@ -109,7 +111,7 @@ footer a:hover{color:#2ec98a}
       <button id="btn" onclick="search()">Search</button>
     </div>
     <div id="results"></div>
-    <div id="loading" class="hidden">Searching...</div>
+    <div id="loading" class="hidden"><span class="spinner"></span> Searching</div>
   </div>
 
   <!-- Agent mode -->
@@ -165,11 +167,15 @@ async function search() {
   results.innerHTML = ''
   loading.classList.remove('hidden')
   try {
+    const ctrl = new AbortController()
+    const timer = setTimeout(() => ctrl.abort(), 15000)
     const r = await fetch('/search', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: q, n_results: 3 })
+      body: JSON.stringify({ query: q, n_results: 3 }),
+      signal: ctrl.signal
     })
+    clearTimeout(timer)
     const data = await r.json()
     loading.classList.add('hidden')
     if (data.error) { results.innerHTML = '<div class="stats">' + esc(data.error) + '</div>'; btn.disabled = false; return }
@@ -188,7 +194,7 @@ async function search() {
     results.innerHTML = html
   } catch (e) {
     loading.classList.add('hidden')
-    results.innerHTML = '<div class="stats">Request failed</div>'
+    results.innerHTML = '<div class="stats">' + (e.name === 'AbortError' ? 'Request timed out — try again' : 'Request failed') + '</div>'
   }
   btn.disabled = false
 }
