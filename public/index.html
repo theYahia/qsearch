@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qsearch — the open-web hop for AI agents</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;color:#e0e0e0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}
+a{color:#4de8b2;text-decoration:none}
+a:hover{text-decoration:underline}
+
+.container{max-width:720px;width:100%;padding:0 24px}
+
+/* Header */
+header{text-align:center;padding:80px 0 40px}
+.logo{font-size:42px;font-weight:700;font-family:ui-monospace,'SF Mono','Cascadia Code',monospace;letter-spacing:-1px}
+.logo span{color:#4de8b2}
+.tagline{color:#888;font-size:16px;margin-top:12px}
+
+/* Toggle */
+.toggle{display:flex;justify-content:center;gap:0;margin:32px 0 40px;border:1px solid #222;border-radius:8px;overflow:hidden;width:fit-content;margin-left:auto;margin-right:auto}
+.toggle button{background:transparent;color:#888;border:none;padding:12px 28px;font-size:14px;cursor:pointer;transition:all .2s}
+.toggle button.active{background:#4de8b2;color:#0a0a0a;font-weight:600}
+
+/* Search */
+.search-box{display:flex;gap:0;margin-bottom:32px}
+.search-box input{flex:1;background:#141414;border:1px solid #222;border-right:none;border-radius:8px 0 0 8px;padding:14px 18px;color:#e0e0e0;font-size:15px;outline:none}
+.search-box input:focus{border-color:#4de8b2}
+.search-box button{background:#4de8b2;color:#0a0a0a;border:none;border-radius:0 8px 8px 0;padding:14px 24px;font-weight:600;font-size:14px;cursor:pointer}
+.search-box button:hover{background:#3dd4a0}
+.search-box button:disabled{opacity:.5;cursor:wait}
+
+/* Results */
+.result{background:#141414;border:1px solid #1a1a1a;border-radius:8px;padding:20px;margin-bottom:12px}
+.result .title{color:#e0e0e0;font-weight:600;font-size:15px}
+.result .url{color:#4de8b2;font-size:12px;margin-top:4px;word-break:break-all}
+.result .desc{color:#999;font-size:13px;margin-top:8px;line-height:1.5}
+.result .meta{color:#555;font-size:11px;margin-top:8px}
+.cleaned{border-left:2px solid #4de8b2;padding-left:12px;margin-top:10px;color:#ccc;font-size:13px;line-height:1.5}
+.stats{text-align:center;color:#555;font-size:12px;margin:20px 0}
+
+/* Agent mode */
+.code-block{background:#141414;border:1px solid #1a1a1a;border-radius:8px;padding:18px;margin-bottom:16px;overflow-x:auto}
+.code-block pre{color:#ccc;font-family:ui-monospace,'SF Mono','Cascadia Code',monospace;font-size:13px;line-height:1.6;white-space:pre-wrap;word-break:break-all}
+.code-block .label{color:#555;font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.endpoints{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.ep{background:#141414;border:1px solid #1a1a1a;border-radius:8px;padding:14px}
+.ep .method{color:#4de8b2;font-family:monospace;font-size:13px;font-weight:600}
+.ep .path{color:#e0e0e0;font-family:monospace;font-size:13px}
+.ep .info{color:#666;font-size:12px;margin-top:4px}
+
+/* Footer */
+footer{text-align:center;padding:60px 0 40px;color:#333;font-size:12px}
+footer a{color:#555}
+.trust{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:16px;color:#444;font-size:12px}
+
+.hidden{display:none}
+#loading{text-align:center;color:#555;padding:40px 0}
+
+@media(max-width:600px){
+  header{padding:48px 0 24px}
+  .logo{font-size:32px}
+  .endpoints{grid-template-columns:1fr}
+  .toggle button{padding:10px 20px;font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span>q</span>search</div>
+  <div class="tagline">The open-web hop for AI agents</div>
+</header>
+
+<div class="container">
+  <div class="toggle">
+    <button class="active" onclick="show('human')">Human</button>
+    <button onclick="show('agent')">Agent</button>
+  </div>
+
+  <!-- Human mode -->
+  <div id="human">
+    <div class="search-box">
+      <input type="text" id="q" placeholder="Search anything..." onkeydown="if(event.key==='Enter')search()">
+      <button id="btn" onclick="search()">Search</button>
+    </div>
+    <div id="results"></div>
+    <div id="loading" class="hidden">Searching...</div>
+  </div>
+
+  <!-- Agent mode -->
+  <div id="agent" class="hidden">
+    <div class="code-block">
+      <div class="label">Quick Start</div>
+      <pre>curl -X POST http://185.246.223.7:8080/search \
+  -H "Content-Type: application/json" \
+  -d '{"query": "QVAC SDK", "n_results": 3}'</pre>
+    </div>
+
+    <div class="endpoints">
+      <div class="ep">
+        <span class="method">POST</span> <span class="path">/search</span>
+        <div class="info">Web search + LLM cleaning</div>
+      </div>
+      <div class="ep">
+        <span class="method">POST</span> <span class="path">/news</span>
+        <div class="info">News with freshness filters</div>
+      </div>
+      <div class="ep">
+        <span class="method">POST</span> <span class="path">/context</span>
+        <div class="info">Deep multi-snippet context</div>
+      </div>
+      <div class="ep">
+        <span class="method">GET</span> <span class="path">/health</span>
+        <div class="info">Status + QVAC availability</div>
+      </div>
+    </div>
+
+    <div class="code-block">
+      <div class="label">MCP Config</div>
+      <pre>{
+  "mcpServers": {
+    "qsearch": {
+      "command": "node",
+      "args": ["src/mcp.js"],
+      "env": { "BRAVE_API_KEY": "your-key" }
+    }
+  }
+}</pre>
+    </div>
+
+    <div class="code-block">
+      <div class="label">Response</div>
+      <pre>{
+  "query": "QVAC SDK",
+  "brave_ms": 511,
+  "total_results": 3,
+  "results": [{
+    "title": "QVAC - Decentralized, Local AI",
+    "url": "https://qvac.tether.io/",
+    "cleaned_markdown": "QVAC SDK v0.8.3 was released..."
+  }]
+}</pre>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="trust">
+    <span>Apache-2.0</span>
+    <span>QVAC by Tether</span>
+    <span>Brave Search API</span>
+    <span>MCP Compatible</span>
+  </div>
+  <a href="https://github.com/theYahia/qsearch">GitHub</a>
+</footer>
+
+<script>
+function show(mode) {
+  document.getElementById('human').classList.toggle('hidden', mode !== 'human')
+  document.getElementById('agent').classList.toggle('hidden', mode !== 'agent')
+  document.querySelectorAll('.toggle button').forEach((b, i) => {
+    b.classList.toggle('active', (i === 0 && mode === 'human') || (i === 1 && mode === 'agent'))
+  })
+}
+
+async function search() {
+  const q = document.getElementById('q').value.trim()
+  if (!q) return
+  const btn = document.getElementById('btn')
+  const results = document.getElementById('results')
+  const loading = document.getElementById('loading')
+  btn.disabled = true
+  results.innerHTML = ''
+  loading.classList.remove('hidden')
+  try {
+    const r = await fetch('/search', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: q, n_results: 5 })
+    })
+    const data = await r.json()
+    loading.classList.add('hidden')
+    if (data.error) { results.innerHTML = '<div class="stats">' + data.error + '</div>'; return }
+    let html = ''
+    for (const item of data.results || []) {
+      html += '<div class="result">'
+      html += '<div class="title">' + esc(item.title) + '</div>'
+      html += '<div class="url">' + esc(item.url) + '</div>'
+      if (item.description) html += '<div class="desc">' + esc(item.description) + '</div>'
+      if (item.cleaned_markdown) html += '<div class="cleaned">' + esc(item.cleaned_markdown) + '</div>'
+      const meta = [item.age, item.source, item.language].filter(Boolean).join(' · ')
+      if (meta) html += '<div class="meta">' + esc(meta) + '</div>'
+      html += '</div>'
+    }
+    html += '<div class="stats">Brave: ' + data.brave_ms + 'ms · Clean: ' + data.total_clean_ms + 'ms · ' + data.total_results + ' results</div>'
+    results.innerHTML = html
+  } catch (e) {
+    loading.classList.add('hidden')
+    results.innerHTML = '<div class="stats">Request failed</div>'
+  }
+  btn.disabled = false
+}
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML }
+</script>
+</body>
+</html>

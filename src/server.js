@@ -386,7 +386,14 @@ async function handleContext (req, res) {
   }, null, 2))
 }
 
+const indexHtml = readFileSync(join(__dirname, '..', 'public', 'index.html'), 'utf8')
+
 const server = http.createServer((req, res) => {
+  if (req.method === 'GET' && (req.url === '/' || req.url === '/index.html')) {
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
+    res.end(indexHtml)
+    return
+  }
   if (req.method === 'GET' && req.url === '/health') {
     const modelReady = modelIdPromise !== null
     res.writeHead(200, { 'Content-Type': 'application/json' })
