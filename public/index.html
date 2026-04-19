@@ -50,9 +50,12 @@ header{text-align:center;padding:80px 0 40px}
 .ep .path{color:#e0e0e0;font-family:monospace;font-size:13px}
 .ep .info{color:#666;font-size:12px;margin-top:4px}
 
-/* Roadmap footer */
-.roadmap-footer{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:16px;font-size:12px}
-.rm-label{color:#555;text-transform:uppercase;letter-spacing:1px;margin-right:4px}
+/* Footer */
+.footer-links{margin-bottom:12px;font-size:13px}
+.footer-links a{color:#555}
+.footer-links a:hover{color:#4de8b2}
+.footer-sep{color:#333;margin:0 8px}
+.roadmap-footer{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;font-size:12px}
 .rm-step{color:#666}
 .rm-step.done{color:#4de8b2}
 .rm-arrow{color:#333}
@@ -86,7 +89,7 @@ footer a{color:#555}
 
 <header>
   <div class="logo"><span>q</span>search</div>
-  <div class="tagline">Search API for AI agents</div>
+  <div class="tagline">Search for AI agents. Built on Tether.</div>
 </header>
 
 <div class="container">
@@ -122,8 +125,12 @@ footer a{color:#555}
 </div>
 
 <footer>
-  <div class="roadmap-footer">
-    <span class="rm-label">Roadmap</span>
+  <div class="footer-links">
+    <a href="https://github.com/theYahia/qsearch">GitHub</a>
+    <span class="footer-sep">·</span>
+    <a href="#" onclick="document.getElementById('rm-panel').classList.toggle('hidden');return false">Roadmap</a>
+  </div>
+  <div id="rm-panel" class="hidden roadmap-footer">
     <span class="rm-step done">Brave + QVAC cleaning</span>
     <span class="rm-arrow">→</span>
     <span class="rm-step">QVAC Provider</span>
@@ -132,10 +139,7 @@ footer a{color:#555}
     <span class="rm-arrow">→</span>
     <span class="rm-step">HyperDHT</span>
   </div>
-  <div class="trust">
-    <span>Built on <a href="https://qvac.tether.io">QVAC</a> by Tether</span>
-  </div>
-  <a href="https://github.com/theYahia/qsearch">GitHub</a>
+  <div class="trust">Built on <a href="https://qvac.tether.io">QVAC</a> by Tether</div>
 </footer>
 
 <script>
