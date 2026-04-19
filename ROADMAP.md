@@ -94,7 +94,7 @@ This roadmap is the public accountability contract. Every day ships one visible 
 - [x] **Frontend** — human search UI + agent onboarding card, mobile-responsive, OG/Twitter meta tags
 - [x] **46 automated tests** passing (server + frontend coverage)
 - [x] Graceful loading UX — staged progress text with timer for slow LLM inference
-- [ ] Day 6 tweet in build thread
+- [x] Day 6 tweet in build thread
 
 **Output:** qsearch.pro live — first public-facing QVAC-powered search with working UI.
 
