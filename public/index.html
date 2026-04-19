@@ -107,55 +107,10 @@ footer a{color:#555}
   -d '{"query": "QVAC SDK", "n_results": 3}'</pre></div>
       <ol class="onboard-steps">
         <li><strong>HTTP API</strong> — no auth, no signup, just call</li>
-        <li><strong>MCP</strong> — add config to Claude / Cursor <span class="dim">(see below)</span></li>
+        <li><strong>MCP</strong> — add config to Claude / Cursor</li>
         <li>Brave Search + QVAC cleaning in one endpoint</li>
       </ol>
-    </div>
-
-    <div class="endpoints">
-      <div class="ep">
-        <span class="method">POST</span> <span class="path">/search</span>
-        <div class="info">Web search + LLM cleaning</div>
-      </div>
-      <div class="ep">
-        <span class="method">POST</span> <span class="path">/news</span>
-        <div class="info">News with freshness filters</div>
-      </div>
-      <div class="ep">
-        <span class="method">POST</span> <span class="path">/context</span>
-        <div class="info">Deep multi-snippet context</div>
-      </div>
-      <div class="ep">
-        <span class="method">GET</span> <span class="path">/health</span>
-        <div class="info">Status + QVAC availability</div>
-      </div>
-    </div>
-
-    <div class="code-block">
-      <div class="label">MCP Config</div>
-      <pre>{
-  "mcpServers": {
-    "qsearch": {
-      "command": "node",
-      "args": ["src/mcp.js"],
-      "env": { "BRAVE_API_KEY": "your-key" }
-    }
-  }
-}</pre>
-    </div>
-
-    <div class="code-block">
-      <div class="label">Response</div>
-      <pre>{
-  "query": "QVAC SDK",
-  "brave_ms": 511,
-  "total_results": 3,
-  "results": [{
-    "title": "QVAC - Decentralized, Local AI",
-    "url": "https://qvac.tether.io/",
-    "cleaned_markdown": "QVAC SDK v0.8.3 was released..."
-  }]
-}</pre>
+      <div style="margin-top:18px"><a href="/docs" style="color:#4de8b2;font-size:14px">Full API docs & MCP config →</a></div>
     </div>
   </div>
 </div>

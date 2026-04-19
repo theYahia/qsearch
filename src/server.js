@@ -387,11 +387,17 @@ async function handleContext (req, res) {
 }
 
 const indexHtml = readFileSync(join(__dirname, '..', 'public', 'index.html'), 'utf8')
+const docsMd = readFileSync(join(__dirname, '..', 'public', 'docs.md'), 'utf8')
 
 const server = http.createServer((req, res) => {
   if (req.method === 'GET' && (req.url === '/' || req.url === '/index.html')) {
     res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
     res.end(indexHtml)
+    return
+  }
+  if (req.method === 'GET' && req.url === '/docs') {
+    res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' })
+    res.end(docsMd)
     return
   }
   if (req.method === 'GET' && req.url === '/health') {
