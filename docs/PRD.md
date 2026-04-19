@@ -148,7 +148,7 @@ POST /search
 | v0.1 (Day 4) | Brave + QVAC local cleaning, `npm start` | ✅ shipped |
 | v0.2.2 (Day 6) | `/news`, `/context`, MCP tool, production deploy at qsearch.pro, 46 tests | ✅ live |
 | v0.3 | Own corpus (domain-specific knowledge base) | planned |
-| v0.4 | x402 USDT micropayments for API access | planned |
+| v0.4 | WDK x402 USDT micropayments for API access | planned |
 | v1.0 | HyperDHT P2P distribution | planned |
 
 ---
