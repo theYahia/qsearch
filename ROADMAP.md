@@ -122,7 +122,9 @@ This roadmap is the public accountability contract. Every day ships one visible 
 
 ### v0.3 — Own corpus
 
-Curated, crawled knowledge base scoped to ~20 crypto/DeFi protocols (Tether, USDT, WDK, QVAC, Holepunch, Keet, LayerZero, and others). Replaces Brave dependency for covered topics — queries hit a local index first (<10ms), Brave only for uncovered queries.
+*Planned — scope and timeline may evolve.*
+
+Curated, crawled knowledge base starting with core crypto/DeFi protocols (Tether, USDT, WDK, QVAC, Holepunch, Keet, LayerZero, and others) and expanding from there. Replaces Brave dependency for covered topics — queries hit a local index first (<10ms), Brave only for uncovered queries.
 
 - **Index:** Tantivy (full-text) + Qdrant (vector)
 - **Embeddings:** QVAC Qwen3-Embed-0.6B on-device
