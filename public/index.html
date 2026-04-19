@@ -60,6 +60,11 @@ header{text-align:center;padding:80px 0 40px}
 .onboard-code pre{color:#e0e0e0;font-family:ui-monospace,'SF Mono','Cascadia Code',monospace;font-size:16px;line-height:1.6;white-space:normal;word-break:break-word}
 .onboard-steps{text-align:left;padding-left:20px;color:#bbb;font-size:14px;line-height:2}
 .onboard-steps strong{color:#e0e0e0}
+.roadmap-footer{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;font-size:12px}
+.rm-step{color:#666}
+.rm-step.done{color:#2ec98a}
+.rm-arrow{color:#333}
+
 /* Footer */
 footer{padding:48px 24px 28px;color:#333;font-size:12px;border-top:1px solid #141414;max-width:720px;margin:0 auto;width:100%}
 footer a{color:#555;text-decoration:none}
@@ -108,7 +113,7 @@ footer a:hover{color:#2ec98a}
       <button id="btn" onclick="search()">Search</button>
     </div>
     <div id="results"></div>
-    <div id="loading" class="hidden"><span class="spinner"></span> <span id="loading-text">Fetching from Brave Search...</span><div id="loading-hint" class="hidden" style="color:#555;font-size:11px;margin-top:8px">Local LLM on CPU — takes a moment</div><div id="loading-bored" class="hidden" style="color:#444;font-size:11px;margin-top:6px">While you wait — check the <a href="https://github.com/theYahia/qsearch#roadmap" target="_blank" rel="noopener" style="color:#2ec98a">roadmap</a> or <a href="https://github.com/theYahia/qsearch" target="_blank" rel="noopener" style="color:#2ec98a">GitHub</a></div></div>
+    <div id="loading" class="hidden"><span class="spinner"></span> <span id="loading-text">Fetching from Brave Search...</span><div id="loading-hint" class="hidden" style="color:#555;font-size:11px;margin-top:8px">Local LLM on CPU — takes a moment</div><div id="loading-bored" class="hidden" style="color:#444;font-size:11px;margin-top:6px">While you wait — check the <a href="https://github.com/theYahia/qsearch#roadmap" target="_blank" rel="noopener" style="color:#2ec98a">roadmap</a> or <a href="https://github.com/theYahia/qsearch" target="_blank" rel="noopener" style="color:#2ec98a">github</a></div></div>
   </div>
 
   <!-- Agent mode -->
@@ -128,6 +133,15 @@ footer a:hover{color:#2ec98a}
 </div>
 
 <footer>
+  <div class="roadmap-footer">
+    <span class="rm-step done">Brave + QVAC cleaning</span>
+    <span class="rm-arrow">→</span>
+    <span class="rm-step">QVAC Provider</span>
+    <span class="rm-arrow">→</span>
+    <span class="rm-step">x402 USDT</span>
+    <span class="rm-arrow">→</span>
+    <span class="rm-step">HyperDHT</span>
+  </div>
   <div class="footer-motto">Built for agents. Humans welcome.</div>
 </footer>
 
