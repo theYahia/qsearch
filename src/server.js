@@ -131,7 +131,8 @@ function readBody (req) {
 //   'llm/context' → /res/v1/llm/context  (NO /search suffix!)
 async function braveFetch (endpoint, query, params) {
   const suffix = endpoint === 'llm/context' ? '' : '/search'
-  const url = new URL(`https://api.search.brave.com/res/v1/${endpoint}${suffix}`)
+  const base = process.env.BRAVE_BASE_URL || 'https://api.search.brave.com'
+  const url = new URL(`${base}/res/v1/${endpoint}${suffix}`)
   url.searchParams.set('q', query)
   for (const [k, v] of Object.entries(params)) {
     if (v != null) url.searchParams.set(k, String(v))
