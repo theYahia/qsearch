@@ -48,11 +48,11 @@ Server status.
 curl https://qsearch.pro/health
 ```
 
-Response: `{"status":"ok","version":"0.2.2","qvac_available":true,"model_loaded":true}`
+Response: `{"status":"ok","version":"0.2.2","qvac_available":true|false,"model_loaded":true|false}`
 
-## MCP Config
+## MCP Config (self-hosted only)
 
-Add to your `claude_desktop_config.json` or Cursor MCP settings:
+To run your own instance, add to `claude_desktop_config.json` or Cursor MCP settings:
 
 ```json
 {
@@ -75,7 +75,7 @@ Add to your `claude_desktop_config.json` or Cursor MCP settings:
   "brave_ms": 511,
   "total_clean_ms": 245,
   "total_results": 3,
-  "model": "Qwen3-0.6B-Q4" | null,
+  "model": "QWEN3_600M_INST_Q4" | null,
   "results": [
     {
       "url": "https://qvac.tether.io/",
