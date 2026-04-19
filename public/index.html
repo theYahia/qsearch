@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>qsearch — the open-web hop for AI agents</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='42' cy='42' r='28' fill='none' stroke='%232ec98a' stroke-width='8'/%3E%3Cline x1='62' y1='62' x2='90' y2='90' stroke='%232ec98a' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0a0a;color:#e0e0e0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}
@@ -87,7 +88,17 @@ footer a:hover{color:#2ec98a}
   header{padding:48px 0 24px}
   .logo{font-size:32px}
   .endpoints{grid-template-columns:1fr}
-  .toggle button{padding:10px 20px;font-size:13px}
+  .toggle button{padding:12px 24px;font-size:14px;min-height:44px}
+  .search-box{flex-direction:column;gap:8px}
+  .search-box input{border-right:1px solid #222;border-radius:8px;padding:16px 18px;font-size:16px}
+  .search-box button{border-radius:8px;padding:16px 24px;font-size:16px;min-height:48px}
+  .result{padding:16px}
+  .result .title{font-size:14px}
+  .result .desc{font-size:13px}
+  .cleaned{font-size:12px}
+  .onboard-code pre{font-size:13px}
+  .onboard-steps{font-size:13px}
+  .footer-nav{gap:24px}
 }
 </style>
 </head>
@@ -118,7 +129,7 @@ footer a:hover{color:#2ec98a}
   <div id="agent" class="hidden">
     <div class="onboard-card">
       <div class="onboard-title">Join qsearch</div>
-      <div class="onboard-code"><pre>Read http://185.246.223.7:8080/skill.md and follow the instructions to join qsearch</pre></div>
+      <div class="onboard-code"><pre>Read https://qsearch.pro/skill.md and follow the instructions to join qsearch</pre></div>
       <ol class="onboard-steps">
         <li>Send this to your agent</li>
         <li>It reads the docs and learns the API</li>
