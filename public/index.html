@@ -149,57 +149,62 @@ footer a:hover{color:#2ec98a}
 </footer>
 
 <script>
-function show(mode) {
-  document.getElementById('human').classList.toggle('hidden', mode !== 'human')
-  document.getElementById('agent').classList.toggle('hidden', mode !== 'agent')
-  document.querySelectorAll('.toggle button').forEach((b, i) => {
-    b.classList.toggle('active', (i === 0 && mode === 'human') || (i === 1 && mode === 'agent'))
-  })
-}
+;(function(){
+  'use strict';
 
-async function search() {
-  const q = document.getElementById('q').value.trim()
-  if (!q) return
-  const btn = document.getElementById('btn')
-  const results = document.getElementById('results')
-  const loading = document.getElementById('loading')
-  btn.disabled = true
-  results.innerHTML = ''
-  loading.classList.remove('hidden')
-  try {
-    const ctrl = new AbortController()
-    const timer = setTimeout(() => ctrl.abort(), 15000)
-    const r = await fetch('/search', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: q, n_results: 3 }),
-      signal: ctrl.signal
+  window.show = function(mode) {
+    document.getElementById('human').classList.toggle('hidden', mode !== 'human')
+    document.getElementById('agent').classList.toggle('hidden', mode !== 'agent')
+    document.querySelectorAll('.toggle button').forEach(function(b, i) {
+      b.classList.toggle('active', (i === 0 && mode === 'human') || (i === 1 && mode === 'agent'))
     })
-    clearTimeout(timer)
-    const data = await r.json()
-    if (data.error) { results.innerHTML = '<div class="stats">' + esc(data.error) + '</div>'; return }
-    let html = ''
-    for (const item of data.results || []) {
-      html += '<div class="result">'
-      html += '<a class="title" href="' + esc(item.url) + '" target="_blank" rel="noopener">' + esc(item.title) + '</a>'
-      html += '<a class="url" href="' + esc(item.url) + '" target="_blank" rel="noopener">' + esc(item.url) + '</a>'
-      if (item.description) html += '<div class="desc">' + esc(item.description) + '</div>'
-      if (item.cleaned_markdown) html += '<div class="cleaned">' + esc(item.cleaned_markdown) + '</div>'
-      const meta = [item.age, item.source, item.language].filter(Boolean).join(' · ')
-      if (meta) html += '<div class="meta">' + esc(meta) + '</div>'
-      html += '</div>'
-    }
-    html += '<div class="stats">Brave: ' + data.brave_ms + 'ms · Clean: ' + data.total_clean_ms + 'ms · ' + data.total_results + ' results</div>'
-    results.innerHTML = html
-  } catch (e) {
-    results.innerHTML = '<div class="stats">' + (e.name === 'AbortError' ? 'Request timed out — try again' : 'Request failed — try again') + '</div>'
-  } finally {
-    loading.classList.add('hidden')
-    btn.disabled = false
   }
-}
 
-function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML }
+  function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML }
+
+  window.search = async function() {
+    var q = document.getElementById('q').value.trim()
+    if (!q) return
+    var btn = document.getElementById('btn')
+    var results = document.getElementById('results')
+    var loading = document.getElementById('loading')
+    btn.disabled = true
+    results.innerHTML = ''
+    loading.classList.remove('hidden')
+    try {
+      var ctrl = new AbortController()
+      var timer = setTimeout(function(){ ctrl.abort() }, 15000)
+      var r = await fetch('/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: q, n_results: 3 }),
+        signal: ctrl.signal
+      })
+      clearTimeout(timer)
+      var data = await r.json()
+      if (data.error) { results.innerHTML = '<div class="stats">' + esc(data.error) + '</div>'; return }
+      var html = ''
+      for (var i = 0; i < (data.results || []).length; i++) {
+        var item = data.results[i]
+        html += '<div class="result">'
+        html += '<a class="title" href="' + esc(item.url) + '" target="_blank" rel="noopener">' + esc(item.title) + '</a>'
+        html += '<a class="url" href="' + esc(item.url) + '" target="_blank" rel="noopener">' + esc(item.url) + '</a>'
+        if (item.description) html += '<div class="desc">' + esc(item.description) + '</div>'
+        if (item.cleaned_markdown) html += '<div class="cleaned">' + esc(item.cleaned_markdown) + '</div>'
+        var meta = [item.age, item.source, item.language].filter(Boolean).join(' · ')
+        if (meta) html += '<div class="meta">' + esc(meta) + '</div>'
+        html += '</div>'
+      }
+      html += '<div class="stats">Brave: ' + data.brave_ms + 'ms · Clean: ' + data.total_clean_ms + 'ms · ' + data.total_results + ' results</div>'
+      results.innerHTML = html
+    } catch (e) {
+      results.innerHTML = '<div class="stats">' + (e.name === 'AbortError' ? 'Request timed out — try again' : 'Request failed — try again') + '</div>'
+    } finally {
+      loading.classList.add('hidden')
+      btn.disabled = false
+    }
+  }
+})()
 
 </script>
 </body>
