@@ -78,10 +78,6 @@ This roadmap is the public accountability contract. Every day ships one visible 
 
 - [x] Push v0.2.2 to GitHub
 - [x] VISION_V4 document — full strategic framing with 4-phase roadmap
-- [ ] Publish blog post on Dev.to / Medium
-- [ ] Finalize HN Show post ([draft](./docs/HN_POST_DRAFT.md))
-- [ ] Second upstream PR to `tetherto/*` (docs, examples, or issue repro)
-- [ ] Tweet thread recap
 - [x] Polish documentation and demos
 
 ---

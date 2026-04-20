@@ -42,6 +42,10 @@ curl -X POST http://localhost:8080/search \
 
 ---
 
+![qsearch demo — Brave results cleaned by local LLM](screenshot.png)
+
+---
+
 ## Why qsearch exists
 
 Tether's edge-first open-source stack came together over the past week:
