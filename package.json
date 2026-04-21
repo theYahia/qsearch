@@ -6,6 +6,7 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
+    "start:mcp": "node src/mcp-http.js",
     "test": "node --test test/server.test.js"
   },
   "license": "Apache-2.0",
