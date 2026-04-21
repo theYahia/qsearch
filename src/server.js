@@ -80,6 +80,7 @@ function warmModel () {
   modelIdPromise = loadModel({
     modelSrc: QWEN3_600M_INST_Q4,
     modelType: 'llamacpp-completion',
+    modelConfig: { ctx_size: 4096 },
     onProgress: (p) => {
       const pct = typeof p === 'number' ? p : p.percentage
       process.stdout.write(`\rModel: ${pct ?? '?'}%   `)
