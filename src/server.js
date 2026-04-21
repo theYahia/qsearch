@@ -1,7 +1,8 @@
-// qsearch v0.2.2 — Brave fetch + optional QVAC local LLM cleaning pipeline.
+// qsearch v0.2.3 — Brave/Tavily fetch + optional QVAC local LLM cleaning pipeline.
 // Endpoints: POST /search, POST /news, POST /context, GET /health
 // Model: Qwen3-0.6B Q4 (~364MB, downloads once on first request).
 // v0.2.2: graceful degradation when QVAC SDK unavailable (bare-runtime linux-x64).
+// v0.2.3: additive Tavily support via SEARCH_PROVIDER env var or per-request search_provider param.
 
 import http from 'node:http'
 import { readFileSync, existsSync } from 'node:fs'
@@ -44,9 +45,38 @@ if (existsSync(envPath)) {
 
 const PORT = Number(process.env.PORT) || 8080
 const BRAVE_KEY = process.env.BRAVE_API_KEY
-if (!BRAVE_KEY) {
+const TAVILY_KEY = process.env.TAVILY_API_KEY
+const SEARCH_PROVIDER = (process.env.SEARCH_PROVIDER || 'brave').toLowerCase()
+
+let tavilyClient = null
+if (TAVILY_KEY) {
+  try {
+    const { tavily } = await import('@tavily/core')
+    tavilyClient = tavily({ apiKey: TAVILY_KEY })
+    console.log('Tavily client initialised')
+  } catch (err) {
+    console.warn(`Tavily SDK load error (${err.message}) — Tavily provider unavailable`)
+  }
+}
+
+// Brave key is required only when Brave is the active default provider
+if (!BRAVE_KEY && SEARCH_PROVIDER === 'brave') {
   console.error('Missing BRAVE_API_KEY — put it in .env.local')
   process.exit(1)
+}
+
+function getProvider (body) {
+  const requested = (body?.search_provider || SEARCH_PROVIDER).toLowerCase()
+  if (requested === 'tavily') {
+    if (!tavilyClient) {
+      const e = new Error('Tavily provider requested but TAVILY_API_KEY is not set or SDK failed to load')
+      e.status = 503
+      e.detail = e.message
+      throw e
+    }
+    return 'tavily'
+  }
+  return 'brave'
 }
 
 // v0.2.1 — production cleaning prompt for Qwen3-0.6B.
@@ -176,6 +206,68 @@ async function braveFetch (endpoint, query, params) {
   return { data, ms: Date.now() - start }
 }
 
+// Tavily search wrapper — normalises results to match Brave output schema.
+async function tavilyFetch (mode, query, params) {
+  const start = Date.now()
+  try {
+    if (mode === 'extract') {
+      // Context search: use search with includeRawContent for deep content
+      const response = await tavilyClient.search(query, {
+        searchDepth: 'advanced',
+        maxResults: params.count || 3,
+        includeRawContent: 'markdown',
+        timeRange: mapFreshness(params.freshness)
+      })
+      // Normalise to context-style output (url, title, snippets[])
+      const grounding = (response.results || []).map(r => ({
+        url: r.url,
+        title: r.title,
+        snippets: [r.rawContent || r.content || ''].filter(Boolean)
+      }))
+      return { data: { grounding: { generic: grounding } }, ms: Date.now() - start }
+    }
+
+    // Web or news search
+    const opts = {
+      maxResults: params.count || 5,
+      searchDepth: 'basic',
+      timeRange: mapFreshness(params.freshness)
+    }
+    if (mode === 'news') opts.topic = 'news'
+
+    const response = await tavilyClient.search(query, opts)
+
+    // Normalise Tavily results → Brave-compatible shape
+    const results = (response.results || []).map(r => ({
+      url: r.url,
+      title: r.title,
+      description: r.content || '',
+      extra_snippets: [],
+      page_age: null,
+      age: null,
+      language: null,
+      profile: null
+    }))
+
+    if (mode === 'news') {
+      return { data: { results }, ms: Date.now() - start }
+    }
+    return { data: { web: { results } }, ms: Date.now() - start }
+  } catch (err) {
+    const e = new Error(`Tavily API error: ${err.message}`)
+    e.status = err.status || 502
+    e.detail = err.message
+    throw e
+  }
+}
+
+// Maps Brave freshness values to Tavily timeRange equivalents.
+function mapFreshness (freshness) {
+  if (!freshness) return undefined
+  const map = { pd: 'day', pw: 'week', pm: 'month', py: 'year' }
+  return map[freshness] || undefined
+}
+
 // Cleans a list of web/news items (shared pipeline for /search and /news).
 // ⚠️ NOT used for /context — that endpoint has a different input structure (snippets[], not description).
 async function cleanResults (items) {
@@ -216,7 +308,8 @@ function parseSearchParams (req) {
       freshness: url.searchParams.get('freshness'),
       search_lang: url.searchParams.get('search_lang'),
       country: url.searchParams.get('country'),
-      safesearch: url.searchParams.get('safesearch')
+      safesearch: url.searchParams.get('safesearch'),
+      search_provider: url.searchParams.get('search_provider')
     }
   }
   return null
@@ -246,21 +339,35 @@ async function handleSearch (req, res) {
 
   const count = Math.min(Math.max(Number(body.n_results || body.n) || 3, 1), 20)
 
-  let data, brave_ms
+  let provider
+  try { provider = getProvider(body) } catch (err) {
+    res.writeHead(err.status || 502, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'provider_error', detail: err.detail || String(err) }))
+    return
+  }
+
+  let data, fetch_ms
   try {
-    // ⚠️ Web: results in data.web.results[]
-    ;({ data, ms: brave_ms } = await braveFetch('web', query, {
-      count,
-      extra_snippets: true,
-      text_decorations: false,
-      freshness: body.freshness || null,
-      search_lang: body.search_lang || null,
-      country: body.country || null,
-      safesearch: body.safesearch || null
-    }))
+    if (provider === 'tavily') {
+      ;({ data, ms: fetch_ms } = await tavilyFetch('web', query, {
+        count,
+        freshness: body.freshness || null
+      }))
+    } else {
+      // ⚠️ Web: results in data.web.results[]
+      ;({ data, ms: fetch_ms } = await braveFetch('web', query, {
+        count,
+        extra_snippets: true,
+        text_decorations: false,
+        freshness: body.freshness || null,
+        search_lang: body.search_lang || null,
+        country: body.country || null,
+        safesearch: body.safesearch || null
+      }))
+    }
   } catch (err) {
     res.writeHead(err.status || 502, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ error: 'brave_api_error', status: err.status, detail: err.detail || String(err) }))
+    res.end(JSON.stringify({ error: 'search_api_error', provider, status: err.status, detail: err.detail || String(err) }))
     return
   }
 
@@ -272,11 +379,12 @@ async function handleSearch (req, res) {
   res.writeHead(200, { 'Content-Type': 'application/json' })
   res.end(JSON.stringify({
     query,
-    brave_endpoint: 'web',
+    provider,
+    brave_endpoint: provider === 'brave' ? 'web' : undefined,
     freshness: body.freshness || null,
     total_results: results.length,
     model: qvacAvailable ? QWEN3_600M_INST_Q4.name : null,
-    brave_ms,
+    fetch_ms,
     total_clean_ms,
     results
   }, null, 2))
@@ -301,18 +409,32 @@ async function handleNews (req, res) {
 
   const count = Math.min(Math.max(Number(body.n_results) || 5, 1), 50)
 
-  let data, brave_ms
+  let provider
+  try { provider = getProvider(body) } catch (err) {
+    res.writeHead(err.status || 502, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'provider_error', detail: err.detail || String(err) }))
+    return
+  }
+
+  let data, fetch_ms
   try {
-    // ⚠️ News: results in data.results[], NOT data.web.results[]
-    ;({ data, ms: brave_ms } = await braveFetch('news', query, {
-      count,
-      freshness: body.freshness || 'pw',
-      text_decorations: false,
-      search_lang: body.search_lang || null
-    }))
+    if (provider === 'tavily') {
+      ;({ data, ms: fetch_ms } = await tavilyFetch('news', query, {
+        count,
+        freshness: body.freshness || 'pw'
+      }))
+    } else {
+      // ⚠️ News: results in data.results[], NOT data.web.results[]
+      ;({ data, ms: fetch_ms } = await braveFetch('news', query, {
+        count,
+        freshness: body.freshness || 'pw',
+        text_decorations: false,
+        search_lang: body.search_lang || null
+      }))
+    }
   } catch (err) {
     res.writeHead(err.status || 502, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ error: 'brave_api_error', status: err.status, detail: err.detail || String(err) }))
+    res.end(JSON.stringify({ error: 'search_api_error', provider, status: err.status, detail: err.detail || String(err) }))
     return
   }
 
@@ -325,11 +447,12 @@ async function handleNews (req, res) {
   res.end(JSON.stringify({
     query,
     type: 'news',
-    brave_endpoint: 'news',
+    provider,
+    brave_endpoint: provider === 'brave' ? 'news' : undefined,
     freshness: body.freshness || 'pw',
     total_results: results.length,
     model: qvacAvailable ? QWEN3_600M_INST_Q4.name : null,
-    brave_ms,
+    fetch_ms,
     total_clean_ms,
     results
   }, null, 2))
@@ -354,17 +477,31 @@ async function handleContext (req, res) {
 
   const count = Math.min(Math.max(Number(body.n_results) || 3, 1), 10)
 
-  let data, brave_ms
+  let provider
+  try { provider = getProvider(body) } catch (err) {
+    res.writeHead(err.status || 502, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'provider_error', detail: err.detail || String(err) }))
+    return
+  }
+
+  let data, fetch_ms
   try {
-    // ⚠️ braveFetch routes 'llm/context' → /res/v1/llm/context (no /search suffix)
-    // ⚠️ Brave returns FEWER results than count (count=10 → ~7). Expected, not a bug.
-    ;({ data, ms: brave_ms } = await braveFetch('llm/context', query, {
-      count,
-      freshness: body.freshness || null
-    }))
+    if (provider === 'tavily') {
+      ;({ data, ms: fetch_ms } = await tavilyFetch('extract', query, {
+        count,
+        freshness: body.freshness || null
+      }))
+    } else {
+      // ⚠️ braveFetch routes 'llm/context' → /res/v1/llm/context (no /search suffix)
+      // ⚠️ Brave returns FEWER results than count (count=10 → ~7). Expected, not a bug.
+      ;({ data, ms: fetch_ms } = await braveFetch('llm/context', query, {
+        count,
+        freshness: body.freshness || null
+      }))
+    }
   } catch (err) {
     res.writeHead(err.status || 502, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ error: 'brave_api_error', status: err.status, detail: err.detail || String(err) }))
+    res.end(JSON.stringify({ error: 'search_api_error', provider, status: err.status, detail: err.detail || String(err) }))
     return
   }
 
@@ -420,11 +557,12 @@ async function handleContext (req, res) {
   res.end(JSON.stringify({
     query,
     type: 'context',
-    brave_endpoint: 'llm/context',
+    provider,
+    brave_endpoint: provider === 'brave' ? 'llm/context' : undefined,
     freshness: body.freshness || null,
     total_results: results.length,
     model: qvacAvailable ? QWEN3_600M_INST_Q4.name : null,
-    brave_ms,
+    fetch_ms,
     total_clean_ms,
     results
   }, null, 2))
@@ -447,7 +585,7 @@ const server = http.createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/health') {
     const modelReady = modelIdPromise !== null
     res.writeHead(200, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ status: 'ok', version: '0.2.2', qvac_available: qvacAvailable, model_loaded: modelReady }))
+    res.end(JSON.stringify({ status: 'ok', version: '0.2.3', qvac_available: qvacAvailable, model_loaded: modelReady, search_provider: SEARCH_PROVIDER, tavily_available: tavilyClient !== null }))
     return
   }
   if ((req.method === 'POST' && req.url === '/search') || (req.method === 'GET' && req.url.startsWith('/search?'))) {
@@ -482,7 +620,7 @@ server.keepAliveTimeout = 65000
 server.headersTimeout = 66000
 
 server.listen(PORT, () => {
-  console.log(`qsearch v0.2.2 listening on http://localhost:${PORT}`)
+  console.log(`qsearch v0.2.3 listening on http://localhost:${PORT} (provider: ${SEARCH_PROVIDER}${tavilyClient ? ', tavily: ready' : ''})`)
   console.log('POST /search  { "query": "...", "n_results": 3, "freshness": "pw", "search_lang": "en", "country": "us" }')
   console.log('POST /news    { "query": "...", "n_results": 5, "freshness": "pd" }')
   console.log('POST /context { "query": "...", "n_results": 3 }')
