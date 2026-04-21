@@ -101,13 +101,29 @@ function warmModel () {
 
 // Cleans a single web/news result item using QVAC local LLM.
 // Uses description + extra_snippets (up to 4 bonus snippets from Brave).
+//
+// Safety: per-request lock wait and completion call both have timeouts so
+// that one hung inference does not pin the queue at 100% CPU indefinitely.
+// Any cleaning that exceeds the budget throws — cleanResults catches and
+// falls back to the raw description for that item, so the API still responds.
+const LOCK_WAIT_TIMEOUT_MS = 45_000
+const COMPLETION_TIMEOUT_MS = 45_000
+
+function withTimeout (promise, ms, label) {
+  let timer
+  const timeout = new Promise((_, reject) => {
+    timer = setTimeout(() => reject(new Error(`${label} timeout (${ms}ms)`)), ms)
+  })
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(timer))
+}
+
 async function cleanResult (raw) {
   let resolve
   const prev = inferLock
   inferLock = new Promise((r) => { resolve = r })
-  await prev
 
   try {
+    await withTimeout(prev, LOCK_WAIT_TIMEOUT_MS, 'clean-lock-wait')
     const mid = await warmModel()
     let userContent = `Title: ${raw.title}\nURL: ${raw.url}\nDescription: ${raw.description || ''}\n${
       (raw.extra_snippets || []).map((s, i) => `Snippet ${i + 1}: ${s}`).join('\n')
@@ -121,7 +137,7 @@ async function cleanResult (raw) {
       ],
       stream: false
     })
-    return await result.text
+    return await withTimeout(result.text, COMPLETION_TIMEOUT_MS, 'clean-completion')
   } finally {
     resolve()
   }
@@ -269,8 +285,11 @@ async function handleSearch (req, res) {
   }
 
   const webItems = data?.web?.results?.slice(0, count) || []
+  const shouldClean = body.clean !== false
   const cleanStart = Date.now()
-  const results = await cleanResults(webItems)
+  const results = shouldClean
+    ? await cleanResults(webItems)
+    : webItems.map((r) => ({ ...r, cleaned_markdown: null, clean_ms: 0 }))
   const total_clean_ms = Date.now() - cleanStart
 
   res.writeHead(200, { 'Content-Type': 'application/json' })
@@ -279,7 +298,8 @@ async function handleSearch (req, res) {
     brave_endpoint: 'web',
     freshness: body.freshness || null,
     total_results: results.length,
-    model: qvacAvailable ? QWEN3_600M_INST_Q4.name : null,
+    model: qvacAvailable && shouldClean ? QWEN3_600M_INST_Q4.name : null,
+    cleaned: shouldClean,
     brave_ms,
     total_clean_ms,
     results
@@ -321,8 +341,11 @@ async function handleNews (req, res) {
   }
 
   const newsItems = data?.results?.slice(0, count) || []
+  const shouldClean = body.clean !== false
   const cleanStart = Date.now()
-  const results = await cleanResults(newsItems)
+  const results = shouldClean
+    ? await cleanResults(newsItems)
+    : newsItems.map((r) => ({ ...r, cleaned_markdown: null, clean_ms: 0 }))
   const total_clean_ms = Date.now() - cleanStart
 
   res.writeHead(200, { 'Content-Type': 'application/json' })
@@ -332,7 +355,8 @@ async function handleNews (req, res) {
     brave_endpoint: 'news',
     freshness: body.freshness || 'pw',
     total_results: results.length,
-    model: qvacAvailable ? QWEN3_600M_INST_Q4.name : null,
+    model: qvacAvailable && shouldClean ? QWEN3_600M_INST_Q4.name : null,
+    cleaned: shouldClean,
     brave_ms,
     total_clean_ms,
     results

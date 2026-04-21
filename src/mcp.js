@@ -32,8 +32,10 @@ export function qsearchTool (server) {
   // --- web_search ---
   const webSearchSchema = z.object({
     query: z.string().describe('Search query'),
-    n_results: z.union([z.number(), z.string()]).transform(Number).pipe(z.number().min(1).max(3)).optional().default(1)
-      .describe('Number of results (1-3 max — cleaning is CPU-bound, each result adds ~25s. Default 1.)'),
+    n_results: z.union([z.number(), z.string()]).transform(Number).pipe(z.number().min(1).max(3)).optional().default(2)
+      .describe('Number of results (1-3). Default 2.'),
+    clean: z.boolean().optional().default(false)
+      .describe('Run on-device QVAC LLM cleaning over results (Qwen3-0.6B Q4). Adds ~25s per result on CPU; seconds on mobile with QVAC acceleration. Default false — returns raw Brave snippets (title, description, extra snippets) immediately.'),
     freshness: z.string().optional()
       .describe('Time filter: pd (past day), pw (past week), pm (past month), py (past year), or YYYY-MM-DDtoYYYY-MM-DD'),
     search_lang: z.string().optional().describe('Language code, e.g. "en", "ru"'),
