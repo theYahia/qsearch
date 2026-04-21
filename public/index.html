@@ -183,7 +183,8 @@ footer a:hover{color:#2ec98a}
         html += '<a class="title" href="' + esc(item.url) + '" target="_blank" rel="noopener">' + esc(item.title) + '</a>'
         html += '<a class="url" href="' + esc(item.url) + '" target="_blank" rel="noopener">' + esc(item.url) + '</a>'
         if (item.description) html += '<div class="desc">' + esc(item.description) + '</div>'
-        if (item.cleaned_markdown) html += '<div class="cleaned">' + esc(item.cleaned_markdown) + '</div>'
+        var cm = (item.cleaned_markdown || '').trim()
+        if (cm && cm !== 'No relevant content.' && cm !== (item.description || '').trim()) html += '<div class="cleaned">' + esc(cm) + '</div>'
         var meta = [item.age, item.source, item.language].filter(Boolean).join(' · ')
         if (meta) html += '<div class="meta">' + esc(meta) + '</div>'
         html += '</div>'
