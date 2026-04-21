@@ -22,6 +22,10 @@ const HOST = process.env.MCP_HOST || '0.0.0.0'
 const transports = new Map() // sessionId -> transport
 
 const httpServer = http.createServer(async (req, res) => {
+  const reqId = Math.random().toString(36).slice(2, 8)
+  const sid = req.headers['mcp-session-id'] || '-'
+  console.log(`[${reqId}] ${req.method} ${req.url} sid=${sid} ua=${(req.headers['user-agent'] || '').slice(0, 40)}`)
+
   // CORS headers for cross-origin MCP clients.
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS')
@@ -31,6 +35,23 @@ const httpServer = http.createServer(async (req, res) => {
   if (req.method === 'OPTIONS') {
     res.writeHead(204).end()
     return
+  }
+
+  // Log POST body (request method/params) so we see what Workbench is calling.
+  if (req.method === 'POST') {
+    const chunks = []
+    const origEmit = req.emit.bind(req)
+    req.emit = function (event, ...args) {
+      if (event === 'data') chunks.push(args[0])
+      if (event === 'end') {
+        try {
+          const body = Buffer.concat(chunks).toString('utf8')
+          const parsed = JSON.parse(body)
+          console.log(`[${reqId}] body method=${parsed.method || '-'} id=${parsed.id || '-'}`)
+        } catch {}
+      }
+      return origEmit(event, ...args)
+    }
   }
 
   const sessionId = req.headers['mcp-session-id']
