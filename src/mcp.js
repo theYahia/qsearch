@@ -32,8 +32,8 @@ export function qsearchTool (server) {
   // --- web_search ---
   const webSearchSchema = z.object({
     query: z.string().describe('Search query'),
-    n_results: z.union([z.number(), z.string()]).transform(Number).optional().default(3)
-      .describe('Number of results (1-20)'),
+    n_results: z.union([z.number(), z.string()]).transform(Number).pipe(z.number().min(1).max(3)).optional().default(1)
+      .describe('Number of results (1-3 max — cleaning is CPU-bound, each result adds ~25s. Default 1.)'),
     freshness: z.string().optional()
       .describe('Time filter: pd (past day), pw (past week), pm (past month), py (past year), or YYYY-MM-DDtoYYYY-MM-DD'),
     search_lang: z.string().optional().describe('Language code, e.g. "en", "ru"'),
@@ -62,8 +62,8 @@ export function qsearchTool (server) {
   // --- news_search ---
   const newsSearchSchema = z.object({
     query: z.string().describe('News search query'),
-    n_results: z.union([z.number(), z.string()]).transform(Number).optional().default(5)
-      .describe('Number of results (1-50)'),
+    n_results: z.union([z.number(), z.string()]).transform(Number).pipe(z.number().min(1).max(3)).optional().default(1)
+      .describe('Number of results (1-3 max — cleaning is CPU-bound, each result adds ~25s. Default 1.)'),
     freshness: z.string().optional().default('pw')
       .describe('Time filter: pd (past day), pw (past week, default), pm (past month)')
   })
@@ -90,8 +90,8 @@ export function qsearchTool (server) {
   // --- context_search ---
   const contextSearchSchema = z.object({
     query: z.string().describe('Search query for deep page content extraction'),
-    n_results: z.union([z.number(), z.string()]).transform(Number).optional().default(3)
-      .describe('Number of sources (1-10, Brave may return fewer)')
+    n_results: z.union([z.number(), z.string()]).transform(Number).pipe(z.number().min(1).max(2)).optional().default(1)
+      .describe('Number of sources (1-2 max — each source has 2-28 snippets, all get cleaned. CPU-bound, ~25s/source. Default 1.)')
   })
 
   server.registerTool(
