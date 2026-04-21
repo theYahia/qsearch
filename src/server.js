@@ -65,6 +65,12 @@ if (!BRAVE_KEY && SEARCH_PROVIDER === 'brave') {
   process.exit(1)
 }
 
+// Symmetric fail-fast for Tavily when it is the configured default provider
+if (!tavilyClient && SEARCH_PROVIDER === 'tavily') {
+  console.error('SEARCH_PROVIDER=tavily but TAVILY_API_KEY is not set or SDK failed to load')
+  process.exit(1)
+}
+
 function getProvider (body) {
   const requested = (body?.search_provider || SEARCH_PROVIDER).toLowerCase()
   if (requested === 'tavily') {
@@ -75,6 +81,12 @@ function getProvider (body) {
       throw e
     }
     return 'tavily'
+  }
+  if (requested === 'brave' && !BRAVE_KEY) {
+    const e = new Error('Brave provider requested but BRAVE_API_KEY is not configured')
+    e.status = 503
+    e.detail = e.message
+    throw e
   }
   return 'brave'
 }
@@ -265,7 +277,11 @@ async function tavilyFetch (mode, query, params) {
 function mapFreshness (freshness) {
   if (!freshness) return undefined
   const map = { pd: 'day', pw: 'week', pm: 'month', py: 'year' }
-  return map[freshness] || undefined
+  const mapped = map[freshness]
+  if (!mapped) {
+    console.warn(`mapFreshness: unmapped value "${freshness}" — custom date ranges are not supported by Tavily, filter will be dropped`)
+  }
+  return mapped || undefined
 }
 
 // Cleans a list of web/news items (shared pipeline for /search and /news).

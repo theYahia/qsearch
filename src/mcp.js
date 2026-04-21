@@ -95,7 +95,7 @@ export function qsearchTool (server) {
   const contextSearchSchema = z.object({
     query: z.string().describe('Search query for deep page content extraction'),
     n_results: z.union([z.number(), z.string()]).transform(Number).optional().default(3)
-      .describe('Number of sources (1-10, Brave may return fewer)'),
+      .describe('Number of sources (1-10, provider may return fewer)'),
     search_provider: z.enum(['brave', 'tavily']).optional()
       .describe('Search provider to use (default: server SEARCH_PROVIDER env var)')
   })
