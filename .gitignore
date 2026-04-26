@@ -12,3 +12,7 @@ docs/PITCH_NOTE.md
 docs/PORTFOLIO.md
 docs/TWEETS.md
 docs/day2-demo.json
+
+data/
+.claude/
+research/

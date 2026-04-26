@@ -1,0 +1,72 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      meilisearch:
+        image: getmeili/meilisearch:v1.7
+        ports: ["7700:7700"]
+        env:
+          MEILI_MASTER_KEY: masterKey
+      qdrant:
+        image: qdrant/qdrant:v1.17.1
+        ports: ["6333:6333"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run existing tests
+        run: node --test test/server.test.js
+        env:
+          BRAVE_API_KEY: test-key-ci
+
+      - name: Run unit tests
+        run: |
+          node --test \
+            test/unit/backends/brave.test.js \
+            test/unit/backends/searxng.test.js \
+            test/unit/crawl/crawl4ai.test.js \
+            test/unit/embed/qvac.test.js \
+            test/unit/routing.test.js \
+            test/unit/x402/middleware.test.js
+        env:
+          BRAVE_API_KEY: test-key-ci
+
+      - name: Run unit corpus tests (requires Docker services)
+        run: |
+          node --test \
+            test/unit/corpus/meilisearch.test.js \
+            test/unit/corpus/qdrant.test.js
+        env:
+          BRAVE_API_KEY: test-key-ci
+          MEILISEARCH_URL: http://localhost:7700
+          MEILISEARCH_KEY: masterKey
+          QDRANT_URL: http://localhost:6333
+
+      - name: Run integration tests
+        run: |
+          node --test \
+            test/integration/corpus.integration.test.js \
+            test/integration/search.integration.test.js
+        env:
+          BRAVE_API_KEY: test-key-ci
+          MEILISEARCH_URL: http://localhost:7700
+          MEILISEARCH_KEY: masterKey
+          QDRANT_URL: http://localhost:6333

@@ -1,13 +1,17 @@
 {
   "name": "qsearch",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "The open-web hop for QVAC agents — OSS search API where cleaning runs on your local LLM.",
   "type": "module",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "start:mcp": "node src/mcp-http.js",
-    "test": "node --test test/server.test.js"
+    "test": "node --test test/server.test.js",
+    "test:unit": "node --test test/unit/backends/brave.test.js test/unit/backends/searxng.test.js test/unit/crawl/crawl4ai.test.js test/unit/embed/qvac.test.js test/unit/routing.test.js test/unit/x402/middleware.test.js",
+    "test:unit:corpus": "node --test test/unit/corpus/meilisearch.test.js test/unit/corpus/qdrant.test.js",
+    "test:integration": "node --test test/integration/corpus.integration.test.js test/integration/search.integration.test.js",
+    "test:all": "node --test test/server.test.js test/unit/backends/brave.test.js test/unit/backends/searxng.test.js test/unit/crawl/crawl4ai.test.js test/unit/embed/qvac.test.js test/unit/routing.test.js test/unit/x402/middleware.test.js"
   },
   "license": "Apache-2.0",
   "repository": {
@@ -19,7 +23,9 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
-    "@qvac/sdk": "^0.8.3",
+    "@qdrant/js-client-rest": "^1.17.0",
+    "@qvac/sdk": "^0.9.1",
+    "meilisearch": "^0.57.0",
     "zod": "^4.3.6"
   }
 }

@@ -172,7 +172,10 @@ describe('qsearch server', () => {
         PORT: String(QSEARCH_PORT),
         BRAVE_API_KEY: 'test-key-12345',
         BRAVE_BASE_URL: `http://127.0.0.1:${mockBravePort}`,
-        NODE_ENV: 'test'
+        NODE_ENV: 'test',
+        CORPUS_FIRST: 'false',
+        MEILISEARCH_URL: 'http://localhost:57701',
+        QDRANT_URL: 'http://localhost:56333'
       },
       stdio: ['ignore', 'pipe', 'pipe']
     })
@@ -210,7 +213,7 @@ describe('qsearch server', () => {
     const res = await request(QSEARCH_PORT, 'GET', '/health')
     assert.equal(res.status, 200)
     assert.equal(res.json.status, 'ok')
-    assert.equal(res.json.version, '0.2.2')
+    assert.equal(res.json.version, '0.3.0')
     assert.equal(typeof res.json.qvac_available, 'boolean')
     assert.equal(typeof res.json.model_loaded, 'boolean')
   })
