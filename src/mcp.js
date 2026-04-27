@@ -28,6 +28,19 @@ async function callQsearch (path, body) {
   return r.json()
 }
 
+async function callQsearchText (path, body) {
+  const r = await fetch(`${QSEARCH_BASE}${path}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  })
+  if (!r.ok) {
+    const err = await r.text().catch(() => '')
+    throw new Error(`qsearch error ${r.status}: ${err.slice(0, 200)}`)
+  }
+  return r.text()
+}
+
 export function qsearchTool (server) {
   // --- web_search ---
   const webSearchSchema = z.object({
@@ -85,6 +98,53 @@ export function qsearchTool (server) {
           type: 'text',
           text: `## ${r.title}\n${r.url}${r.source ? ` — ${r.source}` : ''}${r.age ? ` (${r.age})` : ''}\n${r.cleaned_markdown || r.description || ''}`
         }))
+      }
+    }
+  )
+
+  // --- sweep ---
+  const sweepSchema = z.object({
+    queries: z.string()
+      .describe('Queries in label|query format, one per line. E.g.: "c1_01|self-hosted search\\nc1_02|SearXNG alternatives"'),
+    save: z.boolean().optional().default(false)
+      .describe('Save parsed_snippets.md to ./data/sweeps/<timestamp>/ on the server')
+  })
+
+  server.registerTool(
+    'sweep',
+    {
+      title: 'Research Sweep (qsearch)',
+      description: 'Run a batch search sweep — accepts label|query lines (same format as brave_sweep.py), fans out queries in parallel, deduplicates results, indexes into corpus, and returns parsed_snippets.md markdown. Free via SearXNG when no Brave key.',
+      inputSchema: sweepSchema.shape,
+      annotations: { readOnlyHint: false, openWorldHint: true }
+    },
+    async (params) => {
+      const md = await callQsearchText('/sweep', { queries: params.queries, save: params.save })
+      return { content: [{ type: 'text', text: md }] }
+    }
+  )
+
+  // --- index_research ---
+  const indexResearchSchema = z.object({
+    glob: z.string()
+      .describe('Glob pattern matching markdown research files to index. E.g.: "D:/Yahia/active/*/research/*.md"')
+  })
+
+  server.registerTool(
+    'index_research',
+    {
+      title: 'Index Research Files (qsearch)',
+      description: 'Index local markdown research files into the qsearch corpus by glob pattern. After indexing, files are searchable via web_search with corpus_first=true. Use to make past research sessions available for cross-project semantic search.',
+      inputSchema: indexResearchSchema.shape,
+      annotations: { readOnlyHint: false, openWorldHint: false }
+    },
+    async (params) => {
+      const data = await callQsearch('/index', { glob: params.glob })
+      return {
+        content: [{
+          type: 'text',
+          text: `Indexing job queued: ${data.job_id}\nPath: ${data.path}\nStatus: ${data.status}\nCheck: GET /index/${data.job_id}`
+        }]
       }
     }
   )

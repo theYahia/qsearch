@@ -171,6 +171,30 @@ npm run start:mcp
 # → http://0.0.0.0:8081  (also live at qsearch.pro/mcp)
 ```
 
+### MCP in Claude Code
+
+Add to your Claude Code MCP config (`~/.claude/settings.json`):
+
+```json
+{
+  "mcpServers": {
+    "qsearch": {
+      "type": "http",
+      "url": "http://localhost:8081"
+    }
+  }
+}
+```
+
+Then in Claude Code, these tools become available:
+- `mcp__qsearch__web_search` — web search via Brave or SearXNG
+- `mcp__qsearch__sweep` — batch research sweep (label|query lines), outputs parsed_snippets.md
+- `mcp__qsearch__index_research` — index local `.md` files by glob path
+- `mcp__qsearch__news_search` — news search (requires Brave key)
+- `mcp__qsearch__context_search` — deep page content (requires Brave key)
+
+**sweep** replaces `python brave_sweep.py` — same label|query format, same output, free via SearXNG.
+
 ## Stack
 
 | Component | Tech |

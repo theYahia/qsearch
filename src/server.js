@@ -1,7 +1,8 @@
 // qsearch v0.3 — Own Corpus layer over Brave proxy.
 // Endpoints: POST /search, POST /news, POST /context, POST /index, GET /index/:job_id, GET /corpus/stats, GET /health
 import http from 'node:http'
-import { readFileSync, existsSync } from 'node:fs'
+import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs'
+import { glob as fsGlob } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
@@ -16,18 +17,26 @@ if (existsSync(envPath)) {
 
 const PORT = Number(process.env.PORT) || 8080
 const BRAVE_KEY = process.env.BRAVE_API_KEY
-if (!BRAVE_KEY) {
-  console.error('Missing BRAVE_API_KEY — put it in .env.local')
+const SEARXNG_URL = process.env.SEARXNG_URL
+if (!BRAVE_KEY && !SEARXNG_URL) {
+  console.error('Missing BRAVE_API_KEY and SEARXNG_URL — set at least one in .env.local')
+  console.error('  Free option: docker compose up searxng → SEARXNG_URL=http://localhost:8888')
   process.exit(1)
+}
+if (!BRAVE_KEY) {
+  console.warn('No BRAVE_API_KEY — using SearXNG as primary backend (free, self-hosted)')
 }
 
 // ── Imports (after env loading) ────────────────────────────────────
 import { braveFetch } from './backends/brave.js'
+import { parseQueriesText, runSweep } from './sweep/runner.js'
+import { renderMarkdown as renderSweepMd } from './sweep/parsed_snippets.js'
 import { SearXNGBackend } from './backends/searxng.js'
 import { cleanResults, cleanContext, warmModel, qvacAvailable, QWEN3_600M_INST_Q4 } from './clean/qvac.js'
 import { MeilisearchCorpus } from './corpus/meilisearch.js'
 import { QdrantCorpus } from './corpus/qdrant.js'
-import { embedder } from './embed/qvac.js'
+import { embedder as qvacEmbedder } from './embed/qvac.js'
+import { LlamaCppEmbedder } from './embed/llamacpp.js'
 import { crawl } from './crawl/crawl4ai.js'
 import { createJob, getJob, updateJob } from './jobs/store.js'
 
@@ -35,6 +44,10 @@ import { createJob, getJob, updateJob } from './jobs/store.js'
 const MEILI_URL = process.env.MEILISEARCH_URL || 'http://localhost:7700'
 const MEILI_KEY = process.env.MEILISEARCH_KEY || 'masterKey'
 const QDRANT_URL_ENV = process.env.QDRANT_URL || 'http://localhost:6333'
+
+// llama.cpp embedder takes priority over @qvac/sdk (works on all platforms)
+const embedder = process.env.LLAMACPP_URL ? new LlamaCppEmbedder(process.env.LLAMACPP_URL) : qvacEmbedder
+if (process.env.LLAMACPP_URL) console.log(`Embedding: llama.cpp at ${process.env.LLAMACPP_URL}`)
 
 const meili = new MeilisearchCorpus(MEILI_URL, MEILI_KEY)
 const qdrant = new QdrantCorpus(QDRANT_URL_ENV, embedder)
@@ -93,15 +106,31 @@ async function corpusSearch (query, n_results) {
   return dedupeByUrl(results.flat())
 }
 
+async function searxngAsBraveResponse (query, params) {
+  const t0 = Date.now()
+  const hits = await searxng.search(query, { n_results: params.count || 3 })
+  return { data: { web: { results: hits }, _searxng: true }, ms: Date.now() - t0, searxng: true }
+}
+
 async function routedBraveFetch (endpoint, query, params) {
+  // No Brave key → SearXNG primary
+  if (!BRAVE_KEY) {
+    if (!searxng) throw new Error('Neither BRAVE_API_KEY nor SEARXNG_URL configured')
+    if (endpoint !== 'web') {
+      // SearXNG only supports web search; news/context not available
+      const e = new Error(`Endpoint ${endpoint} requires Brave API key (SearXNG supports web search only)`)
+      e.status = 501
+      throw e
+    }
+    return await searxngAsBraveResponse(query, params)
+  }
   try {
     return await braveFetch(endpoint, query, params)
   } catch (err) {
-    // Fallback to SearXNG on Brave 5xx/429
-    if (searxng && (err.status >= 500 || err.status === 429)) {
+    // Fallback to SearXNG on Brave 5xx/429 (web search only)
+    if (searxng && endpoint === 'web' && (err.status >= 500 || err.status === 429)) {
       console.warn(`Brave ${err.status} — falling back to SearXNG`)
-      const hits = await searxng.search(query, { n_results: params.count || 3 })
-      return { data: { web: { results: hits }, _searxng: true }, ms: 0, searxng: true }
+      return await searxngAsBraveResponse(query, params)
     }
     throw err
   }
@@ -451,10 +480,60 @@ async function handleIndex (req, res) {
     return
   }
 
-  const url = (body.url || '').trim()
-  if (!url || !url.startsWith('http')) {
+  const url = (body.url || body.path || body.glob || '').trim()
+  if (!url) {
     res.writeHead(400, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ error: 'url is required and must start with http' }))
+    res.end(JSON.stringify({ error: 'url, path, or glob is required' }))
+    return
+  }
+
+  // File/glob indexing path (not a URL)
+  if (!url.startsWith('http')) {
+    const namespace = 'user'
+    const job_id = createJob(url, namespace)
+    res.writeHead(202, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ job_id, status: 'queued', path: url, namespace, queued_at: getJob(job_id).queued_at }))
+
+    setImmediate(async () => {
+      updateJob(job_id, { status: 'running', started_at: new Date().toISOString() })
+      let indexed = 0
+      try {
+        const pattern = url.replace(/\\/g, '/')
+        const files = []
+        for await (const f of fsGlob(pattern)) files.push(f)
+        if (!files.length) {
+          updateJob(job_id, { status: 'failed', error: `No files matched: ${url}`, finished_at: new Date().toISOString() })
+          return
+        }
+        for (const filePath of files) {
+          try {
+            const raw = readFileSync(filePath, 'utf8')
+            const title = raw.match(/^#\s+(.+)/m)?.[1]?.trim() ||
+              raw.match(/^title:\s+(.+)/im)?.[1]?.trim() ||
+              filePath.split(/[/\\]/).pop().replace(/\.md$/, '')
+            const text = raw.replace(/^---[\s\S]*?---\n/m, '').replace(/[#*`>_]/g, '').trim()
+            const docUrl = 'file://' + filePath.replace(/\\/g, '/')
+            const doc = {
+              id: docUrl, url: docUrl, title,
+              text: text.slice(0, 10000),
+              description: text.slice(0, 300),
+              namespace,
+              crawled_at: new Date().toISOString()
+            }
+            await meili.index(doc)
+            indexed++
+            updateJob(job_id, { pages_indexed: indexed })
+          } catch (e) {
+            console.error('[index-files] skip:', filePath, e.message)
+          }
+        }
+        updateJob(job_id, { status: 'done', pages_crawled: files.length, pages_indexed: indexed, finished_at: new Date().toISOString() })
+        console.log(`[index-files] indexed ${indexed}/${files.length} files`)
+        await refreshCorpusStatus()
+      } catch (err) {
+        updateJob(job_id, { status: 'failed', error: String(err), finished_at: new Date().toISOString() })
+      }
+    })
     return
   }
 
@@ -514,6 +593,79 @@ async function handleCorpusStats (req, res) {
   }, null, 2))
 }
 
+async function handleSweep (req, res) {
+  const contentType = req.headers['content-type'] || ''
+  let queriesText, saveOutput = false
+
+  if (contentType.includes('application/json')) {
+    let body
+    try { body = JSON.parse((await readBody(req)) || '{}') } catch {
+      res.writeHead(400, { 'Content-Type': 'application/json' })
+      res.end(JSON.stringify({ error: 'invalid JSON body' }))
+      return
+    }
+    queriesText = body.queries || ''
+    saveOutput = Boolean(body.save)
+  } else {
+    queriesText = await readBody(req)
+  }
+
+  const queries = parseQueriesText(queriesText)
+  if (!queries.length) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'no queries found — send label|query lines in body' }))
+    return
+  }
+
+  console.log(`[sweep] starting ${queries.length} queries`)
+  const { results, stats } = await runSweep(queries, routedBraveFetch)
+  const md = renderSweepMd(results, queries, stats)
+
+  // Index results into corpus (background, don't block response)
+  setImmediate(async () => {
+    let indexed = 0
+    for (const { label } of queries) {
+      const entry = results.get(label)
+      if (!entry?.ok) continue
+      for (const r of entry.results) {
+        if (!r.url) continue
+        try {
+          const doc = {
+            id: r.url,
+            url: r.url,
+            title: r.title || '',
+            description: r.description || '',
+            text: [r.title, r.description, ...(r.extra_snippets || [])].filter(Boolean).join('\n'),
+            namespace: 'sweep',
+            sweep_label: label,
+            crawled_at: new Date().toISOString()
+          }
+          await meili.index(doc)
+          indexed++
+        } catch (e) {
+          console.error('[sweep] index error:', r.url, e.message)
+        }
+      }
+    }
+    if (indexed) {
+      console.log(`[sweep] indexed ${indexed} results into corpus`)
+      await refreshCorpusStatus()
+    }
+  })
+
+  if (saveOutput) {
+    const ts = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19)
+    const outDir = join(__dirname, '..', 'data', 'sweeps', ts)
+    mkdirSync(outDir, { recursive: true })
+    writeFileSync(join(outDir, 'parsed_snippets.md'), md, 'utf8')
+    console.log(`[sweep] saved → ${outDir}/parsed_snippets.md`)
+  }
+
+  console.log(`[sweep] done: ${stats.web_ok} ok / ${stats.web_fail} fail in ${(stats.duration_ms / 1000).toFixed(1)}s`)
+  res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' })
+  res.end(md)
+}
+
 // ── Static files ───────────────────────────────────────────────────
 const indexHtml = readFileSync(join(__dirname, '..', 'public', 'index.html'), 'utf8')
 const docsMd = readFileSync(join(__dirname, '..', 'public', 'docs.md'), 'utf8')
@@ -552,6 +704,10 @@ const server = http.createServer((req, res) => {
     handleIndex(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(502, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'request failed', detail: String(err) })) })
     return
   }
+  if (req.method === 'POST' && req.url === '/sweep') {
+    handleSweep(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(502, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'sweep failed', detail: String(err) })) })
+    return
+  }
   const indexJobMatch = req.method === 'GET' && req.url.match(/^\/index\/([a-f0-9-]{36})$/)
   if (indexJobMatch) {
     handleIndexStatus(req, res, indexJobMatch[1]).catch((err) => { if (res.headersSent) return; res.writeHead(502, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'request failed', detail: String(err) })) })
@@ -571,9 +727,10 @@ server.headersTimeout = 66000
 server.listen(PORT, () => {
   console.log(`qsearch v0.3.0 listening on http://localhost:${PORT}`)
   console.log('POST /search  { "query": "...", "corpus_first": true }')
+  console.log('POST /sweep   <queries.txt body> (label|query lines)')
   console.log('POST /news    { "query": "...", "n_results": 5 }')
   console.log('POST /context { "query": "...", "n_results": 3 }')
-  console.log('POST /index   { "url": "...", "depth": 1, "namespace": "user" }')
+  console.log('POST /index   { "url": "https://..." } | { "glob": "D:/path/**/*.md" }')
   console.log('GET  /corpus/stats')
   console.log('GET  /health')
   warmModel().catch(() => {})

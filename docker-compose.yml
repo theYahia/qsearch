@@ -13,5 +13,17 @@ services:
       - ./data/qdrant:/qdrant/storage
   searxng:
     image: searxng/searxng:latest
-    ports: ["8888:8888"]
-    profiles: ["full"]
+    ports: ["8888:8080"]
+    volumes:
+      - ./data/searxng:/etc/searxng
+    environment:
+      SEARXNG_BASE_URL: "http://localhost:8888/"
+  # llama.cpp embedding server — optional, needed for vector search
+  # Setup: download Qwen3-Embedding-0.6B-GGUF from HuggingFace, place in ./data/models/
+  # Then add LLAMACPP_URL=http://localhost:8899 to .env.local
+  # llamacpp:
+  #   image: ghcr.io/ggml-org/llama.cpp:server
+  #   ports: ["8899:8080"]
+  #   volumes:
+  #     - ./data/models:/models
+  #   command: ["-m", "/models/Qwen3-Embedding-0.6B-Q4_K_M.gguf", "--port", "8080", "--embedding", "--pooling", "mean"]

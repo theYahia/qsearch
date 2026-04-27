@@ -70,7 +70,7 @@ const httpServer = http.createServer(async (req, res) => {
       if (id) transports.delete(id)
     }
 
-    const mcpServer = new McpServer({ name: 'qsearch', version: '0.2.2' })
+    const mcpServer = new McpServer({ name: 'qsearch', version: '0.3.0' })
     qsearchTool(mcpServer)
     await mcpServer.connect(transport)
   }
