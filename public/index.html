@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>qsearch — the open-web hop for AI agents</title>
-<meta name="description" content="Open-source search API for AI agents. Brave Search + QVAC local LLM cleaning. No cloud, no tracking.">
+<meta name="description" content="Open-source search API for AI agents. Multi-engine attribution, trust corpus, MCP-native. Self-hostable.">
 <meta property="og:title" content="qsearch — search API for AI agents">
-<meta property="og:description" content="Brave Search + QVAC local LLM cleaning. Open-source, zero cloud dependencies.">
+<meta property="og:description" content="Multi-engine trust corpus for AI agents. Self-hosted, open-source, MCP-native.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://qsearch.pro">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="qsearch — search API for AI agents">
-<meta name="twitter:description" content="Brave Search + QVAC local LLM cleaning. Open-source, zero cloud dependencies.">
+<meta name="twitter:description" content="Multi-engine trust corpus for AI agents. Self-hosted, open-source, MCP-native.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='42' cy='42' r='28' fill='none' stroke='%232ec98a' stroke-width='8'/%3E%3Cline x1='62' y1='62' x2='90' y2='90' stroke='%232ec98a' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -111,12 +111,12 @@ footer a:hover{color:#2ec98a}
   <!-- Human mode -->
   <div id="human">
     <div class="search-box">
-      <input type="text" id="q" placeholder="Ask me anything — try 'What is QVAC SDK?'" onkeydown="if(event.key==='Enter')search()">
+      <input type="text" id="q" placeholder="Ask me anything — try 'open source search for agents'" onkeydown="if(event.key==='Enter')search()">
       <button id="btn" onclick="search()">Search</button>
     </div>
     <div style="text-align:center;color:#555;font-size:12px;margin:-24px 0 28px">English only for now — more languages coming soon</div>
     <div id="results"></div>
-    <div id="loading" class="hidden"><span class="spinner"></span> <span id="loading-text">Fetching from Brave Search...</span><div id="loading-hint" class="hidden" style="color:#555;font-size:13px;margin-top:8px">Local LLM on CPU — takes time</div><div id="loading-bored" class="hidden" style="color:#444;font-size:13px;margin-top:6px">While you wait — <a href="#" onclick="document.getElementById('rm-wait').classList.toggle('hidden');return false" style="color:#2ec98a">roadmap</a> · <a href="https://github.com/theYahia/qsearch" target="_blank" rel="noopener" style="color:#2ec98a">github</a><div id="rm-wait" class="hidden" style="margin-top:8px"><span class="rm-step done">Brave + QVAC cleaning</span> <span class="rm-arrow">→</span> <span class="rm-step"><a href="https://github.com/theYahia/qsearch/blob/main/ROADMAP.md#v03--own-corpus" target="_blank" rel="noopener">Own corpus</a></span> <span class="rm-arrow">→</span> <span class="rm-step"><a href="https://x.com/WDK_tether" target="_blank" rel="noopener">WDK x402 USDT</a></span> <span class="rm-arrow">→</span> <span class="rm-step"><a href="https://x.com/paoloardoino/status/2041507715046887589" target="_blank" rel="noopener">HyperDHT</a></span></div></div></div>
+    <div id="loading" class="hidden"><span class="spinner"></span> <span id="loading-text">Searching...</span></div>
   </div>
 
   <!-- Agent mode -->
@@ -162,18 +162,10 @@ footer a:hover{color:#2ec98a}
     btn.disabled = true
     results.innerHTML = ''
     loading.classList.remove('hidden')
-    var lt = document.getElementById('loading-text')
-    lt.textContent = 'Fetching from Brave Search...'
-    var cleanSec = 0
-    var stepTimer = setTimeout(function() {
-      lt.textContent = 'Cleaning with local LLM (Qwen3-0.6B)... 0s'
-      document.getElementById('loading-hint').classList.remove('hidden')
-      stepTimer = setInterval(function() { cleanSec++; lt.textContent = 'Cleaning with local LLM (Qwen3-0.6B)... ' + cleanSec + 's'; if (cleanSec === 15) document.getElementById('loading-bored').classList.remove('hidden') }, 1000)
-    }, 3000)
     try {
       var data = await Promise.race([
-        fetch('/search?q=' + encodeURIComponent(q) + '&n=1').then(function(r) { return r.json() }),
-        new Promise(function(_, reject) { setTimeout(function() { reject(new Error('timeout')) }, 180000) })
+        fetch('/search?q=' + encodeURIComponent(q) + '&n=5').then(function(r) { return r.json() }),
+        new Promise(function(_, reject) { setTimeout(function() { reject(new Error('timeout')) }, 30000) })
       ])
       if (data.error) { results.innerHTML = '<div class="stats">' + esc(data.error) + '</div>'; return }
       var html = ''
@@ -183,23 +175,16 @@ footer a:hover{color:#2ec98a}
         html += '<a class="title" href="' + esc(item.url) + '" target="_blank" rel="noopener">' + esc(item.title) + '</a>'
         html += '<a class="url" href="' + esc(item.url) + '" target="_blank" rel="noopener">' + esc(item.url) + '</a>'
         if (item.description) html += '<div class="desc">' + esc(item.description) + '</div>'
-        var cm = (item.cleaned_markdown || '').trim()
-        if (cm && cm !== 'No relevant content.' && cm !== (item.description || '').trim()) html += '<div class="cleaned">' + esc(cm) + '</div>'
         var meta = [item.age, item.source, item.language].filter(Boolean).join(' · ')
         if (meta) html += '<div class="meta">' + esc(meta) + '</div>'
         html += '</div>'
       }
-      html += '<div class="stats">Brave: ' + data.brave_ms + 'ms · Clean: ' + data.total_clean_ms + 'ms · ' + data.total_results + ' results</div>'
-      results.innerHTML = html
+      if (data.total_results) html += '<div class="stats">' + data.total_results + ' results</div>'
+      results.innerHTML = html || '<div class="stats">No results</div>'
     } catch (e) {
-      results.innerHTML = '<div class="stats">' + (e.message === 'timeout' ? 'that took a while… please try again 🫠' : 'well, well… the CPU did its best — please try again 🫠') + '</div>'
+      results.innerHTML = '<div class="stats">' + (e.message === 'timeout' ? 'Request timed out — please try again' : 'Search failed — please try again') + '</div>'
     } finally {
-      clearTimeout(stepTimer)
-      clearInterval(stepTimer)
       loading.classList.add('hidden')
-      document.getElementById('loading-hint').classList.add('hidden')
-      document.getElementById('loading-bored').classList.add('hidden')
-      var rmw = document.getElementById('rm-wait'); if (rmw) rmw.classList.add('hidden')
       btn.disabled = false
     }
   }
