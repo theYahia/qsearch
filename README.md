@@ -110,12 +110,15 @@ The yellow node is your private corpus. URLs found by 5 engines + 3 sweeps + 4 t
 
 | Endpoint | Description | Backend |
 |----------|-------------|---------|
-| `POST /search` | Web search + corpus first | Brave or SearXNG |
+| `POST /search` | Web search + corpus first, trust-weighted re-rank | Brave or SearXNG |
 | `POST /sweep` | Batch search via SearXNG (with `engines[]`) | SearXNG |
 | `POST /news` | News search | Brave (requires key) |
 | `POST /context` | Deep page extraction | Brave (requires key) |
 | `POST /index` | Crawl URL or index local `.md` glob | Crawl4AI |
+| `GET /trust/:url` | Trust score + provenance for any URL in corpus | — |
+| `GET /corpus/top` | Top URLs ranked by trust (`?limit=20&min_engines=3`) | — |
 | `GET /corpus/stats` | Corpus size + counts | — |
+| `GET /ui` | Corpus browser — search, trust scores, provenance modal | — |
 | `GET /health` | Service status | — |
 
 `/search` accepts: `query`, `n_results` (1–20), `freshness` (`pd`/`pw`/`pm`/`py`), `search_lang`, `country`, `corpus_first` (default `true`), `corpus_only` (default `false`).
@@ -194,7 +197,7 @@ qsearch publishes Streamable HTTP transport at `/` on port `:8081`. Compatible w
 | Vector corpus | Qdrant v1.17.1 (Linux/macOS bare-runtime; offline on Windows) |
 | Crawler | Crawl4AI 0.8.6 (Python subprocess) |
 | Embedder (optional) | llama.cpp `/v1/embeddings` server |
-| LLM cleaner (optional) | Any GGUF model via `@qvac/sdk` (works for cleaning, not the central pillar) |
+| LLM cleaner (optional) | Any GGUF model via llama.cpp or local inference |
 | MCP | `@modelcontextprotocol/sdk` |
 | License | Apache-2.0 |
 
@@ -203,10 +206,9 @@ qsearch publishes Streamable HTTP transport at `/` on port `:8081`. Compatible w
 | Version | Feature | When |
 |---------|---------|------|
 | **v0.3.1** | Multi-engine `engines[]` attribution + dual sweep + corpus + MCP | shipped |
-| **v0.4** | Trust graph: `/trust/:url` endpoint, formula, simple viewer | 3–5 weeks |
-| **v0.5** | Bidirectional RAG validated feedback loop (grounding + attribution + novelty gates) | 6–8 weeks |
-| **v0.6+** | Optional aggregator service for opt-in federation (centralized → self-host Docker) | 3–6 months |
-| **v1.0** | Federation with workable validator economics — *if* honestly solvable | open |
+| **v0.4** | Trust layer: `/trust/:url`, `/corpus/top`, `/ui` viewer, trust-weighted re-rank, findings.md auto-export, Obsidian sync, snippet sanitization | shipped |
+| **v0.5** | Public polish: README narrative, demo, QUICKSTART, awesome list PRs, soft launch | in progress |
+| **v0.6+** | Optional federation (research direction — no timeline until v0.5 validated) | open |
 
 See [docs/VISION.md](./docs/VISION.md) for the full picture and why federation is research-direction-only until we can ship it without overpromise.
 
