@@ -31,14 +31,18 @@ if (!BRAVE_KEY) {
 import { braveFetch } from './backends/brave.js'
 import { parseQueriesText, runSweep } from './sweep/runner.js'
 import { renderMarkdown as renderSweepMd } from './sweep/parsed_snippets.js'
+import { renderFindings } from './sweep/findings_renderer.js'
 import { SearXNGBackend } from './backends/searxng.js'
 import { cleanResults, cleanContext, warmModel, qvacAvailable, QWEN3_600M_INST_Q4 } from './clean/qvac.js'
+import { sanitizeText, canonicalizeUrl } from './clean/sanitize.js'
 import { MeilisearchCorpus } from './corpus/meilisearch.js'
 import { QdrantCorpus } from './corpus/qdrant.js'
 import { embedder as qvacEmbedder } from './embed/qvac.js'
 import { LlamaCppEmbedder } from './embed/llamacpp.js'
 import { crawl } from './crawl/crawl4ai.js'
 import { createJob, getJob, updateJob } from './jobs/store.js'
+import { syncToObsidian, appendDailyLog } from './obsidian/sync.js'
+import { rerankByTrust } from './search/rerank.js'
 
 // ── Corpus clients ─────────────────────────────────────────────────
 const MEILI_URL = process.env.MEILISEARCH_URL || 'http://localhost:7700'
@@ -169,8 +173,12 @@ async function handleSearch (req, res) {
   // Corpus path
   if (corpusFirst) {
     const corpusStart = Date.now()
-    const corpusHits = await corpusSearch(query, count)
+    let corpusHits = await corpusSearch(query, count)
     corpusMs = Date.now() - corpusStart
+
+    if (body.rerank_by_trust !== false && corpusHits.length > 0) {
+      corpusHits = await rerankByTrust(corpusHits).catch(() => corpusHits)
+    }
 
     if (corpusHits.length >= count) {
       const shouldClean = body.clean !== false
@@ -593,6 +601,43 @@ async function handleCorpusStats (req, res) {
   }, null, 2))
 }
 
+async function handleTrust (req, res) {
+  const match = req.url.match(/^\/trust\/(.+?)(?:\?|$)/)
+  if (!match) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'usage: /trust/<urlencoded-url>' }))
+    return
+  }
+  const url = decodeURIComponent(match[1])
+  try {
+    const result = await meili.trustScore(url)
+    if (!result) {
+      res.writeHead(404, { 'Content-Type': 'application/json' })
+      res.end(JSON.stringify({ error: 'URL not in corpus', url }))
+      return
+    }
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify(result, null, 2))
+  } catch (err) {
+    res.writeHead(500, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'trust computation failed', detail: String(err) }))
+  }
+}
+
+async function handleCorpusTop (req, res) {
+  const reqUrl = new URL(req.url, `http://${req.headers.host}`)
+  const limit = Math.min(Number(reqUrl.searchParams.get('limit')) || 20, 100)
+  const minEngines = Number(reqUrl.searchParams.get('min_engines')) || 1
+  try {
+    const top = await meili.topByTrust({ limit, minEngines })
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ top, limit, min_engines: minEngines }, null, 2))
+  } catch (err) {
+    res.writeHead(500, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'top query failed', detail: String(err) }))
+  }
+}
+
 async function handleSweep (req, res) {
   const contentType = req.headers['content-type'] || ''
   let queriesText, saveOutput = false
@@ -632,6 +677,9 @@ async function handleSweep (req, res) {
   const { results, stats } = await runSweep(queries, sweepFetch)
   const md = renderSweepMd(results, queries, stats)
 
+  // Extract topic before response is sent (req.url must not be accessed after res.end)
+  const sweepReqUrl = req.url
+
   // Index results into corpus (background, don't block response)
   setImmediate(async () => {
     let indexed = 0
@@ -641,13 +689,13 @@ async function handleSweep (req, res) {
       for (const r of entry.results) {
         if (!r.url) continue
         try {
+          const cleanUrl = canonicalizeUrl(r.url)
           const engines = Array.isArray(r.engines) ? r.engines : []
           const doc = {
-            id: r.url,
-            url: r.url,
-            title: r.title || '',
-            description: r.description || '',
-            text: [r.title, r.description, ...(r.extra_snippets || [])].filter(Boolean).join('\n'),
+            url: cleanUrl,
+            title: sanitizeText(r.title || ''),
+            description: sanitizeText(r.description || ''),
+            text: sanitizeText([r.title, r.description, ...(r.extra_snippets || [])].filter(Boolean).join('\n')),
             namespace: 'sweep',
             sweep_label: label,
             engines,
@@ -665,6 +713,39 @@ async function handleSweep (req, res) {
     if (indexed) {
       console.log(`[sweep] indexed ${indexed} results into corpus`)
       await refreshCorpusStatus()
+    }
+  })
+
+  // Write findings.md to _raw_data folder (background)
+  setImmediate(async () => {
+    try {
+      const reqUrl = new URL(sweepReqUrl, 'http://localhost')
+      const topic = reqUrl.searchParams.get('topic') ||
+                    `sweep_${new Date().toISOString().slice(0, 10)}`
+      const sanitizedTopic = topic.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60)
+      const outDir = join(__dirname, '..', '_raw_data', sanitizedTopic)
+      mkdirSync(outDir, { recursive: true })
+      const findings = await renderFindings(results, queries, stats, sanitizedTopic)
+      writeFileSync(join(outDir, 'findings.md'), findings, 'utf8')
+      console.log(`[sweep] findings.md → _raw_data/${sanitizedTopic}/findings.md`)
+    } catch (e) {
+      console.error('[sweep] findings render error:', e.message)
+    }
+  })
+
+  // Sync to Obsidian vault (background)
+  setImmediate(async () => {
+    try {
+      const reqUrl = new URL(sweepReqUrl, 'http://localhost')
+      const topic = reqUrl.searchParams.get('topic') ||
+                    `sweep_${new Date().toISOString().slice(0, 10)}`
+      const sanitizedTopic = topic.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 60)
+      const obsPath = await syncToObsidian({ topic: sanitizedTopic, queries, results, stats })
+      if (obsPath) console.log(`[sweep] Obsidian sync → ${obsPath}`)
+      const logPath = await appendDailyLog({ topic: sanitizedTopic, queries, stats })
+      if (logPath) console.log(`[sweep] daily log → ${logPath}`)
+    } catch (e) {
+      console.error('[sweep] Obsidian sync error:', e.message)
     }
   })
 
@@ -732,6 +813,36 @@ const server = http.createServer((req, res) => {
     handleCorpusStats(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(502, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'request failed', detail: String(err) })) })
     return
   }
+  if (req.method === 'GET' && req.url.startsWith('/trust/')) {
+    handleTrust(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
+    return
+  }
+  if (req.method === 'GET' && req.url.startsWith('/corpus/top')) {
+    handleCorpusTop(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
+    return
+  }
+  if (req.method === 'GET' && (req.url === '/ui' || req.url === '/ui/')) {
+    try {
+      const html = readFileSync(join(__dirname, '..', 'public', 'ui.html'), 'utf8')
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
+      res.end(html)
+    } catch (e) {
+      res.writeHead(500, { 'Content-Type': 'text/plain' })
+      res.end('UI not found')
+    }
+    return
+  }
+  if (req.method === 'GET' && req.url === '/ui/app.js') {
+    try {
+      const js = readFileSync(join(__dirname, '..', 'public', 'app.js'), 'utf8')
+      res.writeHead(200, { 'Content-Type': 'application/javascript' })
+      res.end(js)
+    } catch (e) {
+      res.writeHead(500, { 'Content-Type': 'text/plain' })
+      res.end('app.js not found')
+    }
+    return
+  }
   res.writeHead(404, { 'Content-Type': 'application/json' })
   res.end(JSON.stringify({ error: 'not found' }))
 })
@@ -747,6 +858,9 @@ server.listen(PORT, () => {
   console.log('POST /context { "query": "...", "n_results": 3 }')
   console.log('POST /index   { "url": "https://..." } | { "glob": "D:/path/**/*.md" }')
   console.log('GET  /corpus/stats')
+  console.log('GET  /corpus/top?limit=20&min_engines=3')
+  console.log('GET  /trust/:url')
+  console.log('GET  /ui')
   console.log('GET  /health')
   warmModel().catch(() => {})
 })
