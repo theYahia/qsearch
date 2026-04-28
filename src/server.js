@@ -2,7 +2,7 @@
 // Endpoints: POST /search, POST /news, POST /context, POST /index, GET /index/:job_id, GET /corpus/stats, GET /health
 import http from 'node:http'
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs'
-import { glob as fsGlob } from 'node:fs/promises'
+import { glob as fsGlob } from 'glob'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
@@ -508,8 +508,7 @@ async function handleIndex (req, res) {
       let indexed = 0
       try {
         const pattern = url.replace(/\\/g, '/')
-        const files = []
-        for await (const f of fsGlob(pattern)) files.push(f)
+        const files = await fsGlob(pattern)
         if (!files.length) {
           updateJob(job_id, { status: 'failed', error: `No files matched: ${url}`, finished_at: new Date().toISOString() })
           return
