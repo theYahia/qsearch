@@ -3,6 +3,7 @@
 > I built this for my own daily research. After running 100+ research sprints, my agent kept hallucinating because it read 200-char snippets. qsearch gives it full content with multi-engine provenance — running locally, owned by me.
 
 ![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)
+![CI](https://github.com/theYahia/qsearch/actions/workflows/test.yml/badge.svg)
 ![Status: v0.4.0 live](https://img.shields.io/badge/status-v0.4.0%20live-brightgreen.svg)
 ![Demo: qsearch.pro](https://img.shields.io/badge/demo-qsearch.pro-ef4444.svg)
 ![MCP](https://img.shields.io/badge/MCP-ready-8b5cf6.svg)
@@ -11,8 +12,8 @@ AI agents lose **17–33% of facts to hallucination** because they read 200-char
 
 **qsearch is the open-source search layer that gives agents full content with multi-engine provenance** — running on your machine, owned by you, ready for MCP today.
 
-> ✅ **v0.3.1 live at [qsearch.pro](https://qsearch.pro).** Multi-engine attribution shipped (`engines[]` field flows through corpus). Persistent trust signals across sweeps. Full MCP-over-HTTP for Claude Code and any HTTP-MCP client.
-> 📖 **Vision:** [docs/VISION.md](./docs/VISION.md) · **Technical spec:** [docs/TRUST_MESH.md](./docs/TRUST_MESH.md) · **Architecture:** [docs/ARCHITECTURE_V03.md](./docs/ARCHITECTURE_V03.md)
+> ✅ **v0.4.0 live at [qsearch.pro](https://qsearch.pro).** Multi-engine attribution, trust corpus with per-URL provenance (`engines[]`, `sweep_count`, `trust_score`), corpus viewer at `/ui`, MCP-over-HTTP for Claude Code and any spec-compliant client.
+> 📖 **Vision:** [docs/VISION.md](./docs/VISION.md) · **Technical spec:** [docs/TRUST_MESH.md](./docs/TRUST_MESH.md) · **Architecture:** [docs/FEDERATION_ARCHITECTURE.md](./docs/FEDERATION_ARCHITECTURE.md)
 
 ## Quick start
 
@@ -34,7 +35,7 @@ docker compose up -d
 
 # 5. Install & run
 npm install
-npm start            # → qsearch v0.3.1 on http://localhost:8080
+npm start            # → qsearch v0.4.0 on http://localhost:8080
 
 # 6. (Optional) MCP server for Claude Code / Workbench / OpenClaw
 npm run start:mcp    # → http://0.0.0.0:8081
@@ -121,7 +122,7 @@ The yellow node is your private corpus. URLs found by 5 engines + 3 sweeps + 4 t
 | MCP-native | partial | ✅ | ❌ | ✅ | ❌ | ✅ |
 | BYOK upstream | ❌ | ❌ | ❌ | N/A | ✅ | ✅ |
 
-## API — v0.3.1
+## API — v0.4.0
 
 ### Search endpoints
 
@@ -223,8 +224,8 @@ qsearch publishes Streamable HTTP transport at `/` on port `:8081`. Compatible w
 | Version | Feature | When |
 |---------|---------|------|
 | **v0.3.1** | Multi-engine `engines[]` attribution + dual sweep + corpus + MCP | shipped |
-| **v0.4** | Trust layer: `/trust/:url`, `/corpus/top`, `/ui` viewer, trust-weighted re-rank, findings.md auto-export, Obsidian sync, snippet sanitization | shipped |
-| **v0.5** | Public polish: README narrative, demo, QUICKSTART, awesome list PRs, soft launch | in progress |
+| **v0.4.0** | Trust layer: `/trust/:url`, `/corpus/top`, `/ui` viewer, trust-weighted re-rank, sort/pagination, corpus merge-on-upsert, snippet sanitization | shipped |
+| **v0.5** | Launch: awesome list PRs, MCP Registry publish, Show HN, newsletter distribution | in progress |
 | **v0.6+** | Optional federation (research direction — no timeline until v0.5 validated) | open |
 
 See [docs/VISION.md](./docs/VISION.md) for the full picture and why federation is research-direction-only until we can ship it without overpromise.
