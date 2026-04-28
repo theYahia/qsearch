@@ -832,7 +832,7 @@ const server = http.createServer((req, res) => {
     handleIndex(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(502, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'request failed', detail: String(err) })) })
     return
   }
-  if (req.method === 'POST' && req.url === '/sweep') {
+  if (req.method === 'POST' && (req.url === '/sweep' || req.url.startsWith('/sweep?'))) {
     handleSweep(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(502, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'sweep failed', detail: String(err) })) })
     return
   }
