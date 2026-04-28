@@ -51,7 +51,8 @@ export async function rerankByTrust (results) {
         trust_score: Number(trustScore.toFixed(2)),
         rerank_score: Number(rerankScore.toFixed(4))
       })
-    } catch {
+    } catch (e) {
+      console.error('[rerank] trust query failed for', r.url, ':', e.message)
       ranked.push(r)
     }
   }

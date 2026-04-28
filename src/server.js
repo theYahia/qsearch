@@ -598,7 +598,8 @@ async function handleCorpusStats (req, res) {
     namespaces: { builtin: 0, user: meiliStats.total },
     meilisearch_size_mb: meiliStats.size_mb,
     qdrant_vectors: qdrantStats.total,
-    last_crawled_at: null
+    last_crawled_at: null,
+    high_trust_count: meiliStats.high_trust_count ?? 0
   }, null, 2))
 }
 
@@ -660,10 +661,12 @@ async function handleCorpusTop (req, res) {
   const reqUrl = new URL(req.url, `http://${req.headers.host}`)
   const limit = Math.min(Number(reqUrl.searchParams.get('limit')) || 20, 100)
   const minEngines = Number(reqUrl.searchParams.get('min_engines')) || 1
+  const sort = reqUrl.searchParams.get('sort') || 'trust'
+  const offset = Number(reqUrl.searchParams.get('offset')) || 0
   try {
-    const top = await meili.topByTrust({ limit, minEngines })
+    const top = await meili.topByTrust({ limit, minEngines, sort, offset })
     res.writeHead(200, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ top, limit, min_engines: minEngines }, null, 2))
+    res.end(JSON.stringify({ top, limit, min_engines: minEngines, sort, offset }, null, 2))
   } catch (err) {
     res.writeHead(500, { 'Content-Type': 'application/json' })
     res.end(JSON.stringify({ error: 'top query failed', detail: String(err) }))
@@ -887,7 +890,7 @@ server.keepAliveTimeout = 65000
 server.headersTimeout = 66000
 
 server.listen(PORT, () => {
-  console.log(`qsearch v0.3.0 listening on http://localhost:${PORT}`)
+  console.log(`qsearch v0.4.0 listening on http://localhost:${PORT}`)
   console.log('POST /search  { "query": "...", "corpus_first": true }')
   console.log('POST /sweep   <queries.txt body> (label|query lines)')
   console.log('POST /news    { "query": "...", "n_results": 5 }')

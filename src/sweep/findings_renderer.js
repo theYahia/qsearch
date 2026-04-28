@@ -64,7 +64,9 @@ export async function renderFindings (results, queries, stats, topicName = 'swee
       if (otherLabels.length) {
         crossTopicAlerts.push({ url, title: info.title, otherLabels })
       }
-    } catch {}
+    } catch (e) {
+      console.error('[findings] cross-topic query failed for', url, ':', e.message)
+    }
   }
 
   // Top 5 URLs by engine_count, then appearance_count

@@ -22,6 +22,7 @@ export class MeilisearchCorpus extends CorpusBackend {
     const idx = this._client.index(INDEX_NAME)
     await idx.updateSearchableAttributes(['title', 'text', 'url'])
     await idx.updateFilterableAttributes(['engines', 'engine_count', 'namespace', 'backend_source', 'sweep_label', 'url'])
+    await idx.updateSortableAttributes(['engine_count', 'sweep_count', 'first_seen'])
     this._ready = true
   }
 
@@ -43,7 +44,27 @@ export class MeilisearchCorpus extends CorpusBackend {
     await this._ensureIndex()
     const idx = this._client.index(INDEX_NAME)
     const id = this._urlToId(doc.url)
-    await idx.addDocuments([{ ...doc, id }])
+
+    let merged = { ...doc, id }
+    try {
+      const existing = await idx.getDocument(id)
+      const engines = [...new Set([...(existing.engines || []), ...(doc.engines || [])])]
+      const prevSweeps = existing.appeared_in_sweeps || []
+      const newSweepEntry = { sweep_label: doc.sweep_label, crawled_at: doc.crawled_at, engines: doc.engines || [] }
+      const alreadyRecorded = prevSweeps.some(s => s.sweep_label === doc.sweep_label)
+      merged = {
+        ...existing,
+        ...doc,
+        id,
+        engines,
+        engine_count: engines.length,
+        appeared_in_sweeps: alreadyRecorded ? prevSweeps : [...prevSweeps, newSweepEntry]
+      }
+    } catch {
+      merged.appeared_in_sweeps = [{ sweep_label: doc.sweep_label, crawled_at: doc.crawled_at, engines: doc.engines || [] }]
+    }
+
+    await idx.addDocuments([merged])
   }
 
   async search (query, opts = {}) {
@@ -67,8 +88,9 @@ export class MeilisearchCorpus extends CorpusBackend {
       await this._ensureIndex()
       const idx = this._client.index(INDEX_NAME)
       const s = await idx.getStats()
-      return { total: s.numberOfDocuments, size_mb: null }
-    } catch { return { total: 0, size_mb: null } }
+      const highTrust = await idx.search('', { filter: 'engine_count >= 3', limit: 0 })
+      return { total: s.numberOfDocuments, size_mb: null, high_trust_count: highTrust.estimatedTotalHits ?? 0 }
+    } catch { return { total: 0, size_mb: null, high_trust_count: 0 } }
   }
 
   /**
@@ -122,7 +144,7 @@ export class MeilisearchCorpus extends CorpusBackend {
       topic_diversity: topicDiversity,
       engines: [...allEngines],
       first_seen: hits.map((h) => h.crawled_at).filter(Boolean).sort()[0] || null,
-      appeared_in_sweeps: appearedInSweeps.slice(0, 20)
+      appeared_in_sweeps: appearedInSweeps
     }
   }
 
@@ -134,41 +156,54 @@ export class MeilisearchCorpus extends CorpusBackend {
    * @param {number} opts.minEngines - filter to URLs with engine_count >= this
    * @returns {Promise<Array<Object>>}
    */
-  async topByTrust ({ limit = 20, minEngines = 1 } = {}) {
+  async topByTrust ({ limit = 20, minEngines = 1, sort = 'trust', offset = 0 } = {}) {
     await this._ensureIndex()
     const idx = this._client.index(INDEX_NAME)
 
-    const { hits } = await idx.search('', {
-      filter: `engine_count >= ${minEngines}`,
-      limit: 5000,
-      attributesToRetrieve: ['url', 'title', 'sweep_label', 'engines', 'engine_count']
-    })
-
-    const urlMap = new Map()
-    for (const h of hits) {
-      if (!h.url) continue
-      let u = urlMap.get(h.url)
-      if (!u) {
-        u = { url: h.url, title: h.title || '', sweepLabels: new Set(), engines: new Set(), topics: new Set() }
-        urlMap.set(h.url, u)
+    if (sort === 'trust') {
+      const { hits } = await idx.search('', {
+        filter: `engine_count >= ${minEngines}`,
+        limit: 5000,
+        attributesToRetrieve: ['url', 'title', 'engines', 'engine_count', 'appeared_in_sweeps', 'sweep_label']
+      })
+      const seen = new Map()
+      for (const h of hits) {
+        if (!h.url || seen.has(h.url)) continue
+        const sweepCount = (h.appeared_in_sweeps || []).length || (h.sweep_label ? 1 : 0)
+        const engines = new Set(h.engines || [])
+        const topics = new Set((h.appeared_in_sweeps || []).map(s => s.sweep_label?.split('_')[0]).filter(Boolean))
+        if (!topics.size && h.sweep_label) topics.add(h.sweep_label.split('_')[0])
+        const trustScore = Math.log(sweepCount + 1) * engines.size * (topics.size || 1)
+        seen.set(h.url, {
+          url: h.url,
+          title: h.title || '',
+          trust_score: Number(trustScore.toFixed(2)),
+          sweep_count: sweepCount,
+          engine_count: engines.size,
+          topic_diversity: topics.size || 1
+        })
       }
-      if (h.sweep_label) {
-        u.sweepLabels.add(h.sweep_label)
-        u.topics.add(h.sweep_label.split('_')[0])
-      }
-      for (const e of h.engines || []) u.engines.add(e)
+      return [...seen.values()]
+        .sort((a, b) => b.trust_score - a.trust_score)
+        .slice(offset, offset + limit)
     }
 
-    return [...urlMap.values()]
-      .map((u) => ({
-        url: u.url,
-        title: u.title,
-        trust_score: Number((Math.log(u.sweepLabels.size + 1) * u.engines.size * u.topics.size).toFixed(2)),
-        sweep_count: u.sweepLabels.size,
-        engine_count: u.engines.size,
-        topic_diversity: u.topics.size
-      }))
-      .sort((a, b) => b.trust_score - a.trust_score)
-      .slice(0, limit)
+    const sortMap = { engine_count: 'engine_count:desc', sweep_count: 'sweep_count:desc', first_seen: 'first_seen:asc' }
+    const msSort = sortMap[sort] || 'engine_count:desc'
+    const { hits } = await idx.search('', {
+      filter: `engine_count >= ${minEngines}`,
+      sort: [msSort],
+      limit,
+      offset,
+      attributesToRetrieve: ['url', 'title', 'engine_count', 'sweep_count', 'first_seen', 'appeared_in_sweeps', 'sweep_label']
+    })
+    return hits.map(h => ({
+      url: h.url,
+      title: h.title || '',
+      trust_score: Number((Math.log(((h.appeared_in_sweeps || []).length || 1) + 1) * (h.engine_count || 0)).toFixed(2)),
+      sweep_count: (h.appeared_in_sweeps || []).length || (h.sweep_label ? 1 : 0),
+      engine_count: h.engine_count || 0,
+      topic_diversity: 1
+    }))
   }
 }

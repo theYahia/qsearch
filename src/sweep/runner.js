@@ -1,4 +1,4 @@
-const MAX_PARALLEL = 6
+const MAX_PARALLEL = parseInt(process.env.SWEEP_CONCURRENCY || '6')
 
 class Semaphore {
   constructor (max) {

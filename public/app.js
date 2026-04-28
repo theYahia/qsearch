@@ -2,49 +2,70 @@
 
 const $ = (sel) => document.querySelector(sel)
 
+let currentOffset = 0
+let isSearchMode = false
+
 async function loadStats () {
   try {
-    const r = await fetch('/corpus/stats')
-    const data = await r.json()
-    $('#statTotal').textContent = data.total || 0
-    if (data.size_mb) $('#statSizeMb').textContent = data.size_mb
-    const top = await fetch('/corpus/top?limit=1000&min_engines=3').then((r) => r.json())
-    const hightrust = top.top?.length || 0
+    const data = await fetch('/corpus/stats').then((r) => r.json())
+    $('#statTotal').textContent = data.total_documents || 0
+    const hightrust = data.high_trust_count || 0
     $('#statHighTrust').textContent = hightrust
-    if (data.total) $('#statRatio').textContent = ((hightrust / data.total) * 100).toFixed(1) + '%'
+    if (data.total_documents) $('#statRatio').textContent = ((hightrust / data.total_documents) * 100).toFixed(1) + '%'
+    if (data.meilisearch_size_mb) $('#statSizeMb').textContent = data.meilisearch_size_mb
   } catch (e) {
     console.error('stats error:', e)
   }
 }
 
-async function loadTop () {
+async function loadTop (append = false) {
+  if (!append) { currentOffset = 0; isSearchMode = false }
   const minEngines = $('#minEngines').value || 1
-  const limit = $('#limitInput').value || 20
+  const limit = parseInt($('#limitInput').value) || 20
+  const sort = $('#sortBy').value || 'trust'
   try {
-    const r = await fetch(`/corpus/top?limit=${limit}&min_engines=${minEngines}`)
+    const r = await fetch(`/corpus/top?limit=${limit}&min_engines=${minEngines}&sort=${sort}&offset=${currentOffset}`)
     const data = await r.json()
-    renderResults(data.top || [])
+    const results = data.top || []
+    if (append) appendResults(results)
+    else renderResults(results)
+    currentOffset += results.length
+    $('#loadMoreBar').style.display = results.length === limit ? 'block' : 'none'
   } catch (e) {
     $('#results').innerHTML = '<p style="color:#f85149">Failed to load corpus top</p>'
   }
 }
 
 async function doSearch (query) {
+  isSearchMode = true
   try {
+    const n = parseInt($('#limitInput').value) || 20
     const r = await fetch('/search', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query, n_results: 20, corpus_first: true, corpus_only: true })
+      body: JSON.stringify({ query, n_results: n, corpus_first: true, corpus_only: true })
     })
     const data = await r.json()
     renderResults(data.results || [])
+    $('#loadMoreBar').style.display = 'none'
   } catch (e) {
     $('#results').innerHTML = '<p style="color:#f85149">Search failed</p>'
   }
 }
 
 function renderResults (urls) {
-  const html = urls.map((u) => `
+  $('#resultCount').textContent = urls.length ? `${urls.length} results` : ''
+  $('#results').innerHTML = buildCards(urls) || '<p style="color:#8b949e">No results</p>'
+}
+
+function appendResults (urls) {
+  if (!urls.length) { $('#loadMoreBar').style.display = 'none'; return }
+  $('#resultCount').textContent = (currentOffset) + ' results'
+  $('#results').insertAdjacentHTML('beforeend', buildCards(urls))
+}
+
+function buildCards (urls) {
+  return urls.map((u) => `
     <div class="url-card">
       <div class="title" onclick="showTrust('${encodeURIComponent(u.url)}')">${escapeHtml(u.title || '(no title)')}</div>
       <div class="url"><a href="${escapeHtml(u.url)}" target="_blank" rel="noopener">${escapeHtml(u.url)}</a></div>
@@ -56,7 +77,6 @@ function renderResults (urls) {
       </div>
     </div>
   `).join('')
-  $('#results').innerHTML = html || '<p style="color:#8b949e">No results</p>'
 }
 
 async function showTrust (encodedUrl) {
@@ -80,7 +100,7 @@ async function showTrust (encodedUrl) {
       <li><strong>Topics:</strong> ${escapeHtml(String(data.topic_diversity ?? ''))}</li>
       <li><strong>First seen:</strong> ${escapeHtml(data.first_seen || 'unknown')}</li>
     </ul>
-    <h3>Appeared in sweeps:</h3>
+    <h3>Appeared in sweeps (${(data.appeared_in_sweeps || []).length}):</h3>
     <ul>${sweepsHtml || '<li>none</li>'}</ul>
   `
   $('#modal').classList.add('show')
@@ -91,6 +111,8 @@ function closeModal () {
   $('#modal').classList.remove('show')
   $('#backdrop').classList.remove('show')
 }
+
+function loadMore () { loadTop(true) }
 
 function escapeHtml (s) {
   return String(s || '').replace(/[&<>"']/g, (c) => ({
@@ -104,9 +126,10 @@ $('#searchBox').addEventListener('input', (e) => {
   if (q.length >= 2) doSearch(q)
   else loadTop()
 })
-$('#refresh').addEventListener('click', loadTop)
-$('#minEngines').addEventListener('change', loadTop)
-$('#limitInput').addEventListener('change', loadTop)
+$('#refresh').addEventListener('click', () => loadTop())
+$('#minEngines').addEventListener('change', () => loadTop())
+$('#limitInput').addEventListener('change', () => loadTop())
+$('#sortBy').addEventListener('change', () => loadTop())
 $('#backdrop').addEventListener('click', closeModal)
 
 // Initial load
@@ -114,3 +137,4 @@ loadStats()
 loadTop()
 window.showTrust = showTrust
 window.closeModal = closeModal
+window.loadMore = loadMore

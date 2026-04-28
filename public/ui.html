@@ -45,10 +45,22 @@
     <input type="search" id="searchBox" placeholder="Search corpus..." />
     <label>Min engines: <input type="number" id="minEngines" value="1" min="1" max="10" style="width: 4rem"></label>
     <label>Limit: <input type="number" id="limitInput" value="20" min="5" max="100" style="width: 4rem"></label>
+    <label>Sort:
+      <select id="sortBy" style="background:#161b22;color:#c9d1d9;border:1px solid #30363d;border-radius:4px;padding:0.3rem">
+        <option value="trust">Trust</option>
+        <option value="engine_count">Engines</option>
+        <option value="sweep_count">Sweeps</option>
+        <option value="first_seen">First seen</option>
+      </select>
+    </label>
     <button id="refresh">Refresh</button>
   </div>
 
+  <div id="resultCount" style="color:#8b949e;font-size:13px;margin-bottom:8px;min-height:18px"></div>
   <div id="results"></div>
+  <div id="loadMoreBar" style="text-align:center;padding:12px;display:none">
+    <button onclick="loadMore()">Load more</button>
+  </div>
 
   <div class="backdrop" id="backdrop"></div>
   <div class="modal" id="modal">

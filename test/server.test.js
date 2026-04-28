@@ -213,7 +213,7 @@ describe('qsearch server', () => {
     const res = await request(QSEARCH_PORT, 'GET', '/health')
     assert.equal(res.status, 200)
     assert.equal(res.json.status, 'ok')
-    assert.equal(res.json.version, '0.3.0')
+    assert.equal(res.json.version, '0.4.0')
     assert.equal(typeof res.json.qvac_available, 'boolean')
     assert.equal(typeof res.json.model_loaded, 'boolean')
   })
