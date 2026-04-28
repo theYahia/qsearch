@@ -1,0 +1,23 @@
+# DRAFT — submit to awesome-selfhosted-data NOT BEFORE 2026-08-14
+#
+# ⚠️ BLOCKED: awesome-selfhosted curation rule requires "project first released more than 4 months ago".
+# qsearch first commit: 2026-04-14. Earliest valid submission date: 2026-08-14.
+# Source: https://github.com/awesome-selfhosted/awesome-selfhosted-data/blob/master/.github/ISSUE_TEMPLATE/addition.md
+#
+# Submit path: PR to https://github.com/awesome-selfhosted/awesome-selfhosted-data
+# (NOT the README repo — README is auto-generated)
+# File: software/qsearch.yml (kebab-case)
+
+name: qsearch
+website_url: https://qsearch.pro
+source_code_url: https://github.com/theYahia/qsearch
+description: Open-source search layer for AI agents with multi-engine provenance and local trust corpus. Aggregates Brave + SearXNG, indexes URLs by trust score, MCP-compatible.
+licenses:
+  - Apache-2.0
+platforms:
+  - Nodejs
+  - Docker
+tags:
+  - Search Engines
+demo_url: https://qsearch.pro
+depends_3rdparty: false

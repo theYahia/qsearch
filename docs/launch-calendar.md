@@ -25,7 +25,7 @@
 
 ### 1 day before (Sun 2026-05-03)
 - [ ] **Publish to MCP Registry** via `mcp-publisher` CLI (with GitHub OIDC auth). Verify listing live at registry.modelcontextprotocol.io.
-- [ ] Confirm awesome-selfhosted PR draft is ready (don't merge yet)
+- [ ] ~~awesome-selfhosted PR~~ **BLOCKED until 2026-08-14** — list requires projects ≥4 months old (qsearch is 14 days). Draft saved at `docs/awesome-selfhosted-entry.yml` for later. PRs go to `awesome-selfhosted-data` repo (not README repo).
 - [ ] Sleep cycle for Tuesday 14:00 UTC (07:00 PT) launch window
 
 ### 1 hour before (Tue 2026-05-05 13:00 UTC / 06:00 PT)
@@ -202,7 +202,7 @@ around manually?
 - **r/learnmachinelearning Project Showcase Day:** comment in weekly thread (lower bar).
 
 ### Midday UTC
-- **awesome-selfhosted PR:** submit. Format per CONTRIBUTING.md (when fetched live; auto-fetch on Wed evening to confirm format).
+- **~~awesome-selfhosted PR:~~ BLOCKED until 2026-08-14** — list requires projects ≥4 months old (qsearch first commit 2026-04-14). Skip this channel for v0.4.0 launch. Resubmit August 2026 using `docs/awesome-selfhosted-entry.yml` as PR to `awesome-selfhosted-data` repo.
 - **awesome-ai-agents PRs:** submit to slavakurilyak/awesome-ai-agents (active per Brave snippet) + Hannibal046/Awesome-LLM (active PRs through Nov 2025).
 
 ### Afternoon UTC
