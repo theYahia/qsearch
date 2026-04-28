@@ -813,7 +813,7 @@ const server = http.createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/health') {
     const modelReady = true // warmModel status tracked in clean/qvac.js
     res.writeHead(200, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ status: 'ok', version: '0.3.0', qvac_available: qvacAvailable, model_loaded: modelReady, embed_loaded: embedder.available, corpus: corpusStatus }))
+    res.end(JSON.stringify({ status: 'ok', version: '0.4.0', qvac_available: qvacAvailable, model_loaded: modelReady, embed_loaded: embedder.available, corpus: corpusStatus }))
     return
   }
   if ((req.method === 'POST' && req.url === '/search') || (req.method === 'GET' && req.url.startsWith('/search?'))) {

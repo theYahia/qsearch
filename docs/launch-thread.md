@@ -143,7 +143,7 @@ Live demo: https://qsearch.pro
 
 ## LinkedIn variant
 
-> Just shipped qsearch v0.3.1 — open-source trust layer for AI agent search.
+> Just shipped qsearch v0.4.0 — open-source trust layer for AI agent search.
 >
 > Stanford's 2024 audit measured production RAG systems hallucinating 17-33% of facts. AI agents read 200-char snippets and invent the rest.
 >
