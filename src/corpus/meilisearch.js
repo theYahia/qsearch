@@ -21,6 +21,7 @@ export class MeilisearchCorpus extends CorpusBackend {
     }
     const idx = this._client.index(INDEX_NAME)
     await idx.updateSearchableAttributes(['title', 'text', 'url'])
+    await idx.updateFilterableAttributes(['engines', 'engine_count', 'namespace', 'backend_source', 'sweep_label'])
     this._ready = true
   }
 

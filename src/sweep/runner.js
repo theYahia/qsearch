@@ -57,6 +57,7 @@ export async function runSweep (queries, searchFn, opts = {}) {
   const stats = { web_ok: 0, web_fail: 0, total_deduped: 0 }
 
   const sem = new Semaphore(MAX_PARALLEL)
+  const urlToFirstResult = new Map() // url -> result object reference, for engines union on dedup
   await Promise.all(queries.map(({ label, query }) =>
     sem.run(async () => {
       try {
@@ -64,8 +65,20 @@ export async function runSweep (queries, searchFn, opts = {}) {
         const raw = data?.web?.results || []
         const filtered = []
         for (const r of raw) {
-          if (r.url && seenUrls.has(r.url)) { stats.total_deduped++; continue }
-          if (r.url) seenUrls.add(r.url)
+          if (r.url && seenUrls.has(r.url)) {
+            stats.total_deduped++
+            // Merge engines union into the first occurrence so trust signal aggregates across queries
+            const first = urlToFirstResult.get(r.url)
+            if (first && Array.isArray(r.engines) && r.engines.length) {
+              const merged = new Set([...(first.engines || []), ...r.engines])
+              first.engines = [...merged]
+            }
+            continue
+          }
+          if (r.url) {
+            seenUrls.add(r.url)
+            urlToFirstResult.set(r.url, r)
+          }
           filtered.push(r)
         }
         results.set(label, { query, results: filtered, ok: true })

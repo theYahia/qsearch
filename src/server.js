@@ -617,8 +617,19 @@ async function handleSweep (req, res) {
     return
   }
 
-  console.log(`[sweep] starting ${queries.length} queries`)
-  const { results, stats } = await runSweep(queries, routedBraveFetch)
+  // /sweep is the SearXNG half of DUAL SWEEP (brave_sweep.py is the Brave half).
+  // Always prefer SearXNG so we capture per-result engines[] attribution. Fall back to
+  // routedBraveFetch only when SearXNG is unavailable.
+  const sweepFetch = searxng
+    ? async (endpoint, query, params) => {
+      if (endpoint !== 'web') {
+        throw new Error(`/sweep only supports web endpoint via SearXNG (got ${endpoint})`)
+      }
+      return await searxngAsBraveResponse(query, params)
+    }
+    : routedBraveFetch
+  console.log(`[sweep] starting ${queries.length} queries via ${searxng ? 'SearXNG' : 'Brave (no SearXNG configured)'}`)
+  const { results, stats } = await runSweep(queries, sweepFetch)
   const md = renderSweepMd(results, queries, stats)
 
   // Index results into corpus (background, don't block response)
@@ -630,6 +641,7 @@ async function handleSweep (req, res) {
       for (const r of entry.results) {
         if (!r.url) continue
         try {
+          const engines = Array.isArray(r.engines) ? r.engines : []
           const doc = {
             id: r.url,
             url: r.url,
@@ -638,6 +650,9 @@ async function handleSweep (req, res) {
             text: [r.title, r.description, ...(r.extra_snippets || [])].filter(Boolean).join('\n'),
             namespace: 'sweep',
             sweep_label: label,
+            engines,
+            engine_count: engines.length,
+            backend_source: r.source || null,
             crawled_at: new Date().toISOString()
           }
           await meili.index(doc)

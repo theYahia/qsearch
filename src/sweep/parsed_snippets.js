@@ -27,6 +27,9 @@ export function renderMarkdown (results, queries, stats) {
     webResults.slice(0, 10).forEach((r, i) => {
       lines.push(`**${i + 1}. ${(r.title || '(no title)').slice(0, 140)}**`)
       lines.push(`- URL: ${r.url}`)
+      if (Array.isArray(r.engines) && r.engines.length) {
+        lines.push(`- Engines: ${r.engines.join(', ')} (count=${r.engines.length})`)
+      }
       if (r.description) lines.push(`- ${String(r.description).slice(0, 400)}`)
       if (r.age) lines.push(`- Age: ${r.age}`)
       for (const s of (r.extra_snippets || []).slice(0, 5)) {
