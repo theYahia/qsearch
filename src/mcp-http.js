@@ -1,8 +1,7 @@
 // qsearch MCP-over-HTTP server
 //
 // Exposes qsearch via MCP protocol over HTTP using Streamable HTTP transport.
-// Use with QVAC Workbench Custom Integration, Claude Desktop (HTTP mode),
-// OpenClaw, or any MCP-over-HTTP client.
+// Use with Claude Code, Claude Desktop (HTTP mode), OpenClaw, or any MCP-over-HTTP client.
 //
 // Architecture:
 //   [ MCP client ] --HTTP MCP--> [ this server :8081 ] --HTTP REST--> [ qsearch server :8080 ]
@@ -70,7 +69,7 @@ const httpServer = http.createServer(async (req, res) => {
       if (id) transports.delete(id)
     }
 
-    const mcpServer = new McpServer({ name: 'qsearch', version: '0.3.0' })
+    const mcpServer = new McpServer({ name: 'qsearch', version: '0.4.0' })
     qsearchTool(mcpServer)
     await mcpServer.connect(transport)
   }
@@ -89,7 +88,7 @@ const httpServer = http.createServer(async (req, res) => {
 httpServer.listen(PORT, HOST, () => {
   console.log(`qsearch MCP-over-HTTP listening on http://${HOST}:${PORT}`)
   console.log('')
-  console.log('QVAC Workbench Custom Integration config (replace <LAN-IP> with this machine\'s LAN address):')
+  console.log('[mcp-http] MCP HTTP server config (Claude Code / Claude Desktop / any MCP client):')
   console.log(JSON.stringify({
     qsearch: {
       type: 'http',

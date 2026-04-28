@@ -48,7 +48,7 @@ export function qsearchTool (server) {
     n_results: z.union([z.number(), z.string()]).transform(Number).pipe(z.number().min(1).max(3)).optional().default(2)
       .describe('Number of results (1-3). Default 2.'),
     clean: z.boolean().optional().default(false)
-      .describe('Run on-device QVAC LLM cleaning over results (Qwen3-0.6B Q4). Adds ~25s per result on CPU; seconds on mobile with QVAC acceleration. Default false — returns raw Brave snippets (title, description, extra snippets) immediately.'),
+      .describe('Enable optional result cleaning (requires local LLM). Default false — returns raw multi-engine results immediately.'),
     freshness: z.string().optional()
       .describe('Time filter: pd (past day), pw (past week), pm (past month), py (past year), or YYYY-MM-DDtoYYYY-MM-DD'),
     search_lang: z.string().optional().describe('Language code, e.g. "en", "ru"'),
@@ -59,7 +59,7 @@ export function qsearchTool (server) {
     'web_search',
     {
       title: 'Web Search (qsearch)',
-      description: 'Search the web via Brave Search API with local QVAC LLM cleaning. Returns cleaned markdown summaries. Use for general web research, factual lookups, and topic exploration.',
+      description: 'Search the web via Brave + SearXNG with multi-engine provenance. Returns results with engines[] field showing which search engines agreed — higher engine_count = higher trust signal.',
       inputSchema: webSearchSchema.shape,
       annotations: { readOnlyHint: true, openWorldHint: true }
     },
@@ -87,7 +87,7 @@ export function qsearchTool (server) {
     'news_search',
     {
       title: 'News Search (qsearch)',
-      description: 'Search recent news via Brave News API with local QVAC LLM cleaning. Defaults to past week. Use for current events, market news, and time-sensitive queries.',
+      description: 'Search recent news with multi-engine attribution. Returns engines[] per result. Defaults to past week.',
       inputSchema: newsSearchSchema.shape,
       annotations: { readOnlyHint: true, openWorldHint: true }
     },
@@ -160,7 +160,7 @@ export function qsearchTool (server) {
     'context_search',
     {
       title: 'Context Search (qsearch)',
-      description: 'Retrieve enriched page content via Brave LLM Context API with local QVAC cleaning. Returns 2-28 text snippets per source (vs 1 snippet in web_search). Use when depth matters over breadth.',
+      description: 'Retrieve full page content for deep RAG. Returns 2-28 text snippets per source with provenance. Use when depth matters over breadth.',
       inputSchema: contextSearchSchema.shape,
       annotations: { readOnlyHint: true, openWorldHint: true }
     },

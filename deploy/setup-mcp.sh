@@ -40,7 +40,7 @@ head -c 500 /tmp/mcp_check.txt || true
 
 echo ""
 echo ""
-echo "=== DONE. QVAC Workbench Custom Integration JSON: ==="
+echo "=== DONE. MCP HTTP server config: ==="
 cat <<'JSON'
 {
   "qsearch": {
@@ -50,4 +50,4 @@ cat <<'JSON'
 }
 JSON
 echo ""
-echo "Paste the JSON above into Workbench → Integrations → Create Custom Integration → JSON tab."
+
