@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Restart qsearch, warm up the model, verify UI fix, confirm warm query works.
-# Run after pulling new code that changes index.html (readFileSync caches it on startup).
+# Restart qsearch on VPS and verify it's healthy.
+# Run after pulling new code: git pull && bash deploy/restart-and-warmup.sh
 
 set -e
 
@@ -10,30 +10,22 @@ pm2 restart qsearch
 echo "=== 2. Wait 5s for node server to bind ==="
 sleep 5
 
-echo "=== 3. Warmup query (cold model, expect 60-200s, may 524 on Cloudflare) ==="
-time curl -s "https://qsearch.pro/search?q=warmup&n=1" --max-time 200 \
+echo "=== 3. Health check ==="
+curl -sf "http://localhost:8080/health" | head -c 200
+echo ""
+
+echo "=== 4. Search smoke test ==="
+time curl -s "https://qsearch.pro/search?q=open+source+search&n=3" \
   -o /tmp/qsearch_warmup.json \
-  -w "HTTP %{http_code} | %{time_total}s\n" || echo "(warmup may have timed out — that's fine, model is loading)"
+  -w "HTTP %{http_code} | %{time_total}s\n" --max-time 30 \
+  || echo "(request timed out or failed — check: pm2 logs qsearch)"
 
 echo ""
-echo "=== 4. Follow-up query (should be warm now) ==="
-time curl -s "https://qsearch.pro/search?q=bitcoin&n=1" --max-time 60 \
-  -o /tmp/qsearch_warm.json \
-  -w "HTTP %{http_code} | %{time_total}s\n"
+echo "=== 5. Result count ==="
+node -e "
+const d = JSON.parse(require('fs').readFileSync('/tmp/qsearch_warmup.json','utf8'))
+console.log('total_results:', d.total_results, '| first title:', d.results?.[0]?.title)
+" 2>/dev/null || echo "(no JSON — check pm2 logs)"
 
 echo ""
-echo "=== 5. UI fix check (should print 1) ==="
-curl -s "http://localhost:8080/" | grep -c "item.cleaned_markdown || ''"
-
-echo ""
-echo "=== 6. Cleaned markdown from warm query ==="
-python3 -c "
-import json
-d = json.load(open('/tmp/qsearch_warm.json'))
-r = d['results'][0]
-print(f'clean_ms: {r[\"clean_ms\"]}ms')
-print(f'cleaned: {r.get(\"cleaned_markdown\")}')
-" 2>/dev/null || echo "(warm query did not return JSON — check pm2 logs)"
-
-echo ""
-echo "=== DONE. If step 5 printed 1 and step 4 returned HTTP 200 < 35s, qsearch.pro is ready ==="
+echo "=== DONE. If step 3 returned 200 and step 5 showed results, qsearch.pro is live. ==="
