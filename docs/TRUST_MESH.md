@@ -114,9 +114,9 @@ Corpus update accepted → trust signal applied
 
 ---
 
-## Federation protocol (research direction, v1.0+)
+## Federation protocol (LOCKED architecture, v0.5+)
 
-This section describes a **direction**, not a shipped feature. Federation is unsolved in the AI space — see Open Problems below.
+After 10-sprint comprehensive research (April 28, 2026 — see [`research/META_FEDERATION_VERDICT.md`](../research/META_FEDERATION_VERDICT.md)), federation architecture is fully specified. No more oscillation.
 
 ### Async pull model (not always-online P2P)
 
@@ -171,35 +171,44 @@ final_trust(url) = (local_trust × 0.7) + (global_trust × 0.3)
 
 ---
 
-## Open problems
+## Anti-Sybil — layered defense (NO blockchain/tokens)
 
-We will not ship federation until these are solvable:
+After research validation, layered defense is the proven blockchain-free approach (Sprint E, confidence 70%):
 
-### 1. Sybil resistance
+### Layer A: Subscription-based trust scoping
+Sybil only matters if user subscribes. Default = explicit allowlist of trusted feeds. Bad actor in subscription → user unsubscribes → solved.
 
-Naive submissions can be fabricated. Mitigations escalating in cost:
+### Layer B: WoT graph filtering (primary mechanism)
+Aggregator stores graph of subscribed feeds + feeds they trust. Only count signals from feeds within graph distance N (typically 2-3 hops). Adopted from Nostr's NIP-13 + fiatjaf's WoT spam filter (production-proven on relays).
 
-- **v0.6:** Anomaly detection — flag submissions inconsistent with known-good patterns (e.g., submission claims `engine_count=10` for a URL never seen by other reporters)
-- **v0.7:** Cross-validation — periodically re-execute random samples; reporter rep degrades if claims diverge from independent verification
-- **v0.8+:** Reputation weighting — long-history reporters with stable submissions weighted higher
-- **v1.0+:** Optional cryptoeconomic stake (deposit small USDC, slashable on detected fraud)
+### Layer C: Per-instance allowlists/invites
+Aggregator operators can require invite or domain attestation before accepting feeds. Reduces bot-farm scaling.
 
-### 2. Stake concentration
+### Layer D: Adjustable PoW per relay
+NIP-13-inspired difficulty target — submitter must compute proof-of-work matching aggregator's threshold. Configurable (8-30 bits depending on attack pressure).
 
-Existing decentralized AI networks fall apart on this. [Empirical study (arxiv 2507.02951)](https://arxiv.org/html/2507.02951v1) of one major network across 64 subnets found **median 90% of stake controlled by 1% of wallets**, Gini 0.9825. We won't ship federation that fails the same way.
+### Layer E: Shared spam blocklists
+Aggregators publish + share blocklists of known-bad feeds. DKIM/SPF/DMARC equivalent for federation.
 
-What we'd need to address it:
-- Minimum stake floor + maximum stake ceiling per reporter
-- Geographic diversity proofs (require reporter cohort spans regions)
-- Wallet-count gating (require ≥ N independent wallets before signal counts)
+### Layer F: DKIM-style domain attestation
+Feed publisher's domain signs feed delivery. Reputation tied to domain (which has cost to acquire and reputation to lose).
 
-None of this is built today. **If we can't solve it honestly, we ship local-mesh-only and call it done.**
+### Layer G: Engine diversity weighting
+For our specific case: weight engines by independence. Bing+Yandex correlated (shared crawls); Brave+Google not. Effective engine_count = N × diversity_factor.
 
-### 3. Adversarial coordination
+### Layer H: Snippet sanitization
+Before LLM hand-off, strip hidden CSS, font-size:0, comment blocks, `<!-- ai-instruction -->` patterns. Mitigates Preference Manipulation Attacks ([arxiv 2406.18382](https://arxiv.org/html/2406.18382v1)).
 
-Even with stake limits, N reporters can coordinate to push false signal. Witness consensus + replay verification + reputation weighting all help, but none is bulletproof.
+### Honest limitation
+**No blockchain-free stack achieves UNCONDITIONAL Sybil resistance.** Sprint E concluded with 90% confidence: "every Sybil-resistance mechanism imports an assumption from somewhere." We accept threshold-based, assumption-based security. Our threat model is **search index federation, not financial consensus** — bar is lower.
 
-Our position: design federation so that **even if 50% of reporters are adversarial, local trust still dominates** (the 70/30 formula). Federation is additive flavor, not foundation. If federation gets ruined, local mesh stays clean.
+### Why we DON'T use crypto-economic stake
+[Bittensor empirical analysis (arxiv 2507.02951)](https://arxiv.org/html/2507.02951v1) on 64 subnets, 121,567 wallets:
+- Median 90% stake controlled by 1% of wallets
+- Gini coefficient 0.9825 (near max inequality)
+- >50% subnets vulnerable to <1% wallet coalition takeover
+
+Stake-based "decentralization" centralizes in practice. We use **subscription + WoT + DKIM + PoW** instead.
 
 ---
 
