@@ -27,9 +27,9 @@ async function loadTop (append = false) {
     const r = await fetch(`/corpus/top?limit=${limit}&min_engines=${minEngines}&sort=${sort}&offset=${currentOffset}`)
     const data = await r.json()
     const results = data.top || []
-    if (append) appendResults(results)
-    else renderResults(results)
     currentOffset += results.length
+    if (append) appendResults(results, currentOffset)
+    else renderResults(results)
     $('#loadMoreBar').style.display = results.length === limit ? 'block' : 'none'
   } catch (e) {
     $('#results').innerHTML = '<p style="color:#f85149">Failed to load corpus top</p>'
@@ -58,9 +58,9 @@ function renderResults (urls) {
   $('#results').innerHTML = buildCards(urls) || '<p style="color:#8b949e">No results</p>'
 }
 
-function appendResults (urls) {
+function appendResults (urls, totalShown) {
   if (!urls.length) { $('#loadMoreBar').style.display = 'none'; return }
-  $('#resultCount').textContent = (currentOffset) + ' results'
+  $('#resultCount').textContent = totalShown + ' results'
   $('#results').insertAdjacentHTML('beforeend', buildCards(urls))
 }
 

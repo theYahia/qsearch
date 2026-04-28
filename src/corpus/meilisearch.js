@@ -50,8 +50,8 @@ export class MeilisearchCorpus extends CorpusBackend {
       const existing = await idx.getDocument(id)
       const engines = [...new Set([...(existing.engines || []), ...(doc.engines || [])])]
       const prevSweeps = existing.appeared_in_sweeps || []
-      const newSweepEntry = { sweep_label: doc.sweep_label, crawled_at: doc.crawled_at, engines: doc.engines || [] }
-      const alreadyRecorded = prevSweeps.some(s => s.sweep_label === doc.sweep_label)
+      const newSweepEntry = { sweep_label: doc.sweep_label ?? null, crawled_at: doc.crawled_at, engines: doc.engines || [] }
+      const alreadyRecorded = doc.sweep_label != null && prevSweeps.some(s => s.sweep_label === doc.sweep_label)
       merged = {
         ...existing,
         ...doc,
@@ -60,8 +60,12 @@ export class MeilisearchCorpus extends CorpusBackend {
         engine_count: engines.length,
         appeared_in_sweeps: alreadyRecorded ? prevSweeps : [...prevSweeps, newSweepEntry]
       }
-    } catch {
-      merged.appeared_in_sweeps = [{ sweep_label: doc.sweep_label, crawled_at: doc.crawled_at, engines: doc.engines || [] }]
+    } catch (e) {
+      // Only "document_not_found" (404) is expected — log anything else
+      if (!e.message?.includes('not_found') && e.httpStatus !== 404) {
+        console.error('[corpus] getDocument unexpected error:', e.message)
+      }
+      merged.appeared_in_sweeps = [{ sweep_label: doc.sweep_label ?? null, crawled_at: doc.crawled_at, engines: doc.engines || [] }]
     }
 
     await idx.addDocuments([merged])
@@ -90,7 +94,10 @@ export class MeilisearchCorpus extends CorpusBackend {
       const s = await idx.getStats()
       const highTrust = await idx.search('', { filter: 'engine_count >= 3', limit: 0 })
       return { total: s.numberOfDocuments, size_mb: null, high_trust_count: highTrust.estimatedTotalHits ?? 0 }
-    } catch { return { total: 0, size_mb: null, high_trust_count: 0 } }
+    } catch (e) {
+      console.error('[corpus] stats() failed:', e.message)
+      return { total: 0, size_mb: null, high_trust_count: 0 }
+    }
   }
 
   /**
@@ -169,7 +176,7 @@ export class MeilisearchCorpus extends CorpusBackend {
       const seen = new Map()
       for (const h of hits) {
         if (!h.url || seen.has(h.url)) continue
-        const sweepCount = (h.appeared_in_sweeps || []).length || (h.sweep_label ? 1 : 0)
+        const sweepCount = Math.max(1, (h.appeared_in_sweeps || []).length || (h.sweep_label ? 1 : 0))
         const engines = new Set(h.engines || [])
         const topics = new Set((h.appeared_in_sweeps || []).map(s => s.sweep_label?.split('_')[0]).filter(Boolean))
         if (!topics.size && h.sweep_label) topics.add(h.sweep_label.split('_')[0])

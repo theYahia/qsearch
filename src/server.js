@@ -661,7 +661,9 @@ async function handleCorpusTop (req, res) {
   const reqUrl = new URL(req.url, `http://${req.headers.host}`)
   const limit = Math.min(Number(reqUrl.searchParams.get('limit')) || 20, 100)
   const minEngines = Number(reqUrl.searchParams.get('min_engines')) || 1
-  const sort = reqUrl.searchParams.get('sort') || 'trust'
+  const VALID_SORTS = ['trust', 'engine_count', 'sweep_count', 'first_seen']
+  const sortParam = reqUrl.searchParams.get('sort') || 'trust'
+  const sort = VALID_SORTS.includes(sortParam) ? sortParam : 'trust'
   const offset = Number(reqUrl.searchParams.get('offset')) || 0
   try {
     const top = await meili.topByTrust({ limit, minEngines, sort, offset })
