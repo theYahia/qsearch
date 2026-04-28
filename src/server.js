@@ -43,6 +43,7 @@ import { crawl } from './crawl/crawl4ai.js'
 import { createJob, getJob, updateJob } from './jobs/store.js'
 import { syncToObsidian, appendDailyLog } from './obsidian/sync.js'
 import { rerankByTrust } from './search/rerank.js'
+import { ingestBraveDir } from './ingest/brave.js'
 
 // ── Corpus clients ─────────────────────────────────────────────────
 const MEILI_URL = process.env.MEILISEARCH_URL || 'http://localhost:7700'
@@ -601,6 +602,37 @@ async function handleCorpusStats (req, res) {
   }, null, 2))
 }
 
+async function handleIngestBrave (req, res) {
+  let body
+  try {
+    body = JSON.parse((await readBody(req)) || '{}')
+  } catch {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'invalid JSON' }))
+    return
+  }
+
+  const { brave_dir: braveDir, topic = 'brave_ingest' } = body
+  if (!braveDir) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'brave_dir required' }))
+    return
+  }
+
+  try {
+    const indexed = await ingestBraveDir(braveDir, topic, meili)
+    if (indexed) {
+      await refreshCorpusStatus()
+      console.log(`[ingest/brave] +${indexed} URLs from ${braveDir}`)
+    }
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ ok: true, indexed, brave_dir: braveDir, topic }))
+  } catch (err) {
+    res.writeHead(500, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: String(err) }))
+  }
+}
+
 async function handleTrust (req, res) {
   const match = req.url.match(/^\/trust\/(.+?)(?:\?|$)/)
   if (!match) {
@@ -813,6 +845,10 @@ const server = http.createServer((req, res) => {
     handleCorpusStats(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(502, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'request failed', detail: String(err) })) })
     return
   }
+  if (req.method === 'POST' && req.url === '/ingest/brave') {
+    handleIngestBrave(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
+    return
+  }
   if (req.method === 'GET' && req.url.startsWith('/trust/')) {
     handleTrust(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
     return
@@ -860,6 +896,7 @@ server.listen(PORT, () => {
   console.log('GET  /corpus/stats')
   console.log('GET  /corpus/top?limit=20&min_engines=3')
   console.log('GET  /trust/:url')
+  console.log('POST /ingest/brave { "brave_dir": "/path/to/brave/", "topic": "..." }')
   console.log('GET  /ui')
   console.log('GET  /health')
   warmModel().catch(() => {})
