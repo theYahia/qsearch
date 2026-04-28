@@ -116,7 +116,7 @@ Corpus update accepted → trust signal applied
 
 ## Federation protocol (LOCKED architecture, v0.5+)
 
-After 10-sprint comprehensive research (April 28, 2026 — see [`research/META_FEDERATION_VERDICT.md`](../research/META_FEDERATION_VERDICT.md)), federation architecture is fully specified. No more oscillation.
+After 10-sprint comprehensive research (April 28, 2026 — see [`docs/FEDERATION_ARCHITECTURE.md`](./FEDERATION_ARCHITECTURE.md)), federation architecture is fully specified. No more oscillation.
 
 ### Async pull model (not always-online P2P)
 

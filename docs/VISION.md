@@ -126,7 +126,7 @@ We explicitly rejected RLHF framing here. [arxiv 2412.06000 "Does RLHF Scale?"](
 
 ## Federation — locked-in architecture (v0.5+)
 
-After 10-sprint research program (April 28, 2026, 250 queries × 2 backends, 5 parallel synthesis agents), federation architecture is locked. See [`research/META_FEDERATION_VERDICT.md`](../research/META_FEDERATION_VERDICT.md) for complete evidence.
+After 10-sprint research program (April 28, 2026, 250 queries × 2 backends, 5 parallel synthesis agents), federation architecture is locked. See [`docs/FEDERATION_ARCHITECTURE.md`](./FEDERATION_ARCHITECTURE.md) for complete evidence.
 
 **The stack — "Subscribe to Whom You Trust" via JSON Feed:**
 

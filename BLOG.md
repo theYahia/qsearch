@@ -1,3 +1,7 @@
+> **Note:** This post was written 2026-04-19 during the QVAC-SDK build-in-public series. The qsearch project pivoted to a Trust Mesh narrative on 2026-04-28 (multi-engine attribution + local trust scoring). This blog reflects the earlier QVAC-first thesis. Kept as a dated artifact — see [README.md](./README.md) for current narrative.
+
+---
+
 # Why cleaning needs to run on your hardware, not ours
 
 *Published as part of the qsearch build-in-public series. Day 5 of 7.*

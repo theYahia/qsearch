@@ -1,4 +1,10 @@
-# qsearch — 7-day build-in-public roadmap
+# qsearch — Roadmap (build-in-public week 1 archive)
+
+> **Note:** This is the original 7-day build-in-public log (Apr 14-20, 2026). It documents the QVAC-SDK-first thesis from before the Trust Mesh pivot on 2026-04-28. Current roadmap lives in [README.md](./README.md#roadmap) and [docs/VISION.md](./docs/VISION.md). Kept as historical artifact.
+
+---
+
+## Original Day 1-7 log
 
 **Commitment:** *["Planning to build a search API with QVAC SDK"](https://x.com/TheTieTieTies/status/2044039772981576181)*
 (Posted from [@TheTieTieTies](https://x.com/TheTieTieTies), reposted by [@WDK_tether](https://x.com/WDK_tether) on 2026-04-14.)

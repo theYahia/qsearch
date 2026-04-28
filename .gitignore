@@ -16,3 +16,5 @@ docs/day2-demo.json
 data/
 .claude/
 research/
+docs/legacy/
+_raw_data/

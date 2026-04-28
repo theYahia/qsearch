@@ -1,222 +1,70 @@
-# qsearch — Полный статус проекта (2026-04-26)
+# qsearch — Status (2026-04-28)
 
-## Что было (до сегодня)
+## Current state
 
-- **v0.2.2** — тонкий прокси: каждый запрос → Brave API → QVAC чистит → JSON
-- Endpoints: POST /search, POST /news, POST /context, GET /health
-- Никакой памяти, всё эфемерно
-- MCP сервер на :8081 для QVAC Workbench (qsearch.pro/mcp)
-- 46 тестов
+- **Version:** v0.4.0 (live at qsearch.pro)
+- **Narrative:** Trust layer for AI agent search (pivot from QVAC SDK demo, 2026-04-28)
+- **Corpus:** 5541 docs, 63 URLs with engine_count ≥ 3
+- **Tests:** 46/46 passing
 
----
+## Shipped
 
-## Что сделали сегодня (v0.3.0)
+### Phase A — Trust Layer (2026-04-28, commits cc6efb1 → 4be8837)
+- findings.md auto-export after every sweep
+- `/trust/:url`, `/corpus/top`, `/ui` endpoints + corpus viewer (dark theme, vanilla)
+- Snippet sanitization (XSS + prompt injection guard)
+- Trust-weighted re-rank
+- Obsidian vault auto-sync per sweep
+- Brave sweep auto-ingest (`POST /ingest/brave`)
 
-### Архитектура (из docs/ARCHITECTURE_V03.md)
-Полный spec на 851 строку — написан заранее, реализован за одну сессию.
+### Phase B — Public polish (2026-04-28, commits ee857ea, 0c6ffe8)
+- README rewrite (personal narrative + "How I use it daily" dual sweep section)
+- docker-compose: `restart: unless-stopped` + healthchecks on all 3 services
+- docs/QUICKSTART.md (5-minute setup guide)
+- GitHub Topics cleanup (added 9: search/mcp/ai-agents/rag/trust-layer/meilisearch/searxng/local-first/self-hosted)
+- Version 0.4.0
 
-### Новые модули
+### Phase C — Doc hygiene (2026-04-28)
+- STATUS.md rewrite, ROADMAP/BLOG archive disclaimers, broken federation link fix
 
-```
-src/
-├── backends/
-│   ├── interface.js          — базовый класс SearchBackend
-│   ├── brave.js              — extracted из server.js (нет изменений поведения)
-│   └── searxng.js            — новый fallback при Brave 429/5xx
-├── clean/
-│   ├── interface.js          — базовый класс Cleaner
-│   ├── qvac.js               — extracted из server.js (inferLock, таймауты)
-│   └── passthrough.js        — возвращает raw description
-├── corpus/
-│   ├── interface.js          — базовый класс CorpusBackend
-│   ├── meilisearch.js        — full-text индекс (Meilisearch v1.7)
-│   └── qdrant.js             — vector индекс (Qdrant v1.17.1)
-├── crawl/
-│   ├── crawl4ai.js           — Node→Python subprocess wrapper
-│   └── crawl4ai_worker.py    — Python worker (crawl4ai 0.8.6)
-├── embed/
-│   ├── interface.js          — базовый класс Embedder
-│   └── qvac.js               — QVAC embedding (unavailable без bare-runtime)
-├── jobs/
-│   └── store.js              — in-memory job table для /index lifecycle
-└── x402/
-    └── middleware.js         — payment skeleton (X402_ENABLED=false passthrough)
-```
+## Validation gate
 
-### Новые endpoints в server.js
+| Criterion | Target | Current | Status |
+|-----------|--------|---------|--------|
+| Corpus size | 500+ URLs | 5541 docs | ✅ |
+| Multi-engine URLs | 30+ ≥3 engines | 63 | ✅ |
+| Daily use | 7 days | TBD | ⏳ |
+| Friction | Below threshold | TBD | ⏳ |
 
-| Endpoint | Что делает |
-|----------|------------|
-| `POST /index` | Запускает crawl URL → Meilisearch + Qdrant; возвращает job_id (HTTP 202) |
-| `GET /index/:job_id` | Статус job: queued/running/done/failed + pages_crawled/indexed |
-| `GET /corpus/stats` | total_documents, meilisearch_size_mb, qdrant_vectors |
-| `/health` (расширен) | Добавлены `embed_loaded`, `corpus.meilisearch`, `corpus.qdrant` |
+**Decision (2026-04-28):** not waiting for gate, going to launch (Phase D) with current numbers. Validation continues in parallel — longitudinal data after 2 weeks of post-launch use.
 
-### Расширения существующих endpoints
+## Next
 
-`POST /search`, `POST /news`, `POST /context` — новые поля:
+- **Phase D = v0.5 launch (in progress):** docs/EXAMPLES.md, launch tweet, Awesome list PRs, Show HN
+- **Show HN target:** 2026-05-05 (Tuesday morning UTC)
+- **Post-launch:** monitor signal (stars / contributors / comments) → decision on v0.6+ federation
 
-**Request (опциональные):**
-- `corpus_first: true` — сначала corpus, потом Brave если не хватает
-- `corpus_only: true` — только corpus, Brave не вызывать
+## Future scope (no commitment)
 
-**Response (новые поля):**
-- `source: "corpus"|"brave"|"hybrid"` — откуда пришли результаты
-- `corpus_ms: number|null` — время corpus запроса
+- v0.6+ federation per docs/VISION.md → docs/FEDERATION_ARCHITECTURE.md. Only if launch signal shows engagement (1k+ stars OR 5+ community deploys per VISION.md gate).
 
-### Infrastructure
+## Key files
 
-- `docker-compose.yml` — Meilisearch v1.7 + Qdrant v1.17.1 + SearXNG (профиль `full`: `docker compose --profile full up`)
-- `.env.example` — обновлён с новыми vars
-- `package.json` — v0.3.0, Node ≥20, добавлены `meilisearch ^0.57.0` + `@qdrant/js-client-rest ^1.17.0`
-
-### Тесты
-
-```
-test/unit/                          ← npm run test:unit (11 тестов, без Docker)
-├── backends/brave.test.js
-├── backends/searxng.test.js
-├── corpus/meilisearch.test.js      ← только npm run test:unit:corpus (4 теста, нужен Docker)
-├── corpus/qdrant.test.js           ← только npm run test:unit:corpus
-├── crawl/crawl4ai.test.js
-├── embed/qvac.test.js
-├── routing.test.js
-└── x402/middleware.test.js
-
-test/integration/                   ← npm run test:integration (3 теста, нужен Docker)
-├── corpus.integration.test.js
-└── search.integration.test.js
-```
-
-| Команда | Тестов | Docker |
-|---------|--------|--------|
-| `npm test` | 46 (server.test.js) | нет |
-| `npm run test:unit` | 11 | нет |
-| `npm run test:unit:corpus` | 4 | да |
-| `npm run test:integration` | 3 | да |
-| `npm run test:all` | 57 (server + unit) | нет |
-
-**Итог: `npm run test:all` → 57/57 зелёных**
-
-### Багфиксы найденные при прогоне
-
-1. **Meilisearch invalid document ID** — URLs не принимаются как primary key. Исправлено: добавлен `_urlToId()` хеш в `src/corpus/meilisearch.js`
-2. **Object spread перезаписывал id** — `{ id, ...doc }` → `{ ...doc, id }` (doc.id перезаписывал наш хеш)
-3. **crawl4ai Windows cp1251 crash** — rich logger падал на Unicode символах. Исправлено: `PYTHONIOENCODING=utf-8` + `sys.stdout = io.TextIOWrapper(... encoding='utf-8')`
-
----
-
-## Acceptance criteria §12 — все выполнены
-
-| # | Критерий | Результат |
-|---|----------|-----------|
-| 1 | POST /index E2E работает | ✅ crawled:1, indexed:1 за ~30s |
-| 2 | corpus_first <10ms P95 | ✅ **9ms** measured |
-| 3 | 46 старых тестов | ✅ 46/46 |
-| 4 | /health не падает при down corpus | ✅ status:"ok", corpus:"unavailable" |
-| 5 | Hybrid merge — нет дублей | ✅ |
-| 6 | SearXNG fallback infra | ✅ (профиль `full`: `docker compose --profile full up`) |
-| 7 | x402 importable + passthrough | ✅ |
-| 8 | npm run test:all зелёный | ✅ 57/57 |
-| 9 | mcp-http.js нетронут | ✅ md5 unchanged |
-
----
-
-## Текущее состояние runtime
-
-- Сервер: **http://localhost:8080** (v0.3.0) — `npm start`
-- Meilisearch: **http://localhost:7700** (Docker, запущен)
-- Qdrant: **http://localhost:6333** (Docker, запущен)
-- MCP: **http://0.0.0.0:8081** (отдельный процесс) — `npm run start:mcp`
-- corpus: **32 документа** (2 test + 30 seed, crawled 2026-04-26)
-- Qdrant vectors: 0 (embed недоступен на Windows без bare-runtime)
-
-### Переменные окружения (актуальные дефолты)
-
-| Var | Default | Что делает |
-|-----|---------|------------|
-| `PORT` | `8080` | HTTP порт сервера |
-| `BRAVE_API_KEY` | — | Обязателен для поиска |
-| `MEILISEARCH_URL` | `http://localhost:7700` | Full-text corpus |
-| `MEILISEARCH_KEY` | `masterKey` | Ключ доступа |
-| `QDRANT_URL` | `http://localhost:6333` | Vector corpus |
-| `SEARXNG_URL` | *(не задан)* | Fallback backend (только с `--profile full`) |
-| `CORPUS_FIRST` | `true` | Corpus-first включён по умолчанию |
-| `CRAWL_CONCURRENCY` | `3` | Параллельных страниц при crawl |
-| `CRAWL_TIMEOUT_MS` | `60000` | Таймаут на страницу (60s) |
-| `MCP_PORT` | `8081` | Порт MCP-over-HTTP сервера |
-
----
-
-## Что НЕ сделано из v0.3 spec (осталось)
-
-~~1. **Builtin corpus seed** — выполнено: 32 документа проиндексировано (30 из seed); статус "failed" = timeout после 60s, но страницы успешно записаны~~
-~~2. **README обновление** — выполнено (v0.3.0, Quick Start с docker-compose, новые endpoints)~~
-~~3. **git tag v0.3.0** — выполнено~~
-~~4. **CI workflow** — выполнено (test.yml уже покрывает все 4 шага, Docker services настроены)~~
-
-**Все пункты v0.3 spec выполнены.**
-
-Crawled seed details:
-
-   | URL | depth |
-   |-----|-------|
-   | https://qvac.tether.io/dev/sdk | 2 |
-   | https://github.com/tetherto/qvac | 1 |
-   | https://tether.io/news/ | 1 |
-   | https://github.com/tetherto/wdk | 1 |
-   | https://docs.holepunch.to/ | 2 |
-   | https://github.com/holepunchto/hyperdht | 1 |
-   | https://github.com/x402-foundation/x402 | 1 |
-   | https://github.com/xpaysh/awesome-x402 | 1 |
-   | https://docs.layerzero.network/ | 2 |
-   | https://api-dashboard.search.brave.com/app/documentation | 2 |
-
-   | URL | depth | crawled | indexed |
-   |-----|-------|---------|---------|
-   | qvac.tether.io/dev/sdk | 2 | 1 | 1 |
-   | github.com/tetherto/qvac | 1 | 1 | 1 |
-   | tether.io/news/ | 1 | 6 | 6 |
-   | github.com/tetherto/wdk | 1 | 1 | 1 |
-   | docs.holepunch.to/ | 2 | 10 | 10 |
-   | github.com/holepunchto/hyperdht | 1 | 1 | 1 |
-   | github.com/x402-foundation/x402 | 1 | 1 | 1 |
-   | github.com/xpaysh/awesome-x402 | 1 | 1 | 1 |
-   | docs.layerzero.network/ | 2 | 3 | 3 |
-   | api-dashboard.search.brave.com/... | 2 | 5 | 5 |
-
-   Итог: 30 страниц (все в статусе "failed" = timeout 60s, контент записан).
-
-~~3. **git tag v0.3.0** — выполнено~~
-
----
-
-## Что отложено
-
-- **QVAC/Tether** нарратив и интеграция — на паузе
-- **Embedding** через @qvac/sdk — на паузе (Qdrant vector search не работает без него)
-- **x402 через WDK** (Tether) — заморожено
-
----
-
-## Что дальше — открытый вопрос
-
-Вариант A: Завершить v0.3 (seed + README + tag) → чистый OSS релиз без Tether нарратива  
-Вариант B: x402 через Coinbase CDP (не Tether) → OMG demo остаётся в силе  
-Вариант C: Заменить QVAC embedding на что-то рабочее на Windows (OpenAI API / llama.cpp)  
-Вариант D: Другой фокус
-
----
-
-## Ключевые файлы
-
-| Файл | Роль |
+| Path | Role |
 |------|------|
-| `src/server.js` | Main HTTP server (corpus routing) |
-| `src/mcp-http.js` | MCP-over-HTTP сервер (порт 8081, qsearch.pro/mcp) |
-| `src/corpus/meilisearch.js` | Full-text corpus |
-| `src/corpus/qdrant.js` | Vector corpus |
-| `src/crawl/crawl4ai.js` | Crawler wrapper |
-| `src/x402/middleware.js` | Payment stub |
-| `docs/ARCHITECTURE_V03.md` | Full v0.3 spec (851 строк) |
-| `docker-compose.yml` | Meilisearch + Qdrant (+ SearXNG с `--profile full`) |
+| `src/server.js` | Main HTTP server (raw node:http, ESM) |
+| `src/mcp-http.js` | MCP-over-HTTP server (port 8081) |
+| `src/corpus/meilisearch.js` | Full-text + trust scoring (trustScore, topByTrust) |
+| `src/corpus/qdrant.js` | Vector corpus (Linux/macOS only) |
+| `src/sweep/findings_renderer.js` | findings.md generator |
+| `src/clean/sanitize.js` | XSS + prompt injection guard, URL canonicalization |
+| `src/search/rerank.js` | Trust-weighted re-rank |
+| `src/obsidian/sync.js` | Vault auto-sync |
+| `src/ingest/brave.js` | Brave sweep auto-ingest |
+| `public/ui.html` + `public/app.js` | Corpus viewer at /ui |
+| `public/index.html` | Public homepage (qsearch.pro) |
+| `docker-compose.yml` | Meilisearch + Qdrant + SearXNG (with health checks) |
+| `docs/QUICKSTART.md` | 5-min setup |
+| `docs/VISION.md` | Strategic narrative |
+| `docs/TRUST_MESH.md` | Technical spec |
+| `docs/FEDERATION_ARCHITECTURE.md` | Federation architecture (from research lock-in) |
