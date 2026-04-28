@@ -1,9 +1,9 @@
 # qsearch
 
-> **Trust layer for AI agent search.** Multi-engine attribution. Local-first corpus. Validated retrieval. Open source.
+> I built this for my own daily research. After running 100+ research sprints, my agent kept hallucinating because it read 200-char snippets. qsearch gives it full content with multi-engine provenance — running locally, owned by me.
 
 ![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)
-![Status: v0.3.1 live](https://img.shields.io/badge/status-v0.3.1%20live-brightgreen.svg)
+![Status: v0.4.0 live](https://img.shields.io/badge/status-v0.4.0%20live-brightgreen.svg)
 ![Demo: qsearch.pro](https://img.shields.io/badge/demo-qsearch.pro-ef4444.svg)
 ![MCP](https://img.shields.io/badge/MCP-ready-8b5cf6.svg)
 
@@ -47,6 +47,23 @@ curl -X POST http://localhost:8080/sweep \
 ```
 
 **BYOK design:** Brave key + SearXNG instance both stay on your machine. No data exfiltration.
+
+---
+
+## How I use it daily
+
+Every research sprint I run a dual sweep:
+
+```bash
+# Brave sweep (primary, authoritative)
+python research/scripts/brave_sweep.py queries.txt _raw_data/topic_2026-04-28/brave/
+
+# qsearch sweep (secondary, auto-indexes into corpus)
+curl -X POST http://localhost:8080/sweep?topic=my_topic \
+  -H "Content-Type: text/plain" --data-binary @queries.txt
+```
+
+After 10+ sprints on the same domain, `/corpus/top?min_engines=3` shows which URLs survived multiple independent search engines across multiple sessions. Those are the ones I actually trust.
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "name": "qsearch",
   "version": "0.3.0",
-  "description": "The open-web hop for QVAC agents — OSS search API where cleaning runs on your local LLM.",
+  "description": "Trust layer for AI agent search — multi-engine attribution, local corpus, MCP-native.",
   "type": "module",
   "main": "src/server.js",
   "scripts": {
