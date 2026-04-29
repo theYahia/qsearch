@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.theyahia/qsearch",
+  "title": "qsearch",
+  "description": "Open-source search layer for AI agents with multi-engine provenance, trust corpus, and full-page content. Self-hostable, BYOK, MCP-native.",
+  "version": "0.4.0",
+  "websiteUrl": "https://qsearch.pro",
+  "repository": {
+    "url": "https://github.com/theYahia/qsearch",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://qsearch.pro/mcp"
+    }
+  ]
+}

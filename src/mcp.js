@@ -6,7 +6,7 @@
 // Usage:
 //   import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 //   import { qsearchTool } from './mcp.js'
-//   const mcpServer = new McpServer({ name: 'qsearch', version: '0.2.0' })
+//   const mcpServer = new McpServer({ name: 'qsearch', version: '0.4.0' })
 //   qsearchTool(mcpServer)
 //
 // qsearch HTTP server must be running on localhost:8080 before calling these tools.
