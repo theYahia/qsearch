@@ -7,6 +7,7 @@
 ![Status: v0.4.0 live](https://img.shields.io/badge/status-v0.4.0%20live-brightgreen.svg)
 ![Demo: qsearch.pro](https://img.shields.io/badge/demo-qsearch.pro-ef4444.svg)
 ![MCP](https://img.shields.io/badge/MCP-ready-8b5cf6.svg)
+[![MCP Registry](https://img.shields.io/badge/MCP%20Registry-io.github.theYahia%2Fqsearch-8b5cf6.svg)](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.theYahia%2Fqsearch)
 
 AI agents lose **17–33% of facts to hallucination** because they read 200-character snippets, not full pages ([Stanford 2024](https://dho.stanford.edu/wp-content/uploads/Legal_RAG_Hallucinations.pdf)). Existing search APIs hide *which engines agreed* on a result. Existing knowledge graphs are enterprise-priced or vendor-locked.
 

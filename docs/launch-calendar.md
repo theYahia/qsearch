@@ -24,7 +24,7 @@
 - [ ] Verify GitHub repo is starrable / not under quota / no rate-limit issues
 
 ### 1 day before (Sun 2026-05-03)
-- [ ] **Publish to MCP Registry** via `mcp-publisher` CLI (with GitHub OIDC auth). Verify listing live at registry.modelcontextprotocol.io.
+- [x] **Published to MCP Registry** as io.github.theYahia/qsearch v0.4.0 on 2026-04-29 — verified live.
 - [ ] ~~awesome-selfhosted PR~~ **BLOCKED until 2026-08-14** — list requires projects ≥4 months old (qsearch is 14 days). Draft saved at `docs/awesome-selfhosted-entry.yml` for later. PRs go to `awesome-selfhosted-data` repo (not README repo).
 - [ ] Sleep cycle for Tuesday 14:00 UTC (07:00 PT) launch window
 
