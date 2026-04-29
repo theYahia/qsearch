@@ -8,9 +8,9 @@ import { fileURLToPath } from 'node:url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '../..')
 
-const MEILI_URL = process.env.MEILISEARCH_URL
+const MEILISEARCH_URL = process.env.MEILISEARCH_URL
 const QDRANT_URL = process.env.QDRANT_URL
-const skip = !MEILI_URL || !QDRANT_URL
+const skip = !MEILISEARCH_URL || !QDRANT_URL
 
 describe('Search integration with corpus', { skip: skip ? 'Docker services not available' : false }, () => {
   let mockBrave, bravePort, server, serverPort
