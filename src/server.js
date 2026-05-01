@@ -597,7 +597,7 @@ async function handleCorpusStats (req, res) {
     namespaces: { builtin: 0, user: meiliStats.total },
     meilisearch_size_mb: meiliStats.size_mb,
     qdrant_vectors: qdrantStats.total,
-    last_crawled_at: null,
+    last_crawled_at: meiliStats.last_crawled_at,
     high_trust_count: meiliStats.high_trust_count ?? 0
   }, null, 2))
 }

@@ -22,7 +22,7 @@ export class MeilisearchCorpus extends CorpusBackend {
     const idx = this._client.index(INDEX_NAME)
     await idx.updateSearchableAttributes(['title', 'text', 'url'])
     await idx.updateFilterableAttributes(['engines', 'engine_count', 'namespace', 'backend_source', 'sweep_label', 'url'])
-    await idx.updateSortableAttributes(['engine_count', 'sweep_count', 'first_seen'])
+    await idx.updateSortableAttributes(['engine_count', 'sweep_count', 'first_seen', 'crawled_at'])
     this._ready = true
   }
 
@@ -92,8 +92,15 @@ export class MeilisearchCorpus extends CorpusBackend {
       await this._ensureIndex()
       const idx = this._client.index(INDEX_NAME)
       const s = await idx.getStats()
+
+      const latestDoc = await idx.search('', {
+        sort: ['crawled_at:desc'],
+        limit: 1,
+        attributesToRetrieve: ['crawled_at']
+      })
+
       const highTrust = await idx.search('', { filter: 'engine_count >= 3', limit: 0 })
-      return { total: s.numberOfDocuments, size_mb: null, high_trust_count: highTrust.estimatedTotalHits ?? 0 }
+      return { total: s.numberOfDocuments, size_mb: null, high_trust_count: highTrust.estimatedTotalHits ?? 0, last_crawled_at: latestDoc.hits[0]?.crawled_at || null}
     } catch (e) {
       console.error('[corpus] stats() failed:', e.message)
       return { total: 0, size_mb: null, high_trust_count: 0 }
