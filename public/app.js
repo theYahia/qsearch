@@ -74,6 +74,7 @@ function buildCards (urls) {
         ${u.trust_score !== undefined ? `<span class="badge">trust=${u.trust_score}</span>` : ''}
         ${u.sweep_count !== undefined ? `<span class="badge">sweeps=${u.sweep_count}</span>` : ''}
         ${u.rerank_score !== undefined ? `<span class="badge">rerank=${u.rerank_score}</span>` : ''}
+        ${u.first_seen ? `<span class="badge">first_seen=${u.first_seen.slice(0, 10)}</span>` : ''}
       </div>
     </div>
   `).join('')
