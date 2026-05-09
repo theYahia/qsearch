@@ -11,11 +11,37 @@ export function renderMarkdown (results, queries, stats) {
   lines.push(`**Generated:** ${new Date().toISOString()} | **Script:** qsearch sweep`, '')
   lines.push('---', '')
 
+  // Collect zero-result/failed labels for top-of-file warnings block.
+  // This makes silent failures (e.g. distribution_channels_2026-04-28) visible at a glance,
+  // so synthesis-time consumers can spot data gaps before treating empty queries as "no signal".
+  const zeroResultLabels = []
+  const failedLabels = []
+  for (const { label } of queries) {
+    const entry = results.get(label)
+    if (!entry) continue
+    if (!entry.ok && entry.reason === 'zero_results') zeroResultLabels.push(label)
+    else if (!entry.ok) failedLabels.push({ label, error: entry.error || 'unknown' })
+  }
+  if (zeroResultLabels.length || failedLabels.length) {
+    lines.push('## ⚠️ Sweep warnings', '')
+    if (zeroResultLabels.length) {
+      lines.push(`**Zero-result queries (${zeroResultLabels.length}):** ${zeroResultLabels.join(', ')}`)
+      lines.push('_These queries returned no results after one retry. Investigate before relying on synthesis._', '')
+    }
+    if (failedLabels.length) {
+      lines.push(`**Failed queries (${failedLabels.length}):**`)
+      for (const { label, error } of failedLabels) lines.push(`- \`${label}\` — ${error}`)
+      lines.push('')
+    }
+    lines.push('---', '')
+  }
+
   for (const { label, query } of queries) {
     lines.push(`\n## ${label} — "${query}"`, '')
     const entry = results.get(label)
     if (!entry || !entry.ok) {
-      lines.push(`_Failed: ${entry?.error || 'unknown error'}_`, '')
+      const tag = entry?.reason === 'zero_results' ? '⚠️ ZERO RESULTS (after retry)' : `Failed: ${entry?.error || 'unknown error'}`
+      lines.push(`_${tag}_`, '')
       continue
     }
     const webResults = entry.results
@@ -46,8 +72,8 @@ export function renderMarkdown (results, queries, stats) {
 
   lines.push('---', '', '## Sweep summary', '')
   lines.push(`- Total queries: ${n}`)
-  lines.push(`- Web: ${stats.web_ok} ok / ${stats.web_fail} failed`)
-  lines.push(`- Silent warnings: 0`)
+  lines.push(`- Web: ${stats.web_ok} ok / ${stats.web_fail} failed / ${stats.web_zero || 0} zero-result`)
+  if (stats.web_zero_recovered) lines.push(`- Zero-result recovered after retry: ${stats.web_zero_recovered}`)
   lines.push(`- Duration: ${duration_s.toFixed(1)}s`)
   lines.push(`- Deduped: ${stats.total_deduped} URLs removed`)
   lines.push('')

@@ -44,6 +44,7 @@ import { createJob, getJob, updateJob } from './jobs/store.js'
 import { syncToObsidian, appendDailyLog } from './obsidian/sync.js'
 import { rerankByTrust } from './search/rerank.js'
 import { ingestBraveDir } from './ingest/brave.js'
+import { QueryCache, inferEndpoint } from './cache.js'
 
 // ── Corpus clients ─────────────────────────────────────────────────
 const MEILI_URL = process.env.MEILISEARCH_URL || 'http://localhost:7700'
@@ -59,6 +60,16 @@ const qdrant = new QdrantCorpus(QDRANT_URL_ENV, embedder)
 
 // ── SearXNG fallback ───────────────────────────────────────────────
 const searxng = process.env.SEARXNG_URL ? new SearXNGBackend(process.env.SEARXNG_URL) : null
+
+// ── Memcache (Phase 1: exact-match SQLite) ─────────────────────────
+const CACHE_DB_PATH = process.env.QSEARCH_CACHE_DB || join(__dirname, '..', 'data', 'cache.db')
+let queryCache = null
+try {
+  queryCache = new QueryCache(CACHE_DB_PATH)
+  console.log(`[cache] memcache ready at ${CACHE_DB_PATH}`)
+} catch (err) {
+  console.warn(`[cache] disabled — could not init SQLite at ${CACHE_DB_PATH}: ${err.message}`)
+}
 
 // ── Corpus health tracking ─────────────────────────────────────────
 let corpusStatus = { meilisearch: 'unavailable', qdrant: 'unavailable' }
@@ -752,7 +763,10 @@ async function handleSweep (req, res) {
     }
   })
 
-  // Write findings.md to _raw_data folder (background)
+  // Write findings.md + _sweep_summary.json to _raw_data folder (background).
+  // Summary makes silent failures visible to downstream consumers (brave_sweep.py
+  // sanity-check, automated quality gates, retro reports). Mirrors brave_sweep.py
+  // _sweep_log.json shape — keep schemas similar for future dual-sweep tooling.
   setImmediate(async () => {
     try {
       const reqUrl = new URL(sweepReqUrl, 'http://localhost')
@@ -764,8 +778,38 @@ async function handleSweep (req, res) {
       const findings = await renderFindings(results, queries, stats, sanitizedTopic)
       writeFileSync(join(outDir, 'findings.md'), findings, 'utf8')
       console.log(`[sweep] findings.md → _raw_data/${sanitizedTopic}/findings.md`)
+
+      const zeroResultLabels = []
+      const failedLabels = []
+      const okLabels = []
+      for (const { label } of queries) {
+        const e = results.get(label)
+        if (!e) continue
+        if (!e.ok && e.reason === 'zero_results') zeroResultLabels.push(label)
+        else if (!e.ok) failedLabels.push({ label, error: e.error || 'unknown' })
+        else okLabels.push(label)
+      }
+      const summary = {
+        topic: sanitizedTopic,
+        generated_at: new Date().toISOString(),
+        backend: searxng ? 'searxng' : 'brave',
+        total_queries: queries.length,
+        ok: stats.web_ok,
+        failed: stats.web_fail,
+        zero_result: stats.web_zero || 0,
+        zero_result_recovered: stats.web_zero_recovered || 0,
+        zero_result_rate: queries.length ? Number(((stats.web_zero || 0) / queries.length).toFixed(4)) : 0,
+        deduped_urls: stats.total_deduped,
+        duration_ms: stats.duration_ms,
+        zero_result_queries: zeroResultLabels,
+        failed_queries: failedLabels
+      }
+      writeFileSync(join(outDir, '_sweep_summary.json'), JSON.stringify(summary, null, 2), 'utf8')
+      if (summary.zero_result_rate > 0.05) {
+        console.warn(`[sweep] ⚠ zero-result rate ${(summary.zero_result_rate * 100).toFixed(1)}% (>5% threshold) — investigate ${sanitizedTopic}`)
+      }
     } catch (e) {
-      console.error('[sweep] findings render error:', e.message)
+      console.error('[sweep] findings/summary render error:', e.message)
     }
   })
 
@@ -796,6 +840,216 @@ async function handleSweep (req, res) {
   console.log(`[sweep] done: ${stats.web_ok} ok / ${stats.web_fail} fail in ${(stats.duration_ms / 1000).toFixed(1)}s`)
   res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' })
   res.end(md)
+}
+
+// ── Memcache endpoints ─────────────────────────────────────────────
+function defaultEnginesForSweep () {
+  return searxng ? ['searxng'] : ['brave']
+}
+
+// Parse per-endpoint TTL query params (?ttl_web=7&ttl_news=1&ttl_context=30).
+// Returns null if no ttl_* params present (caller falls back to legacy max_age).
+function parseTtlMap (searchParams) {
+  const map = {}
+  let any = false
+  for (const ep of ['web', 'news', 'context']) {
+    const v = Number(searchParams.get(`ttl_${ep}`))
+    if (Number.isFinite(v) && v > 0) { map[ep] = v; any = true }
+  }
+  const def = Number(searchParams.get('ttl_default'))
+  if (Number.isFinite(def) && def > 0) { map.default = def; any = true }
+  return any ? map : null
+}
+
+async function handleCachedSweep (req, res) {
+  if (!queryCache) {
+    res.writeHead(503, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'cache unavailable' }))
+    return
+  }
+
+  const reqUrl = new URL(req.url, 'http://localhost')
+  const maxAgeDays = Number(reqUrl.searchParams.get('max_age')) || null
+  const ttlMap = parseTtlMap(reqUrl.searchParams)
+
+  const contentType = req.headers['content-type'] || ''
+  let queriesText = ''
+  if (contentType.includes('application/json')) {
+    try {
+      const body = JSON.parse((await readBody(req)) || '{}')
+      queriesText = body.queries || ''
+    } catch {
+      res.writeHead(400, { 'Content-Type': 'application/json' })
+      res.end(JSON.stringify({ error: 'invalid JSON body' }))
+      return
+    }
+  } else {
+    queriesText = await readBody(req)
+  }
+
+  const queries = parseQueriesText(queriesText)
+  if (!queries.length) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'no queries found — send label|query lines in body' }))
+    return
+  }
+
+  const engines = defaultEnginesForSweep()
+  const cacheOpts = ttlMap ? { ttlMap } : (maxAgeDays ? { maxAgeDays } : {})
+
+  // Split: hits (return from cache) vs misses (run sweep)
+  const hits = new Map() // label -> cached entry
+  const missQueries = []
+  for (const { label, query } of queries) {
+    const cached = queryCache.lookup(query, engines, cacheOpts)
+    if (cached) hits.set(label, { query, results: cached.results || [], ok: true, cache: 'hit' })
+    else missQueries.push({ label, query })
+  }
+
+  // Run sweep on misses (reuse same fetch path as /sweep)
+  const sweepFetch = searxng
+    ? async (endpoint, query, params) => {
+      if (endpoint !== 'web') throw new Error(`/cached_sweep only supports web endpoint via SearXNG (got ${endpoint})`)
+      return await searxngAsBraveResponse(query, params)
+    }
+    : routedBraveFetch
+
+  let liveResults = new Map()
+  let liveStats = { web_ok: 0, web_fail: 0, total_deduped: 0, duration_ms: 0 }
+  if (missQueries.length > 0) {
+    const r = await runSweep(missQueries, sweepFetch)
+    liveResults = r.results
+    liveStats = r.stats
+    // Store fresh results in cache
+    for (const { label, query } of missQueries) {
+      const entry = liveResults.get(label)
+      if (entry?.ok) {
+        try { queryCache.store(query, engines, { results: entry.results }) } catch (e) { console.warn('[cache] store error:', e.message) }
+      }
+    }
+  }
+
+  // Merge results in original order
+  const merged = new Map()
+  for (const { label } of queries) {
+    if (hits.has(label)) merged.set(label, hits.get(label))
+    else if (liveResults.has(label)) merged.set(label, { ...liveResults.get(label), cache: 'miss' })
+  }
+
+  const stats = {
+    ...liveStats,
+    cache_hits: hits.size,
+    cache_misses: missQueries.length,
+    cache_hit_rate: queries.length > 0 ? Number((hits.size / queries.length).toFixed(4)) : 0
+  }
+
+  const md = renderSweepMd(merged, queries, stats)
+
+  res.writeHead(200, {
+    'Content-Type': 'text/plain; charset=utf-8',
+    'X-Cache-Stats': `hits=${hits.size}, misses=${missQueries.length}`,
+    'X-Cache-Hit-Rate': String(stats.cache_hit_rate)
+  })
+  res.end(md)
+}
+
+async function handleCacheLookup (req, res) {
+  if (!queryCache) {
+    res.writeHead(503, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'cache unavailable' }))
+    return
+  }
+  const url = new URL(req.url, 'http://localhost')
+  const hash = url.searchParams.get('hash')
+  const queryText = url.searchParams.get('query')
+  const enginesParam = url.searchParams.get('engines')
+  const engines = enginesParam ? enginesParam.split(',').map(s => s.trim()).filter(Boolean) : []
+  const maxAgeDays = Number(url.searchParams.get('max_age')) || null
+  const ttlMap = parseTtlMap(url.searchParams)
+
+  // Resolve effective TTL: prefer explicit ttlMap (per-endpoint inferred from engines),
+  // fall back to legacy max_age. ttlMap requires engines to infer; without engines we can't route.
+  let effectiveMaxAge = maxAgeDays
+  if (ttlMap && engines.length) {
+    const ep = inferEndpoint(engines)
+    const v = ttlMap[ep]
+    effectiveMaxAge = (v != null) ? v : (ttlMap.default != null ? ttlMap.default : maxAgeDays)
+  }
+
+  let row = null
+  if (hash) {
+    const r = queryCache._stmtLookup.get(hash)
+    if (r) {
+      if (effectiveMaxAge && (Date.now() - r.created_at) > effectiveMaxAge * 86400_000) {
+        row = null
+      } else {
+        queryCache._stmtIncr.run(Date.now(), hash)
+        queryCache._sessionHits++
+        try { row = { hit: true, results: JSON.parse(r.results_json) } } catch { row = null }
+      }
+    }
+  } else if (queryText) {
+    const opts = ttlMap ? { ttlMap } : (effectiveMaxAge ? { maxAgeDays: effectiveMaxAge } : {})
+    const cached = queryCache.lookup(queryText, engines, opts)
+    if (cached) row = { hit: true, results: cached.results || cached }
+  } else {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'provide ?hash=<sha256> or ?query=<text>&engines=<csv>' }))
+    return
+  }
+
+  if (!row) {
+    queryCache._sessionMisses++
+    res.writeHead(404, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ hit: false }))
+    return
+  }
+  res.writeHead(200, { 'Content-Type': 'application/json' })
+  res.end(JSON.stringify(row))
+}
+
+async function handleCacheStore (req, res) {
+  if (!queryCache) {
+    res.writeHead(503, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'cache unavailable' }))
+    return
+  }
+  let body
+  try { body = JSON.parse((await readBody(req)) || '{}') } catch {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'invalid JSON body' }))
+    return
+  }
+  const { query, engines, results, hash } = body
+  if (!query && !hash) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'query (string) and results (object) required (engines optional)' }))
+    return
+  }
+  if (results == null) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'results payload required' }))
+    return
+  }
+  try {
+    const storedHash = queryCache.store(query || '', engines || [], results)
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ ok: true, hash: storedHash }))
+  } catch (err) {
+    res.writeHead(500, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'store failed', detail: String(err) }))
+  }
+}
+
+async function handleCacheStats (req, res) {
+  if (!queryCache) {
+    res.writeHead(503, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'cache unavailable' }))
+    return
+  }
+  const s = queryCache.stats()
+  res.writeHead(200, { 'Content-Type': 'application/json' })
+  res.end(JSON.stringify(s, null, 2))
 }
 
 // ── Static files ───────────────────────────────────────────────────
@@ -838,6 +1092,22 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === 'POST' && (req.url === '/sweep' || req.url.startsWith('/sweep?'))) {
     handleSweep(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(502, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'sweep failed', detail: String(err) })) })
+    return
+  }
+  if (req.method === 'POST' && (req.url === '/cached_sweep' || req.url.startsWith('/cached_sweep?'))) {
+    handleCachedSweep(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(502, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'cached_sweep failed', detail: String(err) })) })
+    return
+  }
+  if (req.method === 'GET' && (req.url === '/cache_lookup' || req.url.startsWith('/cache_lookup?'))) {
+    handleCacheLookup(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
+    return
+  }
+  if (req.method === 'POST' && req.url === '/cache_store') {
+    handleCacheStore(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
+    return
+  }
+  if (req.method === 'GET' && req.url === '/cache_stats') {
+    handleCacheStats(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
     return
   }
   const indexJobMatch = req.method === 'GET' && req.url.match(/^\/index\/([a-f0-9-]{36})$/)
@@ -894,6 +1164,10 @@ server.listen(PORT, () => {
   console.log(`qsearch v0.4.0 listening on http://localhost:${PORT}`)
   console.log('POST /search  { "query": "...", "corpus_first": true }')
   console.log('POST /sweep   <queries.txt body> (label|query lines)')
+  console.log('POST /cached_sweep  <queries.txt body> (cache-aware, opt-in)')
+  console.log('GET  /cache_lookup?hash=<sha256>  (or ?query=<text>&engines=<csv>)')
+  console.log('POST /cache_store   { query, engines, results }')
+  console.log('GET  /cache_stats')
   console.log('POST /news    { "query": "...", "n_results": 5 }')
   console.log('POST /context { "query": "...", "n_results": 3 }')
   console.log('POST /index   { "url": "https://..." } | { "glob": "D:/path/**/*.md" }')

@@ -50,36 +50,55 @@ export function parseQueriesText (text) {
 }
 
 export async function runSweep (queries, searchFn, opts = {}) {
-  const { count = 20 } = opts
+  const { count = 20, retryZeroResults = true } = opts
   const t0 = Date.now()
   const results = new Map()
   const seenUrls = new Set()
-  const stats = { web_ok: 0, web_fail: 0, total_deduped: 0 }
+  const stats = { web_ok: 0, web_fail: 0, web_zero: 0, web_zero_recovered: 0, total_deduped: 0 }
 
   const sem = new Semaphore(MAX_PARALLEL)
   const urlToFirstResult = new Map() // url -> result object reference, for engines union on dedup
+
+  const fetchAndDedupe = async (query) => {
+    const { data } = await searchFn('web', query, { count })
+    const raw = data?.web?.results || []
+    const filtered = []
+    for (const r of raw) {
+      if (r.url && seenUrls.has(r.url)) {
+        stats.total_deduped++
+        const first = urlToFirstResult.get(r.url)
+        if (first && Array.isArray(r.engines) && r.engines.length) {
+          const merged = new Set([...(first.engines || []), ...r.engines])
+          first.engines = [...merged]
+        }
+        continue
+      }
+      if (r.url) {
+        seenUrls.add(r.url)
+        urlToFirstResult.set(r.url, r)
+      }
+      filtered.push(r)
+    }
+    return filtered
+  }
+
   await Promise.all(queries.map(({ label, query }) =>
     sem.run(async () => {
       try {
-        const { data } = await searchFn('web', query, { count })
-        const raw = data?.web?.results || []
-        const filtered = []
-        for (const r of raw) {
-          if (r.url && seenUrls.has(r.url)) {
-            stats.total_deduped++
-            // Merge engines union into the first occurrence so trust signal aggregates across queries
-            const first = urlToFirstResult.get(r.url)
-            if (first && Array.isArray(r.engines) && r.engines.length) {
-              const merged = new Set([...(first.engines || []), ...r.engines])
-              first.engines = [...merged]
-            }
-            continue
-          }
-          if (r.url) {
-            seenUrls.add(r.url)
-            urlToFirstResult.set(r.url, r)
-          }
-          filtered.push(r)
+        let filtered = await fetchAndDedupe(query)
+        // Zero-result reliability: backend fetch succeeded but response carried no usable results.
+        // Classic silent failure (e.g. distribution_channels_2026-04-28 → empty parsed_snippets.md).
+        // Retry once before marking as zero-result fail.
+        if (filtered.length === 0 && retryZeroResults) {
+          await new Promise(r => setTimeout(r, 600 + Math.random() * 400))
+          filtered = await fetchAndDedupe(query)
+          if (filtered.length > 0) stats.web_zero_recovered++
+        }
+        if (filtered.length === 0) {
+          results.set(label, { query, results: [], ok: false, error: 'zero_results', reason: 'zero_results' })
+          stats.web_zero++
+          console.warn(`  [sweep] ⚠ ${label}  ${query.slice(0, 55)} — ZERO RESULTS after retry`)
+          return
         }
         results.set(label, { query, results: filtered, ok: true })
         stats.web_ok++
