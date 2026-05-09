@@ -45,6 +45,7 @@ import { syncToObsidian, appendDailyLog } from './obsidian/sync.js'
 import { rerankByTrust } from './search/rerank.js'
 import { ingestBraveDir } from './ingest/brave.js'
 import { QueryCache, inferEndpoint } from './cache.js'
+import { runSweepContext } from './sweep_context.js'
 
 // ── Corpus clients ─────────────────────────────────────────────────
 const MEILI_URL = process.env.MEILISEARCH_URL || 'http://localhost:7700'
@@ -709,20 +710,44 @@ async function handleSweep (req, res) {
     return
   }
 
-  // /sweep is the SearXNG half of DUAL SWEEP (brave_sweep.py is the Brave half).
-  // Always prefer SearXNG so we capture per-result engines[] attribution. Fall back to
-  // routedBraveFetch only when SearXNG is unavailable.
-  const sweepFetch = searxng
-    ? async (endpoint, query, params) => {
-      if (endpoint !== 'web') {
-        throw new Error(`/sweep only supports web endpoint via SearXNG (got ${endpoint})`)
-      }
-      return await searxngAsBraveResponse(query, params)
+  // Phase 2 priority router: per-priority backend selection.
+  //   broad    → SearXNG (free, $0); falls back to Brave web if SearXNG missing.
+  //   focused  → Brave web with extra_snippets=true; falls back to SearXNG if no Brave key.
+  //   critical → Brave web with extra_snippets=true (Phase 3 layers in Brave Context endpoint).
+  // Returns Brave-shape response for runSweep's fetchAndDedupe to consume.
+  const sweepRouter = (priority) => async (endpoint, query, params) => {
+    if (endpoint !== 'web') throw new Error(`/sweep only supports web endpoint (got ${endpoint})`)
+    if (priority === 'broad') {
+      if (searxng) return await searxngAsBraveResponse(query, params)
+      if (BRAVE_KEY) return await braveFetch('web', query, params)
+      throw new Error('broad priority needs SEARXNG_URL or BRAVE_API_KEY')
     }
-    : routedBraveFetch
-  console.log(`[sweep] starting ${queries.length} queries via ${searxng ? 'SearXNG' : 'Brave (no SearXNG configured)'}`)
-  const { results, stats } = await runSweep(queries, sweepFetch)
+    // focused / critical — prefer Brave with extra_snippets, SearXNG fallback only on missing key.
+    if (BRAVE_KEY) return await braveFetch('web', query, { ...params, extra_snippets: true })
+    if (searxng) return await searxngAsBraveResponse(query, params)
+    throw new Error(`${priority} priority needs BRAVE_API_KEY (or SEARXNG_URL fallback)`)
+  }
+  console.log(`[sweep] starting ${queries.length} queries via priority router (broad→${searxng ? 'SearXNG' : 'Brave'}, focused/critical→${BRAVE_KEY ? 'Brave' : 'SearXNG fallback'})`)
+  const { results, stats } = await runSweep(queries, sweepRouter)
   const md = renderSweepMd(results, queries, stats)
+
+  // Phase 5: record per-priority economy metric (one row per priority tier).
+  if (queryCache && stats.by_priority) {
+    const meta = sprintMetadataFromReq(req)
+    for (const [pri, counts] of Object.entries(stats.by_priority)) {
+      const ok = counts?.ok || 0
+      if (!ok) continue
+      const backend = pri === 'broad'
+        ? (searxng ? 'searxng' : 'brave_web')
+        : (pri === 'critical' ? 'brave_context' : 'brave_web')
+      try {
+        queryCache.recordSprintMetric({
+          ...meta, endpoint: '/sweep', priority: pri, backend,
+          queries: ok, durationMs: stats.duration_ms
+        })
+      } catch (e) { console.warn('[economy] record error:', e.message) }
+    }
+  }
 
   // Extract topic before response is sent (req.url must not be accessed after res.end)
   const sweepReqUrl = req.url
@@ -847,6 +872,16 @@ function defaultEnginesForSweep () {
   return searxng ? ['searxng'] : ['brave']
 }
 
+// Phase 5: pull sprint_id + topic from headers (preferred) or query string for economy logging.
+function sprintMetadataFromReq (req) {
+  let url
+  try { url = new URL(req.url, 'http://localhost') } catch { url = { searchParams: { get: () => null } } }
+  return {
+    sprintId: req.headers['x-sprint-id'] || url.searchParams.get('sprint_id') || null,
+    topic: req.headers['x-topic'] || url.searchParams.get('topic') || null
+  }
+}
+
 // Parse per-endpoint TTL query params (?ttl_web=7&ttl_news=1&ttl_context=30).
 // Returns null if no ttl_* params present (caller falls back to legacy max_age).
 function parseTtlMap (searchParams) {
@@ -894,37 +929,50 @@ async function handleCachedSweep (req, res) {
     return
   }
 
-  const engines = defaultEnginesForSweep()
+  // Phase 2: cache key engines depends on priority — keeps SearXNG-broad results from
+  // colliding with Brave-focused (different snippet depth = different cached payload).
+  const cacheEnginesFor = (priority) => {
+    if (priority === 'broad' && searxng) return ['searxng']
+    if (priority === 'critical') return ['brave_critical']
+    if (priority === 'focused') return ['brave_focused']
+    return defaultEnginesForSweep()  // legacy / no priority → original behaviour
+  }
   const cacheOpts = ttlMap ? { ttlMap } : (maxAgeDays ? { maxAgeDays } : {})
 
   // Split: hits (return from cache) vs misses (run sweep)
   const hits = new Map() // label -> cached entry
   const missQueries = []
-  for (const { label, query } of queries) {
+  for (const { label, query, priority } of queries) {
+    const engines = cacheEnginesFor(priority)
     const cached = queryCache.lookup(query, engines, cacheOpts)
-    if (cached) hits.set(label, { query, results: cached.results || [], ok: true, cache: 'hit' })
-    else missQueries.push({ label, query })
+    if (cached) hits.set(label, { query, priority, results: cached.results || [], ok: true, cache: 'hit' })
+    else missQueries.push({ label, query, priority })
   }
 
-  // Run sweep on misses (reuse same fetch path as /sweep)
-  const sweepFetch = searxng
-    ? async (endpoint, query, params) => {
-      if (endpoint !== 'web') throw new Error(`/cached_sweep only supports web endpoint via SearXNG (got ${endpoint})`)
-      return await searxngAsBraveResponse(query, params)
+  // Phase 2 priority router (mirrors /sweep handler).
+  const cachedSweepRouter = (priority) => async (endpoint, query, params) => {
+    if (endpoint !== 'web') throw new Error(`/cached_sweep only supports web endpoint (got ${endpoint})`)
+    if (priority === 'broad') {
+      if (searxng) return await searxngAsBraveResponse(query, params)
+      if (BRAVE_KEY) return await braveFetch('web', query, params)
+      throw new Error('broad priority needs SEARXNG_URL or BRAVE_API_KEY')
     }
-    : routedBraveFetch
+    if (BRAVE_KEY) return await braveFetch('web', query, { ...params, extra_snippets: true })
+    if (searxng) return await searxngAsBraveResponse(query, params)
+    throw new Error(`${priority} priority needs BRAVE_API_KEY (or SEARXNG_URL fallback)`)
+  }
 
   let liveResults = new Map()
   let liveStats = { web_ok: 0, web_fail: 0, total_deduped: 0, duration_ms: 0 }
   if (missQueries.length > 0) {
-    const r = await runSweep(missQueries, sweepFetch)
+    const r = await runSweep(missQueries, cachedSweepRouter)
     liveResults = r.results
     liveStats = r.stats
-    // Store fresh results in cache
-    for (const { label, query } of missQueries) {
+    // Store fresh results in cache (per-priority engines list keeps tiers isolated)
+    for (const { label, query, priority } of missQueries) {
       const entry = liveResults.get(label)
       if (entry?.ok) {
-        try { queryCache.store(query, engines, { results: entry.results }) } catch (e) { console.warn('[cache] store error:', e.message) }
+        try { queryCache.store(query, cacheEnginesFor(priority), { results: entry.results }) } catch (e) { console.warn('[cache] store error:', e.message) }
       }
     }
   }
@@ -944,6 +992,45 @@ async function handleCachedSweep (req, res) {
   }
 
   const md = renderSweepMd(merged, queries, stats)
+
+  // Phase 5: economy metric — cache_hit row + miss row (so reports show savings).
+  if (queryCache) {
+    const meta = sprintMetadataFromReq(req)
+    if (hits.size) {
+      try {
+        queryCache.recordSprintMetric({
+          ...meta, endpoint: '/cached_sweep', backend: 'cache_hit',
+          queries: hits.size, cacheHits: hits.size, cacheMisses: 0
+        })
+      } catch (e) { console.warn('[economy] record error:', e.message) }
+    }
+    if (missQueries.length) {
+      // Miss row attributed to whichever live backend ran. For mixed-priority requests,
+      // simplification: aggregate under the dominant backend (we routed broad→searxng, others→brave_web).
+      const broadMisses = missQueries.filter(q => q.priority === 'broad').length
+      const braveMisses = missQueries.length - broadMisses
+      if (broadMisses > 0) {
+        try {
+          queryCache.recordSprintMetric({
+            ...meta, endpoint: '/cached_sweep', priority: 'broad',
+            backend: searxng ? 'searxng' : 'brave_web',
+            queries: broadMisses, cacheHits: 0, cacheMisses: broadMisses,
+            durationMs: liveStats.duration_ms
+          })
+        } catch (e) { console.warn('[economy] record error:', e.message) }
+      }
+      if (braveMisses > 0) {
+        try {
+          queryCache.recordSprintMetric({
+            ...meta, endpoint: '/cached_sweep', priority: 'focused',
+            backend: 'brave_web',
+            queries: braveMisses, cacheHits: 0, cacheMisses: braveMisses,
+            durationMs: liveStats.duration_ms
+          })
+        } catch (e) { console.warn('[economy] record error:', e.message) }
+      }
+    }
+  }
 
   res.writeHead(200, {
     'Content-Type': 'text/plain; charset=utf-8',
@@ -1041,6 +1128,127 @@ async function handleCacheStore (req, res) {
   }
 }
 
+// Phase 3: local LLM Context endpoint — Brave LLM Context analogue (free, GPU only).
+// Body: { urls: string[], focus_query: string, snippets_per_url?, max_chars_per_url?, timeout_ms? }
+// Returns Brave-context-shape JSON: { query, type, source, results: [{url, title, snippets[], cleaned_markdown, source}], total_fetch_ms, total_clean_ms, cache_hits, cache_misses }
+async function handleSweepContext (req, res) {
+  let body
+  try {
+    body = JSON.parse((await readBody(req)) || '{}')
+  } catch {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'invalid JSON body' }))
+    return
+  }
+  const { urls, focus_query, max_chars_per_url, snippets_per_url, timeout_ms } = body
+  if (!Array.isArray(urls) || !urls.length) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'urls[] required (non-empty array)' }))
+    return
+  }
+  if (urls.length > 20) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'urls[] capped at 20 per request' }))
+    return
+  }
+  if (!focus_query || typeof focus_query !== 'string') {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'focus_query (string) required' }))
+    return
+  }
+  try {
+    const out = await runSweepContext({ urls, focus_query, max_chars_per_url, snippets_per_url, timeout_ms })
+    // Phase 5: record qsearch_local cost = $0 (GPU only).
+    if (queryCache) {
+      const meta = sprintMetadataFromReq(req)
+      try {
+        queryCache.recordSprintMetric({
+          ...meta, endpoint: '/sweep_context', backend: 'qsearch_local',
+          queries: out.results.length, cacheHits: out.cache_hits || 0, cacheMisses: out.cache_misses || 0,
+          durationMs: (out.total_fetch_ms || 0) + (out.total_clean_ms || 0)
+        })
+      } catch (e) { console.warn('[economy] record error:', e.message) }
+    }
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify(out, null, 2))
+  } catch (err) {
+    console.error('[sweep_context] error:', err.message)
+    res.writeHead(500, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'sweep_context failed', detail: String(err) }))
+  }
+}
+
+// Phase 5: GET /economy_report — markdown report of sprint_metrics.
+// Filters: ?from=<ISO>&to=<ISO>&sprint_id=&topic=&format=markdown|json
+async function handleEconomyReport (req, res) {
+  if (!queryCache) {
+    res.writeHead(503, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'cache unavailable' }))
+    return
+  }
+  const url = new URL(req.url, 'http://localhost')
+  const fromStr = url.searchParams.get('from')
+  const toStr = url.searchParams.get('to')
+  const from = fromStr ? Date.parse(fromStr) : null
+  const to = toStr ? Date.parse(toStr) : null
+  if (fromStr && Number.isNaN(from)) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: `invalid 'from' date: ${fromStr}` }))
+    return
+  }
+  if (toStr && Number.isNaN(to)) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: `invalid 'to' date: ${toStr}` }))
+    return
+  }
+  const sprintId = url.searchParams.get('sprint_id')
+  const topic = url.searchParams.get('topic')
+  const fmt = url.searchParams.get('format') || 'markdown'
+
+  let report
+  try { report = queryCache.economyReport({ from, to, sprintId, topic }) } catch (err) {
+    res.writeHead(500, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'economy_report failed', detail: String(err) }))
+    return
+  }
+
+  if (fmt === 'json') {
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify(report, null, 2))
+    return
+  }
+
+  // Markdown rendering
+  const lines = []
+  lines.push('# qsearch — economy report', '')
+  if (from || to) {
+    lines.push(`**Period:** ${from ? new Date(from).toISOString().slice(0, 10) : '(start)'} → ${to ? new Date(to).toISOString().slice(0, 10) : 'now'}`, '')
+  }
+  if (sprintId) lines.push(`**Sprint ID:** \`${sprintId}\``, '')
+  if (topic) lines.push(`**Topic:** \`${topic}\``, '')
+  lines.push(`- Total HTTP calls logged: **${report.total.calls}**`)
+  lines.push(`- Total queries swept: **${report.total.total_queries}**`)
+  lines.push(`- Cache hits: **${report.total.total_hits}** / misses: **${report.total.total_misses}**`)
+  lines.push(`- Actual cost: **$${(report.actual_cost || 0).toFixed(4)}**`)
+  lines.push(`- Baseline (all-Brave + 10% Context): **$${(report.baseline_cost_all_brave || 0).toFixed(4)}**`)
+  const savedFmt = (report.savings_usd || 0).toFixed(4)
+  lines.push(`- **Saved: $${savedFmt} (${(report.savings_pct * 100).toFixed(1)}%)**`, '')
+  lines.push('## By backend', '')
+  lines.push('| Backend | Calls | Queries | Cost USD |')
+  lines.push('|---|---|---|---|')
+  for (const r of report.by_backend) {
+    lines.push(`| ${r.backend} | ${r.calls} | ${r.queries || 0} | $${(r.cost || 0).toFixed(4)} |`)
+  }
+  lines.push('', '## By priority', '')
+  lines.push('| Priority | Calls | Queries |')
+  lines.push('|---|---|---|')
+  for (const r of report.by_priority) {
+    lines.push(`| ${r.priority} | ${r.calls} | ${r.queries || 0} |`)
+  }
+  res.writeHead(200, { 'Content-Type': 'text/markdown; charset=utf-8' })
+  res.end(lines.join('\n'))
+}
+
 async function handleCacheStats (req, res) {
   if (!queryCache) {
     res.writeHead(503, { 'Content-Type': 'application/json' })
@@ -1110,6 +1318,14 @@ const server = http.createServer((req, res) => {
     handleCacheStats(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
     return
   }
+  if (req.method === 'POST' && req.url === '/sweep_context') {
+    handleSweepContext(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'sweep_context failed', detail: String(err) })) })
+    return
+  }
+  if (req.method === 'GET' && (req.url === '/economy_report' || req.url.startsWith('/economy_report?'))) {
+    handleEconomyReport(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
+    return
+  }
   const indexJobMatch = req.method === 'GET' && req.url.match(/^\/index\/([a-f0-9-]{36})$/)
   if (indexJobMatch) {
     handleIndexStatus(req, res, indexJobMatch[1]).catch((err) => { if (res.headersSent) return; res.writeHead(502, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'request failed', detail: String(err) })) })
@@ -1165,6 +1381,8 @@ server.listen(PORT, () => {
   console.log('POST /search  { "query": "...", "corpus_first": true }')
   console.log('POST /sweep   <queries.txt body> (label|query lines)')
   console.log('POST /cached_sweep  <queries.txt body> (cache-aware, opt-in)')
+  console.log('POST /sweep_context  { urls:[], focus_query } (Phase 3 local LLM Context, $0)')
+  console.log('GET  /economy_report?from=&to=&sprint_id=&topic=&format=markdown|json  (Phase 5)')
   console.log('GET  /cache_lookup?hash=<sha256>  (or ?query=<text>&engines=<csv>)')
   console.log('POST /cache_store   { query, engines, results }')
   console.log('GET  /cache_stats')

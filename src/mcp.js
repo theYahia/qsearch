@@ -174,4 +174,64 @@ export function qsearchTool (server) {
       }
     }
   )
+
+  // --- sweep_context (Phase 3 — local LLM Context analogue, $0) ---
+  const sweepContextSchema = z.object({
+    urls: z.array(z.string().url()).min(1).max(20).describe('1-20 URLs to fetch + extract'),
+    focus_query: z.string().min(2).describe('Question used to filter relevant facts/quotes'),
+    snippets_per_url: z.union([z.number(), z.string()]).transform(Number).pipe(z.number().min(1).max(20)).optional().default(5),
+    max_chars_per_url: z.union([z.number(), z.string()]).transform(Number).pipe(z.number().min(1000).max(200000)).optional().default(50000),
+    timeout_ms: z.union([z.number(), z.string()]).transform(Number).pipe(z.number().min(1000).max(120000)).optional().default(30000)
+  })
+
+  server.registerTool(
+    'sweep_context',
+    {
+      title: 'Local LLM Context (qsearch)',
+      description: 'Brave LLM Context endpoint analogue using local Qwen3-600M ($0 cost, GPU only). Fetches HTML, strips boilerplate, extracts facts/numbers/quotes per URL. Use for Phase 4 deep read when Brave Context quota is tight.',
+      inputSchema: sweepContextSchema.shape,
+      annotations: { readOnlyHint: false, openWorldHint: true }
+    },
+    async (params) => {
+      const data = await callQsearch('/sweep_context', params)
+      return {
+        content: (data.results || []).map((r) => ({
+          type: 'text',
+          text: r.error
+            ? `## ⚠️ ${r.url}\n${r.error}`
+            : `## ${r.title}\n${r.url} (${r.snippet_count} snippets)\n${r.cleaned_markdown || ''}`
+        }))
+      }
+    }
+  )
+
+  // --- economy_report (Phase 5 — sprint cost tracking) ---
+  const economyReportSchema = z.object({
+    from: z.string().optional().describe('ISO date — start of report window'),
+    to: z.string().optional().describe('ISO date — end of report window'),
+    sprint_id: z.string().optional().describe('Filter to one sprint_id'),
+    topic: z.string().optional().describe('Filter to one topic'),
+    format: z.enum(['markdown', 'json']).optional().default('markdown')
+  })
+
+  server.registerTool(
+    'economy_report',
+    {
+      title: 'qsearch Economy Report',
+      description: 'Markdown/JSON report of qsearch costs vs all-Brave baseline. Shows by-backend, by-priority breakdown plus total savings. Filter via from/to ISO dates, sprint_id, topic.',
+      inputSchema: economyReportSchema.shape,
+      annotations: { readOnlyHint: true, openWorldHint: false }
+    },
+    async (params) => {
+      const url = new URL(`${QSEARCH_BASE}/economy_report`)
+      for (const [k, v] of Object.entries(params)) if (v != null) url.searchParams.set(k, v)
+      const r = await fetch(url.toString())
+      if (!r.ok) {
+        const err = await r.text().catch(() => '')
+        throw new Error(`qsearch /economy_report ${r.status}: ${err.slice(0, 200)}`)
+      }
+      const text = await r.text()
+      return { content: [{ type: 'text', text }] }
+    }
+  )
 }

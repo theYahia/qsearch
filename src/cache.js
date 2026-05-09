@@ -14,6 +14,17 @@ import { dirname } from 'node:path'
 // llm/context grounding sources are quasi-stable (30d). Tunable via opts.ttlMap.
 export const DEFAULT_TTL = { web: 7, news: 1, context: 30 }
 
+// Phase 5: per-call cost estimates (USD). Tunable via env (QSEARCH_COST_BRAVE_WEB etc.).
+// Used by recordSprintMetric to compute realised vs hypothetical-baseline cost.
+export const COST_PER_CALL = {
+  cache_hit: 0,
+  searxng: 0,
+  qsearch_local: 0,
+  brave_web: Number(process.env.QSEARCH_COST_BRAVE_WEB) || 0.005,
+  brave_context: Number(process.env.QSEARCH_COST_BRAVE_CTX) || 0.01,
+  brave_news: Number(process.env.QSEARCH_COST_BRAVE_NEWS) || 0.005
+}
+
 // Infer endpoint from engines array. brave_sweep.py tags entries as
 // 'brave_web' / 'brave_news' / 'brave_context'. qsearch self-sweeps use
 // 'searxng' or 'brave' which default to 'web'.
@@ -46,6 +57,26 @@ export class QueryCache {
       CREATE INDEX IF NOT EXISTS idx_qcache_hash ON query_cache(query_hash);
       CREATE INDEX IF NOT EXISTS idx_qcache_last_used ON query_cache(last_used);
       CREATE INDEX IF NOT EXISTS idx_qcache_created ON query_cache(created_at);
+
+      -- Phase 5: per-call sprint metrics for economy reports.
+      -- Each row = one sweep/sweep_context invocation. Aggregated by /economy_report.
+      CREATE TABLE IF NOT EXISTS sprint_metrics (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        sprint_id TEXT,
+        topic TEXT,
+        timestamp INTEGER NOT NULL,
+        endpoint TEXT NOT NULL,
+        priority TEXT,
+        backend TEXT NOT NULL,
+        queries INTEGER NOT NULL,
+        cost_usd REAL NOT NULL DEFAULT 0,
+        cache_hits INTEGER DEFAULT 0,
+        cache_misses INTEGER DEFAULT 0,
+        duration_ms INTEGER
+      );
+      CREATE INDEX IF NOT EXISTS idx_sm_sprint ON sprint_metrics(sprint_id);
+      CREATE INDEX IF NOT EXISTS idx_sm_ts ON sprint_metrics(timestamp);
+      CREATE INDEX IF NOT EXISTS idx_sm_topic ON sprint_metrics(topic);
     `)
     this._stmtLookup = this.db.prepare('SELECT results_json, hit_count, created_at FROM query_cache WHERE query_hash = ?')
     this._stmtIncr = this.db.prepare('UPDATE query_cache SET hit_count = hit_count + 1, last_used = ? WHERE query_hash = ?')
@@ -145,6 +176,83 @@ export class QueryCache {
   resetSessionCounters () {
     this._sessionHits = 0
     this._sessionMisses = 0
+  }
+
+  // ── Phase 5: economy logger ────────────────────────────────────
+
+  /**
+   * Record one sweep/sweep_context invocation. Cost computed from COST_PER_CALL[backend]
+   * × (queries - cacheHits). Cache hits cost $0.
+   * @param {{sprintId?,topic?,endpoint:string,priority?,backend:string,queries:number,cacheHits?:number,cacheMisses?:number,durationMs?:number}} m
+   * @returns {number} row id
+   */
+  recordSprintMetric (m) {
+    const { sprintId = null, topic = null, endpoint, priority = null, backend, queries,
+      cacheHits = 0, cacheMisses = 0, durationMs = null } = m
+    const billable = Math.max(0, (queries || 0) - (cacheHits || 0))
+    const cost = (COST_PER_CALL[backend] != null ? COST_PER_CALL[backend] : 0) * billable
+    const stmt = this.db.prepare(`
+      INSERT INTO sprint_metrics (sprint_id, topic, timestamp, endpoint, priority, backend, queries, cost_usd, cache_hits, cache_misses, duration_ms)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `)
+    const r = stmt.run(sprintId, topic, Date.now(), endpoint, priority, backend, queries || 0, cost, cacheHits, cacheMisses, durationMs)
+    return Number(r.lastInsertRowid)
+  }
+
+  /**
+   * Aggregate sprint_metrics into a markdown-/json-renderable report.
+   * Filters: from/to (epoch ms), sprintId, topic.
+   */
+  economyReport ({ from = null, to = null, sprintId = null, topic = null } = {}) {
+    const where = []
+    const params = []
+    if (from) { where.push('timestamp >= ?'); params.push(Number(from)) }
+    if (to) { where.push('timestamp <= ?'); params.push(Number(to)) }
+    if (sprintId) { where.push('sprint_id = ?'); params.push(sprintId) }
+    if (topic) { where.push('topic = ?'); params.push(topic) }
+    const whereSql = where.length ? `WHERE ${where.join(' AND ')}` : ''
+
+    const total = this.db.prepare(`
+      SELECT
+        COUNT(*) AS calls,
+        COALESCE(SUM(queries), 0) AS total_queries,
+        COALESCE(SUM(cost_usd), 0) AS total_cost,
+        COALESCE(SUM(cache_hits), 0) AS total_hits,
+        COALESCE(SUM(cache_misses), 0) AS total_misses
+      FROM sprint_metrics ${whereSql}
+    `).get(...params)
+
+    const byBackend = this.db.prepare(`
+      SELECT backend, COUNT(*) AS calls, SUM(queries) AS queries, SUM(cost_usd) AS cost
+      FROM sprint_metrics ${whereSql}
+      GROUP BY backend ORDER BY cost DESC
+    `).all(...params)
+
+    const byPriority = this.db.prepare(`
+      SELECT COALESCE(priority, '(none)') AS priority, COUNT(*) AS calls, SUM(queries) AS queries
+      FROM sprint_metrics ${whereSql}
+      GROUP BY priority
+    `).all(...params)
+
+    // Hypothetical baseline: every query через Brave web + 10% через Brave Context.
+    // Tunable via env if user's mix differs.
+    const baselineCtxFrac = Number(process.env.QSEARCH_BASELINE_CTX_FRAC) || 0.1
+    const baselineCost = (total.total_queries || 0) *
+      ((COST_PER_CALL.brave_web || 0) + baselineCtxFrac * (COST_PER_CALL.brave_context || 0))
+    const savings = baselineCost - total.total_cost
+    const savingsPct = baselineCost > 0 ? (savings / baselineCost) : 0
+
+    return {
+      period: { from, to },
+      filter: { sprintId, topic },
+      total,
+      by_backend: byBackend,
+      by_priority: byPriority,
+      baseline_cost_all_brave: baselineCost,
+      actual_cost: total.total_cost,
+      savings_usd: savings,
+      savings_pct: Number(savingsPct.toFixed(4))
+    }
   }
 
   close () {

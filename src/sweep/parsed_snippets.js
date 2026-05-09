@@ -74,6 +74,14 @@ export function renderMarkdown (results, queries, stats) {
   lines.push(`- Total queries: ${n}`)
   lines.push(`- Web: ${stats.web_ok} ok / ${stats.web_fail} failed / ${stats.web_zero || 0} zero-result`)
   if (stats.web_zero_recovered) lines.push(`- Zero-result recovered after retry: ${stats.web_zero_recovered}`)
+  if (stats.by_priority) {
+    const fmt = (p) => {
+      const c = stats.by_priority[p]
+      const total = (c?.ok || 0) + (c?.fail || 0) + (c?.zero || 0)
+      return `${p}=${c?.ok || 0}/${total}`
+    }
+    lines.push(`- Priority: ${fmt('broad')}, ${fmt('focused')}, ${fmt('critical')}`)
+  }
   lines.push(`- Duration: ${duration_s.toFixed(1)}s`)
   lines.push(`- Deduped: ${stats.total_deduped} URLs removed`)
   lines.push('')
