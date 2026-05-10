@@ -3,6 +3,7 @@ node_modules/
 *.log
 .DS_Store
 test-mcp.js
+qsearch_log.md
 
 docs/GTM.md
 docs/KPI_DASHBOARD.md
