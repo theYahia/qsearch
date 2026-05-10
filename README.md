@@ -14,7 +14,7 @@ AI agents lose **17–33% of facts to hallucination** because they read 200-char
 **qsearch is the open-source search layer that gives agents full content with multi-engine provenance** — running on your machine, owned by you, ready for MCP today.
 
 > ✅ **v0.4.0 live at [qsearch.pro](https://qsearch.pro).** Multi-engine attribution, trust corpus with per-URL provenance (`engines[]`, `sweep_count`, `trust_score`), corpus viewer at `/ui`, MCP-over-HTTP for Claude Code and any spec-compliant client.
-> 📖 **Vision:** [docs/VISION.md](./docs/VISION.md) · **Technical spec:** [docs/TRUST_MESH.md](./docs/TRUST_MESH.md) · **Architecture:** [docs/FEDERATION_ARCHITECTURE.md](./docs/FEDERATION_ARCHITECTURE.md)
+> 📖 **Architecture:** [ARCHITECTURE.md](./ARCHITECTURE.md) · **Vision:** [docs/VISION.md](./docs/VISION.md) · **Technical spec:** [docs/TRUST_MESH.md](./docs/TRUST_MESH.md) · **Federation deep-dive:** [docs/FEDERATION_ARCHITECTURE.md](./docs/FEDERATION_ARCHITECTURE.md)
 
 ## Quick start
 

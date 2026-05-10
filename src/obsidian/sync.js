@@ -133,7 +133,7 @@ export async function appendDailyLog ({ topic, queries, stats }) {
   const vaultPath = process.env.OBSIDIAN_VAULT_PATH
   if (!vaultPath) return null
 
-  const logPath = join(vaultPath, 'qsearch_log.md')
+  const logPath = join(vaultPath, 'Clippings', 'qsearch', 'qsearch_log.md')
   const date = new Date().toISOString().slice(0, 10)
   const time = new Date().toISOString().slice(11, 19)
 
