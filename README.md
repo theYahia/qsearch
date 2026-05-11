@@ -34,21 +34,26 @@ cp .env.example .env.local
 # 4. Start infrastructure (Meilisearch + Qdrant + SearXNG)
 docker compose up -d
 
-# 5. Install & run
+# 5. (Optional) Pull Ollama models for local LLM cleaning + embedding rerank
+#    Without them, search still works — just no cleaned_markdown and no rerank.
+ollama pull qwen2.5:7b-instruct   # ~5GB, cleaner (used by /sweep_context)
+ollama pull nomic-embed-text      # 274MB, embedding rerank (Phase B)
+
+# 6. Install & run
 npm install
 npm start            # → qsearch v0.4.0 on http://localhost:8080
 
-# 6. (Optional) MCP server for Claude Code / Workbench / OpenClaw
+# 7. (Optional) MCP server for Claude Code / Workbench / OpenClaw
 npm run start:mcp    # → http://0.0.0.0:8081
 
-# 7. Test multi-engine attribution
+# 8. Test multi-engine attribution
 curl -X POST http://localhost:8080/sweep \
   -H "Content-Type: text/plain" \
   --data-binary $'t1|self-hosted search engine\n'
 # → parsed_snippets.md with "Engines: google, duckduckgo, brave (count=3)"
 ```
 
-**BYOK design:** Brave key + SearXNG instance both stay on your machine. No data exfiltration.
+**BYOK design:** Brave key + SearXNG + Ollama all stay on your machine. No data exfiltration.
 
 ---
 
@@ -130,19 +135,39 @@ The yellow node is your private corpus. URLs found by 5 engines + 3 sweeps + 4 t
 | Endpoint | Description | Backend |
 |----------|-------------|---------|
 | `POST /search` | Web search + corpus first, trust-weighted re-rank | Brave or SearXNG |
-| `POST /sweep` | Batch search via SearXNG (with `engines[]`) | SearXNG |
+| `POST /sweep` | Batch search with priority/domain routing (see below) | SearXNG / Brave / Academic |
+| `POST /cached_sweep` | Same as `/sweep`, with SQLite memcache layer | SearXNG / Brave / Academic |
+| `POST /academic_search` | Peer-reviewed papers via arxiv + PubMed + Semantic Scholar | Academic (free, no auth) |
+| `POST /sweep_context` | Local LLM page extraction (analogue of Brave LLM Context) | Ollama qwen2.5 |
 | `POST /news` | News search | Brave (requires key) |
 | `POST /context` | Deep page extraction | Brave (requires key) |
 | `POST /index` | Crawl URL or index local `.md` glob | Crawl4AI |
 | `GET /trust/:url` | Trust score + provenance for any URL in corpus | — |
 | `GET /corpus/top` | Top URLs ranked by trust (`?limit=20&min_engines=3`) | — |
 | `GET /corpus/stats` | Corpus size + counts | — |
+| `GET /economy_report` | Sprint cost breakdown by backend + savings vs all-Brave | — |
 | `GET /ui` | Corpus browser — search, trust scores, provenance modal | — |
 | `GET /health` | Service status | — |
 
 `/search` accepts: `query`, `n_results` (1–20), `freshness` (`pd`/`pw`/`pm`/`py`), `search_lang`, `country`, `corpus_first` (default `true`), `corpus_only` (default `false`).
 
-`/sweep` accepts: text/plain body with `label|query` lines (one per line). Auto-indexes results into Meilisearch with `engines[]` and `engine_count` filterable.
+`/sweep` accepts text/plain body with one query per line in the format `label|query[|priority][|domain]`:
+
+- **priority** ∈ `broad` (default, SearXNG, $0) / `focused` (Brave, ~$0.005) / `critical` (Brave + LLM Context, ~$0.01)
+- **domain** ∈ `general` (default) / `scholarly` (arxiv+PubMed+S2, $0) / `ru` (SearXNG with `language=ru-RU` bias, $0)
+
+```
+# Examples
+bench_a|qdrant production latency benchmarks|focused
+sch_a|crispr cas9 off target effects|broad|scholarly
+ru_a|tadviser сро рейтинг 2025|broad|ru
+crit_a|self-hosted vector DB choice 2026|critical
+gen|simple search|broad        # 2-field still works — defaults broad/general
+```
+
+Auto-indexes results into Meilisearch with `engines[]` and `engine_count` filterable.
+
+`/academic_search` accepts JSON: `{ query, n_results (1-20), sources?: ["arxiv","pubmed","semanticscholar"] }`. Fans out to all three in parallel, dedupes by DOI/title, returns interleaved top-N.
 
 ### Multi-engine attribution example
 
@@ -197,6 +222,9 @@ Add to `~/.claude/settings.json`:
 Available tools:
 - `mcp__qsearch__web_search` — web search via Brave or SearXNG
 - `mcp__qsearch__sweep` — batch research sweep with multi-engine attribution
+- `mcp__qsearch__academic_search` — peer-reviewed papers via arxiv + PubMed + Semantic Scholar
+- `mcp__qsearch__sweep_context` — Phase 3 local LLM page extraction (free, Ollama)
+- `mcp__qsearch__economy_report` — cost breakdown vs all-Brave baseline
 - `mcp__qsearch__index_research` — index local `.md` files by glob
 - `mcp__qsearch__news_search` — news search (Brave key required)
 - `mcp__qsearch__context_search` — deep page content (Brave key required)
@@ -212,11 +240,12 @@ qsearch publishes Streamable HTTP transport at `/` on port `:8081`. Compatible w
 | Runtime | Node.js ≥20 |
 | Web search | Brave Search API (BYOK) |
 | Meta-search | SearXNG (self-hosted, optional) |
+| Academic | arxiv + PubMed E-utilities + Semantic Scholar API (free, no auth) |
 | Full-text corpus | Meilisearch v1.7 |
-| Vector corpus | Qdrant v1.17.1 (Linux/macOS bare-runtime; offline on Windows) |
+| Vector corpus | Qdrant v1.17.1 |
 | Crawler | Crawl4AI 0.8.6 (Python subprocess) |
-| Embedder (optional) | llama.cpp `/v1/embeddings` server |
-| LLM cleaner (optional) | Any GGUF model via llama.cpp or local inference |
+| Embedder (optional) | Ollama `nomic-embed-text` (default) or llama.cpp `/v1/embeddings` |
+| LLM cleaner (optional) | Ollama `qwen2.5:7b-instruct` (default; configurable via `OLLAMA_CLEAN_MODEL`) |
 | MCP | `@modelcontextprotocol/sdk` |
 | License | Apache-2.0 |
 
@@ -226,8 +255,12 @@ qsearch publishes Streamable HTTP transport at `/` on port `:8081`. Compatible w
 |---------|---------|------|
 | **v0.3.1** | Multi-engine `engines[]` attribution + dual sweep + corpus + MCP | shipped |
 | **v0.4.0** | Trust layer: `/trust/:url`, `/corpus/top`, `/ui` viewer, trust-weighted re-rank, sort/pagination, corpus merge-on-upsert, snippet sanitization | shipped |
+| **v0.4.1** | Phase A — academic backend (arxiv + PubMed + S2), 4-field queries (`label\|q\|priority\|domain`), `/academic_search` JSON + MCP tool | shipped |
+| **v0.4.2** | Phase B — embedding rerank (Ollama nomic-embed-text, gated `QSEARCH_RERANK_ENABLED`); Phase C — RU coverage via SearXNG `language=ru-RU` | shipped |
+| **v0.4.3** | QVAC SDK ripped out, all local LLM via Ollama (`qwen2.5:7b-instruct` + `nomic-embed-text`) | shipped |
 | **v0.5** | Launch: awesome list PRs, MCP Registry publish, Show HN, newsletter distribution | in progress |
-| **v0.6+** | Optional federation (research direction — no timeline until v0.5 validated) | open |
+| **v0.6** | Phase B Stage 2 — LLM scoring rerank for critical queries; direct Yandex backend; Layer 8 quality gate (rejection threshold) | next |
+| **v0.7+** | Optional federation (research direction — no timeline until v0.5 validated) | open |
 
 See [docs/VISION.md](./docs/VISION.md) for the full picture and why federation is research-direction-only until we can ship it without overpromise.
 

@@ -105,6 +105,28 @@ URL #1 → `engine_count=4`. URL #2 → `engine_count=1`. The trust signal is bu
 
 ---
 
+## 4b. Domain routing — scholarly + ru
+
+The `queries.txt` line accepts an optional 4th field — `domain` — that overrides backend selection:
+
+```
+gen|qdrant production benchmarks|focused
+sch|alphafold protein structure prediction|broad|scholarly
+ru|tadviser обзор векторных СУБД|broad|ru
+```
+
+- `scholarly` → arxiv + PubMed + Semantic Scholar in parallel, deduplicated by DOI/title (free, no auth required; optional `NCBI_API_KEY` / `SEMANTIC_SCHOLAR_API_KEY` for higher rate limits)
+- `ru` → SearXNG with `language=ru-RU` bias — Google/DuckDuckGo return Russian-language results from tadviser/vc/habr/rbc
+
+For agents, the same routing is exposed as `mcp__qsearch__academic_search` (scholarly-only, JSON response):
+
+```bash
+curl -X POST http://localhost:8080/academic_search \
+  -d '{"query":"crispr cas9 off target","n_results":5,"sources":["pubmed","arxiv"]}'
+```
+
+---
+
 ## 5. MCP integration — daily research workflow
 
 **`~/.claude/settings.json`:**

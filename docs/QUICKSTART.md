@@ -43,6 +43,22 @@ Check results:
 - Findings: `_raw_data/my_first_sweep/findings.md`
 - Trust score: `curl "http://localhost:8080/trust/<url-encoded-url>"`
 
+### Priority + domain routing (4-field queries)
+
+`queries.txt` accepts `label|query[|priority][|domain]`:
+
+```
+gen|qdrant production latency benchmarks|focused
+sch|crispr cas9 off target effects|broad|scholarly      # → arxiv + PubMed + S2
+ru|tadviser сро рейтинг 2025|broad|ru                   # → SearXNG with language=ru-RU
+crit|self-hosted vector DB choice 2026|critical
+```
+
+- `priority` ∈ `broad` (free SearXNG, default) / `focused` (Brave web) / `critical` (Brave + LLM Context)
+- `domain` ∈ `general` (default) / `scholarly` (academic backend, free) / `ru` (Russian bias, free)
+
+Old 2-field `label|query` still works — defaults `broad/general`.
+
 ## 5. Connect Claude Code (MCP)
 
 ```bash
@@ -59,7 +75,7 @@ Add to `~/.claude/settings.json`:
 }
 ```
 
-Available tools: `web_search`, `sweep`, `index_research`, `news_search`, `context_search`.
+Available tools: `web_search`, `sweep`, `academic_search`, `sweep_context`, `economy_report`, `index_research`, `news_search`, `context_search`.
 
 ## 6. Optional: Obsidian sync
 

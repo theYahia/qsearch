@@ -1,4 +1,4 @@
-# qsearch — Architecture (locked 2026-05-04)
+# qsearch — Architecture (locked 2026-05-04, refreshed 2026-05-11)
 
 This is the final, locked architecture for qsearch. Each layer below is the result of an explicit research sprint; the alternatives that lost (Hypercore, Tether, on-chain Sybil defense, building our own AT/ActivityPub bridge, subscription-only revenue, etc.) are recorded in `research/`. **A layer is not re-litigated without a new sprint and a recorded decision-log entry.** If a proposal changes one of these layers, surface it as a separate discussion — not a silent edit.
 
@@ -6,15 +6,15 @@ This is the final, locked architecture for qsearch. Each layer below is the resu
 
 | # | Layer | Choice | Notes |
 |---|---|---|---|
-| 1 | Local trust mesh | ✅ shipped | v0.4.0+ — multi-engine attribution + per-URL provenance |
+| 1 | Local trust mesh | ✅ shipped | v0.4.0+ — multi-engine attribution + per-URL provenance. v0.4.1: academic backend (arxiv/PubMed/Semantic Scholar). v0.4.2: RU domain via SearXNG `language=ru-RU`. |
 | 2 | Append-only signed log | SQLite + ed25519 | **NOT** Hypercore |
 | 3 | Sync (CRDT) | Yjs (Apache 2.0) | **NOT** Tether |
 | 4 | Federation feed format | JSON Feed v1.1 + `_qsearch` extension | RSS-inspired, static |
 | 5 | Identity | Passkey-primary + `did:plc` power tier | passkeys for everyone, DID for power users |
 | 6 | AT / ActivityPub interop | Bridgy Fed (free, third-party) | we don't build our own bridge |
 | 7 | Agent ecosystem | MCP + A2A | both protocols, side by side |
-| 8 | Quality gates | Bidirectional RAG validation | ~72% rejection rate target |
+| 8 | Quality gates | Bidirectional RAG validation | ~72% rejection rate target. **Partial: Stage 1 (embedding rerank via Ollama `nomic-embed-text`) shipped v0.4.2 behind `QSEARCH_RERANK_ENABLED`. Next: LLM scoring (Stage 2) + composite-score rejection threshold.** |
 | 9 | Sybil defense | Layered, off-chain | WoT + allowlists + PoW + DKIM + diversity heuristics. **No blockchain.** |
 | 10 | Revenue | Hybrid | donations + paid hosted + grants |
 
-Last reviewed: 2026-05-04
+Last reviewed: 2026-05-11
