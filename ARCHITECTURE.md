@@ -13,7 +13,7 @@ This is the final, locked architecture for qsearch. Each layer below is the resu
 | 5 | Identity | Passkey-primary + `did:plc` power tier | passkeys for everyone, DID for power users |
 | 6 | AT / ActivityPub interop | Bridgy Fed (free, third-party) | we don't build our own bridge |
 | 7 | Agent ecosystem | MCP + A2A | both protocols, side by side |
-| 8 | Quality gates | Bidirectional RAG validation | ~72% rejection rate target. **Partial: Stage 1 (embedding rerank via Ollama `nomic-embed-text`) shipped v0.4.2 behind `QSEARCH_RERANK_ENABLED`. Next: LLM scoring (Stage 2) + composite-score rejection threshold.** |
+| 8 | Quality gates | Bidirectional RAG validation | ~72% rejection rate target. **✅ shipped: Stage 1 embedding rerank (Ollama `nomic-embed-text`), Stage 2 LLM scoring (Ollama `qwen2.5:7b` for `priority=critical`), composite quality gate (`QSEARCH_QUALITY_GATE_ENABLED`, weighted emb+auth+llm+trust ≥ threshold). Default off until threshold/weights tuned via dogfood.** |
 | 9 | Sybil defense | Layered, off-chain | WoT + allowlists + PoW + DKIM + diversity heuristics. **No blockchain.** |
 | 10 | Revenue | Hybrid | donations + paid hosted + grants |
 
