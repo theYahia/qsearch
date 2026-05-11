@@ -23,6 +23,7 @@ class Semaphore {
 }
 
 export const VALID_PRIORITIES = new Set(['broad', 'focused', 'critical'])
+export const VALID_DOMAINS = new Set(['general', 'scholarly', 'ru'])
 
 export function parseQueriesText (text) {
   const queries = []
@@ -35,24 +36,35 @@ export function parseQueriesText (text) {
       const parts = line.split(sep).map(s => s.trim())
       if (parts.length >= 2 && /^[a-zA-Z0-9_]+$/.test(parts[0]) && parts[1]) {
         const label = parts[0]
-        let query, priority
-        // Phase 2: optional 3rd field = priority. To preserve queries containing the
-        // separator (e.g. URLs with '|'), treat last part as priority only if it's a
-        // valid keyword; else fold it back into the query.
-        if (parts.length >= 3 && VALID_PRIORITIES.has(parts[parts.length - 1].toLowerCase())) {
-          priority = parts[parts.length - 1].toLowerCase()
-          query = parts.slice(1, -1).join(sep)
-        } else {
-          query = parts.slice(1).join(sep)
-          priority = 'broad'
+        let priority = 'broad'
+        let domain = 'general'
+        let queryEnd = parts.length
+
+        // Parse trailing keyword fields right-to-left. Each trailing part is only
+        // consumed if it matches a known vocabulary; otherwise it stays in the query
+        // (preserves URLs, dates, etc. that may contain '|').
+        const last = parts[queryEnd - 1]?.toLowerCase()
+        const second = parts[queryEnd - 2]?.toLowerCase()
+        if (queryEnd >= 3 && VALID_DOMAINS.has(last) && VALID_PRIORITIES.has(second)) {
+          domain = last
+          priority = second
+          queryEnd -= 2
+        } else if (queryEnd >= 3 && VALID_PRIORITIES.has(last)) {
+          priority = last
+          queryEnd -= 1
+        } else if (queryEnd >= 3 && VALID_DOMAINS.has(last)) {
+          domain = last
+          queryEnd -= 1
         }
-        queries.push({ label, query, priority })
+        const query = parts.slice(1, queryEnd).join(sep)
+        if (!query) continue
+        queries.push({ label, query, priority, domain })
         parsed = true
         break
       }
     }
     if (!parsed) {
-      queries.push({ label: `q${String(autoIdx).padStart(2, '0')}`, query: line, priority: 'broad' })
+      queries.push({ label: `q${String(autoIdx).padStart(2, '0')}`, query: line, priority: 'broad', domain: 'general' })
       autoIdx++
     }
   }
@@ -70,14 +82,19 @@ export async function runSweep (queries, searchFnOrRouter, opts = {}) {
       broad: { ok: 0, fail: 0, zero: 0 },
       focused: { ok: 0, fail: 0, zero: 0 },
       critical: { ok: 0, fail: 0, zero: 0 }
+    },
+    by_domain: {
+      general: { ok: 0, fail: 0, zero: 0 },
+      scholarly: { ok: 0, fail: 0, zero: 0 },
+      ru: { ok: 0, fail: 0, zero: 0 }
     }
   }
 
   // Router shim: if caller passes a plain (endpoint, query, params)→Promise fn (legacy),
-  // wrap it so runSweep treats every priority identically. Router-style fn takes a single
-  // priority string and returns the searchFn for that tier (Phase 2 priority routing).
-  // Heuristic: a router fn has arity 1; a plain searchFn has arity 3.
-  const router = (typeof searchFnOrRouter === 'function' && searchFnOrRouter.length === 1)
+  // wrap it so runSweep treats every priority identically. Router-style fn takes
+  // (priority, domain) and returns the searchFn for that tier (Phase 2 + A routing).
+  // Heuristic: a router fn has arity ≤2; a plain searchFn has arity 3.
+  const router = (typeof searchFnOrRouter === 'function' && searchFnOrRouter.length <= 2)
     ? searchFnOrRouter
     : (() => searchFnOrRouter)
 
@@ -107,36 +124,38 @@ export async function runSweep (queries, searchFnOrRouter, opts = {}) {
     return filtered
   }
 
-  await Promise.all(queries.map(({ label, query, priority }) =>
+  await Promise.all(queries.map(({ label, query, priority, domain }) =>
     sem.run(async () => {
       const effectivePriority = (priority && VALID_PRIORITIES.has(priority)) ? priority : 'broad'
+      const effectiveDomain = (domain && VALID_DOMAINS.has(domain)) ? domain : 'general'
       const pStats = stats.by_priority[effectivePriority]
-      const searchFn = router(effectivePriority)
+      const dStats = stats.by_domain[effectiveDomain]
+      const searchFn = router(effectivePriority, effectiveDomain)
       try {
         let filtered = await fetchAndDedupe(query, searchFn)
-        // Zero-result reliability: backend fetch succeeded but response carried no usable results.
-        // Classic silent failure (e.g. distribution_channels_2026-04-28 → empty parsed_snippets.md).
-        // Retry once before marking as zero-result fail.
         if (filtered.length === 0 && retryZeroResults) {
           await new Promise(r => setTimeout(r, 600 + Math.random() * 400))
           filtered = await fetchAndDedupe(query, searchFn)
           if (filtered.length > 0) stats.web_zero_recovered++
         }
         if (filtered.length === 0) {
-          results.set(label, { query, priority: effectivePriority, results: [], ok: false, error: 'zero_results', reason: 'zero_results' })
+          results.set(label, { query, priority: effectivePriority, domain: effectiveDomain, results: [], ok: false, error: 'zero_results', reason: 'zero_results' })
           stats.web_zero++
           pStats.zero++
+          dStats.zero++
           console.warn(`  [sweep] ⚠ ${label}  ${query.slice(0, 55)} — ZERO RESULTS after retry`)
           return
         }
-        results.set(label, { query, priority: effectivePriority, results: filtered, ok: true })
+        results.set(label, { query, priority: effectivePriority, domain: effectiveDomain, results: filtered, ok: true })
         stats.web_ok++
         pStats.ok++
+        dStats.ok++
         console.log(`  [sweep] ✓ ${label}  ${query.slice(0, 55)}`)
       } catch (err) {
-        results.set(label, { query, priority: effectivePriority, results: [], ok: false, error: err.message })
+        results.set(label, { query, priority: effectivePriority, domain: effectiveDomain, results: [], ok: false, error: err.message })
         stats.web_fail++
         pStats.fail++
+        dStats.fail++
         console.error(`  [sweep] ✗ ${label}  ${query.slice(0, 55)} — ${err.message}`)
       }
     })

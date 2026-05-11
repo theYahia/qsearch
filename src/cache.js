@@ -11,8 +11,9 @@ import { existsSync, mkdirSync } from 'node:fs'
 import { dirname } from 'node:path'
 
 // Default per-endpoint TTL in days. news ages fast (24h), web stable for a week,
-// llm/context grounding sources are quasi-stable (30d). Tunable via opts.ttlMap.
-export const DEFAULT_TTL = { web: 7, news: 1, context: 30 }
+// llm/context grounding sources are quasi-stable (30d), academic papers are
+// essentially immutable post-publication (30d default, safe to raise). Tunable via opts.ttlMap.
+export const DEFAULT_TTL = { web: 7, news: 1, context: 30, scholarly: 30 }
 
 // Phase 5: per-call cost estimates (USD). Tunable via env (QSEARCH_COST_BRAVE_WEB etc.).
 // Used by recordSprintMetric to compute realised vs hypothetical-baseline cost.
@@ -20,6 +21,8 @@ export const COST_PER_CALL = {
   cache_hit: 0,
   searxng: 0,
   qsearch_local: 0,
+  academic: 0,
+  yandex: Number(process.env.QSEARCH_COST_YANDEX) || 0,
   brave_web: Number(process.env.QSEARCH_COST_BRAVE_WEB) || 0.005,
   brave_context: Number(process.env.QSEARCH_COST_BRAVE_CTX) || 0.01,
   brave_news: Number(process.env.QSEARCH_COST_BRAVE_NEWS) || 0.005

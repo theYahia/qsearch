@@ -205,6 +205,34 @@ export function qsearchTool (server) {
     }
   )
 
+  // --- academic_search (Phase A — arxiv + PubMed + Semantic Scholar) ---
+  const academicSearchSchema = z.object({
+    query: z.string().describe('Academic search query (e.g. paper topic, methodology, author + concept)'),
+    n_results: z.union([z.number(), z.string()]).transform(Number).pipe(z.number().min(1).max(20)).optional().default(5)
+      .describe('Number of papers to return (1-20, default 5). Deduplicated by DOI/title.'),
+    sources: z.array(z.enum(['arxiv', 'pubmed', 'semanticscholar'])).optional()
+      .describe('Restrict to specific sources. Default: all three. Use [\"pubmed\"] for medical, [\"arxiv\"] for CS/physics/math.')
+  })
+
+  server.registerTool(
+    'academic_search',
+    {
+      title: 'Academic Papers Search (qsearch)',
+      description: 'Search peer-reviewed papers via arXiv + PubMed + Semantic Scholar in parallel. Free, no auth required. Use for medical research, technical papers, citation chase. Returns deduplicated results across all three sources.',
+      inputSchema: academicSearchSchema.shape,
+      annotations: { readOnlyHint: true, openWorldHint: true }
+    },
+    async (params) => {
+      const data = await callQsearch('/academic_search', params)
+      return {
+        content: (data.results || []).map((r) => ({
+          type: 'text',
+          text: `## [${r.source}] ${r.title}\n${r.url}${r.page_age ? ` (${r.page_age})` : ''}\n${r.description || ''}${r.extra_snippets?.length ? `\n${r.extra_snippets.join('\n')}` : ''}`
+        }))
+      }
+    }
+  )
+
   // --- economy_report (Phase 5 — sprint cost tracking) ---
   const economyReportSchema = z.object({
     from: z.string().optional().describe('ISO date — start of report window'),

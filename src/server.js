@@ -33,6 +33,7 @@ import { parseQueriesText, runSweep } from './sweep/runner.js'
 import { renderMarkdown as renderSweepMd } from './sweep/parsed_snippets.js'
 import { renderFindings } from './sweep/findings_renderer.js'
 import { SearXNGBackend } from './backends/searxng.js'
+import { AcademicBackend } from './backends/academic.js'
 import { cleanResults, cleanContext, warmModel, qvacAvailable, QWEN3_600M_INST_Q4 } from './clean/qvac.js'
 import { sanitizeText, canonicalizeUrl } from './clean/sanitize.js'
 import { MeilisearchCorpus } from './corpus/meilisearch.js'
@@ -61,6 +62,11 @@ const qdrant = new QdrantCorpus(QDRANT_URL_ENV, embedder)
 
 // ── SearXNG fallback ───────────────────────────────────────────────
 const searxng = process.env.SEARXNG_URL ? new SearXNGBackend(process.env.SEARXNG_URL) : null
+
+// Academic backend is always available — arxiv has no auth requirement; PubMed and
+// Semantic Scholar work without keys (just lower rate limits). Disable explicitly
+// via QSEARCH_ACADEMIC_ENABLED=false if you want to route scholarly elsewhere.
+const academic = (process.env.QSEARCH_ACADEMIC_ENABLED !== 'false') ? new AcademicBackend() : null
 
 // ── Memcache (Phase 1: exact-match SQLite) ─────────────────────────
 const CACHE_DB_PATH = process.env.QSEARCH_CACHE_DB || join(__dirname, '..', 'data', 'cache.db')
@@ -127,6 +133,12 @@ async function searxngAsBraveResponse (query, params) {
   const t0 = Date.now()
   const hits = await searxng.search(query, { n_results: params.count || 3 })
   return { data: { web: { results: hits }, _searxng: true }, ms: Date.now() - t0, searxng: true }
+}
+
+async function academicAsBraveResponse (query, params) {
+  const t0 = Date.now()
+  const hits = await academic.search(query, { n_results: params.count || 5 })
+  return { data: { web: { results: hits }, _academic: true }, ms: Date.now() - t0, academic: true }
 }
 
 async function routedBraveFetch (endpoint, query, params) {
@@ -686,6 +698,51 @@ async function handleCorpusTop (req, res) {
   }
 }
 
+// Phase A: dedicated JSON endpoint for academic-only search (arxiv + PubMed + S2).
+// For mixed-priority research sweeps with domain=scholarly lines, use POST /sweep.
+async function handleAcademicSearch (req, res) {
+  if (!academic) {
+    res.writeHead(503, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'academic backend disabled (QSEARCH_ACADEMIC_ENABLED=false)' }))
+    return
+  }
+  let body
+  const getParams = parseSearchParams(req)
+  if (getParams) body = getParams
+  else {
+    try { body = JSON.parse((await readBody(req)) || '{}') }
+    catch {
+      res.writeHead(400, { 'Content-Type': 'application/json' })
+      res.end(JSON.stringify({ error: 'invalid JSON body' }))
+      return
+    }
+  }
+  const query = (body.query || body.q || '').trim()
+  if (!query) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'query is required' }))
+    return
+  }
+  const n = Math.min(Math.max(Number(body.n_results || body.n) || 5, 1), 20)
+  const sources = Array.isArray(body.sources) && body.sources.length
+    ? body.sources.filter(s => ['arxiv', 'pubmed', 'semanticscholar'].includes(s))
+    : undefined
+  const t0 = Date.now()
+  const results = await academic.search(query, { n_results: n, sources })
+  const durationMs = Date.now() - t0
+  if (queryCache) {
+    try {
+      const meta = sprintMetadataFromReq(req)
+      queryCache.recordSprintMetric({
+        ...meta, endpoint: '/academic_search', backend: 'academic',
+        queries: 1, durationMs
+      })
+    } catch (e) { console.warn('[economy] record error:', e.message) }
+  }
+  res.writeHead(200, { 'Content-Type': 'application/json' })
+  res.end(JSON.stringify({ query, count: results.length, results, duration_ms: durationMs }))
+}
+
 async function handleSweep (req, res) {
   const contentType = req.headers['content-type'] || ''
   let queriesText, saveOutput = false
@@ -715,8 +772,10 @@ async function handleSweep (req, res) {
   //   focused  → Brave web with extra_snippets=true; falls back to SearXNG if no Brave key.
   //   critical → Brave web with extra_snippets=true (Phase 3 layers in Brave Context endpoint).
   // Returns Brave-shape response for runSweep's fetchAndDedupe to consume.
-  const sweepRouter = (priority) => async (endpoint, query, params) => {
+  const sweepRouter = (priority, domain) => async (endpoint, query, params) => {
     if (endpoint !== 'web') throw new Error(`/sweep only supports web endpoint (got ${endpoint})`)
+    // Phase A: scholarly domain → academic backend (free, peer-reviewed). Overrides priority.
+    if (domain === 'scholarly' && academic) return await academicAsBraveResponse(query, params)
     if (priority === 'broad') {
       if (searxng) return await searxngAsBraveResponse(query, params)
       if (BRAVE_KEY) return await braveFetch('web', query, params)
@@ -727,15 +786,33 @@ async function handleSweep (req, res) {
     if (searxng) return await searxngAsBraveResponse(query, params)
     throw new Error(`${priority} priority needs BRAVE_API_KEY (or SEARXNG_URL fallback)`)
   }
-  console.log(`[sweep] starting ${queries.length} queries via priority router (broad→${searxng ? 'SearXNG' : 'Brave'}, focused/critical→${BRAVE_KEY ? 'Brave' : 'SearXNG fallback'})`)
+  console.log(`[sweep] starting ${queries.length} queries via priority router (broad→${searxng ? 'SearXNG' : 'Brave'}, focused/critical→${BRAVE_KEY ? 'Brave' : 'SearXNG fallback'}, scholarly→${academic ? 'Academic' : 'disabled'})`)
   const { results, stats } = await runSweep(queries, sweepRouter)
   const md = renderSweepMd(results, queries, stats)
 
   // Phase 5: record per-priority economy metric (one row per priority tier).
+  // Phase A: scholarly queries are billed as `academic` ($0) regardless of priority.
+  // We subtract scholarly counts from each priority bucket to avoid over-charging.
   if (queryCache && stats.by_priority) {
     const meta = sprintMetadataFromReq(req)
+    const scholarlyOk = stats.by_domain?.scholarly?.ok || 0
+    if (scholarlyOk && academic) {
+      try {
+        queryCache.recordSprintMetric({
+          ...meta, endpoint: '/sweep', priority: 'scholarly', backend: 'academic',
+          queries: scholarlyOk, durationMs: stats.duration_ms
+        })
+      } catch (e) { console.warn('[economy] record error:', e.message) }
+    }
+    // Per-priority distribution of scholarly queries (subtract them to avoid double-count).
+    const scholarlyByPriority = {}
+    for (const [, entry] of results) {
+      if (entry.domain === 'scholarly' && entry.ok) {
+        scholarlyByPriority[entry.priority] = (scholarlyByPriority[entry.priority] || 0) + 1
+      }
+    }
     for (const [pri, counts] of Object.entries(stats.by_priority)) {
-      const ok = counts?.ok || 0
+      const ok = Math.max(0, (counts?.ok || 0) - (scholarlyByPriority[pri] || 0))
       if (!ok) continue
       const backend = pri === 'broad'
         ? (searxng ? 'searxng' : 'brave_web')
@@ -931,7 +1008,8 @@ async function handleCachedSweep (req, res) {
 
   // Phase 2: cache key engines depends on priority — keeps SearXNG-broad results from
   // colliding with Brave-focused (different snippet depth = different cached payload).
-  const cacheEnginesFor = (priority) => {
+  const cacheEnginesFor = (priority, domain) => {
+    if (domain === 'scholarly' && academic) return ['academic']
     if (priority === 'broad' && searxng) return ['searxng']
     if (priority === 'critical') return ['brave_critical']
     if (priority === 'focused') return ['brave_focused']
@@ -942,16 +1020,17 @@ async function handleCachedSweep (req, res) {
   // Split: hits (return from cache) vs misses (run sweep)
   const hits = new Map() // label -> cached entry
   const missQueries = []
-  for (const { label, query, priority } of queries) {
-    const engines = cacheEnginesFor(priority)
+  for (const { label, query, priority, domain } of queries) {
+    const engines = cacheEnginesFor(priority, domain)
     const cached = queryCache.lookup(query, engines, cacheOpts)
-    if (cached) hits.set(label, { query, priority, results: cached.results || [], ok: true, cache: 'hit' })
-    else missQueries.push({ label, query, priority })
+    if (cached) hits.set(label, { query, priority, domain, results: cached.results || [], ok: true, cache: 'hit' })
+    else missQueries.push({ label, query, priority, domain })
   }
 
-  // Phase 2 priority router (mirrors /sweep handler).
-  const cachedSweepRouter = (priority) => async (endpoint, query, params) => {
+  // Phase 2 + A priority router (mirrors /sweep handler).
+  const cachedSweepRouter = (priority, domain) => async (endpoint, query, params) => {
     if (endpoint !== 'web') throw new Error(`/cached_sweep only supports web endpoint (got ${endpoint})`)
+    if (domain === 'scholarly' && academic) return await academicAsBraveResponse(query, params)
     if (priority === 'broad') {
       if (searxng) return await searxngAsBraveResponse(query, params)
       if (BRAVE_KEY) return await braveFetch('web', query, params)
@@ -969,10 +1048,10 @@ async function handleCachedSweep (req, res) {
     liveResults = r.results
     liveStats = r.stats
     // Store fresh results in cache (per-priority engines list keeps tiers isolated)
-    for (const { label, query, priority } of missQueries) {
+    for (const { label, query, priority, domain } of missQueries) {
       const entry = liveResults.get(label)
       if (entry?.ok) {
-        try { queryCache.store(query, cacheEnginesFor(priority), { results: entry.results }) } catch (e) { console.warn('[cache] store error:', e.message) }
+        try { queryCache.store(query, cacheEnginesFor(priority, domain), { results: entry.results }) } catch (e) { console.warn('[cache] store error:', e.message) }
       }
     }
   }
@@ -1005,10 +1084,22 @@ async function handleCachedSweep (req, res) {
       } catch (e) { console.warn('[economy] record error:', e.message) }
     }
     if (missQueries.length) {
-      // Miss row attributed to whichever live backend ran. For mixed-priority requests,
-      // simplification: aggregate under the dominant backend (we routed broad→searxng, others→brave_web).
-      const broadMisses = missQueries.filter(q => q.priority === 'broad').length
-      const braveMisses = missQueries.length - broadMisses
+      // Miss row attributed to whichever live backend ran. Phase A: scholarly domain
+      // routes to academic regardless of priority; everything else uses priority tier.
+      const scholarlyMisses = missQueries.filter(q => q.domain === 'scholarly').length
+      const otherMisses = missQueries.filter(q => q.domain !== 'scholarly')
+      const broadMisses = otherMisses.filter(q => q.priority === 'broad').length
+      const braveMisses = otherMisses.length - broadMisses
+      if (scholarlyMisses > 0 && academic) {
+        try {
+          queryCache.recordSprintMetric({
+            ...meta, endpoint: '/cached_sweep', priority: 'scholarly',
+            backend: 'academic',
+            queries: scholarlyMisses, cacheHits: 0, cacheMisses: scholarlyMisses,
+            durationMs: liveStats.duration_ms
+          })
+        } catch (e) { console.warn('[economy] record error:', e.message) }
+      }
       if (broadMisses > 0) {
         try {
           queryCache.recordSprintMetric({
@@ -1296,6 +1387,10 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === 'POST' && req.url === '/index') {
     handleIndex(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(502, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'request failed', detail: String(err) })) })
+    return
+  }
+  if ((req.method === 'POST' && req.url === '/academic_search') || (req.method === 'GET' && req.url.startsWith('/academic_search?'))) {
+    handleAcademicSearch(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(502, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'academic_search failed', detail: String(err) })) })
     return
   }
   if (req.method === 'POST' && (req.url === '/sweep' || req.url.startsWith('/sweep?'))) {
