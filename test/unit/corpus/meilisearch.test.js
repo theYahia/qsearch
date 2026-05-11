@@ -14,9 +14,9 @@ describe('MeilisearchCorpus', { skip: !MEILI_URL ? 'MEILISEARCH_URL not set' : f
 
   test('index and search round-trip', async (t) => {
     if (!MEILI_URL) t.skip('MEILISEARCH_URL not set')
-    await corpus.index({ id: 'test-meili-1', url: 'https://test.meili.example.com', title: 'Meilisearch Test Doc', text: 'qvac sdk install npm package testing', namespace: 'user', crawled_at: new Date().toISOString() })
+    await corpus.index({ id: 'test-meili-1', url: 'https://test.meili.example.com', title: 'Meilisearch Test Doc', text: 'ollama embed install npm package testing', namespace: 'user', crawled_at: new Date().toISOString() })
     await new Promise(r => setTimeout(r, 1500)) // Meilisearch is async
-    const results = await corpus.search('qvac sdk install', { limit: 5 })
+    const results = await corpus.search('ollama embed install', { limit: 5 })
     assert.ok(results.some(r => r.url === 'https://test.meili.example.com'))
   })
 })

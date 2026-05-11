@@ -1,10 +1,13 @@
-// Ollama embedding client — Phase B fallback for QVAC embeddings.
-// Why: QVAC SDK 0.9.1 exposes no working embed function (see src/embed/qvac.js).
-// Ollama runs locally for night-loop already; `ollama pull nomic-embed-text` is a
-// one-time 274MB download. Talks pure HTTP, no native deps.
+// Ollama embedding client — drop-in for the deprecated QVAC embedder.
+// Talks pure HTTP to Ollama (`ollama pull nomic-embed-text` — one-time 274MB).
+// Exposes both functional API (ollamaEmbed/ollamaEmbedBatch) and an Embedder
+// class instance for QdrantCorpus.
+
+import { Embedder } from './interface.js'
 
 const OLLAMA_URL = process.env.OLLAMA_URL || 'http://localhost:11434'
 const OLLAMA_EMBED_MODEL = process.env.OLLAMA_EMBED_MODEL || 'nomic-embed-text'
+const OLLAMA_EMBED_DIM = parseInt(process.env.OLLAMA_EMBED_DIM || '768', 10)  // nomic-embed-text dim
 
 let _available = null
 let _availabilityPromise = null
@@ -81,3 +84,30 @@ export async function ollamaEmbedBatch (texts, opts = {}) {
   await Promise.all(Array.from({ length: conc }, worker))
   return out
 }
+
+// Embedder class instance for QdrantCorpus / search ranker — implements the
+// `Embedder` interface used by the qdrant adapter.
+export class OllamaEmbedder extends Embedder {
+  constructor () { super(); this._availableProbed = false }
+  get name () { return `ollama-${OLLAMA_EMBED_MODEL}` }
+  get dim () { return OLLAMA_EMBED_DIM }
+  get available () { return _available === true }
+  async embed (text) {
+    if (!this._availableProbed) {
+      await ollamaEmbedAvailable()
+      this._availableProbed = true
+    }
+    return ollamaEmbed(text)
+  }
+  async embedBatch (texts) { return ollamaEmbedBatch(texts) }
+}
+
+export const embedder = new OllamaEmbedder()
+// Boot-time async probe so `embedder.available` is populated by the time
+// /health is hit. No top-level await — non-blocking.
+ollamaEmbedAvailable().catch(() => {})
+
+// Drop-in compat alias for callers that imported `embedAvailable` from the
+// old qvac module. Use `embedder.available` for live checks.
+export const embedAvailable = false
+

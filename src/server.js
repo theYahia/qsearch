@@ -35,11 +35,11 @@ import { renderFindings } from './sweep/findings_renderer.js'
 import { SearXNGBackend } from './backends/searxng.js'
 import { AcademicBackend } from './backends/academic.js'
 import { rerankPipeline } from './rerank/pipeline.js'
-import { cleanResults, cleanContext, warmModel, qvacAvailable, QWEN3_600M_INST_Q4 } from './clean/qvac.js'
+import { cleanResults, cleanContext, warmModel, localLlmAvailable, CLEAN_MODEL } from './clean/ollama.js'
 import { sanitizeText, canonicalizeUrl } from './clean/sanitize.js'
 import { MeilisearchCorpus } from './corpus/meilisearch.js'
 import { QdrantCorpus } from './corpus/qdrant.js'
-import { embedder as qvacEmbedder } from './embed/qvac.js'
+import { embedder as ollamaEmbedderInstance } from './embed/ollama.js'
 import { LlamaCppEmbedder } from './embed/llamacpp.js'
 import { crawl } from './crawl/crawl4ai.js'
 import { createJob, getJob, updateJob } from './jobs/store.js'
@@ -54,8 +54,8 @@ const MEILI_URL = process.env.MEILISEARCH_URL || 'http://localhost:7700'
 const MEILI_KEY = process.env.MEILISEARCH_KEY || 'masterKey'
 const QDRANT_URL_ENV = process.env.QDRANT_URL || 'http://localhost:6333'
 
-// llama.cpp embedder takes priority over @qvac/sdk (works on all platforms)
-const embedder = process.env.LLAMACPP_URL ? new LlamaCppEmbedder(process.env.LLAMACPP_URL) : qvacEmbedder
+// llama.cpp embedder takes priority over Ollama (used by some deployments). Default → Ollama.
+const embedder = process.env.LLAMACPP_URL ? new LlamaCppEmbedder(process.env.LLAMACPP_URL) : ollamaEmbedderInstance
 if (process.env.LLAMACPP_URL) console.log(`Embedding: llama.cpp at ${process.env.LLAMACPP_URL}`)
 
 const meili = new MeilisearchCorpus(MEILI_URL, MEILI_KEY)
@@ -218,7 +218,7 @@ async function handleSearch (req, res) {
         brave_endpoint: 'web',
         freshness: body.freshness || null,
         total_results: cleaned.length,
-        model: qvacAvailable && shouldClean ? QWEN3_600M_INST_Q4?.name : null,
+        model: localLlmAvailable && shouldClean ? CLEAN_MODEL?.name : null,
         cleaned: shouldClean,
         brave_ms: null,
         total_clean_ms: 0,
@@ -238,7 +238,7 @@ async function handleSearch (req, res) {
         brave_endpoint: 'web',
         freshness: body.freshness || null,
         total_results: cleaned.length,
-        model: qvacAvailable && shouldClean ? QWEN3_600M_INST_Q4?.name : null,
+        model: localLlmAvailable && shouldClean ? CLEAN_MODEL?.name : null,
         cleaned: shouldClean,
         brave_ms: null,
         total_clean_ms: 0,
@@ -301,7 +301,7 @@ async function handleSearch (req, res) {
       brave_endpoint: 'web',
       freshness: body.freshness || null,
       total_results: finalResults.length,
-      model: qvacAvailable && shouldClean ? QWEN3_600M_INST_Q4?.name : null,
+      model: localLlmAvailable && shouldClean ? CLEAN_MODEL?.name : null,
       cleaned: shouldClean,
       brave_ms: braveMs,
       total_clean_ms,
@@ -342,7 +342,7 @@ async function handleSearch (req, res) {
     brave_endpoint: 'web',
     freshness: body.freshness || null,
     total_results: results.length,
-    model: qvacAvailable && shouldClean ? QWEN3_600M_INST_Q4?.name : null,
+    model: localLlmAvailable && shouldClean ? CLEAN_MODEL?.name : null,
     cleaned: shouldClean,
     brave_ms: braveMs,
     total_clean_ms,
@@ -391,7 +391,7 @@ async function handleNews (req, res) {
         brave_endpoint: 'news',
         freshness: body.freshness || 'pw',
         total_results: cleaned.length,
-        model: qvacAvailable && shouldClean ? QWEN3_600M_INST_Q4?.name : null,
+        model: localLlmAvailable && shouldClean ? CLEAN_MODEL?.name : null,
         cleaned: shouldClean,
         brave_ms: null,
         total_clean_ms: 0,
@@ -430,7 +430,7 @@ async function handleNews (req, res) {
     brave_endpoint: 'news',
     freshness: body.freshness || 'pw',
     total_results: results.length,
-    model: qvacAvailable && shouldClean ? QWEN3_600M_INST_Q4?.name : null,
+    model: localLlmAvailable && shouldClean ? CLEAN_MODEL?.name : null,
     cleaned: shouldClean,
     brave_ms: braveMs,
     total_clean_ms,
@@ -498,7 +498,7 @@ async function handleContext (req, res) {
     brave_endpoint: 'llm/context',
     freshness: body.freshness || null,
     total_results: results.length,
-    model: qvacAvailable ? QWEN3_600M_INST_Q4?.name : null,
+    model: localLlmAvailable ? CLEAN_MODEL?.name : null,
     brave_ms: braveMs,
     total_clean_ms,
     source: 'brave',
@@ -1398,9 +1398,9 @@ const server = http.createServer((req, res) => {
     return
   }
   if (req.method === 'GET' && req.url === '/health') {
-    const modelReady = true // warmModel status tracked in clean/qvac.js
+    const modelReady = localLlmAvailable
     res.writeHead(200, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ status: 'ok', version: '0.4.0', qvac_available: qvacAvailable, model_loaded: modelReady, embed_loaded: embedder.available, corpus: corpusStatus }))
+    res.end(JSON.stringify({ status: 'ok', version: '0.4.0', local_llm_available: localLlmAvailable, model_loaded: modelReady, embed_loaded: embedder.available, corpus: corpusStatus }))
     return
   }
   if ((req.method === 'POST' && req.url === '/search') || (req.method === 'GET' && req.url.startsWith('/search?'))) {

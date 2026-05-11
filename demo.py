@@ -30,8 +30,8 @@ r, sid = mcp({"jsonrpc":"2.0","id":2,"method":"tools/list"}, sid)
 for t in r["result"]["tools"]:
     print(f"  {t['name']:20s}{t['description'][:70]}")
 
-print("\n--- web_search: QVAC SDK edge AI ---")
-r, sid = mcp({"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"web_search","arguments":{"query":"QVAC SDK edge AI","n_results":3}}}, sid)
+print("\n--- web_search: self-hosted vector database ---")
+r, sid = mcp({"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"web_search","arguments":{"query":"self-hosted vector database","n_results":3}}}, sid)
 for c in r["result"]["content"]:
     lines = c["text"].split("\n")
     print(lines[0])

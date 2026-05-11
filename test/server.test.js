@@ -214,7 +214,7 @@ describe('qsearch server', () => {
     assert.equal(res.status, 200)
     assert.equal(res.json.status, 'ok')
     assert.equal(res.json.version, '0.4.0')
-    assert.equal(typeof res.json.qvac_available, 'boolean')
+    assert.equal(typeof res.json.local_llm_available, 'boolean')
     assert.equal(typeof res.json.model_loaded, 'boolean')
   })
 
@@ -403,23 +403,23 @@ describe('qsearch server', () => {
     assert.equal(res.status, 404)
   })
 
-  // ── QVAC graceful degradation ──
+  // ── Local LLM (Ollama) graceful degradation ──
 
-  test('model field is null when QVAC unavailable', async () => {
+  test('model field is string when local LLM available, null otherwise', async () => {
     const res = await request(QSEARCH_PORT, 'POST', '/search', { query: 'test' })
-    assert.equal(res.json.model, null)
+    assert.ok(res.json.model === null || typeof res.json.model === 'string')
   })
 
-  test('cleaned_markdown is null when QVAC unavailable', async () => {
+  test('cleaned_markdown is string when local LLM available, null otherwise', async () => {
     const res = await request(QSEARCH_PORT, 'POST', '/search', { query: 'test' })
     for (const item of res.json.results) {
-      assert.equal(item.cleaned_markdown, null)
+      assert.ok(item.cleaned_markdown === null || typeof item.cleaned_markdown === 'string')
     }
   })
 
-  test('health reports qvac_available false', async () => {
+  test('health reports local_llm_available as boolean', async () => {
     const res = await request(QSEARCH_PORT, 'GET', '/health')
-    assert.equal(res.json.qvac_available, false)
+    assert.equal(typeof res.json.local_llm_available, 'boolean')
   })
 
   // ── Response shape consistency ──

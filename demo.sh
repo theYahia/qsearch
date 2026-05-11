@@ -36,12 +36,12 @@ curl -s -X POST http://localhost:8081/mcp \
   | python -c "import sys,json;d=json.load(sys.stdin);[print(f'  {t[\"name\"]:20s}{t[\"description\"][:70]}') for t in d['result']['tools']]"
 
 echo ""
-echo "--- web_search: QVAC SDK edge AI ---"
+echo "--- web_search: self-hosted vector database ---"
 curl -s -X POST http://localhost:8081/mcp \
   -H "Content-Type: application/json" \
   -H "Accept: application/json, text/event-stream" \
   -H "mcp-session-id: $SID" \
-  -d '{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"web_search","arguments":{"query":"QVAC SDK edge AI","n_results":3}}}' \
+  -d '{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"web_search","arguments":{"query":"self-hosted vector database","n_results":3}}}' \
   | grep "^data:" | sed 's/^data: //' \
   | python -c "import sys,json;d=json.load(sys.stdin);[print(l) for c in d['result']['content'] for l in c['text'].split('\n')[:2]+['']]"
 

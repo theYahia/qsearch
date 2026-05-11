@@ -5,7 +5,7 @@
 // Cost: $0 (GPU only). Quality lower than Brave-internal but enough for Phase 4 grounding.
 
 import { fetchHtml, extractMainContent } from './fetch/html.js'
-import { cleanContext } from './clean/qvac.js'
+import { cleanContext } from './clean/ollama.js'
 
 const SEM_DEFAULT = 4  // local LLM is bottleneck — fewer concurrent than network sweep
 

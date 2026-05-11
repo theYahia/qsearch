@@ -43,7 +43,7 @@ jobs:
             test/unit/backends/brave.test.js \
             test/unit/backends/searxng.test.js \
             test/unit/crawl/crawl4ai.test.js \
-            test/unit/embed/qvac.test.js \
+            test/unit/embed/ollama.test.js \
             test/unit/routing.test.js \
             test/unit/x402/middleware.test.js
         env:

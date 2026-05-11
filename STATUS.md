@@ -3,7 +3,7 @@
 ## Current state
 
 - **Version:** v0.4.0 (live at qsearch.pro)
-- **Narrative:** Trust layer for AI agent search (pivot from QVAC SDK demo, 2026-04-28)
+- **Narrative:** Trust layer for AI agent search
 - **Corpus:** 5541 docs, 63 URLs with engine_count ≥ 3
 - **Tests:** 46/46 passing
 
