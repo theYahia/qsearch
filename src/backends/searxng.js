@@ -14,7 +14,9 @@ export class SearXNGBackend extends SearchBackend {
     const searchUrl = new URL(`${this._url}/search`)
     searchUrl.searchParams.set('q', query)
     searchUrl.searchParams.set('format', 'json')
-    searchUrl.searchParams.set('engines', 'general')
+    searchUrl.searchParams.set('engines', opts.engines || 'general')
+    // Phase C: language/region bias — domain=ru sets language=ru-RU upstream.
+    if (opts.language) searchUrl.searchParams.set('language', opts.language)
 
     const r = await fetch(searchUrl.toString(), {
       headers: { Accept: 'application/json' }

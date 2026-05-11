@@ -34,6 +34,7 @@ import { renderMarkdown as renderSweepMd } from './sweep/parsed_snippets.js'
 import { renderFindings } from './sweep/findings_renderer.js'
 import { SearXNGBackend } from './backends/searxng.js'
 import { AcademicBackend } from './backends/academic.js'
+import { rerankPipeline } from './rerank/pipeline.js'
 import { cleanResults, cleanContext, warmModel, qvacAvailable, QWEN3_600M_INST_Q4 } from './clean/qvac.js'
 import { sanitizeText, canonicalizeUrl } from './clean/sanitize.js'
 import { MeilisearchCorpus } from './corpus/meilisearch.js'
@@ -129,9 +130,12 @@ async function corpusSearch (query, n_results) {
   return dedupeByUrl(results.flat())
 }
 
-async function searxngAsBraveResponse (query, params) {
+async function searxngAsBraveResponse (query, params, opts = {}) {
   const t0 = Date.now()
-  const hits = await searxng.search(query, { n_results: params.count || 3 })
+  const searchOpts = { n_results: params.count || 3 }
+  if (opts.language) searchOpts.language = opts.language
+  if (opts.engines) searchOpts.engines = opts.engines
+  const hits = await searxng.search(query, searchOpts)
   return { data: { web: { results: hits }, _searxng: true }, ms: Date.now() - t0, searxng: true }
 }
 
@@ -776,18 +780,32 @@ async function handleSweep (req, res) {
     if (endpoint !== 'web') throw new Error(`/sweep only supports web endpoint (got ${endpoint})`)
     // Phase A: scholarly domain → academic backend (free, peer-reviewed). Overrides priority.
     if (domain === 'scholarly' && academic) return await academicAsBraveResponse(query, params)
+    // Phase C: ru domain → SearXNG with language=ru-RU. Google/DDG return RU sites
+    // (tadviser, vc, habr, rbc) when biased. Yandex engine in SearXNG is broken upstream.
+    const searxngOpts = domain === 'ru' ? { language: 'ru-RU' } : {}
     if (priority === 'broad') {
-      if (searxng) return await searxngAsBraveResponse(query, params)
+      if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
       if (BRAVE_KEY) return await braveFetch('web', query, params)
       throw new Error('broad priority needs SEARXNG_URL or BRAVE_API_KEY')
     }
     // focused / critical — prefer Brave with extra_snippets, SearXNG fallback only on missing key.
     if (BRAVE_KEY) return await braveFetch('web', query, { ...params, extra_snippets: true })
-    if (searxng) return await searxngAsBraveResponse(query, params)
+    if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
     throw new Error(`${priority} priority needs BRAVE_API_KEY (or SEARXNG_URL fallback)`)
   }
-  console.log(`[sweep] starting ${queries.length} queries via priority router (broad→${searxng ? 'SearXNG' : 'Brave'}, focused/critical→${BRAVE_KEY ? 'Brave' : 'SearXNG fallback'}, scholarly→${academic ? 'Academic' : 'disabled'})`)
+  console.log(`[sweep] starting ${queries.length} queries via priority router (broad→${searxng ? 'SearXNG' : 'Brave'}, focused/critical→${BRAVE_KEY ? 'Brave' : 'SearXNG fallback'}, scholarly→${academic ? 'Academic' : 'disabled'}, ru→SearXNG+ru-RU)`)
   const { results, stats } = await runSweep(queries, sweepRouter)
+
+  // Phase B: optional rerank pipeline (embedding similarity, gated by QSEARCH_RERANK_ENABLED).
+  const rerankStats = await rerankPipeline(results).catch(e => {
+    console.warn('[rerank] failed:', e.message); return { ran: false, error: e.message }
+  })
+  if (rerankStats.ran) {
+    stats.rerank_ms = rerankStats.ms
+    stats.rerank = rerankStats
+    console.log(`[rerank] stage1: ${rerankStats.stage1.ran} ran / ${rerankStats.stage1.skipped} skipped in ${rerankStats.ms}ms`)
+  }
+
   const md = renderSweepMd(results, queries, stats)
 
   // Phase 5: record per-priority economy metric (one row per priority tier).
@@ -1010,6 +1028,7 @@ async function handleCachedSweep (req, res) {
   // colliding with Brave-focused (different snippet depth = different cached payload).
   const cacheEnginesFor = (priority, domain) => {
     if (domain === 'scholarly' && academic) return ['academic']
+    if (domain === 'ru' && searxng) return ['searxng_ru']
     if (priority === 'broad' && searxng) return ['searxng']
     if (priority === 'critical') return ['brave_critical']
     if (priority === 'focused') return ['brave_focused']
@@ -1027,17 +1046,18 @@ async function handleCachedSweep (req, res) {
     else missQueries.push({ label, query, priority, domain })
   }
 
-  // Phase 2 + A priority router (mirrors /sweep handler).
+  // Phase 2 + A + C priority router (mirrors /sweep handler).
   const cachedSweepRouter = (priority, domain) => async (endpoint, query, params) => {
     if (endpoint !== 'web') throw new Error(`/cached_sweep only supports web endpoint (got ${endpoint})`)
     if (domain === 'scholarly' && academic) return await academicAsBraveResponse(query, params)
+    const searxngOpts = domain === 'ru' ? { language: 'ru-RU' } : {}
     if (priority === 'broad') {
-      if (searxng) return await searxngAsBraveResponse(query, params)
+      if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
       if (BRAVE_KEY) return await braveFetch('web', query, params)
       throw new Error('broad priority needs SEARXNG_URL or BRAVE_API_KEY')
     }
     if (BRAVE_KEY) return await braveFetch('web', query, { ...params, extra_snippets: true })
-    if (searxng) return await searxngAsBraveResponse(query, params)
+    if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
     throw new Error(`${priority} priority needs BRAVE_API_KEY (or SEARXNG_URL fallback)`)
   }
 
@@ -1068,6 +1088,16 @@ async function handleCachedSweep (req, res) {
     cache_hits: hits.size,
     cache_misses: missQueries.length,
     cache_hit_rate: queries.length > 0 ? Number((hits.size / queries.length).toFixed(4)) : 0
+  }
+
+  // Phase B: rerank merged results (cached hits + fresh) before rendering.
+  const rerankStats = await rerankPipeline(merged).catch(e => {
+    console.warn('[rerank] failed:', e.message); return { ran: false, error: e.message }
+  })
+  if (rerankStats.ran) {
+    stats.rerank_ms = rerankStats.ms
+    stats.rerank = rerankStats
+    console.log(`[cached_sweep][rerank] stage1: ${rerankStats.stage1.ran} ran / ${rerankStats.stage1.skipped} skipped in ${rerankStats.ms}ms`)
   }
 
   const md = renderSweepMd(merged, queries, stats)
