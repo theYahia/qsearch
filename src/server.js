@@ -803,7 +803,7 @@ async function handleSweep (req, res) {
   if (rerankStats.ran) {
     stats.rerank_ms = rerankStats.ms
     stats.rerank = rerankStats
-    console.log(`[rerank] stage1: ${rerankStats.stage1.ran} ran / ${rerankStats.stage1.skipped} skipped in ${rerankStats.ms}ms`)
+    console.log(`[rerank] stage1: ${rerankStats.stage1.ran} ran / ${rerankStats.stage1.skipped} skipped, stage2: ${rerankStats.stage2.ran} ran (${rerankStats.stage2.calls || 0} LLM calls) in ${rerankStats.ms}ms`)
   }
 
   const md = renderSweepMd(results, queries, stats)
@@ -1097,7 +1097,7 @@ async function handleCachedSweep (req, res) {
   if (rerankStats.ran) {
     stats.rerank_ms = rerankStats.ms
     stats.rerank = rerankStats
-    console.log(`[cached_sweep][rerank] stage1: ${rerankStats.stage1.ran} ran / ${rerankStats.stage1.skipped} skipped in ${rerankStats.ms}ms`)
+    console.log(`[cached_sweep][rerank] stage1: ${rerankStats.stage1.ran} ran / ${rerankStats.stage1.skipped} skipped, stage2: ${rerankStats.stage2.ran} ran (${rerankStats.stage2.calls || 0} LLM calls) in ${rerankStats.ms}ms`)
   }
 
   const md = renderSweepMd(merged, queries, stats)
