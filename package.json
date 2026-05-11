@@ -8,10 +8,10 @@
     "start": "node src/server.js",
     "start:mcp": "node src/mcp-http.js",
     "test": "node --test test/server.test.js",
-    "test:unit": "node --test test/unit/backends/brave.test.js test/unit/backends/searxng.test.js test/unit/crawl/crawl4ai.test.js test/unit/embed/ollama.test.js test/unit/rerank/pipeline.test.js test/unit/rerank/llm_rerank.test.js test/unit/routing.test.js test/unit/sweep/runner.test.js test/unit/x402/middleware.test.js",
+    "test:unit": "node --test test/unit/backends/brave.test.js test/unit/backends/searxng.test.js test/unit/backends/yandex.test.js test/unit/crawl/crawl4ai.test.js test/unit/embed/ollama.test.js test/unit/rerank/pipeline.test.js test/unit/rerank/llm_rerank.test.js test/unit/routing.test.js test/unit/sweep/runner.test.js test/unit/x402/middleware.test.js",
     "test:unit:corpus": "node --test test/unit/corpus/meilisearch.test.js test/unit/corpus/qdrant.test.js",
     "test:integration": "node --test test/integration/corpus.integration.test.js test/integration/search.integration.test.js",
-    "test:all": "node --test test/server.test.js test/unit/backends/brave.test.js test/unit/backends/searxng.test.js test/unit/crawl/crawl4ai.test.js test/unit/embed/ollama.test.js test/unit/rerank/pipeline.test.js test/unit/rerank/llm_rerank.test.js test/unit/routing.test.js test/unit/sweep/runner.test.js test/unit/x402/middleware.test.js"
+    "test:all": "node --test test/server.test.js test/unit/backends/brave.test.js test/unit/backends/searxng.test.js test/unit/backends/yandex.test.js test/unit/crawl/crawl4ai.test.js test/unit/embed/ollama.test.js test/unit/rerank/pipeline.test.js test/unit/rerank/llm_rerank.test.js test/unit/routing.test.js test/unit/sweep/runner.test.js test/unit/x402/middleware.test.js"
   },
   "license": "Apache-2.0",
   "repository": {

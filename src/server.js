@@ -34,6 +34,7 @@ import { renderMarkdown as renderSweepMd } from './sweep/parsed_snippets.js'
 import { renderFindings } from './sweep/findings_renderer.js'
 import { SearXNGBackend } from './backends/searxng.js'
 import { AcademicBackend } from './backends/academic.js'
+import { YandexBackend } from './backends/yandex.js'
 import { rerankPipeline } from './rerank/pipeline.js'
 import { cleanResults, cleanContext, warmModel, localLlmAvailable, CLEAN_MODEL } from './clean/ollama.js'
 import { sanitizeText, canonicalizeUrl } from './clean/sanitize.js'
@@ -68,6 +69,16 @@ const searxng = process.env.SEARXNG_URL ? new SearXNGBackend(process.env.SEARXNG
 // Semantic Scholar work without keys (just lower rate limits). Disable explicitly
 // via QSEARCH_ACADEMIC_ENABLED=false if you want to route scholarly elsewhere.
 const academic = (process.env.QSEARCH_ACADEMIC_ENABLED !== 'false') ? new AcademicBackend() : null
+
+// Yandex direct backend — only instantiated when both YANDEX_API_KEY and
+// YANDEX_FOLDER_ID are set. Otherwise domain=ru falls back to SearXNG with
+// language=ru-RU bias (still works, just less Yandex-specific coverage).
+let yandex = null
+if (process.env.YANDEX_API_KEY && process.env.YANDEX_FOLDER_ID) {
+  try { yandex = new YandexBackend() } catch (e) {
+    console.warn(`[yandex] init failed: ${e.message}`)
+  }
+}
 
 // ── Memcache (Phase 1: exact-match SQLite) ─────────────────────────
 const CACHE_DB_PATH = process.env.QSEARCH_CACHE_DB || join(__dirname, '..', 'data', 'cache.db')
@@ -143,6 +154,12 @@ async function academicAsBraveResponse (query, params) {
   const t0 = Date.now()
   const hits = await academic.search(query, { n_results: params.count || 5 })
   return { data: { web: { results: hits }, _academic: true }, ms: Date.now() - t0, academic: true }
+}
+
+async function yandexAsBraveResponse (query, params) {
+  const t0 = Date.now()
+  const hits = await yandex.search(query, { n_results: params.count || 10 })
+  return { data: { web: { results: hits }, _yandex: true }, ms: Date.now() - t0, yandex: true }
 }
 
 async function routedBraveFetch (endpoint, query, params) {
@@ -780,8 +797,12 @@ async function handleSweep (req, res) {
     if (endpoint !== 'web') throw new Error(`/sweep only supports web endpoint (got ${endpoint})`)
     // Phase A: scholarly domain → academic backend (free, peer-reviewed). Overrides priority.
     if (domain === 'scholarly' && academic) return await academicAsBraveResponse(query, params)
-    // Phase C: ru domain → SearXNG with language=ru-RU. Google/DDG return RU sites
-    // (tadviser, vc, habr, rbc) when biased. Yandex engine in SearXNG is broken upstream.
+    // Phase C: ru domain → direct Yandex backend if configured; else SearXNG with
+    // language=ru-RU. Google/DDG return RU sites when biased.
+    if (domain === 'ru' && yandex) {
+      try { return await yandexAsBraveResponse(query, params) }
+      catch (e) { console.warn(`[yandex] failed, falling back to SearXNG ru-RU: ${e.message}`) }
+    }
     const searxngOpts = domain === 'ru' ? { language: 'ru-RU' } : {}
     if (priority === 'broad') {
       if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
@@ -793,7 +814,7 @@ async function handleSweep (req, res) {
     if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
     throw new Error(`${priority} priority needs BRAVE_API_KEY (or SEARXNG_URL fallback)`)
   }
-  console.log(`[sweep] starting ${queries.length} queries via priority router (broad→${searxng ? 'SearXNG' : 'Brave'}, focused/critical→${BRAVE_KEY ? 'Brave' : 'SearXNG fallback'}, scholarly→${academic ? 'Academic' : 'disabled'}, ru→SearXNG+ru-RU)`)
+  console.log(`[sweep] starting ${queries.length} queries via priority router (broad→${searxng ? 'SearXNG' : 'Brave'}, focused/critical→${BRAVE_KEY ? 'Brave' : 'SearXNG fallback'}, scholarly→${academic ? 'Academic' : 'disabled'}, ru→${yandex ? 'Yandex' : 'SearXNG+ru-RU'})`)
   const { results, stats } = await runSweep(queries, sweepRouter)
 
   // Phase B: optional rerank pipeline (embedding similarity, gated by QSEARCH_RERANK_ENABLED).
@@ -810,7 +831,8 @@ async function handleSweep (req, res) {
 
   // Phase 5: record per-priority economy metric (one row per priority tier).
   // Phase A: scholarly queries are billed as `academic` ($0) regardless of priority.
-  // We subtract scholarly counts from each priority bucket to avoid over-charging.
+  // Phase C: ru queries with yandex backend billed as `yandex`. Both subtracted
+  // from each priority bucket to avoid over-charging Brave for those queries.
   if (queryCache && stats.by_priority) {
     const meta = sprintMetadataFromReq(req)
     const scholarlyOk = stats.by_domain?.scholarly?.ok || 0
@@ -822,15 +844,27 @@ async function handleSweep (req, res) {
         })
       } catch (e) { console.warn('[economy] record error:', e.message) }
     }
-    // Per-priority distribution of scholarly queries (subtract them to avoid double-count).
-    const scholarlyByPriority = {}
+    const ruOk = stats.by_domain?.ru?.ok || 0
+    if (ruOk && yandex) {
+      try {
+        queryCache.recordSprintMetric({
+          ...meta, endpoint: '/sweep', priority: 'ru', backend: 'yandex',
+          queries: ruOk, durationMs: stats.duration_ms
+        })
+      } catch (e) { console.warn('[economy] record error:', e.message) }
+    }
+    // Per-priority distribution of off-priority-routed queries (subtract to avoid double-count).
+    const offRouteByPriority = {}
     for (const [, entry] of results) {
-      if (entry.domain === 'scholarly' && entry.ok) {
-        scholarlyByPriority[entry.priority] = (scholarlyByPriority[entry.priority] || 0) + 1
+      if (!entry.ok) continue
+      const offRoute = (entry.domain === 'scholarly' && academic) ||
+                       (entry.domain === 'ru' && yandex)
+      if (offRoute) {
+        offRouteByPriority[entry.priority] = (offRouteByPriority[entry.priority] || 0) + 1
       }
     }
     for (const [pri, counts] of Object.entries(stats.by_priority)) {
-      const ok = Math.max(0, (counts?.ok || 0) - (scholarlyByPriority[pri] || 0))
+      const ok = Math.max(0, (counts?.ok || 0) - (offRouteByPriority[pri] || 0))
       if (!ok) continue
       const backend = pri === 'broad'
         ? (searxng ? 'searxng' : 'brave_web')
@@ -1028,6 +1062,7 @@ async function handleCachedSweep (req, res) {
   // colliding with Brave-focused (different snippet depth = different cached payload).
   const cacheEnginesFor = (priority, domain) => {
     if (domain === 'scholarly' && academic) return ['academic']
+    if (domain === 'ru' && yandex) return ['yandex']
     if (domain === 'ru' && searxng) return ['searxng_ru']
     if (priority === 'broad' && searxng) return ['searxng']
     if (priority === 'critical') return ['brave_critical']
@@ -1050,6 +1085,10 @@ async function handleCachedSweep (req, res) {
   const cachedSweepRouter = (priority, domain) => async (endpoint, query, params) => {
     if (endpoint !== 'web') throw new Error(`/cached_sweep only supports web endpoint (got ${endpoint})`)
     if (domain === 'scholarly' && academic) return await academicAsBraveResponse(query, params)
+    if (domain === 'ru' && yandex) {
+      try { return await yandexAsBraveResponse(query, params) }
+      catch (e) { console.warn(`[yandex] failed, falling back to SearXNG ru-RU: ${e.message}`) }
+    }
     const searxngOpts = domain === 'ru' ? { language: 'ru-RU' } : {}
     if (priority === 'broad') {
       if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
@@ -1114,10 +1153,12 @@ async function handleCachedSweep (req, res) {
       } catch (e) { console.warn('[economy] record error:', e.message) }
     }
     if (missQueries.length) {
-      // Miss row attributed to whichever live backend ran. Phase A: scholarly domain
-      // routes to academic regardless of priority; everything else uses priority tier.
+      // Miss row attributed to whichever live backend ran. Phase A: scholarly → academic.
+      // Phase C: domain=ru with yandex configured → yandex. Else uses priority tier.
       const scholarlyMisses = missQueries.filter(q => q.domain === 'scholarly').length
-      const otherMisses = missQueries.filter(q => q.domain !== 'scholarly')
+      const ruYandexMisses = yandex ? missQueries.filter(q => q.domain === 'ru').length : 0
+      const otherMisses = missQueries.filter(q =>
+        q.domain !== 'scholarly' && !(q.domain === 'ru' && yandex))
       const broadMisses = otherMisses.filter(q => q.priority === 'broad').length
       const braveMisses = otherMisses.length - broadMisses
       if (scholarlyMisses > 0 && academic) {
@@ -1126,6 +1167,16 @@ async function handleCachedSweep (req, res) {
             ...meta, endpoint: '/cached_sweep', priority: 'scholarly',
             backend: 'academic',
             queries: scholarlyMisses, cacheHits: 0, cacheMisses: scholarlyMisses,
+            durationMs: liveStats.duration_ms
+          })
+        } catch (e) { console.warn('[economy] record error:', e.message) }
+      }
+      if (ruYandexMisses > 0) {
+        try {
+          queryCache.recordSprintMetric({
+            ...meta, endpoint: '/cached_sweep', priority: 'ru',
+            backend: 'yandex',
+            queries: ruYandexMisses, cacheHits: 0, cacheMisses: ruYandexMisses,
             durationMs: liveStats.duration_ms
           })
         } catch (e) { console.warn('[economy] record error:', e.message) }
