@@ -77,7 +77,7 @@ CREATE INDEX idx_topic ON cached_queries(topic);
 
 ## 5. Integration с brave_sweep.py
 
-Канонический Brave-скрипт (`D:/Yahia/active/QvacSnowBall/research/scripts/brave_sweep.py`) **не должен** трогать qsearch напрямую — он остаётся primary Brave path (paywalled grounding). Cache-aware path делается через qsearch:
+Канонический Brave-скрипт (`D:/Yahia/tools/research-backend/brave_sweep.py`) **не должен** трогать qsearch напрямую — он остаётся primary Brave path (paywalled grounding). Cache-aware path делается через qsearch:
 
 - Опциональный flag `--use-cache` в `brave_sweep.py` (Phase 1.5, после qsearch ship'а cache):
   - When set: per-query сначала ходит на `qsearch:8080/cache/lookup?hash=<sha>`, если hit — заполняет `<label>.json` из cache и пропускает Brave call.

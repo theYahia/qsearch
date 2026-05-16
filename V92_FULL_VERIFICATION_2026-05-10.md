@@ -34,7 +34,7 @@ POST /sweep_context       — line 1321 (Phase 3 local LLM, Tier 4)
 GET  /economy_report      — line 1325 (Phase 5 — sprint metrics aggregation)
 ```
 
-`brave_sweep.py` (`D:/Yahia/active/QvacSnowBall/research/scripts/brave_sweep.py`) уже знает про priority routing:
+`brave_sweep.py` (`D:/Yahia/tools/research-backend/brave_sweep.py`) уже знает про priority routing:
 - `VALID_PRIORITIES = {"broad", "focused", "critical"}` (line 516)
 - broad queries POST'ятся в qsearch `/sweep` напрямую (line 556: `qsearch broad sweep` path)
 - critical форсит Brave Context endpoint (line 1774)
@@ -206,7 +206,7 @@ Append каждый snapshot в **`D:/Yahia/active/qsearch/V92_DOGFOOD_LOG_2026-
 - **rd101** (Marathon-4 memcache refresh): `D:/Yahia/active/qsearch/MEMCACHE_DESIGN_REFRESH_2026-05-10.md` — Phase 1 ROI revised down ~33% после v9.2, ship recommended (5+ sprints/мес user pacing).
 - **Original memcache design**: `D:/Yahia/active/qsearch/MEMCACHE_DESIGN_2026-05-07.md` — schema, endpoints (READ-ONLY base).
 - **Policy**: `D:/Yahia/CLAUDE.md` §4 (DUAL SWEEP — оба backend'а обязательны), §4.1 (Phase 2 priority routing — broad/focused/critical tier rules), §4.5 (night-loop OFFLOAD — non-medical heavy research должен использовать DUAL SWEEP YAML).
-- **brave_sweep.py reference**: `D:/Yahia/active/QvacSnowBall/research/scripts/brave_sweep.py` — canonical client, lines 516 (priorities), 556 (qsearch broad path), 1564 (`--include-context-local` Tier 4 flag), 1774 (critical force context).
+- **brave_sweep.py reference**: `D:/Yahia/tools/research-backend/brave_sweep.py` — canonical client, lines 516 (priorities), 556 (qsearch broad path), 1564 (`--include-context-local` Tier 4 flag), 1774 (critical force context).
 - **commits на main 2026-05-09**: `119915a` (economy stack), `410434a` (memcache Phase 1). HEAD docs commit `2c2874f` (ARCHITECTURE refresh) — без code change.
 
 ## 7. Files inspected
@@ -214,7 +214,7 @@ Append каждый snapshot в **`D:/Yahia/active/qsearch/V92_DOGFOOD_LOG_2026-
 - `D:/Yahia/active/qsearch/src/server.js` — endpoints lines 1279-1373
 - `D:/Yahia/active/qsearch/src/cache.js` — schema lines 41-80, `DEFAULT_TTL` line 15, `COST_PER_CALL` lines 19-26
 - `D:/Yahia/active/qsearch/src/sweep_context.js` — Tier 4 handler (existence verified via Grep)
-- `D:/Yahia/active/QvacSnowBall/research/scripts/brave_sweep.py` — priority routing, lines 516-1774
+- `D:/Yahia/tools/research-backend/brave_sweep.py` — priority routing, lines 516-1774
 - `D:/Yahia/active/qsearch/README.md` — v0.4.0 endpoints baseline
 - `D:/Yahia/active/qsearch/V92_EFFECT_2026-05-10.md` (rd045)
 - `D:/Yahia/active/qsearch/MEMCACHE_DESIGN_REFRESH_2026-05-10.md` (rd101)

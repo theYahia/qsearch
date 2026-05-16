@@ -16,7 +16,7 @@ Phase 1 — exact-match SHA256 cache на SQLite. Opt-in через separate end
 | `data/.gitkeep` | NEW | 0 | Placeholder so empty dir is tracked |
 | `.gitignore` | MODIFIED | +5 | Explicit `*.db` / `*.db-journal` / `*.db-wal` / `*.db-shm` patterns + `!data/.gitkeep` |
 | `scripts/smoke-test-cache.mjs` | NEW | ~115 | 10 tests (cold MISS, HIT, collision, normalization, hit_count, upsert, isolation, expiry, stats) |
-| `../QvacSnowBall/research/scripts/brave_sweep.py` | MODIFIED | +75 | `_cache_lookup` + `_cache_store` helpers, `--use-cache` / `--cache-url` / `--cache-max-age` CLI flags, `cfg.use_cache` field, write-through on success |
+| `../../tools/research-backend/brave_sweep.py` | MODIFIED | +75 | `_cache_lookup` + `_cache_store` helpers, `--use-cache` / `--cache-url` / `--cache-max-age` CLI flags, `cfg.use_cache` field, write-through on success |
 
 **Total ≈ 510 LOC modified/added.** Design estimate был ~200 LOC. Overage из-за: (а) full endpoint coverage (`/cache_lookup` + `/cache_store` + `/cache_stats` всё в server.js), (б) richer smoke-test (10 tests vs design's 2-3), (в) brave_sweep.py integration оказался toolfull (cfg field + flag + lookup helper + store helper + cache_engines namespacing per-endpoint).
 
