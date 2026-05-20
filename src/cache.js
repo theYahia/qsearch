@@ -80,6 +80,24 @@ export class QueryCache {
       CREATE INDEX IF NOT EXISTS idx_sm_sprint ON sprint_metrics(sprint_id);
       CREATE INDEX IF NOT EXISTS idx_sm_ts ON sprint_metrics(timestamp);
       CREATE INDEX IF NOT EXISTS idx_sm_topic ON sprint_metrics(topic);
+
+      -- rd275: URL-level cache for /sweep_context payloads. Key = SHA256 of
+      -- (normalized_url + normalized_focus_query). Lets repeat heavy sprints
+      -- skip Qwen3-600M re-extraction on URLs already seen with the same
+      -- focus question. TTL enforced by caller (default 7d, see getSweepContext).
+      CREATE TABLE IF NOT EXISTS sweep_context_cache (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        key_hash TEXT NOT NULL UNIQUE,
+        url TEXT NOT NULL,
+        focus_query TEXT NOT NULL,
+        payload_json TEXT NOT NULL,
+        created_at INTEGER NOT NULL,
+        last_used INTEGER NOT NULL,
+        hit_count INTEGER NOT NULL DEFAULT 0
+      );
+      CREATE INDEX IF NOT EXISTS idx_scc_hash ON sweep_context_cache(key_hash);
+      CREATE INDEX IF NOT EXISTS idx_scc_last_used ON sweep_context_cache(last_used);
+      CREATE INDEX IF NOT EXISTS idx_scc_created ON sweep_context_cache(created_at);
     `)
     this._stmtLookup = this.db.prepare('SELECT results_json, hit_count, created_at FROM query_cache WHERE query_hash = ?')
     this._stmtIncr = this.db.prepare('UPDATE query_cache SET hit_count = hit_count + 1, last_used = ? WHERE query_hash = ?')
@@ -91,9 +109,68 @@ export class QueryCache {
         last_used = excluded.last_used
     `)
 
+    // rd275: prepared statements for the URL-level sweep_context cache.
+    this._stmtScLookup = this.db.prepare('SELECT payload_json, hit_count, created_at FROM sweep_context_cache WHERE key_hash = ?')
+    this._stmtScIncr = this.db.prepare('UPDATE sweep_context_cache SET hit_count = hit_count + 1, last_used = ? WHERE key_hash = ?')
+    this._stmtScUpsert = this.db.prepare(`
+      INSERT INTO sweep_context_cache (key_hash, url, focus_query, payload_json, created_at, last_used, hit_count)
+      VALUES (?, ?, ?, ?, ?, ?, 0)
+      ON CONFLICT(key_hash) DO UPDATE SET
+        payload_json = excluded.payload_json,
+        last_used = excluded.last_used
+    `)
+
     // session counters (process-lifetime; reset on restart)
     this._sessionHits = 0
     this._sessionMisses = 0
+  }
+
+  // rd275: URL normalization for sweep_context cache keys. Casing/whitespace
+  // tweaks must not cause spurious cache misses, so we lowercase scheme + host,
+  // strip fragment, drop trailing slash from the path. We keep query string &
+  // path-case intact — those genuinely change content on some sites.
+  static normalizeUrl (rawUrl) {
+    if (!rawUrl) return ''
+    let u
+    try { u = new URL(String(rawUrl)) } catch { return String(rawUrl).trim().toLowerCase() }
+    u.hash = ''
+    u.protocol = u.protocol.toLowerCase()
+    u.hostname = u.hostname.toLowerCase()
+    let s = u.toString()
+    if (s.endsWith('/') && u.pathname !== '/') s = s.slice(0, -1)
+    return s
+  }
+
+  static normalizeKey (s) {
+    return String(s || '').toLowerCase().trim().replace(/\s+/g, ' ')
+  }
+
+  static hashSweepContextKey (url, focusQuery) {
+    const normUrl = QueryCache.normalizeUrl(url)
+    const normQ = QueryCache.normalizeKey(focusQuery)
+    return createHash('sha256').update(`${normUrl}::${normQ}`).digest('hex')
+  }
+
+  // rd275: TTL'd lookup for /sweep_context. ttlDays default 7 days. Returns
+  // the stored payload object (whatever runSweepContext set) or null.
+  getSweepContext (url, focusQuery, { ttlDays = 7, bust = false } = {}) {
+    if (bust) return null
+    const hash = QueryCache.hashSweepContextKey(url, focusQuery)
+    const row = this._stmtScLookup.get(hash)
+    if (!row) return null
+    if (ttlDays) {
+      const ageMs = Date.now() - row.created_at
+      if (ageMs > ttlDays * 86400_000) return null
+    }
+    this._stmtScIncr.run(Date.now(), hash)
+    try { return JSON.parse(row.payload_json) } catch { return null }
+  }
+
+  setSweepContext (url, focusQuery, payload) {
+    const hash = QueryCache.hashSweepContextKey(url, focusQuery)
+    const now = Date.now()
+    this._stmtScUpsert.run(hash, QueryCache.normalizeUrl(url), QueryCache.normalizeKey(focusQuery), JSON.stringify(payload), now, now)
+    return hash
   }
 
   static hashKey (queryText, engines) {

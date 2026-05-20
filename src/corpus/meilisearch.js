@@ -21,8 +21,12 @@ export class MeilisearchCorpus extends CorpusBackend {
     }
     const idx = this._client.index(INDEX_NAME)
     await idx.updateSearchableAttributes(['title', 'text', 'url'])
-    await idx.updateFilterableAttributes(['engines', 'engine_count', 'namespace', 'backend_source', 'sweep_label', 'url'])
-    await idx.updateSortableAttributes(['engine_count', 'sweep_count', 'first_seen'])
+    // Issue #5 (rd275 sprint): crawled_at filterable+sortable for freshness queries.
+    // updateSettings() is async on Meilisearch side — index keeps serving while
+    // reindex runs in background. Existing 143k docs without crawled_at remain
+    // queryable (Meilisearch allows missing fields). Backfill via separate script.
+    await idx.updateFilterableAttributes(['engines', 'engine_count', 'namespace', 'backend_source', 'sweep_label', 'url', 'crawled_at'])
+    await idx.updateSortableAttributes(['engine_count', 'sweep_count', 'first_seen', 'crawled_at'])
     this._ready = true
   }
 
@@ -71,6 +75,14 @@ export class MeilisearchCorpus extends CorpusBackend {
     await idx.addDocuments([merged])
   }
 
+  // rd275: expose the underlying index handle for callers that need richer
+  // queries than search()/topByTrust() expose — e.g. /pre_sweep_check freshness
+  // coverage with custom attributesToRetrieve.
+  async getIndex () {
+    await this._ensureIndex()
+    return this._client.index(INDEX_NAME)
+  }
+
   async search (query, opts = {}) {
     await this._ensureIndex()
     const idx = this._client.index(INDEX_NAME)
@@ -93,10 +105,40 @@ export class MeilisearchCorpus extends CorpusBackend {
       const idx = this._client.index(INDEX_NAME)
       const s = await idx.getStats()
       const highTrust = await idx.search('', { filter: 'engine_count >= 3', limit: 0 })
-      return { total: s.numberOfDocuments, size_mb: null, high_trust_count: highTrust.estimatedTotalHits ?? 0 }
+
+      // Issue #5 fix (rd275): surface last_crawled_at + count of docs with timestamp.
+      // Graceful query — schema migration may still be reindexing (async).
+      let lastCrawledAt = null
+      let withTimestamp = 0
+      try {
+        const withTs = await idx.search('', { filter: 'crawled_at EXISTS', limit: 0 })
+        withTimestamp = withTs.estimatedTotalHits ?? 0
+        if (withTimestamp > 0) {
+          const latest = await idx.search('', {
+            filter: 'crawled_at EXISTS',
+            sort: ['crawled_at:desc'],
+            limit: 1,
+            attributesToRetrieve: ['crawled_at']
+          })
+          lastCrawledAt = latest.hits?.[0]?.crawled_at ?? null
+        }
+      } catch (e) {
+        // Migration pending on 143k-doc index, or Meilisearch <1.4 (EXISTS filter). Degrade silently.
+        if (!/unknown.*attribute|invalid.*filter/i.test(e.message || '')) {
+          console.warn('[corpus] freshness query failed:', e.message)
+        }
+      }
+
+      return {
+        total: s.numberOfDocuments,
+        size_mb: null,
+        high_trust_count: highTrust.estimatedTotalHits ?? 0,
+        last_crawled_at: lastCrawledAt,
+        documents_with_crawl_timestamp: withTimestamp
+      }
     } catch (e) {
       console.error('[corpus] stats() failed:', e.message)
-      return { total: 0, size_mb: null, high_trust_count: 0 }
+      return { total: 0, size_mb: null, high_trust_count: 0, last_crawled_at: null, documents_with_crawl_timestamp: 0 }
     }
   }
 

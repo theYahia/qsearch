@@ -29,6 +29,7 @@ if (!BRAVE_KEY) {
 
 // ── Imports (after env loading) ────────────────────────────────────
 import { braveFetch } from './backends/brave.js'
+import { createSweepRouter } from './sweep/router.js'
 import { parseQueriesText, runSweep } from './sweep/runner.js'
 import { renderMarkdown as renderSweepMd } from './sweep/parsed_snippets.js'
 import { renderFindings } from './sweep/findings_renderer.js'
@@ -49,6 +50,8 @@ import { rerankByTrust } from './search/rerank.js'
 import { ingestBraveDir } from './ingest/brave.js'
 import { QueryCache, inferEndpoint } from './cache.js'
 import { runSweepContext } from './sweep_context.js'
+import { runPreSweepCheck } from './sweep/pre_check.js'
+import { runBriefScaffold } from './sweep/brief_gen.js'
 
 // ── Corpus clients ─────────────────────────────────────────────────
 const MEILI_URL = process.env.MEILISEARCH_URL || 'http://localhost:7700'
@@ -74,10 +77,18 @@ const academic = (process.env.QSEARCH_ACADEMIC_ENABLED !== 'false') ? new Academ
 // YANDEX_FOLDER_ID are set. Otherwise domain=ru falls back to SearXNG with
 // language=ru-RU bias (still works, just less Yandex-specific coverage).
 let yandex = null
+// rd275: surface why Yandex isn't active so /sweep responses can explain the SearXNG fallback.
+let yandexInitError = null
 if (process.env.YANDEX_API_KEY && process.env.YANDEX_FOLDER_ID) {
   try { yandex = new YandexBackend() } catch (e) {
+    yandexInitError = `init_failed: ${e.message}`
     console.warn(`[yandex] init failed: ${e.message}`)
   }
+} else {
+  const missing = []
+  if (!process.env.YANDEX_API_KEY) missing.push('YANDEX_API_KEY')
+  if (!process.env.YANDEX_FOLDER_ID) missing.push('YANDEX_FOLDER_ID')
+  yandexInitError = `not_configured: missing ${missing.join(' + ')}`
 }
 
 // ── Memcache (Phase 1: exact-match SQLite) ─────────────────────────
@@ -634,6 +645,39 @@ async function handleIndexStatus (req, res, job_id) {
   res.end(JSON.stringify(job, null, 2))
 }
 
+// rd275: render the Layer 8 rejected list as a markdown appendix. Only invoked
+// when ?include_rejected=true on /sweep or /cached_sweep. Lets users tune the
+// QSEARCH_QUALITY_THRESHOLD against composite_score breakdowns from real data.
+function renderRejectedSection (resultsMap) {
+  const lines = ['## Rejected (Layer 8 quality gate)']
+  let anyRejected = false
+  for (const [label, entry] of resultsMap) {
+    if (!entry?._rejected?.length) continue
+    anyRejected = true
+    lines.push('', `### ${label}`)
+    for (const r of entry._rejected) {
+      const parts = r._quality_parts || {}
+      const partsStr = Object.entries(parts).map(([k, v]) => `${k}=${Number(v).toFixed(3)}`).join(' ')
+      lines.push(`- composite=${r._quality_composite} ${partsStr} — ${r.url || r.title || '(no url)'}`)
+    }
+  }
+  if (!anyRejected) lines.push('', '_No rejections — quality gate either disabled or kept every result._')
+  return lines.join('\n')
+}
+
+// rd275: GET /backends/status — JSON snapshot of which backends are active and
+// why the others aren't. Beats grepping logs when a user sees SearXNG results
+// where they expected Yandex.
+function handleBackendsStatus (req, res) {
+  res.writeHead(200, { 'Content-Type': 'application/json' })
+  res.end(JSON.stringify({
+    brave: { active: !!BRAVE_KEY, reason: BRAVE_KEY ? 'configured' : 'missing BRAVE_API_KEY' },
+    searxng: { active: !!searxng, reason: searxng ? 'configured' : 'missing SEARXNG_URL' },
+    academic: { active: !!academic, reason: academic ? 'configured' : 'QSEARCH_ACADEMIC_ENABLED=false' },
+    yandex: { active: !!yandex, reason: yandex ? 'configured' : (yandexInitError || 'unknown') }
+  }, null, 2))
+}
+
 async function handleCorpusStats (req, res) {
   const [meiliStats, qdrantStats] = await Promise.all([meili.stats(), qdrant.stats()])
   res.writeHead(200, { 'Content-Type': 'application/json' })
@@ -642,7 +686,8 @@ async function handleCorpusStats (req, res) {
     namespaces: { builtin: 0, user: meiliStats.total },
     meilisearch_size_mb: meiliStats.size_mb,
     qdrant_vectors: qdrantStats.total,
-    last_crawled_at: null,
+    last_crawled_at: meiliStats.last_crawled_at ?? null,
+    documents_with_crawl_timestamp: meiliStats.documents_with_crawl_timestamp ?? 0,
     high_trust_count: meiliStats.high_trust_count ?? 0
   }, null, 2))
 }
@@ -793,27 +838,11 @@ async function handleSweep (req, res) {
   //   focused  → Brave web with extra_snippets=true; falls back to SearXNG if no Brave key.
   //   critical → Brave web with extra_snippets=true (Phase 3 layers in Brave Context endpoint).
   // Returns Brave-shape response for runSweep's fetchAndDedupe to consume.
-  const sweepRouter = (priority, domain) => async (endpoint, query, params) => {
-    if (endpoint !== 'web') throw new Error(`/sweep only supports web endpoint (got ${endpoint})`)
-    // Phase A: scholarly domain → academic backend (free, peer-reviewed). Overrides priority.
-    if (domain === 'scholarly' && academic) return await academicAsBraveResponse(query, params)
-    // Phase C: ru domain → direct Yandex backend if configured; else SearXNG with
-    // language=ru-RU. Google/DDG return RU sites when biased.
-    if (domain === 'ru' && yandex) {
-      try { return await yandexAsBraveResponse(query, params) }
-      catch (e) { console.warn(`[yandex] failed, falling back to SearXNG ru-RU: ${e.message}`) }
-    }
-    const searxngOpts = domain === 'ru' ? { language: 'ru-RU' } : {}
-    if (priority === 'broad') {
-      if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
-      if (BRAVE_KEY) return await braveFetch('web', query, params)
-      throw new Error('broad priority needs SEARXNG_URL or BRAVE_API_KEY')
-    }
-    // focused / critical — prefer Brave with extra_snippets, SearXNG fallback only on missing key.
-    if (BRAVE_KEY) return await braveFetch('web', query, { ...params, extra_snippets: true })
-    if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
-    throw new Error(`${priority} priority needs BRAVE_API_KEY (or SEARXNG_URL fallback)`)
-  }
+  const sweepRouter = createSweepRouter({
+    searxng, academic, yandex, braveKey: BRAVE_KEY,
+    braveFetch, searxngAsBraveResponse, academicAsBraveResponse, yandexAsBraveResponse,
+    endpointName: '/sweep'
+  })
   console.log(`[sweep] starting ${queries.length} queries via priority router (broad→${searxng ? 'SearXNG' : 'Brave'}, focused/critical→${BRAVE_KEY ? 'Brave' : 'SearXNG fallback'}, scholarly→${academic ? 'Academic' : 'disabled'}, ru→${yandex ? 'Yandex' : 'SearXNG+ru-RU'})`)
   const { results, stats } = await runSweep(queries, sweepRouter)
 
@@ -827,7 +856,14 @@ async function handleSweep (req, res) {
     console.log(`[rerank] stage1: ${rerankStats.stage1.ran} ran / ${rerankStats.stage1.skipped} skipped, stage2: ${rerankStats.stage2.ran} ran (${rerankStats.stage2.calls || 0} LLM calls), gate: ${rerankStats.gate?.ran || 0} ran (rejection=${rerankStats.gate?.rejection_rate ?? 'n/a'}) in ${rerankStats.ms}ms`)
   }
 
-  const md = renderSweepMd(results, queries, stats)
+  let md = renderSweepMd(results, queries, stats)
+
+  // rd275: ?include_rejected=true appends the Layer 8 reject list so users can
+  // tune QSEARCH_QUALITY_THRESHOLD against real data. Off by default — markdown
+  // contract stays unchanged for existing consumers.
+  if (new URL(req.url, 'http://localhost').searchParams.get('include_rejected') === 'true') {
+    md += '\n\n' + renderRejectedSection(results)
+  }
 
   // Phase 5: record per-priority economy metric (one row per priority tier).
   // Phase A: scholarly queries are billed as `academic` ($0) regardless of priority.
@@ -1082,23 +1118,11 @@ async function handleCachedSweep (req, res) {
   }
 
   // Phase 2 + A + C priority router (mirrors /sweep handler).
-  const cachedSweepRouter = (priority, domain) => async (endpoint, query, params) => {
-    if (endpoint !== 'web') throw new Error(`/cached_sweep only supports web endpoint (got ${endpoint})`)
-    if (domain === 'scholarly' && academic) return await academicAsBraveResponse(query, params)
-    if (domain === 'ru' && yandex) {
-      try { return await yandexAsBraveResponse(query, params) }
-      catch (e) { console.warn(`[yandex] failed, falling back to SearXNG ru-RU: ${e.message}`) }
-    }
-    const searxngOpts = domain === 'ru' ? { language: 'ru-RU' } : {}
-    if (priority === 'broad') {
-      if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
-      if (BRAVE_KEY) return await braveFetch('web', query, params)
-      throw new Error('broad priority needs SEARXNG_URL or BRAVE_API_KEY')
-    }
-    if (BRAVE_KEY) return await braveFetch('web', query, { ...params, extra_snippets: true })
-    if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
-    throw new Error(`${priority} priority needs BRAVE_API_KEY (or SEARXNG_URL fallback)`)
-  }
+  const cachedSweepRouter = createSweepRouter({
+    searxng, academic, yandex, braveKey: BRAVE_KEY,
+    braveFetch, searxngAsBraveResponse, academicAsBraveResponse, yandexAsBraveResponse,
+    endpointName: '/cached_sweep'
+  })
 
   let liveResults = new Map()
   let liveStats = { web_ok: 0, web_fail: 0, total_deduped: 0, duration_ms: 0 }
@@ -1139,7 +1163,11 @@ async function handleCachedSweep (req, res) {
     console.log(`[cached_sweep][rerank] stage1: ${rerankStats.stage1.ran} ran / ${rerankStats.stage1.skipped} skipped, stage2: ${rerankStats.stage2.ran} ran (${rerankStats.stage2.calls || 0} LLM calls), gate: ${rerankStats.gate?.ran || 0} ran (rejection=${rerankStats.gate?.rejection_rate ?? 'n/a'}) in ${rerankStats.ms}ms`)
   }
 
-  const md = renderSweepMd(merged, queries, stats)
+  let md = renderSweepMd(merged, queries, stats)
+
+  if (new URL(req.url, 'http://localhost').searchParams.get('include_rejected') === 'true') {
+    md += '\n\n' + renderRejectedSection(merged)
+  }
 
   // Phase 5: economy metric — cache_hit row + miss row (so reports show savings).
   if (queryCache) {
@@ -1303,6 +1331,71 @@ async function handleCacheStore (req, res) {
 // Phase 3: local LLM Context endpoint — Brave LLM Context analogue (free, GPU only).
 // Body: { urls: string[], focus_query: string, snippets_per_url?, max_chars_per_url?, timeout_ms? }
 // Returns Brave-context-shape JSON: { query, type, source, results: [{url, title, snippets[], cleaned_markdown, source}], total_fetch_ms, total_clean_ms, cache_hits, cache_misses }
+// rd275 Lever C: pre-sweep coverage check against the local corpus.
+async function handlePreSweepCheck (req, res) {
+  let body
+  try {
+    body = JSON.parse((await readBody(req)) || '{}')
+  } catch {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'invalid JSON body' }))
+    return
+  }
+  if (!Array.isArray(body.queries) || !body.queries.length) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'queries[] required (non-empty array of strings)' }))
+    return
+  }
+  if (body.queries.length > 500) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'queries[] capped at 500 per request' }))
+    return
+  }
+  try {
+    const idx = await meili.getIndex()
+    const out = await runPreSweepCheck(body, idx)
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify(out, null, 2))
+  } catch (err) {
+    console.error('[pre_sweep_check] error:', err.message)
+    res.writeHead(500, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'pre_sweep_check failed', detail: String(err) }))
+  }
+}
+
+// rd275 Lever D: research-brief scaffold (Ollama generates clusters + queries.txt,
+// Claude finalize load-bearing sections — priors / killer questions / verdict).
+async function handleResearchBrief (req, res) {
+  let body
+  try {
+    body = JSON.parse((await readBody(req)) || '{}')
+  } catch {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'invalid JSON body' }))
+    return
+  }
+  if (!body.topic || typeof body.topic !== 'string') {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'topic (string) required' }))
+    return
+  }
+  const tier = body.tier || 'standard'
+  if (!['light', 'standard', 'heavy'].includes(tier)) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: `tier must be light|standard|heavy (got ${tier})` }))
+    return
+  }
+  try {
+    const out = await runBriefScaffold({ topic: body.topic, tier, aperture: body.aperture })
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify(out, null, 2))
+  } catch (err) {
+    console.error('[research_brief] error:', err.message)
+    res.writeHead(500, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'research_brief failed', detail: String(err) }))
+  }
+}
+
 async function handleSweepContext (req, res) {
   let body
   try {
@@ -1329,7 +1422,15 @@ async function handleSweepContext (req, res) {
     return
   }
   try {
-    const out = await runSweepContext({ urls, focus_query, max_chars_per_url, snippets_per_url, timeout_ms })
+    // rd275: wire URL-cache so repeat /sweep_context calls on the same (url, focus_query)
+    // skip Qwen3-600M extraction (~10-15s/URL on GPU). bust=1 query param forces refresh.
+    const reqUrl = new URL(req.url, 'http://localhost')
+    const bust = reqUrl.searchParams.get('bust') === '1'
+    const cacheClient = queryCache ? {
+      get: async (url, query) => queryCache.getSweepContext(url, query, { ttlDays: 7, bust }),
+      set: async (url, query, payload) => { queryCache.setSweepContext(url, query, payload) }
+    } : null
+    const out = await runSweepContext({ urls, focus_query, max_chars_per_url, snippets_per_url, timeout_ms, cacheClient })
     // Phase 5: record qsearch_local cost = $0 (GPU only).
     if (queryCache) {
       const meta = sprintMetadataFromReq(req)
@@ -1494,6 +1595,14 @@ const server = http.createServer((req, res) => {
     handleCacheStats(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
     return
   }
+  if (req.method === 'POST' && req.url === '/pre_sweep_check') {
+    handlePreSweepCheck(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'pre_sweep_check failed', detail: String(err) })) })
+    return
+  }
+  if (req.method === 'POST' && req.url === '/research-brief') {
+    handleResearchBrief(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'research_brief failed', detail: String(err) })) })
+    return
+  }
   if (req.method === 'POST' && req.url === '/sweep_context') {
     handleSweepContext(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'sweep_context failed', detail: String(err) })) })
     return
@@ -1505,6 +1614,10 @@ const server = http.createServer((req, res) => {
   const indexJobMatch = req.method === 'GET' && req.url.match(/^\/index\/([a-f0-9-]{36})$/)
   if (indexJobMatch) {
     handleIndexStatus(req, res, indexJobMatch[1]).catch((err) => { if (res.headersSent) return; res.writeHead(502, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'request failed', detail: String(err) })) })
+    return
+  }
+  if (req.method === 'GET' && req.url === '/backends/status') {
+    try { handleBackendsStatus(req, res) } catch (err) { if (!res.headersSent) { res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'status failed', detail: String(err) })) } }
     return
   }
   if (req.method === 'GET' && req.url === '/corpus/stats') {
@@ -1554,10 +1667,21 @@ server.headersTimeout = 66000
 
 server.listen(PORT, () => {
   console.log(`qsearch v0.4.0 listening on http://localhost:${PORT}`)
+  // rd275: surface gates that ship OFF by default so users notice they exist.
+  // Default is intentionally OFF (no behavior change for existing consumers);
+  // flip via env after dogfooding — see docs/QUALITY_GATE_DOGFOOD.md.
+  if (process.env.QSEARCH_RERANK_ENABLED !== 'true') {
+    console.log('[notice] rerank disabled — set QSEARCH_RERANK_ENABLED=true to enable Stages 1+2 (embedding + LLM scoring)')
+  }
+  if (process.env.QSEARCH_QUALITY_GATE_ENABLED !== 'true') {
+    console.log('[notice] Layer 8 quality gate disabled — see docs/QUALITY_GATE_DOGFOOD.md before flipping QSEARCH_QUALITY_GATE_ENABLED=true')
+  }
   console.log('POST /search  { "query": "...", "corpus_first": true }')
   console.log('POST /sweep   <queries.txt body> (label|query lines)')
   console.log('POST /cached_sweep  <queries.txt body> (cache-aware, opt-in)')
   console.log('POST /sweep_context  { urls:[], focus_query } (Phase 3 local LLM Context, $0)')
+  console.log('POST /pre_sweep_check { queries:[], freshness_days?, overlap_threshold? } (rd275 Lever C)')
+  console.log('POST /research-brief { topic, tier:light|standard|heavy } (rd275 Lever D, scaffold-only)')
   console.log('GET  /economy_report?from=&to=&sprint_id=&topic=&format=markdown|json  (Phase 5)')
   console.log('GET  /cache_lookup?hash=<sha256>  (or ?query=<text>&engines=<csv>)')
   console.log('POST /cache_store   { query, engines, results }')

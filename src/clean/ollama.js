@@ -75,7 +75,9 @@ function withTimeout (promise, ms, label) {
   return Promise.race([promise, timeout]).finally(() => clearTimeout(timer))
 }
 
-async function ollamaComplete (system, user) {
+// rd275: exported so brief_gen.js and other callers can reuse the same
+// timeout-wrapped Ollama completion path without duplicating fetch logic.
+export async function ollamaComplete (system, user) {
   const ctrl = new AbortController()
   const timer = setTimeout(() => ctrl.abort(), COMPLETION_TIMEOUT_MS)
   try {
