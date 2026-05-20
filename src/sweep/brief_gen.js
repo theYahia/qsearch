@@ -36,7 +36,7 @@ Rules:
 - Cover the topic from multiple angles: incumbents, alternatives, benchmarks, pricing, ecosystem, criticism, future trends, edge cases, regulation if relevant.
 - Do not write Brier probabilities, killer questions, or recommendations.`
 
-function floorFor (tier) {
+export function floorFor (tier) {
   if (tier === 'heavy') return HEAVY_FLOOR_CLUSTERS
   if (tier === 'standard') return STANDARD_FLOOR_CLUSTERS
   return LIGHT_FLOOR_CLUSTERS
@@ -54,7 +54,7 @@ function buildUserPrompt (topic, tier, aperture, retryHint = null) {
   return lines.join('\n')
 }
 
-function parseClusters (raw) {
+export function parseClusters (raw) {
   if (!raw) return null
   // Strip code fences if the model added them despite instructions.
   const cleaned = raw.replace(/```(?:json)?/gi, '').replace(/```/g, '').trim()
@@ -79,7 +79,7 @@ function parseClusters (raw) {
 }
 
 // 70/25/5 priority split across clusters for heavy; lighter mixes for smaller tiers.
-function priorityFor (idx, total, tier) {
+export function priorityFor (idx, total, tier) {
   if (tier === 'light') return 'broad'
   if (tier === 'standard') {
     if (idx / total < 0.8) return 'broad'
@@ -92,7 +92,7 @@ function priorityFor (idx, total, tier) {
   return 'critical'
 }
 
-function buildQueriesTxt (clusters, topic, tier) {
+export function buildQueriesTxt (clusters, topic, tier) {
   const perCluster = QUERIES_PER_CLUSTER[tier] || QUERIES_PER_CLUSTER.standard
   const rows = []
   const t = topic.trim()
@@ -119,7 +119,7 @@ function buildQueriesTxt (clusters, topic, tier) {
   return rows.join('\n')
 }
 
-function buildScaffoldMd (topic, tier, aperture, clusters) {
+export function buildScaffoldMd (topic, tier, aperture, clusters) {
   const floor = floorFor(tier)
   const short = clusters.length < floor
   const clusterList = clusters

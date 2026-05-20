@@ -158,9 +158,10 @@ export class QueryCache {
     const hash = QueryCache.hashSweepContextKey(url, focusQuery)
     const row = this._stmtScLookup.get(hash)
     if (!row) return null
-    if (ttlDays) {
+    if (ttlDays != null) {
+      // >= so that ttlDays=0 always expires (Date.now() - just-now == 0 ≥ 0).
       const ageMs = Date.now() - row.created_at
-      if (ageMs > ttlDays * 86400_000) return null
+      if (ageMs >= ttlDays * 86400_000) return null
     }
     this._stmtScIncr.run(Date.now(), hash)
     try { return JSON.parse(row.payload_json) } catch { return null }

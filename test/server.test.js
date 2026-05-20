@@ -548,4 +548,84 @@ describe('qsearch server', () => {
     assert.ok(!res.raw.includes('185.246.223.7'))
     assert.ok(res.raw.includes('qsearch.pro'))
   })
+
+  // ── rd277: /backends/status — observability for Yandex/SearXNG/Brave/Academic
+  test('GET /backends/status returns JSON object with all 4 backends', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/backends/status')
+    assert.equal(res.status, 200)
+    assert.ok(res.headers['content-type'].includes('application/json'))
+    for (const backend of ['brave', 'searxng', 'academic', 'yandex']) {
+      assert.ok(backend in res.json, `${backend} missing from /backends/status response`)
+      assert.equal(typeof res.json[backend].active, 'boolean')
+      assert.equal(typeof res.json[backend].reason, 'string')
+    }
+  })
+
+  test('GET /backends/status — yandex reason matches expected shape', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/backends/status')
+    // Test process has no YANDEX_API_KEY → not_configured. If user runs with creds, configured.
+    assert.match(res.json.yandex.reason, /^(not_configured|init_failed|configured|unknown)/)
+  })
+
+  // ── rd277: /pre_sweep_check validation contract
+  test('POST /pre_sweep_check rejects empty body with 400', async () => {
+    const res = await request(QSEARCH_PORT, 'POST', '/pre_sweep_check', {})
+    assert.equal(res.status, 400)
+    assert.match(res.json.error, /queries\[\] required/)
+  })
+
+  test('POST /pre_sweep_check rejects queries[] non-array', async () => {
+    const res = await request(QSEARCH_PORT, 'POST', '/pre_sweep_check', { queries: 'not an array' })
+    assert.equal(res.status, 400)
+  })
+
+  test('POST /pre_sweep_check rejects empty queries[]', async () => {
+    const res = await request(QSEARCH_PORT, 'POST', '/pre_sweep_check', { queries: [] })
+    assert.equal(res.status, 400)
+  })
+
+  test('POST /pre_sweep_check caps queries[] at 500', async () => {
+    const queries = Array.from({ length: 501 }, (_, i) => `q${i}`)
+    const res = await request(QSEARCH_PORT, 'POST', '/pre_sweep_check', { queries })
+    assert.equal(res.status, 400)
+    assert.match(res.json.error, /capped at 500/)
+  })
+
+  test('POST /pre_sweep_check responds (200 or 500) to a valid request', async () => {
+    // Spawned server uses a fake MEILISEARCH_URL — corpus query will fail with
+    // 500. That's the honest behaviour: route exists, validation passed,
+    // backend just unreachable in this harness. Covered for real in Tier 4
+    // smoke test against a running production-mode server.
+    const res = await request(QSEARCH_PORT, 'POST', '/pre_sweep_check', {
+      queries: ['rd277 sentinel ' + Date.now()],
+      freshness_days: 7
+    })
+    assert.ok([200, 500].includes(res.status), `unexpected status ${res.status}`)
+    if (res.status === 200) {
+      assert.ok(Array.isArray(res.json.coverage))
+      assert.match(res.json.recommendation, /^(skip_sweep|partial_sweep|run_sweep|no_queries)$/)
+    } else {
+      assert.match(res.json.error, /pre_sweep_check failed/)
+    }
+  })
+
+  // ── rd277: /research-brief validation contract
+  test('POST /research-brief rejects missing topic with 400', async () => {
+    const res = await request(QSEARCH_PORT, 'POST', '/research-brief', { tier: 'standard' })
+    assert.equal(res.status, 400)
+    assert.match(res.json.error, /topic.*required/)
+  })
+
+  test('POST /research-brief rejects invalid tier with 400', async () => {
+    const res = await request(QSEARCH_PORT, 'POST', '/research-brief', { topic: 'foo', tier: 'ultradeep' })
+    assert.equal(res.status, 400)
+    assert.match(res.json.error, /tier must be light\|standard\|heavy/)
+  })
+
+  // ── rd277: include_rejected query param on /sweep
+  test('GET /backends/status is accessible without auth', async () => {
+    // Sanity — observability endpoint should never gate on auth in v0.4.0.
+    const res = await request(QSEARCH_PORT, 'GET', '/backends/status')
+    assert.equal(res.status, 200)
+  })
 })

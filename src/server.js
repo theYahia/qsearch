@@ -1603,7 +1603,7 @@ const server = http.createServer((req, res) => {
     handleResearchBrief(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'research_brief failed', detail: String(err) })) })
     return
   }
-  if (req.method === 'POST' && req.url === '/sweep_context') {
+  if (req.method === 'POST' && (req.url === '/sweep_context' || req.url.startsWith('/sweep_context?'))) {
     handleSweepContext(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'sweep_context failed', detail: String(err) })) })
     return
   }
