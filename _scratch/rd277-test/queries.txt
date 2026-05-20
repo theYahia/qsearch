@@ -1,0 +1,5 @@
+qdrant|qdrant vector database|broad
+weaviate|weaviate self-hosted|focused
+chromadb|chromadb deployment|broad
+milvus|milvus benchmarks 2026|focused
+typesense|typesense vector search|broad

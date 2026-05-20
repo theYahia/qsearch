@@ -1,0 +1,24 @@
+{
+  "accepted": [
+    {
+      "label": "xl_milvus",
+      "query": "бенчмарки Milvus 2026",
+      "priority": "focused",
+      "domain": "ru"
+    }
+  ],
+  "dropped": [
+    {
+      "label": "weaviate",
+      "original": "weaviate self-hosted",
+      "translated": "установка weaviate",
+      "round_trip": "weaviate installation",
+      "similarity": 0.687,
+      "min_similarity": 0.7,
+      "reason": "similarity_below_gate"
+    }
+  ],
+  "min_similarity": 0.7,
+  "accepted_count": 1,
+  "dropped_count": 1
+}

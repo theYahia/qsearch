@@ -1,0 +1,12 @@
+{
+  "generated": "2026-05-20T10:35:02Z",
+  "duration_seconds": 1.71,
+  "total_queries": 2,
+  "deduped_count": 0,
+  "quality_avg": 5.16,
+  "stats": {
+    "web_ok": 2,
+    "unique_hostnames": 22
+  },
+  "warnings": []
+}

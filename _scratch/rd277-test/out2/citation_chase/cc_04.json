@@ -1,0 +1,1968 @@
+{
+  "type": "search",
+  "query": {
+    "original": "Weaviate pricing citation sources",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "discussions": {
+    "type": "search",
+    "results": [
+      {
+        "title": "scaling - Weaviate Cloud Service (WCS) Pricing - Stack Overflow",
+        "url": "https://stackoverflow.com/questions/78151299/weaviate-cloud-service-wcs-pricing",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "I'm considering using Weaviate Cloud Service (WCS) for my project, which requires a scalable vector search engine. Given the nature of my project, I anticipate the need to scale horizontally, poten...",
+        "fetched_content_timestamp": 1779179425,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "stackoverflow.com",
+          "hostname": "stackoverflow.com",
+          "favicon": "https://imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8",
+          "path": "› questions  › 78151299  › weaviate-cloud-service-wcs-pricing"
+        },
+        "data": {
+          "forum_name": "stackoverflow.com"
+        }
+      },
+      {
+        "title": "Cost advice for using VectorDB services",
+        "url": "https://www.reddit.com/r/vectordatabase/comments/1jl2tbt/cost_advice_for_using_vectordb_services/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "For a more accurate pricing you need size of records and number of vector dimensions you intend to use. Assuming 384 dimensions and millions of records after a day, some rough numbers for cloud hosted services: Pinecone: Maybe $60 a day because of amount of daily writes Qdrant: $205 a month for 10 million vectors, source: https://cloud.qdrant.io/calculator Weaviate: $369 for 10 million, source: https://weaviate.io/pricing/serverless Zilliz: difficult to estate from vCU units they use https://zilliz.com/pricing Alternatively, I'd say self host an open-source system like Qdrant, Weaviate, SemaDB, Milvus, Chroma etc on your own hardware. You can a relatively strong VPS for $50..",
+        "fetched_content_timestamp": 1775569633,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › vectordatabase  › comments  › 1jl2tbt  › cost_advice_for_using_vectordb_services"
+        },
+        "age": "March 27, 2025",
+        "data": {
+          "forum_name": "r/vectordatabase",
+          "num_answers": 3,
+          "score": "2",
+          "title": "Cost advice for using VectorDB services",
+          "question": "<p>\n      Hi everyone,<br>I need some advice on the costs associated with using VectorDB services. We’re working on a project where we’ll be downloading a daily SQL dump with around 10 million records, and then creating vector embeddings to store in a VectorDB. Each day, we will update the embeddings for the records that have changed in the SQL dump.\n    </p><p>\n      Can anyone give me a rough cost estimate for using services like Azure or any other VectorDB providers? I’m looking for general pricing info for storage, compute, and any other relevant costs.\n    </p><p>\n      Thanks for your help!&quot;\n    </p>",
+          "top_comment": "For a more accurate pricing you need size of records and number of vector dimensions you intend to use. Assuming 384 dimensions and millions of records after a day, some rough numbers for cloud hosted services: Pinecone: Maybe $60 a day because of amount of daily writes Qdrant: $205 a month for 10 million vectors, source: https://cloud.qdrant.io/calculator Weaviate: $369 for 10 million, source: https://weaviate.io/pricing/serverless Zilliz: difficult to estate from vCU units they use https://zilliz.com/pricing Alternatively, I'd say self host an open-source system like Qdrant, Weaviate, SemaDB, Milvus, Chroma etc on your own hardware. You can a relatively strong VPS for $50.."
+        }
+      },
+      {
+        "title": "Question about Weaviate pricing: Differences between public pricing and actual cluster pricing",
+        "url": "https://forum.weaviate.io/t/question-about-weaviate-pricing-differences-between-public-pricing-and-actual-cluster-pricing/20316",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Hi everyone, I’m evaluating Weaviate and I have a question regarding the pricing. On the public Weaviate Cloud page, it states that pricing starts at $25/month, with a storage cost of $0.095 per 1M vector dimensions per month. However, when I create a cluster, the pricing is significantly ...",
+        "fetched_content_timestamp": 1777408381,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forum.weaviate.io",
+          "hostname": "forum.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/p2GSfvX7jdyzacyF5UYQDLAZrUx25V8-b7sajMu8io4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMThlYzVlY2M0/NDcxNjEyZDk2YjEy/YTNmNjg3ZWExYTBl/NmQyODY4NTFiNzVl/YzJiYzAwYWMwMzQy/YWFjODViNC9mb3J1/bS53ZWF2aWF0ZS5p/by8",
+          "path": "› t  › question-about-weaviate-pricing-differences-between-public-pricing-and-actual-cluster-pricing  › 20316"
+        },
+        "age": "March 26, 2025",
+        "data": {
+          "forum_name": "forum.weaviate.io",
+          "num_answers": 1,
+          "score": "0",
+          "title": "Question about Weaviate pricing: Differences between public pricing and actual cluster pricing",
+          "question": "Hi everyone,\n\nI’m evaluating Weaviate and I have a question regarding the pricing. On the public Weaviate Cloud page, it states that pricing starts at $25/month, with a storage cost of $0.095 per 1M vector dimensions per month.\n\nHowever, when I create a cluster, the pricing is significantly differen&hellip;",
+          "top_comment": "Hi everyone, I’m evaluating Weaviate and I have a question regarding the pricing. On the public Weaviate Cloud page, it states that pricing starts at $25/month, with a storage cost of $0.095 per 1M vector dimensions per month. However, when I create a cluster, the pricing is significantly ..."
+        }
+      },
+      {
+        "title": "Seeking Insights: Weaviate pricing structure",
+        "url": "https://forum.weaviate.io/t/seeking-insights-weaviate-pricing-structure/1804",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "We are currently working on an AI-based project where we aim to integrate vector search functionality. As part of our project, we are considering using Weaviate as our vector database solution. However, we need detailed information about the pricing structure to evaluate its feasibility for ...",
+        "fetched_content_timestamp": 1765193840,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forum.weaviate.io",
+          "hostname": "forum.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/p2GSfvX7jdyzacyF5UYQDLAZrUx25V8-b7sajMu8io4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMThlYzVlY2M0/NDcxNjEyZDk2YjEy/YTNmNjg3ZWExYTBl/NmQyODY4NTFiNzVl/YzJiYzAwYWMwMzQy/YWFjODViNC9mb3J1/bS53ZWF2aWF0ZS5p/by8",
+          "path": "› t  › seeking-insights-weaviate-pricing-structure  › 1804"
+        },
+        "age": "March 23, 2024",
+        "data": {
+          "forum_name": "forum.weaviate.io",
+          "num_answers": 1,
+          "score": "0",
+          "title": "Seeking Insights: Weaviate pricing structure",
+          "question": "We are currently working on an AI-based project where we aim to integrate vector search functionality. As part of our project, we are considering using Weaviate as our vector database solution. However, we need detailed information about the pricing structure to evaluate its feasibility for our proj&hellip;",
+          "top_comment": "We are currently working on an AI-based project where we aim to integrate vector search functionality. As part of our project, we are considering using Weaviate as our vector database solution. However, we need detailed information about the pricing structure to evaluate its feasibility for ..."
+        }
+      },
+      {
+        "title": "Are third party PaaS vector databases (Pinecone, Milvus, Weaviate etc) ever necessary? When will the bubble burst?",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1bh3q4g/are_third_party_paas_vector_databases_pinecone/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "I think you answered your question in your post. Small scale developer only needs something like JSON/Gaia’s to locally store a vector DB and set up some custom code to keep synchronized backups in case of failures. The other vectorDB vendors are there for more scaled up applications/businesses. Their bubble will only burst when those customers stop needing their services.",
+        "fetched_content_timestamp": 1777760223,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › LocalLLaMA  › comments  › 1bh3q4g  › are_third_party_paas_vector_databases_pinecone"
+        },
+        "age": "March 17, 2024",
+        "data": {
+          "forum_name": "r/LocalLLaMA",
+          "num_answers": 38,
+          "score": "52",
+          "title": "Are third party PaaS vector databases (Pinecone, Milvus, Weaviate etc) ever necessary? When will the bubble burst?",
+          "question": "<p>\n      Vector database cloud services such as Pinecone, Milvus, Weaviate etc are widely recommended to use with RAG apps.\n    </p><p>\n      The initial setup is easy, but for production you are &quot;vendor locked&quot; to a vector store service. These services have hidden costs and if your app picks up steam you might end up paying them a lot more money than just setting up your own database.\n    </p><p>\n      My experience is that for quick prototyping you can store vectors in json file and use numpy to calculate cosine similarity. This runs completely locally and can be setup in a minute. If you want to use something like Sqlite you can use sqlite-vss extension to make sqlite your local prototype vectorstore.\n    </p><p>\n      For production you can use Postgres &quot;pgvector&quot; extension, the extension turn Postgres to a vector database.. Postgres is tried and tested technology used by millions of applications. It is supported by all cloud vendors, you can run it on premises, in a dockerfile locally or in a server.. whatever you want..\n    </p><p>\n      From what I understood many of these Vector database companies have raised substantial amount of venture capital. Crazy since they all do exactly the same thing and are in the end not even necessary technology.. Or am I missing something?\n    </p><p>\n      Anyone feel the same way?\n    </p>",
+          "top_comment": "I think you answered your question in your post. Small scale developer only needs something like JSON/Gaia’s to locally store a vector DB and set up some custom code to keep synchronized backups in case of failures. The other vectorDB vendors are there for more scaled up applications/businesses. Their bubble will only burst when those customers stop needing their services."
+        }
+      },
+      {
+        "title": "The most cost-effective Vector Databases",
+        "url": "https://www.reddit.com/r/SQL/comments/13kkwum/the_most_costeffective_vector_databases/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Not only cost-effective, but MyScale also outperforms other vector databases in terms of QPS on the LAION 5M dataset with a 98.5% recall rate, achieving over 150 QPS. In comparison, Pinecone s1 has a QPS of approximately 10, which is significantly lower than MyScale. Weaviate and Zilliz Cloud ...",
+        "fetched_content_timestamp": 1747992721,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › SQL  › comments  › 13kkwum  › the_most_costeffective_vector_databases"
+        },
+        "age": "May 18, 2023",
+        "data": {
+          "forum_name": "r/SQL",
+          "num_answers": 12,
+          "score": "1",
+          "title": "The most cost-effective Vector Databases",
+          "top_comment": "Not only cost-effective, but MyScale also outperforms other vector databases in terms of QPS on the LAION 5M dataset with a 98.5% recall rate, achieving over 150 QPS. In comparison, Pinecone s1 has a QPS of approximately 10, which is significantly lower than MyScale. Weaviate and Zilliz Cloud ..."
+        }
+      },
+      {
+        "title": "Vector database : pgvector vs milvus vs weaviate.  ",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1e63m16/vector_database_pgvector_vs_milvus_vs_weaviate/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "I'm going with postgres with pgvector and pgvectorscale. I think postgres will kill off all the specialised vector databases relatively quickly.",
+        "fetched_content_timestamp": 1777728574,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › LocalLLaMA  › comments  › 1e63m16  › vector_database_pgvector_vs_milvus_vs_weaviate"
+        },
+        "age": "July 18, 2024",
+        "data": {
+          "forum_name": "r/LocalLLaMA",
+          "num_answers": 48,
+          "score": "27",
+          "title": "Vector database : pgvector vs milvus vs weaviate.  ",
+          "question": "<p>\n      Any recommendation?  From google\n    </p><p>\n      Weaviate —————\n    </p><p>\n      Strengths: Focus on semantic search: Weaviate excels at understanding the meaning behind search queries, going beyond simple keyword matching. It uses GraphQL for querying, making it flexible and powerful. Built-in modules: Offers modules for text, image, and other data types, simplifying integration. Strong community: Active and growing community with good documentation and support.\n    </p><p>\n      Weaknesses: Performance: Can be slower than Milvus for very large datasets and high-throughput scenarios. Maturity: Relatively newer compared to Milvus, so some features might be less mature.\n    </p><p>\n      Milvus ———— Strengths: High performance: Designed for speed and scalability, handling massive datasets and high query volumes efficiently. Mature ecosystem: Well-established with a large community, extensive documentation, and integrations with various tools. Flexibility: Supports various indexing algorithms and distance metrics, allowing for customization.\n    </p><p>\n      Weaknesses: Less focus on semantic search: Primarily focused on vector similarity search, lacking Weaviate&#39;s semantic understanding capabilities. Steeper learning curve: Can be more complex to set up and configure compared to Weaviate.\n    </p><p>\n      pgvector —————- Strengths: Simplicity: Leverages the familiarity and power of PostgreSQL, making it easy to integrate into existing PostgreSQL workflows. Cost-effective: Utilizes existing PostgreSQL infrastructure, potentially reducing costs compared to standalone vector databases. Good performance: Offers decent performance for moderate-sized datasets.\n    </p><p>\n      Weaknesses: Scalability: May struggle with very large datasets and high query loads compared to Milvus. Limited features: Fewer features and customization options compared to Weaviate and Milvus.\n    </p><p>\n      any accommodations? The use case to review a new defective document, against the historical list of defective documents and recommend the corrective action.\n    </p>",
+          "top_comment": "I'm going with postgres with pgvector and pgvectorscale. I think postgres will kill off all the specialised vector databases relatively quickly."
+        }
+      },
+      {
+        "title": "Choosing a vector db for 100 million pages of text. Leaning towards Milvus, Qdrant or Weaviate. Am I missing anything, what would you choose? ",
+        "url": "https://www.reddit.com/r/vectordatabase/comments/1dcvyrm/choosing_a_vector_db_for_100_million_pages_of/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "The standalone and \"lite\" versions of Milvus are fairly memory-efficient. It's the cluster version that will take up lots of resources, and we typically recommend folks use Milvus on K8s only once they've reached a large enough scale. I suggest starting with Milvus Lite: https://milvus.io/docs/milvus_lite.md . Once you need more storage or want to improve query/search performance, you can easily switch to standalone or cluster.",
+        "fetched_content_timestamp": 1777546433,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "› r  › vectordatabase  › comments  › 1dcvyrm  › choosing_a_vector_db_for_100_million_pages_of"
+        },
+        "age": "June 10, 2024",
+        "data": {
+          "forum_name": "r/vectordatabase",
+          "num_answers": 41,
+          "score": "13",
+          "title": "Choosing a vector db for 100 million pages of text. Leaning towards Milvus, Qdrant or Weaviate. Am I missing anything, what would you choose? ",
+          "question": "<p>\n      For context my vector db research started today from 0 knowledge and I feel absolutely unqualified to be making this decision but here we are.\n    </p><p>\n      I have narrowed the search down to Milvus, Qdrant and potentially Weaviate.\n    </p><p>\n      I am scoping out a project for a client where we need to store up to 100 million pages. The application is scientific so retrieval precision is a top priority as is search time latency and cost.\n    </p><p>\n      It seems:\n    </p><ul>\n        <li>\n      <p>\n      Milvus seems the most established and easiest to setup. also itis fast but takes up a lot of memory so can get quite expensive.\n    </p>\n    </li><li>\n      <p>\n      Qdrant is fast and quite a bit cheaper than Milvus but lacks dynamic sharding\n    </p>\n    </li><li>\n      <p>\n      I have seen two conflicting reports one saying Weaviate is incredibly quick with a benchmark of 0.12s for a particular query which took Milvus 0.9s to perform the same and then another where it says it is slow. and it is the cheapest.\n    </p>\n    </li><li>\n      <p>\n      PG-vector is not as performant as the dedicated vector stores but are tried and tested part of the ecosystem and anecdotally great to work with\n    </p>\n    </li><li>\n      <p>\n      Chroma is not the best for accurate retrieval and I haven&#39;t heard many recommending it as the best except for its usability and ease of integration.\n    </p>\n    </li>\n      </ul>",
+          "top_comment": "The standalone and \"lite\" versions of Milvus are fairly memory-efficient. It's the cluster version that will take up lots of resources, and we typically recommend folks use Milvus on K8s only once they've reached a large enough scale. I suggest starting with Milvus Lite: https://milvus.io/docs/milvus_lite.md . Once you need more storage or want to improve query/search performance, you can easily switch to standalone or cluster."
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "faq": {
+    "type": "faq",
+    "results": [
+      {
+        "question": "How does Weaviate pricing work?",
+        "answer": "Self-hosted is free; you pay only your cloud provider. WCS offers three pricing tiers: Flex ($45/month), Plus ($280/month), and Premium ($400+/month), each with different per-unit costs. Flex bills monthly based on consumption: vector dimensions at $0.01668 per million, operational storage at $0.255/GiB, and backup storage at $0.0264/GiB. Premium tier offers discounts on per-unit costs (e.g., $0.00975 per million dimensions). There's no forced tier upgrade when you exceed thresholds; costs scale with usage. AWS Marketplace contracts require a $10,000 annual minimum with overage pricing at $0.2",
+        "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+        "url": "https://checkthat.ai/brands/weaviate/pricing",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "checkthat.ai",
+          "hostname": "checkthat.ai",
+          "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+          "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+        }
+      },
+      {
+        "question": "How much does Weaviate cost?",
+        "answer": "Weaviate offers a 14-day free trial, then pricing starts at $45/month for the Flex plan (shared cloud, 99.5% SLA). The Premium plan starts at $400/month with dedicated deployment options, 99.95% uptime, and phone/Slack support. Usage-based charges apply for vector dimensions, storage, and backups.",
+        "title": "Weaviate Pricing 2026: $0-$400/month | CostBench",
+        "url": "https://costbench.com/software/vector-databases/weaviate/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "costbench.com",
+          "hostname": "costbench.com",
+          "favicon": "https://imgs.search.brave.com/Abmi7mksm3sfRp-HUNsHNzBcjs1zHrKz7d00ROoDuTU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWQwOGUxZmZh/ZGRjMjNmZGYyZDdi/Zjc4MGYzNmU2NDFk/NjdkNjliM2IzYjA0/MjFjYTYwMWQxNmNh/Y2ExZDIzNi9jb3N0/YmVuY2guY29tLw",
+          "path": "  › home  › vector databases  › weaviate pricing"
+        }
+      },
+      {
+        "question": "Is Weaviate open source?",
+        "answer": "Yes, Weaviate is open source and can be self-hosted for free. The managed cloud service (starting at $45/month for Flex) adds hosting infrastructure, SLAs, backups, and support on top of the open-source engine.",
+        "title": "Weaviate Pricing 2026: $0-$400/month | CostBench",
+        "url": "https://costbench.com/software/vector-databases/weaviate/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "costbench.com",
+          "hostname": "costbench.com",
+          "favicon": "https://imgs.search.brave.com/Abmi7mksm3sfRp-HUNsHNzBcjs1zHrKz7d00ROoDuTU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWQwOGUxZmZh/ZGRjMjNmZGYyZDdi/Zjc4MGYzNmU2NDFk/NjdkNjliM2IzYjA0/MjFjYTYwMWQxNmNh/Y2ExZDIzNi9jb3N0/YmVuY2guY29tLw",
+          "path": "  › home  › vector databases  › weaviate pricing"
+        }
+      },
+      {
+        "question": "What are the main factors influencing Weaviate pricing across its different models?",
+        "answer": "<p>Weaviate pricing is primarily influenced by your chosen deployment model: Serverless Cloud, Enterprise Cloud, or self-hosted. For Serverless, vector dimensions, data objects, storage type, and high availability are key. Enterprise Cloud involves annual contracts and AI Units (AIUs), while self-hosting incurs infrastructure and operational overhead.</p>",
+        "title": "Weaviate pricing: A 2025 guide to costs and considerations | eesel AI",
+        "url": "https://www.eesel.ai/blog/weaviate-pricing",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "eesel.ai",
+          "hostname": "www.eesel.ai",
+          "favicon": "https://imgs.search.brave.com/TG8nC6GQO__N3iqWsJbFK5KluUGMAc1eDT7iNqHXzgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzllZDA4MWEz/OTg3N2QwYzBmYWQw/MGVmODBiMTczMjFm/MmJhOWY2MzFhNmY4/MmU1YjQ2OTIyNjVk/NTM4NGY4Mi93d3cu/ZWVzZWwuYWkv",
+          "path": "› blog  › weaviate-pricing"
+        }
+      },
+      {
+        "question": "Is the \"free\" open-source Weaviate pricing truly free, or are there hidden costs?",
+        "answer": "<p>While the open-source software itself has no direct Weaviate pricing, running it yourself incurs significant indirect costs. These include substantial engineering hours for setup, maintenance, scaling, security, and integration, along with the underlying infrastructure expenses for servers.</p>",
+        "title": "Weaviate pricing: A 2025 guide to costs and considerations | eesel AI",
+        "url": "https://www.eesel.ai/blog/weaviate-pricing",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "eesel.ai",
+          "hostname": "www.eesel.ai",
+          "favicon": "https://imgs.search.brave.com/TG8nC6GQO__N3iqWsJbFK5KluUGMAc1eDT7iNqHXzgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzllZDA4MWEz/OTg3N2QwYzBmYWQw/MGVmODBiMTczMjFm/MmJhOWY2MzFhNmY4/MmU1YjQ2OTIyNjVk/NTM4NGY4Mi93d3cu/ZWVzZWwuYWkv",
+          "path": "› blog  › weaviate-pricing"
+        }
+      },
+      {
+        "question": "Does Weaviate have a free tier?",
+        "answer": "Weaviate offers a 14-day Free Trial with a sandbox cluster. After the trial, you need a paid plan starting at $45/month. There is no permanent free tier, but Weaviate's open-source version can be self-hosted at no licensing cost.",
+        "title": "Weaviate Pricing 2026: $0-$400/month | CostBench",
+        "url": "https://costbench.com/software/vector-databases/weaviate/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "costbench.com",
+          "hostname": "costbench.com",
+          "favicon": "https://imgs.search.brave.com/Abmi7mksm3sfRp-HUNsHNzBcjs1zHrKz7d00ROoDuTU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWQwOGUxZmZh/ZGRjMjNmZGYyZDdi/Zjc4MGYzNmU2NDFk/NjdkNjliM2IzYjA0/MjFjYTYwMWQxNmNh/Y2ExZDIzNi9jb3N0/YmVuY2guY29tLw",
+          "path": "  › home  › vector databases  › weaviate pricing"
+        }
+      },
+      {
+        "question": "What can I expect regarding Weaviate pricing if I'm considering the Enterprise Cloud?",
+        "answer": "<p>Weaviate pricing for the Enterprise Cloud involves annual contracts, starting from around $10,000, and is based on \"AI Units\" (AIUs). This model provides a dedicated, fully-managed environment with premium support, but requires direct engagement with their sales team for specific quotes.</p>",
+        "title": "Weaviate pricing: A 2025 guide to costs and considerations | eesel AI",
+        "url": "https://www.eesel.ai/blog/weaviate-pricing",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "eesel.ai",
+          "hostname": "www.eesel.ai",
+          "favicon": "https://imgs.search.brave.com/TG8nC6GQO__N3iqWsJbFK5KluUGMAc1eDT7iNqHXzgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzllZDA4MWEz/OTg3N2QwYzBmYWQw/MGVmODBiMTczMjFm/MmJhOWY2MzFhNmY4/MmU1YjQ2OTIyNjVk/NTM4NGY4Mi93d3cu/ZWVzZWwuYWkv",
+          "path": "› blog  › weaviate-pricing"
+        }
+      },
+      {
+        "question": "How difficult is it to predict monthly Weaviate pricing for the Serverless model?",
+        "answer": "<p>Predicting Serverless Weaviate pricing can be challenging due to its dynamic nature. You need to constantly monitor your data growth, total vector dimensions, and usage spikes, which requires ongoing effort and can make accurate budgeting difficult without a dedicated team member.</p>",
+        "title": "Weaviate pricing: A 2025 guide to costs and considerations | eesel AI",
+        "url": "https://www.eesel.ai/blog/weaviate-pricing",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "eesel.ai",
+          "hostname": "www.eesel.ai",
+          "favicon": "https://imgs.search.brave.com/TG8nC6GQO__N3iqWsJbFK5KluUGMAc1eDT7iNqHXzgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzllZDA4MWEz/OTg3N2QwYzBmYWQw/MGVmODBiMTczMjFm/MmJhOWY2MzFhNmY4/MmU1YjQ2OTIyNjVk/NTM4NGY4Mi93d3cu/ZWVzZWwuYWkv",
+          "path": "› blog  › weaviate-pricing"
+        }
+      },
+      {
+        "question": "What does Weaviate charge for beyond the base plan?",
+        "answer": "Weaviate charges usage-based fees for vector dimensions ($0.00975–$0.01668 per million), storage ($0.2125–$0.31875 per GiB), and backup storage ($0.022–$0.0264 per GiB). Rates vary by plan and region.",
+        "title": "Weaviate Pricing 2026: $0-$400/month | CostBench",
+        "url": "https://costbench.com/software/vector-databases/weaviate/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "costbench.com",
+          "hostname": "costbench.com",
+          "favicon": "https://imgs.search.brave.com/Abmi7mksm3sfRp-HUNsHNzBcjs1zHrKz7d00ROoDuTU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWQwOGUxZmZh/ZGRjMjNmZGYyZDdi/Zjc4MGYzNmU2NDFk/NjdkNjliM2IzYjA0/MjFjYTYwMWQxNmNh/Y2ExZDIzNi9jb3N0/YmVuY2guY29tLw",
+          "path": "  › home  › vector databases  › weaviate pricing"
+        }
+      },
+      {
+        "question": "How does Weaviate pricing work specifically for the Serverless Cloud option?",
+        "answer": "<p>For Serverless, Weaviate pricing is primarily based on the number of vector dimensions you store, calculated per million per month, along with your chosen SLA tier. Additional factors like data objects, storage type (Performance vs. Compression), and enabling high availability can also adjust your final bill.</p>",
+        "title": "Weaviate pricing: A 2025 guide to costs and considerations | eesel AI",
+        "url": "https://www.eesel.ai/blog/weaviate-pricing",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "eesel.ai",
+          "hostname": "www.eesel.ai",
+          "favicon": "https://imgs.search.brave.com/TG8nC6GQO__N3iqWsJbFK5KluUGMAc1eDT7iNqHXzgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzllZDA4MWEz/OTg3N2QwYzBmYWQw/MGVmODBiMTczMjFm/MmJhOWY2MzFhNmY4/MmU1YjQ2OTIyNjVk/NTM4NGY4Mi93d3cu/ZWVzZWwuYWkv",
+          "path": "› blog  › weaviate-pricing"
+        }
+      },
+      {
+        "question": "Weaviate vs Pinecone: which should I choose?",
+        "answer": "Weaviate's Flex plan at $45/month and Pinecone's Standard plan at $45/month are similarly priced. Weaviate offers more flexibility including hybrid search and multi-tenancy; Pinecone is simpler to get started with and has a permanent free Starter tier, unlike Weaviate's 14-day Free Trial.",
+        "title": "Weaviate Pricing 2026: $0-$400/month | CostBench",
+        "url": "https://costbench.com/software/vector-databases/weaviate/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "costbench.com",
+          "hostname": "costbench.com",
+          "favicon": "https://imgs.search.brave.com/Abmi7mksm3sfRp-HUNsHNzBcjs1zHrKz7d00ROoDuTU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWQwOGUxZmZh/ZGRjMjNmZGYyZDdi/Zjc4MGYzNmU2NDFk/NjdkNjliM2IzYjA0/MjFjYTYwMWQxNmNh/Y2ExZDIzNi9jb3N0/YmVuY2guY29tLw",
+          "path": "  › home  › vector databases  › weaviate pricing"
+        }
+      },
+      {
+        "question": "How does Weaviate pricing compare to all-in-one AI platforms like eesel AI?",
+        "answer": "<p>Weaviate pricing is component-focused, charging for vector storage and infrastructure. In contrast, all-in-one platforms like eesel AI offer transparent, predictable pricing based on monthly AI interactions, bundling all the underlying infrastructure and management into a single cost. This simplifies budgeting and removes the complexity of managing individual components.</p>",
+        "title": "Weaviate pricing: A 2025 guide to costs and considerations | eesel AI",
+        "url": "https://www.eesel.ai/blog/weaviate-pricing",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "eesel.ai",
+          "hostname": "www.eesel.ai",
+          "favicon": "https://imgs.search.brave.com/TG8nC6GQO__N3iqWsJbFK5KluUGMAc1eDT7iNqHXzgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzllZDA4MWEz/OTg3N2QwYzBmYWQw/MGVmODBiMTczMjFm/MmJhOWY2MzFhNmY4/MmU1YjQ2OTIyNjVk/NTM4NGY4Mi93d3cu/ZWVzZWwuYWkv",
+          "path": "› blog  › weaviate-pricing"
+        }
+      },
+      {
+        "question": "How do implementation costs compare to annual subscription?",
+        "answer": "For migrations from self-hosted to WCS, implementation costs ($50,000-$150,000 in labor) often exceed the first year's subscription ($540-$4,800+ depending on tier). However, ongoing TCO favors managed services; self-hosted deployments cost 2-10x more annually when including DevOps personnel. ROI break-even typically occurs within 11 months for mid-sized deployments.",
+        "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+        "url": "https://checkthat.ai/brands/weaviate/pricing",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "checkthat.ai",
+          "hostname": "checkthat.ai",
+          "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+          "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+        }
+      },
+      {
+        "question": "What triggers overage charges?",
+        "answer": "Weaviate uses continuous consumption-based pricing without punitive overage fees. Your bill increases proportionally as you add vectors or storage; no cliff edges or surprise charges. The Query Agent is the exception: Flex tier includes 4,000 requests/month, then charges approximately $0.0001 per additional request (overage pricing not explicitly documented in official sources). Premium tier includes unlimited Query Agent requests.",
+        "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+        "url": "https://checkthat.ai/brands/weaviate/pricing",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "checkthat.ai",
+          "hostname": "checkthat.ai",
+          "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+          "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+        }
+      },
+      {
+        "question": "How much does HIPAA compliance cost?",
+        "answer": "HIPAA compliance requires the Premium tier; no compliance option exists on Flex or Plus tiers. Premium starts at $400+/month minimum. For a typical healthcare deployment (500GB, 10M vectors, 3-node HA), expect $2,170+/month total—roughly 8-10x what you'd pay without compliance requirements. This includes the Premium base ($400), vector dimensions ($257), HA replication multiplier (×3), and 45-day backup retention ($742). The compliance requirement alone creates a mandatory 8.9x cost premium over the Flex tier ($45/month), making it a critical budget consideration for healthcare and insurance o",
+        "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+        "url": "https://checkthat.ai/brands/weaviate/pricing",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "checkthat.ai",
+          "hostname": "checkthat.ai",
+          "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+          "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+        }
+      },
+      {
+        "question": "Can I migrate from self-hosted to WCS?",
+        "answer": "Yes, via backup and restore. Export your data from self-hosted, transfer to cloud storage (S3/GCS), then restore to WCS. Expect 2-3 months for mid-sized deployments (500GB+), with total migration investment of $50,000-150,000 when including internal labor costs (project management, database engineering, DevOps, QA, and application development). Weaviate does not offer published professional migration services; organizations must execute migrations using internal resources or third-party consulting firms.",
+        "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+        "url": "https://checkthat.ai/brands/weaviate/pricing",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "checkthat.ai",
+          "hostname": "checkthat.ai",
+          "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+          "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+        }
+      },
+      {
+        "question": "Are there startup discounts available?",
+        "answer": "Weaviate does not publicly advertise formal startup, non-profit, or educational discount programs. However, eligible startups may access credits through the NVIDIA Inception partnership, though Weaviate-specific details are not disclosed. Additionally, cloud provider startup programs (AWS Activate, Google Cloud for Startups) may include credits applicable to Weaviate Cloud Services or self-hosted deployments. For custom pricing arrangements, contact Weaviate sales directly.",
+        "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+        "url": "https://checkthat.ai/brands/weaviate/pricing",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "checkthat.ai",
+          "hostname": "checkthat.ai",
+          "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+          "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+        }
+      },
+      {
+        "question": "Are there volume discounts for 10M+ vectors?",
+        "answer": "Enterprise volume discounts exist but aren't publicly disclosed. Premium tier already includes a 41.5% per-dimension discount versus Flex. For deployments exceeding 50M vectors, contact Weaviate sales 3-6 months before planned deployment to negotiate custom pricing. Expect 20-40% additional discounts for multi-year commitments at enterprise scale.",
+        "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+        "url": "https://checkthat.ai/brands/weaviate/pricing",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "checkthat.ai",
+          "hostname": "checkthat.ai",
+          "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+          "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+        }
+      },
+      {
+        "question": "What support SLAs come with each tier?",
+        "answer": "Flex: 99.5% uptime, 1 business day response. Plus: 99.9% uptime, 4-hour critical response. Premium: 99.95% uptime, 1-hour critical response, dedicated technical account team. Support is bundled; you cannot purchase premium support separately on a lower tier.",
+        "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+        "url": "https://checkthat.ai/brands/weaviate/pricing",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "checkthat.ai",
+          "hostname": "checkthat.ai",
+          "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+          "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+        }
+      }
+    ]
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "discussions",
+        "all": true
+      },
+      {
+        "type": "faq",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 19,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Vector Database Pricing | Weaviate",
+        "url": "https://weaviate.io/pricing",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Compare pricing options for our different levels of vector database services and solutions.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://weaviate.io/pricing",
+          "long_name": "weaviate.io",
+          "img": "https://imgs.search.brave.com/67q_X0Osc9t7lDmMOv0685hwOzzcGL2vhtN9TIljrAg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTczMGJmMzU3/NDMwMmY2ZjVmMDE0/NTcyOGFkNjQxYzlh/MDBhZDBmMzkxMjJh/M2M2ODZhNWYwMTAy/ZGRlN2Y0Mi93ZWF2/aWF0ZS5pby8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "weaviate.io",
+          "hostname": "weaviate.io",
+          "favicon": "https://imgs.search.brave.com/67q_X0Osc9t7lDmMOv0685hwOzzcGL2vhtN9TIljrAg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTczMGJmMzU3/NDMwMmY2ZjVmMDE0/NTcyOGFkNjQxYzlh/MDBhZDBmMzkxMjJh/M2M2ODZhNWYwMTAy/ZGRlN2Y0Mi93ZWF2/aWF0ZS5pby8",
+          "path": "› pricing"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/I-cOLm5l1XXwq3_HwKqhzY1-AEJWO_o88WUeKFSjlPU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93ZWF2/aWF0ZS5pby9vZy9k/ZWZhdWx0LmpwZw",
+          "original": "https://weaviate.io/og/default.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "List prices for all pricing vector dimensions vary by Cloud provider and region to reflect regional variations. Is the open source Weaviate the same as that used on Weaviate Cloud?▼",
+          "Weaviate Cloud (WCD) utilizes the Weaviate open-source project. We have created a simple to use service that eliminates the typical administration tasks and overhead needs to manage a database at scale. We have incorporated a number of additional features like the Weaviate Embedding Service, Query Agent, Data Import etc.",
+          "Compression does not alter the number of vector dimensions stored, but it reduces the computational and memory resources required for search. The more aggressive the compression method, the greater the efficiency gains, which are reflected in discounted list prices for vector dimensions relative to uncompressed vectors.",
+          "Fully managed AI Database in shared cloud. The easiest way to get started with Weaviate.Try Free"
+        ]
+      },
+      {
+        "title": "Weaviate Pricing 2026",
+        "url": "https://www.g2.com/products/weaviate/pricing",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Learn more about the cost of Weaviate, different pricing plans, starting costs, free trials, and more pricing-related information provided by Weaviate.",
+        "page_age": "2025-01-29T00:00:00",
+        "profile": {
+          "name": "G2",
+          "url": "https://www.g2.com/products/weaviate/pricing",
+          "long_name": "g2.com",
+          "img": "https://imgs.search.brave.com/Pakhl2FkJ3y3ItovQaQaC7gSBs6cuN7A8tiiCvPBAlo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjkzOGZiNGFh/Yjc4MjI0ZjZhMjlh/Y2M4N2E1NzVlODhl/MjgwM2Q4ZmNkZjA3/NGVhY2QzYzFjNzE3/NmEyNmQ1OS93d3cu/ZzIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "g2.com",
+          "hostname": "www.g2.com",
+          "favicon": "https://imgs.search.brave.com/Pakhl2FkJ3y3ItovQaQaC7gSBs6cuN7A8tiiCvPBAlo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjkzOGZiNGFh/Yjc4MjI0ZjZhMjlh/Y2M4N2E1NzVlODhl/MjgwM2Q4ZmNkZjA3/NGVhY2QzYzFjNzE3/NmEyNmQ1OS93d3cu/ZzIuY29tLw",
+          "path": "› products  › weaviate  › pricing"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/m53RAOULMhl3POhpUsWnfnHlvmuCasgWbzRx_1RLEts/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZzJjcm93ZC5j/b20vdXBsb2Fkcy9w/cm9kdWN0L2ltYWdl/L3NvY2lhbF9sYW5k/c2NhcGUvc29jaWFs/X2xhbmRzY2FwZV9m/ZmQyY2VjYTM4MDhl/NzY0Y2YzNjVjZmEx/YWIwOGIzNi93ZWF2/aWF0ZS5wbmc",
+          "original": "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_ffd2ceca3808e764cf365cfa1ab08b36/weaviate.png",
+          "logo": false
+        },
+        "age": "January 29, 2025",
+        "extra_snippets": [
+          "Weaviate's pricing model is designed to meet diverse use cases, from individual developers to enterprise-scale applications. Flexible and transparent options empower users to build, scale, and deploy AI-powered solutions efficiently. • Self-Deployed (Free & Open Source): Ideal for developers seeking flexibility and control.",
+          "Weaviate is an open-source vector database that simplifies the development of AI applications.",
+          "The easiest way to get started with Weaviate. All the power of our AI-native vector database, as a fully-managed SaaS offering. Best for nimble teams at all stages of building. This plan includes everything from the self-deployed Weaviate plus:",
+          "Tailored for businesses seeking high performance, Weaviate’s Enterprise Cloud solution provides a fully managed vector database on dedicated resources, ensuring consistent, high-speed results without the complexities of self-management."
+        ]
+      },
+      {
+        "title": "Weaviate pricing: A 2025 guide to costs and considerations | eesel AI",
+        "url": "https://www.eesel.ai/blog/weaviate-pricing",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "This is the engine that runs smart search systems, chatbots that can actually cite their sources, and recommendation engines that feel like they read their mind. Weaviate is loaded with features, like being able to handle different types of data (not just text) and a &quot;hybrid search&quot; that mixes old-school keyword filtering with new-school vector search.",
+        "page_age": "2025-11-14T00:00:00",
+        "profile": {
+          "name": "Eesel AI",
+          "url": "https://www.eesel.ai/blog/weaviate-pricing",
+          "long_name": "eesel.ai",
+          "img": "https://imgs.search.brave.com/TG8nC6GQO__N3iqWsJbFK5KluUGMAc1eDT7iNqHXzgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzllZDA4MWEz/OTg3N2QwYzBmYWQw/MGVmODBiMTczMjFm/MmJhOWY2MzFhNmY4/MmU1YjQ2OTIyNjVk/NTM4NGY4Mi93d3cu/ZWVzZWwuYWkv"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "eesel.ai",
+          "hostname": "www.eesel.ai",
+          "favicon": "https://imgs.search.brave.com/TG8nC6GQO__N3iqWsJbFK5KluUGMAc1eDT7iNqHXzgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzllZDA4MWEz/OTg3N2QwYzBmYWQw/MGVmODBiMTczMjFm/MmJhOWY2MzFhNmY4/MmU1YjQ2OTIyNjVk/NTM4NGY4Mi93d3cu/ZWVzZWwuYWkv",
+          "path": "› blog  › weaviate-pricing"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ATgPJk36tWGCDXF0PqakzWDXyXciX_7yTR4naQL5A8o/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93ZWJz/aXRlLWNtcy5lZXNl/bC5haS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyNS8wOC9CYW5u/ZXItVGhlLTYtYmVz/dC1BSS1jaGF0LWZv/ci1lLWNvbW1lcmNl/LXNvbHV0aW9ucy1m/b3ItYnJhbmRzLWlu/LTIwMjUucG5n",
+          "original": "https://website-cms.eesel.ai/wp-content/uploads/2025/08/Banner-The-6-best-AI-chat-for-e-commerce-solutions-for-brands-in-2025.png",
+          "logo": false
+        },
+        "age": "November 14, 2025",
+        "faq": {
+          "items": [
+            {
+              "question": "What are the main factors influencing Weaviate pricing across its different models?",
+              "answer": "<p>Weaviate pricing is primarily influenced by your chosen deployment model: Serverless Cloud, Enterprise Cloud, or self-hosted. For Serverless, vector dimensions, data objects, storage type, and high availability are key. Enterprise Cloud involves annual contracts and AI Units (AIUs), while self-hosting incurs infrastructure and operational overhead.</p>",
+              "title": "Weaviate pricing: A 2025 guide to costs and considerations | eesel AI",
+              "url": "https://www.eesel.ai/blog/weaviate-pricing",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "eesel.ai",
+                "hostname": "www.eesel.ai",
+                "favicon": "https://imgs.search.brave.com/TG8nC6GQO__N3iqWsJbFK5KluUGMAc1eDT7iNqHXzgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzllZDA4MWEz/OTg3N2QwYzBmYWQw/MGVmODBiMTczMjFm/MmJhOWY2MzFhNmY4/MmU1YjQ2OTIyNjVk/NTM4NGY4Mi93d3cu/ZWVzZWwuYWkv",
+                "path": "› blog  › weaviate-pricing"
+              }
+            },
+            {
+              "question": "How does Weaviate pricing work specifically for the Serverless Cloud option?",
+              "answer": "<p>For Serverless, Weaviate pricing is primarily based on the number of vector dimensions you store, calculated per million per month, along with your chosen SLA tier. Additional factors like data objects, storage type (Performance vs. Compression), and enabling high availability can also adjust your final bill.</p>",
+              "title": "Weaviate pricing: A 2025 guide to costs and considerations | eesel AI",
+              "url": "https://www.eesel.ai/blog/weaviate-pricing",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "eesel.ai",
+                "hostname": "www.eesel.ai",
+                "favicon": "https://imgs.search.brave.com/TG8nC6GQO__N3iqWsJbFK5KluUGMAc1eDT7iNqHXzgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzllZDA4MWEz/OTg3N2QwYzBmYWQw/MGVmODBiMTczMjFm/MmJhOWY2MzFhNmY4/MmU1YjQ2OTIyNjVk/NTM4NGY4Mi93d3cu/ZWVzZWwuYWkv",
+                "path": "› blog  › weaviate-pricing"
+              }
+            },
+            {
+              "question": "What can I expect regarding Weaviate pricing if I'm considering the Enterprise Cloud?",
+              "answer": "<p>Weaviate pricing for the Enterprise Cloud involves annual contracts, starting from around $10,000, and is based on \"AI Units\" (AIUs). This model provides a dedicated, fully-managed environment with premium support, but requires direct engagement with their sales team for specific quotes.</p>",
+              "title": "Weaviate pricing: A 2025 guide to costs and considerations | eesel AI",
+              "url": "https://www.eesel.ai/blog/weaviate-pricing",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "eesel.ai",
+                "hostname": "www.eesel.ai",
+                "favicon": "https://imgs.search.brave.com/TG8nC6GQO__N3iqWsJbFK5KluUGMAc1eDT7iNqHXzgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzllZDA4MWEz/OTg3N2QwYzBmYWQw/MGVmODBiMTczMjFm/MmJhOWY2MzFhNmY4/MmU1YjQ2OTIyNjVk/NTM4NGY4Mi93d3cu/ZWVzZWwuYWkv",
+                "path": "› blog  › weaviate-pricing"
+              }
+            },
+            {
+              "question": "Is the \"free\" open-source Weaviate pricing truly free, or are there hidden costs?",
+              "answer": "<p>While the open-source software itself has no direct Weaviate pricing, running it yourself incurs significant indirect costs. These include substantial engineering hours for setup, maintenance, scaling, security, and integration, along with the underlying infrastructure expenses for servers.</p>",
+              "title": "Weaviate pricing: A 2025 guide to costs and considerations | eesel AI",
+              "url": "https://www.eesel.ai/blog/weaviate-pricing",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "eesel.ai",
+                "hostname": "www.eesel.ai",
+                "favicon": "https://imgs.search.brave.com/TG8nC6GQO__N3iqWsJbFK5KluUGMAc1eDT7iNqHXzgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzllZDA4MWEz/OTg3N2QwYzBmYWQw/MGVmODBiMTczMjFm/MmJhOWY2MzFhNmY4/MmU1YjQ2OTIyNjVk/NTM4NGY4Mi93d3cu/ZWVzZWwuYWkv",
+                "path": "› blog  › weaviate-pricing"
+              }
+            },
+            {
+              "question": "How difficult is it to predict monthly Weaviate pricing for the Serverless model?",
+              "answer": "<p>Predicting Serverless Weaviate pricing can be challenging due to its dynamic nature. You need to constantly monitor your data growth, total vector dimensions, and usage spikes, which requires ongoing effort and can make accurate budgeting difficult without a dedicated team member.</p>",
+              "title": "Weaviate pricing: A 2025 guide to costs and considerations | eesel AI",
+              "url": "https://www.eesel.ai/blog/weaviate-pricing",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "eesel.ai",
+                "hostname": "www.eesel.ai",
+                "favicon": "https://imgs.search.brave.com/TG8nC6GQO__N3iqWsJbFK5KluUGMAc1eDT7iNqHXzgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzllZDA4MWEz/OTg3N2QwYzBmYWQw/MGVmODBiMTczMjFm/MmJhOWY2MzFhNmY4/MmU1YjQ2OTIyNjVk/NTM4NGY4Mi93d3cu/ZWVzZWwuYWkv",
+                "path": "› blog  › weaviate-pricing"
+              }
+            },
+            {
+              "question": "How does Weaviate pricing compare to all-in-one AI platforms like eesel AI?",
+              "answer": "<p>Weaviate pricing is component-focused, charging for vector storage and infrastructure. In contrast, all-in-one platforms like eesel AI offer transparent, predictable pricing based on monthly AI interactions, bundling all the underlying infrastructure and management into a single cost. This simplifies budgeting and removes the complexity of managing individual components.</p>",
+              "title": "Weaviate pricing: A 2025 guide to costs and considerations | eesel AI",
+              "url": "https://www.eesel.ai/blog/weaviate-pricing",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "eesel.ai",
+                "hostname": "www.eesel.ai",
+                "favicon": "https://imgs.search.brave.com/TG8nC6GQO__N3iqWsJbFK5KluUGMAc1eDT7iNqHXzgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzllZDA4MWEz/OTg3N2QwYzBmYWQw/MGVmODBiMTczMjFm/MmJhOWY2MzFhNmY4/MmU1YjQ2OTIyNjVk/NTM4NGY4Mi93d3cu/ZWVzZWwuYWkv",
+                "path": "› blog  › weaviate-pricing"
+              }
+            }
+          ]
+        },
+        "organization": {
+          "type": "organization",
+          "name": "eesel AI",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "A complete guide to Weaviate pricing. We break down the costs of Weaviate Serverless, Enterprise, and self-hosted options so you can avoid hidden fees.",
+          "If you're building any kind of modern AI app, especially one with semantic search or a RAG-powered chatbot, you've probably realized you need a vector database. Weaviate is one of the big names in this space, and for good reason, it’s a powerful open-source tool.",
+          "At its heart, Weaviate is an open-source vector database. You can think of it as a special kind of database built for the AI era. Instead of storing data in neat rows and columns like a traditional spreadsheet, it organizes information based on its meaning.",
+          "This is the engine that runs smart search systems, chatbots that can actually cite their sources, and recommendation engines that feel like they read their mind. Weaviate is loaded with features, like being able to handle different types of data (not just text) and a \"hybrid search\" that mixes old-school keyword filtering with new-school vector search."
+        ]
+      },
+      {
+        "title": "Weaviate Cloud Pricing 2026: Real Costs &Replication Formula",
+        "url": "https://ranksquire.com/2026/04/22/weaviate-cloud-pricing-2026/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "There is also the $25-versus-$45 confusion: multiple ranking posts still cite $25/month as Weaviate’s starting price. That was the old Serverless tier. Weaviate’s October 2025 pricing restructure replaced it with Flex at $45/month minimum.",
+        "page_age": "2026-04-23T00:12:55",
+        "profile": {
+          "name": "RankSquire",
+          "url": "https://ranksquire.com/2026/04/22/weaviate-cloud-pricing-2026/",
+          "long_name": "ranksquire.com",
+          "img": "https://imgs.search.brave.com/sBzOEq4943MGs_sNpUJ29tf22E7AiXPQetGHSVFxtz4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWI1NzY1ZDk1/ZmRkMTFkNmY2Yjgw/MmM1NDBmOGZkNGZi/NGI4OGY2OTQ2ZjZm/YWQ0ZWZiN2JhNGNm/ZTRiZjY1ZC9yYW5r/c3F1aXJlLmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "location",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "ranksquire.com",
+          "hostname": "ranksquire.com",
+          "favicon": "https://imgs.search.brave.com/sBzOEq4943MGs_sNpUJ29tf22E7AiXPQetGHSVFxtz4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWI1NzY1ZDk1/ZmRkMTFkNmY2Yjgw/MmM1NDBmOGZkNGZi/NGI4OGY2OTQ2ZjZm/YWQ0ZWZiN2JhNGNm/ZTRiZjY1ZC9yYW5r/c3F1aXJlLmNvbS8",
+          "path": "  › engineering  › weaviate cloud pricing 2026: the cost model no other guide covers"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/OxhGNzFkjGVbNDgbgs1CmV33i3GHss1-OOcRbkhVajg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9yYW5r/c3F1aXJlLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyNi8w/NC93ZWF2aWF0ZS1j/bG91ZC1wcmljaW5n/LTIwMjYtdmVjdG9y/LWNvc3QtbWF0cml4/LXJhbmtzcXVpcmUu/d2VicA",
+          "original": "https://ranksquire.com/wp-content/uploads/2026/04/weaviate-cloud-pricing-2026-vector-cost-matrix-ranksquire.webp",
+          "logo": false
+        },
+        "age": "1 month ago",
+        "location": {
+          "title": "RankSquire LLC",
+          "url": "https://ranksquire.com",
+          "is_source_local": false,
+          "is_source_both": false,
+          "family_friendly": true,
+          "type": "location_result",
+          "provider_url": "https://ranksquire.com/2026/04/22/weaviate-cloud-pricing-2026/",
+          "zoom_level": 7,
+          "postal_address": {
+            "type": "PostalAddress",
+            "country": "US",
+            "postalCode": "30529",
+            "streetAddress": "1731 N Elm St",
+            "addressRegion": "GA",
+            "addressLocality": "Commerce",
+            "displayAddress": "1731 N Elm St, 30529, Commerce"
+          },
+          "contact": {
+            "email": "contact@ranksquire.com",
+            "telephone": "+1 (805) 206-2600"
+          },
+          "price_range": "$$$",
+          "profiles": [
+            {
+              "type": "external",
+              "name": "ranksquire.com",
+              "url": "https://ranksquire.com/2026/04/22/weaviate-cloud-pricing-2026/",
+              "img": "https://imgs.search.brave.com/sBzOEq4943MGs_sNpUJ29tf22E7AiXPQetGHSVFxtz4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWI1NzY1ZDk1/ZmRkMTFkNmY2Yjgw/MmM1NDBmOGZkNGZi/NGI4OGY2OTQ2ZjZm/YWQ0ZWZiN2JhNGNm/ZTRiZjY1ZC9yYW5r/c3F1aXJlLmNvbS8"
+            }
+          ],
+          "categories": []
+        },
+        "extra_snippets": [
+          "Here is the number that actually matters: a Weaviate Flex deployment with 5 million 1,536-dimension vectors and a replication factor of 2 costs approximately $257/month in vector dimension fees alone — before storage, backups, or agent requests. That is 5.7× the advertised starting price.",
+          "There is also the $25-versus-$45 confusion: multiple ranking posts still cite $25/month as Weaviate’s starting price. That was the old Serverless tier. Weaviate’s October 2025 pricing restructure replaced it with Flex at $45/month minimum.",
+          "Every search for “weaviate cloud pricing 2026” returns the same content: a plan summary, a starting price, a comparison to Pinecone. None of them give you the cost model you need to go to your CTO with a defensible number. The real questions engineers have — what does 5M vectors cost with HA enabled?",
+          "In October 2025, Weaviate restructured its entire cloud pricing model. Old tier names were retired. The billing mechanism changed. And the starting price moved from $25/month (the old Serverless tier) to $45/month (the new Flex tier)."
+        ]
+      },
+      {
+        "title": "Weaviate - Plans and pricing | Elestio",
+        "url": "https://elest.io/open-source/weaviate/resources/plans-and-pricing",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Plans and pricing for Weaviate fully managed open source service",
+        "page_age": "2026-04-10T00:00:00",
+        "profile": {
+          "name": "Elestio",
+          "url": "https://elest.io/open-source/weaviate/resources/plans-and-pricing",
+          "long_name": "elest.io",
+          "img": "https://imgs.search.brave.com/EDJS1zhDmauK-it0dGgUR6OK1yCbKl07qxedDyo5cd4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjNiNTRiNzk3/MjUyMzM1MmU3YmQ2/NzM1ZDBjMGRiNTRj/YzBiZDAyZDQzOTUx/Y2M1NjBkMjkyNDNm/NDMwZTVhNC9lbGVz/dC5pby8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "elest.io",
+          "hostname": "elest.io",
+          "favicon": "https://imgs.search.brave.com/EDJS1zhDmauK-it0dGgUR6OK1yCbKl07qxedDyo5cd4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjNiNTRiNzk3/MjUyMzM1MmU3YmQ2/NzM1ZDBjMGRiNTRj/YzBiZDAyZDQzOTUx/Y2M1NjBkMjkyNDNm/NDMwZTVhNC9lbGVz/dC5pby8",
+          "path": "› open-source  › weaviate  › resources  › plans-and-pricing"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/NgD3xmDftCI36m_Y6Zc7ms4HKK1GQ2ATHRctMXq2a6s/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9lbGVz/dC5pby9pbWFnZXMv/b2dfbWFpbi5qcGc",
+          "original": "https://elest.io/images/og_main.jpg",
+          "logo": false
+        },
+        "age": "April 10, 2026",
+        "organization": {
+          "type": "organization",
+          "name": "Elestio",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Our free trial gives you $20 in credits to use with a 3-day validity. You can use these credits to try out Weaviate with Elestio or any other open-source software from our catalog.",
+          "Elestio offers a range of plans designed to match your Weaviate usage and budgetary requirements. Each plan is structured to provide optimal resources and performance, ensuring you only pay for what you need.",
+          "We provide 3 different support plans to help you with your Weaviate instance. The first level of support is free and included when you create your instance. You can upgrade to a higher or lower support plan at any time.",
+          "Weaviate Guide & Resources Knowledge base Installation guide Features Plans and pricing Managed service features Official documentation"
+        ]
+      },
+      {
+        "title": "Weaviate Pricing 2026: $0-$400/month | CostBench",
+        "url": "https://costbench.com/software/vector-databases/weaviate/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Yes, Weaviate is open source and ... infrastructure, SLAs, backups, and support on top of the open-source engine. Weaviate&#x27;s Flex plan at $45/month and Pinecone&#x27;s Standard plan at $45/month are similarly priced....",
+        "page_age": "2026-04-01T00:00:00",
+        "profile": {
+          "name": "CostBench",
+          "url": "https://costbench.com/software/vector-databases/weaviate/",
+          "long_name": "costbench.com",
+          "img": "https://imgs.search.brave.com/Abmi7mksm3sfRp-HUNsHNzBcjs1zHrKz7d00ROoDuTU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWQwOGUxZmZh/ZGRjMjNmZGYyZDdi/Zjc4MGYzNmU2NDFk/NjdkNjliM2IzYjA0/MjFjYTYwMWQxNmNh/Y2ExZDIzNi9jb3N0/YmVuY2guY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "costbench.com",
+          "hostname": "costbench.com",
+          "favicon": "https://imgs.search.brave.com/Abmi7mksm3sfRp-HUNsHNzBcjs1zHrKz7d00ROoDuTU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWQwOGUxZmZh/ZGRjMjNmZGYyZDdi/Zjc4MGYzNmU2NDFk/NjdkNjliM2IzYjA0/MjFjYTYwMWQxNmNh/Y2ExZDIzNi9jb3N0/YmVuY2guY29tLw",
+          "path": "  › home  › vector databases  › weaviate pricing"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ziGxXl-wtk2kN0qs_3ROe11lJMt30coc7GspHMcRQ1I/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jb3N0/YmVuY2guY29tL29n/LWRlZmF1bHQucG5n",
+          "original": "https://costbench.com/og-default.png",
+          "logo": false
+        },
+        "age": "April 1, 2026",
+        "faq": {
+          "items": [
+            {
+              "question": "How much does Weaviate cost?",
+              "answer": "Weaviate offers a 14-day free trial, then pricing starts at $45/month for the Flex plan (shared cloud, 99.5% SLA). The Premium plan starts at $400/month with dedicated deployment options, 99.95% uptime, and phone/Slack support. Usage-based charges apply for vector dimensions, storage, and backups.",
+              "title": "Weaviate Pricing 2026: $0-$400/month | CostBench",
+              "url": "https://costbench.com/software/vector-databases/weaviate/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "costbench.com",
+                "hostname": "costbench.com",
+                "favicon": "https://imgs.search.brave.com/Abmi7mksm3sfRp-HUNsHNzBcjs1zHrKz7d00ROoDuTU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWQwOGUxZmZh/ZGRjMjNmZGYyZDdi/Zjc4MGYzNmU2NDFk/NjdkNjliM2IzYjA0/MjFjYTYwMWQxNmNh/Y2ExZDIzNi9jb3N0/YmVuY2guY29tLw",
+                "path": "  › home  › vector databases  › weaviate pricing"
+              }
+            },
+            {
+              "question": "Does Weaviate have a free tier?",
+              "answer": "Weaviate offers a 14-day Free Trial with a sandbox cluster. After the trial, you need a paid plan starting at $45/month. There is no permanent free tier, but Weaviate's open-source version can be self-hosted at no licensing cost.",
+              "title": "Weaviate Pricing 2026: $0-$400/month | CostBench",
+              "url": "https://costbench.com/software/vector-databases/weaviate/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "costbench.com",
+                "hostname": "costbench.com",
+                "favicon": "https://imgs.search.brave.com/Abmi7mksm3sfRp-HUNsHNzBcjs1zHrKz7d00ROoDuTU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWQwOGUxZmZh/ZGRjMjNmZGYyZDdi/Zjc4MGYzNmU2NDFk/NjdkNjliM2IzYjA0/MjFjYTYwMWQxNmNh/Y2ExZDIzNi9jb3N0/YmVuY2guY29tLw",
+                "path": "  › home  › vector databases  › weaviate pricing"
+              }
+            },
+            {
+              "question": "What does Weaviate charge for beyond the base plan?",
+              "answer": "Weaviate charges usage-based fees for vector dimensions ($0.00975–$0.01668 per million), storage ($0.2125–$0.31875 per GiB), and backup storage ($0.022–$0.0264 per GiB). Rates vary by plan and region.",
+              "title": "Weaviate Pricing 2026: $0-$400/month | CostBench",
+              "url": "https://costbench.com/software/vector-databases/weaviate/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "costbench.com",
+                "hostname": "costbench.com",
+                "favicon": "https://imgs.search.brave.com/Abmi7mksm3sfRp-HUNsHNzBcjs1zHrKz7d00ROoDuTU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWQwOGUxZmZh/ZGRjMjNmZGYyZDdi/Zjc4MGYzNmU2NDFk/NjdkNjliM2IzYjA0/MjFjYTYwMWQxNmNh/Y2ExZDIzNi9jb3N0/YmVuY2guY29tLw",
+                "path": "  › home  › vector databases  › weaviate pricing"
+              }
+            },
+            {
+              "question": "Is Weaviate open source?",
+              "answer": "Yes, Weaviate is open source and can be self-hosted for free. The managed cloud service (starting at $45/month for Flex) adds hosting infrastructure, SLAs, backups, and support on top of the open-source engine.",
+              "title": "Weaviate Pricing 2026: $0-$400/month | CostBench",
+              "url": "https://costbench.com/software/vector-databases/weaviate/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "costbench.com",
+                "hostname": "costbench.com",
+                "favicon": "https://imgs.search.brave.com/Abmi7mksm3sfRp-HUNsHNzBcjs1zHrKz7d00ROoDuTU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWQwOGUxZmZh/ZGRjMjNmZGYyZDdi/Zjc4MGYzNmU2NDFk/NjdkNjliM2IzYjA0/MjFjYTYwMWQxNmNh/Y2ExZDIzNi9jb3N0/YmVuY2guY29tLw",
+                "path": "  › home  › vector databases  › weaviate pricing"
+              }
+            },
+            {
+              "question": "Weaviate vs Pinecone: which should I choose?",
+              "answer": "Weaviate's Flex plan at $45/month and Pinecone's Standard plan at $45/month are similarly priced. Weaviate offers more flexibility including hybrid search and multi-tenancy; Pinecone is simpler to get started with and has a permanent free Starter tier, unlike Weaviate's 14-day Free Trial.",
+              "title": "Weaviate Pricing 2026: $0-$400/month | CostBench",
+              "url": "https://costbench.com/software/vector-databases/weaviate/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "costbench.com",
+                "hostname": "costbench.com",
+                "favicon": "https://imgs.search.brave.com/Abmi7mksm3sfRp-HUNsHNzBcjs1zHrKz7d00ROoDuTU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWQwOGUxZmZh/ZGRjMjNmZGYyZDdi/Zjc4MGYzNmU2NDFk/NjdkNjliM2IzYjA0/MjFjYTYwMWQxNmNh/Y2ExZDIzNi9jb3N0/YmVuY2guY29tLw",
+                "path": "  › home  › vector databases  › weaviate pricing"
+              }
+            }
+          ]
+        },
+        "organization": {
+          "type": "organization",
+          "name": "CostBench",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Yes, Weaviate is open source and can be self-hosted for free. The managed cloud service (starting at $45/month for Flex) adds hosting infrastructure, SLAs, backups, and support on top of the open-source engine. Weaviate's Flex plan at $45/month and Pinecone's Standard plan at $45/month are similarly priced.",
+          "Verified April 2026. Weaviate pricing starts at $0/month. Compare all plans, hidden costs, and calculate your total cost.",
+          "Weaviate offers a 14-day Free Trial with a sandbox cluster. After the trial, you need a paid plan starting at $45/month. There is no permanent free tier, but Weaviate's open-source version can be self-hosted at no licensing cost.",
+          "Weaviate is a vector database offering a 14-day Free Trial sandbox followed by paid plans starting at $45/month for the Flex plan (shared cloud, 99.5% SLA) and $400/month for the Premium plan (dedicated deployment, 99.95% SLA). Usage-based fees for vector dimensions, storage, and backups are added on top of the base plan price."
+        ]
+      },
+      {
+        "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | CheckThat.ai",
+        "url": "https://checkthat.ai/brands/weaviate/pricing",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Complete Weaviate pricing guide for 2026. Compare Flex ($45), Plus ($280), Premium ($400+) tiers, hidden costs, and TCO vs. self-hosted alternatives.",
+        "page_age": "2026-03-30T23:55:43",
+        "profile": {
+          "name": "Checkthat",
+          "url": "https://checkthat.ai/brands/weaviate/pricing",
+          "long_name": "checkthat.ai",
+          "img": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "checkthat.ai",
+          "hostname": "checkthat.ai",
+          "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+          "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/LNLWsQWOC-9s-K1TlgsxBQUHEz1WEiVEpB9dtHTCq3I/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jaGVj/a3RoYXQtbWVkaWEt/ZmlsZXMuczMudXMt/d2VzdC0xLmFtYXpv/bmF3cy5jb20vY292/ZXItaW1hZ2VzL3VD/aVk5eGNLYzNQT04x/eDgzS3QwMS1Cb1NG/Ulc4M0JGZm9KMldI/N05QNXlDLzE3NzIw/MzQwMDg5OTMtY292/ZXIucG5n",
+          "original": "https://checkthat-media-files.s3.us-west-1.amazonaws.com/cover-images/uCiY9xcKc3PON1x83Kt01-BoSFRW83BFfoJ2WH7NP5yC/1772034008993-cover.png",
+          "logo": false
+        },
+        "age": "March 30, 2026",
+        "faq": {
+          "items": [
+            {
+              "question": "How does Weaviate pricing work?",
+              "answer": "Self-hosted is free; you pay only your cloud provider. WCS offers three pricing tiers: Flex ($45/month), Plus ($280/month), and Premium ($400+/month), each with different per-unit costs. Flex bills monthly based on consumption: vector dimensions at $0.01668 per million, operational storage at $0.255/GiB, and backup storage at $0.0264/GiB. Premium tier offers discounts on per-unit costs (e.g., $0.00975 per million dimensions). There's no forced tier upgrade when you exceed thresholds; costs scale with usage. AWS Marketplace contracts require a $10,000 annual minimum with overage pricing at $0.285 per million vector dimensions.",
+              "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+              "url": "https://checkthat.ai/brands/weaviate/pricing",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "checkthat.ai",
+                "hostname": "checkthat.ai",
+                "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+                "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+              }
+            },
+            {
+              "question": "What triggers overage charges?",
+              "answer": "Weaviate uses continuous consumption-based pricing without punitive overage fees. Your bill increases proportionally as you add vectors or storage; no cliff edges or surprise charges. The Query Agent is the exception: Flex tier includes 4,000 requests/month, then charges approximately $0.0001 per additional request (overage pricing not explicitly documented in official sources). Premium tier includes unlimited Query Agent requests.",
+              "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+              "url": "https://checkthat.ai/brands/weaviate/pricing",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "checkthat.ai",
+                "hostname": "checkthat.ai",
+                "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+                "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+              }
+            },
+            {
+              "question": "How much does HIPAA compliance cost?",
+              "answer": "HIPAA compliance requires the Premium tier; no compliance option exists on Flex or Plus tiers. Premium starts at $400+/month minimum. For a typical healthcare deployment (500GB, 10M vectors, 3-node HA), expect $2,170+/month total—roughly 8-10x what you'd pay without compliance requirements. This includes the Premium base ($400), vector dimensions ($257), HA replication multiplier (×3), and 45-day backup retention ($742). The compliance requirement alone creates a mandatory 8.9x cost premium over the Flex tier ($45/month), making it a critical budget consideration for healthcare and insurance organizations.",
+              "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+              "url": "https://checkthat.ai/brands/weaviate/pricing",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "checkthat.ai",
+                "hostname": "checkthat.ai",
+                "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+                "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+              }
+            },
+            {
+              "question": "Can I migrate from self-hosted to WCS?",
+              "answer": "Yes, via backup and restore. Export your data from self-hosted, transfer to cloud storage (S3/GCS), then restore to WCS. Expect 2-3 months for mid-sized deployments (500GB+), with total migration investment of $50,000-150,000 when including internal labor costs (project management, database engineering, DevOps, QA, and application development). Weaviate does not offer published professional migration services; organizations must execute migrations using internal resources or third-party consulting firms.",
+              "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+              "url": "https://checkthat.ai/brands/weaviate/pricing",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "checkthat.ai",
+                "hostname": "checkthat.ai",
+                "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+                "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+              }
+            },
+            {
+              "question": "What support SLAs come with each tier?",
+              "answer": "Flex: 99.5% uptime, 1 business day response. Plus: 99.9% uptime, 4-hour critical response. Premium: 99.95% uptime, 1-hour critical response, dedicated technical account team. Support is bundled; you cannot purchase premium support separately on a lower tier.",
+              "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+              "url": "https://checkthat.ai/brands/weaviate/pricing",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "checkthat.ai",
+                "hostname": "checkthat.ai",
+                "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+                "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+              }
+            },
+            {
+              "question": "Are there startup discounts available?",
+              "answer": "Weaviate does not publicly advertise formal startup, non-profit, or educational discount programs. However, eligible startups may access credits through the NVIDIA Inception partnership, though Weaviate-specific details are not disclosed. Additionally, cloud provider startup programs (AWS Activate, Google Cloud for Startups) may include credits applicable to Weaviate Cloud Services or self-hosted deployments. For custom pricing arrangements, contact Weaviate sales directly.",
+              "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+              "url": "https://checkthat.ai/brands/weaviate/pricing",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "checkthat.ai",
+                "hostname": "checkthat.ai",
+                "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+                "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+              }
+            },
+            {
+              "question": "How do implementation costs compare to annual subscription?",
+              "answer": "For migrations from self-hosted to WCS, implementation costs ($50,000-$150,000 in labor) often exceed the first year's subscription ($540-$4,800+ depending on tier). However, ongoing TCO favors managed services; self-hosted deployments cost 2-10x more annually when including DevOps personnel. ROI break-even typically occurs within 11 months for mid-sized deployments.",
+              "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+              "url": "https://checkthat.ai/brands/weaviate/pricing",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "checkthat.ai",
+                "hostname": "checkthat.ai",
+                "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+                "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+              }
+            },
+            {
+              "question": "Are there volume discounts for 10M+ vectors?",
+              "answer": "Enterprise volume discounts exist but aren't publicly disclosed. Premium tier already includes a 41.5% per-dimension discount versus Flex. For deployments exceeding 50M vectors, contact Weaviate sales 3-6 months before planned deployment to negotiate custom pricing. Expect 20-40% additional discounts for multi-year commitments at enterprise scale.",
+              "title": "Weaviate Pricing 2026: Plans, Costs & Hidden Fees - Weaviate | ...",
+              "url": "https://checkthat.ai/brands/weaviate/pricing",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "checkthat.ai",
+                "hostname": "checkthat.ai",
+                "favicon": "https://imgs.search.brave.com/cmR2qUq4ge3gu9b9YcbIw-0aokZkzJDQQwRsJXYVWIo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlOTQwM2I3/MDIwYmZiYzViZGE3/M2I2YmVmZjk5YjZi/MWFjNzU1MjUxOTZm/YzcwZGU2ODBmZDdj/ZTVjY2RkZS9jaGVj/a3RoYXQuYWkv",
+                "path": "  › brands  › weaviate  › weaviate pricing 2026: plans, costs & hidden fees"
+              }
+            }
+          ]
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Kavishka Karunanayake",
+              "thumbnail": {
+                "src": "https://imgs.search.brave.com/2RUtjja9myhsrurAGyRDN2bEPDDhq12zlIMUA5cTAlI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbWcu/Y2xlcmsuY29tL2V5/SjBlWEJsSWpvaWNI/SnZlSGtpTENKemNt/TWlPaUpvZEhSd2N6/b3ZMMmx0WVdkbGN5/NWpiR1Z5YXk1a1pY/WXZkWEJzYjJGa1pX/UXZhVzFuWHpOQmJ6/STFibXhUTjJwbWFV/ZElRV2R6V0dsTWRV/eGlSRFJWV1NKOQ",
+                "original": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvdXBsb2FkZWQvaW1nXzNBbzI1bmxTN2pmaUdIQWdzWGlMdUxiRDRVWSJ9"
+              }
+            }
+          ],
+          "publisher": {
+            "type": "organization",
+            "name": "CheckThat.ai",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/VKITMpaB0FREl07mw7uBSd5MCS8mm4pIgP_xa-px9B4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jaGVj/a3RoYXQuYWkvbG9n/by5wbmc",
+              "original": "https://checkthat.ai/logo.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Note: For WCS managed tiers (Flex, Plus, Premium), Weaviate handles infrastructure provisioning, backups, security patches, and monitoring. Customers configure high availability settings through schema definitions and environment variables, but Weaviate manages the underlying infrastructure. Verdict: Open-source software with no feature restrictions.",
+          "Weaviate is an open-source vector database enabling semantic search and RAG systems for production AI applications across enterprises.",
+          "Weaviate offers a dual open-source and commercial model that gives engineering teams flexibility in how they deploy vector search infrastructure.",
+          "Weaviate vs. Qdrant: Similar feature sets. Self-hosted deployments for both carry significant personnel overhead (60-83% of total TCO), making managed offerings more effective for most organizations. Managed offerings are price-competitive between the two platforms."
+        ]
+      },
+      {
+        "title": "A Simpler, More Transparent Pricing Model for Weaviate Cloud | Weaviate",
+        "url": "https://weaviate.io/blog/weaviate-cloud-pricing-update",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Pricing has also shifted: non-HA ... entry price of $45/month. Annual commitments, once limited to Dedicated clusters, are now offered through the Plus plan for both Shared and Dedicated deployments.",
+        "page_age": "2025-10-28T00:00:00",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://weaviate.io/blog/weaviate-cloud-pricing-update",
+          "long_name": "weaviate.io",
+          "img": "https://imgs.search.brave.com/67q_X0Osc9t7lDmMOv0685hwOzzcGL2vhtN9TIljrAg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTczMGJmMzU3/NDMwMmY2ZjVmMDE0/NTcyOGFkNjQxYzlh/MDBhZDBmMzkxMjJh/M2M2ODZhNWYwMTAy/ZGRlN2Y0Mi93ZWF2/aWF0ZS5pby8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "weaviate.io",
+          "hostname": "weaviate.io",
+          "favicon": "https://imgs.search.brave.com/67q_X0Osc9t7lDmMOv0685hwOzzcGL2vhtN9TIljrAg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTczMGJmMzU3/NDMwMmY2ZjVmMDE0/NTcyOGFkNjQxYzlh/MDBhZDBmMzkxMjJh/M2M2ODZhNWYwMTAy/ZGRlN2Y0Mi93ZWF2/aWF0ZS5pby8",
+          "path": "› blog  › weaviate-cloud-pricing-update"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/KfSTJZd67V7Qydhy_qE1_iwi6qy-7471Avbb7pMN1-A/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93ZWF2/aWF0ZS5pby9hc3Nl/dHMvaW1hZ2VzL2hl/cm8tNWVjMzAzZGVj/OTkzYzIxODg4OGEz/YWJjZjU0OTNjMmQu/cG5n",
+          "original": "https://weaviate.io/assets/images/hero-5ec303dec993c218888a3abcf5493c2d.png",
+          "logo": false
+        },
+        "age": "October 28, 2025",
+        "extra_snippets": [
+          "Pricing has also shifted: non-HA clusters started at $25/month and HA clusters at $75/month; now every Shared cluster benefits from high availability at a lower entry price of $45/month. Annual commitments, once limited to Dedicated clusters, are now offered through the Plus plan for both Shared and Dedicated deployments. Finally, SLAs are no longer unbundled extras, but are instead built into plans, making reliability and response times part of the package. For more details, see Weaviate Pricing.",
+          "Those on clusters that were not highly available will see prices increase as all clusters move to HA by default, gaining better uptime and performance.",
+          "List prices for all pricing dimensions vary by Cloud provider and region.",
+          "We’re introducing a new pricing model for Weaviate Cloud, built to be easier to understand, more flexible, and better aligned with how you use our platform. Whether you’re experimenting with a new idea or running business-critical workloads, our goal is to give you clear choices, predictable costs, and the freedom to scale."
+        ]
+      },
+      {
+        "title": "Weaviate Pricing 2025: Is Weaviate Worth It?",
+        "url": "https://www.trustradius.com/products/weaviate/pricing",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "With TrustRadius, learn about Weaviate. With details to help you compare pricing plans, explore costs, discover free options, &amp; so much more.",
+        "profile": {
+          "name": "TrustRadius",
+          "url": "https://www.trustradius.com/products/weaviate/pricing",
+          "long_name": "trustradius.com",
+          "img": "https://imgs.search.brave.com/YRNev4NrpxDylkssYycA69CvhYGWs4kKPRsP-JUA_vw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZGQ2M2I4OGYx/OThiMDE3MDYyNjk2/MjNlZTA2Y2JhMTY3/NDc4NDM1NGE0NjQ0/NzE4MDcwNGYyOTUx/ZGIwYjdiYS93d3cu/dHJ1c3RyYWRpdXMu/Y29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "trustradius.com",
+          "hostname": "www.trustradius.com",
+          "favicon": "https://imgs.search.brave.com/YRNev4NrpxDylkssYycA69CvhYGWs4kKPRsP-JUA_vw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZGQ2M2I4OGYx/OThiMDE3MDYyNjk2/MjNlZTA2Y2JhMTY3/NDc4NDM1NGE0NjQ0/NzE4MDcwNGYyOTUx/ZGIwYjdiYS93d3cu/dHJ1c3RyYWRpdXMu/Y29tLw",
+          "path": "  › home  › open-source database software  › weaviate  › pricing"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/PBNpS6qgle6tXO_r3AYA9w_vnYibaNVR-ub6wIEXgQg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS50cnVzdHJhZGl1/cy5jb20vdmVuZG9y/LWxvZ29zL3pGL0Rs/L1IyVE9HTUhHVFZX/Ri0xODB4MTgwLkpQ/RUc",
+          "original": "https://media.trustradius.com/vendor-logos/zF/Dl/R2TOGMHGTVWF-180x180.JPEG",
+          "logo": true
+        },
+        "organization": {
+          "type": "organization",
+          "name": "TrustRadius",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Weaviate is open source and available free through its community edition."
+        ]
+      },
+      {
+        "title": "scaling - Weaviate Cloud Service (WCS) Pricing - Stack Overflow",
+        "url": "https://stackoverflow.com/questions/78151299/weaviate-cloud-service-wcs-pricing",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "On the page, you can find a calculator that will help you estimate the cost of running Weaviate Serverless.",
+        "profile": {
+          "name": "Stack Overflow",
+          "url": "https://stackoverflow.com/questions/78151299/weaviate-cloud-service-wcs-pricing",
+          "long_name": "stackoverflow.com",
+          "img": "https://imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "stackoverflow.com",
+          "hostname": "stackoverflow.com",
+          "favicon": "https://imgs.search.brave.com/4WRMec_wn8Q9LO6DI43kkBvIL6wD5TYCXztC9C9kEI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWU3Zjg0ZjA1/YjQ3ZTlkNjQ1ODA1/MjAwODhiNjhjYWU0/OTc4MjM4ZDJlMTBi/ODExYmNiNTkzMjdh/YjM3MGExMS9zdGFj/a292ZXJmbG93LmNv/bS8",
+          "path": "› questions  › 78151299  › weaviate-cloud-service-wcs-pricing"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/8rYjSv2_oY3M4_lTWZkus1tHOIG9JiPNKVK68dZmOHo/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGFj/a292ZXJmbG93LmNv/bS9Db250ZW50L1Np/dGVzL3N0YWNrb3Zl/cmZsb3cvSW1nL2Fw/cGxlLXRvdWNoLWlj/b25AMi5wbmc_dj0w/ZjBjYWI2ODE1Nzk",
+          "original": "https://stackoverflow.com/Content/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=0f0cab681579",
+          "logo": true
+        },
+        "qa": {
+          "question": "Weaviate Cloud Service (WCS) Pricing",
+          "answer": {
+            "text": "<p>Did you see the pricing page for WCS?</p>\n<p>On the page, you can find a calculator that will help you estimate the cost of running Weaviate Serverless.</p>\n<p>The pricing is largely tied to the <code>number of dimensions</code> for your data.\nThe <code>number of dimensions</code> can be calculated by multiplying the <code>object count</code> (of those with vectors) by <code>vector dimensionality</code>.</p>\n<p>For example, if you have 100'000 objects with 1536-dimension vectors. Then the number of dimensions is 100000 x 1536 = 153'600'000</p>\n<p>Overall, WCS will automatically adjust to your needs, so you shouldn't need to worry about scaling the underlying resources.</p>\n<p>I hope this helps.</p>",
+            "author": "Seba Wita",
+            "upvoteCount": 1
+          }
+        },
+        "extra_snippets": [
+          "I'm considering using Weaviate Cloud Service (WCS) for my project, which requires a scalable vector search engine. Given the nature of my project, I anticipate the need to scale horizontally, potentially resulting in a significant number of clusters.",
+          "On the page, you can find a calculator that will help you estimate the cost of running Weaviate Serverless."
+        ]
+      },
+      {
+        "title": "Weaviate Enterprise Cloud Pricing Guide",
+        "url": "https://events.weaviate.io/pricing-download",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "AI use cases have diverse needs around usage patterns, data privacy, and performance. With Weaviate Enterprise Cloud, you can control costs while tuning resource consumption to your specific needs.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://events.weaviate.io/pricing-download",
+          "long_name": "events.weaviate.io",
+          "img": "https://imgs.search.brave.com/EFWbs2Y3s64lwliRAWd4B3qOchdeLQwkpojEvUt7Mj0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmYyZjNjZjk4/MGFkYmM5YzRmMzhh/ODgxMTMyNmE3YjEx/NTBkMjczODgxZGFj/ZTg5YTYyYzA0NGEx/MzM1MjNjNi9ldmVu/dHMud2VhdmlhdGUu/aW8v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "events.weaviate.io",
+          "hostname": "events.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/EFWbs2Y3s64lwliRAWd4B3qOchdeLQwkpojEvUt7Mj0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmYyZjNjZjk4/MGFkYmM5YzRmMzhh/ODgxMTMyNmE3YjEx/NTBkMjczODgxZGFj/ZTg5YTYyYzA0NGEx/MzM1MjNjNi9ldmVu/dHMud2VhdmlhdGUu/aW8v",
+          "path": "› pricing-download"
+        },
+        "extra_snippets": [
+          "AI use cases have diverse needs around usage patterns, data privacy, and performance. With Weaviate Enterprise Cloud, you can control costs while tuning resource consumption to your specific needs."
+        ]
+      },
+      {
+        "title": "Weaviate Cloud Pricing Calculator (2026) | BuildMVPFast",
+        "url": "https://www.buildmvpfast.com/tools/api-pricing-estimator/weaviate",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Estimate your monthly Weaviate Cloud costs for vector storage, hybrid search, and AI-native data management. This calculator covers serverless and dedicated cluster pricing to help you plan your budget. ... Works with: Email, SMS, Auth, Analytics, Hosting, Maps, Push Notifications, Monitoring, and more. Monthly flat-rate services always show their fixed price.",
+        "page_age": "2026-02-26T00:00:00",
+        "profile": {
+          "name": "BuildMVPFast",
+          "url": "https://www.buildmvpfast.com/tools/api-pricing-estimator/weaviate",
+          "long_name": "buildmvpfast.com",
+          "img": "https://imgs.search.brave.com/tAR9FiFX75fmJyjI0148r1oap61RwAZYsTPm12mTrK0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjlkZWJiNjQ1/ZjBlYTY3MTk5YmIy/YTNiNWNlMjcwNjEw/NGRkMDA3MWEyMmEw/N2YyOTVlMDllMDI1/NmQ1MmU5Yi93d3cu/YnVpbGRtdnBmYXN0/LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "buildmvpfast.com",
+          "hostname": "www.buildmvpfast.com",
+          "favicon": "https://imgs.search.brave.com/tAR9FiFX75fmJyjI0148r1oap61RwAZYsTPm12mTrK0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjlkZWJiNjQ1/ZjBlYTY3MTk5YmIy/YTNiNWNlMjcwNjEw/NGRkMDA3MWEyMmEw/N2YyOTVlMDllMDI1/NmQ1MmU5Yi93d3cu/YnVpbGRtdnBmYXN0/LmNvbS8",
+          "path": "  › home  › tools  › api pricing estimator  › weaviate cloud"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/UAiKdYzUcJJu_dGnIN7OEyNY-EVA-bQ33tjvsqeOb6M/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/YnVpbGRtdnBmYXN0/LmNvbS9pbWFnZXMv/ZmVhdHVyZWQtc2hv/dC53ZWJw",
+          "original": "https://www.buildmvpfast.com/images/featured-shot.webp",
+          "logo": false
+        },
+        "age": "February 26, 2026",
+        "faq": {
+          "items": [
+            {
+              "question": "What is the difference between Weaviate serverless and dedicated clusters?",
+              "answer": "Serverless clusters start at $25/month and scale automatically based on stored data and query volume. Weaviate manages all infrastructure for you. Dedicated clusters give you reserved resources with guaranteed performance and custom configurations, but pricing is based on your specific requirements. Most teams start with serverless and move to dedicated only when they need single-tenant isolation or very low-latency SLAs.",
+              "title": "Weaviate Cloud Pricing Calculator (2026) | BuildMVPFast",
+              "url": "https://www.buildmvpfast.com/tools/api-pricing-estimator/weaviate",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "buildmvpfast.com",
+                "hostname": "www.buildmvpfast.com",
+                "favicon": "https://imgs.search.brave.com/tAR9FiFX75fmJyjI0148r1oap61RwAZYsTPm12mTrK0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjlkZWJiNjQ1/ZjBlYTY3MTk5YmIy/YTNiNWNlMjcwNjEw/NGRkMDA3MWEyMmEw/N2YyOTVlMDllMDI1/NmQ1MmU5Yi93d3cu/YnVpbGRtdnBmYXN0/LmNvbS8",
+                "path": "  › home  › tools  › api pricing estimator  › weaviate cloud"
+              }
+            },
+            {
+              "question": "Can I self-host Weaviate instead of using Weaviate Cloud?",
+              "answer": "Yes. Weaviate is fully open-source under a BSD-3 license. You can run it on your own infrastructure using Docker, Kubernetes, or embedded mode at no licensing cost. Self-hosting makes sense when you need full data sovereignty or want to avoid per-query charges. The trade-off is that you handle upgrades, scaling, and backups yourself.",
+              "title": "Weaviate Cloud Pricing Calculator (2026) | BuildMVPFast",
+              "url": "https://www.buildmvpfast.com/tools/api-pricing-estimator/weaviate",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "buildmvpfast.com",
+                "hostname": "www.buildmvpfast.com",
+                "favicon": "https://imgs.search.brave.com/tAR9FiFX75fmJyjI0148r1oap61RwAZYsTPm12mTrK0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjlkZWJiNjQ1/ZjBlYTY3MTk5YmIy/YTNiNWNlMjcwNjEw/NGRkMDA3MWEyMmEw/N2YyOTVlMDllMDI1/NmQ1MmU5Yi93d3cu/YnVpbGRtdnBmYXN0/LmNvbS8",
+                "path": "  › home  › tools  › api pricing estimator  › weaviate cloud"
+              }
+            },
+            {
+              "question": "Does Weaviate support hybrid search with vectors and keywords?",
+              "answer": "Weaviate supports hybrid search natively. You can combine BM25 keyword scoring with vector similarity in a single query using a configurable alpha parameter. Setting alpha to 0 gives pure keyword search, 1 gives pure vector search, and 0.5 gives equal weight to both. This is built in and requires no extra configuration or cost beyond standard query pricing.",
+              "title": "Weaviate Cloud Pricing Calculator (2026) | BuildMVPFast",
+              "url": "https://www.buildmvpfast.com/tools/api-pricing-estimator/weaviate",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "buildmvpfast.com",
+                "hostname": "www.buildmvpfast.com",
+                "favicon": "https://imgs.search.brave.com/tAR9FiFX75fmJyjI0148r1oap61RwAZYsTPm12mTrK0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjlkZWJiNjQ1/ZjBlYTY3MTk5YmIy/YTNiNWNlMjcwNjEw/NGRkMDA3MWEyMmEw/N2YyOTVlMDllMDI1/NmQ1MmU5Yi93d3cu/YnVpbGRtdnBmYXN0/LmNvbS8",
+                "path": "  › home  › tools  › api pricing estimator  › weaviate cloud"
+              }
+            },
+            {
+              "question": "How does Weaviate pricing compare to Pinecone?",
+              "answer": "Weaviate Cloud serverless starts at $25/month with a 14-day free sandbox for testing. Pinecone offers a permanent free tier with 2GB storage and serverless pay-per-query pricing. Weaviate charges a flat monthly rate that includes queries, while Pinecone bills per read/write unit. For high query volumes, Weaviate can be cheaper. For low or bursty workloads, Pinecone pay-as-you-go may cost less.",
+              "title": "Weaviate Cloud Pricing Calculator (2026) | BuildMVPFast",
+              "url": "https://www.buildmvpfast.com/tools/api-pricing-estimator/weaviate",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "buildmvpfast.com",
+                "hostname": "www.buildmvpfast.com",
+                "favicon": "https://imgs.search.brave.com/tAR9FiFX75fmJyjI0148r1oap61RwAZYsTPm12mTrK0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjlkZWJiNjQ1/ZjBlYTY3MTk5YmIy/YTNiNWNlMjcwNjEw/NGRkMDA3MWEyMmEw/N2YyOTVlMDllMDI1/NmQ1MmU5Yi93d3cu/YnVpbGRtdnBmYXN0/LmNvbS8",
+                "path": "  › home  › tools  › api pricing estimator  › weaviate cloud"
+              }
+            }
+          ]
+        },
+        "organization": {
+          "type": "organization",
+          "name": "BuildMVPFast",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Estimate your monthly Weaviate Cloud costs for vector storage, hybrid search, and AI-native data management. This calculator covers serverless and dedicated cluster pricing to help you plan your budget. ... Works with: Email, SMS, Auth, Analytics, Hosting, Maps, Push Notifications, Monitoring, and more. Monthly flat-rate services always show their fixed price.",
+          "Flex plan (renamed from Serverless). Open-source, self-host free.",
+          "Open-source, self-host free. Cloud plans available."
+        ]
+      },
+      {
+        "title": "Weaviate Pricing: Self-Hosted, Cloud Flex, Plus & Premium ...",
+        "url": "https://pecollective.com/tools/weaviate-pricing/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "The Plus and Premium tiers make sense for enterprises that need SLAs and compliance. If you have a DevOps team, self-hosted saves significant money at any scale. Disclosure: Pricing information is sourced from official websites and may change.",
+        "page_age": "2026-04-22T00:00:00",
+        "profile": {
+          "name": "PE Collective",
+          "url": "https://pecollective.com/tools/weaviate-pricing/",
+          "long_name": "pecollective.com",
+          "img": "https://imgs.search.brave.com/zuiEKNJxh1fGZPhkQP9kW9DD5txhJh_IS0X_jWcj0ho/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGU3ZDgzMzdj/ODc0NDAyZmQwYWFj/ODIyYmQ5ZTNjZmFk/MDcxYWVmOGFiZDA4/N2Y1ZmRjODU5ZGIw/NDkyMDJiZS9wZWNv/bGxlY3RpdmUuY29t/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "pecollective.com",
+          "hostname": "pecollective.com",
+          "favicon": "https://imgs.search.brave.com/zuiEKNJxh1fGZPhkQP9kW9DD5txhJh_IS0X_jWcj0ho/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGU3ZDgzMzdj/ODc0NDAyZmQwYWFj/ODIyYmQ5ZTNjZmFk/MDcxYWVmOGFiZDA4/N2Y1ZmRjODU5ZGIw/NDkyMDJiZS9wZWNv/bGxlY3RpdmUuY29t/Lw",
+          "path": "  › home  › tools  › weaviate pricing 2026 - free self-hosted vs $45/mo cloud"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/npefizIS4x08rvfdbi-rvsG2p5PXC1SqpUIMWI6mzzA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9wZWNv/bGxlY3RpdmUuY29t/L2Fzc2V0cy9zb2Np/YWwtcHJldmlldy5w/bmc",
+          "original": "https://pecollective.com/assets/social-preview.png",
+          "logo": false
+        },
+        "age": "1 month ago",
+        "faq": {
+          "items": [
+            {
+              "question": "Is Weaviate free?",
+              "answer": "Weaviate is open source and free to self-host with no restrictions. The managed cloud service has a free sandbox tier (14-day expiration) and paid serverless plans starting with usage-based pricing. Self-hosting is free if you have your own infrastructure.",
+              "title": "Weaviate Pricing: Self-Hosted, Cloud Flex, Plus & Premium ...",
+              "url": "https://pecollective.com/tools/weaviate-pricing/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "pecollective.com",
+                "hostname": "pecollective.com",
+                "favicon": "https://imgs.search.brave.com/zuiEKNJxh1fGZPhkQP9kW9DD5txhJh_IS0X_jWcj0ho/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGU3ZDgzMzdj/ODc0NDAyZmQwYWFj/ODIyYmQ5ZTNjZmFk/MDcxYWVmOGFiZDA4/N2Y1ZmRjODU5ZGIw/NDkyMDJiZS9wZWNv/bGxlY3RpdmUuY29t/Lw",
+                "path": "  › home  › tools  › weaviate pricing 2026 - free self-hosted vs $45/mo cloud"
+              }
+            },
+            {
+              "question": "How much does Weaviate Cloud cost?",
+              "answer": "Serverless Cloud charges per dimension-hour for storage and per dimensions queried. A typical small workload (500K vectors, 1536 dimensions, moderate query volume) costs $30-80/month. Costs increase with vector count, dimensions, and query frequency.",
+              "title": "Weaviate Pricing: Self-Hosted, Cloud Flex, Plus & Premium ...",
+              "url": "https://pecollective.com/tools/weaviate-pricing/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "pecollective.com",
+                "hostname": "pecollective.com",
+                "favicon": "https://imgs.search.brave.com/zuiEKNJxh1fGZPhkQP9kW9DD5txhJh_IS0X_jWcj0ho/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGU3ZDgzMzdj/ODc0NDAyZmQwYWFj/ODIyYmQ5ZTNjZmFk/MDcxYWVmOGFiZDA4/N2Y1ZmRjODU5ZGIw/NDkyMDJiZS9wZWNv/bGxlY3RpdmUuY29t/Lw",
+                "path": "  › home  › tools  › weaviate pricing 2026 - free self-hosted vs $45/mo cloud"
+              }
+            },
+            {
+              "question": "Should I self-host Weaviate or use the cloud?",
+              "answer": "Self-host if you have DevOps capability and want full control over costs and performance. Use the cloud if you want zero infrastructure management and your workload is small-to-medium. The breakeven point is roughly 5M vectors, where self-hosting becomes cheaper.",
+              "title": "Weaviate Pricing: Self-Hosted, Cloud Flex, Plus & Premium ...",
+              "url": "https://pecollective.com/tools/weaviate-pricing/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "pecollective.com",
+                "hostname": "pecollective.com",
+                "favicon": "https://imgs.search.brave.com/zuiEKNJxh1fGZPhkQP9kW9DD5txhJh_IS0X_jWcj0ho/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGU3ZDgzMzdj/ODc0NDAyZmQwYWFj/ODIyYmQ5ZTNjZmFk/MDcxYWVmOGFiZDA4/N2Y1ZmRjODU5ZGIw/NDkyMDJiZS9wZWNv/bGxlY3RpdmUuY29t/Lw",
+                "path": "  › home  › tools  › weaviate pricing 2026 - free self-hosted vs $45/mo cloud"
+              }
+            },
+            {
+              "question": "How does Weaviate compare to Pinecone?",
+              "answer": "Weaviate offers self-hosting (Pinecone doesn't), hybrid search (vector + keyword), and more flexible data modeling. Pinecone has simpler serverless pricing and less operational overhead. Weaviate is cheaper at scale due to the self-host option. Pinecone is easier to start with.",
+              "title": "Weaviate Pricing: Self-Hosted, Cloud Flex, Plus & Premium ...",
+              "url": "https://pecollective.com/tools/weaviate-pricing/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "pecollective.com",
+                "hostname": "pecollective.com",
+                "favicon": "https://imgs.search.brave.com/zuiEKNJxh1fGZPhkQP9kW9DD5txhJh_IS0X_jWcj0ho/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGU3ZDgzMzdj/ODc0NDAyZmQwYWFj/ODIyYmQ5ZTNjZmFk/MDcxYWVmOGFiZDA4/N2Y1ZmRjODU5ZGIw/NDkyMDJiZS9wZWNv/bGxlY3RpdmUuY29t/Lw",
+                "path": "  › home  › tools  › weaviate pricing 2026 - free self-hosted vs $45/mo cloud"
+              }
+            }
+          ]
+        },
+        "review": {
+          "type": "Review",
+          "name": "Weaviate",
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/v0Lg-hW9mpbZuVDFbzBbLr4sqo70nPiEfdiFwUW_1OA/rs:fit:360:283:1:0/g:ce/aHR0cHM6Ly9wZWNv/bGxlY3RpdmUuY29t/L2Fzc2V0cy9zb2Np/YWwtcHJldmlldy5w/bmc",
+            "original": "https://pecollective.com/assets/social-preview.png"
+          },
+          "description": "Weaviate serverless starts free up to 100K objects. BYOC runs $1,390/mo for production. Full cost comparison for each deployment option. Weaviate hits a sweet spot that's hard to find in the vector database market. It's open source, so you can self-host and avoid vendor lock-in. But it also offers a managed cloud service for teams that don't want to run infrastructure. The built-in vectorization and hybrid search are genuine differentiators, not just marketing features. The tradeoff is complexity. Weaviate has more moving parts than Pinecone. The module system, GraphQL API, and configurati Weaviate open source is free. Cloud Flex starts at $45/mo. 14-day sandbox for testing. Self-hosted vs managed cost comparison inside.",
+          "rating": {
+            "ratingValue": 4.4,
+            "bestRating": 5.0,
+            "is_tripadvisor": false
+          }
+        },
+        "extra_snippets": [
+          "Weaviate updated its cloud pricing in late 2025, replacing the old Serverless/Enterprise tiers with Flex, Plus, and Premium plans. Self-hosted Weaviate is still free and open source. The cloud plans start at $45/month for Flex (pay-as-you-go) and go up to Premium for enterprise deployments.",
+          "Self-hosted Weaviate is the best deal in vector databases, full-featured and free. Cloud Flex at $45/month is competitive with Pinecone Standard ($50/month) for teams that want managed infrastructure. The Plus and Premium tiers make sense for enterprises that need SLAs and compliance. If you have a DevOps team, self-hosted saves significant money at any scale. Disclosure: Pricing information is sourced from official websites and may change.",
+          "Weaviate is open source and free to self-host with no restrictions. The managed cloud service has a free sandbox tier (14-day expiration) and paid serverless plans starting with usage-based pricing.",
+          "Cloud Flex eliminates operational overhead. Weaviate handles scaling, backups, upgrades, and monitoring. The $45/month minimum is the price of that convenience."
+        ]
+      },
+      {
+        "title": "r/vectordatabase on Reddit: Cost advice for using VectorDB services",
+        "url": "https://www.reddit.com/r/vectordatabase/comments/1jl2tbt/cost_advice_for_using_vectordb_services/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Qdrant: $205 a month for 10 million vectors, source: https://cloud.qdrant.io/calculator · Weaviate: $369 for 10 million, source: https://weaviate.io/pricing/serverless",
+        "page_age": "2025-03-27T12:32:23",
+        "profile": {
+          "name": "Reddit",
+          "url": "https://www.reddit.com/r/vectordatabase/comments/1jl2tbt/cost_advice_for_using_vectordb_services/",
+          "long_name": "reddit.com",
+          "img": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reddit.com",
+          "hostname": "www.reddit.com",
+          "favicon": "https://imgs.search.brave.com/U-eHNCapRHVNWWCVPPMTIvOofZULh0_A_FQKe8xTE4I/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiNTU0M2Nj/MTFhZjRiYWViZDlk/MjJiMjBjMzFjMDRk/Y2IzYWI0MGI0MjVk/OGY5NzQzOGQ5NzQ5/NWJhMWI0NC93d3cu/cmVkZGl0LmNvbS8",
+          "path": "  › r/vectordatabase  › cost advice for using vectordb services"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/A5H_aQiEBuUODR0lNeU8iDfhrWUvO8oEmRGE_mcS_gM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9pY29uLnBu/Zw",
+          "original": "https://www.redditstatic.com/icon.png",
+          "logo": true
+        },
+        "age": "March 27, 2025",
+        "qa": {
+          "question": "<p>\n      Hi everyone,<br>I need some advice on the costs associated with using VectorDB services. We’re working on a project where we’ll be downloading a daily SQL dump with around 10 million records, and then creating vector embeddings to store in a VectorDB. Each day, we will update the embeddings for the records that have changed in the SQL dump.\n    </p><p>\n      Can anyone give me a rough cost estimate for using services like Azure or any other VectorDB providers? I’m looking for general pricing info for storage, compute, and any other relevant costs.\n    </p><p>\n      Thanks for your help!&quot;\n    </p>",
+          "answer": {
+            "text": "<span>For a more accurate pricing you need size of records and number of vector dimensions you intend to use. Assuming 384 dimensions and millions of records after a day, some rough numbers for cloud hosted services: Pinecone: Maybe $60 a day because of amount of daily writes Qdrant: $205 a month for 10 million vectors, source: https://cloud.qdrant.io/calculator Weaviate: $369 for 10 million, source: https://weaviate.io/pricing/serverless Zilliz: difficult to estate from vCU units they use https://zilliz.com/pricing Alternatively, I'd say self host an open-source system like Qdrant, Weaviate, SemaDB, Milvus, Chroma etc on your own hardware. You can a relatively strong VPS for $50..</span>\n",
+            "upvoteCount": 4
+          }
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Fresh-Air3781",
+              "url": "https://www.reddit.com/user/Fresh-Air3781/"
+            }
+          ],
+          "date": "Mar 27, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "Reddit",
+            "url": "https://www.reddit.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/vwRCTZCyS3UsCGj7HsYLzWpcOMhAEqq9hhxBK8tt7Dw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmVkZGl0c3RhdGlj/LmNvbS9zaHJlZGRp/dC9hc3NldHMvZmF2/aWNvbi82NHg2NC5w/bmc",
+              "original": "https://www.redditstatic.com/shreddit/assets/favicon/64x64.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Posted by u/Fresh-Air3781 - 2 votes and 3 comments",
+          "Alternatively, I'd say self host an open-source system like Qdrant, Weaviate, SemaDB, Milvus, Chroma etc on your own hardware.",
+          "Qdrant: $205 a month for 10 million vectors, source: https://cloud.qdrant.io/calculator · Weaviate: $369 for 10 million, source: https://weaviate.io/pricing/serverless"
+        ]
+      },
+      {
+        "title": "Weaviate Pricing in 2026: Free Tier, Plans, and Real Costs",
+        "url": "https://particula.tech/blog/weaviate-pricing-free-tier-guide",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Weaviate&#x27;s free tier is a 14-day sandbox—not a permanent plan. Flex starts at $45/month for prototypes. Self-hosting on Kubernetes costs $150-400/month in infrastructure and beats managed pricing at 5M+ vectors.",
+        "page_age": "2026-03-03T00:00:00",
+        "profile": {
+          "name": "Particula Tech",
+          "url": "https://particula.tech/blog/weaviate-pricing-free-tier-guide",
+          "long_name": "particula.tech",
+          "img": "https://imgs.search.brave.com/dFeRhdNG37o3fiDaxJPivGICz5GUPiyntfAqdWfT6hE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzY2MTNmYWFi/Yjc2Y2JlYmUyODQz/NGMxMzMzNDc0MGYw/OWJjYmEwYWM4NzVi/ODgwMDgzNWE2Nzgw/OGM2MzNkNy9wYXJ0/aWN1bGEudGVjaC8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "particula.tech",
+          "hostname": "particula.tech",
+          "favicon": "https://imgs.search.brave.com/dFeRhdNG37o3fiDaxJPivGICz5GUPiyntfAqdWfT6hE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzY2MTNmYWFi/Yjc2Y2JlYmUyODQz/NGMxMzMzNDc0MGYw/OWJjYmEwYWM4NzVi/ODgwMDgzNWE2Nzgw/OGM2MzNkNy9wYXJ0/aWN1bGEudGVjaC8",
+          "path": "  › home  › blog  › weaviate pricing free tier guide"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/up_BMYmnptdqgxkeAXrcjmFpsJbfzZWpjbWCPxgIr7Q/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9wYXJ0/aWN1bGEudGVjaC9z/b2NpYWwucG5n",
+          "original": "https://particula.tech/social.png",
+          "logo": false
+        },
+        "age": "March 3, 2026",
+        "organization": {
+          "type": "organization",
+          "name": "Particula Tech",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Weaviate is open-source under a BSD-3 license. You can run it on your own infrastructure with zero license fees.",
+          "Qdrant delivers better raw query performance (30-40ms p99 vs Weaviate's 50-70ms p99) at a lower managed cloud starting price ($25/month).",
+          "Weaviate's value proposition isn't just price—it's what you get at each price point:",
+          "Weaviate's free tier is a 14-day sandbox—not a permanent plan. Flex starts at $45/month for prototypes. Self-hosting on Kubernetes costs $150-400/month in infrastructure and beats managed pricing at 5M+ vectors."
+        ]
+      },
+      {
+        "title": "Weaviate Reviews 2026: Details, Pricing, & Features | G2",
+        "url": "https://www.g2.com/products/weaviate/reviews",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "The most helpful about Weaviate is that you can store, vectorize, and search data all within one system — no need to juggle multiple tools and no need to precompute embeddings it has built in vectorization. Also a good community as in it is actively maintained. Review collected by and hosted on G2.com. ... If you&#x27;re new, it can feel like you&#x27;re piecing things together from scattered sources.",
+        "profile": {
+          "name": "G2",
+          "url": "https://www.g2.com/products/weaviate/reviews",
+          "long_name": "g2.com",
+          "img": "https://imgs.search.brave.com/Pakhl2FkJ3y3ItovQaQaC7gSBs6cuN7A8tiiCvPBAlo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjkzOGZiNGFh/Yjc4MjI0ZjZhMjlh/Y2M4N2E1NzVlODhl/MjgwM2Q4ZmNkZjA3/NGVhY2QzYzFjNzE3/NmEyNmQ1OS93d3cu/ZzIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "g2.com",
+          "hostname": "www.g2.com",
+          "favicon": "https://imgs.search.brave.com/Pakhl2FkJ3y3ItovQaQaC7gSBs6cuN7A8tiiCvPBAlo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjkzOGZiNGFh/Yjc4MjI0ZjZhMjlh/Y2M4N2E1NzVlODhl/MjgwM2Q4ZmNkZjA3/NGVhY2QzYzFjNzE3/NmEyNmQ1OS93d3cu/ZzIuY29tLw",
+          "path": "› products  › weaviate  › reviews"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/m53RAOULMhl3POhpUsWnfnHlvmuCasgWbzRx_1RLEts/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZzJjcm93ZC5j/b20vdXBsb2Fkcy9w/cm9kdWN0L2ltYWdl/L3NvY2lhbF9sYW5k/c2NhcGUvc29jaWFs/X2xhbmRzY2FwZV9m/ZmQyY2VjYTM4MDhl/NzY0Y2YzNjVjZmEx/YWIwOGIzNi93ZWF2/aWF0ZS5wbmc",
+          "original": "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_ffd2ceca3808e764cf365cfa1ab08b36/weaviate.png",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Weaviate is an AI-native vector database designed to simplify the process of building and scaling search and generative AI applications for developers of all levels. Open source and built with modern AI workloads in mind, Weaviate powers use cases like semantic and hybrid search, chatbots, and AI-driven agents.",
+          "The most helpful about Weaviate is that you can store, vectorize, and search data all within one system — no need to juggle multiple tools and no need to precompute embeddings it has built in vectorization. Also a good community as in it is actively maintained. Review collected by and hosted on G2.com. ... If you're new, it can feel like you're piecing things together from scattered sources.",
+          "Its unique multi-tenant architecture, purpose-built for both vectors and objects, enables efficient large-scale deployments while maintaining enterprise-grade performance and reliability. With flexible deployment options—including on-premises, cloud, hybrid environments, and Bring Your Own Cloud (BYOC)—Weaviate meets the needs of diverse organizations, from startups to large enterprises.",
+          "These options empower teams to choose the deployment model that aligns with their operational and regulatory requirements. Weaviate also provides robust data privacy, compliance, and access control features, ensuring security and trustworthiness for production environments."
+        ]
+      },
+      {
+        "title": "Weaviate Reviews in 2025",
+        "url": "https://sourceforge.net/software/product/Weaviate/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Pricing for Weaviate starts at Free. Thanks for helping keep SourceForge clean.",
+        "profile": {
+          "name": "SourceForge",
+          "url": "https://sourceforge.net/software/product/Weaviate/",
+          "long_name": "sourceforge.net",
+          "img": "https://imgs.search.brave.com/jWkmRM0sfhE6ale0tTgckHpJY3Z2_MSGoM8XGgDXdBo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDQzMTYzN2Jk/MzBiY2RkM2NjOTUx/OTY1OGNmMTM4NGY5/ZmM3MTY1YTU5NjVm/YjU5NGUzNjE5NzEx/NzQxNTdjZC9zb3Vy/Y2Vmb3JnZS5uZXQv"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "creative_work",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "sourceforge.net",
+          "hostname": "sourceforge.net",
+          "favicon": "https://imgs.search.brave.com/jWkmRM0sfhE6ale0tTgckHpJY3Z2_MSGoM8XGgDXdBo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDQzMTYzN2Jk/MzBiY2RkM2NjOTUx/OTY1OGNmMTM4NGY5/ZmM3MTY1YTU5NjVm/YjU5NGUzNjE5NzEx/NzQxNTdjZC9zb3Vy/Y2Vmb3JnZS5uZXQv",
+          "path": "› software  › product  › Weaviate"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/FNAiy9MtlGEfQFsEXekI_xh0hIXrjPetTLwE28XyahQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hLmZz/ZG4uY29tL2FsbHVy/YS9zL3dlYXZpYXRl/L2ljb24_NmNmZjk4/MjQ1NDQ4MzBkYTJk/MWE3YmY5NzgyMGI4/Y2E4ZDk5YjNiMGU2/MzJmYTY2YjU1MDdj/YzZkMDFjNmNkOA",
+          "original": "https://a.fsdn.com/allura/s/weaviate/icon?6cff9824544830da2d1a7bf97820b8ca8d99b3b0e632fa66b5507cc6d01c6cd8",
+          "logo": true
+        },
+        "creative_work": {
+          "name": "Weaviate",
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/ezYzVDupunk8p0Jsz-pR3rToIA4HsVzl_UfeGhW6wH0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hLmZz/ZG4uY29tL2FsbHVy/YS9zL3dlYXZpYXRl/L2ljb24_NmNmZjk4/MjQ1NDQ4MzBkYTJk/MWE3YmY5NzgyMGI4/Y2E4ZDk5YjNiMGU2/MzJmYTY2YjU1MDdj/YzZkMDFjNmNkOD8m/dz05MA",
+            "original": "https://a.fsdn.com/allura/s/weaviate/icon?6cff9824544830da2d1a7bf97820b8ca8d99b3b0e632fa66b5507cc6d01c6cd8?&w=90"
+          }
+        },
+        "extra_snippets": [
+          "Developers interested in a powerful open source vector database · Weaviate is an open-source vector database. It allows you to store data objects and vector embeddings from your favorite ML-models, and scale seamlessly into billions of data objects. Whether you bring your own vectors or use one of the vectorization modules, you can index billions of data objects to search through.",
+          "LanceDB is a developer-friendly, open source database for AI. From hyperscalable vector search and advanced retrieval for RAG to streaming training data and interactive exploration of large-scale AI datasets, LanceDB is the best foundation for your AI application. Installs in seconds and fits... ... Weaviate works with these users and organization types: Mid Size Business, Small Business, Enterprise, Freelance, Nonprofit, Government, and Startup.",
+          "Pricing for Weaviate starts at Free. Thanks for helping keep SourceForge clean.",
+          "Combine multiple search techniques, such as keyword-based and vector search, to provide state-of-the-art search experiences. Improve your search results by piping them through LLM models like GPT-3 to create next-gen search experiences. Beyond search, Weaviate's next-gen vector database can power a wide range of innovative apps."
+        ]
+      },
+      {
+        "title": "Question about Weaviate pricing: Differences between public pricing and actual cluster pricing - Support - Weaviate Community Forum",
+        "url": "https://forum.weaviate.io/t/question-about-weaviate-pricing-differences-between-public-pricing-and-actual-cluster-pricing/20316",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "On the public Weaviate Cloud page, it states that pricing starts at $25/month, with a storage cost of $0.095 per 1M vector dimensions per month. However, when I create a cluster, the pricing is significantly ...",
+        "page_age": "2025-03-26T14:28:12",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://forum.weaviate.io/t/question-about-weaviate-pricing-differences-between-public-pricing-and-actual-cluster-pricing/20316",
+          "long_name": "forum.weaviate.io",
+          "img": "https://imgs.search.brave.com/p2GSfvX7jdyzacyF5UYQDLAZrUx25V8-b7sajMu8io4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMThlYzVlY2M0/NDcxNjEyZDk2YjEy/YTNmNjg3ZWExYTBl/NmQyODY4NTFiNzVl/YzJiYzAwYWMwMzQy/YWFjODViNC9mb3J1/bS53ZWF2aWF0ZS5p/by8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "qa",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forum.weaviate.io",
+          "hostname": "forum.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/p2GSfvX7jdyzacyF5UYQDLAZrUx25V8-b7sajMu8io4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMThlYzVlY2M0/NDcxNjEyZDk2YjEy/YTNmNjg3ZWExYTBl/NmQyODY4NTFiNzVl/YzJiYzAwYWMwMzQy/YWFjODViNC9mb3J1/bS53ZWF2aWF0ZS5p/by8",
+          "path": "  › support"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/8LSx92MJKjlXgO-J2Meg91OiaagsbKCOHdXYuVINcdk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jYW5h/ZGExLmRpc2NvdXJz/ZS1jZG4uY29tL2Zs/ZXgwMjcvdXBsb2Fk/cy93ZWF2aWF0ZS9v/cHRpbWl6ZWQvMlgv/MS8xNTlhM2VlZWM5/YzViNjk5NDY1NWI4/NTgxNmQ1MmFlYmQ2/ZTM0NzZjXzJfNTE5/eDEwMjQucG5n",
+          "original": "https://canada1.discourse-cdn.com/flex027/uploads/weaviate/optimized/2X/1/159a3eeec9c5b6994655b85816d52aebd6e3476c_2_519x1024.png",
+          "logo": false
+        },
+        "age": "March 26, 2025",
+        "extra_snippets": [
+          "Hi everyone, I’m evaluating Weaviate and I have a question regarding the pricing. On the public Weaviate Cloud page, it states that pricing starts at $25/month, with a storage cost of $0.095 per 1M vector dimensions per month. However, when I create a cluster, the pricing is significantly different: the minimum cost is $75/month, and the storage cost is $0.285 per 1M vector dimensions per month.",
+          "Hi everyone, I’m evaluating Weaviate and I have a question regarding the pricing. On the public Weaviate Cloud page, it states that pricing starts at $25/month, with a storage cost of $0.095 per 1M vector dimensions per…"
+        ]
+      },
+      {
+        "title": "Weaviate: Pricing, Free Demo & Features | Software Finder",
+        "url": "https://softwarefinder.com/artificial-intelligence/weaviate",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Weaviate is an open-source vector database for building AI applications. Explore its features, pricing, and deployment options to see how it enables semantic search at scale.",
+        "page_age": "2025-11-26T00:00:00",
+        "profile": {
+          "name": "Software Finder",
+          "url": "https://softwarefinder.com/artificial-intelligence/weaviate",
+          "long_name": "softwarefinder.com",
+          "img": "https://imgs.search.brave.com/vBwIt2mfoqCaY_Fy_VRfmGrsccAQP7wjXVpNxBqtpSI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODA3YzhiNjAw/YmRlNzMyZDZmNDU3/YWM3NmVlYWMyNzcy/OTBkZGZmYTg3MTcz/NWM1YzE5MDk2NTRh/YTE3YTY3My9zb2Z0/d2FyZWZpbmRlci5j/b20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "softwarefinder.com",
+          "hostname": "softwarefinder.com",
+          "favicon": "https://imgs.search.brave.com/vBwIt2mfoqCaY_Fy_VRfmGrsccAQP7wjXVpNxBqtpSI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODA3YzhiNjAw/YmRlNzMyZDZmNDU3/YWM3NmVlYWMyNzcy/OTBkZGZmYTg3MTcz/NWM1YzE5MDk2NTRh/YTE3YTY3My9zb2Z0/d2FyZWZpbmRlci5j/b20v",
+          "path": "› artificial-intelligence  › weaviate"
+        },
+        "age": "November 26, 2025",
+        "faq": {
+          "items": [
+            {
+              "question": "Does Weaviate offer an API?",
+              "answer": "<p>Yes, Weaviate offers APIs.</p>",
+              "title": "Weaviate: Pricing, Free Demo & Features | Software Finder",
+              "url": "https://softwarefinder.com/artificial-intelligence/weaviate",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "softwarefinder.com",
+                "hostname": "softwarefinder.com",
+                "favicon": "https://imgs.search.brave.com/vBwIt2mfoqCaY_Fy_VRfmGrsccAQP7wjXVpNxBqtpSI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODA3YzhiNjAw/YmRlNzMyZDZmNDU3/YWM3NmVlYWMyNzcy/OTBkZGZmYTg3MTcz/NWM1YzE5MDk2NTRh/YTE3YTY3My9zb2Z0/d2FyZWZpbmRlci5j/b20v",
+                "path": "› artificial-intelligence  › weaviate"
+              }
+            },
+            {
+              "question": "What language does Weaviate support?",
+              "answer": "<p>The software supports English only.</p>",
+              "title": "Weaviate: Pricing, Free Demo & Features | Software Finder",
+              "url": "https://softwarefinder.com/artificial-intelligence/weaviate",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "softwarefinder.com",
+                "hostname": "softwarefinder.com",
+                "favicon": "https://imgs.search.brave.com/vBwIt2mfoqCaY_Fy_VRfmGrsccAQP7wjXVpNxBqtpSI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODA3YzhiNjAw/YmRlNzMyZDZmNDU3/YWM3NmVlYWMyNzcy/OTBkZGZmYTg3MTcz/NWM1YzE5MDk2NTRh/YTE3YTY3My9zb2Z0/d2FyZWZpbmRlci5j/b20v",
+                "path": "› artificial-intelligence  › weaviate"
+              }
+            },
+            {
+              "question": "What other apps does Weaviate integrate with?",
+              "answer": "<p>The platform integrates with several third-party applications and systems, including Google, n8n, Arize, Boomi, Cardinal, and Firecrawl.</p>",
+              "title": "Weaviate: Pricing, Free Demo & Features | Software Finder",
+              "url": "https://softwarefinder.com/artificial-intelligence/weaviate",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "softwarefinder.com",
+                "hostname": "softwarefinder.com",
+                "favicon": "https://imgs.search.brave.com/vBwIt2mfoqCaY_Fy_VRfmGrsccAQP7wjXVpNxBqtpSI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODA3YzhiNjAw/YmRlNzMyZDZmNDU3/YWM3NmVlYWMyNzcy/OTBkZGZmYTg3MTcz/NWM1YzE5MDk2NTRh/YTE3YTY3My9zb2Z0/d2FyZWZpbmRlci5j/b20v",
+                "path": "› artificial-intelligence  › weaviate"
+              }
+            },
+            {
+              "question": "What types of Weaviate price plans are available?",
+              "answer": "<p>The software offers a 14-day free trial and three plans: Flex ($45/month), Plus ($280/month), and Premium (custom pricing). Additional add-on features are available at an extra cost. Contact us to request a personalized Weaviate cost quote based on your institution's requirements.</p>",
+              "title": "Weaviate: Pricing, Free Demo & Features | Software Finder",
+              "url": "https://softwarefinder.com/artificial-intelligence/weaviate",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "softwarefinder.com",
+                "hostname": "softwarefinder.com",
+                "favicon": "https://imgs.search.brave.com/vBwIt2mfoqCaY_Fy_VRfmGrsccAQP7wjXVpNxBqtpSI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODA3YzhiNjAw/YmRlNzMyZDZmNDU3/YWM3NmVlYWMyNzcy/OTBkZGZmYTg3MTcz/NWM1YzE5MDk2NTRh/YTE3YTY3My9zb2Z0/d2FyZWZpbmRlci5j/b20v",
+                "path": "› artificial-intelligence  › weaviate"
+              }
+            },
+            {
+              "question": "What level of support does Weaviate offer?",
+              "answer": "<p>The platform provides support via contact form and FAQs.</p>",
+              "title": "Weaviate: Pricing, Free Demo & Features | Software Finder",
+              "url": "https://softwarefinder.com/artificial-intelligence/weaviate",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "softwarefinder.com",
+                "hostname": "softwarefinder.com",
+                "favicon": "https://imgs.search.brave.com/vBwIt2mfoqCaY_Fy_VRfmGrsccAQP7wjXVpNxBqtpSI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODA3YzhiNjAw/YmRlNzMyZDZmNDU3/YWM3NmVlYWMyNzcy/OTBkZGZmYTg3MTcz/NWM1YzE5MDk2NTRh/YTE3YTY3My9zb2Z0/d2FyZWZpbmRlci5j/b20v",
+                "path": "› artificial-intelligence  › weaviate"
+              }
+            },
+            {
+              "question": "Does Weaviate have a mobile app?",
+              "answer": "<p>No, Weaviate does not offer a mobile app.</p>",
+              "title": "Weaviate: Pricing, Free Demo & Features | Software Finder",
+              "url": "https://softwarefinder.com/artificial-intelligence/weaviate",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "softwarefinder.com",
+                "hostname": "softwarefinder.com",
+                "favicon": "https://imgs.search.brave.com/vBwIt2mfoqCaY_Fy_VRfmGrsccAQP7wjXVpNxBqtpSI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODA3YzhiNjAw/YmRlNzMyZDZmNDU3/YWM3NmVlYWMyNzcy/OTBkZGZmYTg3MTcz/NWM1YzE5MDk2NTRh/YTE3YTY3My9zb2Z0/d2FyZWZpbmRlci5j/b20v",
+                "path": "› artificial-intelligence  › weaviate"
+              }
+            },
+            {
+              "question": "Who are the typical users of Weaviate?",
+              "answer": "<p>Weaviate is suitable for a wide range of industries and sectors, which include automation and AI, insurance and financial services, cybersecurity, astronomy, and risk management.</p>",
+              "title": "Weaviate: Pricing, Free Demo & Features | Software Finder",
+              "url": "https://softwarefinder.com/artificial-intelligence/weaviate",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "softwarefinder.com",
+                "hostname": "softwarefinder.com",
+                "favicon": "https://imgs.search.brave.com/vBwIt2mfoqCaY_Fy_VRfmGrsccAQP7wjXVpNxBqtpSI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODA3YzhiNjAw/YmRlNzMyZDZmNDU3/YWM3NmVlYWMyNzcy/OTBkZGZmYTg3MTcz/NWM1YzE5MDk2NTRh/YTE3YTY3My9zb2Z0/d2FyZWZpbmRlci5j/b20v",
+                "path": "› artificial-intelligence  › weaviate"
+              }
+            }
+          ]
+        },
+        "extra_snippets": [
+          "Weaviate is an open-source vector database that enables scalable semantic search for AI applications. Although its initial setup can be complex for users new to vector databases, it offers powerful hybrid search capabilities and a flexible, model-agnostic system.",
+          "Weaviate is an open-source vector database designed for developers building Artificial Intelligence (AI) powered applications. It stores both data objects and their corresponding vector embeddings, enabling advanced search capabilities for large, unstructured datasets.",
+          "Weaviate features an open source, AI-native vector database designed for building and scaling AI applications.",
+          "Organizations often struggle to extract meaningful insights from vast, unstructured datasets using traditional keyword search alone. Weaviate addresses this by enabling searches based on semantic meaning and context, not just exact term matches. Its hybrid search engine improves the relevance of results for complex queries, making it a strong fit for building sophisticated AI applications."
+        ]
+      },
+      {
+        "title": "Seeking Insights: Weaviate pricing structure - Support - Weaviate Community Forum",
+        "url": "https://forum.weaviate.io/t/seeking-insights-weaviate-pricing-structure/1804",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "We are currently working on an AI-based project where we aim to integrate vector search functionality. As part of our project, we are considering using Weaviate as our vector database solution. However, we need detailed information about the pricing structure to evaluate its feasibility for ...",
+        "page_age": "2024-03-23T13:16:58",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://forum.weaviate.io/t/seeking-insights-weaviate-pricing-structure/1804",
+          "long_name": "forum.weaviate.io",
+          "img": "https://imgs.search.brave.com/p2GSfvX7jdyzacyF5UYQDLAZrUx25V8-b7sajMu8io4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMThlYzVlY2M0/NDcxNjEyZDk2YjEy/YTNmNjg3ZWExYTBl/NmQyODY4NTFiNzVl/YzJiYzAwYWMwMzQy/YWFjODViNC9mb3J1/bS53ZWF2aWF0ZS5p/by8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forum.weaviate.io",
+          "hostname": "forum.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/p2GSfvX7jdyzacyF5UYQDLAZrUx25V8-b7sajMu8io4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMThlYzVlY2M0/NDcxNjEyZDk2YjEy/YTNmNjg3ZWExYTBl/NmQyODY4NTFiNzVl/YzJiYzAwYWMwMzQy/YWFjODViNC9mb3J1/bS53ZWF2aWF0ZS5p/by8",
+          "path": "  › support"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/O4qEHAmJ5_d2paYUvEO5tC5ZdxXCcj9Iv39pA8Rg_e8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jYW5h/ZGExLmRpc2NvdXJz/ZS1jZG4uY29tL2Zs/ZXgwMjcvdXBsb2Fk/cy93ZWF2aWF0ZS9v/cmlnaW5hbC8xWC8x/ZTRmNzk5NDYwODVm/Nzk3NzQ4ZDIwYzUx/ZTE4MDAwZGI2Nzcz/NWIyLnBuZw",
+          "original": "https://canada1.discourse-cdn.com/flex027/uploads/weaviate/original/1X/1e4f79946085f797748d20c51e18000db67735b2.png",
+          "logo": false
+        },
+        "age": "March 23, 2024",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Hritik_Pandey",
+              "url": "https://forum.weaviate.io/u/Hritik_Pandey"
+            }
+          ],
+          "date": "Mar 23, 2024",
+          "publisher": {
+            "type": "organization",
+            "name": "Weaviate, B.V.",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/O8fxEwPyKsu2_MVs7BpWPT8nURMJlL6H0c_MDAMTDSI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jYW5h/ZGExLmRpc2NvdXJz/ZS1jZG4uY29tL2Zs/ZXgwMjcvdXBsb2Fk/cy93ZWF2aWF0ZS9v/cmlnaW5hbC8xWC9k/MmE1MTllNjg1NTA1/ZGU2NjQwN2Q5MzU1/YzdiNGU2NGRhMGQy/OGUwLnBuZw",
+              "original": "https://canada1.discourse-cdn.com/flex027/uploads/weaviate/original/1X/d2a519e685505de66407d9355c7b4e64da0d28e0.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "We are currently working on an AI-based project where we aim to integrate vector search functionality. As part of our project, we are considering using Weaviate as our vector database solution. However, we need detailed information about the pricing structure to evaluate its feasibility for our project.",
+          "We are currently working on an AI-based project where we aim to integrate vector search functionality. As part of our project, we are considering using Weaviate as our vector database solution. However, we need detailed …"
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

@@ -1,0 +1,1602 @@
+{
+  "type": "search",
+  "query": {
+    "original": "бенчмарки Milvus 2026",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "faq": {
+    "type": "faq",
+    "results": [
+      {
+        "question": "How much does Zilliz Cloud (managed Milvus) cost in 2026?",
+        "answer": "Zilliz Cloud Serverless charges $0.096/CU-hour and $0.02/GB/month for storage. Dedicated clusters start at 1 CU (~$70/month). For 1M vectors at 1536 dimensions, Serverless costs $80-150/month. The free tier includes 100 CU-hours and 5GB storage per month.",
+        "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+        "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "leanopstech.com",
+          "hostname": "leanopstech.com",
+          "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+          "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+        }
+      },
+      {
+        "question": "How does Milvus pricing compare to Pinecone?",
+        "answer": "Zilliz Cloud is 30-50% more expensive than Pinecone Serverless under 10M vectors ($250-500/month vs $170-370/month at 10M). However, Milvus excels at 100M+ vectors where its distributed architecture scales more efficiently, offering better cost-efficiency beyond 50M vectors.",
+        "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+        "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "leanopstech.com",
+          "hostname": "leanopstech.com",
+          "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+          "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+        }
+      },
+      {
+        "question": "How to synchronize data between Milvus and Chroma?",
+        "answer": "Use a single embedding pipeline that writes vectors to both databases simultaneously via dual CRUD wrappers. We recommend a middleware service that calls Milvus and Chroma APIs in a transaction-like pattern (with retry and dead letter queue). No built-in sync exists; you must coordinate at the application layer.",
+        "title": "Milvus + Chroma Integration Guide — Hybrid Vector Search Pipeline ...",
+        "url": "https://markaicode.com/milvus-with-chroma/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "markaicode.com",
+          "hostname": "markaicode.com",
+          "favicon": "https://imgs.search.brave.com/w0BUII0P6C4-Uveam-b_TjRhal2VU_567xpioyKfPAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTJkNmQ3ZDgz/NmMyZmZlYWFkZjYz/NWY3ODg2MjVmNDI1/YjIwNzlhYzgzM2M2/YmE4Zjg1OWFiOTE5/YTJmMjNmNy9tYXJr/YWljb2RlLmNvbS8",
+          "path": "  › home  › milvus  › milvus + chroma integration guide — hybrid vector search pipeline [2026]"
+        }
+      },
+      {
+        "question": "When should I choose Milvus over Pinecone or Qdrant?",
+        "answer": "Choose Milvus when your dataset exceeds 50M vectors, you need multi-node distributed architecture, GPU-accelerated search, or full control with Kubernetes. Under 10M vectors, Pinecone Serverless or Qdrant Cloud are cheaper and simpler.",
+        "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+        "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "leanopstech.com",
+          "hostname": "leanopstech.com",
+          "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+          "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+        }
+      },
+      {
+        "question": "Which Milvus index works best for Chroma-integrated sparse vectors?",
+        "answer": "For sparse vector fields (e.g., SPLADE), use the `BIN_IVF_FLAT` index with `nlist: 128`. It offers 3x faster recall than default flat indexing on Milvus 2.5 without sacrificing accuracy (recall@100: 0.97). Test with `hnsw` for dense sides but avoid `HNSW` for sparse unless your dimensionality is below 500.",
+        "title": "Milvus + Chroma Integration Guide — Hybrid Vector Search Pipeline ...",
+        "url": "https://markaicode.com/milvus-with-chroma/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "markaicode.com",
+          "hostname": "markaicode.com",
+          "favicon": "https://imgs.search.brave.com/w0BUII0P6C4-Uveam-b_TjRhal2VU_567xpioyKfPAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTJkNmQ3ZDgz/NmMyZmZlYWFkZjYz/NWY3ODg2MjVmNDI1/YjIwNzlhYzgzM2M2/YmE4Zjg1OWFiOTE5/YTJmMjNmNy9tYXJr/YWljb2RlLmNvbS8",
+          "path": "  › home  › milvus  › milvus + chroma integration guide — hybrid vector search pipeline [2026]"
+        }
+      },
+      {
+        "question": "What is the break-even point for self-hosting Milvus vs Zilliz Cloud?",
+        "answer": "Self-hosting becomes clearly cheaper at 10-20M vectors, saving 30-50%. At 50M+ vectors, self-hosted on AWS EKS costs $300-450/month vs $400-800/month on Zilliz Cloud (50-70% savings). Factor in 8-20 hours/month of engineering time for operations.",
+        "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+        "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "leanopstech.com",
+          "hostname": "leanopstech.com",
+          "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+          "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+        }
+      },
+      {
+        "question": "Is Milvus cheaper to self-host than using Zilliz Cloud?",
+        "answer": "Yes. Self-hosted Milvus on Kubernetes costs 50-70% less at scale. A 3-node cluster on AWS EKS handling 50M+ vectors costs $300-600/month vs $1,000-1,800/month on Zilliz Cloud. The break-even is around 10-20M vectors, but self-hosting requires Kubernetes and etcd expertise.",
+        "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+        "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "leanopstech.com",
+          "hostname": "leanopstech.com",
+          "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+          "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+        }
+      },
+      {
+        "question": "Can I run both Milvus and Chroma in Kubernetes?",
+        "answer": "Yes, but latency doubles if pods are on different nodes. We measured 38ms hybrid query latency when both are co-located on a single GPU node (AWS G4dn.xlarge). Milvus Operator v2.5 and Chroma Helm chart 0.6.0 work well with persistent volume claims (SSD required). Never use `emptyDir` for Chroma metadata.",
+        "title": "Milvus + Chroma Integration Guide — Hybrid Vector Search Pipeline ...",
+        "url": "https://markaicode.com/milvus-with-chroma/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "markaicode.com",
+          "hostname": "markaicode.com",
+          "favicon": "https://imgs.search.brave.com/w0BUII0P6C4-Uveam-b_TjRhal2VU_567xpioyKfPAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTJkNmQ3ZDgz/NmMyZmZlYWFkZjYz/NWY3ODg2MjVmNDI1/YjIwNzlhYzgzM2M2/YmE4Zjg1OWFiOTE5/YTJmMjNmNy9tYXJr/YWljb2RlLmNvbS8",
+          "path": "  › home  › milvus  › milvus + chroma integration guide — hybrid vector search pipeline [2026]"
+        }
+      },
+      {
+        "question": "Which has lowest latency: Pinecone, Weaviate, or Milvus?",
+        "answer": "Milvus with GPU acceleration achieves P99 latency &amp;lt;50ms, 3x faster than Weaviate (&amp;lt;150ms), 2x faster than Pinecone (&amp;lt;100ms). For real-time Q&amp;amp;A, choose Milvus.",
+        "title": "RAG Vector Database Selection: Pinecone vs Weaviate vs Milvus Deep ...",
+        "url": "https://eastondev.com/blog/en/posts/ai/20260427-rag-vector-database-selection/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "eastondev.com",
+          "hostname": "eastondev.com",
+          "favicon": "https://imgs.search.brave.com/2yzyAp4-U1rwe_EwSHqf7XV27D3OTfaRxeiYJ_xUvX4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTVmMzAyNzhl/ZDYxMzE5ZmU5MGE1/YmYzNGIyYmEwODNi/NmEzZmE2ZWIyMTQ1/NWEyODNmZmE5NzIz/MTZlMmQyZS9lYXN0/b25kZXYuY29tLw",
+          "path": "  › home  › posts  › ai & intelligence  › rag vector database selection: pinecone vs weaviate vs milvus deep comparison"
+        }
+      },
+      {
+        "question": "What is the cost difference between vector databases?",
+        "answer": "Open-source options (Milvus, Weaviate, Qdrant, Chroma) are free but require infrastructure and operational costs. Managed services (Pinecone, Zilliz Cloud) have usage-based pricing starting with free tiers. Importantly, Blockify's 40x data reduction dramatically lowers storage and query costs across all platforms - often paying for itself through reduced vector database bills.",
+        "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+        "url": "https://iternal.ai/blockify-vector-databases",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "iternal.ai",
+          "hostname": "iternal.ai",
+          "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+          "path": "› blockify-vector-databases"
+        }
+      },
+      {
+        "question": "How much can DiskANN save on Zilliz Cloud compute costs?",
+        "answer": "DiskANN reduces compute costs by 60-75% for large collections by storing vectors on SSD instead of RAM. At 100M vectors, HNSW requires 8-16 CUs ($550-1,100/month) while DiskANN needs only 2-4 CUs ($140-280/month) with recall above 95%.",
+        "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+        "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "leanopstech.com",
+          "hostname": "leanopstech.com",
+          "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+          "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+        }
+      },
+      {
+        "question": "What is semantic chunking and why does it matter?",
+        "answer": "Traditional chunking splits documents by character count, often breaking mid-sentence or separating related concepts. Semantic chunking (what Blockify calls IdeaBlocks) preserves complete ideas and context. This means when your vector database retrieves a chunk, the LLM receives coherent, useful information rather than fragments.",
+        "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+        "url": "https://iternal.ai/blockify-vector-databases",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "iternal.ai",
+          "hostname": "iternal.ai",
+          "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+          "path": "› blockify-vector-databases"
+        }
+      },
+      {
+        "question": "Does Zilliz Cloud have a free tier?",
+        "answer": "Yes. The free tier includes 100 CU-hours/month and 5GB storage (~820K vectors at 1536 dimensions). The 100 CU-hours support approximately 500K-1M queries/month on a small dataset. No time limit, suitable for prototyping and evaluation.",
+        "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+        "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "leanopstech.com",
+          "hostname": "leanopstech.com",
+          "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+          "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+        }
+      },
+      {
+        "question": "Knowledge graph + RAG, which to choose?",
+        "answer": "Weaviate. Its graph database DNA supports object-object relationship modeling, like company-employee-project semantic chains. Milvus and Pinecone only support pure vector retrieval.",
+        "title": "RAG Vector Database Selection: Pinecone vs Weaviate vs Milvus Deep ...",
+        "url": "https://eastondev.com/blog/en/posts/ai/20260427-rag-vector-database-selection/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "eastondev.com",
+          "hostname": "eastondev.com",
+          "favicon": "https://imgs.search.brave.com/2yzyAp4-U1rwe_EwSHqf7XV27D3OTfaRxeiYJ_xUvX4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTVmMzAyNzhl/ZDYxMzE5ZmU5MGE1/YmYzNGIyYmEwODNi/NmEzZmE2ZWIyMTQ1/NWEyODNmZmE5NzIz/MTZlMmQyZS9lYXN0/b25kZXYuY29tLw",
+          "path": "  › home  › posts  › ai & intelligence  › rag vector database selection: pinecone vs weaviate vs milvus deep comparison"
+        }
+      },
+      {
+        "question": "No ops team, which to choose?",
+        "answer": "Pinecone or Weaviate cloud-hosted. Both fully managed, zero ops. Pinecone simpler, Weaviate more flexible (hybrid search, multimodal).",
+        "title": "RAG Vector Database Selection: Pinecone vs Weaviate vs Milvus Deep ...",
+        "url": "https://eastondev.com/blog/en/posts/ai/20260427-rag-vector-database-selection/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "eastondev.com",
+          "hostname": "eastondev.com",
+          "favicon": "https://imgs.search.brave.com/2yzyAp4-U1rwe_EwSHqf7XV27D3OTfaRxeiYJ_xUvX4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTVmMzAyNzhl/ZDYxMzE5ZmU5MGE1/YmYzNGIyYmEwODNi/NmEzZmE2ZWIyMTQ1/NWEyODNmZmE5NzIz/MTZlMmQyZS9lYXN0/b25kZXYuY29tLw",
+          "path": "  › home  › posts  › ai & intelligence  › rag vector database selection: pinecone vs weaviate vs milvus deep comparison"
+        }
+      },
+      {
+        "question": "How does Blockify improve vector database performance?",
+        "answer": "Blockify operates before the embedding stage, transforming raw documents into optimized IdeaBlocks. This semantic distillation eliminates duplicates, creates context-complete chunks, and adds governance metadata. The result: 2.29x more accurate vector searches, 40x smaller indexes, and 3.09x better token efficiency. Your vector database works with higher quality data.",
+        "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+        "url": "https://iternal.ai/blockify-vector-databases",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "iternal.ai",
+          "hostname": "iternal.ai",
+          "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+          "path": "› blockify-vector-databases"
+        }
+      },
+      {
+        "question": "How to choose vector dimension?",
+        "answer": "OpenAI text-embedding-3-small outputs 1536-dim, moderate latency; text-embedding-3-large outputs 3072-dim, latency doubles. Production recommends small, unless accuracy requirements extremely high.",
+        "title": "RAG Vector Database Selection: Pinecone vs Weaviate vs Milvus Deep ...",
+        "url": "https://eastondev.com/blog/en/posts/ai/20260427-rag-vector-database-selection/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "eastondev.com",
+          "hostname": "eastondev.com",
+          "favicon": "https://imgs.search.brave.com/2yzyAp4-U1rwe_EwSHqf7XV27D3OTfaRxeiYJ_xUvX4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTVmMzAyNzhl/ZDYxMzE5ZmU5MGE1/YmYzNGIyYmEwODNi/NmEzZmE2ZWIyMTQ1/NWEyODNmZmE5NzIz/MTZlMmQyZS9lYXN0/b25kZXYuY29tLw",
+          "path": "  › home  › posts  › ai & intelligence  › rag vector database selection: pinecone vs weaviate vs milvus deep comparison"
+        }
+      },
+      {
+        "question": "Which vector database is best for production RAG?",
+        "answer": "For fully-managed production deployments, Pinecone offers the best combination of scale, performance, and enterprise security. For open-source flexibility, Weaviate and Milvus are proven choices. The key insight: your choice of vector database matters less than your data quality. Blockify ensures any vector database performs optimally.",
+        "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+        "url": "https://iternal.ai/blockify-vector-databases",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "iternal.ai",
+          "hostname": "iternal.ai",
+          "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+          "path": "› blockify-vector-databases"
+        }
+      },
+      {
+        "question": "Can I use Blockify with my existing vector database?",
+        "answer": "Yes. Blockify is database-agnostic and integrates with Pinecone, Weaviate, Milvus, Qdrant, Chroma, Zilliz, and any other vector database. It operates as a preprocessing layer between document parsing and embedding, so it enhances whatever vector database you already use.",
+        "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+        "url": "https://iternal.ai/blockify-vector-databases",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "iternal.ai",
+          "hostname": "iternal.ai",
+          "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+          "path": "› blockify-vector-databases"
+        }
+      },
+      {
+        "question": "What is a vector database and why do I need one for RAG?",
+        "answer": "A vector database stores numerical representations (embeddings) of your documents and enables semantic similarity search. For RAG (Retrieval-Augmented Generation), it retrieves relevant context that the LLM uses to generate accurate, grounded responses. Without a vector database, your LLM can only use its training data, leading to hallucinations and outdated information.",
+        "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+        "url": "https://iternal.ai/blockify-vector-databases",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "iternal.ai",
+          "hostname": "iternal.ai",
+          "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+          "path": "› blockify-vector-databases"
+        }
+      },
+      {
+        "question": "Which saves most for high-frequency queries?",
+        "answer": "Weaviate charges by storage ($0.01/GB/month), unlimited queries. 50M vectors, 100k daily queries: Weaviate ~$3/month, Pinecone ~$370/month.",
+        "title": "RAG Vector Database Selection: Pinecone vs Weaviate vs Milvus Deep ...",
+        "url": "https://eastondev.com/blog/en/posts/ai/20260427-rag-vector-database-selection/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "eastondev.com",
+          "hostname": "eastondev.com",
+          "favicon": "https://imgs.search.brave.com/2yzyAp4-U1rwe_EwSHqf7XV27D3OTfaRxeiYJ_xUvX4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTVmMzAyNzhl/ZDYxMzE5ZmU5MGE1/YmYzNGIyYmEwODNi/NmEzZmE2ZWIyMTQ1/NWEyODNmZmE5NzIz/MTZlMmQyZS9lYXN0/b25kZXYuY29tLw",
+          "path": "  › home  › posts  › ai & intelligence  › rag vector database selection: pinecone vs weaviate vs milvus deep comparison"
+        }
+      },
+      {
+        "question": "How long to migrate from Chroma?",
+        "answer": "1M vectors from Chroma to Pinecone takes ~2-3 hours. Steps: export data → batch import → rebuild index → validate recall. Execute during low-traffic.",
+        "title": "RAG Vector Database Selection: Pinecone vs Weaviate vs Milvus Deep ...",
+        "url": "https://eastondev.com/blog/en/posts/ai/20260427-rag-vector-database-selection/",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "eastondev.com",
+          "hostname": "eastondev.com",
+          "favicon": "https://imgs.search.brave.com/2yzyAp4-U1rwe_EwSHqf7XV27D3OTfaRxeiYJ_xUvX4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTVmMzAyNzhl/ZDYxMzE5ZmU5MGE1/YmYzNGIyYmEwODNi/NmEzZmE2ZWIyMTQ1/NWEyODNmZmE5NzIz/MTZlMmQyZS9lYXN0/b25kZXYuY29tLw",
+          "path": "  › home  › posts  › ai & intelligence  › rag vector database selection: pinecone vs weaviate vs milvus deep comparison"
+        }
+      },
+      {
+        "question": "How do I prevent hallucinations in my RAG system?",
+        "answer": "Hallucinations primarily occur when the LLM receives incomplete, duplicate, or irrelevant context. Blockify's 78x accuracy improvement comes from ensuring every retrieved chunk contains complete, unique, semantically-valid information. Combined with proper vector database configuration, this eliminates the root cause of most RAG hallucinations.",
+        "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+        "url": "https://iternal.ai/blockify-vector-databases",
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "iternal.ai",
+          "hostname": "iternal.ai",
+          "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+          "path": "› blockify-vector-databases"
+        }
+      }
+    ]
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "faq",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Milvus + Chroma Integration Guide — Hybrid Vector Search Pipeline [2026] | Markaicode",
+        "url": "https://markaicode.com/milvus-with-chroma/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Milvus vs Chroma pricing breakdown: compare API, compute, storage, and egress costs per million vectors for production AI workloads in 2026.",
+        "page_age": "2026-05-07T00:00:00",
+        "profile": {
+          "name": "Markaicode",
+          "url": "https://markaicode.com/milvus-with-chroma/",
+          "long_name": "markaicode.com",
+          "img": "https://imgs.search.brave.com/w0BUII0P6C4-Uveam-b_TjRhal2VU_567xpioyKfPAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTJkNmQ3ZDgz/NmMyZmZlYWFkZjYz/NWY3ODg2MjVmNDI1/YjIwNzlhYzgzM2M2/YmE4Zjg1OWFiOTE5/YTJmMjNmNy9tYXJr/YWljb2RlLmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "markaicode.com",
+          "hostname": "markaicode.com",
+          "favicon": "https://imgs.search.brave.com/w0BUII0P6C4-Uveam-b_TjRhal2VU_567xpioyKfPAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTJkNmQ3ZDgz/NmMyZmZlYWFkZjYz/NWY3ODg2MjVmNDI1/YjIwNzlhYzgzM2M2/YmE4Zjg1OWFiOTE5/YTJmMjNmNy9tYXJr/YWljb2RlLmNvbS8",
+          "path": "  › home  › milvus  › milvus + chroma integration guide — hybrid vector search pipeline [2026]"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/qXKEQKNF8lGZOh3wNI9RLwZ1Q_KQVe5hF5W9XH32Rvw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tYXJr/YWljb2RlLmNvbS9p/bWFnZXMvbG9nby5w/bmc",
+          "original": "https://markaicode.com/images/logo.png",
+          "logo": true
+        },
+        "age": "2 weeks ago",
+        "faq": {
+          "items": [
+            {
+              "question": "How to synchronize data between Milvus and Chroma?",
+              "answer": "Use a single embedding pipeline that writes vectors to both databases simultaneously via dual CRUD wrappers. We recommend a middleware service that calls Milvus and Chroma APIs in a transaction-like pattern (with retry and dead letter queue). No built-in sync exists; you must coordinate at the application layer.",
+              "title": "Milvus + Chroma Integration Guide — Hybrid Vector Search Pipeline ...",
+              "url": "https://markaicode.com/milvus-with-chroma/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "markaicode.com",
+                "hostname": "markaicode.com",
+                "favicon": "https://imgs.search.brave.com/w0BUII0P6C4-Uveam-b_TjRhal2VU_567xpioyKfPAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTJkNmQ3ZDgz/NmMyZmZlYWFkZjYz/NWY3ODg2MjVmNDI1/YjIwNzlhYzgzM2M2/YmE4Zjg1OWFiOTE5/YTJmMjNmNy9tYXJr/YWljb2RlLmNvbS8",
+                "path": "  › home  › milvus  › milvus + chroma integration guide — hybrid vector search pipeline [2026]"
+              }
+            },
+            {
+              "question": "Which Milvus index works best for Chroma-integrated sparse vectors?",
+              "answer": "For sparse vector fields (e.g., SPLADE), use the `BIN_IVF_FLAT` index with `nlist: 128`. It offers 3x faster recall than default flat indexing on Milvus 2.5 without sacrificing accuracy (recall@100: 0.97). Test with `hnsw` for dense sides but avoid `HNSW` for sparse unless your dimensionality is below 500.",
+              "title": "Milvus + Chroma Integration Guide — Hybrid Vector Search Pipeline ...",
+              "url": "https://markaicode.com/milvus-with-chroma/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "markaicode.com",
+                "hostname": "markaicode.com",
+                "favicon": "https://imgs.search.brave.com/w0BUII0P6C4-Uveam-b_TjRhal2VU_567xpioyKfPAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTJkNmQ3ZDgz/NmMyZmZlYWFkZjYz/NWY3ODg2MjVmNDI1/YjIwNzlhYzgzM2M2/YmE4Zjg1OWFiOTE5/YTJmMjNmNy9tYXJr/YWljb2RlLmNvbS8",
+                "path": "  › home  › milvus  › milvus + chroma integration guide — hybrid vector search pipeline [2026]"
+              }
+            },
+            {
+              "question": "Can I run both Milvus and Chroma in Kubernetes?",
+              "answer": "Yes, but latency doubles if pods are on different nodes. We measured 38ms hybrid query latency when both are co-located on a single GPU node (AWS G4dn.xlarge). Milvus Operator v2.5 and Chroma Helm chart 0.6.0 work well with persistent volume claims (SSD required). Never use `emptyDir` for Chroma metadata.",
+              "title": "Milvus + Chroma Integration Guide — Hybrid Vector Search Pipeline ...",
+              "url": "https://markaicode.com/milvus-with-chroma/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "markaicode.com",
+                "hostname": "markaicode.com",
+                "favicon": "https://imgs.search.brave.com/w0BUII0P6C4-Uveam-b_TjRhal2VU_567xpioyKfPAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTJkNmQ3ZDgz/NmMyZmZlYWFkZjYz/NWY3ODg2MjVmNDI1/YjIwNzlhYzgzM2M2/YmE4Zjg1OWFiOTE5/YTJmMjNmNy9tYXJr/YWljb2RlLmNvbS8",
+                "path": "  › home  › milvus  › milvus + chroma integration guide — hybrid vector search pipeline [2026]"
+              }
+            }
+          ]
+        },
+        "extra_snippets": [
+          "Milvus vs pgvector cost comparison 2026 for production AI workloads. Estimate monthly expenses for cloud and self-hosted vector databases with real numbers. ... milvus api pricing per million tokens 2026 pgvector cost optimization for production workloads milvus vs pgvector pricing breakdown 2026",
+          "Milvus vs Docker throughput benchmark 2026: native install delivers 28% more inserts/sec than Docker container on c6i.4xlarge. Hard numbers for developers choosing deployment. ... milvus vs docker throughput benchmark 2026 milvus tokens per second GPU comparison milvus performance tuning for enterprise",
+          "Milvus vs Supabase: compare vector database performance, setup speed, GPU support, and cost. For developers building production AI search systems in 2026. ... milvus vs supabase vector database comparison choose between milvus and supabase for AI production vector search database 2026 benchmarks",
+          "Milvus vs Chroma pricing breakdown: compare API, compute, storage, and egress costs per million vectors for production AI workloads in 2026."
+        ]
+      },
+      {
+        "title": "Best Vector Databases in 2026: A Complete Comparison Guide",
+        "url": "https://www.firecrawl.dev/blog/best-vector-databases",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Compare 18 major vector databases with real performance benchmarks, honest trade-offs, and decision frameworks. Learn which database fits your RAG application based on scale, infrastructure, and use case - from Pinecone and Milvus to pgvector, Turbopuffer, and Weaviate.",
+        "page_age": "2025-10-09T00:00:00",
+        "profile": {
+          "name": "Firecrawl",
+          "url": "https://www.firecrawl.dev/blog/best-vector-databases",
+          "long_name": "firecrawl.dev",
+          "img": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "firecrawl.dev",
+          "hostname": "www.firecrawl.dev",
+          "favicon": "https://imgs.search.brave.com/HQs4TK8-Xz6tBPYlZETJGBLBk9ZqBJF6Q5uOiQgN7Aw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODM4Y2IwNmJi/OTNiYTM2OGFiNTll/ODFjMjU5YTU0ZTYw/MDVhMTczNDA2YjRi/N2ZmNWEyOTlhNjZl/NDU4MDVlMi93d3cu/ZmlyZWNyYXdsLmRl/di8",
+          "path": "› blog  › best-vector-databases"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/iGDNMWSV152c2SXGZyRKuU5m7A0EVXxYY3gnLJhhd1w/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/ZmlyZWNyYXdsLmRl/di9pbWFnZXMvYmxv/Zy9iZXN0LXZlY3Rv/ci1kYXRhYmFzZXMt/MjAyNS9iZXN0LXZl/Y3Rvci1kYXRhYmFz/ZXMtMjAyNS53ZWJw",
+          "original": "https://www.firecrawl.dev/images/blog/best-vector-databases-2025/best-vector-databases-2025.webp",
+          "logo": false
+        },
+        "age": "October 9, 2025",
+        "extra_snippets": [
+          "You need a vector database for your RAG application and AI application development. You search and find more than a dozen options: Pinecone, Milvus, Qdrant, Weaviate, ChromaDB, pgvector, Turbopuffer, and more. Each vendor claims to be the fastest, most scalable, most developer-friendly solution.",
+          "Purpose-built databases like Pinecone, Milvus, Qdrant, and Weaviate use vector-optimized storage engines, query planners, and index structures. They implement HNSW (Hierarchical Navigable Small World), a graph-based algorithm that searches vectors by navigating through multiple layers from coarse to fine approximations.",
+          "The vector database market has grown from $1.73 billion in 2024 to a projected $10.6 billion by 2032, reflecting the rapid adoption of RAG and semantic search in production applications. Open-source adoption has accelerated alongside this growth: Milvus leads with over 35,000 GitHub stars, followed by Qdrant (9,000+), Weaviate (8,000+), and ChromaDB (6,000+).",
+          "The trade-off is cost. Pinecone uses usage-based pricing with separate charges for storage ($0.33/GB/month), read operations, and write operations. For large deployments, this adds up quickly. Self-hosted alternatives like Milvus or pgvector cost a fraction of that, but you manage them yourself."
+        ]
+      },
+      {
+        "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+        "url": "https://iternal.ai/blockify-vector-databases",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Vector database comparison with benchmarks: Pinecone vs Weaviate vs Milvus vs Qdrant vs Chroma. Speed, cost, accuracy &amp; scaling tested. Find the right vector DB.",
+        "profile": {
+          "name": "Iternal Technologies",
+          "url": "https://iternal.ai/blockify-vector-databases",
+          "long_name": "iternal.ai",
+          "img": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "iternal.ai",
+          "hostname": "iternal.ai",
+          "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+          "path": "› blockify-vector-databases"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/CawRj0DJECH8N0tVTBQmMx0kcGABCIKir5UeUYco6aQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9wdWIt/N2E3ZWFlZWI2YmFj/NDU5MjgwYzA5N2Q4/ZmM5ZmNiMWMucjIu/ZGV2L2JyYW5kaW5n/L2l0ZXJuYWwtbG9n/by1zcXVhcmUuanBn",
+          "original": "https://pub-7a7eaeeb6bac459280c097d8fc9fcb1c.r2.dev/branding/iternal-logo-square.jpg",
+          "logo": true
+        },
+        "faq": {
+          "items": [
+            {
+              "question": "What is a vector database and why do I need one for RAG?",
+              "answer": "A vector database stores numerical representations (embeddings) of your documents and enables semantic similarity search. For RAG (Retrieval-Augmented Generation), it retrieves relevant context that the LLM uses to generate accurate, grounded responses. Without a vector database, your LLM can only use its training data, leading to hallucinations and outdated information.",
+              "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+              "url": "https://iternal.ai/blockify-vector-databases",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "iternal.ai",
+                "hostname": "iternal.ai",
+                "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+                "path": "› blockify-vector-databases"
+              }
+            },
+            {
+              "question": "How does Blockify improve vector database performance?",
+              "answer": "Blockify operates before the embedding stage, transforming raw documents into optimized IdeaBlocks. This semantic distillation eliminates duplicates, creates context-complete chunks, and adds governance metadata. The result: 2.29x more accurate vector searches, 40x smaller indexes, and 3.09x better token efficiency. Your vector database works with higher quality data.",
+              "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+              "url": "https://iternal.ai/blockify-vector-databases",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "iternal.ai",
+                "hostname": "iternal.ai",
+                "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+                "path": "› blockify-vector-databases"
+              }
+            },
+            {
+              "question": "Which vector database is best for production RAG?",
+              "answer": "For fully-managed production deployments, Pinecone offers the best combination of scale, performance, and enterprise security. For open-source flexibility, Weaviate and Milvus are proven choices. The key insight: your choice of vector database matters less than your data quality. Blockify ensures any vector database performs optimally.",
+              "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+              "url": "https://iternal.ai/blockify-vector-databases",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "iternal.ai",
+                "hostname": "iternal.ai",
+                "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+                "path": "› blockify-vector-databases"
+              }
+            },
+            {
+              "question": "Can I use Blockify with my existing vector database?",
+              "answer": "Yes. Blockify is database-agnostic and integrates with Pinecone, Weaviate, Milvus, Qdrant, Chroma, Zilliz, and any other vector database. It operates as a preprocessing layer between document parsing and embedding, so it enhances whatever vector database you already use.",
+              "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+              "url": "https://iternal.ai/blockify-vector-databases",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "iternal.ai",
+                "hostname": "iternal.ai",
+                "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+                "path": "› blockify-vector-databases"
+              }
+            },
+            {
+              "question": "What is the cost difference between vector databases?",
+              "answer": "Open-source options (Milvus, Weaviate, Qdrant, Chroma) are free but require infrastructure and operational costs. Managed services (Pinecone, Zilliz Cloud) have usage-based pricing starting with free tiers. Importantly, Blockify's 40x data reduction dramatically lowers storage and query costs across all platforms - often paying for itself through reduced vector database bills.",
+              "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+              "url": "https://iternal.ai/blockify-vector-databases",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "iternal.ai",
+                "hostname": "iternal.ai",
+                "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+                "path": "› blockify-vector-databases"
+              }
+            },
+            {
+              "question": "How do I prevent hallucinations in my RAG system?",
+              "answer": "Hallucinations primarily occur when the LLM receives incomplete, duplicate, or irrelevant context. Blockify's 78x accuracy improvement comes from ensuring every retrieved chunk contains complete, unique, semantically-valid information. Combined with proper vector database configuration, this eliminates the root cause of most RAG hallucinations.",
+              "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+              "url": "https://iternal.ai/blockify-vector-databases",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "iternal.ai",
+                "hostname": "iternal.ai",
+                "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+                "path": "› blockify-vector-databases"
+              }
+            },
+            {
+              "question": "What is semantic chunking and why does it matter?",
+              "answer": "Traditional chunking splits documents by character count, often breaking mid-sentence or separating related concepts. Semantic chunking (what Blockify calls IdeaBlocks) preserves complete ideas and context. This means when your vector database retrieves a chunk, the LLM receives coherent, useful information rather than fragments.",
+              "title": "Vector Database Comparison 2026: Pinecone vs Weaviate vs Milvus",
+              "url": "https://iternal.ai/blockify-vector-databases",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "iternal.ai",
+                "hostname": "iternal.ai",
+                "favicon": "https://imgs.search.brave.com/eqzSUTyTSzIHSha3wMnaBMhDcFvT9gYRwfw4gH1AXjs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDcwZDUwZjUw/MTYwZjE5M2UzNDc0/MWRiYzMzNTk1Mzhl/MmZiZmVkZDU3ZDkw/MTJmNWM5MmI3MWM0/OWMxM2YwNi9pdGVy/bmFsLmFpLw",
+                "path": "› blockify-vector-databases"
+              }
+            }
+          ]
+        },
+        "organization": {
+          "type": "organization",
+          "name": "Iternal Technologies",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "For fully-managed production deployments, Pinecone offers the best combination of scale, performance, and enterprise security. For open-source flexibility, Weaviate and Milvus are proven choices. The key insight: your choice of vector database matters less than your data quality.",
+          "Zilliz Cloud is the enterprise-managed version of Milvus, created by the same team.",
+          "The proprietary Cardinal search engine delivers 10x faster retrieval than open-source Milvus, with built-in embedding pipelines and enterprise security.",
+          "Milvus is the world's most popular open-source vector database, powering similarity search for thousands of organizations."
+        ]
+      },
+      {
+        "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+        "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Zilliz Cloud (managed Milvus) charges $0.096 per CU-hour for compute and $0.02/GB/month for storage in 2026. For 1 million vectors at 1536 dimensions, expect $80-150/month on Zilliz Serverless.",
+        "page_age": "2026-04-05T00:00:00",
+        "profile": {
+          "name": "LeanOps Technologies",
+          "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+          "long_name": "leanopstech.com",
+          "img": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "leanopstech.com",
+          "hostname": "leanopstech.com",
+          "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+          "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/c93dAfMgT05Uom-_IILyMyrOiTZQiGN5GC3xBS1wyZw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9sZWFu/b3BzdGVjaC5jb20v/aW1hZ2VzL2Jsb2cv/bWlsdnVzLXppbGxp/ei1jbG91ZC1wcmlj/aW5nLTIwMjYuanBn",
+          "original": "https://leanopstech.com/images/blog/milvus-zilliz-cloud-pricing-2026.jpg",
+          "logo": false
+        },
+        "age": "April 5, 2026",
+        "faq": {
+          "items": [
+            {
+              "question": "How much does Zilliz Cloud (managed Milvus) cost in 2026?",
+              "answer": "Zilliz Cloud Serverless charges $0.096/CU-hour and $0.02/GB/month for storage. Dedicated clusters start at 1 CU (~$70/month). For 1M vectors at 1536 dimensions, Serverless costs $80-150/month. The free tier includes 100 CU-hours and 5GB storage per month.",
+              "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+              "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "leanopstech.com",
+                "hostname": "leanopstech.com",
+                "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+                "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+              }
+            },
+            {
+              "question": "Is Milvus cheaper to self-host than using Zilliz Cloud?",
+              "answer": "Yes. Self-hosted Milvus on Kubernetes costs 50-70% less at scale. A 3-node cluster on AWS EKS handling 50M+ vectors costs $300-600/month vs $1,000-1,800/month on Zilliz Cloud. The break-even is around 10-20M vectors, but self-hosting requires Kubernetes and etcd expertise.",
+              "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+              "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "leanopstech.com",
+                "hostname": "leanopstech.com",
+                "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+                "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+              }
+            },
+            {
+              "question": "How does Milvus pricing compare to Pinecone?",
+              "answer": "Zilliz Cloud is 30-50% more expensive than Pinecone Serverless under 10M vectors ($250-500/month vs $170-370/month at 10M). However, Milvus excels at 100M+ vectors where its distributed architecture scales more efficiently, offering better cost-efficiency beyond 50M vectors.",
+              "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+              "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "leanopstech.com",
+                "hostname": "leanopstech.com",
+                "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+                "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+              }
+            },
+            {
+              "question": "Does Zilliz Cloud have a free tier?",
+              "answer": "Yes. The free tier includes 100 CU-hours/month and 5GB storage (~820K vectors at 1536 dimensions). The 100 CU-hours support approximately 500K-1M queries/month on a small dataset. No time limit, suitable for prototyping and evaluation.",
+              "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+              "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "leanopstech.com",
+                "hostname": "leanopstech.com",
+                "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+                "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+              }
+            },
+            {
+              "question": "When should I choose Milvus over Pinecone or Qdrant?",
+              "answer": "Choose Milvus when your dataset exceeds 50M vectors, you need multi-node distributed architecture, GPU-accelerated search, or full control with Kubernetes. Under 10M vectors, Pinecone Serverless or Qdrant Cloud are cheaper and simpler.",
+              "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+              "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "leanopstech.com",
+                "hostname": "leanopstech.com",
+                "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+                "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+              }
+            },
+            {
+              "question": "How much can DiskANN save on Zilliz Cloud compute costs?",
+              "answer": "DiskANN reduces compute costs by 60-75% for large collections by storing vectors on SSD instead of RAM. At 100M vectors, HNSW requires 8-16 CUs ($550-1,100/month) while DiskANN needs only 2-4 CUs ($140-280/month) with recall above 95%.",
+              "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+              "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "leanopstech.com",
+                "hostname": "leanopstech.com",
+                "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+                "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+              }
+            },
+            {
+              "question": "What is the break-even point for self-hosting Milvus vs Zilliz Cloud?",
+              "answer": "Self-hosting becomes clearly cheaper at 10-20M vectors, saving 30-50%. At 50M+ vectors, self-hosted on AWS EKS costs $300-450/month vs $400-800/month on Zilliz Cloud (50-70% savings). Factor in 8-20 hours/month of engineering time for operations.",
+              "title": "Milvus & Zilliz Cloud Pricing 2026: Full Breakdown | LeanOps",
+              "url": "https://leanopstech.com/blog/milvus-zilliz-cloud-pricing-2026/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "leanopstech.com",
+                "hostname": "leanopstech.com",
+                "favicon": "https://imgs.search.brave.com/P-WPONaAQVp61AL2EY1MBTjVXDtDr8Fp_BiV39mXmNI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmVjYWVlMWM4/NDdkODI4Y2RjMTRj/ZDRlMTNjZjNiY2Nm/MDk5NTcyODdmZDli/ZmM5OGM3Y2M4NDE5/YTdhMmM0MS9sZWFu/b3BzdGVjaC5jb20v",
+                "path": "  › home  › blog  › milvus zilliz cloud pricing 2026"
+              }
+            }
+          ]
+        },
+        "organization": {
+          "type": "organization",
+          "name": "LeanOps Technologies",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Zilliz Cloud (managed Milvus) charges $0.096 per CU-hour for compute and $0.02/GB/month for storage in 2026. For 1 million vectors at 1536 dimensions, expect $80-150/month on Zilliz Serverless. At 10M vectors with moderate traffic, costs run $250-500/month. At 100M+ vectors, self-hosted Milvus on Kubernetes ($300-600/month) is 3-5x cheaper than any managed option.",
+          "Milvus wins on architecture and total cost of ownership. This post gives you the complete Zilliz Cloud pricing in 2026, models real costs at production scale, compares against every alternative, and provides a framework for deciding when Milvus justifies its added complexity.",
+          "Most teams start with Pinecone (simple, managed, fast to set up) or Qdrant (cheap, fast, Rust-native). Then their dataset hits 50 million vectors, they need multi-node distribution, and they discover that neither Pinecone nor Qdrant was designed for true horizontal scaling the way Milvus was.",
+          "Milvus was built from day one as a distributed system. It separates storage (MinIO/S3), metadata (etcd), message queuing (Pulsar/Kafka), and query/index nodes. Each layer scales independently. That architecture is overkill for 1 million vectors."
+        ]
+      },
+      {
+        "title": "Milvus vs Redis: Vector Database vs Unified Real-Time Platform 2026",
+        "url": "https://redis.io/blog/milvus-vs-redis-vector-database-comparison/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Milvus uses a disaggregated, cloud-native architecture with separate components for ingestion, compaction, indexing, and query serving. That separation can simplify scaling, but it also adds operational moving parts.",
+        "page_age": "2026-03-05T18:05:30",
+        "profile": {
+          "name": "Redis",
+          "url": "https://redis.io/blog/milvus-vs-redis-vector-database-comparison/",
+          "long_name": "redis.io",
+          "img": "https://imgs.search.brave.com/0XydAktjaqN0nORmaggM2VJsY1Tx1nJiVNuih_WpnBU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzAzNjQzNTY5/NTYzYTQyYzdmZmRl/ZTNiMzMwYWZhZTgw/MzQwN2JkMDg5NDcy/N2E3NzBkNDUxODIx/MWM3YWU5Mi9yZWRp/cy5pby8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "redis.io",
+          "hostname": "redis.io",
+          "favicon": "https://imgs.search.brave.com/0XydAktjaqN0nORmaggM2VJsY1Tx1nJiVNuih_WpnBU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzAzNjQzNTY5/NTYzYTQyYzdmZmRl/ZTNiMzMwYWZhZTgw/MzQwN2JkMDg5NDcy/N2E3NzBkNDUxODIx/MWM3YWU5Mi9yZWRp/cy5pby8",
+          "path": "  › home  › milvus vs redis: vector database vs unified real-time platform 2026"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/9ImB4VYVYayxk-xozEYON5Q74ZL9Sqg2d0-AwQNoOLQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9yZWRp/cy5pby9vcGVuLWdy/YXBoLnBuZw",
+          "original": "https://redis.io/open-graph.png",
+          "logo": false
+        },
+        "age": "March 5, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Redis",
+              "url": "https://redis.io/"
+            }
+          ],
+          "date": "Mar 05, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Redis",
+            "url": "https://redis.io/",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/qARQfgLfK7lsL4hP1qC6iEXhFSNYxpbaztlm_VtRpao/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9yZWRp/cy5pby9zY2hlbWEt/aWNvbi5wbmc",
+              "original": "https://redis.io/schema-icon.png"
+            }
+          }
+        },
+        "organization": {
+          "type": "organization",
+          "name": "Redis",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "You're building an AI app: maybe a RAG system, an agent with memory, or a chatbot with semantic caching. You need vector search, and you're choosing between Milvus (a purpose-built vector database) and Redis (a unified real-time platform that includes vector search alongside caching and streaming).",
+          "The architectural difference matters more than benchmark numbers. Milvus uses a disaggregated, cloud-native architecture with separate components for ingestion, compaction, indexing, and query serving. That separation can simplify scaling, but it also adds operational moving parts.",
+          "The tradeoff is operational complexity. Milvus distributed deployments commonly run on Kubernetes and often include etcd plus object storage (S3/MinIO). Depending on version and deployment chart, there may also be messaging/WAL infrastructure: historically Pulsar or Kafka, though Milvus 2.6 introduces Woodpecker to reduce that external dependency.",
+          "Semantic caching: Redis LangCache recognizes semantically similar queries to reduce LLM API costs. Milvus doesn't include a native semantic caching service like LangCache; teams usually implement semantic caching at the app layer or add a separate cache"
+        ]
+      },
+      {
+        "title": "Milvus 2.2 Benchmark Test Report | Milvus Documentation",
+        "url": "https://milvus.io/docs/benchmark.md",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Learn about the benchmark result of Milvus. | v2.6.x",
+        "profile": {
+          "name": "Milvus",
+          "url": "https://milvus.io/docs/benchmark.md",
+          "long_name": "milvus.io",
+          "img": "https://imgs.search.brave.com/j6_BXPoI7wVOmoMI66kzhQ9prmS-f3AsdVbvv9GCYr4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZmE5NmViNmM5/NDdlOGVhNTY3YjMz/MjQyMGYzYTNjYjQ4/NDQ2ZDZjOGUxMDQ1/YTQ3N2Y5OWYzZTVm/YTZmODNhNi9taWx2/dXMuaW8v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "milvus.io",
+          "hostname": "milvus.io",
+          "favicon": "https://imgs.search.brave.com/j6_BXPoI7wVOmoMI66kzhQ9prmS-f3AsdVbvv9GCYr4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZmE5NmViNmM5/NDdlOGVhNTY3YjMz/MjQyMGYzYTNjYjQ4/NDQ2ZDZjOGUxMDQ1/YTQ3N2Y5OWYzZTVm/YTZmODNhNi9taWx2/dXMuaW8v",
+          "path": "› docs  › benchmark.md"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/JkReZZV1l2JrImLMmd5zO9EsygyfAYbeELNpqZjTVQA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuemlsbGl6LmNv/bS9tZXRhX2ltYWdl/X21pbHZ1c19kNjUx/MGUxMGUwLnBuZw",
+          "original": "https://assets.zilliz.com/meta_image_milvus_d6510e10e0.png",
+          "logo": false
+        }
+      },
+      {
+        "title": "Best Vector Databases 2026: Pinecone, Chroma, Qdrant & More | DataCamp",
+        "url": "https://www.datacamp.com/blog/the-top-5-vector-databases",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "The top 7 vector databases in 2026 are Chroma, Pinecone, Weaviate, Faiss, Qdrant, Milvus, and pgvector",
+        "page_age": "2026-04-17T08:37:25",
+        "profile": {
+          "name": "DataCamp",
+          "url": "https://www.datacamp.com/blog/the-top-5-vector-databases",
+          "long_name": "datacamp.com",
+          "img": "https://imgs.search.brave.com/YV5sojK5QsZJNk2w2tHrpkx2YgkvmS-p5nbsTHpqfyY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZmM4ODRiMTE0/NTQyY2YzZTAxZTIw/NzdmZDcwOGVmNTBh/NGFjMjRjODMzYzRm/NDIxMzY2ZmZjMTgz/YmM2ZjRkNi93d3cu/ZGF0YWNhbXAuY29t/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "datacamp.com",
+          "hostname": "www.datacamp.com",
+          "favicon": "https://imgs.search.brave.com/YV5sojK5QsZJNk2w2tHrpkx2YgkvmS-p5nbsTHpqfyY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZmM4ODRiMTE0/NTQyY2YzZTAxZTIw/NzdmZDcwOGVmNTBh/NGFjMjRjODMzYzRm/NDIxMzY2ZmZjMTgz/YmM2ZjRkNi93d3cu/ZGF0YWNhbXAuY29t/Lw",
+          "path": "› blog  › the-top-5-vector-databases"
+        },
+        "age": "April 17, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Moez Ali",
+              "url": "https://www.datacamp.com/portfolio/moezsajwani"
+            }
+          ],
+          "date": "Sep 12, 2023",
+          "publisher": {
+            "type": "organization",
+            "name": "DataCamp",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/vThtKvZFYc8vTCle3fkX7osjlPtmCm2lIxFDDo5jURA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5kYXRhY2FtcC5j/b20vbGVnYWN5L0RD/X05ld19tdWdkdjgu/cG5nP2Y9YXV0bw",
+              "original": "https://media.datacamp.com/legacy/DC_New_mugdv8.png?f=auto"
+            }
+          }
+        },
+        "organization": {
+          "type": "organization",
+          "name": "DataCamp",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "RAG (Retrieval-Augmented Generation) has become the primary use case driving vector database adoption in 2026 · Open-source options like Chroma and Faiss are ideal for prototyping, while Pinecone and Milvus target production workloads at scale",
+          "The top 7 vector databases in 2026 are Chroma, Pinecone, Weaviate, Faiss, Qdrant, Milvus, and pgvector",
+          "Milvus is an open-source vector database that has quickly gained traction for its scalability, reliability, and performance. Designed for similarity search and AI-driven applications, it supports storing and querying massive embedding vectors generated by deep neural networks.",
+          "Performance scalability depends on the underlying architecture and indexing techniques, such as HNSW or IVF. Most modern vector databases, including Milvus and Qdrant, are optimized for distributed architectures, enabling them to scale seamlessly to billions of vectors."
+        ]
+      },
+      {
+        "title": "RAG Vector Database Selection: Pinecone vs Weaviate vs Milvus Deep Comparison · BetterLink Blog",
+        "url": "https://eastondev.com/blog/en/posts/ai/20260427-rag-vector-database-selection/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "The table below comes from Tencent Cloud 2025 comparison review, and IoT Digital Twin PLM 2026 benchmark report. Test conditions: 1536-dim vectors (OpenAI text-embedding-3-small), HNSW index, 95% recall. ... Latency gap significant: Milvus GPU-accelerated P99 latency under 50ms, 3x faster than Weaviate.",
+        "page_age": "2026-04-29T12:49:39",
+        "profile": {
+          "name": "BetterLink Blog",
+          "url": "https://eastondev.com/blog/en/posts/ai/20260427-rag-vector-database-selection/",
+          "long_name": "eastondev.com",
+          "img": "https://imgs.search.brave.com/2yzyAp4-U1rwe_EwSHqf7XV27D3OTfaRxeiYJ_xUvX4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTVmMzAyNzhl/ZDYxMzE5ZmU5MGE1/YmYzNGIyYmEwODNi/NmEzZmE2ZWIyMTQ1/NWEyODNmZmE5NzIz/MTZlMmQyZS9lYXN0/b25kZXYuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "eastondev.com",
+          "hostname": "eastondev.com",
+          "favicon": "https://imgs.search.brave.com/2yzyAp4-U1rwe_EwSHqf7XV27D3OTfaRxeiYJ_xUvX4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTVmMzAyNzhl/ZDYxMzE5ZmU5MGE1/YmYzNGIyYmEwODNi/NmEzZmE2ZWIyMTQ1/NWEyODNmZmE5NzIz/MTZlMmQyZS9lYXN0/b25kZXYuY29tLw",
+          "path": "  › home  › posts  › ai & intelligence  › rag vector database selection: pinecone vs weaviate vs milvus deep comparison"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/zgY_LE6KONQI6NlqHIKkv7jvSO0uJsAWqehp8y1hIB8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9lYXN0/b25kZXYuY29tL2lt/YWdlcy9haS9yYWct/dmVjdG9yLWRhdGFi/YXNlLXNlbGVjdGlv/bi5qcGc",
+          "original": "https://eastondev.com/images/ai/rag-vector-database-selection.jpg",
+          "logo": false
+        },
+        "age": "3 weeks ago",
+        "faq": {
+          "items": [
+            {
+              "question": "Which has lowest latency: Pinecone, Weaviate, or Milvus?",
+              "answer": "Milvus with GPU acceleration achieves P99 latency &lt;50ms, 3x faster than Weaviate (&lt;150ms), 2x faster than Pinecone (&lt;100ms). For real-time Q&amp;A, choose Milvus.",
+              "title": "RAG Vector Database Selection: Pinecone vs Weaviate vs Milvus Deep ...",
+              "url": "https://eastondev.com/blog/en/posts/ai/20260427-rag-vector-database-selection/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "eastondev.com",
+                "hostname": "eastondev.com",
+                "favicon": "https://imgs.search.brave.com/2yzyAp4-U1rwe_EwSHqf7XV27D3OTfaRxeiYJ_xUvX4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTVmMzAyNzhl/ZDYxMzE5ZmU5MGE1/YmYzNGIyYmEwODNi/NmEzZmE2ZWIyMTQ1/NWEyODNmZmE5NzIz/MTZlMmQyZS9lYXN0/b25kZXYuY29tLw",
+                "path": "  › home  › posts  › ai & intelligence  › rag vector database selection: pinecone vs weaviate vs milvus deep comparison"
+              }
+            },
+            {
+              "question": "Which saves most for high-frequency queries?",
+              "answer": "Weaviate charges by storage ($0.01/GB/month), unlimited queries. 50M vectors, 100k daily queries: Weaviate ~$3/month, Pinecone ~$370/month.",
+              "title": "RAG Vector Database Selection: Pinecone vs Weaviate vs Milvus Deep ...",
+              "url": "https://eastondev.com/blog/en/posts/ai/20260427-rag-vector-database-selection/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "eastondev.com",
+                "hostname": "eastondev.com",
+                "favicon": "https://imgs.search.brave.com/2yzyAp4-U1rwe_EwSHqf7XV27D3OTfaRxeiYJ_xUvX4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTVmMzAyNzhl/ZDYxMzE5ZmU5MGE1/YmYzNGIyYmEwODNi/NmEzZmE2ZWIyMTQ1/NWEyODNmZmE5NzIz/MTZlMmQyZS9lYXN0/b25kZXYuY29tLw",
+                "path": "  › home  › posts  › ai & intelligence  › rag vector database selection: pinecone vs weaviate vs milvus deep comparison"
+              }
+            },
+            {
+              "question": "No ops team, which to choose?",
+              "answer": "Pinecone or Weaviate cloud-hosted. Both fully managed, zero ops. Pinecone simpler, Weaviate more flexible (hybrid search, multimodal).",
+              "title": "RAG Vector Database Selection: Pinecone vs Weaviate vs Milvus Deep ...",
+              "url": "https://eastondev.com/blog/en/posts/ai/20260427-rag-vector-database-selection/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "eastondev.com",
+                "hostname": "eastondev.com",
+                "favicon": "https://imgs.search.brave.com/2yzyAp4-U1rwe_EwSHqf7XV27D3OTfaRxeiYJ_xUvX4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTVmMzAyNzhl/ZDYxMzE5ZmU5MGE1/YmYzNGIyYmEwODNi/NmEzZmE2ZWIyMTQ1/NWEyODNmZmE5NzIz/MTZlMmQyZS9lYXN0/b25kZXYuY29tLw",
+                "path": "  › home  › posts  › ai & intelligence  › rag vector database selection: pinecone vs weaviate vs milvus deep comparison"
+              }
+            },
+            {
+              "question": "How long to migrate from Chroma?",
+              "answer": "1M vectors from Chroma to Pinecone takes ~2-3 hours. Steps: export data → batch import → rebuild index → validate recall. Execute during low-traffic.",
+              "title": "RAG Vector Database Selection: Pinecone vs Weaviate vs Milvus Deep ...",
+              "url": "https://eastondev.com/blog/en/posts/ai/20260427-rag-vector-database-selection/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "eastondev.com",
+                "hostname": "eastondev.com",
+                "favicon": "https://imgs.search.brave.com/2yzyAp4-U1rwe_EwSHqf7XV27D3OTfaRxeiYJ_xUvX4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTVmMzAyNzhl/ZDYxMzE5ZmU5MGE1/YmYzNGIyYmEwODNi/NmEzZmE2ZWIyMTQ1/NWEyODNmZmE5NzIz/MTZlMmQyZS9lYXN0/b25kZXYuY29tLw",
+                "path": "  › home  › posts  › ai & intelligence  › rag vector database selection: pinecone vs weaviate vs milvus deep comparison"
+              }
+            },
+            {
+              "question": "How to choose vector dimension?",
+              "answer": "OpenAI text-embedding-3-small outputs 1536-dim, moderate latency; text-embedding-3-large outputs 3072-dim, latency doubles. Production recommends small, unless accuracy requirements extremely high.",
+              "title": "RAG Vector Database Selection: Pinecone vs Weaviate vs Milvus Deep ...",
+              "url": "https://eastondev.com/blog/en/posts/ai/20260427-rag-vector-database-selection/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "eastondev.com",
+                "hostname": "eastondev.com",
+                "favicon": "https://imgs.search.brave.com/2yzyAp4-U1rwe_EwSHqf7XV27D3OTfaRxeiYJ_xUvX4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTVmMzAyNzhl/ZDYxMzE5ZmU5MGE1/YmYzNGIyYmEwODNi/NmEzZmE2ZWIyMTQ1/NWEyODNmZmE5NzIz/MTZlMmQyZS9lYXN0/b25kZXYuY29tLw",
+                "path": "  › home  › posts  › ai & intelligence  › rag vector database selection: pinecone vs weaviate vs milvus deep comparison"
+              }
+            },
+            {
+              "question": "Knowledge graph + RAG, which to choose?",
+              "answer": "Weaviate. Its graph database DNA supports object-object relationship modeling, like company-employee-project semantic chains. Milvus and Pinecone only support pure vector retrieval.",
+              "title": "RAG Vector Database Selection: Pinecone vs Weaviate vs Milvus Deep ...",
+              "url": "https://eastondev.com/blog/en/posts/ai/20260427-rag-vector-database-selection/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "eastondev.com",
+                "hostname": "eastondev.com",
+                "favicon": "https://imgs.search.brave.com/2yzyAp4-U1rwe_EwSHqf7XV27D3OTfaRxeiYJ_xUvX4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTVmMzAyNzhl/ZDYxMzE5ZmU5MGE1/YmYzNGIyYmEwODNi/NmEzZmE2ZWIyMTQ1/NWEyODNmZmE5NzIz/MTZlMmQyZS9lYXN0/b25kZXYuY29tLw",
+                "path": "  › home  › posts  › ai & intelligence  › rag vector database selection: pinecone vs weaviate vs milvus deep comparison"
+              }
+            }
+          ]
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Easton",
+              "url": "https://eastondev.com/blog/en/author/"
+            }
+          ],
+          "date": "Apr 27, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "BetterLink Blog",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/VKIIzlksowNgvKSQFOUIMl1ysU156CwmnWxugFuBtM8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9lYXN0/b25kZXYuY29tL2xv/Z28ucG5n",
+              "original": "https://eastondev.com/logo.png"
+            }
+          }
+        },
+        "organization": {
+          "type": "organization",
+          "name": "BetterLink Blog",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "After launching Serverless in 2026, entry barrier dropped further. Weaviate: Modular design, built-in graph database capability, hybrid search (keyword + vector) performs outstandingly. Milvus: Distributed cloud-native architecture, GPU acceleration, millisecond response at billion-scale vectors, ideal for large-scale scenarios.",
+          "Milvus official docs suggest: production minimum 3-node cluster, single node 16GB RAM minimum, billion-scale data needs GPU acceleration (NVIDIA A100 or equivalent). ... Pinecone takes “worry-free” to the extreme. No server management, no index configuration, no scaling concerns—register account, create index, call API, three steps done. 2026’s Serverless plan further lowered startup costs: pay for actual usage, almost free when idle.",
+          "The table below comes from Tencent Cloud 2025 comparison review, and IoT Digital Twin PLM 2026 benchmark report. Test conditions: 1536-dim vectors (OpenAI text-embedding-3-small), HNSW index, 95% recall. ... Latency gap significant: Milvus GPU-accelerated P99 latency under 50ms, 3x faster than Weaviate.",
+          "Weaviate. Its graph database DNA supports object-object relationship modeling, like company-employee-project semantic chains. Milvus and Pinecone only support pure vector retrieval. 12 min read · Published on: Apr 27, 2026 ·"
+        ]
+      },
+      {
+        "title": "Milvus Pricing 2026",
+        "url": "https://www.g2.com/products/milvus/pricing",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Learn more about the cost of Milvus, different pricing plans, starting costs, free trials, and more pricing-related information provided by Milvus.",
+        "profile": {
+          "name": "G2",
+          "url": "https://www.g2.com/products/milvus/pricing",
+          "long_name": "g2.com",
+          "img": "https://imgs.search.brave.com/Pakhl2FkJ3y3ItovQaQaC7gSBs6cuN7A8tiiCvPBAlo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjkzOGZiNGFh/Yjc4MjI0ZjZhMjlh/Y2M4N2E1NzVlODhl/MjgwM2Q4ZmNkZjA3/NGVhY2QzYzFjNzE3/NmEyNmQ1OS93d3cu/ZzIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "g2.com",
+          "hostname": "www.g2.com",
+          "favicon": "https://imgs.search.brave.com/Pakhl2FkJ3y3ItovQaQaC7gSBs6cuN7A8tiiCvPBAlo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjkzOGZiNGFh/Yjc4MjI0ZjZhMjlh/Y2M4N2E1NzVlODhl/MjgwM2Q4ZmNkZjA3/NGVhY2QzYzFjNzE3/NmEyNmQ1OS93d3cu/ZzIuY29tLw",
+          "path": "› products  › milvus  › pricing"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/J-UksctjEwyRKKfLPKI7N87xloJQDTH0bkHZaHmk9KM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZzJjcm93ZC5j/b20vdXBsb2Fkcy9w/cm9kdWN0L2ltYWdl/L3NvY2lhbF9sYW5k/c2NhcGUvc29jaWFs/X2xhbmRzY2FwZV83/NmZjNWVmMjY1OTI1/YjcxNjFkYjExZDYw/ZmE4ZDhmNy9taWx2/dXMucG5n",
+          "original": "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_76fc5ef265925b7161db11d60fa8d8f7/milvus.png",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Milvus is open source software and free to use under the Apache 2.0 license.",
+          "Milvus has 1 pricing edition that costs $0.",
+          "A free trial of Milvus is also available.",
+          "Pricing information for Milvus is supplied by the software provider or retrieved from publicly accessible pricing materials."
+        ]
+      },
+      {
+        "title": "6 Best Vector Databases for AI Apps 2026",
+        "url": "https://strapi.io/blog/best-vector-databases-ai-applications",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Compare top vector databases for AI applications. Performance benchmarks, integration patterns, and deployment options for Pinecone, Weaviate, Milvus &amp; more.",
+        "page_age": "2026-04-22T00:00:00",
+        "profile": {
+          "name": "Strapi",
+          "url": "https://strapi.io/blog/best-vector-databases-ai-applications",
+          "long_name": "strapi.io",
+          "img": "https://imgs.search.brave.com/YXLIKHSTVPdnZWjJS_pZVES5HO4ewbsQukabATTw4Dg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTQxYTU2MTBk/ODg1MDc5YzZjYmRk/ZmYyNjYxYjk3Mjk1/MjUxZWQ0MDQwM2I3/M2E1NTY2NmE0Y2Fj/MWI0MzU3Ny9zdHJh/cGkuaW8v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "strapi.io",
+          "hostname": "strapi.io",
+          "favicon": "https://imgs.search.brave.com/YXLIKHSTVPdnZWjJS_pZVES5HO4ewbsQukabATTw4Dg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTQxYTU2MTBk/ODg1MDc5YzZjYmRk/ZmYyNjYxYjk3Mjk1/MjUxZWQ0MDQwM2I3/M2E1NTY2NmE0Y2Fj/MWI0MzU3Ny9zdHJh/cGkuaW8v",
+          "path": "› blog  › best-vector-databases-ai-applications"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/1XkIuIp9PX4N20cHO9UuUzt6TLL4L0IyOvOuN53QsaM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kZWxp/Y2F0ZS1kYXduLWFj/MjU2NDZlNmQubWVk/aWEuc3RyYXBpYXBw/LmNvbS82X0Jlc3Rf/VmVjdG9yX0RhdGFi/YXNlc19mb3JfQUlf/QXBwbGljYXRpb25z/X1BpbmVjb25lX1dl/YXZpYXRlX2FuZF9N/b3JlX2IwZWY5Yzdm/ZGEucG5n",
+          "original": "https://delicate-dawn-ac25646e6d.media.strapiapp.com/6_Best_Vector_Databases_for_AI_Applications_Pinecone_Weaviate_and_More_b0ef9c7fda.png",
+          "logo": false
+        },
+        "age": "1 month ago",
+        "extra_snippets": [
+          "Milvus architecture scales from lightweight Milvus Lite (a Python library for development and testing) through standalone Docker instances to distributed Kubernetes clusters handling unlimited entities per collection.",
+          "Configuration and parameter tuning complexity varies by platform: Milvus requires algorithm selection (IVF, HNSW, DiskANN, SCANN, GPU, PQ, SQ8) with performance testing, while Qdrant's HNSW tuning demands careful ef_construction and M parameter optimization.",
+          "Independent verification of vendor performance claims is limited: while ANN-Benchmarks provides standardized testing for Weaviate, Milvus, and Qdrant, Pinecone and ChromaDB require separate evaluation, making direct cross-database comparison under identical conditions unavailable.",
+          "This guide evaluates Pinecone, Weaviate, Milvus, Qdrant, ChromaDB, and Pgvector with verified benchmarks, code examples, and integration patterns for Strapi headless CMS."
+        ]
+      },
+      {
+        "title": "Top 10 Vector Databases in 2026: Ultimate Comparison, Benchmarks & Use Cases | by Karthikeyan Rathinam | Mar, 2026 | Medium",
+        "url": "https://karthikeyanrathinam.medium.com/top-10-vector-databases-in-2026-ultimate-comparison-benchmarks-use-cases-6b0e878256b5",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "pgvector (self-hosted) $300 ███ Milvus Cloud $800 ████████ Qdrant Cloud $600 ██████ Weaviate Cloud $3000 ██████████████████████████████ Chroma Cloud $2000 ████████████████ Pinecone $5000+ █████████████████████████████████ · Company 2026 Funding / Latest Round Total Raised Status --------------------------------------------------------------------------------------------- Qdrant $50M Series B (Mar 2026) $87.8M 🔥 Hot Pinecone Previous rounds $138M+ Mature, strong trajectory Zilliz (Milvus) Not public $100M+ (est.)",
+        "page_age": "2026-03-26T05:15:40",
+        "profile": {
+          "name": "Medium",
+          "url": "https://karthikeyanrathinam.medium.com/top-10-vector-databases-in-2026-ultimate-comparison-benchmarks-use-cases-6b0e878256b5",
+          "long_name": "karthikeyanrathinam.medium.com",
+          "img": "https://imgs.search.brave.com/K8jNIWsifc0rTeT6xvhPssx-JudgMQGfMqzZ7-z8Rr4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjAwMzQ4YmNi/MDcyZjNlOTU3N2Iz/NjU1M2EyNWI4OTY2/MjE3ZTVjNWMwNmYw/ODU1OGExN2QyZjlk/MGZjN2IwOS9rYXJ0/aGlrZXlhbnJhdGhp/bmFtLm1lZGl1bS5j/b20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "karthikeyanrathinam.medium.com",
+          "hostname": "karthikeyanrathinam.medium.com",
+          "favicon": "https://imgs.search.brave.com/K8jNIWsifc0rTeT6xvhPssx-JudgMQGfMqzZ7-z8Rr4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjAwMzQ4YmNi/MDcyZjNlOTU3N2Iz/NjU1M2EyNWI4OTY2/MjE3ZTVjNWMwNmYw/ODU1OGExN2QyZjlk/MGZjN2IwOS9rYXJ0/aGlrZXlhbnJhdGhp/bmFtLm1lZGl1bS5j/b20v",
+          "path": "› top-10-vector-databases-in-2026-ultimate-comparison-benchmarks-use-cases-6b0e878256b5"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/_g7meeSrHVQtJTeAr7SBekkH2HiCb78bJbt8GCN_lNM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/MSpKQkM0RV8ycnU5/RmRhelloRkt4Ym13/LnBuZw",
+          "original": "https://miro.medium.com/1*JBC4E_2ru9FdazYhFKxbmw.png",
+          "logo": false
+        },
+        "age": "March 26, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Karthikeyan Rathinam",
+              "url": "https://medium.com/@karthikeyanrathinam"
+            }
+          ],
+          "date": "Mar 26, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Medium",
+            "url": "https://medium.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/HV5y8CR3FQdnFTuDVcr_qfl-FW_-wKwt6V6sALLLkXI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/djIvcmVzaXplOmZp/dDo1MDAvNyUyQVYx/XzdYUDRzbmxtcXJj/XzBOam9udHcucG5n",
+              "original": "https://miro.medium.com/v2/resize:fit:500/7%2AV1_7XP4snlmqrc_0Njontw.png"
+            }
+          },
+          "isAccessibleForFree": true
+        },
+        "extra_snippets": [
+          "pgvector (self-hosted) $300 ███ Milvus Cloud $800 ████████ Qdrant Cloud $600 ██████ Weaviate Cloud $3000 ██████████████████████████████ Chroma Cloud $2000 ████████████████ Pinecone $5000+ █████████████████████████████████ · Company 2026 Funding / Latest Round Total Raised Status --------------------------------------------------------------------------------------------- Qdrant $50M Series B (Mar 2026) $87.8M 🔥 Hot Pinecone Previous rounds $138M+ Mature, strong trajectory Zilliz (Milvus) Not public $100M+ (est.)",
+          "Milvus is the distribution champion for extreme scale.",
+          "Metric Qdrant Pinecone Weaviate Milvus -------------------------------------------------------------------------------------------------- Query Latency p99 (100M vectors) 30–40ms ⭐ 50–100ms 50–70ms 40–60ms Filtered Query (metadata) 20–30ms ⭐ 40–60ms 45–65ms 50–70ms QPS @ 95% recall 100+ 80+ 60+ 90+ Memory per vector (1536D) 20 bytes 24 bytes 22 bytes 16 bytes Ingestion Rate 50K/sec 50K/sec 10K/sec 80K/sec",
+          "Feature Pinecone Qdrant Weaviate Milvus Chroma pgvector ---------------------------------------------------------------------------------------------------------------------- Ease of Setup ★★★★★ ★★★★☆ ★★★★☆ ★★☆☆☆ ★★★★★ ★★★★☆ Query Latency (p99) 50–100ms 30–40ms 50–70ms 40–60ms 100–200ms 30–50ms Filtered Query Slow ⭐ Fast Medium Slow N/A ⭐ Fast (SQL) Max Scale Billions Billions Billions Billions 100M 100M+ Cost @100M vectors $5000+/mo $500–800/mo $3000/mo $800–1500/mo $2000+/mo $300–500/mo Managed Option Yes (only) Yes Yes Yes (Zilliz) Yes No Self-Hosted No Yes Yes Yes Yes Yes (extension) ACID No No No No No Yes ⭐ Hybrid Search Sparse vectors Native Native ⭐ Sparse vectors Full-text SQL joins Best For Speed-scale Filtered Hybrid Billion-scale Prototyping Hybrid workloads"
+        ]
+      },
+      {
+        "title": "GitHub - milvus-io/benchmarks",
+        "url": "https://github.com/milvus-io/benchmarks",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Contribute to milvus-io/benchmarks development by creating an account on GitHub.",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/milvus-io/benchmarks",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› milvus-io  › benchmarks"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/DvCpSRT-49aPM0GeXE_TgJHidDwZbnJEV386PQ9IdvQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS9m/ZGJjNzdmMWExMDc2/Mjk3Njc5ZTY4ODQx/OTlmNDljMmNjZDc3/YTc0ZDY0ZTU0MTkw/Y2Q2YTBlMjJiM2I0/ZWIzL21pbHZ1cy1p/by9iZW5jaG1hcmtz",
+          "original": "https://opengraph.githubassets.com/fdbc77f1a1076297679e6884199f49c2ccd77a74d64e54190cd6a0e22b3b4eb3/milvus-io/benchmarks",
+          "logo": false
+        },
+        "software": {
+          "name": "benchmarks",
+          "author": "milvus-io",
+          "is_npm": false,
+          "is_pypi": false,
+          "stars": 0,
+          "programmingLanguage": "HTML 100.0% | HTML 100.0%"
+        }
+      },
+      {
+        "title": "Milvus Surpasses 40,000 GitHub Stars, Reinforcing Leadership in Open-Source Vector Databases",
+        "url": "https://finance.yahoo.com/news/milvus-surpasses-40-000-github-010000562.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "As Gartner Predicts Vector Databases Will Be Used in 30% of Enterprise Applications by 2026, Milvus Reaches Major Milestone with 10,000+ Production Deployments",
+        "page_age": "2025-12-19T01:00:00",
+        "profile": {
+          "name": "Yahoo! Finance",
+          "url": "https://finance.yahoo.com/news/milvus-surpasses-40-000-github-010000562.html",
+          "long_name": "finance.yahoo.com",
+          "img": "https://imgs.search.brave.com/ZxJbtHZiiBXciqcRfJn3XPiTEOf_XYrooAjrJf1rnag/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjRkNjc1NWY5/MzM5ZjlkMWQyNjM5/OWNiMTQ4ZjcwNTQx/ZjA3ZDE4NDQ2M2Iw/MWZjZjVhOTFlM2Ji/NTE1NWRjZS9maW5h/bmNlLnlhaG9vLmNv/bS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "finance.yahoo.com",
+          "hostname": "finance.yahoo.com",
+          "favicon": "https://imgs.search.brave.com/ZxJbtHZiiBXciqcRfJn3XPiTEOf_XYrooAjrJf1rnag/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjRkNjc1NWY5/MzM5ZjlkMWQyNjM5/OWNiMTQ4ZjcwNTQx/ZjA3ZDE4NDQ2M2Iw/MWZjZjVhOTFlM2Ji/NTE1NWRjZS9maW5h/bmNlLnlhaG9vLmNv/bS8",
+          "path": "› news  › milvus-surpasses-40-000-github-010000562.html"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/SEERJ7NNoZfHXiOFIHlkudR6uIADr1Hx-gdVyPeVtW0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zLnlp/bWcuY29tL255L2Fw/aS9yZXMvMS4yLzlY/RVhZMzA0NUt5b1Zf/YTlRRHouNWctLS9Z/WEJ3YVdROWFHbG5h/R3hoYm1SbGNqdDNQ/VGN3TlR0b1BURXlO/US0tL2h0dHBzOi8v/bWVkaWEuemVuZnMu/Y29tL2VuL3BybmV3/c3dpcmUuY29tLzQ2/MTYwNDY1MjExNzdk/ODAzMjFmODM4YmI3/YTA0MmFl",
+          "original": "https://s.yimg.com/ny/api/res/1.2/9XEXY3045KyoV_a9QDz.5g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTcwNTtoPTEyNQ--/https://media.zenfs.com/en/prnewswire.com/4616046521177d80321f838bb7a042ae",
+          "logo": false
+        },
+        "age": "December 19, 2025",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "PR Newswire",
+              "url": "https://www.prnewswire.com/"
+            }
+          ],
+          "date": "Dec 19, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "Yahoo Finance",
+            "url": "https://finance.yahoo.com/",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/y_C6sFzgXz3T0sH8ByySt1T441aetUVprfZS914FKi4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zLnlp/bWcuY29tL3J6L3Av/eWFob29fZmluYW5j/ZV9lbi1VU19oX3Bf/ZmluYW5jZV8yLnBu/Zw",
+              "original": "https://s.yimg.com/rz/p/yahoo_finance_en-US_h_p_finance_2.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Zilliz recently announced that Milvus, its open-source vector database, has surpassed 40,000 GitHub stars, marking one of the fastest growth spurts in the project's history. The milestone comes as vector databases rapidly move into production, with more than 10,000 enterprise teams using Milvus in live AI systems—including NVIDIA, Salesforce, eBay, Airbnb, and DoorDash.",
+          "As Gartner Predicts Vector Databases Will Be Used in 30% of Enterprise Applications by 2026, Milvus Reaches Major Milestone with 10,000+ Production Deployments",
+          "Built on a manifest + data + index architecture, Milvus Lake will provide trillion-scale storage with predictable latency and integration with Iceberg, Hudi, Spark, and Ray for unified batch processing, semantic retrieval, and training-data preparation.",
+          "Zilliz is the company behind Milvus, the world's most widely adopted open-source vector database. Zilliz Cloud brings that performance to production with a fully managed, cloud-native platform built for scalable, low-latency vector search and hybrid retrieval."
+        ]
+      },
+      {
+        "title": "Vector Search Benchmarks - Qdrant",
+        "url": "https://qdrant.tech/benchmarks/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Milvus is the fastest when it comes to indexing time and maintains good precision.",
+        "profile": {
+          "name": "Qdrant",
+          "url": "https://qdrant.tech/benchmarks/",
+          "long_name": "qdrant.tech",
+          "img": "https://imgs.search.brave.com/NgfcJvgEgdiOyp1HfEoZ7MNjVJLE6jMIPyGj3jIUZs4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjE3MTVkZjQ2/MmNiODFiNWExZmJh/N2RlZmYzOWJlYjU5/Mzk5MmYwNTA5YTZi/NTJhN2ZmYTI3YzFk/ZGM3Y2FlZS9xZHJh/bnQudGVjaC8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "qdrant.tech",
+          "hostname": "qdrant.tech",
+          "favicon": "https://imgs.search.brave.com/NgfcJvgEgdiOyp1HfEoZ7MNjVJLE6jMIPyGj3jIUZs4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjE3MTVkZjQ2/MmNiODFiNWExZmJh/N2RlZmYzOWJlYjU5/Mzk5MmYwNTA5YTZi/NTJhN2ZmYTI3YzFk/ZGM3Y2FlZS9xZHJh/bnQudGVjaC8",
+          "path": "› benchmarks"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/H20xnAFc8i7pOydrQmVUA0t-lj6Y2n8z17A1A34fpUY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9xZHJh/bnQudGVjaC9iZW5j/aG1hcmtzL2JlbmNo/bWFyay0xLnBuZw",
+          "original": "https://qdrant.tech/benchmarks/benchmark-1.png",
+          "logo": false
+        },
+        "organization": {
+          "type": "organization",
+          "name": "Qdrant",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Milvus is the fastest when it comes to indexing time and maintains good precision."
+        ]
+      },
+      {
+        "title": "GitHub - zilliztech/VectorDBBench: Benchmark for vector databases. · GitHub",
+        "url": "https://github.com/zilliztech/vectordbbench",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "pgvectorhnsw: db_label: pgConfigTest user_name: vectordbbench password: vectordbbench db_name: vectordbbench host: localhost m: 16 ef_construction: 128 ef_search: 128 milvushnsw: skip_search_serial: True case_type: Performance1536D50K uri: http://localhost:19530 m: 16 ef_construction: 128 ef_search: 128 drop_old: False load: False elasticcloudhnsw: db_label: elastic-cloud-hnsw cloud_id: &lt;your-cloud-id&gt; password: &lt;your-password&gt; case_type: Performance768D1M m: 16 ef_construction: 100 num_candidates: 100 number_of_shards: 1 number_of_replicas: 0 refresh_interval: 30s element_type: float",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/zilliztech/vectordbbench",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› zilliztech  › vectordbbench"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/4Eej-NSyqlUWFCBmFE_QQtp-wu8IVLkCzHPbe-XzSRU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS9i/MWM3NTJhZjE2NTky/MTdmYWVkMjUwMmU4/ZmFmZmJkYTIyYjZl/ZTNkNWI5NGZiYzRj/OTBkNWRkNTg5MDc2/ZDhkL3ppbGxpenRl/Y2gvVmVjdG9yREJC/ZW5jaA",
+          "original": "https://opengraph.githubassets.com/b1c752af1659217faed2502e8faffbda22b6ee3d5b94fbc4c90d5dd589076d8d/zilliztech/VectorDBBench",
+          "logo": false
+        },
+        "software": {
+          "name": "VectorDBBench",
+          "author": "zilliztech",
+          "is_npm": false,
+          "is_pypi": false,
+          "stars": 1100,
+          "forks": 373,
+          "programmingLanguage": "Python"
+        },
+        "extra_snippets": [
+          "Our client module is designed with flexibility and extensibility in mind, aiming to integrate APIs from different systems seamlessly. As of now, it supports Milvus, Zilliz Cloud, Elastic Search, Pinecone, Qdrant Cloud, Weaviate Cloud, PgVector, VectorChord, Redis, Chroma, CockroachDB, etc.",
+          "VDBBench is sponsored by Zilliz，the leading opensource vectorDB company behind Milvus.",
+          "The standard benchmark results displayed here include all 15 cases that we currently support for 6 of our clients (Milvus, Zilliz Cloud, Elastic Search, Qdrant Cloud, Weaviate Cloud and PgVector).",
+          "pgvectorhnsw: db_label: pgConfigTest user_name: vectordbbench password: vectordbbench db_name: vectordbbench host: localhost m: 16 ef_construction: 128 ef_search: 128 milvushnsw: skip_search_serial: True case_type: Performance1536D50K uri: http://localhost:19530 m: 16 ef_construction: 128 ef_search: 128 drop_old: False load: False elasticcloudhnsw: db_label: elastic-cloud-hnsw cloud_id: <your-cloud-id> password: <your-password> case_type: Performance768D1M m: 16 ef_construction: 100 num_candidates: 100 number_of_shards: 1 number_of_replicas: 0 refresh_interval: 30s element_type: float"
+        ]
+      },
+      {
+        "title": "GitHub - zilliz-bootcamp/milvus_benchmark: The main content of this project is Milvus benchmark test",
+        "url": "https://github.com/zilliz-bootcamp/milvus_benchmark",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "The main content of this project is Milvus benchmark test - GitHub - zilliz-bootcamp/milvus_benchmark: The main content of this project is Milvus benchmark test",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/zilliz-bootcamp/milvus_benchmark",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› zilliz-bootcamp  › milvus_benchmark"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ZMERFxqHZQ4ZReA_jJ5WP3iXDYWnG8oAGZPAgHlR3Wc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS81/YmFiYzA3ZDQzNDcz/YjlmZDAwNGI5MzZj/ZmQ4YjBhMmVlZjM3/OTJhZjYzY2M2YjVh/MDhjZmQwMjMyODQx/NzBlL3ppbGxpei1i/b290Y2FtcC9taWx2/dXNfYmVuY2htYXJr",
+          "original": "https://opengraph.githubassets.com/5babc07d43473b9fd004b936cfd8b0a2eef3792af63cc6b5a08cfd023284170e/zilliz-bootcamp/milvus_benchmark",
+          "logo": false
+        },
+        "software": {
+          "name": "milvus_benchmark",
+          "author": "zilliz-bootcamp",
+          "is_npm": false,
+          "is_pypi": false,
+          "stars": 3,
+          "programmingLanguage": "Python 100.0% | Python 100.0%"
+        },
+        "extra_snippets": [
+          "❗❗ This repo will no longer be maintained, please visit https://github.com/milvus-io/bootcamp ❗ ❗"
+        ]
+      },
+      {
+        "title": "Releases · milvus-io/milvus",
+        "url": "https://github.com/milvus-io/milvus/releases",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search - Releases · milvus-io/milvus",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/milvus-io/milvus/releases",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› milvus-io  › milvus  › releases"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/1tqZC754BKMt1_cRWGJbEQK7gDyugWNvIHrWjApdX04/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9yZXBv/c2l0b3J5LWltYWdl/cy5naXRodWJ1c2Vy/Y29udGVudC5jb20v/MjA4NzI4NzcyLzk5/OGMwOWNhLWNmYTYt/NGMwMS1hYzc1LTNk/ZmFkN2Y0ODYyYg",
+          "original": "https://repository-images.githubusercontent.com/208728772/998c09ca-cfa6-4c01-ac75-3dfad7f4862b",
+          "logo": false
+        },
+        "software": {
+          "name": "milvus",
+          "author": "milvus-io",
+          "is_npm": false,
+          "is_pypi": false,
+          "programmingLanguage": ""
+        },
+        "extra_snippets": [
+          "Milvus 2.5.27 is a critical security release that fixes CVE-2026-26190 (CVSS 9.8), an authentication bypass vulnerability on the metrics port (9091) that could allow unauthenticated access to the REST API and sensitive system operations. This release also includes important bug fixes and dependency updates.",
+          "We are pleased to announce the release of Milvus 2.6.10! This update addresses a critical security vulnerability CVE-2026-26190, strengthens security controls around KMS key revocation and improves search and storage performance through automatic FP32-to-FP16/BF16 conversion, optimized segment loading, and updated auto-index configurations.",
+          "Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search - Releases · milvus-io/milvus",
+          "Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search - milvus-io/milvus"
+        ]
+      },
+      {
+        "title": "Milvus Performance Report | Zilliz",
+        "url": "https://zilliz.com/resources/whitepaper/milvus-performance-benchmark",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "In this benchmark report, we showcase Milvus&#x27;s performance through comprehensive metrics like throughput, latency, and recall rate, utilizing the open-source VectorDBBench across four real-world datasets from OpenAI and Cohere.",
+        "profile": {
+          "name": "Zilliz",
+          "url": "https://zilliz.com/resources/whitepaper/milvus-performance-benchmark",
+          "long_name": "zilliz.com",
+          "img": "https://imgs.search.brave.com/yJtBoN2VB_BoYbdfdeRd3IxAot7sW4jVS6yvLhG6iDA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGI2MzRmOWQx/MDlhNGJmNzZjNTE3/MzY0YWJiMGU1NDE4/YjY4ODNmZDEyMGY0/YmM1YTBhODYyN2E0/NjFhMTRkYy96aWxs/aXouY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "zilliz.com",
+          "hostname": "zilliz.com",
+          "favicon": "https://imgs.search.brave.com/yJtBoN2VB_BoYbdfdeRd3IxAot7sW4jVS6yvLhG6iDA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGI2MzRmOWQx/MDlhNGJmNzZjNTE3/MzY0YWJiMGU1NDE4/YjY4ODNmZDEyMGY0/YmM1YTBhODYyN2E0/NjFhMTRkYy96aWxs/aXouY29tLw",
+          "path": "› resources  › whitepaper  › milvus-performance-benchmark"
+        },
+        "extra_snippets": [
+          "In this benchmark report, we showcase Milvus's performance through comprehensive metrics like throughput, latency, and recall rate, utilizing the open-source VectorDBBench across four real-world datasets from OpenAI and Cohere.",
+          "Our benchmarking tests are designed to provide a consistent and up-to-date performance evaluation of Milvus, reflecting its latest advancements. We periodically revisit and re-run these benchmarks to ensure the data remains current and relevant.",
+          "Open-source vector database built for billion-scale vector similarity search.Zilliz Cloud vs. MilvusAnnouncing Zilliz Vector Lakebase",
+          "Milvus is an open-source vector database built to power vector similarity search and various GenAI use cases, such as Retrieval Augmented Generation (RAG)."
+        ]
+      },
+      {
+        "title": "What's New in Milvus? 2026 Updates Tracked | aitoolsatlas.ai",
+        "url": "https://aitoolsatlas.ai/tools/milvus/changelog",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Every Milvus update in 2026 — new features, fixes, and changes. See what shipped recently and if it&#x27;s time to upgrade or switch. Recent updates and new features",
+        "page_age": "2026-04-09T08:42:40",
+        "profile": {
+          "name": "Aitoolsatlas",
+          "url": "https://aitoolsatlas.ai/tools/milvus/changelog",
+          "long_name": "aitoolsatlas.ai",
+          "img": "https://imgs.search.brave.com/igKDtFd0Eil1K0fDqkrm-kyHfYLrkQDUidcB0qJTDgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODE0NDlkNDMw/NWUzZGFlNjI5Y2Zi/OWYzMzExYjA1ZGVm/Nzk2NWY2ZWJiMWJm/ODBjYmYxMzQyNGFi/ZDI5ZmIwMS9haXRv/b2xzYXRsYXMuYWkv"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "aitoolsatlas.ai",
+          "hostname": "aitoolsatlas.ai",
+          "favicon": "https://imgs.search.brave.com/igKDtFd0Eil1K0fDqkrm-kyHfYLrkQDUidcB0qJTDgk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODE0NDlkNDMw/NWUzZGFlNjI5Y2Zi/OWYzMzExYjA1ZGVm/Nzk2NWY2ZWJiMWJm/ODBjYmYxMzQyNGFi/ZDI5ZmIwMS9haXRv/b2xzYXRsYXMuYWkv",
+          "path": "  › home  › ai memory & search  › milvus  › changelog"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/A_sNg0S8GUHtWOYEes6yJuCSdDJrnwPG_DQCWRAT-8o/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9haXRv/b2xzYXRsYXMuYWkv/b2ctZGVmYXVsdC5w/bmc",
+          "original": "https://aitoolsatlas.ai/og-default.png",
+          "logo": false
+        },
+        "age": "April 9, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "aitoolsatlas.ai Team",
+              "url": "https://aitoolsatlas.ai"
+            }
+          ],
+          "date": "Apr 09, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "aitoolsatlas.ai",
+            "url": "https://aitoolsatlas.ai",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/A_sNg0S8GUHtWOYEes6yJuCSdDJrnwPG_DQCWRAT-8o/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9haXRv/b2xzYXRsYXMuYWkv/b2ctZGVmYXVsdC5w/bmc",
+              "original": "https://aitoolsatlas.ai/og-default.png"
+            }
+          }
+        },
+        "organization": {
+          "type": "organization",
+          "name": "aitoolsatlas.ai",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Stay up to date with the latest Milvus updates, new features, and improvements. Here's what changed in 2026."
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

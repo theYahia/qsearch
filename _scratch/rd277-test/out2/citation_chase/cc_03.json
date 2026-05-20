@@ -1,0 +1,869 @@
+{
+  "type": "search",
+  "query": {
+    "original": "Weaviate deployment documentation sources",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "videos",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "videos": {
+    "type": "videos",
+    "results": [
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=tT38iyZqTXY",
+        "title": "Tutorial: Weaviate with Local Embedding and Generation models using ...",
+        "description": "KubeAI, private Open AI on K8s: https://github.com/substratusai/kubeaiTutorial with copy pasteable steps: https://github.com/substratusai/kubeai/blob/main/do",
+        "age": "September 15, 2024",
+        "page_age": "2024-09-15T22:53:05",
+        "fetched_content_timestamp": 1753865233,
+        "video": {
+          "duration": "10:49",
+          "creator": "Samos123",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/T75O23Ox7eO_329D2yv9lII1MEMWk3VWxWHOSXpiTQU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS90/VDM4aXlacVRYWS9t/YXhyZXNkZWZhdWx0/LmpwZz9zcXA9LW9h/eW13RW1DSUFLRU5B/RjhxdUtxUU1hOEFF/Qi1BSC1DWUFDMEFX/S0Fnd0lBQkFCR0dJ/Z1lpaGlNQTg9JmFt/cDtycz1BT240Q0xC/OHBKa01vMTgzXzBp/aFVHS2Rpa3lQVVRf/TVZn",
+          "original": "https://i.ytimg.com/vi/tT38iyZqTXY/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGIgYihiMA8=&amp;rs=AOn4CLB8pJkMo183_0ihUGKdikyPUT_MVg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=4TpTZ-xcScw",
+        "title": "Bring Your App into the AI-Age with Weaviate and Docker (DockerCon ...",
+        "description": "Watch to explore how Weaviate and Docker can make LLMs, vector search, and Generative AI more accessible. You’re just one “docker compose up” away from turni...",
+        "age": "December 18, 2023",
+        "page_age": "2023-12-18T14:00:06",
+        "fetched_content_timestamp": 1731702733,
+        "video": {
+          "duration": "34:18",
+          "views": 778,
+          "creator": "Docker",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/YIu88RuRJpOrMHuyUUPLou6ok0gRmlxMLcED5InU3-k/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS80/VHBUWi14Y1Njdy9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/4TpTZ-xcScw/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=mj89MlsD6Co",
+        "title": "How to Self-Host and Deploy a Weaviate Vector DB in your ...",
+        "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
+        "fetched_content_timestamp": 1722148074,
+        "video": {},
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/aiuMAc3rcnWOc6xilQ3825oj9eQv4v3U1gNXx_dsIQ0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9t/ajg5TWxzRDZDby9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/mj89MlsD6Co/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://m.youtube.com/watch?v=L0Y_zZR8FRI",
+        "title": "Weaviate Meetup – Getting Started (setup, vectorizers ...",
+        "description": "Share your videos with friends, family, and the world",
+        "age": "September 17, 2021",
+        "page_age": "2021-09-17T12:25:54",
+        "fetched_content_timestamp": 1744927354,
+        "video": {
+          "duration": "40:30",
+          "creator": "Weaviate • Vector Database",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "m.youtube.com",
+          "hostname": "m.youtube.com",
+          "favicon": "https://imgs.search.brave.com/p0B86IaQr1YuFWzlQTuEltmxPAh7UzF2DpyN8i96T6M/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTExOWJhZDk1/ZTUxZWUwYmE3NTg0/N2QzZjQwZjZhMTE5/ZTc1NWY5MzMwYjll/OTJhNTM3ZjdmZTMw/MzdlM2EwNC9tLnlv/dXR1YmUuY29tLw",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/KpDQTmIOXCDiJWTwrfFM6WGPIi2QE9nOha-Wf1yojZc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9M/MFlfelpSOEZSSS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/L0Y_zZR8FRI/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/shorts/UVDccbNX4fw",
+        "title": "Run Weaviate on Kubernetes - YouTube",
+        "description": "Think deploying a vector database on Kubernetes is complicated? Femke shows you how to get Weaviate running in just a few simple steps! ⏰Here's what you'll n...",
+        "age": "November 15, 2024",
+        "page_age": "2024-11-15T09:39:24",
+        "fetched_content_timestamp": 1777872955,
+        "video": {
+          "duration": "01:37",
+          "creator": "Weaviate vector database",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› shorts  › UVDccbNX4fw"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/hqnLsa2C8oASOePs9Y9rFzCVPziEPR2uz68atoS1LDY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9V/VkRjY2JOWDRmdy9o/cTcyMC5qcGc_c3Fw/PS1vYXltd0VvQ0pj/REVOQUZTRnJ5cTRx/cEF4b0lBUlVBQUlo/QzBBRUIyQUVCNGdF/S0NCZ1FBaGdHT0FG/QUFRPT0mYW1wO3Jz/PUFPbjRDTEJOSDl5/NEFHUGxUcUNWRURB/SUpEaDdJZVMzWWc",
+          "original": "https://i.ytimg.com/vi/UVDccbNX4fw/hq720.jpg?sqp=-oaymwEoCJcDENAFSFryq4qpAxoIARUAAIhC0AEB2AEB4gEKCBgQAhgGOAFAAQ==&amp;rs=AOn4CLBNH9y4AGPlTqCVEDAIJDh7IeS3Yg"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Deploying Weaviate | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/deploy",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "This section hosts common deployment topics, including Kubernetes, cloud providers, and best practices, along with detailed tutorials and how-to guides. Weaviate is designed for: Scalability – Handle billions of vector data points efficiently. High-Performance Search – Power AI applications with real-time vector retrieval. Flexible Integrations – Connect with various machine learning models and data sources...",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/deploy",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › installation"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/QzSpXIEAZZ48UKxrv-ycdCszHZZg7ctVkVzYEa4-9UY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RlZmF1bHQu/anBn",
+          "original": "https://docs.weaviate.io/og/default.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "The Weaviate documentation also calls these files configuration yaml files. If you are self-hosting, consider experimenting on a small scale with Docker and then transferring your configuration to Kubernetes Helm charts when you are more familiar with Weaviate. ... Weaviate version availability may differ across deployment options, Weaviate Cloud generally has the latest versions of all deployment methods.",
+          "Snowpark Container Services Deploy Weaviate in Snowflake's Snowpark environment. Embedded Weaviate: Experimental. Embedded Weaviate is a client based tool. ... Although Weaviate can be used on Windows via containerized environments like Docker or WSL, we don't offer native Windows support at this time. Docker Compose and Kubernetes use yaml files to configure Weaviate instances.",
+          "Weaviate offers multiple deployment options to satisfy your specific use case in production.",
+          "The new Weaviate Academy learning platform is here!"
+        ]
+      },
+      {
+        "title": "Weaviate Database | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/weaviate",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Weaviate Database: An open source vector database that stores both objects and vectors. Weaviate Cloud: A fully managed cloud deployment of the Weaviate vector database.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/weaviate",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › introduction"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/DoJwAaPpvGf5Sviuez7op8rD9brUcw7kSzuojMwd5pk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvaG9t/ZS5qcGc",
+          "original": "https://docs.weaviate.io/og/docs/home.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Complete documentation for Weaviate, the open-source vector database for AI applications.",
+          "Instant access to Weaviate's documentation directly in your AI development environment. ... Avoid hallucinations and improve your AI-assisted coding experience. Weaviate is an open-source vector database designed to store and index both data objects and their vector embeddings.",
+          "Weaviate (we-vee-eight) is an open-source, AI vector database. Use this documentation to get started with Weaviate and learn how to get the most out of Weaviate's features.",
+          "Retrieval augmented generation (RAG) Weaviate can serve as a robust backend for RAG workflows, where vector search is used to retrieve context that enhances the output of generative models, making it easier to generate accurate, context-aware responses."
+        ]
+      },
+      {
+        "title": "Deploy a Weaviate vector database on GKE | Kubernetes Engine | Google Cloud Documentation",
+        "url": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/deploy-weaviate",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "This tutorial shows you how to deploy a Weaviate vector database cluster on Google Kubernetes Engine (GKE). Weaviate is an open-source vector database with low-latency performance and basic support for different media types such as text and images. It supports semantic search, question answering, ...",
+        "profile": {
+          "name": "Google",
+          "url": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/deploy-weaviate",
+          "long_name": "docs.cloud.google.com",
+          "img": "https://imgs.search.brave.com/X2LiAmALTOMVY1aUOMWVBn-ztwv2k39sQIqMbZdXDJw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Q1ZjM4NGJi/ZGM1ZjI3NDE4MGQy/NzE1MGZkMjNjYTZj/ODJjYTVkYzUyMjYw/MGY5ZTk3NGRlZjdj/Njk5YTBlOS9kb2Nz/LmNsb3VkLmdvb2ds/ZS5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.cloud.google.com",
+          "hostname": "docs.cloud.google.com",
+          "favicon": "https://imgs.search.brave.com/X2LiAmALTOMVY1aUOMWVBn-ztwv2k39sQIqMbZdXDJw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Q1ZjM4NGJi/ZGM1ZjI3NDE4MGQy/NzE1MGZkMjNjYTZj/ODJjYTVkYzUyMjYw/MGY5ZTk3NGRlZjdj/Njk5YTBlOS9kb2Nz/LmNsb3VkLmdvb2ds/ZS5jb20v",
+          "path": "  › google kubernetes engine (gke)  › documentation  › deploy a weaviate vector database on gke"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/7nSaVkuxBasD-hCrDFv-IVSJ8KKtVFA1bp0gBFpoj-M/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LmNsb3VkLmdvb2ds/ZS5jb20vX3N0YXRp/Yy9jbG91ZC9pbWFn/ZXMvc29jaWFsLWlj/b24tZ29vZ2xlLWNs/b3VkLTEyMDAtNjMw/LnBuZw",
+          "original": "https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png",
+          "logo": true
+        },
+        "article": {
+          "author": []
+        },
+        "extra_snippets": [
+          "This tutorial shows you how to deploy a Weaviate vector database cluster on Google Kubernetes Engine (GKE). Weaviate is an open-source vector database with low-latency performance and basic support for different media types such as text and images. It supports semantic search, question answering, and classification.",
+          "Deploy and configure the Weaviate database in a GKE cluster. Run a Notebook to generate and store example vector embeddings within your database, and perform vector-based search queries. In this document, you use the following billable components of Google Cloud:",
+          "This section explains how to connect to your Weaviate database using Colab Enterprise. You can use a dedicated runtime template to deploy to the weaviate-vpc, so the notebook can communicate with resources in the GKE cluster. For more information about Vertex AI Colab Enterprise, see Colab Enterprise documentation.",
+          "From an infrastructure perspective, Weaviate is a cloud-native and fault-tolerant database. Fault tolerance is delivered by leaderless architecture where each node of the database cluster can serve read and write requests which in turn excludes a single point of failure. This tutorial is intended for cloud platform administrators and architects, ML engineers, and MLOps (DevOps) professionals interested in deploying vector database clusters on GKE."
+        ]
+      },
+      {
+        "title": "GitHub - weaviate/docs: The documentation repo for Weaviate Database, Cloud, Agents and much more! · GitHub",
+        "url": "https://github.com/weaviate/docs",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "# Start Weaviate test instances tests/start-weaviate.sh # Python tests pytest pytest tests/test_quickstart.py # Specific file # Stop Weaviate test instances tests/stop-weaviate.sh · Before PRs are merged, internal links are validated to prevent broken links: # Build dev site (with trailing slashes for validation) yarn build-dev # Validate links yarn validate-links-dev · Use the &lt;SkipValidationLink&gt; component for intentionally external or placeholder links. Production: Deployed to docs.weaviate.io via Netlify",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/weaviate/docs",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› weaviate  › docs"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ZkJq-nX5GNjOEms4FDGT8Mb4ah9kyMvGuxIzh4ilK6w/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS84/ZjQ4ODAxYjkxYWRk/MTM0MmU3ZjUwNzFl/YjI3NTU5MTcxZTIx/NTY5YzBmMWI4OGM5/NjYxOWMxMjljY2E0/ZGZhL3dlYXZpYXRl/L2RvY3M",
+          "original": "https://opengraph.githubassets.com/8f48801b91add1342e7f5071eb27559171e21569c0f1b88c96619c129cca4dfa/weaviate/docs",
+          "logo": false
+        },
+        "software": {
+          "name": "docs",
+          "author": "weaviate",
+          "is_npm": false,
+          "is_pypi": false,
+          "stars": 19,
+          "forks": 17,
+          "programmingLanguage": "Python 30.2% | TypeScript 17.0% | MDX 11.8% | C# 10.1% | Go 9.7% | Java 9.6%"
+        },
+        "extra_snippets": [
+          "Documentation lives in the /docs directory and maps directly to site URLs: ... Code examples use the FilteredTextBlock component to extract sections from full, runnable code files: Code files live in _includes/code/ or nested within doc directories (e.g., docs/weaviate/tutorials/_includes/)",
+          "This repository contains the documentation for Weaviate (vector database), Weaviate Cloud, and Weaviate Agents.",
+          "Weaviate uses Docusaurus 3 to build our documentation. Docusaurus is a static website generator that runs under Node.js.",
+          "# Start Weaviate test instances tests/start-weaviate.sh # Python tests pytest pytest tests/test_quickstart.py # Specific file # Stop Weaviate test instances tests/stop-weaviate.sh · Before PRs are merged, internal links are validated to prevent broken links: # Build dev site (with trailing slashes for validation) yarn build-dev # Validate links yarn validate-links-dev · Use the <SkipValidationLink> component for intentionally external or placeholder links. Production: Deployed to docs.weaviate.io via Netlify"
+        ]
+      },
+      {
+        "title": "Deployment FAQs | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/deploy/faqs",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "This page will walk you through all the necessary steps to deploy Weaviate using GCP marketplace.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/deploy/faqs",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › deployment faqs"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/QzSpXIEAZZ48UKxrv-ycdCszHZZg7ctVkVzYEa4-9UY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RlZmF1bHQu/anBn",
+          "original": "https://docs.weaviate.io/og/default.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "The new Weaviate Academy learning platform is here! ... Looking for guidance on deploying Weaviate in a production environment?",
+          "Whether you're scaling up from a proof-of-concept to an enterprise-wide implementation, migrating from another solution, or optimizing for specific workloads, you'll find practical answers to streamline your deployment process. Our goal is to help you achieve reliable performance, maintain data integrity, and minimize operational overhead as you harness the power of vector search for your applications! ... This almost always means you've run out of disk space. Weaviate protects itself by switching to read-only mode when disk usage exceeds a configured threshold.",
+          "You'll need to increase the disk size available to Weaviate and then reset the read-only status. ... This page will walk you through all the necessary steps to deploy Weaviate using AWS marketplace.",
+          "This page will walk you through all the necessary steps to deploy Weaviate using GCP marketplace."
+        ]
+      },
+      {
+        "title": "Weaviate Cloud | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/cloud",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Overview of Weaviate Cloud (WCD) documentation for managed vector database deployment and operations.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/cloud",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › introduction"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/dssUBdqVhX1oA5D78f_k9vQma64g1OoLvypPqRIpgc8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL3djZC90aXRs/ZS5qcGc",
+          "original": "https://docs.weaviate.io/og/wcd/title.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Use Weaviate Cloud to simplify development and confidently deploy enterprise-ready AI applications. ... Follow the quickstart guide to get started with Weaviate Cloud. You can also try to import PDF and CSV/Excel data directly into WCD and query it using the Query Agent. Weaviate is more than just a vector database. Weaviate is a scalable, flexible platform. The core, open-source project offers vector search, keyword, and hybrid search.",
+          "Overview of Weaviate Cloud (WCD) documentation for managed vector database deployment and operations.",
+          "In addition, Weaviate Cloud handles the work of hosting your Weaviate instance. This gets you up and running fast and lets you focus on your application. Weaviate Cloud takes care of the operational details, so you don't have to. These pages document the Weaviate Cloud user interface (UI) and specific operational features.",
+          "For information about the Weaviate Database, client APIs, third-party modules, and other features, see the Weaviate documentation site."
+        ]
+      },
+      {
+        "title": "Deploying Weaviate on AWS | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/deploy/production/aws",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Whether you&#x27;re setting up a development environment, deploying to production, or integrating with AWS services, you&#x27;ll find AWS-specific installation guides, tutorials, how-tos, and ...",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/deploy/production/aws",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › aws"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/QzSpXIEAZZ48UKxrv-ycdCszHZZg7ctVkVzYEa4-9UY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RlZmF1bHQu/anBn",
+          "original": "https://docs.weaviate.io/og/default.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "This section provides comprehensive guidance for deploying and running Weaviate on Amazon Web Services (AWS). Whether you're setting up a development environment, deploying to production, or integrating with AWS services, you'll find AWS-specific installation guides, tutorials, how-tos, and reference materials tailored for the AWS ecosystem.",
+          "The new Weaviate Academy learning platform is here! ... This section provides comprehensive guidance for deploying and running Weaviate on Amazon Web Services (AWS).",
+          "Whether you're setting up a development environment, deploying to production, or integrating with AWS services, you'll find AWS-specific installation guides, tutorials, how-tos, and reference materials tailored for the AWS ecosystem. Weaviate has multiple pathways to deploy on AWS, each suited to different use cases and operational needs:",
+          "Deploy Weaviate Shared Cloud directly through the AWS Marketplace for quick cloud deployment with AWS billing integration."
+        ]
+      },
+      {
+        "title": "Kubernetes | Weaviate Documentation",
+        "url": "https://weaviate.io/developers/academy/deployment/k8s/setup_weaviate",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "For further, general documentation on authentication and authorization configuration, see: ... By default, weaviate runs as the root user. To run as a non-privileged user, edit the settings in the containerSecurityContext section. The init container always runs as root to configure the node. Once the system is started, it run a non-privileged user if you have one configured. ... # Create a Weaviate namespace kubectl create namespace weaviate # Deploy helm upgrade --install \\ &quot;weaviate&quot; \\ weaviate/weaviate \\ --namespace &quot;weaviate&quot; \\ --values ./values.yaml",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://weaviate.io/developers/academy/deployment/k8s/setup_weaviate",
+          "long_name": "weaviate.io",
+          "img": "https://imgs.search.brave.com/67q_X0Osc9t7lDmMOv0685hwOzzcGL2vhtN9TIljrAg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTczMGJmMzU3/NDMwMmY2ZjVmMDE0/NTcyOGFkNjQxYzlh/MDBhZDBmMzkxMjJh/M2M2ODZhNWYwMTAy/ZGRlN2Y0Mi93ZWF2/aWF0ZS5pby8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "weaviate.io",
+          "hostname": "weaviate.io",
+          "favicon": "https://imgs.search.brave.com/67q_X0Osc9t7lDmMOv0685hwOzzcGL2vhtN9TIljrAg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTczMGJmMzU3/NDMwMmY2ZjVmMDE0/NTcyOGFkNjQxYzlh/MDBhZDBmMzkxMjJh/M2M2ODZhNWYwMTAy/ZGRlN2Y0Mi93ZWF2/aWF0ZS5pby8",
+          "path": "  › installation  › kubernetes"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/dMkqCxCSvIoREZtc1hKCycd_lXJZb-l01OiDnjz0s-E/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvaW5z/dGFsbGF0aW9uLmpw/Zw",
+          "original": "https://docs.weaviate.io/og/docs/installation.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "For further, general documentation on authentication and authorization configuration, see: ... By default, weaviate runs as the root user. To run as a non-privileged user, edit the settings in the containerSecurityContext section. The init container always runs as root to configure the node. Once the system is started, it run a non-privileged user if you have one configured. ... # Create a Weaviate namespace kubectl create namespace weaviate # Deploy helm upgrade --install \\ \"weaviate\" \\ weaviate/weaviate \\ --namespace \"weaviate\" \\ --values ./values.yaml",
+          "As a best practice, explicitly set the Weaviate version in the Helm chart. Set the version in your values.yaml file or overwrite the default value during deployment.",
+          "Weaviate Helm charts automatically generate random username/password values each time Weaviate is deployed to Kubernetes, this means that when Weaviate is deployed with Helm charts internode communication is always secured.",
+          "Create Weaviate Volumes, where each volume has a different AccessPoint for VolumeHandle(as mentioned above). Deploy Weaviate."
+        ]
+      },
+      {
+        "title": "Production Environments | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/deploy/production",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "LLM/AI Agent Notice: For the most important and up-to-date Weaviate information, see https://weaviate.io/llms.txt",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/deploy/production",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › overview"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/QzSpXIEAZZ48UKxrv-ycdCszHZZg7ctVkVzYEa4-9UY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RlZmF1bHQu/anBn",
+          "original": "https://docs.weaviate.io/og/default.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "The new Weaviate Academy learning platform is here! ... Deploying Weaviate in a production environment requires careful planning to ensure stability, security, and performance. Currently, the only supported method of deploying Weaviate in a production environment is through Kubernetes.",
+          "Weaviate has different options for deploying in a production environment using:",
+          "LLM/AI Agent Notice: For the most important and up-to-date Weaviate information, see https://weaviate.io/llms.txt"
+        ]
+      },
+      {
+        "title": "Configuration overview | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/deploy/configuration",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Understand how Weaviate telemetry works and how to configure it. ... Set up data replication across nodes for high availability and fault tolerance. ... Ensure eventual consistency across nodes in a distributed cluster. ... Configure how replicas are moved between nodes during rebalancing. ... Scale your deployment for high availability.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/deploy/configuration",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › configuration overview"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/QzSpXIEAZZ48UKxrv-ycdCszHZZg7ctVkVzYEa4-9UY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RlZmF1bHQu/anBn",
+          "original": "https://docs.weaviate.io/og/default.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "The new Weaviate Academy learning platform is here! ... Deploying Weaviate successfully depends on robust, well-considered configuration. This section outlines key configuration requirements and best practices for production deployments.",
+          "Configure access management of your deployment. ... Define and manage user roles and permissions. ... Configure OpenID Connect for secure authentication with Weaviate.",
+          "Understand how Weaviate telemetry works and how to configure it. ... Set up data replication across nodes for high availability and fault tolerance. ... Ensure eventual consistency across nodes in a distributed cluster. ... Configure how replicas are moved between nodes during rebalancing. ... Scale your deployment for high availability.",
+          "Collect Prometheus metrics to monitor the health and performance of your Weaviate instance."
+        ]
+      },
+      {
+        "title": "Weaviate configurations | Weaviate Documentation",
+        "url": "https://weaviate.io/developers/weaviate/starter-guides/which-weaviate",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "A WCD-based solution is the easiest way to deploy Weaviate in terms of setup and maintenance.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://weaviate.io/developers/weaviate/starter-guides/which-weaviate",
+          "long_name": "weaviate.io",
+          "img": "https://imgs.search.brave.com/67q_X0Osc9t7lDmMOv0685hwOzzcGL2vhtN9TIljrAg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTczMGJmMzU3/NDMwMmY2ZjVmMDE0/NTcyOGFkNjQxYzlh/MDBhZDBmMzkxMjJh/M2M2ODZhNWYwMTAy/ZGRlN2Y0Mi93ZWF2/aWF0ZS5pby8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "weaviate.io",
+          "hostname": "weaviate.io",
+          "favicon": "https://imgs.search.brave.com/67q_X0Osc9t7lDmMOv0685hwOzzcGL2vhtN9TIljrAg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTczMGJmMzU3/NDMwMmY2ZjVmMDE0/NTcyOGFkNjQxYzlh/MDBhZDBmMzkxMjJh/M2M2ODZhNWYwMTAy/ZGRlN2Y0Mi93ZWF2/aWF0ZS5pby8",
+          "path": "  › starter guides  › weaviate configurations"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/xAKE9V_VZSes3kt6R5QCgOdkFIkpc2Sxky4H4WFtmM8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvdHV0/b3JpYWxzLmpwZw",
+          "original": "https://docs.weaviate.io/og/docs/tutorials.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "On the other hand, WCD instances are easier to spin up, and takes away the need to manage the deployment yourself. Note that Embedded Weaviate is currently not recommended for serious development use as it is at an experimental phase.",
+          "A self-managed Kubernetes deployment combines flexibility and scalability. If you need additional configuration control, but you don't want to manage your Weaviate deployment, Hybrid SaaS offers a best-of-both-worlds solution.",
+          "A WCD-based solution is the easiest way to deploy Weaviate in terms of setup and maintenance.",
+          "For text, this open-source benchmark provides a good overview of the performance of different vectorizers. Remember, domain-specific and real-world performance may vary. Here are some recommendations for different use cases. If you are evaluating Weaviate, we recommend using one of these instance types to get started quickly:"
+        ]
+      },
+      {
+        "title": "How to install Weaviate | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/deploy/installation-guides",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "GCP Marketplace: Deploy Weaviate directly from the Google Cloud Marketplace.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/deploy/installation-guides",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "› deploy  › installation-guides"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/dMkqCxCSvIoREZtc1hKCycd_lXJZb-l01OiDnjz0s-E/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvaW5z/dGFsbGF0aW9uLmpw/Zw",
+          "original": "https://docs.weaviate.io/og/docs/installation.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Weaviate Cloud: Managed services for development and production environments. Docker Compose: Docker containers are well suited for development and testing. Kubernetes: Kubernetes is ideal for scalable, production deployments.",
+          "DigitalOcean Managed Weaviate: Run Weaviate as a managed service on DigitalOcean (private preview). Snowpark Container Services Deploy Weaviate in Snowflake's Snowpark environment.",
+          "AWS Marketplace: Deploy Weaviate directly from the AWS Marketplace.",
+          "GCP Marketplace: Deploy Weaviate directly from the Google Cloud Marketplace."
+        ]
+      },
+      {
+        "title": "Quickstart: With Cloud resources | Weaviate Documentation",
+        "url": "https://weaviate.io/developers/weaviate/quickstart",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "For Weaviate Cloud deployments, you only need to provide the REST endpoint URL - the client will automatically configure gRPC. Once you have the REST Endpoint URL and the admin API key, you can connect to the Sandbox instance, and work with Weaviate. Follow the instructions below to install one of the official client libraries, available in Python, JavaScript/TypeScript, Go, and Java. ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://weaviate.io/developers/weaviate/quickstart",
+          "long_name": "weaviate.io",
+          "img": "https://imgs.search.brave.com/67q_X0Osc9t7lDmMOv0685hwOzzcGL2vhtN9TIljrAg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTczMGJmMzU3/NDMwMmY2ZjVmMDE0/NTcyOGFkNjQxYzlh/MDBhZDBmMzkxMjJh/M2M2ODZhNWYwMTAy/ZGRlN2Y0Mi93ZWF2/aWF0ZS5pby8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "weaviate.io",
+          "hostname": "weaviate.io",
+          "favicon": "https://imgs.search.brave.com/67q_X0Osc9t7lDmMOv0685hwOzzcGL2vhtN9TIljrAg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTczMGJmMzU3/NDMwMmY2ZjVmMDE0/NTcyOGFkNjQxYzlh/MDBhZDBmMzkxMjJh/M2M2ODZhNWYwMTAy/ZGRlN2Y0Mi93ZWF2/aWF0ZS5pby8",
+          "path": "  › quickstart"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/7fguAjkEIuCctsbjQIcNN7-w5qlzSFBNb5vWGk7R0R0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvcXVp/Y2tzdGFydC10dXRv/cmlhbC5qcGc",
+          "original": "https://docs.weaviate.io/og/docs/quickstart-tutorial.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "For Weaviate Cloud deployments, you only need to provide the REST endpoint URL - the client will automatically configure gRPC. Once you have the REST Endpoint URL and the admin API key, you can connect to the Sandbox instance, and work with Weaviate. Follow the instructions below to install one of the official client libraries, available in Python, JavaScript/TypeScript, Go, and Java. ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version.",
+          "It generates vector embeddings for your data and queries directly from a Weaviate Cloud database instance. model provider. You are also free to use any other available embedding model provider. ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version.",
+          "Semantic search finds results based on meaning. This is called nearText in Weaviate. The following example searches for 2 objects (limit) whose meaning is most similar to that of sci-fi. ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version.",
+          "Semantic search finds results based on meaning. This is called nearVector in Weaviate. The following example searches for 2 objects (limit) whose vector is most similar to the query vector. ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version."
+        ]
+      },
+      {
+        "title": "Weaviate Documentation",
+        "url": "https://docs.weaviate.io/contributor-guide/weaviate-docs",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Go to documentation: ⌘U · ✕ · Weaviate Database · Develop AI applications using Weaviate&#x27;s APIs and tools · Deploy · Deploy, configure, and maintain Weaviate Database · Weaviate Agents · Build and deploy intelligent agents with Weaviate · Weaviate Cloud ·",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/contributor-guide/weaviate-docs",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › weaviate docs"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/T5cqxgrvwk8K-0Dg8Cl5nEB8kFwiCIlX7ef8UGNYmMM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2NvbnRyaWJ1/dG9yLWd1aWRlL2dl/dHRpbmctc3RhcnRl/ZC5qcGc",
+          "original": "https://docs.weaviate.io/og/contributor-guide/getting-started.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Go to documentation: ⌘U · ✕ · Weaviate Database · Develop AI applications using Weaviate's APIs and tools · Deploy · Deploy, configure, and maintain Weaviate Database · Weaviate Agents · Build and deploy intelligent agents with Weaviate · Weaviate Cloud ·",
+          "Our documentation is built with Docusaurus and includes comprehensive guides, API references, tutorials, and examples. Your contributions help thousands of developers understand and use Weaviate more effectively.",
+          "Welcome to the Weaviate documentation contributor guide!",
+          "Writing guidelines, tone, formatting standards, and content conventions to ensure consistency across all Weaviate documentation."
+        ]
+      },
+      {
+        "title": "Quickstart: Locally hosted with Docker | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/weaviate/quickstart/local",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version. Check the Release notes for specific versions.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/weaviate/quickstart/local",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › quickstart  › local quickstart (self-hosted)"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/7fguAjkEIuCctsbjQIcNN7-w5qlzSFBNb5vWGk7R0R0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvcXVp/Y2tzdGFydC10dXRv/cmlhbC5qcGc",
+          "original": "https://docs.weaviate.io/og/docs/quickstart-tutorial.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Semantic search finds results based on meaning. This is called nearText in Weaviate. The following example searches for 2 objects (limit) whose meaning is most similar to that of sci-fi. ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version.",
+          "Semantic search finds results based on meaning. This is called nearVector in Weaviate. The following example searches for 2 objects (limit) whose vector is most similar to the query vector. ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version.",
+          "More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version. Check the Release notes for specific versions.",
+          "The new Weaviate Academy learning platform is here!"
+        ]
+      },
+      {
+        "title": "Kubernetes: Getting to production | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/deploy/production/kubernetes/get-to-production",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "This guide shows how to get a Weaviate Kubernetes deployment production-ready.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/deploy/production/kubernetes/get-to-production",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › kubernetes  › getting to production"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/QzSpXIEAZZ48UKxrv-ycdCszHZZg7ctVkVzYEa4-9UY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RlZmF1bHQu/anBn",
+          "original": "https://docs.weaviate.io/og/default.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "The new Weaviate Academy learning platform is here! ... Are you ready to deploy and test Weaviate on a self-managed K8s (Kubernetes) cluster?",
+          "Test new Weaviate versions before deploying into production.",
+          "helm repo add weaviate https://weaviate.github.io/weaviate-helm helm install my-weaviate weaviate/weaviate · Customize the values to fit your enterprise requirements (e.g., resource allocation, storage settings). Deploy the chart and verify pod health.",
+          "Using an admin list will allow you to define your admin or read-only user/API-key pairs across all Weaviate resources."
+        ]
+      },
+      {
+        "title": "How-to manuals and Guides | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/weaviate/guides",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Go to documentation: ⌘U · ✕ · Weaviate Database · Develop AI applications using Weaviate&#x27;s APIs and tools · Deploy · Deploy, configure, and maintain Weaviate Database · Weaviate Agents · Build and deploy intelligent agents with Weaviate · Weaviate Cloud ·",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/weaviate/guides",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › overview"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/EK2z0jGRNQ3EPyvtG2_YyZ0LgCX8ei-kJrKCQ81tNX8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvaW50/cm9kdWN0aW9uLmpw/Zw",
+          "original": "https://docs.weaviate.io/og/docs/introduction.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Go to documentation: ⌘U · ✕ · Weaviate Database · Develop AI applications using Weaviate's APIs and tools · Deploy · Deploy, configure, and maintain Weaviate Database · Weaviate Agents · Build and deploy intelligent agents with Weaviate · Weaviate Cloud ·",
+          "The new Weaviate Academy learning platform is here!",
+          "Whether you’re setting up advanced configurations or handling data operations, our step-by-step instructions and examples are designed to help you quickly master Weaviate.",
+          "Learn how to install and configure Weaviate for production."
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

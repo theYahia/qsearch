@@ -1,0 +1,852 @@
+{
+  "type": "search",
+  "query": {
+    "original": "Weaviate setup documentation sources",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "videos",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "videos": {
+    "type": "videos",
+    "results": [
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=GQdTKAxVQD4",
+        "title": "Weaviate TECH Hands-On: Personalization Agent - YouTube",
+        "description": "In this hands-on workshop session JP dives into building personalized recommendation systems and user personalized queries for the Weaviate vector database u...",
+        "age": "July 11, 2025",
+        "page_age": "2025-07-11T10:49:26",
+        "fetched_content_timestamp": 1757255383,
+        "video": {
+          "duration": "52:55",
+          "creator": "Weaviate vector database",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/1Xeb8spQzD6UUDdKWileHdN0zT-VWjnrDe7cY5ZXsHE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9H/UWRUS0F4VlFENC9t/YXhyZXNkZWZhdWx0/LmpwZz9zcXA9LW9h/eW13RW1DSUFLRU5B/RjhxdUtxUU1hOEFF/Qi1BSC1DWUFDMEFX/S0Fnd0lBQkFCR0NJ/Z0ZDaF9NQTg9JmFt/cDtycz1BT240Q0xE/dDJtSGdrb2xCM0Ja/aFF2Tm9PdUJtQjRs/dWNR",
+          "original": "https://i.ytimg.com/vi/GQdTKAxVQD4/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGCIgFCh_MA8=&amp;rs=AOn4CLDt2mHgkolB3BZhQvNoOuBmB4lucQ"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/shorts/GRtB9a-AOnY",
+        "title": "How to set up Weaviate Embedded with Python - YouTube",
+        "description": "No server needed to run a vector database!With Weaviate’s open source packages, you can run a Weaviate instance directly in your Python code:1️⃣ Install the ...",
+        "age": "October 9, 2024",
+        "page_age": "2024-10-09T16:30:05",
+        "fetched_content_timestamp": 1772041567,
+        "video": {
+          "duration": "01:00",
+          "creator": "Weaviate vector database",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› shorts  › GRtB9a-AOnY"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/yVgazhCKVtszU8r_MW3FbkZB3q6cFkj9cxCo3AGc9Uk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9H/UnRCOWEtQU9uWS9v/YXIyLmpwZz9zcXA9/LW9heW13RW9DSlVE/RU5BRlNGcVFBZ0h5/cTRxcEF4Y0lBUlVB/QUloQzJBRUI0Z0VL/Q0JnUUFoZ0dPQUZB/QVE9PSZhbXA7cnM9/QU9uNENMQ00zMWhG/VmpBOTZjdm0tMjFo/ZG84VG9KRnlOQSZh/bXA7dXNxcD1DQ2s",
+          "original": "https://i.ytimg.com/vi/GRtB9a-AOnY/oar2.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&amp;rs=AOn4CLCM31hFVjA96cvm-21hdo8ToJFyNA&amp;usqp=CCk"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=FvhJDUZM078",
+        "title": "Setting Up Weaviate Cloud for Unstructured - YouTube",
+        "description": "Setting Up Weaviate Cloud for Unstructured",
+        "age": "December 11, 2024",
+        "page_age": "2024-12-11T18:08:51",
+        "fetched_content_timestamp": 1740487962,
+        "video": {
+          "duration": "02:28",
+          "views": 65,
+          "creator": "Unstructured",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ue-YfkZZwWiX_fGEXowhh4JWm2J4u89oyCUbitbROtg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9G/dmhKRFVaTTA3OC9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/FvhJDUZM078/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=GRtB9a-AOnY",
+        "title": "How to set up Weaviate Embedded with Python",
+        "description": "To learn more, please visit the YouTube Help Center: https://www.youtube.com/help",
+        "fetched_content_timestamp": 1778793390,
+        "video": {},
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/KgiSity1W7w-Ae5byEJzlVdBeoDr5Xn35-mcvSR8JYw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS85/eHAxWFdtSl9Xby9t/YXhyZXNkZWZhdWx0/LmpwZz9zcXA9LW9h/eW13RW1DSUFLRU5B/RjhxdUtxUU1hOEFF/Qi1BSC1DWUFDMEFX/S0Fnd0lBQkFCR0dV/Z1pTaGxNQTg9JmFt/cDtycz1BT240Q0xB/czlZdW5obUNadk5D/VVhZX2x4U293TFZm/dlZB",
+          "original": "https://i.ytimg.com/vi/9xp1XWmJ_Wo/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&amp;rs=AOn4CLAs9YunhmCZvNCUXY_lxSowLVfvVA"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=xlmgYh1DakY",
+        "title": "Create collections - Weaviate Python client v4 in action - YouTube",
+        "description": "Accompanying code: https://github.com/weaviate-tutorials/DEMO-pyv4-release-videosv4 of the Weaviate Python client has just been released! A lot has changed h...",
+        "age": "February 6, 2024",
+        "page_age": "2024-02-06T14:16:38",
+        "fetched_content_timestamp": 1777530758,
+        "video": {
+          "duration": "06:37",
+          "creator": "Weaviate vector database",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/KbAWdgRUrg6TYSxHXxCXX2Nq8PHheKJR3DDI3zipUMY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS94/bG1nWWgxRGFrWS9t/YXhyZXNkZWZhdWx0/LmpwZz9zcXA9LW9h/eW13RW1DSUFLRU5B/RjhxdUtxUU1hOEFF/Qi1BSC1DSUFDMEFX/S0Fnd0lBQkFCR0dR/Z1pDaGtNQTg9JmFt/cDtycz1BT240Q0xB/VGRmWFJmcWRBcTkt/RlNRS1ZoS3RrVEJL/UERB",
+          "original": "https://i.ytimg.com/vi/xlmgYh1DakY/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CIAC0AWKAgwIABABGGQgZChkMA8=&amp;rs=AOn4CLATdfXRfqdAq9-FSQKVhKtkTBKPDA"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=PgHCLcqfe10",
+        "title": "Hello Weaviate - Set Up - YouTube",
+        "description": "Weaviate Academy Unit 1: Set Up",
+        "age": "July 3, 2023",
+        "page_age": "2023-07-03T15:00:00",
+        "fetched_content_timestamp": 1731859185,
+        "video": {
+          "duration": "00:38",
+          "views": 5603,
+          "creator": "Weaviate • Vector Database",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/wNUSphFSwerWXU6b6eqBxFdjR4_pJPCfYxu30npM1Cs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9Q/Z0hDTGNxZmUxMC9o/cWRlZmF1bHQuanBn/P3NxcD0tb2F5bXdF/bUNPQURFT2dDOHF1/S3FRTWE4QUVCLUFI/LUNZQUMwQVdLQWd3/SUFCQUJHQmNnTHlo/X01BOD0mYW1wO3Jz/PUFPbjRDTENqeDRZ/MWl3Z3NXVXNiWTJl/RzlFem41eE9kY3c",
+          "original": "https://i.ytimg.com/vi/PgHCLcqfe10/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBcgLyh_MA8=&amp;rs=AOn4CLCjx4Y1iwgsWUsbY2eG9Ezn5xOdcw"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Development setup | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/contributor-guide/weaviate-core/setup",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "You can find the source code at the Weaviate repo.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/contributor-guide/weaviate-core/setup",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › weaviate database  › development setup"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/2-jgNJVcD2QwkqZileHL4HCSQ0qLm-bwey0tAogaI30/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2NvbnRyaWJ1/dG9yLWd1aWRlL3dl/YXZpYXRlLWNvcmUu/anBn",
+          "original": "https://docs.weaviate.io/og/contributor-guide/weaviate-core.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "This setup is for contributors to the Weaviate code base. If you are an end-user of Weaviate looking for a Prometheus-enabled example, please see this documentation page or this example.",
+          "You can find the source code at the Weaviate repo.",
+          "To run with Docker, start up the Weaviate container and the container(s) for any additional services with · tools/dev/restart_dev_environment.sh [additional_services] then run the development server as described in the section above. For example, the setup below uses Docker Compose to spin up Prometheus and Grafana instances.",
+          "Those are pre-configured to scrape metrics from Weaviate. Using this setup, you can:"
+        ]
+      },
+      {
+        "title": "Quickstart: With Cloud resources | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/weaviate/quickstart",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Once you have the REST Endpoint URL and the admin API key, you can connect to the Sandbox instance, and work with Weaviate. Follow the instructions below to install one of the official client libraries, available in Python, JavaScript/TypeScript, Go, and Java. ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/weaviate/quickstart",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › quickstart"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/7fguAjkEIuCctsbjQIcNN7-w5qlzSFBNb5vWGk7R0R0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvcXVp/Y2tzdGFydC10dXRv/cmlhbC5qcGc",
+          "original": "https://docs.weaviate.io/og/docs/quickstart-tutorial.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Once you have the REST Endpoint URL and the admin API key, you can connect to the Sandbox instance, and work with Weaviate. Follow the instructions below to install one of the official client libraries, available in Python, JavaScript/TypeScript, Go, and Java. ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version.",
+          "It generates vector embeddings for your data and queries directly from a Weaviate Cloud database instance. model provider. You are also free to use any other available embedding model provider. ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version.",
+          "Semantic search finds results based on meaning. This is called nearText in Weaviate. The following example searches for 2 objects (limit) whose meaning is most similar to that of sci-fi. ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version.",
+          "Semantic search finds results based on meaning. This is called nearVector in Weaviate. The following example searches for 2 objects (limit) whose vector is most similar to the query vector. ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version."
+        ]
+      },
+      {
+        "title": "How to configure Weaviate | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/weaviate/configuration",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Configure backup and restore processes for your Weaviate instance. ... Configure your environment variables for connection strings, ports, and security credentials. ... Scale your deployment for high availability. ... Enable backups and configure retention policies. ... Manage resource usage by offloading inactive tenants in multi-tenant setups.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/weaviate/configuration",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › how-to: configure weaviate"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/1hzlQKVtNDBNoXGI6LSsoUqqyHPkr87UvSKARb3XSH8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvY29u/ZmlndXJhdGlvbi5q/cGc",
+          "original": "https://docs.weaviate.io/og/docs/configuration.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Configure backup and restore processes for your Weaviate instance. ... Configure your environment variables for connection strings, ports, and security credentials. ... Scale your deployment for high availability. ... Enable backups and configure retention policies. ... Manage resource usage by offloading inactive tenants in multi-tenant setups.",
+          "The new Weaviate Academy learning platform is here!",
+          "Explore Weaviate's ecosystem of vectorizer, generative (RAG), and other modules.",
+          "Access and manage metadata about your Weaviate cluster."
+        ]
+      },
+      {
+        "title": "Deploying Weaviate | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/deploy",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Docker Compose and Kubernetes use yaml files to configure Weaviate instances. Docker uses the docker-compose.yml file. Kubernetes relies on Helm charts and the values.yaml file. The Weaviate documentation also calls these files configuration ...",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/deploy",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › installation"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/QzSpXIEAZZ48UKxrv-ycdCszHZZg7ctVkVzYEa4-9UY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RlZmF1bHQu/anBn",
+          "original": "https://docs.weaviate.io/og/default.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Docker Compose and Kubernetes use yaml files to configure Weaviate instances. Docker uses the docker-compose.yml file. Kubernetes relies on Helm charts and the values.yaml file. The Weaviate documentation also calls these files configuration yaml files.",
+          "The new Weaviate Academy learning platform is here!",
+          "Weaviate is available as a hosted service, Weaviate Cloud (WCD), or as a self managed instance. If you manage your own instance, you can host it locally or with a cloud provider.",
+          "Self-managed instances use the same Weaviate Database as WCD."
+        ]
+      },
+      {
+        "title": "Weaviate Documentation",
+        "url": "https://docs.weaviate.io/contributor-guide/weaviate-docs",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Our documentation is built with Docusaurus and includes comprehensive guides, API references, tutorials, and examples. Your contributions help thousands of developers understand and use Weaviate more effectively.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/contributor-guide/weaviate-docs",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › weaviate docs"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/T5cqxgrvwk8K-0Dg8Cl5nEB8kFwiCIlX7ef8UGNYmMM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2NvbnRyaWJ1/dG9yLWd1aWRlL2dl/dHRpbmctc3RhcnRl/ZC5qcGc",
+          "original": "https://docs.weaviate.io/og/contributor-guide/getting-started.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Our documentation is built with Docusaurus and includes comprehensive guides, API references, tutorials, and examples. Your contributions help thousands of developers understand and use Weaviate more effectively. ... Learn how to build docs locally, use components like CardsSection, handle linking, and work with our Docusaurus setup.",
+          "Welcome to the Weaviate documentation contributor guide!",
+          "The new Weaviate Academy learning platform is here!",
+          "LLM/AI Agent Notice: For the most important and up-to-date Weaviate information, see https://weaviate.io/llms.txt"
+        ]
+      },
+      {
+        "title": "Quickstart: Locally hosted with Docker | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/weaviate/quickstart/local",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Weaviate is an open-source vector database built to power AI applications. This quickstart guide will show you how to:",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/weaviate/quickstart/local",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › quickstart  › local quickstart (self-hosted)"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/7fguAjkEIuCctsbjQIcNN7-w5qlzSFBNb5vWGk7R0R0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvcXVp/Y2tzdGFydC10dXRv/cmlhbC5qcGc",
+          "original": "https://docs.weaviate.io/og/docs/quickstart-tutorial.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Semantic search finds results based on meaning. This is called nearText in Weaviate. The following example searches for 2 objects (limit) whose meaning is most similar to that of sci-fi. ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version.",
+          "Semantic search finds results based on meaning. This is called nearVector in Weaviate. The following example searches for 2 objects (limit) whose vector is most similar to the query vector. ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version.",
+          "More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version. Check the Release notes for specific versions.",
+          "The new Weaviate Academy learning platform is here!"
+        ]
+      },
+      {
+        "title": "Configuration overview | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/deploy/configuration",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Deploying Weaviate successfully depends on robust, well-considered configuration. This section outlines key configuration requirements and best practices for production deployments.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/deploy/configuration",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › configuration overview"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/QzSpXIEAZZ48UKxrv-ycdCszHZZg7ctVkVzYEa4-9UY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RlZmF1bHQu/anBn",
+          "original": "https://docs.weaviate.io/og/default.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Deploying Weaviate successfully depends on robust, well-considered configuration. This section outlines key configuration requirements and best practices for production deployments.",
+          "Configure backup and restore processes for your Weaviate instance. ... Enable backups and configure retention policies. ... Manage resource usage by offloading inactive tenants in multi-tenant setups.",
+          "The new Weaviate Academy learning platform is here!",
+          "Configure OpenID Connect for secure authentication with Weaviate."
+        ]
+      },
+      {
+        "title": "How to install Weaviate | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/deploy/installation-guides",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Docker Compose and Kubernetes use yaml files to configure Weaviate instances. Docker uses the docker-compose.yml file. Kubernetes relies on Helm charts and the values.yaml file. The Weaviate documentation also calls these files configuration ...",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/deploy/installation-guides",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "› deploy  › installation-guides"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/dMkqCxCSvIoREZtc1hKCycd_lXJZb-l01OiDnjz0s-E/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvaW5z/dGFsbGF0aW9uLmpw/Zw",
+          "original": "https://docs.weaviate.io/og/docs/installation.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Docker Compose and Kubernetes use yaml files to configure Weaviate instances. Docker uses the docker-compose.yml file. Kubernetes relies on Helm charts and the values.yaml file. The Weaviate documentation also calls these files configuration yaml files.",
+          "The new Weaviate Academy learning platform is here!",
+          "If you are upgrading from a previous version of Weaviate, see the Migration Guide for any changes that may affect your installation.",
+          "Weaviate Cloud: Managed services for development and production environments."
+        ]
+      },
+      {
+        "title": "Set up Weaviate | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/academy/js/starter_text_data/setup_weaviate",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Learn to set up Weaviate for text data projects, including environment setup and configuration.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/academy/js/starter_text_data/setup_weaviate",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › 101t work with: text data in javascript  › set up weaviate"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/QzSpXIEAZZ48UKxrv-ycdCszHZZg7ctVkVzYEa4-9UY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RlZmF1bHQu/anBn",
+          "original": "https://docs.weaviate.io/og/default.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Product update: The Weaviate Query Agent has been released!",
+          "Set up a Weaviate instance and connect to it with the JavaScript/Typescript client.",
+          "Install the latest Weaviate JavaScript/Typescript client.",
+          "Create a Weaviate instance."
+        ]
+      },
+      {
+        "title": "Weaviate Database | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/weaviate",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Complete documentation for Weaviate, the open-source vector database for AI applications.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/weaviate",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › introduction"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/DoJwAaPpvGf5Sviuez7op8rD9brUcw7kSzuojMwd5pk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvaG9t/ZS5qcGc",
+          "original": "https://docs.weaviate.io/og/docs/home.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Instant access to Weaviate's documentation directly in your AI development environment. ... Avoid hallucinations and improve your AI-assisted coding experience. Weaviate is an open-source vector database designed to store and index both data objects and their vector embeddings.",
+          "Weaviate (we-vee-eight) is an open-source, AI vector database. Use this documentation to get started with Weaviate and learn how to get the most out of Weaviate's features.",
+          "Weaviate Database: An open source vector database that stores both objects and vectors.",
+          "Retrieval augmented generation (RAG) Weaviate can serve as a robust backend for RAG workflows, where vector search is used to retrieve context that enhances the output of generative models, making it easier to generate accurate, context-aware responses."
+        ]
+      },
+      {
+        "title": "Hands-on Weaviate with Python | Weaviate Academy",
+        "url": "https://docs.weaviate.io/academy/py/zero_to_mvp/hello_weaviate/set_up",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "•Create an instance of Weaviate for you to use · •Produce, store and index semantic (vector) data from source text · •Perform semantic, keyword and hybrid searches · •Use generative AI models to augment and transform retrieved data · wa050-py · 1 ·",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/academy/py/zero_to_mvp/hello_weaviate/set_up",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "› academy  › py  › zero_to_mvp  › hello_weaviate  › set_up"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/T3icPqp9fndI7zf7L8SgFVgNnVyIBSHFC0zsNAybXpA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hY2Fk/ZW15LndlYXZpYXRl/LmlvL29nL2NvdXJz/ZXMvd2ExMDF0LXB5/LW9nLWltYWdlLnBu/Zw",
+          "original": "https://academy.weaviate.io/og/courses/wa101t-py-og-image.png",
+          "logo": false
+        },
+        "extra_snippets": [
+          "•Create an instance of Weaviate for you to use · •Produce, store and index semantic (vector) data from source text · •Perform semantic, keyword and hybrid searches · •Use generative AI models to augment and transform retrieved data · wa050-py · 1 ·",
+          "Set up your development environment and create a Weaviate instance to work with.",
+          "Create a collection and import data, and have Weaviate create vectors for you.",
+          "Learn how to use search functions in Weaviate."
+        ]
+      },
+      {
+        "title": "Weaviate configurations | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/weaviate/starter-guides/which-weaviate",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Some model types such as Ollama or Transformers models are locally hosted, while others such as Cohere or OpenAI are API-based. This affects their availability in different Weaviate setups.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/weaviate/starter-guides/which-weaviate",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › starter guides  › weaviate configurations"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/xAKE9V_VZSes3kt6R5QCgOdkFIkpc2Sxky4H4WFtmM8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvdHV0/b3JpYWxzLmpwZw",
+          "original": "https://docs.weaviate.io/og/docs/tutorials.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "For text, this open-source benchmark provides a good overview of the performance of different vectorizers. Remember, domain-specific and real-world performance may vary. Here are some recommendations for different use cases. If you are evaluating Weaviate, we recommend using one of these instance types to get started quickly:",
+          "A WCD-based solution is the easiest way to deploy Weaviate in terms of setup and maintenance.",
+          "Some model types such as Ollama or Transformers models are locally hosted, while others such as Cohere or OpenAI are API-based. This affects their availability in different Weaviate setups.",
+          "We recommend reviewing from the available model integrations and their availability in different Weaviate setups."
+        ]
+      },
+      {
+        "title": "Configuration | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/weaviate/config-refs",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Configuration reference guides covering collections, data types, distances, and optimization settings.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/weaviate/config-refs",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › configuration"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/1hzlQKVtNDBNoXGI6LSsoUqqyHPkr87UvSKARb3XSH8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvY29u/ZmlndXJhdGlvbi5q/cGc",
+          "original": "https://docs.weaviate.io/og/docs/configuration.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Reference for supported data types and their handling in Weaviate. ... Learn about the distance metrics used for similarity calculations. ... Learn about the environment variables used for configuration. ... For deployment related topics like security, backups, replication, cluster information and advanced configuration options, visit the deployment documentation.",
+          "The new Weaviate Academy learning platform is here!",
+          "Use the following reference guides to understand Weaviate's core concepts and configurations.",
+          "These guides cover collection definitions, data types, distance metrics, environment variables, and more to help you optimize your Weaviate deployment."
+        ]
+      },
+      {
+        "title": "Quickstart: Bring your own vectors | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/weaviate/starter-guides/custom-vectors",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "This section introduces setup requirements and the example data that this guide uses. The example data is based on a set of ten questions from the &quot;Jeopardy!&quot; television program. The import data file is a JSON formatted document that contains the vectors and the underlying data. ... The JSON file is based on this data. The vector embeddings are generated with the OpenAI API text-embedding-ada-002 model. Your vectors can come from any source...",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/weaviate/starter-guides/custom-vectors",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › starter guides  › bring your own vectors"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/xAKE9V_VZSes3kt6R5QCgOdkFIkpc2Sxky4H4WFtmM8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvdHV0/b3JpYWxzLmpwZw",
+          "original": "https://docs.weaviate.io/og/docs/tutorials.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "This section introduces setup requirements and the example data that this guide uses. The example data is based on a set of ten questions from the \"Jeopardy!\" television program. The import data file is a JSON formatted document that contains the vectors and the underlying data. ... The JSON file is based on this data. The vector embeddings are generated with the OpenAI API text-embedding-ada-002 model. Your vectors can come from any source, including your own vectorizer model or another model provider such as Cohere or Hugging Face.",
+          "Weaviate is a vector database. Vector databases store data objects and vectors that represent those objects. The vector embedding is also called an \"embedding.\"",
+          "Weaviate is open source. You can run Weaviate locally, in the cloud, or as a service. If you want to follow this guide without setting up an instance of your own, consider using a free, Sandbox instance in Weaviate Cloud.",
+          "Client libraries simplify working with Weaviate. Clients are available for multiple programming languages. This guide provides examples in Python, Typescript, and cURL. To install a client library, use the installer for the client language: ... More infoCode snippets in the documentation reflect the latest client library and Weaviate Database version."
+        ]
+      },
+      {
+        "title": "How-to manuals and Guides | Weaviate Documentation",
+        "url": "https://docs.weaviate.io/weaviate/guides",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Whether you’re setting up advanced configurations or handling data operations, our step-by-step instructions and examples are designed to help you quickly master Weaviate.",
+        "profile": {
+          "name": "Weaviate",
+          "url": "https://docs.weaviate.io/weaviate/guides",
+          "long_name": "docs.weaviate.io",
+          "img": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docs.weaviate.io",
+          "hostname": "docs.weaviate.io",
+          "favicon": "https://imgs.search.brave.com/XEK4w0cXXMvIiDjUee1ovbarSMtqX2qCgW0wGwHIcoE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDMzZWMwMTk3/NWNlNmZhYzY4YTgz/ZjM4NDhjNTgyZWZi/YjJkMWZmODQ4NmUy/MzUxMmY3MGZjOTg0/NTgzNWM1Zi9kb2Nz/LndlYXZpYXRlLmlv/Lw",
+          "path": "  › overview"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/EK2z0jGRNQ3EPyvtG2_YyZ0LgCX8ei-kJrKCQ81tNX8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kb2Nz/LndlYXZpYXRlLmlv/L29nL2RvY3MvaW50/cm9kdWN0aW9uLmpw/Zw",
+          "original": "https://docs.weaviate.io/og/docs/introduction.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "The new Weaviate Academy learning platform is here!",
+          "Whether you’re setting up advanced configurations or handling data operations, our step-by-step instructions and examples are designed to help you quickly master Weaviate.",
+          "Learn how to install and configure Weaviate for production.",
+          "Guides and tips for new users learning how to use Weaviate."
+        ]
+      },
+      {
+        "title": "GitHub - weaviate/docs: The documentation repo for Weaviate Database, Cloud, Agents and much more! · GitHub",
+        "url": "https://github.com/weaviate/docs",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "This repository contains the documentation for Weaviate (vector database), Weaviate Cloud, and Weaviate Agents.",
+        "profile": {
+          "name": "GitHub",
+          "url": "https://github.com/weaviate/docs",
+          "long_name": "github.com",
+          "img": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "software",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "github.com",
+          "hostname": "github.com",
+          "favicon": "https://imgs.search.brave.com/xxsA4YxzaR0cl-DBsH9-lpv2gsif3KMYgM87p26bs_o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWQyNWM1NjA5/ZjZmZjNlYzI2MDNk/N2VkNmJhYjE2MzZl/MDY5ZTMxMDUzZmY1/NmU3NWIzNWVmMjk0/NTBjMjJjZi9naXRo/dWIuY29tLw",
+          "path": "› weaviate  › docs"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ZkJq-nX5GNjOEms4FDGT8Mb4ah9kyMvGuxIzh4ilK6w/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vcGVu/Z3JhcGguZ2l0aHVi/YXNzZXRzLmNvbS84/ZjQ4ODAxYjkxYWRk/MTM0MmU3ZjUwNzFl/YjI3NTU5MTcxZTIx/NTY5YzBmMWI4OGM5/NjYxOWMxMjljY2E0/ZGZhL3dlYXZpYXRl/L2RvY3M",
+          "original": "https://opengraph.githubassets.com/8f48801b91add1342e7f5071eb27559171e21569c0f1b88c96619c129cca4dfa/weaviate/docs",
+          "logo": false
+        },
+        "software": {
+          "name": "docs",
+          "author": "weaviate",
+          "is_npm": false,
+          "is_pypi": false,
+          "stars": 19,
+          "forks": 17,
+          "programmingLanguage": "Python 30.2% | TypeScript 17.0% | MDX 11.8% | C# 10.1% | Go 9.7% | Java 9.6%"
+        },
+        "extra_snippets": [
+          "Documentation lives in the /docs directory and maps directly to site URLs: ... Code examples use the FilteredTextBlock component to extract sections from full, runnable code files: Code files live in _includes/code/ or nested within doc directories (e.g., docs/weaviate/tutorials/_includes/)",
+          "This repository contains the documentation for Weaviate (vector database), Weaviate Cloud, and Weaviate Agents.",
+          "Weaviate uses Docusaurus 3 to build our documentation. Docusaurus is a static website generator that runs under Node.js.",
+          "Production: Deployed to docs.weaviate.io via Netlify"
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}
