@@ -14,7 +14,14 @@ export class SearXNGBackend extends SearchBackend {
     const searchUrl = new URL(`${this._url}/search`)
     searchUrl.searchParams.set('q', query)
     searchUrl.searchParams.set('format', 'json')
-    searchUrl.searchParams.set('engines', opts.engines || 'general')
+    // SearXNG's `engines` param is a list of *engine names* (google, bing…), while
+    // `categories` selects a group of engines. With settings.yml `keep_only` restricting
+    // enabled engines to a named subset, the old hard-coded `engines=general` matched no
+    // engine and SearXNG returned zero results — silently emptying every broad /sweep
+    // query (rd1070). Default to the `general` *category* so all enabled engines run;
+    // only set `engines` when the caller passes an explicit comma-separated name list.
+    if (opts.engines) searchUrl.searchParams.set('engines', opts.engines)
+    else searchUrl.searchParams.set('categories', 'general')
     // Phase C: language/region bias — domain=ru sets language=ru-RU upstream.
     if (opts.language) searchUrl.searchParams.set('language', opts.language)
 
