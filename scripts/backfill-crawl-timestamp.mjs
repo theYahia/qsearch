@@ -10,7 +10,7 @@ import { Meilisearch } from 'meilisearch'
 
 const MEILI_URL = process.env.MEILI_URL || 'http://localhost:7700'
 const MEILI_KEY = process.env.MEILI_MASTER_KEY || 'masterKey'
-const INDEX_NAME = 'qsearch'
+const INDEX_NAME = process.env.MEILI_INDEX || 'qsearch_corpus'
 
 const args = process.argv.slice(2)
 const DRY_RUN = args.includes('--dry-run')
