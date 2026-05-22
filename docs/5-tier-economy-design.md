@@ -1,5 +1,7 @@
 # qsearch 5-Tier Economy Stack — Architecture Design
 
+> **Update 2026-05-22:** **P1 ultra-broad SHIPPED** (opt-in, $0). New: `MeilisearchCorpus.corpusLookup()`, `corpusLookupAsBrave()` + router `ultra-broad` branch (corpus-first, falls through to broad on miss), `VALID_PRIORITIES` extended in both `src/sweep/runner.js` and `brave_sweep.py`, time-sensitive label downgrade (`news_*`/`market_*`/`regulatory_*` → broad), env knobs `QSEARCH_ULTRA_BROAD_MIN_SCORE` (0.55) / `QSEARCH_ULTRA_BROAD_MAX_AGE_DAYS` (30). Tests: `test/unit/sweep/ultra_broad.test.js`. **P0 benchmark + P2 paid-deep DEFERRED** (paid-deep needs API keys + budget decision; its G1 gate is the benchmark's purpose, so both defer together).
+>
 > **Status:** design draft (rd239), 2026-05-20. No code changes. Captures the proposed extension from today's 3-tier routing (`broad / focused / critical`) to a 5-tier ladder that adds a free local-corpus tier below `broad` and a paid-deep tier above `critical`.
 > **Author:** agent 4.7
 > **Scope:** queries.txt routing convention + `brave_sweep.py` dispatch + qsearch `src/sweep/router.js`. Does NOT touch Meilisearch index format, Brave SDK, or x402 monetization.

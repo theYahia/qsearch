@@ -22,7 +22,9 @@ class Semaphore {
   }
 }
 
-export const VALID_PRIORITIES = new Set(['broad', 'focused', 'critical'])
+export const VALID_PRIORITIES = new Set(['ultra-broad', 'broad', 'focused', 'critical'])
+// rd239 safety: ultra-broad serves cached corpus hits — wrong for time-sensitive topics.
+const STALE_PRONE_LABEL_RE = /^(news|market|regulatory)/i
 export const VALID_DOMAINS = new Set(['general', 'scholarly', 'ru'])
 
 export function parseQueriesText (text) {
@@ -58,6 +60,11 @@ export function parseQueriesText (text) {
         }
         const query = parts.slice(1, queryEnd).join(sep)
         if (!query) continue
+        // rd239: don't serve stale corpus hits for time-sensitive topics — downgrade.
+        if (priority === 'ultra-broad' && STALE_PRONE_LABEL_RE.test(label)) {
+          console.warn(`[sweep] ultra-broad → broad for time-sensitive label "${label}" (stale corpus risk)`)
+          priority = 'broad'
+        }
         queries.push({ label, query, priority, domain })
         parsed = true
         break
@@ -79,6 +86,7 @@ export async function runSweep (queries, searchFnOrRouter, opts = {}) {
   const stats = {
     web_ok: 0, web_fail: 0, web_zero: 0, web_zero_recovered: 0, total_deduped: 0,
     by_priority: {
+      'ultra-broad': { ok: 0, fail: 0, zero: 0 },
       broad: { ok: 0, fail: 0, zero: 0 },
       focused: { ok: 0, fail: 0, zero: 0 },
       critical: { ok: 0, fail: 0, zero: 0 }

@@ -21,6 +21,7 @@ export function createSweepRouter (deps) {
     searxngAsBraveResponse,
     academicAsBraveResponse,
     yandexAsBraveResponse,
+    corpusLookup,
     endpointName = '/sweep'
   } = deps
 
@@ -35,7 +36,13 @@ export function createSweepRouter (deps) {
       catch (e) { console.warn(`[yandex] failed, falling back to SearXNG ru-RU: ${e.message}`) }
     }
     const searxngOpts = domain === 'ru' ? { language: 'ru-RU' } : {}
-    if (priority === 'broad') {
+    // rd239 ultra-broad: try the local corpus first ($0, no network). On insufficient
+    // coverage fall through to broad — never fail the query for a cache miss.
+    if (priority === 'ultra-broad' && corpusLookup) {
+      const r = await corpusLookup(query, params)
+      if (r && r.sufficient) return r.response
+    }
+    if (priority === 'broad' || priority === 'ultra-broad') {
       if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
       if (braveKey) return await braveFetch('web', query, params)
       throw new Error('broad priority needs SEARXNG_URL or BRAVE_API_KEY')

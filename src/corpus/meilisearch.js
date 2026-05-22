@@ -99,6 +99,51 @@ export class MeilisearchCorpus extends CorpusBackend {
     }))
   }
 
+  // rd239 ultra-broad tier: corpus-only lookup with a sufficiency gate. Returns
+  // { sufficient, count, avgScore, hits[] }. Lets the sweep router skip the SearXNG
+  // round-trip when past sprints already answered this query; on insufficient hits
+  // the caller falls through to the broad tier. Freshness-filtered (crawled_at) so
+  // stale corpus entries don't masquerade as a current answer.
+  async corpusLookup (query, opts = {}) {
+    await this._ensureIndex()
+    const idx = this._client.index(INDEX_NAME)
+    const minScore = opts.minScore ?? 0.55
+    const minHits = opts.minHits ?? 3
+    const maxAgeDays = opts.maxAgeDays ?? 30
+    const base = { limit: opts.limit || 5, showRankingScore: true }
+    let res
+    if (maxAgeDays > 0) {
+      const cutoff = new Date(Date.now() - maxAgeDays * 86400000).toISOString()
+      try {
+        res = await idx.search(query, { ...base, filter: `crawled_at >= "${cutoff}"` })
+      } catch {
+        // crawled_at not filterable yet (schema migration pending) — degrade unfiltered.
+        res = await idx.search(query, base)
+      }
+    } else {
+      res = await idx.search(query, base)
+    }
+    const hits = res.hits || []
+    const scores = hits.map(h => (typeof h._rankingScore === 'number' ? h._rankingScore : 0))
+    const avgScore = scores.length ? scores.reduce((a, b) => a + b, 0) / scores.length : 0
+    return {
+      sufficient: hits.length >= minHits && avgScore >= minScore,
+      count: hits.length,
+      avgScore,
+      hits: hits.map(h => ({
+        url: h.url,
+        title: h.title,
+        description: h.text?.slice(0, 300) || null,
+        extra_snippets: [],
+        age: null,
+        page_age: h.crawled_at || null,
+        language: null,
+        engines: h.engines || [],
+        source: 'corpus'
+      }))
+    }
+  }
+
   async stats () {
     try {
       await this._ensureIndex()

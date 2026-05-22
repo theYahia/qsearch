@@ -27,14 +27,15 @@ describe('SearXNGBackend', () => {
     assert.strictEqual(results[0].source, 'searxng')
   })
 
-  test('default query uses categories=general, not engines (rd1070)', async () => {
-    // settings.yml `keep_only` restricts enabled engines to named subsets; the literal
-    // `engines=general` matched no engine and SearXNG returned zero results, silently
-    // emptying every broad /sweep query. The default must select the general *category*.
+  test('default query uses explicit reliable engines, not categories (rd1070 round 2)', async () => {
+    // rd1070 round 1 switched to categories=general, but that category's active engines
+    // (duckduckgo + brave) are perpetually CAPTCHA/rate-limited, so /sweep still returned
+    // zero. Round 2 defaults to an explicit no-key engine list (mojeek + bing carry
+    // results; ddg/brave stay as opportunistic extras). See src/backends/searxng.js.
     const backend = new SearXNGBackend(`http://localhost:${mockPort}`)
     await backend.search('test', { n_results: 3 })
-    assert.strictEqual(lastQuery.get('categories'), 'general')
-    assert.strictEqual(lastQuery.get('engines'), null)
+    assert.strictEqual(lastQuery.get('engines'), 'mojeek,bing,duckduckgo,brave')
+    assert.strictEqual(lastQuery.get('categories'), null)
   })
 
   test('explicit engines list is forwarded as engines param', async () => {

@@ -4,7 +4,7 @@ import http from 'node:http'
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { glob as fsGlob } from 'glob'
 import { fileURLToPath } from 'node:url'
-import { dirname, join } from 'node:path'
+import { dirname, join, resolve, sep } from 'node:path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const envPath = join(__dirname, '..', '.env.local')
@@ -55,7 +55,19 @@ import { runBriefScaffold } from './sweep/brief_gen.js'
 
 // ── Corpus clients ─────────────────────────────────────────────────
 const MEILI_URL = process.env.MEILISEARCH_URL || 'http://localhost:7700'
-const MEILI_KEY = process.env.MEILISEARCH_KEY || 'masterKey'
+// Security (CSO-OPS 2026-05-21 P1-3): refuse the hardcoded default key when the
+// server is exposed beyond loopback. On loopback we only warn, so local dev keeps
+// working — but a real key (openssl rand -hex 32 in .env.local) is required to expose.
+const QSEARCH_BIND = process.env.QSEARCH_BIND || '127.0.0.1'
+const IS_LOOPBACK_BIND = ['127.0.0.1', 'localhost', '::1'].includes(QSEARCH_BIND)
+let MEILI_KEY = process.env.MEILISEARCH_KEY
+if (!MEILI_KEY || MEILI_KEY === 'masterKey') {
+  if (!IS_LOOPBACK_BIND) {
+    throw new Error('MEILISEARCH_KEY must be set to a non-default value when QSEARCH_BIND is non-loopback. Generate one: openssl rand -hex 32 → .env.local')
+  }
+  console.warn('[security] MEILISEARCH_KEY unset/default — tolerated only because bound to loopback. Set a real key before any LAN/VPS exposure.')
+  MEILI_KEY = MEILI_KEY || 'masterKey'
+}
 const QDRANT_URL_ENV = process.env.QDRANT_URL || 'http://localhost:6333'
 
 // llama.cpp embedder takes priority over Ollama (used by some deployments). Default → Ollama.
@@ -64,6 +76,24 @@ if (process.env.LLAMACPP_URL) console.log(`Embedding: llama.cpp at ${process.env
 
 const meili = new MeilisearchCorpus(MEILI_URL, MEILI_KEY)
 const qdrant = new QdrantCorpus(QDRANT_URL_ENV, embedder)
+
+// ── Filesystem indexing guard (CSO-OPS 2026-05-21 P1-2 + 5.1) ──────
+// /index (glob) and /ingest/brave read caller-supplied paths into the searchable
+// corpus. Two protections: (1) never index secrets/keys regardless of path,
+// (2) optional hard path boundary via QSEARCH_DATA_ROOTS (semicolon-separated).
+const SENSITIVE_FILE_RE = /(^|[/\\])(\.env(\.|$)|.*\.pem$|.*\.key$|id_rsa|id_ed25519|.*\.secret$|credentials)/i
+const ALLOWED_ROOTS = (process.env.QSEARCH_DATA_ROOTS || '')
+  .split(';').map(s => s.trim()).filter(Boolean).map(p => resolve(p))
+function withinAllowedRoots (filePath) {
+  if (!ALLOWED_ROOTS.length) return true // unset → no boundary (loopback-only dev default)
+  const r = resolve(filePath)
+  return ALLOWED_ROOTS.some(root => r === root || r.startsWith(root + sep))
+}
+// Throws if the path must not be ingested. Used per-file in /index and on /ingest dir.
+function assertIndexable (filePath) {
+  if (SENSITIVE_FILE_RE.test(filePath)) throw new Error(`refused sensitive file: ${filePath}`)
+  if (!withinAllowedRoots(filePath)) throw new Error(`path outside QSEARCH_DATA_ROOTS: ${filePath}`)
+}
 
 // ── SearXNG fallback ───────────────────────────────────────────────
 const searxng = process.env.SEARXNG_URL ? new SearXNGBackend(process.env.SEARXNG_URL) : null
@@ -159,6 +189,31 @@ async function searxngAsBraveResponse (query, params, opts = {}) {
   if (opts.engines) searchOpts.engines = opts.engines
   const hits = await searxng.search(query, searchOpts)
   return { data: { web: { results: hits }, _searxng: true }, ms: Date.now() - t0, searxng: true }
+}
+
+// rd239 ultra-broad: corpus-only lookup. Returns { sufficient, response } where the
+// response is Brave-shaped. On insufficient corpus coverage the router falls through
+// to the broad tier. Thresholds tunable via QSEARCH_ULTRA_BROAD_* env vars.
+async function corpusLookupAsBrave (query, params) {
+  const t0 = Date.now()
+  const r = await meili.corpusLookup(query, {
+    minScore: Number(process.env.QSEARCH_ULTRA_BROAD_MIN_SCORE) || 0.55,
+    maxAgeDays: Number(process.env.QSEARCH_ULTRA_BROAD_MAX_AGE_DAYS) || 30,
+    limit: params.count || 5
+  })
+  if (!r.sufficient) return { sufficient: false }
+  return {
+    sufficient: true,
+    response: {
+      data: {
+        web: { results: r.hits },
+        _corpus: true,
+        _ultra_broad: { count: r.count, avg_score: Number(r.avgScore.toFixed(3)) }
+      },
+      ms: Date.now() - t0,
+      corpus: true
+    }
+  }
 }
 
 async function academicAsBraveResponse (query, params) {
@@ -554,6 +609,12 @@ async function handleIndex (req, res) {
 
   // File/glob indexing path (not a URL)
   if (!url.startsWith('http')) {
+    // Reject globs/paths obviously targeting secrets up front (clear 403 to caller).
+    if (/\.env|\.ssh|id_rsa|id_ed25519|\.pem|\.key|credentials|\.secret/i.test(url)) {
+      res.writeHead(403, { 'Content-Type': 'application/json' })
+      res.end(JSON.stringify({ error: `refused: path/glob targets sensitive files (${url})` }))
+      return
+    }
     const namespace = 'user'
     const job_id = createJob(url, namespace)
     res.writeHead(202, { 'Content-Type': 'application/json' })
@@ -571,6 +632,7 @@ async function handleIndex (req, res) {
         }
         for (const filePath of files) {
           try {
+            assertIndexable(filePath) // skip secrets / out-of-root files
             const raw = readFileSync(filePath, 'utf8')
             const title = raw.match(/^#\s+(.+)/m)?.[1]?.trim() ||
               raw.match(/^title:\s+(.+)/im)?.[1]?.trim() ||
@@ -678,6 +740,46 @@ function handleBackendsStatus (req, res) {
   }, null, 2))
 }
 
+// Reliability (Phase 2): a green /health does NOT prove /sweep works. rd1070 shipped
+// twice with /health ok while every broad sweep returned zero (SearXNG silently
+// dropped its engines). runSweepCanary issues one real SearXNG query and reports
+// which engines actually answered — surfacing degradation instead of hiding it.
+async function runSweepCanary () {
+  if (!searxng) return { sweep_ok: null, reason: 'searxng_not_configured' }
+  try {
+    const results = await searxng.search('qsearch healthcheck', { n_results: 5 })
+    const engineHits = {}
+    for (const r of results) for (const e of (r.engines || [])) engineHits[e] = (engineHits[e] || 0) + 1
+    return {
+      sweep_ok: results.length > 0,
+      results: results.length,
+      engines_returned: Object.keys(engineHits),
+      engine_hits: engineHits
+    }
+  } catch (e) {
+    return { sweep_ok: false, error: String(e?.message || e) }
+  }
+}
+
+// GET /health (liveness) and GET /health?deep=1 (canary sweep — 503 if degraded).
+async function handleHealth (req, res) {
+  const base = {
+    status: 'ok', version: '0.4.0',
+    local_llm_available: localLlmAvailable, model_loaded: localLlmAvailable,
+    embed_loaded: embedder.available, corpus: corpusStatus
+  }
+  const deep = /[?&]deep=(1|true)\b/.test(req.url)
+  if (!deep) {
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify(base))
+    return
+  }
+  const sweep = await runSweepCanary()
+  const degraded = sweep.sweep_ok === false
+  res.writeHead(degraded ? 503 : 200, { 'Content-Type': 'application/json' })
+  res.end(JSON.stringify({ ...base, status: degraded ? 'degraded' : 'ok', sweep }))
+}
+
 async function handleCorpusStats (req, res) {
   const [meiliStats, qdrantStats] = await Promise.all([meili.stats(), qdrant.stats()])
   res.writeHead(200, { 'Content-Type': 'application/json' })
@@ -710,6 +812,7 @@ async function handleIngestBrave (req, res) {
   }
 
   try {
+    assertIndexable(braveDir) // enforce QSEARCH_DATA_ROOTS boundary if configured
     const indexed = await ingestBraveDir(braveDir, topic, meili)
     if (indexed) {
       await refreshCorpusStatus()
@@ -841,6 +944,7 @@ async function handleSweep (req, res) {
   const sweepRouter = createSweepRouter({
     searxng, academic, yandex, braveKey: BRAVE_KEY,
     braveFetch, searxngAsBraveResponse, academicAsBraveResponse, yandexAsBraveResponse,
+    corpusLookup: corpusLookupAsBrave,
     endpointName: '/sweep'
   })
   console.log(`[sweep] starting ${queries.length} queries via priority router (broad→${searxng ? 'SearXNG' : 'Brave'}, focused/critical→${BRAVE_KEY ? 'Brave' : 'SearXNG fallback'}, scholarly→${academic ? 'Academic' : 'disabled'}, ru→${yandex ? 'Yandex' : 'SearXNG+ru-RU'})`)
@@ -1121,6 +1225,7 @@ async function handleCachedSweep (req, res) {
   const cachedSweepRouter = createSweepRouter({
     searxng, academic, yandex, braveKey: BRAVE_KEY,
     braveFetch, searxngAsBraveResponse, academicAsBraveResponse, yandexAsBraveResponse,
+    corpusLookup: corpusLookupAsBrave,
     endpointName: '/cached_sweep'
   })
 
@@ -1549,10 +1654,8 @@ const server = http.createServer((req, res) => {
     res.end(docsMd)
     return
   }
-  if (req.method === 'GET' && req.url === '/health') {
-    const modelReady = localLlmAvailable
-    res.writeHead(200, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ status: 'ok', version: '0.4.0', local_llm_available: localLlmAvailable, model_loaded: modelReady, embed_loaded: embedder.available, corpus: corpusStatus }))
+  if (req.method === 'GET' && (req.url === '/health' || req.url.startsWith('/health?'))) {
+    handleHealth(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'health failed', detail: String(err) })) })
     return
   }
   if ((req.method === 'POST' && req.url === '/search') || (req.method === 'GET' && req.url.startsWith('/search?'))) {
@@ -1665,7 +1768,10 @@ const server = http.createServer((req, res) => {
 server.keepAliveTimeout = 65000
 server.headersTimeout = 66000
 
-server.listen(PORT, () => {
+// Security (CSO-OPS 2026-05-21 P0-1): bind loopback by default. qsearch is a
+// single-user dev backend with no auth — LAN exposure = unauthenticated /index,
+// /sweep_context (SSRF), /ingest. Override with QSEARCH_BIND only behind real auth.
+server.listen(PORT, process.env.QSEARCH_BIND || '127.0.0.1', () => {
   console.log(`qsearch v0.4.0 listening on http://localhost:${PORT}`)
   // rd275: surface gates that ship OFF by default so users notice they exist.
   // Default is intentionally OFF (no behavior change for existing consumers);
@@ -1696,4 +1802,10 @@ server.listen(PORT, () => {
   console.log('GET  /ui')
   console.log('GET  /health')
   warmModel().catch(() => {})
+  // Reliability (Phase 2): canary the sweep path at startup so a silent SearXNG
+  // degradation (rd1070 class) is loud in the log instead of discovered mid-research.
+  runSweepCanary().then((c) => {
+    if (c.sweep_ok === false) console.warn(`⚠️  SWEEP DEGRADED — SearXNG returned 0 results at startup${c.error ? ` (${c.error})` : ''}. Broad /sweep will be empty. Check engines / SEARXNG_URL.`)
+    else if (c.sweep_ok) console.log(`[canary] sweep ok — ${c.results} results from engines: ${c.engines_returned.join(', ') || '(none named)'}`)
+  }).catch(() => {})
 })

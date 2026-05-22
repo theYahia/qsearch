@@ -16,7 +16,8 @@ import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/
 import { qsearchTool } from './mcp.js'
 
 const PORT = Number(process.env.MCP_PORT) || 8081
-const HOST = process.env.MCP_HOST || '0.0.0.0'
+// Security (CSO-OPS 2026-05-21 P0-2): loopback default — no auth on MCP-HTTP.
+const HOST = process.env.MCP_HOST || '127.0.0.1'
 
 const transports = new Map() // sessionId -> transport
 
