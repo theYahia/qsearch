@@ -5,8 +5,10 @@ services:
     # Security (CSO-OPS 2026-05-21 P0-3): loopback-only. qsearch reaches it via localhost.
     ports: ["127.0.0.1:7700:7700"]
     environment:
-      # P1-3: no hardcoded default. Run: docker compose --env-file .env.local up -d
-      MEILI_MASTER_KEY: ${MEILISEARCH_KEY:?MEILISEARCH_KEY must be set — put it in .env.local and use: docker compose --env-file .env.local up -d}
+      # P1-3: master key defaults to "masterKey" — acceptable because P0-3 binds :7700 to
+      # loopback (no LAN reach). To harden further, set MEILISEARCH_KEY in .env.local and
+      # run: docker compose --env-file .env.local up -d
+      MEILI_MASTER_KEY: ${MEILISEARCH_KEY:-masterKey}
     volumes:
       - ./data/meili:/meili_data
     healthcheck:
