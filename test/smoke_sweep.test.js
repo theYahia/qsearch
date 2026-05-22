@@ -20,15 +20,18 @@ describe('sweep smoke — broad SearXNG path returns results (rd1070 guard)', ()
       res.writeHead(200, { 'Content-Type': 'application/json' })
       // Reproduce rd1070: the `general` category/engine selection yields nothing.
       if (engines === 'general' || categories === 'general') {
-        res.end(JSON.stringify({ results: [] }))
+        res.end(JSON.stringify({ results: [], unresponsive_engines: [] }))
         return
       }
-      // Reliable explicit engines (mojeek/bing) carry results.
+      // Reliable explicit engines (mojeek/bing) carry results; duckduckgo is CAPTCHA-blocked
+      // (the real chronic degradation SearXNG reports via unresponsive_engines).
       res.end(JSON.stringify({
         results: [
           { url: 'https://a.example.com', title: 'A', content: 'first', engines: ['mojeek'], score: 1 },
-          { url: 'https://b.example.com', title: 'B', content: 'second', engines: ['bing'], score: 0.9 }
-        ]
+          { url: 'https://b.example.com', title: 'B', content: 'second', engines: ['bing'], score: 0.9 },
+          { url: 'https://c.example.com', title: 'C', content: 'third', engines: ['mojeek'], score: 0.8 }
+        ],
+        unresponsive_engines: [['duckduckgo', 'CAPTCHA']]
       }))
     })
     await new Promise(r => mockServer.listen(0, r))
@@ -48,5 +51,17 @@ describe('sweep smoke — broad SearXNG path returns results (rd1070 guard)', ()
     const results = await backend.search('any broad query', { n_results: 5 })
     const engines = new Set(results.flatMap(r => r.engines || []))
     assert.ok(engines.size > 0, 'results must expose which engine answered, so degradation is observable')
+  })
+
+  test('probe() surfaces unresponsive_engines + counts contribution over full set (canary fix)', async () => {
+    const backend = new SearXNGBackend(`http://localhost:${mockPort}`)
+    const p = await backend.probe('any broad query')
+    // unresponsive_engines normalized to {engine, reason} — the authoritative degradation signal
+    assert.deepEqual(p.unresponsive_engines, [{ engine: 'duckduckgo', reason: 'CAPTCHA' }])
+    // contribution counted over the FULL result set (not a top-N slice): mojeek appears twice
+    assert.equal(p.contributing_engines.mojeek, 2, 'mojeek must be counted (not "silent") — it answered')
+    assert.equal(p.contributing_engines.bing, 1)
+    assert.equal(p.total, 3)
+    assert.ok(p.configured_engines.includes('mojeek'))
   })
 })

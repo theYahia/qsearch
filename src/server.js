@@ -747,14 +747,16 @@ function handleBackendsStatus (req, res) {
 async function runSweepCanary () {
   if (!searxng) return { sweep_ok: null, reason: 'searxng_not_configured' }
   try {
-    const results = await searxng.search('qsearch healthcheck', { n_results: 5 })
-    const engineHits = {}
-    for (const r of results) for (const e of (r.engines || [])) engineHits[e] = (engineHits[e] || 0) + 1
+    // probe() reports engine health over the FULL result set + SearXNG's unresponsive_engines
+    // (the authoritative signal). A real query is used so engine contribution is meaningful —
+    // a nonsense query + top-N slice was what made a healthy mojeek look "silent" (rd1070).
+    const p = await searxng.probe('open source software')
     return {
-      sweep_ok: results.length > 0,
-      results: results.length,
-      engines_returned: Object.keys(engineHits),
-      engine_hits: engineHits
+      sweep_ok: p.total > 0,
+      results: p.total,
+      contributing_engines: Object.keys(p.contributing_engines),
+      engine_hits: p.contributing_engines,
+      unresponsive_engines: p.unresponsive_engines
     }
   } catch (e) {
     return { sweep_ok: false, error: String(e?.message || e) }
@@ -1806,6 +1808,9 @@ server.listen(PORT, process.env.QSEARCH_BIND || '127.0.0.1', () => {
   // degradation (rd1070 class) is loud in the log instead of discovered mid-research.
   runSweepCanary().then((c) => {
     if (c.sweep_ok === false) console.warn(`⚠️  SWEEP DEGRADED — SearXNG returned 0 results at startup${c.error ? ` (${c.error})` : ''}. Broad /sweep will be empty. Check engines / SEARXNG_URL.`)
-    else if (c.sweep_ok) console.log(`[canary] sweep ok — ${c.results} results from engines: ${c.engines_returned.join(', ') || '(none named)'}`)
+    else if (c.sweep_ok) {
+      const unresp = (c.unresponsive_engines || []).map(u => `${u.engine}:${u.reason}`).join(', ')
+      console.log(`[canary] sweep ok — ${c.results} results from engines: ${c.contributing_engines.join(', ') || '(none named)'}${unresp ? ` | unresponsive: ${unresp}` : ''}`)
+    }
   }).catch(() => {})
 })
