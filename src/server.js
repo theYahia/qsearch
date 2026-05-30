@@ -50,6 +50,7 @@ import { rerankByTrust } from './search/rerank.js'
 import { ingestBraveDir } from './ingest/brave.js'
 import { QueryCache, inferEndpoint } from './cache.js'
 import { runSweepContext } from './sweep_context.js'
+import { fetchHtml, extractMainContent } from './fetch/html.js'
 import { runPreSweepCheck } from './sweep/pre_check.js'
 import { runBriefScaffold } from './sweep/brief_gen.js'
 
@@ -1558,6 +1559,74 @@ async function handleSweepContext (req, res) {
   }
 }
 
+// POST /url_content — url-keyed full-page cache (claude-webcache hook backend).
+// Body: { url, max_age_days? }. corpus-first exact-url lookup (+ freshness gate),
+// miss/stale → fetchHtml + extractMainContent → index into corpus (namespace 'webfetch').
+// Returns { url, title, markdown, source: 'corpus'|'fetched', crawled_at }.
+// Unlike /sweep_context (keyed by url+focus_query, prompt-specific), this is keyed by
+// url alone → reusable across prompts/sessions and grows the research corpus passively.
+async function handleUrlContent (req, res) {
+  let body
+  try { body = JSON.parse((await readBody(req)) || '{}') } catch {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'invalid JSON body' }))
+    return
+  }
+  const { url, max_age_days } = body
+  if (!url || typeof url !== 'string') {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'url (string) required' }))
+    return
+  }
+  const maxAgeDays = (max_age_days != null)
+    ? Number(max_age_days)
+    : (Number(process.env.QSEARCH_ULTRA_BROAD_MAX_AGE_DAYS) || 30)
+  const toMarkdown = (title, text) => (title ? `# ${title}\n\n` : '') + text
+
+  // 1. corpus-first: exact url lookup (same filter pattern as trustScore) + freshness gate.
+  try {
+    const idx = await meili.getIndex()
+    const filterUrl = url.replace(/\\/g, '\\\\').replace(/'/g, "\\'")
+    const { hits } = await idx.search('', {
+      filter: `url = '${filterUrl}'`,
+      limit: 1,
+      attributesToRetrieve: ['url', 'title', 'text', 'crawled_at']
+    })
+    const h = hits && hits[0]
+    if (h && h.text) {
+      const fresh = !h.crawled_at || maxAgeDays <= 0 ||
+        (Date.now() - Date.parse(h.crawled_at)) <= maxAgeDays * 86400000
+      if (fresh) {
+        res.writeHead(200, { 'Content-Type': 'application/json' })
+        res.end(JSON.stringify({ url, title: h.title || '', markdown: toMarkdown(h.title, h.text), source: 'corpus', crawled_at: h.crawled_at || null }))
+        return
+      }
+    }
+  } catch (e) {
+    console.warn('[url_content] corpus lookup failed (will fetch):', e.message)
+  }
+
+  // 2. miss/stale: fetch live (fetchHtml guards SSRF on every redirect hop) + extract + index.
+  try {
+    const { html } = await fetchHtml(url)
+    const { title, text } = extractMainContent(html)
+    if (!text) {
+      res.writeHead(502, { 'Content-Type': 'application/json' })
+      res.end(JSON.stringify({ error: 'no extractable content', url }))
+      return
+    }
+    const crawled_at = new Date().toISOString()
+    try {
+      await meili.index({ url, title, text, namespace: 'webfetch', engines: ['webfetch'], crawled_at })
+    } catch (e) { console.warn('[url_content] index failed (returning anyway):', e.message) }
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ url, title, markdown: toMarkdown(title, text), source: 'fetched', crawled_at }))
+  } catch (err) {
+    res.writeHead(502, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'fetch failed', detail: String(err.message || err), url }))
+  }
+}
+
 // Phase 5: GET /economy_report — markdown report of sprint_metrics.
 // Filters: ?from=<ISO>&to=<ISO>&sprint_id=&topic=&format=markdown|json
 async function handleEconomyReport (req, res) {
@@ -1712,6 +1781,10 @@ const server = http.createServer((req, res) => {
     handleSweepContext(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'sweep_context failed', detail: String(err) })) })
     return
   }
+  if (req.method === 'POST' && req.url === '/url_content') {
+    handleUrlContent(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'url_content failed', detail: String(err) })) })
+    return
+  }
   if (req.method === 'GET' && (req.url === '/economy_report' || req.url.startsWith('/economy_report?'))) {
     handleEconomyReport(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
     return
@@ -1788,6 +1861,7 @@ server.listen(PORT, process.env.QSEARCH_BIND || '127.0.0.1', () => {
   console.log('POST /sweep   <queries.txt body> (label|query lines)')
   console.log('POST /cached_sweep  <queries.txt body> (cache-aware, opt-in)')
   console.log('POST /sweep_context  { urls:[], focus_query } (Phase 3 local LLM Context, $0)')
+  console.log('POST /url_content  { url, max_age_days? } (url-keyed full-page cache; claude-webcache hook backend)')
   console.log('POST /pre_sweep_check { queries:[], freshness_days?, overlap_threshold? } (rd275 Lever C)')
   console.log('POST /research-brief { topic, tier:light|standard|heavy } (rd275 Lever D, scaffold-only)')
   console.log('GET  /economy_report?from=&to=&sprint_id=&topic=&format=markdown|json  (Phase 5)')
