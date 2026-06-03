@@ -27,6 +27,11 @@ export function createSweepRouter (deps) {
 
   return (priority, domain) => async (endpoint, query, params) => {
     if (endpoint !== 'web') throw new Error(`${endpointName} only supports web endpoint (got ${endpoint})`)
+    // Cyrillic defense-in-depth: a query that arrived as general but is Russian should route ru
+    // (→ Yandex if configured, else SearXNG ru-RU) instead of hitting Western engines with no
+    // locale and returning zero/garbage. Mirrors brave_sweep.py's domain=ru auto-upgrade so a
+    // direct /sweep caller that forgot the domain field still gets RU results.
+    if (domain === 'general' && /[Ѐ-ӿ]/.test(query)) domain = 'ru'
     // Phase A: scholarly domain → academic backend (free, peer-reviewed). Overrides priority.
     if (domain === 'scholarly' && academic) return await academicAsBraveResponse(query, params)
     // Phase C: ru domain → direct Yandex backend if configured; else SearXNG with

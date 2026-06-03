@@ -30,7 +30,12 @@ export class SearXNGBackend extends SearchBackend {
     if (opts.engines) searchUrl.searchParams.set('engines', opts.engines)
     else searchUrl.searchParams.set('engines', DEFAULT_ENGINES)
     // Phase C: language/region bias — domain=ru sets language=ru-RU upstream.
-    if (opts.language) searchUrl.searchParams.set('language', opts.language)
+    // Defense-in-depth: if no language was set but the query is Cyrillic (e.g. a broad
+    // query that reached us as domain=general), force ru-RU. Without it, mojeek/bing/ddg
+    // default to a non-RU locale and return garbage (Roblox/Star Wars) for Russian queries.
+    let language = opts.language
+    if (!language && /[Ѐ-ӿ]/.test(query)) language = 'ru-RU'
+    if (language) searchUrl.searchParams.set('language', language)
 
     const r = await fetch(searchUrl.toString(), {
       headers: { Accept: 'application/json' }
