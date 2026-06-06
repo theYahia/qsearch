@@ -53,7 +53,25 @@ export function createSweepRouter (deps) {
       throw new Error('broad priority needs SEARXNG_URL or BRAVE_API_KEY')
     }
     // focused / critical — prefer Brave with extra_snippets, SearXNG fallback only on missing key.
-    if (braveKey) return await braveFetch('web', query, { ...params, extra_snippets: true })
+    if (braveKey) {
+      const web = await braveFetch('web', query, { ...params, extra_snippets: true })
+      // critical ($0.01 tier): layer in the Brave LLM Context endpoint for richer grounding.
+      // Soft-fail — a context error must not drop the web results we already have. This makes
+      // the server /sweep match brave_sweep.py (web + llm/context = 2 calls) and earns the
+      // `brave_context` cost label (server.js) instead of silently behaving like `focused`.
+      if (priority === 'critical') {
+        try {
+          const { data: ctx } = await braveFetch('llm/context', query, { count: params.count })
+          const grounding = ctx?.grounding?.generic
+          if (Array.isArray(grounding) && grounding.length && web?.data) {
+            web.data.context_grounding = grounding
+          }
+        } catch (e) {
+          console.warn(`[${endpointName}] critical LLM Context soft-fail: ${e.message}`)
+        }
+      }
+      return web
+    }
     if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
     throw new Error(`${priority} priority needs BRAVE_API_KEY (or SEARXNG_URL fallback)`)
   }

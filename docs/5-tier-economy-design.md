@@ -87,13 +87,13 @@
 
 | Property | Value |
 |---|---|
-| **Backend** | Brave web + LLM Context endpoint (forced regardless of CLI flag) |
-| **Cost / query** | ~$0.01 |
+| **Backend** | Brave web (`/web/search`) + Brave LLM Context (`/llm/context`) — **two billable calls/query** |
+| **Cost / query** | ~$0.01 (= 2 × $0.005; Brave Search plan = $5/1k per request, 2026 pricing) |
 | **Latency p50** | 2-5 s |
 | **G1 quality** | 0.78-0.85 |
 | **Use-case** | Load-bearing claims, ~5% of heavy-max queries. |
 | **Routing** | 3rd field = `critical`. |
-| **Implementation** | Exists. No change. |
+| **Implementation** | `brave_sweep.py` always did web+context. The server `/sweep` router did NOT (treated critical == focused, 1 call, but still billed `brave_context` $0.01) until **fix 2026-06-06**: `src/sweep/router.js` now soft-fails a `llm/context` call for critical, `runner.js` threads `context_grounding` through, and `renderMarkdown` emits a "📚 LLM Context" section. The `brave_context` cost label is now earned. |
 | **Risks** | Brave Context monthly quota; partial coverage on niche RU/medical/legal sources. |
 
 ### 2.5 paid-deep *(new top tier)*

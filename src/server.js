@@ -764,6 +764,35 @@ async function runSweepCanary () {
   }
 }
 
+// Reliability: a present BRAVE_API_KEY can still be revoked (returns 422 SUBSCRIPTION_TOKEN_INVALID
+// on every call, silently burning sweeps — observed 2026-06-06). checkBraveKeyValid surfaces
+// validity in deep health so the canary catches a dead key instead of every sweep failing.
+// Definitive results are cached (10 min TTL) so frequent canary polls don't spend a Brave call
+// each time; transient (null) results are not cached so they re-probe next poll.
+let _braveKeyCheck = { at: 0, result: null }
+async function checkBraveKeyValid () {
+  if (!BRAVE_KEY) return { brave_key_valid: null, reason: 'no_key_configured' }
+  const TTL_MS = 10 * 60 * 1000
+  if (_braveKeyCheck.result && (Date.now() - _braveKeyCheck.at) < TTL_MS) return _braveKeyCheck.result
+  let result
+  try {
+    const base = process.env.BRAVE_BASE_URL || 'https://api.search.brave.com'
+    const url = new URL(`${base}/res/v1/web/search`)
+    url.searchParams.set('q', 'test')
+    url.searchParams.set('count', '1')
+    const r = await fetch(url.toString(), {
+      headers: { Accept: 'application/json', 'X-Subscription-Token': BRAVE_KEY }
+    })
+    if (r.ok) result = { brave_key_valid: true, reason: 'ok' }
+    else if (r.status === 401 || r.status === 403 || r.status === 422) result = { brave_key_valid: false, reason: `http_${r.status}_subscription_token_invalid` }
+    else result = { brave_key_valid: null, reason: `http_${r.status}` } // 429/5xx → transient, don't condemn the key
+  } catch (e) {
+    result = { brave_key_valid: null, reason: `probe_failed: ${e.message}` }
+  }
+  if (result.brave_key_valid !== null) _braveKeyCheck = { at: Date.now(), result } // cache only definitive verdicts
+  return result
+}
+
 // GET /health (liveness) and GET /health?deep=1 (canary sweep — 503 if degraded).
 async function handleHealth (req, res) {
   const base = {
@@ -778,9 +807,10 @@ async function handleHealth (req, res) {
     return
   }
   const sweep = await runSweepCanary()
-  const degraded = sweep.sweep_ok === false
+  const brave = await checkBraveKeyValid()
+  const degraded = sweep.sweep_ok === false || brave.brave_key_valid === false
   res.writeHead(degraded ? 503 : 200, { 'Content-Type': 'application/json' })
-  res.end(JSON.stringify({ ...base, status: degraded ? 'degraded' : 'ok', sweep }))
+  res.end(JSON.stringify({ ...base, status: degraded ? 'degraded' : 'ok', sweep, brave }))
 }
 
 async function handleCorpusStats (req, res) {

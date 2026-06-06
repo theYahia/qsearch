@@ -118,20 +118,51 @@ describe('createSweepRouter — priority routing', () => {
     await assert.rejects(() => router('broad', 'general')('web', 'q', {}), /needs SEARXNG_URL or BRAVE_API_KEY/)
   })
 
-  test('focused with braveKey → braveFetch with extra_snippets: true', async () => {
+  test('focused with braveKey → braveFetch with extra_snippets: true (1 call, no context)', async () => {
     const { rec, deps } = depsWith({ braveKey: 'k' })
     const router = createSweepRouter(deps)
     await router('focused', 'general')('web', 'q', { count: 10 })
+    assert.equal(rec.calls.length, 1)
     assert.equal(rec.calls[0].name, 'brave')
+    assert.equal(rec.calls[0].args[0], 'web')
     assert.equal(rec.calls[0].args[2].extra_snippets, true)
   })
 
-  test('critical with braveKey → braveFetch with extra_snippets: true', async () => {
+  test('critical with braveKey → web + llm/context (2 calls, earns $0.01 tier)', async () => {
     const { rec, deps } = depsWith({ braveKey: 'k' })
     const router = createSweepRouter(deps)
-    await router('critical', 'general')('web', 'q', {})
-    assert.equal(rec.calls[0].name, 'brave')
+    await router('critical', 'general')('web', 'q', { count: 20 })
+    assert.equal(rec.calls.length, 2, 'critical must make web + context calls')
+    assert.equal(rec.calls[0].args[0], 'web')
     assert.equal(rec.calls[0].args[2].extra_snippets, true)
+    assert.equal(rec.calls[1].args[0], 'llm/context')
+  })
+
+  test('critical attaches context_grounding to web.data on success', async () => {
+    const calls = []
+    const braveFetch = async (...args) => {
+      calls.push(args)
+      if (args[0] === 'llm/context') return { data: { grounding: { generic: [{ url: 'g', title: 't', snippets: ['s'] }] } } }
+      return { data: { web: { results: [{ url: 'u' }] } } }
+    }
+    const router = createSweepRouter({ ...depsWith({ braveKey: 'k' }).deps, braveFetch })
+    const res = await router('critical', 'general')('web', 'q', {})
+    assert.equal(calls.length, 2)
+    assert.deepEqual(res.data.context_grounding, [{ url: 'g', title: 't', snippets: ['s'] }])
+  })
+
+  test('critical context soft-fail → web result still returned', async () => {
+    const calls = []
+    const braveFetch = async (...args) => {
+      calls.push(args)
+      if (args[0] === 'llm/context') throw new Error('context 500')
+      return { data: { web: { results: [{ url: 'u' }] } } }
+    }
+    const router = createSweepRouter({ ...depsWith({ braveKey: 'k' }).deps, braveFetch })
+    const res = await router('critical', 'general')('web', 'q', {})
+    assert.equal(calls.length, 2) // web ok + context attempted
+    assert.equal(res.data.web.results.length, 1) // web survived the context failure
+    assert.equal(res.data.context_grounding, undefined) // nothing attached on failure
   })
 
   test('critical without braveKey but with searxng → searxng fallback', async () => {

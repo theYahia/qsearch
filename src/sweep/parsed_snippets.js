@@ -68,6 +68,21 @@ export function renderMarkdown (results, queries, stats) {
       }
       lines.push('')
     })
+
+    // critical tier ($0.01): Brave LLM Context grounding (richer excerpts than web snippets).
+    // Mirrors brave_sweep.py's "📚 LLM Context" section so qsearch /sweep critical output is at parity.
+    const grounding = entry.context_grounding
+    if (Array.isArray(grounding) && grounding.length) {
+      lines.push(`### 📚 LLM Context (${grounding.length} sources)`, '')
+      grounding.slice(0, 10).forEach((g, i) => {
+        lines.push(`**${i + 1}. ${(g.title || '(no title)').slice(0, 140)}**`)
+        if (g.url) lines.push(`- URL: ${g.url}`)
+        for (const s of (g.snippets || []).slice(0, 5)) {
+          lines.push(`  > ${String(s).slice(0, 500)}`)
+        }
+        lines.push('')
+      })
+    }
   }
 
   lines.push('---', '', '## Sweep summary', '')

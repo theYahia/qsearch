@@ -129,7 +129,10 @@ export async function runSweep (queries, searchFnOrRouter, opts = {}) {
       }
       filtered.push(r)
     }
-    return filtered
+    // context_grounding is attached by the router for critical-tier queries (Brave LLM Context).
+    // Thread it out so the entry can carry it to renderMarkdown — fetchAndDedupe otherwise drops
+    // everything but data.web.results.
+    return { filtered, contextGrounding: data?.context_grounding || null }
   }
 
   await Promise.all(queries.map(({ label, query, priority, domain }) =>
@@ -140,10 +143,10 @@ export async function runSweep (queries, searchFnOrRouter, opts = {}) {
       const dStats = stats.by_domain[effectiveDomain]
       const searchFn = router(effectivePriority, effectiveDomain)
       try {
-        let filtered = await fetchAndDedupe(query, searchFn)
+        let { filtered, contextGrounding } = await fetchAndDedupe(query, searchFn)
         if (filtered.length === 0 && retryZeroResults) {
           await new Promise(r => setTimeout(r, 600 + Math.random() * 400))
-          filtered = await fetchAndDedupe(query, searchFn)
+          ;({ filtered, contextGrounding } = await fetchAndDedupe(query, searchFn))
           if (filtered.length > 0) stats.web_zero_recovered++
         }
         if (filtered.length === 0) {
@@ -154,7 +157,7 @@ export async function runSweep (queries, searchFnOrRouter, opts = {}) {
           console.warn(`  [sweep] ⚠ ${label}  ${query.slice(0, 55)} — ZERO RESULTS after retry`)
           return
         }
-        results.set(label, { query, priority: effectivePriority, domain: effectiveDomain, results: filtered, ok: true })
+        results.set(label, { query, priority: effectivePriority, domain: effectiveDomain, results: filtered, context_grounding: contextGrounding, ok: true })
         stats.web_ok++
         pStats.ok++
         dStats.ok++

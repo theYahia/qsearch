@@ -218,6 +218,15 @@ describe('qsearch server', () => {
     assert.equal(typeof res.json.model_loaded, 'boolean')
   })
 
+  test('GET /health?deep=1 surfaces brave key validity', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/health?deep=1')
+    // SearXNG unconfigured in test → canary null (not degraded); mock Brave 200s → key valid.
+    assert.equal(res.status, 200)
+    assert.ok('brave' in res.json, 'deep health exposes brave field')
+    assert.equal(res.json.brave.brave_key_valid, true)
+    assert.ok('sweep' in res.json)
+  })
+
   // ── GET /skill.md & /docs ──
 
   test('GET /skill.md returns API docs', async () => {
