@@ -24,3 +24,4 @@ data/*.db-shm
 research/
 docs/legacy/
 _raw_data/
+.gstack/
