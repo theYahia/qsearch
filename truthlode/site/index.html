@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Truthlode — 1 in 5 checkable AI citations doesn't fully hold up</title>
+<meta name="description" content="A neutral, auditable record of citation honesty in AI deep-research agents. 273 citations checked against their own sources; every verdict opens its receipt. No vendor money.">
+<link rel="canonical" href="https://truthlode.org/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Truthlode">
+<meta property="og:title" content="1 in 5 checkable AI citations doesn't fully hold up — Truthlode">
+<meta property="og:description" content="A neutral, auditable record of citation honesty in AI deep-research agents. 273 citations checked against their own sources; every verdict opens its receipt. No vendor money.">
+<meta property="og:url" content="https://truthlode.org/">
+<meta property="og:image" content="https://truthlode.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="1 in 5 checkable AI citations doesn't fully hold up — Truthlode">
+<meta name="twitter:image" content="https://truthlode.org/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='none' stroke='%23c0564a' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='23' fill='none' stroke='%23c0564a' stroke-width='1.5'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='%23c0564a'%3ET%3C/text%3E%3C/svg%3E">
+<!-- auto:jsonld --><script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"Truthlode — citation-honesty audit of AI deep-research agents","description":"A neutral, auditable record of citation honesty in AI deep-research agents. 273 citations checked against their own sources; every verdict opens its receipt. No vendor money.","url":"https://truthlode.org","sameAs":"https://github.com/theYahia/truthlode","license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"dateModified":"2026-06-10","distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://truthlode.org/data.json"},{"@type":"DataDownload","encodingFormat":"text/csv","contentUrl":"https://truthlode.org/truthlode.csv"}]}</script><!-- /auto:jsonld -->
+<link rel="preload" href="fonts/caslon-display-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plexmono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="brand">Truthlode <span class="tag">neutral · no vendor money</span></div>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Sections">
+  <div class="wrap">
+    <button class="tab" data-pane="leaderboard" aria-current="true">Leaderboard</button>
+    <button class="tab" data-pane="method" aria-current="false">Method</button>
+    <button class="tab" data-pane="trust" aria-current="false">Trust</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- ── LEADERBOARD (default, clean) ── -->
+  <section class="pane active" data-pane="leaderboard">
+    <h1 class="page-title">Citation honesty — legal v1</h1>
+    <p class="verdict-line">
+      <span class="vl-big" id="vl-big"><!-- auto:big -->1 in 5<!-- /auto:big --></span>
+      <span class="vl-rest">checkable citations from frontier deep-research agents doesn't fully hold up against the source it cites.</span>
+      <span class="vl-n"><span id="vl-n-data"><!-- auto:n -->39 of 199 checkable · 273 filed · 2 agents · 3 legal briefs<!-- /auto:n --></span> — open any row to its receipt.</span>
+    </p>
+    <p class="meta" id="stamp">loading…</p>
+    <p class="howto">Lower <b class="fab">fabricated</b> &amp; <b>unsupported</b> = better · higher <b>supported</b> = better · the empty end of a bar = source couldn't be fetched (paywall / bot-block) — a coverage gap, not a dishonesty verdict.</p>
+    <p class="stakes">Why this record exists: courts have caught AI-fabricated or mis-cited authorities in <b>1,200+ documented cases</b> since 2025, and Florida's fabricated-citation rule — effective <b>June 15, 2026</b> — puts every AI-handed citation under the attorney's own certification. <a href="https://www.damiencharlotin.com/hallucinations/" target="_blank" rel="noopener noreferrer">case database ↗</a></p>
+    <div class="rankby" role="group" aria-label="Rank the agents by">
+      <span class="rankby-label">Rank by</span>
+      <button data-sort="fabricatedRate" aria-pressed="true">fewest fabricated</button>
+      <button data-sort="unsupportedRate" aria-pressed="false">fewest unsupported</button>
+      <button data-sort="supportedOfTotal" aria-pressed="false">most supported</button>
+    </div>
+
+    <div class="board" id="board-body">loading…</div>
+    <p class="legend-line"><span class="k sup">supported</span><span class="k par">partial</span><span class="k uns">unsupported</span><span class="k fab">fabricated</span><span class="k track">empty end of track = couldn't fetch</span><span>bar = share of all cites</span><button class="linklike" data-pane="method">how a verdict is entered →</button></p>
+  </section>
+
+  <!-- ── METHOD ── -->
+  <section class="pane method" data-pane="method">
+    <h2>How a verdict is entered</h2>
+    <p class="prose">For each <span class="mono">(claim, cited URL)</span> a deep-research agent produced:</p>
+    <h3>1 — Fabricated check · mechanical</h3>
+    <p class="prose">Fetch the URL. If it 404s, fails DNS, or isn't a real page → <span class="badge Fabricated">Fabricated</span>. Reachable but unreadable (paywall, 403, a PDF we can't parse) → a <em>coverage gap</em>, scored neither way.</p>
+    <h3>2 — Support check · auditable judge</h3>
+    <p class="prose">Extract the source, rank the passages that touch the claim's specifics, and a judge rules whether they back it → <span class="badge Supported">Supported</span> / <span class="badge Partial">Partial</span> / <span class="badge Unsupported">Unsupported</span>. The source excerpt and the judge's evidence quote are filed beside every verdict — open any row on the Leaderboard to read it.</p>
+    <h3>The judge, checked against humans</h3>
+    <p class="prose" id="agree-block">Loading agreement…</p>
+    <p class="prose">Reported with Cohen's κ (raw agreement inflates when one label dominates). Every disagreement, in the open:</p>
+    <div class="conflicts" id="conflicts">loading…</div>
+    <h3>Coverage gaps, by domain</h3>
+    <p class="prose"><!-- auto:errshare -->27.1%<!-- /auto:errshare --> of cited URLs couldn't be fetched — Cloudflare bot-walls, paywalls, PDFs that won't parse. They're shown as coverage gaps, scored neither way, and the primary rates keep them in the denominator, so citing unfetchable sources can't inflate a score. The blocked list, in the open:</p>
+    <div class="conflicts" id="errdomains">loading…</div>
+    <h3>Reproduce it</h3>
+    <p class="prose">Open code, open data, a committed verdict cache — a re-run returns the same figures (each verdict is pinned; hosted model aliases drift). Case law is public, so ground truth is clean; v1 is deliberately narrow (Florida Rule 11 takes effect 15 June 2026). Breadth comes after the method survives scrutiny.</p>
+  </section>
+
+  <!-- ── TRUST ── -->
+  <section class="pane trust-pane" data-pane="trust">
+    <h2>Why you can trust the record</h2>
+    <div class="trust">
+      <div class="t"><b>You don't have to.</b><span>Every number opens its exhibit: claim, source excerpt, the judge's ruling and its evidence quote, a link to the original. Disagree? Open it.</span></div>
+      <div class="t"><b>Mechanical where it counts.</b><span>A dead or invented citation is caught by fetching the URL, not by an opinion. That figure can't be disputed.</span></div>
+      <div class="t"><b>Nothing dropped.</b><span>Bot-blocked sources show as coverage gaps, not silent exclusions. No agent pads its score by citing pages we can't reach.</span></div>
+      <div class="t"><b>Checked against people.</b><span>On a hand-labeled set the judge agrees with a human <span id="agree-inline">…</span>, reported with Cohen's κ; disagreements listed under Method.</span></div>
+      <div class="t"><b>No stake in the verdict.</b><span>No money from the agents on this record, ever. The maintainer's own tools aren't on it. Code MIT, data CC-BY — re-run, same verdicts.</span></div>
+    </div>
+    <p class="neutral"><b>No vendor money</b> · <b>maintainer's tools off the record</b> · <b>MIT / CC-BY-4.0</b> · <b>re-run → same verdicts</b></p>
+    <p class="fine">An independent referee — a vendor cannot credibly grade the honesty of its own citations.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="seal">Filed neutral</span>
+    <div class="foot-main">
+      <p class="neutral"><b>code MIT</b> · <b>data CC-BY-4.0</b> · <a href="https://github.com/theYahia/truthlode" target="_blank" rel="noopener noreferrer">source &amp; data on GitHub ↗</a> · <a href="https://github.com/theYahia/truthlode/issues/new?template=verdict-challenge.yml" target="_blank" rel="noopener noreferrer">challenge a verdict ↗</a> · <a href="data.json">JSON</a> · <a href="truthlode.csv">CSV</a></p>
+      <p class="fine">No analytics, no cookies, no third-party requests — what you read here is the entire transaction. If a verdict is wrong, the receipt is the appeal form.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

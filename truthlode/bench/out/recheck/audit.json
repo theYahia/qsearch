@@ -1,0 +1,57 @@
+[
+  {
+    "agent": "recheck",
+    "score": {
+      "total": 4,
+      "scorable": 4,
+      "counts": {
+        "Supported": 4,
+        "Partial": 0,
+        "Unsupported": 0,
+        "Fabricated": 0,
+        "Error": 0
+      },
+      "supportRate": 1,
+      "fabricatedRate": 0,
+      "unsupportedRate": 0
+    },
+    "results": [
+      {
+        "claim": "On September 4, 2025, the FTC filed a complaint against Gateway Pet Memorial Services, alleging its use of one-year non-competes violated Section 5 of the FTC Act.",
+        "source_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/gateway-pet-memorial-services",
+        "verdict": "Supported",
+        "evidence": "The Federal Trade Commission filed a complaint against Gateway Services and its subsidiary Gateway US Holdings, Inc., (collectively referred to as Gateway), which alleges that Gateway imposed noncompete agreements on almost all of its employees, which typically prohibited employees from working in the pet cremation service industry anywhere in the U.S. for one year after leaving Gateway.",
+        "confidence": 1,
+        "excerpt": "The Federal Trade Commission filed a complaint against Gateway Services and its subsidiary Gateway US Holdings, Inc., (collectively referred to as Gateway), which alleges that Gateway imposed noncompete agreements on almost all of its employees, which typically prohibited employees from working in the pet cremation service industry anywhere in the U.S. for one year after leaving Gateway.\n\nPRESS RELEASE: FTC Approves Final Order Prohibiting Noncompete Enforcement by Gateway Services\n\nPUBLIC STATEMENT: Statement of Chairman Andrew N. Ferguson Joined by Commissioner Melissa Holyoak In the Matter ",
+        "error": null
+      },
+      {
+        "claim": "The New York Legislature passed S3100A in June 2023, which would have banned nearly all non-compete agreements.",
+        "source_url": "https://www.jacksonlewis.com/insights/step-too-far-governor-hochul-vetoes-new-york-non-compete-ban",
+        "verdict": "Supported",
+        "evidence": "New York Governor Kathy Hochul vetoed Senate Bill S3100A, a bill passed by both houses of the legislature in June, that would prohibit all non-compete agreements.",
+        "confidence": 1,
+        "excerpt": "New York Governor Kathy Hochul vetoed Senate Bill S3100A, a bill passed by both houses of the legislature in June, that would prohibit all non-compete agreements.\n\nThis is a significant and interesting end to a year of upheaval in the world of non-compete agreements and other restrictive covenants. In January 2023, the Federal Trade Commission issued a proposed rule to ban all non-compete agreements. In May, Minnesota enacted a statute that bans non-compete agreements. Also in May 2023, the National Labor Relations Board’s general counsel issued a memorandum declaring that non-compete agreemen",
+        "error": null
+      },
+      {
+        "claim": "Texas is one of the few states where judges reform (rather than void) overbroad covenants under Section 15.51(c).",
+        "source_url": "https://worldbizmag.com/texas-non-compete-and-non-solicitation-agreements-what-a-dallas-business-law-attorney-says-is-actually-enforceable-in-2026/",
+        "verdict": "Supported",
+        "evidence": "When a court finds a covenant overbroad, Section 15.51(c) allows reformation. Texas is one of the few states where judges rewrite the offending terms rather than strike the entire clause.",
+        "confidence": 1,
+        "excerpt": "When a court finds a covenant overbroad, Section 15.51(c) allows reformation. Texas is one of the few states where judges rewrite the offending terms rather than strike the entire clause. That makes overdrafted Texas non-competes survivable, but the employer cannot collect damages for the pre-reformation conduct, which removes most of the leverage.\n\nFor background reading, the Texas Business and Commerce Code is published at statutes.capitol.texas.gov, and the State Bar of Texas Labor and Employment Section maintains current practice materials. Before sending a cease-and-desist letter on an ex",
+        "error": null
+      },
+      {
+        "claim": "Texas courts first determine whether there is an otherwise enforceable agreement, then whether the covenant is ancillary to or part of that agreement.",
+        "source_url": "https://www.littler.com/texas-supreme-court-provides-new-focus-noncompete-contract-enforcement",
+        "verdict": "Supported",
+        "evidence": "In granting summary judgment, the trial court relied on language in the Act, which states that a 'covenant not to compete is enforceable if it is ancillary to or part of an otherwise enforceable agreement at the time the agreement is made ...'",
+        "confidence": 1,
+        "excerpt": "Approximately five years after signing the employment agreement, Johnson voluntarily terminated his employment with ASM and accepted a position with a competing company—Strunk & Associates, L.P. (\"Strunk\"). ASM filed a suit against Johnson and Strunk for breach of a covenant not to compete, requesting injunctive and monetary relief. After the trial court granted a temporary injunction, Johnson and Strunk filed a motion for summary judgment claiming that the noncompete was unenforceable as a matter of law. In granting summary judgment, the trial court relied on language in the Act, which states",
+        "error": null
+      }
+    ]
+  }
+]
