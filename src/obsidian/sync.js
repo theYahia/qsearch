@@ -6,7 +6,7 @@ const MEILI_URL = process.env.MEILISEARCH_URL || 'http://localhost:7700'
 const MEILI_KEY = process.env.MEILISEARCH_KEY || 'masterKey'
 
 /**
- * Write Obsidian-friendly markdown to vault Clippings/qsearch/ folder.
+ * Write Obsidian-friendly markdown to vault _Система/qsearch/ folder.
  *
  * @param {Object} args
  * @param {string} args.topic - sanitized topic name
@@ -21,7 +21,7 @@ export async function syncToObsidian ({ topic, queries, results, stats }) {
 
   const date = new Date().toISOString().slice(0, 10)
   const filename = `${topic}_${date}.md`
-  const dir = join(vaultPath, 'Clippings', 'qsearch')
+  const dir = join(vaultPath, '_Система', 'qsearch')
   mkdirSync(dir, { recursive: true })
   const filepath = join(dir, filename)
 
@@ -133,7 +133,7 @@ export async function appendDailyLog ({ topic, queries, stats }) {
   const vaultPath = process.env.OBSIDIAN_VAULT_PATH
   if (!vaultPath) return null
 
-  const logPath = join(vaultPath, 'Clippings', 'qsearch', 'qsearch_log.md')
+  const logPath = join(vaultPath, '_Система', 'qsearch', 'qsearch_log.md')
   const date = new Date().toISOString().slice(0, 10)
   const time = new Date().toISOString().slice(11, 19)
 
