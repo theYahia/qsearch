@@ -100,6 +100,21 @@ public, every resolution is logged. To nominate the next agent for the docket, v
 }
 ```
 
+## Related work
+
+Citation quality in deep-research agents is measured in several places now:
+[DRACO](https://research.perplexity.ai/articles/evaluating-deep-research-performance-in-the-wild-with-the-draco-benchmark)
+(Perplexity) and [DeepResearch Bench](https://deepresearch-bench.github.io/) (USTC) score
+agents on citation accuracy across general domains;
+[Rao, Wong & Callison-Burch](https://arxiv.org/abs/2604.03173) measure fabricated-URL rates
+at scale; [LegalCiteBench](https://arxiv.org/abs/2605.10186) probes citation recall in legal
+models.
+
+Truthlode is the narrower, complementary case: a **neutral** record — no vendor money, the
+maintainer's own tools off the board — where each verdict opens its **receipt** for hand
+re-checking, the judge asks whether the source **supports the claim** (not merely whether the
+URL resolves), and ground truth is public case law fetched live.
+
 ## Neutrality
 
 No money from the agents on this record, ever. No badge fees, no sponsored re-runs. The

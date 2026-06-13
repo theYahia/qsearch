@@ -16,7 +16,7 @@
 - [x] **Cohen's kappa** (2026-06-09): agreement.js считает κ (4-way + binary) + версию без mechanical-Fabricated. Реально: binary 87.3% κ=0.750, 4-way 83.6% κ=0.737 (substantial)
 - [ ] **Независимый 2-й аннотатор** (ОПЕРАТОР): 2-й человек грейдит LIVE-источник (не excerpt судьи), re-sample stratified по agent+topic (не по вердикту судьи) → inter-annotator κ. Хук готов (agreement.js arg3 = labels_2.json)
 - [x] **Fix doc/code drift** (2026-06-09): убран мёртвый ollamaEmbed import; verifier docstring + README = реальный lexical-метод + qwen2.5:14b; judge-reproducibility задокументирована (cache-pinned). (`git add bench/.cache` — при publish)
-- [ ] Прогнать **ChatGPT DR** (ОПЕРАТОР, своя подписка ~2ч) → 3-agent борд с явным проигравшим
+- [ ] Прогнать **ChatGPT DR** (ОПЕРАТОР, своя подписка ~2ч) → 3-agent борд с явным проигравшим. **Решение 13.06: НЕ launch-гейт — запускаемся n=2, ChatGPT DR = первый proof-post (fast-follow), совпадает с Phase 1 «не блокировать на контестантах».**
 
 ## Phase 1 — Опубликовать бенч (НЕ блокировать на контестантах) 🔴 (эта неделя)
 
@@ -81,7 +81,7 @@
 - [ ] Нейтральность арбитра > любая партнёрка/раунд
 
 ## Риски-мониторинг (forcing functions, не пассивные чекбоксы)
-- [ ] **#1 (главный):** академ-группа (2604.03173 / 2605.06635 авторы) ставит live нейтр. citation-bench первой → лечится ТОЛЬКО ship-date на Phase 1 (не мониторингом). Окно = недели.
+- [ ] **#1 (главный) — ЧАСТИЧНО МАТЕРИАЛИЗОВАЛСЯ (verify 13.06):** Perplexity выпустил **DRACO** (citation-bench, 8.06, домен Law) — но он **вендорский** (Perplexity сам выигрывает) → *нейтральная* клетка ещё свободна, DRACO = foil, не killer. Авторы 2604.03173 = **Rao/Wong/Callison-Burch** (UPenn) — если превратят препринт в live нейтр. борд = острейшая версия угрозы. + DeepResearch Bench (live, академ), LegalCiteBench (closed-book). Лечится ТОЛЬКО ship-date на Phase 1 (не мониторингом). Окно = недели — НЕ сдвигать дальше 23.06.
 - [ ] Perplexica / Onyx добавляют multi-engine provenance + trust-mesh → qsearch-ниша сужается
 - [ ] Exa / Parallel выпускают self-host → суверенный квадрат под угрозой
 - [ ] Exa входит в legal citation-verification → ускорить legal-Bench

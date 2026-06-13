@@ -4,6 +4,13 @@
 > (`node site/build_site.mjs` напечатает новые headline-числа) и обновить каждый драфт.**
 > Канонические числа сейчас: 273 filed · 199 checkable · 39 not-fully-supported (**19.6% ≈ 1 in 5**) ·
 > строго Unsupported+Fabricated: 31 (**15.6% ≈ 1 in 6**) · judge↔human 87.3% (κ=0.75) на 55 gold.
+>
+> **Update 2026-06-13 (landscape verify):** (1) Запуск решён **n=2 сейчас**, ChatGPT DR = fast-follow
+> proof-post (не гейт). (2) **DRACO** (Perplexity, citation-bench, вышел 8.06, Perplexity сам
+> выигрывает) + DeepResearch Bench + Rao/Wong/Callison-Burch (arXiv 2604.03173) + LegalCiteBench
+> заняли соседние клетки → split-фрейминг: сайт нейтрально (Related-work блок), посты остро (хук
+> ниже). (3) **«1,200+» проверено** — живая база Charlotin ~1,600 (11.06), безопасно. (4) Это
+> **Rule 2.515(d)(2)**, НЕ «Rule 11» (то федеральный FRCP 11) — «Rule 11» в публичные драфты не пускать.
 
 ## 0. Атом-фраза (единственная версия правды, везде одинаковая)
 
@@ -13,6 +20,11 @@
 
 Fallback при атаке на Partial-бандлинг: «1 in 6 flatly failed — the source didn't say it, or didn't exist» (31/199).
 Запрещено: прилагательные («lying», «caught»), per-vendor шейминг в заголовках, «11.4% of 273» (смешивает Error в числитель/знаменатель непонятным образом).
+
+**DRACO news-hook (ТОЛЬКО off-site — посты/письма, НЕ на сайте):**
+> *"A week ago Perplexity shipped DRACO — a deep-research benchmark where Perplexity wins. Here's the neutral one: no vendor money, our own tools off the board, and every verdict opens its receipt."*
+
+Это острый ньюс-пег недели (DRACO вышел 8.06). На самом сайте джеба НЕТ — там нейтральный Related-work блок (Method-вкладка). Foil живёт в Show HN / Bluesky / письмах. Не называть Perplexity «врущим» — только структурный факт «вендор грейдит сам себя».
 
 ---
 
@@ -92,10 +104,16 @@ wanted (credited in README)» — медленно. Бриф: грейдить �
 > fabricated-citation rule took effect yesterday. Code MIT, data CC-BY, committed verdict
 > cache — `node bench/harness.js` reproduces the board.
 >
+> Related work: Perplexity's DRACO (last week) and DeepResearch Bench score citation accuracy
+> across general domains, and Rao/Wong/Callison-Burch measure fabricated-URL rates at scale.
+> Truthlode is the narrower, neutral case — no vendor grading itself on the board, every verdict
+> opens a receipt you re-check by hand, and the judge asks whether the source *supports* the
+> claim, not just whether the URL resolves. Legal vertical, public case law as ground truth.
+>
 > What I'd most like from HN: red-team audit.json. If you find a verdict you disagree with,
 > open an issue — every dispute is public. Which agent should go on the board next?
 
-**Преэмптим** (в комменте выше): circularity, Error/27%, audit-not-leaderboard, «фабрикации почти нет» (честность = кредит).
+**Преэмптим** (в комменте выше): circularity, Error/27%, audit-not-leaderboard, «фабрикации почти нет» (честность = кредит), **«это уже сделали» (DRACO/DeepResearch Bench → мы нейтральны + receipt + support-not-existence, см. related-work абзац)**.
 **Только-если-спросят** (ответы держим наготове, не поднимаем сами): gold set n=1 annotator (→ «labels are public next to receipts; re-grade any and file an issue» + к этому моменту κ 2-го аннотатора), cherry-picked topics (→ public case law = чистый ground truth; промпты опубликованы; топик #4 — голосование в issues), вендор-фанаты (→ «2 of 119 cited URLs did not resolve» — механика, логи опубликованы; каждый агент выигрывает свою метрику: Gemini — fabrication, Claude — unsupported).
 
 ---
@@ -120,10 +138,11 @@ wanted (credited in README)» — медленно. Бриф: грейдить �
 | r/biglaw, r/law | Аллергия на промо | **Только комменты** в органических тредах про санкции: число + receipt-линк. Никогда свой сабмит | навсегда |
 | Bar associations (Nevada AI Work Group, ABA LTRC) | Легитимизаторы | **Только после публикации**, неделя 3–4: «neutral rating of tools your members use, free, no vendor money» | post-publish only |
 
-⚠️ Перед legal-волной: сверить живое число кейсов в базе Charlotin (одна из статей упоминала
-~712 на момент 2025; наш ресёрч давал 1,200+ на июнь 2026). **Число в stakes-strip
-(index.html) и во всех письмах должно быть ≤ живого числа базы.** Сайт про citation honesty
-не может сам облажаться на цитате.
+✅ **Проверено 13.06:** живая база Charlotin ~**1,600** кейсов (на 11.06; раньше в 2026 фигурировало
+1,353). «1,200+» в stakes-strip безопасно консервативно — старый страх «может ~712» опровергнут.
+Перед самой волной — финальный взгляд на живой счётчик базы; число в stakes-strip (index.html)
+и во всех письмах держать **≤ живого числа базы**. Сайт про citation honesty не может сам
+облажаться на цитате.
 
 ---
 
@@ -158,6 +177,11 @@ wanted (credited in README)» — медленно. Бриф: грейдить �
 > code, CC-BY data, fully reproducible: [link].
 >
 > Timely: Florida's fabricated-citation rule took effect June 15.
+
+**DRACO-opener (опц. swap-in в T1/T2 для тех, кто писал про DRACO / Perplexity):**
+> Perplexity shipped DRACO last week — a deep-research benchmark where Perplexity itself comes
+> out on top. Truthlode is the neutral counterpart: no vendor money, our own tools off the
+> board, and every verdict opens its receipt.
 
 **T3 — академик, цитировавший смежное (НИКОГДА — авторам twin-papers):**
 > Subject: Open citation-verification dataset (87.3% judge-human agreement, κ=0.75) — re: your [paper]
@@ -247,7 +271,7 @@ Pinned issue: «Request an agent» (ChatGPT DR ✅ done / Perplexity / Exa / Par
 
 - [ ] ChatGPT DR прогнан, заскорен, board n=3, `build_site.mjs` пересобран, og.png переснят
 - [ ] 2-й аннотатор отгрейдил ≥50 айтемов с живых источников, κ посчитан и вписан в Method/README
-- [ ] Число «1,200+» сверено с живой базой Charlotin (если меньше — поправить index.html stakes-strip + все драфты)
+- [x] Число «1,200+» сверено с живой базой Charlotin (13.06: ~1,600 — безопасно; финальный взгляд на счётчик перед постингом)
 - [ ] Charlotin: проверена неаффилированность с twin-papers
 - [ ] Контакты legal-таргетов верифицированы (URL форм / email)
 - [ ] truthlode.org зарегистрирован, DNS на GH Pages, HTTPS работает

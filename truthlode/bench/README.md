@@ -27,7 +27,7 @@ Conservative by design: if support isn't explicitly present, the verdict is `Uns
 
 ## Focus: legal research (v1)
 
-Legal is where citation honesty is already a public, high-stakes crisis: **1,200+ documented court cases (2025–2026)** of lawyers sanctioned for AI-fabricated citations (Oregon $109,700; Florida Rule 11 effective June 15, 2026; new cases weekly). Case law is fully public, so ground truth is clean. v1 scores deep-research agents on real legal-research questions. (Medical and finance verticals to follow.)
+Legal is where citation honesty is already a public, high-stakes crisis: **1,200+ documented court cases (2025–2026)** of lawyers sanctioned for AI-fabricated citations (Oregon $109,700; Florida's fabricated-citation rule (Rule 2.515(d)(2)) effective June 15, 2026; new cases weekly). Case law is fully public, so ground truth is clean. v1 scores deep-research agents on real legal-research questions. (Medical and finance verticals to follow.)
 
 ## Run it
 
@@ -61,6 +61,8 @@ Judge↔human agreement on a 55-citation gold set: **87.3% binary (κ=0.750), 83
 ## Method anchors
 
 CiteGuard (arXiv:2510.17853), FACTS Grounding (Google DeepMind), NLI entailment (FEVER), DeepResearch Bench. Legal-citation existence resolved against CourtListener / Free Law Project (roadmap).
+
+Related citation-quality benchmarks: [DRACO](https://research.perplexity.ai/articles/evaluating-deep-research-performance-in-the-wild-with-the-draco-benchmark) (Perplexity) and [DeepResearch Bench](https://deepresearch-bench.github.io/) score citation accuracy across general domains; [Rao, Wong & Callison-Burch](https://arxiv.org/abs/2604.03173) measure fabricated-URL rates at scale; [LegalCiteBench](https://arxiv.org/abs/2605.10186) probes legal-citation recall. Truthlode differs by being neutral (no vendor money, maintainer's tools off the board), publishing a per-citation receipt for every verdict, judging *support* rather than mere URL existence, and using public case law as live ground truth.
 
 ## License
 
