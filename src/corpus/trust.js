@@ -15,22 +15,49 @@
 
 export const DECAY_K = Number(process.env.QSEARCH_TRUST_DECAY_K) || 0
 
-/**
- * @param {{sweepCount?:number, engineDiversity?:number, topicDiversity?:number, daysSinceLastSeen?:number|null}} f
- * @param {{decayK?:number}} [opts]
- * @returns {number}
- */
-export function computeTrust (f, opts = {}) {
+// Active trust formula: 'v1' (production default, unchanged) or 'v2' (refined candidate).
+// Flip with QSEARCH_TRUST_FORMULA=v2 to roll the candidate into the live ranking — but compare
+// first with `node src/corpus/trust_ab.mjs` (this is an A/B switch, never a blind swap).
+// Default 'v1' keeps computeTrust byte-identical to the prior implementation.
+export const TRUST_VARIANT = (process.env.QSEARCH_TRUST_FORMULA || 'v1').toLowerCase()
+
+function decayFactor (days, k) {
+  return (k > 0 && Number.isFinite(days) && days >= 0) ? Math.exp(-k * days) : 1
+}
+
+// v1 (production): purely multiplicative. NOTE the collapse property — engineDiversity=0 ⇒ trust=0
+// even for a URL seen across many sweeps (e.g. a corpus/academic source with no engines recorded).
+// v2 was designed to fix exactly that; A/B before switching.
+export function computeTrustV1 (f, opts = {}) {
   const sweepCount = f.sweepCount || 0
   const engineDiversity = f.engineDiversity || 0
   const topicDiversity = f.topicDiversity || 1
   const base = Math.log(sweepCount + 1) * engineDiversity * topicDiversity
-  const k = opts.decayK ?? DECAY_K
-  const days = f.daysSinceLastSeen
-  if (k > 0 && Number.isFinite(days) && days >= 0) {
-    return base * Math.exp(-k * days)
-  }
-  return base
+  return base * decayFactor(f.daysSinceLastSeen, opts.decayK ?? DECAY_K)
+}
+
+// v2 (candidate): same drivers, two deliberate fixes —
+//   (1) no zero-collapse: diversity terms become (1 + ln(1+x)), so a missing engine/topic count
+//       floors the factor at 1 instead of nuking the whole product to 0;
+//   (2) diminishing returns: ln(1+x) compresses the diversity range so one hyper-diverse URL can't
+//       dominate the board linearly. sweep_count stays the primary signal.
+export function computeTrustV2 (f, opts = {}) {
+  const sweepCount = f.sweepCount || 0
+  const engineDiversity = Math.max(0, f.engineDiversity || 0)
+  const topicDiv = Math.max(0, f.topicDiversity || 0)
+  const base = Math.log(sweepCount + 1) * (1 + Math.log1p(engineDiversity)) * (1 + Math.log1p(topicDiv))
+  return base * decayFactor(f.daysSinceLastSeen, opts.decayK ?? DECAY_K)
+}
+
+/**
+ * Dispatch to the active trust formula. Default 'v1' (unchanged production behavior).
+ * Pass opts.variant ('v1'|'v2') to force one (the A/B harness does this); otherwise honors TRUST_VARIANT.
+ * @param {{sweepCount?:number, engineDiversity?:number, topicDiversity?:number, daysSinceLastSeen?:number|null}} f
+ * @param {{decayK?:number, variant?:string}} [opts]
+ * @returns {number}
+ */
+export function computeTrust (f, opts = {}) {
+  return (opts.variant || TRUST_VARIANT) === 'v2' ? computeTrustV2(f, opts) : computeTrustV1(f, opts)
 }
 
 // Topic is the snake_case prefix of a sweep label ("russia_smb_q1" → "russia").
