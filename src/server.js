@@ -41,6 +41,7 @@ import { cleanResults, cleanContext, warmModel, localLlmAvailable, CLEAN_MODEL }
 import { sanitizeText, canonicalizeUrl } from './clean/sanitize.js'
 import { MeilisearchCorpus } from './corpus/meilisearch.js'
 import { QdrantCorpus } from './corpus/qdrant.js'
+import { CircuitBreaker } from './corpus/circuit_breaker.js'
 import { embedder as ollamaEmbedderInstance } from './embed/ollama.js'
 import { LlamaCppEmbedder } from './embed/llamacpp.js'
 import { crawl } from './crawl/crawl4ai.js'
@@ -224,12 +225,24 @@ function dedupeByUrl (items) {
 }
 
 // ── Corpus routing ─────────────────────────────────────────────────
+// Per-backend circuit breakers: between the 30s health polls a flapping/slow backend would otherwise
+// make every corpus search wait out its timeout. The breaker skips a failing backend instantly after a
+// few failures and probes for recovery — so a dead Qdrant degrades to Meilisearch-only in ms, not seconds.
+const CORPUS_TIMEOUT_MS = Number(process.env.QSEARCH_CORPUS_TIMEOUT_MS) || 4000
+const meiliBreaker = new CircuitBreaker({ name: 'meili', failureThreshold: 3, cooldownMs: 15_000, timeoutMs: CORPUS_TIMEOUT_MS })
+const qdrantBreaker = new CircuitBreaker({ name: 'qdrant', failureThreshold: 3, cooldownMs: 15_000, timeoutMs: CORPUS_TIMEOUT_MS })
+
 async function corpusSearch (query, n_results) {
   if (corpusStatus.meilisearch === 'unavailable' && corpusStatus.qdrant === 'unavailable') return []
-  const results = await Promise.all([
-    corpusStatus.meilisearch !== 'unavailable' ? meili.search(query, { limit: n_results }) : Promise.resolve([]),
-    (corpusStatus.qdrant !== 'unavailable' && embedder.available) ? qdrant.search(query, { limit: n_results }) : Promise.resolve([])
-  ])
+  // Each backend runs under its breaker with a hard timeout; failure/timeout → [] fallback (never throws),
+  // so one backend being down or slow can't degrade or block the other.
+  const meiliHit = (corpusStatus.meilisearch !== 'unavailable')
+    ? meiliBreaker.run(() => meili.search(query, { limit: n_results }), [])
+    : Promise.resolve([])
+  const qdrantHit = (corpusStatus.qdrant !== 'unavailable' && embedder.available)
+    ? qdrantBreaker.run(() => qdrant.search(query, { limit: n_results }), [])
+    : Promise.resolve([])
+  const results = await Promise.all([meiliHit, qdrantHit])
   return dedupeByUrl(results.flat())
 }
 
