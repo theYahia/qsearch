@@ -1,7 +1,7 @@
 # qsearch memcache — Design Doc
 
 > **Дата:** 2026-05-07 · **Статус:** DRAFT (design only, not implemented) · **Owner:** Yahia
-> **Cross-ref:** rd101 (research-debt #101). Pattern reference — `D:/Yahia/active/claude-webcache/`.
+> **Cross-ref:** rd101 (research-debt #101). Pattern reference — `D:/Yahia/experiments/claude-webcache/`.
 
 ## 1. Problem Statement
 

@@ -33,7 +33,7 @@
 
 - [`../x402.md`](../x402.md) — possible payment rail
 - [`../../ARCHITECTURE.md`](../../ARCHITECTURE.md) — LAYER 2 (signed log), LAYER 4 (feed format), LAYER 8 (RAG gates), LAYER 10 (revenue)
-- `D:/Yahia/active/claude-webcache/` — existing cache plugin, candidate substrate
+- `D:/Yahia/experiments/claude-webcache/` — existing cache plugin, candidate substrate
 
 ## Next step
 
