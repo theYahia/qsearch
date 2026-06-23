@@ -1,0 +1,18 @@
+{
+  "name": "doesitlie-bench",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "A neutral, reproducible benchmark for citation honesty in AI deep-research agents.",
+  "license": "MIT",
+  "homepage": "https://doesitlie.org",
+  "repository": { "type": "git", "url": "https://github.com/theYahia/doesitlie.git" },
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test bench/test/*.test.js",
+    "bench": "node bench/harness.js",
+    "build": "node site/build_site.mjs",
+    "validate": "node bench/validate.mjs",
+    "agreement": "node bench/agreement.js"
+  }
+}

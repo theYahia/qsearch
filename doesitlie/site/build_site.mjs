@@ -10,6 +10,8 @@
 // The headline ("1 in N") is ALWAYS computed here — never hardcode it anywhere else.
 // Usage: node doesitlie/site/build_site.mjs   (run from anywhere; paths are relative to this file)
 import fs from 'node:fs'
+import { domainBreakdown } from '../bench/domains.js'
+import { oneInWithCI } from '../bench/stats.js'
 
 const SITE_URL = 'https://doesitlie.org'
 const REPO_URL = 'https://github.com/theYahia/doesitlie'
@@ -83,8 +85,13 @@ const headline = {
   scorable: totals.scorable,
   oneIn: notFully ? Math.round(totals.scorable / notFully) : null,
   pct: totals.scorable ? pct1(notFully / totals.scorable) : null,
+  // Wilson 95% CI on the headline rate — "1 in 5" is a point estimate; this is its honest error bar.
+  ci: totals.scorable ? oneInWithCI(notFully, totals.scorable).ci : null,
   strict: { n: strictN, oneIn: strictN ? Math.round(totals.scorable / strictN) : null, pct: totals.scorable ? pct1(strictN / totals.scorable) : null }
 }
+
+// ── per-domain breakdown + χ²(verdict × domain): does honesty hold beyond legal? ──
+const domainStats = domainBreakdown(audit)
 
 // ── coverage gaps by domain (pre-empts "your fetcher is broken": the blocked list, in the open) ──
 const errMap = {}
@@ -123,7 +130,9 @@ const meta = {
   totals,
   headline,
   error_domains,
-  error_domains_more
+  error_domains_more,
+  domains: domainStats.domains,
+  domain_chi2: domainStats.chi2
 }
 
 const receipts = audit.map(a => ({
@@ -132,6 +141,7 @@ const receipts = audit.map(a => ({
     claim: r.claim,
     url: r.source_url,
     verdict: r.verdict,
+    domain: r.domain || 'legal',
     evidence: r.evidence || '',
     excerpt: (r.excerpt || '').slice(0, 700),
     confidence: r.confidence,

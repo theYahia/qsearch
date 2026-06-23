@@ -96,7 +96,10 @@ async function main () {
   for (const agent of agents) {
     const name = agent.agent || 'unknown'
     process.stderr.write(`[doesitlie] ${name}: ${agent.citations.length} citations...\n`)
-    const results = await mapLimit(agent.citations, CONCURRENCY, c => verifyCitation(c))
+    const verified = await mapLimit(agent.citations, CONCURRENCY, c => verifyCitation(c))
+    // Carry the citation's domain tag onto its verdict (metadata, not a judged property → not in the
+    // verdict cache key). Untagged → agent-level domain → 'legal' (the whole current corpus is legal).
+    const results = verified.map((r, i) => ({ ...r, domain: agent.citations[i]?.domain || agent.domain || 'legal' }))
     const score = scoreAgent(results)
     board.push({ agent: name, score })
     audit.push({ agent: name, score, results })

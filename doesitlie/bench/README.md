@@ -27,7 +27,9 @@ Conservative by design: if support isn't explicitly present, the verdict is `Uns
 
 ## Focus: legal research (v1)
 
-Legal is where citation honesty is already a public, high-stakes crisis: **1,200+ documented court cases (2025–2026)** of lawyers sanctioned for AI-fabricated citations (Oregon $109,700; Florida's fabricated-citation rule (Rule 2.515(d)(2)) effective June 15, 2026; new cases weekly). Case law is fully public, so ground truth is clean. v1 scores deep-research agents on real legal-research questions. (Medical and finance verticals to follow.)
+Legal is where citation honesty is already a public, high-stakes crisis: **1,200+ documented court cases (2025–2026)** of lawyers sanctioned for AI-fabricated citations (Oregon $109,700; Florida's fabricated-citation rule (Rule 2.515(d)(2)) effective June 15, 2026; new cases weekly). Case law is fully public, so ground truth is clean. v1 scores deep-research agents on real legal-research questions.
+
+**Tech / finance / health are scaffolded, not faked.** The scoring, per-domain breakdown, and χ² independence test are domain-aware today; those verticals show as docketed (awaiting real agent runs) rather than invented data. The moment real tech/finance/health submissions land, per-domain rates + the "does honesty hold across domains?" test light up with no code change.
 
 ## Run it
 
@@ -44,6 +46,22 @@ node doesitlie/bench/harness.js <submissions.json> [outdir]
 Output: `leaderboard.md` + `audit.json` (every verdict + source excerpt).
 
 Judge: local Ollama (`qwen2.5:14b-instruct`, $0) by default, or DeepSeek (`DOESITLIE_JUDGE_PROVIDER=deepseek`) — the judge label is recorded per run. Built on the [qsearch](../../) verification substrate (SSRF-guarded fetch + Crawl4AI headless fallback + main-content extraction, via `fetch_content.js`).
+
+## Reproduce & verify (no trust required)
+
+```bash
+npm test          # stats, scoring, domain breakdown, κ — all unit-tested (anchored to textbook values)
+npm run build     # recompute the site (headline, κ, badge) from the raw audit — numbers are never hardcoded
+npm run validate  # integrity gate: every published number must re-derive from the receipts, or it fails
+```
+
+`validate.mjs` is the merge gate (CI: `.github/workflows/bench-integrity.yml`). It re-derives the headline ("1 in N"), every board metric, and the judge↔human κ straight from `out/all/audit.json` + `gold/labels.json`; confirms **every published receipt traces to a real verdict** (nothing invented); and checks `badge.json` agrees. A re-judge needs a local judge (Ollama/DeepSeek) — cloud CI has no model, so it verifies determinism rather than re-judging.
+
+### Statistical rigor (`bench/stats.js`)
+
+- **Wilson 95% CI** on the headline — "1 in 5" ships with its honest error bar (`data.json` → `meta.headline.ci`).
+- **χ²(verdict × domain)** — when non-legal agent runs land, tests whether citation honesty *actually* differs by domain or is noise (`meta.domain_chi2`), with Cramér's V effect size and a small-expected-cell validity flag. Every citation carries a `domain` tag (untagged → `legal`, since the whole v1 corpus is legal — a truthful default, not an invented one).
+- **Cohen's κ** for judge↔human agreement — one shared implementation across the site builder, the agreement tool, and the tests; bootstrap CIs (seeded → deterministic) available for any statistic.
 
 ## Leaderboard
 
