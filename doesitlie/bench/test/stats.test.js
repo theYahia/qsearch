@@ -67,6 +67,13 @@ test('chiSquareIndependence — independent table gives χ²≈0, p≈1', () => 
   near(r.cramersV, 0, 1e-9)
 })
 
+test("chiSquareIndependence — Cramér's V uses min(r-1,c-1), not max (2×3 table)", () => {
+  // a non-square table where min(r-1,c-1)=1 but max=2 → distinguishes the two (a 2×2 cannot)
+  const r = chiSquareIndependence([[10, 0, 0], [0, 10, 10]])
+  near(r.cramersV, Math.sqrt(r.chi2 / (r.n * 1)), 1e-6)              // correct: min = 1
+  assert.ok(Math.abs(r.cramersV - Math.sqrt(r.chi2 / (r.n * 2))) > 0.05) // would be wrong with max = 2
+})
+
 test('chiSquareIndependence — low expected-count guard flags small cells', () => {
   const r = chiSquareIndependence([[1, 2], [2, 1]]) // every expected < 5
   assert.equal(r.lowExpectedCells, 4)

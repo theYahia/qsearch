@@ -10,11 +10,15 @@
 // Usage: node doesitlie/bench/validate.mjs   (paths default relative to this file; override via argv)
 
 import fs from 'node:fs'
+import path from 'node:path'
+import crypto from 'node:crypto'
+import { pathToFileURL } from 'node:url'
 import { scoreAgent } from './harness.js'
 import { cohenKappa } from './stats.js'
 import { VERDICTS } from './verifier.js'
 
-const arg = (i, def) => process.argv[i] ? new URL(process.argv[i], `file://${process.cwd()}/`) : new URL(def, import.meta.url)
+// pathToFileURL(resolve()) — NOT `new URL(argv, base)`, which parses a Windows "D:/…" path as a URL scheme.
+const arg = (i, def) => process.argv[i] ? pathToFileURL(path.resolve(process.argv[i])) : new URL(def, import.meta.url)
 const AUDIT = arg(2, '../bench/out/all/audit.json')
 const GOLD = arg(3, '../bench/gold/labels.json')
 const DATA = arg(4, '../site/data.json')
@@ -29,7 +33,13 @@ const pass = m => ok.push(`✓ ${m}`)
 const readJson = u => { try { return JSON.parse(fs.readFileSync(u, 'utf-8')) } catch (e) { return { __err: e.message } } }
 const close = (a, b, tol = 1e-6) => Math.abs(a - b) <= tol
 const norm = s => String(s || '').trim().toLowerCase().replace(/\s+/g, ' ')
+// ckey: 80-char-claim key for matching GOLD↔audit (mirrors build_site.mjs/agreement.js, so the
+// re-derived κ uses the same matching the published κ did — must stay consistent with them).
 const ckey = (u, c) => norm(u) + '||' + norm(c).slice(0, 80)
+// fullKey: FULL-claim hash for the receipts-integrity check. The 80-char slice was forgeable —
+// 79% of real claims exceed 80 chars, so a receipt could reuse a real url+prefix with a fabricated
+// tail under the correct verdict and slip past. Hashing the whole claim closes that hole.
+const fullKey = (u, c) => norm(u) + '||' + crypto.createHash('sha256').update(norm(c)).digest('hex')
 
 const audit = readJson(AUDIT)
 if (audit.__err || !Array.isArray(audit)) { console.error(`FATAL: cannot read audit.json (${AUDIT.pathname}): ${audit.__err || 'not an array'}`); process.exit(2) }
@@ -92,11 +102,11 @@ if (!data.__err) {
   // ── 4. receipts integrity: every published receipt traces to a real audit verdict (nothing invented) ──
   if (Array.isArray(data.receipts)) {
     const auditSet = new Set()
-    for (const ag of audit) for (const r of ag.results) auditSet.add(ag.agent + '||' + ckey(r.source_url, r.claim) + '||' + r.verdict)
+    for (const ag of audit) for (const r of ag.results) auditSet.add(ag.agent + '||' + fullKey(r.source_url, r.claim) + '||' + r.verdict)
     let orphan = 0; let receiptCites = 0
     for (const rc of data.receipts) for (const c of (rc.cites || [])) {
       receiptCites++
-      if (!auditSet.has(rc.agent + '||' + ckey(c.url, c.claim) + '||' + c.verdict)) { orphan++; if (orphan <= 3) fail('receipts', `orphan receipt (no matching audit verdict): ${rc.agent} | ${String(c.claim).slice(0, 50)} → ${c.verdict}`) }
+      if (!auditSet.has(rc.agent + '||' + fullKey(c.url, c.claim) + '||' + c.verdict)) { orphan++; if (orphan <= 3) fail('receipts', `orphan receipt (no matching audit verdict): ${rc.agent} | ${String(c.claim).slice(0, 50)} → ${c.verdict}`) }
     }
     if (orphan > 3) fail('receipts', `…and ${orphan - 3} more orphan receipts`)
     if (!orphan) pass(`receipts integrity: all ${receiptCites} published cites trace to a real audit verdict`)
