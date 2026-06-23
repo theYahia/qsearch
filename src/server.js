@@ -690,12 +690,21 @@ async function handleIndex (req, res) {
       let indexed = 0
       try {
         const pattern = url.replace(/\\/g, '/')
-        const files = await fsGlob(pattern)
-        if (!files.length) {
+        const matched = await fsGlob(pattern)
+        if (!matched.length) {
           updateJob(job_id, { status: 'failed', error: `No files matched: ${url}`, finished_at: new Date().toISOString() })
           return
         }
-        for (const filePath of files) {
+        // Cap the working set so a pathological glob (e.g. C:/**/*) can't exhaust memory or run for hours.
+        // Surfaced in the job (never silently dropped) so the operator can narrow the pattern.
+        const MAX_INDEX_FILES = Number(process.env.QSEARCH_MAX_INDEX_FILES) || 5000
+        const files = matched.length > MAX_INDEX_FILES ? matched.slice(0, MAX_INDEX_FILES) : matched
+        if (matched.length > files.length) {
+          const msg = `matched ${matched.length} files, capped to ${files.length} (QSEARCH_MAX_INDEX_FILES); narrow the glob to index the rest`
+          console.warn(`[index-files] ${msg}`)
+          updateJob(job_id, { warning: msg })
+        }
+        const indexOne = async (filePath) => {
           try {
             assertIndexable(filePath) // skip secrets / out-of-root files
             const raw = readFileSync(filePath, 'utf8')
@@ -704,22 +713,20 @@ async function handleIndex (req, res) {
               filePath.split(/[/\\]/).pop().replace(/\.md$/, '')
             const text = raw.replace(/^---[\s\S]*?---\n/m, '').replace(/[#*`>_]/g, '').trim()
             const docUrl = 'file://' + filePath.replace(/\\/g, '/')
-            const doc = {
-              id: docUrl, url: docUrl, title,
-              text: text.slice(0, 10000),
-              description: text.slice(0, 300),
-              namespace,
-              crawled_at: new Date().toISOString()
-            }
-            await meili.index(doc)
+            await meili.index({ id: docUrl, url: docUrl, title, text: text.slice(0, 10000), description: text.slice(0, 300), namespace, crawled_at: new Date().toISOString() })
             indexed++
-            updateJob(job_id, { pages_indexed: indexed })
           } catch (e) {
             console.error('[index-files] skip:', filePath, e.message)
           }
         }
+        // Bounded-concurrency indexing — parallel chunks instead of one-file-at-a-time serial I/O.
+        const CONC = Number(process.env.QSEARCH_INDEX_CONCURRENCY) || 8
+        for (let i = 0; i < files.length; i += CONC) {
+          await Promise.all(files.slice(i, i + CONC).map(indexOne))
+          updateJob(job_id, { pages_indexed: indexed })
+        }
         updateJob(job_id, { status: 'done', pages_crawled: files.length, pages_indexed: indexed, finished_at: new Date().toISOString() })
-        console.log(`[index-files] indexed ${indexed}/${files.length} files`)
+        console.log(`[index-files] indexed ${indexed}/${files.length} files${matched.length > files.length ? ` (capped from ${matched.length})` : ''}`)
         await refreshCorpusStatus()
       } catch (err) {
         updateJob(job_id, { status: 'failed', error: String(err), finished_at: new Date().toISOString() })
