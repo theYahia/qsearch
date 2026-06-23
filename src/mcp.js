@@ -52,7 +52,11 @@ export function qsearchTool (server) {
     freshness: z.string().optional()
       .describe('Time filter: pd (past day), pw (past week), pm (past month), py (past year), or YYYY-MM-DDtoYYYY-MM-DD'),
     search_lang: z.string().optional().describe('Language code, e.g. "en", "ru"'),
-    country: z.string().optional().describe('Country code, e.g. "us", "ru"')
+    country: z.string().optional().describe('Country code, e.g. "us", "ru"'),
+    corpus_first: z.boolean().optional()
+      .describe('Search the local trust corpus before the web (default true). Set false to skip corpus and go straight to the web.'),
+    corpus_only: z.boolean().optional()
+      .describe('Return only corpus hits, never call the web (default false). Use for $0 repeat lookups on already-swept topics.')
   })
 
   server.registerTool(
@@ -105,7 +109,10 @@ export function qsearchTool (server) {
   // --- sweep ---
   const sweepSchema = z.object({
     queries: z.string()
-      .describe('Queries in label|query format, one per line. E.g.: "c1_01|self-hosted search\\nc1_02|SearXNG alternatives"'),
+      .describe('Queries in label|query[|priority][|domain] format, one per line. ' +
+        'priority ∈ ultra-broad (corpus-only, $0) | broad (SearXNG, $0, default) | focused (Brave web) | critical (Brave + LLM Context). ' +
+        'domain ∈ general (default) | scholarly (arxiv+PubMed+S2) | ru (Yandex/SearXNG ru-RU). ' +
+        'E.g.: "c1_01|self-hosted search\\nc2_01|qdrant latency 2026|focused\\nsch_01|crispr off-target|broad|scholarly"'),
     save: z.boolean().optional().default(false)
       .describe('Save parsed_snippets.md to ./data/sweeps/<timestamp>/ on the server')
   })

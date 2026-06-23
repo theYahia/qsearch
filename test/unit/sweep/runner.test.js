@@ -72,6 +72,22 @@ describe('parseQueriesText — Phase 2 priority + Phase A domain', () => {
     assert.equal(r[0].priority, 'broad')
     assert.equal(r[0].domain, 'general')
   })
+
+  test('de-collides duplicate explicit labels (no silent overwrite)', () => {
+    const r = parseQueriesText('a|first\na|second\na|third')
+    assert.equal(r.length, 3)
+    assert.deepEqual(r.map(q => q.label), ['a', 'a_2', 'a_3'])
+    assert.deepEqual(r.map(q => q.query), ['first', 'second', 'third'])
+  })
+
+  test('de-collides auto-label clashing with an explicit label', () => {
+    // explicit q01 first, then a bare line that would auto-label to q01
+    const r = parseQueriesText('q01|explicit\nbare query here')
+    assert.equal(r.length, 2)
+    assert.equal(r[0].label, 'q01')
+    assert.equal(r[1].label, 'q01_2') // auto-label de-collided
+    assert.equal(r[1].query, 'bare query here')
+  })
 })
 
 describe('AcademicBackend interface', () => {

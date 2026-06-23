@@ -46,6 +46,14 @@ export function createSweepRouter (deps) {
     if (priority === 'ultra-broad' && corpusLookup) {
       const r = await corpusLookup(query, params)
       if (r && r.sufficient) return r.response
+      // Make the cost/coverage trade-off visible: why did this query fall through to
+      // a (possibly paid) broad sweep instead of being served from the corpus?
+      if (r) {
+        const reason = r.count != null
+          ? `hits=${r.count}, avg_score=${r.avgScore != null ? Number(r.avgScore).toFixed(2) : 'n/a'}`
+          : 'no corpus match'
+        console.log(`[${endpointName}] ultra-broad "${query.slice(0, 40)}" → broad fall-through (${reason})`)
+      }
     }
     if (priority === 'broad' || priority === 'ultra-broad') {
       if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)

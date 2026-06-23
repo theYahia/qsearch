@@ -1,5 +1,36 @@
 const MAX_PARALLEL = parseInt(process.env.SWEEP_CONCURRENCY || '6')
 
+// Per-query deadline (frees the semaphore slot when a backend hangs). Default 0 = off:
+// a live timeout could abort legitimately-slow scholarly/critical queries, so it is
+// opt-in until dogfooded. Recommended 20000-30000 when enabled. See ANALYSIS-2026-06-23.md T1.
+const QUERY_TIMEOUT_MS = Number(process.env.QSEARCH_SWEEP_QUERY_TIMEOUT_MS) || 0
+// Zero-result retries with exponential backoff (default 1 retry — prior behavior, but
+// backoff now grows so a 429/overload isn't hit again at the same fixed 800ms).
+const ZERO_RETRIES = Math.max(0, Number(process.env.QSEARCH_SWEEP_ZERO_RETRIES) || 1)
+const RETRY_BASE_MS = Number(process.env.QSEARCH_SWEEP_RETRY_BASE_MS) || 800
+
+// Reject a promise after ms (0 = no timeout). The underlying fetch is not cancelled,
+// but the sweep stops awaiting it, freeing the concurrency slot for the next query.
+function withTimeout (promise, ms) {
+  if (!ms || ms <= 0) return promise
+  return new Promise((resolve, reject) => {
+    const t = setTimeout(() => reject(Object.assign(new Error(`query timeout after ${ms}ms`), { timedOut: true })), ms)
+    promise.then(v => { clearTimeout(t); resolve(v) }, e => { clearTimeout(t); reject(e) })
+  })
+}
+
+// Unique label allocator — prevents a bare-line auto-label (q01) or a repeated explicit
+// label from silently overwriting an earlier query's result in the Map<label,result>.
+function uniqueLabel (label, seen) {
+  if (!seen.has(label)) { seen.add(label); return label }
+  let n = 2
+  while (seen.has(`${label}_${n}`)) n++
+  const unique = `${label}_${n}`
+  seen.add(unique)
+  console.warn(`[sweep] duplicate label "${label}" → "${unique}" (would otherwise overwrite results)`)
+  return unique
+}
+
 class Semaphore {
   constructor (max) {
     this._max = max
@@ -29,6 +60,7 @@ export const VALID_DOMAINS = new Set(['general', 'scholarly', 'ru'])
 
 export function parseQueriesText (text) {
   const queries = []
+  const seen = new Set()
   let autoIdx = 1
   for (const raw of (text || '').split('\n')) {
     const line = raw.trim()
@@ -65,13 +97,13 @@ export function parseQueriesText (text) {
           console.warn(`[sweep] ultra-broad → broad for time-sensitive label "${label}" (stale corpus risk)`)
           priority = 'broad'
         }
-        queries.push({ label, query, priority, domain })
+        queries.push({ label: uniqueLabel(label, seen), query, priority, domain })
         parsed = true
         break
       }
     }
     if (!parsed) {
-      queries.push({ label: `q${String(autoIdx).padStart(2, '0')}`, query: line, priority: 'broad', domain: 'general' })
+      queries.push({ label: uniqueLabel(`q${String(autoIdx).padStart(2, '0')}`, seen), query: line, priority: 'broad', domain: 'general' })
       autoIdx++
     }
   }
@@ -143,10 +175,15 @@ export async function runSweep (queries, searchFnOrRouter, opts = {}) {
       const dStats = stats.by_domain[effectiveDomain]
       const searchFn = router(effectivePriority, effectiveDomain)
       try {
-        let { filtered, contextGrounding } = await fetchAndDedupe(query, searchFn)
+        let { filtered, contextGrounding } = await withTimeout(fetchAndDedupe(query, searchFn), QUERY_TIMEOUT_MS)
         if (filtered.length === 0 && retryZeroResults) {
-          await new Promise(r => setTimeout(r, 600 + Math.random() * 400))
-          ;({ filtered, contextGrounding } = await fetchAndDedupe(query, searchFn))
+          for (let attempt = 1; attempt <= ZERO_RETRIES && filtered.length === 0; attempt++) {
+            // Exponential backoff so a rate-limited (429) or overloaded backend isn't
+            // re-hit at the same fixed delay: 800ms, 1600ms, 3200ms … + jitter.
+            const delay = RETRY_BASE_MS * Math.pow(2, attempt - 1) + Math.random() * 400
+            await new Promise(r => setTimeout(r, delay))
+            ;({ filtered, contextGrounding } = await withTimeout(fetchAndDedupe(query, searchFn), QUERY_TIMEOUT_MS))
+          }
           if (filtered.length > 0) stats.web_zero_recovered++
         }
         if (filtered.length === 0) {

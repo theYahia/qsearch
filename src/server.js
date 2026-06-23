@@ -53,6 +53,9 @@ import { runSweepContext } from './sweep_context.js'
 import { fetchHtml, extractMainContent } from './fetch/html.js'
 import { runPreSweepCheck } from './sweep/pre_check.js'
 import { runBriefScaffold } from './sweep/brief_gen.js'
+import { authGuard, isLoopbackBind, parseAllowlist } from './middleware/auth.js'
+import { createRateLimiter, parseLimits, rateLimitGuard, DEFAULT_LIMITS } from './middleware/ratelimit.js'
+import { logger, requestId } from './logger.js'
 
 // ── Corpus clients ─────────────────────────────────────────────────
 const MEILI_URL = process.env.MEILISEARCH_URL || 'http://localhost:7700'
@@ -68,6 +71,42 @@ if (!MEILI_KEY || MEILI_KEY === 'masterKey') {
   }
   console.warn('[security] MEILISEARCH_KEY unset/default — tolerated only because bound to loopback. Set a real key before any LAN/VPS exposure.')
   MEILI_KEY = MEILI_KEY || 'masterKey'
+}
+
+// ── Tier 0 hardening (2026-06-23): body cap + auth + rate limit ────
+// Request body size cap (OOM DoS guard). Content-Length fast-path in the dispatcher,
+// streaming cap in readBody() for chunked / lying-length requests.
+const MAX_BODY_BYTES = Number(process.env.QSEARCH_MAX_BODY_BYTES) || 10 * 1024 * 1024
+
+// Auth config — only enforced when bound beyond loopback (see authGuard).
+const AUTH_OPTS = {
+  bind: QSEARCH_BIND,
+  apiKey: process.env.QSEARCH_API_KEY || null,
+  ipAllowlist: parseAllowlist(process.env.QSEARCH_IP_ALLOWLIST),
+  trustProxy: process.env.QSEARCH_TRUST_PROXY === 'true'
+}
+// Fail-fast: refuse to expose beyond loopback with no auth configured (never fail open).
+if (!isLoopbackBind(QSEARCH_BIND) && !AUTH_OPTS.apiKey && !AUTH_OPTS.ipAllowlist.length) {
+  throw new Error('QSEARCH_BIND is non-loopback but neither QSEARCH_API_KEY nor QSEARCH_IP_ALLOWLIST is set. ' +
+    'Refusing to expose all endpoints unauthenticated. Set QSEARCH_API_KEY=$(openssl rand -hex 32) in .env.local.')
+}
+
+// Rate limiting — active when exposed (non-loopback) or explicitly enabled. Skipped on
+// loopback by default so a local research sprint (many /sweep calls) is never throttled.
+const RATE_LIMIT_ACTIVE = !isLoopbackBind(QSEARCH_BIND) || process.env.QSEARCH_RATE_LIMIT_ENABLED === 'true'
+const rateLimiter = createRateLimiter({
+  windowMs: Number(process.env.QSEARCH_RATE_WINDOW_MS) || 60_000,
+  limits: process.env.QSEARCH_RATE_LIMITS ? parseLimits(process.env.QSEARCH_RATE_LIMITS) : DEFAULT_LIMITS
+})
+// Endpoints reachable without auth (load-balancer health, homepage).
+function isPublicPath (req) {
+  if (req.method !== 'GET') return false
+  return req.url === '/' || req.url === '/index.html' || req.url === '/health' || req.url.startsWith('/health?')
+}
+// Normalize req.url to a bare route key for rate-limit bucketing.
+function routeKey (url) {
+  const i = url.indexOf('?')
+  return i === -1 ? url : url.slice(0, i)
 }
 const QDRANT_URL_ENV = process.env.QDRANT_URL || 'http://localhost:6333'
 
@@ -144,10 +183,21 @@ refreshCorpusStatus().catch(() => {})
 setInterval(() => refreshCorpusStatus().catch(() => {}), 30_000)
 
 // ── Helpers ────────────────────────────────────────────────────────
-function readBody (req) {
+function readBody (req, maxBytes = MAX_BODY_BYTES) {
   return new Promise((resolve, reject) => {
     const chunks = []
-    req.on('data', (c) => chunks.push(c))
+    let total = 0
+    req.on('data', (c) => {
+      total += c.length
+      if (total > maxBytes) {
+        const e = new Error(`request body exceeds ${maxBytes} bytes`)
+        e.status = 413
+        req.destroy(e)
+        reject(e)
+        return
+      }
+      chunks.push(c)
+    })
     req.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')))
     req.on('error', reject)
   })
@@ -200,9 +250,10 @@ async function corpusLookupAsBrave (query, params) {
   const r = await meili.corpusLookup(query, {
     minScore: Number(process.env.QSEARCH_ULTRA_BROAD_MIN_SCORE) || 0.55,
     maxAgeDays: Number(process.env.QSEARCH_ULTRA_BROAD_MAX_AGE_DAYS) || 30,
+    minTrust: Number(process.env.QSEARCH_ULTRA_BROAD_MIN_TRUST) || 0,
     limit: params.count || 5
   })
-  if (!r.sufficient) return { sufficient: false }
+  if (!r.sufficient) return { sufficient: false, count: r.count, avgScore: r.avgScore }
   return {
     sufficient: true,
     response: {
@@ -806,9 +857,18 @@ async function handleHealth (req, res) {
     res.end(JSON.stringify(base))
     return
   }
+  // Freshen corpus reachability so deep health isn't up to 30s stale (a green
+  // /health while Meili is down was the gap — /search would fail silently).
+  await refreshCorpusStatus().catch(() => {})
   const sweep = await runSweepCanary()
   const brave = await checkBraveKeyValid()
-  const degraded = sweep.sweep_ok === false || brave.brave_key_valid === false
+  // Corpus is optional by default (single-backend deployments are valid). Set
+  // QSEARCH_HEALTH_REQUIRE_CORPUS=true on corpus-dependent deployments to 503 when
+  // Meilisearch (the full-text/trust backend) is unreachable.
+  const requireCorpus = process.env.QSEARCH_HEALTH_REQUIRE_CORPUS === 'true'
+  const corpusDown = corpusStatus.meilisearch === 'unavailable'
+  const degraded = sweep.sweep_ok === false || brave.brave_key_valid === false ||
+    (requireCorpus && corpusDown)
   res.writeHead(degraded ? 503 : 200, { 'Content-Type': 'application/json' })
   res.end(JSON.stringify({ ...base, status: degraded ? 'degraded' : 'ok', sweep, brave }))
 }
@@ -1745,6 +1805,33 @@ const docsMd = readFileSync(join(__dirname, '..', 'public', 'docs.md'), 'utf8')
 
 // ── HTTP Server ────────────────────────────────────────────────────
 const server = http.createServer((req, res) => {
+  // Tier 3: correlation id + per-request access log (skips noisy /health polling).
+  const rid = requestId(req)
+  res.setHeader('X-Request-Id', rid)
+  const startedAt = Date.now()
+  res.on('finish', () => {
+    if (req.url === '/health' || req.url.startsWith('/health?')) return
+    logger.info('request', { request_id: rid, method: req.method, path: routeKey(req.url), status: res.statusCode, ms: Date.now() - startedAt })
+  })
+
+  // Tier 0: body-size fast-reject (honest Content-Length); streaming cap in readBody.
+  if (req.method === 'POST' || req.method === 'PUT') {
+    const cl = Number(req.headers['content-length'])
+    if (Number.isFinite(cl) && cl > MAX_BODY_BYTES) {
+      res.writeHead(413, { 'Content-Type': 'application/json' })
+      res.end(JSON.stringify({ error: 'payload_too_large', max_bytes: MAX_BODY_BYTES, content_length: cl }))
+      return
+    }
+  }
+  // Tier 0: auth (non-loopback only) + rate limit, both skipped for public paths.
+  if (!isPublicPath(req)) {
+    if (!authGuard(req, res, AUTH_OPTS)) return
+    if (RATE_LIMIT_ACTIVE) {
+      const ip = (req.socket?.remoteAddress || '').replace(/^::ffff:/, '')
+      if (!rateLimitGuard(rateLimiter, ip, routeKey(req.url), res)) return
+    }
+  }
+
   if (req.method === 'GET' && (req.url === '/' || req.url === '/index.html')) {
     res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
     res.end(indexHtml)
@@ -1878,6 +1965,14 @@ server.headersTimeout = 66000
 // /sweep_context (SSRF), /ingest. Override with QSEARCH_BIND only behind real auth.
 server.listen(PORT, process.env.QSEARCH_BIND || '127.0.0.1', () => {
   console.log(`qsearch v0.4.0 listening on http://localhost:${PORT}`)
+  // Tier 0: surface security posture so exposure without auth is never silent.
+  if (isLoopbackBind(QSEARCH_BIND)) {
+    console.log('[security] bound to loopback — auth disabled (local single-user). Rate limit: ' + (RATE_LIMIT_ACTIVE ? 'ON' : 'off'))
+  } else {
+    const mode = AUTH_OPTS.apiKey ? 'API key' : ''
+    const ipm = AUTH_OPTS.ipAllowlist.length ? `${AUTH_OPTS.ipAllowlist.length} allowlisted IP(s)` : ''
+    console.log(`[security] bound to ${QSEARCH_BIND} — auth ON (${[mode, ipm].filter(Boolean).join(' + ')}), rate limit ON. Body cap ${MAX_BODY_BYTES} bytes.`)
+  }
   // rd275: surface gates that ship OFF by default so users notice they exist.
   // Default is intentionally OFF (no behavior change for existing consumers);
   // flip via env after dogfooding — see docs/QUALITY_GATE_DOGFOOD.md.
@@ -1917,4 +2012,37 @@ server.listen(PORT, process.env.QSEARCH_BIND || '127.0.0.1', () => {
       console.log(`[canary] sweep ok — ${c.results} results from engines: ${c.contributing_engines.join(', ') || '(none named)'}${unresp ? ` | unresponsive: ${unresp}` : ''}`)
     }
   }).catch(() => {})
+})
+
+// ── Tier 3: graceful shutdown + global error handlers (2026-06-23) ──
+// SIGTERM (Docker/PM2 restart) and SIGINT (Ctrl-C) previously killed in-flight
+// /sweep, /index, /sweep_context requests mid-flight. Drain, flush cache, then exit.
+let shuttingDown = false
+function shutdown (signal, code = 0) {
+  if (shuttingDown) return
+  shuttingDown = true
+  console.log(`[shutdown] ${signal} — draining in-flight requests (≤30s)…`)
+  const force = setTimeout(() => {
+    console.error('[shutdown] drain timed out — forcing exit')
+    process.exit(code || 1)
+  }, 30_000)
+  force.unref?.()
+  server.close(() => {
+    try { queryCache?.close() } catch (e) { console.warn('[shutdown] cache close error:', e.message) }
+    clearTimeout(force)
+    console.log('[shutdown] clean exit')
+    process.exit(code)
+  })
+}
+process.on('SIGTERM', () => shutdown('SIGTERM', 0))
+process.on('SIGINT', () => shutdown('SIGINT', 0))
+
+// Never crash silently. An uncaught exception means corrupted state → drain + exit 1.
+// Unhandled rejections are logged loudly but not fatal (many are recoverable in practice).
+process.on('uncaughtException', (err) => {
+  console.error('[fatal] uncaughtException:', err?.stack || err)
+  shutdown('uncaughtException', 1)
+})
+process.on('unhandledRejection', (reason) => {
+  console.error('[fatal] unhandledRejection:', reason?.stack || reason)
 })
