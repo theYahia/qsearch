@@ -269,4 +269,27 @@ export function qsearchTool (server) {
       return { content: [{ type: 'text', text }] }
     }
   )
+
+  // --- verify_citation (the trust layer: does the cited source actually support the claim?) ---
+  const verifyCitationSchema = z.object({
+    claim: z.string().min(3).max(4000).describe('The exact claim/assertion the source is cited for'),
+    url: z.string().url().describe('The single source URL cited for the claim')
+  })
+
+  server.registerTool(
+    'verify_citation',
+    {
+      title: 'Verify Citation (qsearch)',
+      description: 'Check whether a cited source actually SUPPORTS a claim — the doesitlie citation-honesty method, live. Fetches the URL (PDF/HTML/headless render, SSRF-guarded), selects the most relevant passages, and an LLM-as-judge at temperature 0 returns a verdict: Supported | Partial | Unsupported | Fabricated (URL dead/bogus) | Error (could not fetch). Returns the verbatim supporting excerpt so you can audit it. Use before trusting a citation an agent produced.',
+      inputSchema: verifyCitationSchema.shape,
+      annotations: { readOnlyHint: true, openWorldHint: true }
+    },
+    async (params) => {
+      const v = await callQsearch('/verify', params)
+      const conf = v.confidence != null ? ` (confidence ${v.confidence})` : ''
+      const ev = v.evidence ? `\n\n> ${v.evidence}` : ''
+      const note = v.error ? `\n\n_note: ${v.error}_` : ''
+      return { content: [{ type: 'text', text: `**${v.verdict}**${conf} — ${v.source_url || params.url}${ev}${note}` }] }
+    }
+  )
 }

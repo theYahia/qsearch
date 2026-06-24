@@ -631,6 +631,25 @@ describe('qsearch server', () => {
     assert.match(res.json.error, /tier must be light\|standard\|heavy/)
   })
 
+  // ── /verify — single-citation honesty check (the doesitlie verifier, exposed live)
+  test('POST /verify rejects missing claim with 400', async () => {
+    const res = await request(QSEARCH_PORT, 'POST', '/verify', { url: 'https://example.com/' })
+    assert.equal(res.status, 400)
+    assert.match(res.json.error, /claim/)
+  })
+
+  test('POST /verify rejects a non-http url with 400', async () => {
+    const res = await request(QSEARCH_PORT, 'POST', '/verify', { claim: 'a real claim', url: 'ftp://nope.example' })
+    assert.equal(res.status, 400)
+    assert.match(res.json.error, /url/)
+  })
+
+  test('POST /verify rejects an over-long claim with 400', async () => {
+    const res = await request(QSEARCH_PORT, 'POST', '/verify', { claim: 'a'.repeat(4001), url: 'https://example.com/' })
+    assert.equal(res.status, 400)
+    assert.match(res.json.error, /too long/)
+  })
+
   // ── rd277: include_rejected query param on /sweep
   test('GET /backends/status is accessible without auth', async () => {
     // Sanity — observability endpoint should never gate on auth in v0.4.0.

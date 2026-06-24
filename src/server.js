@@ -54,6 +54,7 @@ import { runSweepContext } from './sweep_context.js'
 import { fetchHtml, extractMainContent } from './fetch/html.js'
 import { runPreSweepCheck } from './sweep/pre_check.js'
 import { runBriefScaffold } from './sweep/brief_gen.js'
+import { verifyCitation } from './verifier/index.js'
 import { authGuard, isLoopbackBind, parseAllowlist } from './middleware/auth.js'
 import { createRateLimiter, parseLimits, rateLimitGuard, DEFAULT_LIMITS } from './middleware/ratelimit.js'
 import { logger, requestId } from './logger.js'
@@ -1737,6 +1738,39 @@ async function handleUrlContent (req, res) {
   }
 }
 
+// POST /verify — single-citation honesty check (the doesitlie verifier, exposed live).
+// Body: { claim: string, url: string }. Returns the verdict + the verbatim supporting excerpt so
+// an agent can decide whether to trust a source it just found. fetchContent guards SSRF on every
+// hop; the judge call is bounded by DOESITLIE_JUDGE_TIMEOUT_MS. verifyCitation never throws — a
+// fetch/judge failure surfaces as verdict 'Error' (with a reason), 'Fabricated' for a dead URL.
+async function handleVerify (req, res) {
+  let body
+  try { body = JSON.parse((await readBody(req)) || '{}') } catch {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'invalid JSON body' }))
+    return
+  }
+  const { claim, url } = body
+  if (!claim || typeof claim !== 'string' || !claim.trim()) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'claim (non-empty string) required' }))
+    return
+  }
+  if (claim.length > 4000) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'claim too long (max 4000 chars)' }))
+    return
+  }
+  if (!url || typeof url !== 'string' || !/^https?:\/\//i.test(url)) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'url (http/https string) required' }))
+    return
+  }
+  const verdict = await verifyCitation({ claim: claim.trim(), url })
+  res.writeHead(200, { 'Content-Type': 'application/json' })
+  res.end(JSON.stringify(verdict, null, 2))
+}
+
 // Phase 5: GET /economy_report — markdown report of sprint_metrics.
 // Filters: ?from=<ISO>&to=<ISO>&sprint_id=&topic=&format=markdown|json
 async function handleEconomyReport (req, res) {
@@ -1920,6 +1954,10 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === 'POST' && req.url === '/url_content') {
     handleUrlContent(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'url_content failed', detail: String(err) })) })
+    return
+  }
+  if (req.method === 'POST' && req.url === '/verify') {
+    handleVerify(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'verify failed', detail: String(err) })) })
     return
   }
   if (req.method === 'GET' && (req.url === '/economy_report' || req.url.startsWith('/economy_report?'))) {
