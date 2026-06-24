@@ -16,6 +16,12 @@ AI agents lose **17–33% of facts to hallucination** because they read 200-char
 > ✅ **v0.4.0 live at [qsearch.pro](https://qsearch.pro).** Multi-engine attribution, trust corpus with per-URL provenance (`engines[]`, `sweep_count`, `trust_score`), corpus viewer at `/ui`, MCP-over-HTTP for Claude Code and any spec-compliant client.
 > 📖 **Architecture:** [ARCHITECTURE.md](./ARCHITECTURE.md) · **Vision:** [docs/VISION.md](./docs/VISION.md) · **Technical spec:** [docs/TRUST_MESH.md](./docs/TRUST_MESH.md) · **Federation deep-dive:** [docs/FEDERATION_ARCHITECTURE.md](./docs/FEDERATION_ARCHITECTURE.md)
 
+## Demo
+
+![qsearch terminal demo — quickstart, multi-engine search, citation verify](assets/demo.gif)
+
+> 60-second tour: `/health` (it's up, local) → `/sweep` (multi-engine `engines[]` attribution) → `/verify` (does the cited source actually support the claim?). Reproduce it locally with [`bash scripts/record-demo.sh`](scripts/record-demo.sh) after `npm start` — see [docs/launch/README-demo-embed.md](docs/launch/README-demo-embed.md).
+
 ## Quick start
 
 ```bash

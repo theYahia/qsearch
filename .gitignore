@@ -25,3 +25,6 @@ research/
 docs/legacy/
 _raw_data/
 .gstack/
+
+# v5 ship-enablement: doesitlie repo-split staging (fresh-tree export target; has its own nested .git — never tracked by qsearch)
+doesitlie/_publish-staging/
