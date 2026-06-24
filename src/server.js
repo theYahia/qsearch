@@ -4,7 +4,7 @@ import http from 'node:http'
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { glob as fsGlob } from 'glob'
 import { fileURLToPath } from 'node:url'
-import { dirname, join, resolve, sep } from 'node:path'
+import { dirname, join } from 'node:path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const envPath = join(__dirname, '..', '.env.local')
@@ -68,6 +68,7 @@ import {
   parseTtlMap,
   renderRejectedSection
 } from './http/helpers.js'
+import { assertIndexable } from './fetch/path_guard.js'
 
 // ── Corpus clients ─────────────────────────────────────────────────
 const MEILI_URL = process.env.MEILISEARCH_URL || 'http://localhost:7700'
@@ -120,22 +121,9 @@ const meili = new MeilisearchCorpus(MEILI_URL, MEILI_KEY)
 const qdrant = new QdrantCorpus(QDRANT_URL_ENV, embedder)
 
 // ── Filesystem indexing guard (CSO-OPS 2026-05-21 P1-2 + 5.1) ──────
-// /index (glob) and /ingest/brave read caller-supplied paths into the searchable
-// corpus. Two protections: (1) never index secrets/keys regardless of path,
-// (2) optional hard path boundary via QSEARCH_DATA_ROOTS (semicolon-separated).
-const SENSITIVE_FILE_RE = /(^|[/\\])(\.env(\.|$)|.*\.pem$|.*\.key$|id_rsa|id_ed25519|.*\.secret$|credentials)/i
-const ALLOWED_ROOTS = (process.env.QSEARCH_DATA_ROOTS || '')
-  .split(';').map(s => s.trim()).filter(Boolean).map(p => resolve(p))
-function withinAllowedRoots (filePath) {
-  if (!ALLOWED_ROOTS.length) return true // unset → no boundary (loopback-only dev default)
-  const r = resolve(filePath)
-  return ALLOWED_ROOTS.some(root => r === root || r.startsWith(root + sep))
-}
-// Throws if the path must not be ingested. Used per-file in /index and on /ingest dir.
-function assertIndexable (filePath) {
-  if (SENSITIVE_FILE_RE.test(filePath)) throw new Error(`refused sensitive file: ${filePath}`)
-  if (!withinAllowedRoots(filePath)) throw new Error(`path outside QSEARCH_DATA_ROOTS: ${filePath}`)
-}
+// SENSITIVE_FILE_RE + ALLOWED_ROOTS + withinAllowedRoots + assertIndexable live in
+// src/fetch/path_guard.js now. assertIndexable is used per-file in /index and on the
+// /ingest dir to skip secrets / out-of-root files.
 
 // ── SearXNG fallback ───────────────────────────────────────────────
 const searxng = process.env.SEARXNG_URL ? new SearXNGBackend(process.env.SEARXNG_URL) : null
