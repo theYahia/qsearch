@@ -92,7 +92,7 @@ The flip is a single environment variable. `computeTrust` reads `QSEARCH_TRUST_F
 **Step 0 — re-run the A/B on today's corpus (recommended before flipping):**
 
 ```bash
-cd D:/Yahia/active/qsearch
+cd <repo>
 # Meilisearch must be up (docker compose up -d) and the key must be in env.
 # .env.example defaults: MEILISEARCH_URL=http://localhost:7700  MEILISEARCH_KEY=masterKey
 MEILISEARCH_URL=http://localhost:7700 MEILISEARCH_KEY=masterKey \
@@ -106,8 +106,8 @@ MEILISEARCH_URL=http://localhost:7700 MEILISEARCH_KEY=masterKey \
 **Step 1 — flip the flag** (pick one; persistent is preferred so a restart keeps it):
 
 ```bash
-# Option A — persistent (survives restart): add to D:/Yahia/active/qsearch/.env.local
-echo "QSEARCH_TRUST_FORMULA=v2" >> D:/Yahia/active/qsearch/.env.local
+# Option A — persistent (survives restart): add to .env.local
+echo "QSEARCH_TRUST_FORMULA=v2" >> .env.local
 
 # Option B — one shot for a single server run (Git Bash):
 QSEARCH_TRUST_FORMULA=v2 node src/server.js

@@ -25,8 +25,8 @@
 ## 1. Current state (3-tier baseline)
 
 **Where it lives today:**
-- `D:/Yahia/tools/research-backend/brave_sweep.py` lines 520-570 — `parse_queries_file` returns `(label, query, priority, domain)` with `VALID_PRIORITIES = {"broad", "focused", "critical"}` (default `broad`).
-- `D:/Yahia/active/qsearch/src/sweep/router.js` — `createSweepRouter()` returns a closure that dispatches by `(priority, domain)`: `broad` → SearXNG; `focused/critical` → Brave web w/ `extra_snippets`. Domain modifier `scholarly` overrides priority → academic backend.
+- `tools/research-backend/brave_sweep.py` lines 520-570 — `parse_queries_file` returns `(label, query, priority, domain)` with `VALID_PRIORITIES = {"broad", "focused", "critical"}` (default `broad`).
+- `src/sweep/router.js` — `createSweepRouter()` returns a closure that dispatches by `(priority, domain)`: `broad` → SearXNG; `focused/critical` → Brave web w/ `extra_snippets`. Domain modifier `scholarly` overrides priority → academic backend.
 - `critical` also forces Brave LLM Context regardless of `--include-context` CLI flag (CLAUDE.md §4.1).
 
 **Today's invariants:**

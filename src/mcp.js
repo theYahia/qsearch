@@ -134,7 +134,7 @@ export function qsearchTool (server) {
   // --- index_research ---
   const indexResearchSchema = z.object({
     glob: z.string()
-      .describe('Glob pattern matching markdown research files to index. E.g.: "D:/Yahia/active/*/research/*.md"')
+      .describe('Glob pattern matching markdown research files to index. E.g.: "<vault>/**/research/*.md"')
   })
 
   server.registerTool(

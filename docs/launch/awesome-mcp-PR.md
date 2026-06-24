@@ -134,9 +134,9 @@ Read from `punkpeye/awesome-mcp-servers` `CONTRIBUTING.md` (fetched 2026-06-24):
 
 ## Source provenance (no fabrication)
 
-- One-line description, transport `:8081`, BYOK, Apache-2.0, Windows vector caveat → `D:/Yahia/active/qsearch/README.md` + `docs/TRUST_MESH.md`.
+- One-line description, transport `:8081`, BYOK, Apache-2.0, Windows vector caveat → `README.md` + `docs/TRUST_MESH.md`.
 - MCP tool list (9 tools incl. `verify_citation`) + default bind `127.0.0.1:8081` → `src/mcp.js` (`server.registerTool(...)`) + `src/mcp-http.js` (`const HOST = ... || '127.0.0.1'`). Note: README's "Available tools" list omits `verify_citation`; the code is the source of truth, so it is included here.
-- Language = JavaScript / Node ≥20 → `D:/Yahia/active/qsearch/package.json` (`type: module`, `main: src/server.js`) + 55 `.js` files in `src/`.
+- Language = JavaScript / Node ≥20 → `package.json` (`type: module`, `main: src/server.js`) + 55 `.js` files in `src/`.
 - Repo URL `https://github.com/theYahia/qsearch`, MCP Registry id `io.github.theYahia/qsearch` → README badges + `docs/launch-calendar.md`.
 - Awesome-list entry format, emoji legend, section name `🔎 Search & Data Extraction`, alphabetical rule → live `punkpeye/awesome-mcp-servers` `CONTRIBUTING.md` + README, fetched 2026-06-24.
 - **[GAP]** exact alphabetical neighbor entries in the Search section (README truncated on fetch) — verify visually when editing the file.

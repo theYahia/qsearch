@@ -2,7 +2,7 @@
 // Smoke test for Phase 2 priority routing — verifies parseQueriesText 3-field syntax,
 // runSweep router-style dispatch, and per-priority stats aggregation.
 //
-// Run:  node D:/Yahia/active/qsearch/scripts/smoke-test-priority.mjs
+// Run:  node scripts/smoke-test-priority.mjs
 // Exit: 0 = all pass, 1 = any failure
 
 import { parseQueriesText, runSweep, VALID_PRIORITIES } from '../src/sweep/runner.js'

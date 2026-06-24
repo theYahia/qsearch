@@ -1,5 +1,5 @@
 // qsearch memcache (Phase 1, exact-match) — SHA256(query+engines) → cached results.
-// Design ref: D:/Yahia/active/qsearch/MEMCACHE_DESIGN_2026-05-07.md
+// Design ref: MEMCACHE_DESIGN_2026-05-07.md
 // Storage: native node:sqlite (Node 22.5+, stable in 24+). No native deps.
 //
 // Schema simplified vs design (no compression, no checksum) — Phase 1 only,

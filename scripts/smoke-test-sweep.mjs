@@ -5,7 +5,7 @@
 // Tests run against runSweep + renderMarkdown directly with a mock searchFn.
 // No HTTP server needed.
 //
-// Run:  node D:/Yahia/active/qsearch/scripts/smoke-test-sweep.mjs
+// Run:  node scripts/smoke-test-sweep.mjs
 // Exit: 0 = all pass, 1 = any failure
 
 import { runSweep } from '../src/sweep/runner.js'
