@@ -69,6 +69,7 @@ import {
   renderRejectedSection
 } from './http/helpers.js'
 import { assertIndexable } from './fetch/path_guard.js'
+import { createBraveAdapters } from './search/brave_adapters.js'
 
 // ── Corpus clients ─────────────────────────────────────────────────
 const MEILI_URL = process.env.MEILISEARCH_URL || 'http://localhost:7700'
@@ -197,76 +198,15 @@ async function corpusSearch (query, n_results) {
   return dedupeByUrl(results.flat())
 }
 
-async function searxngAsBraveResponse (query, params, opts = {}) {
-  const t0 = Date.now()
-  const searchOpts = { n_results: params.count || 3 }
-  if (opts.language) searchOpts.language = opts.language
-  if (opts.engines) searchOpts.engines = opts.engines
-  const hits = await searxng.search(query, searchOpts)
-  return { data: { web: { results: hits }, _searxng: true }, ms: Date.now() - t0, searxng: true }
-}
-
-// rd239 ultra-broad: corpus-only lookup. Returns { sufficient, response } where the
-// response is Brave-shaped. On insufficient corpus coverage the router falls through
-// to the broad tier. Thresholds tunable via QSEARCH_ULTRA_BROAD_* env vars.
-async function corpusLookupAsBrave (query, params) {
-  const t0 = Date.now()
-  const r = await meili.corpusLookup(query, {
-    minScore: Number(process.env.QSEARCH_ULTRA_BROAD_MIN_SCORE) || 0.55,
-    maxAgeDays: Number(process.env.QSEARCH_ULTRA_BROAD_MAX_AGE_DAYS) || 30,
-    minTrust: Number(process.env.QSEARCH_ULTRA_BROAD_MIN_TRUST) || 0,
-    limit: params.count || 5
-  })
-  if (!r.sufficient) return { sufficient: false, count: r.count, avgScore: r.avgScore }
-  return {
-    sufficient: true,
-    response: {
-      data: {
-        web: { results: r.hits },
-        _corpus: true,
-        _ultra_broad: { count: r.count, avg_score: Number(r.avgScore.toFixed(3)) }
-      },
-      ms: Date.now() - t0,
-      corpus: true
-    }
-  }
-}
-
-async function academicAsBraveResponse (query, params) {
-  const t0 = Date.now()
-  const hits = await academic.search(query, { n_results: params.count || 5 })
-  return { data: { web: { results: hits }, _academic: true }, ms: Date.now() - t0, academic: true }
-}
-
-async function yandexAsBraveResponse (query, params) {
-  const t0 = Date.now()
-  const hits = await yandex.search(query, { n_results: params.count || 10 })
-  return { data: { web: { results: hits }, _yandex: true }, ms: Date.now() - t0, yandex: true }
-}
-
-async function routedBraveFetch (endpoint, query, params) {
-  // No Brave key → SearXNG primary
-  if (!BRAVE_KEY) {
-    if (!searxng) throw new Error('Neither BRAVE_API_KEY nor SEARXNG_URL configured')
-    if (endpoint !== 'web') {
-      // SearXNG only supports web search; news/context not available
-      const e = new Error(`Endpoint ${endpoint} requires Brave API key (SearXNG supports web search only)`)
-      e.status = 501
-      throw e
-    }
-    return await searxngAsBraveResponse(query, params)
-  }
-  try {
-    return await braveFetch(endpoint, query, params)
-  } catch (err) {
-    // Fallback to SearXNG on Brave 5xx/429 (web search only)
-    if (searxng && endpoint === 'web' && (err.status >= 500 || err.status === 429)) {
-      console.warn(`Brave ${err.status} — falling back to SearXNG`)
-      return await searxngAsBraveResponse(query, params)
-    }
-    throw err
-  }
-}
+// Brave-response adapter family (searxng/corpus/academic/yandex/routed Brave) lives
+// in src/search/brave_adapters.js now. Built once with the backend instances bound.
+const {
+  searxngAsBraveResponse,
+  corpusLookupAsBrave,
+  academicAsBraveResponse,
+  yandexAsBraveResponse,
+  routedBraveFetch
+} = createBraveAdapters({ searxng, academic, yandex, meili, braveKey: BRAVE_KEY, braveFetch })
 
 // ── Handlers ───────────────────────────────────────────────────────
 async function handleSearch (req, res) {
