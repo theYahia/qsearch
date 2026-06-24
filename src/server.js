@@ -58,6 +58,16 @@ import { verifyCitation } from './verifier/index.js'
 import { authGuard, isLoopbackBind, parseAllowlist } from './middleware/auth.js'
 import { createRateLimiter, parseLimits, rateLimitGuard, DEFAULT_LIMITS } from './middleware/ratelimit.js'
 import { logger, requestId } from './logger.js'
+import {
+  MAX_BODY_BYTES,
+  readBody,
+  parseSearchParams,
+  dedupeByUrl,
+  isPublicPath,
+  routeKey,
+  parseTtlMap,
+  renderRejectedSection
+} from './http/helpers.js'
 
 // ── Corpus clients ─────────────────────────────────────────────────
 const MEILI_URL = process.env.MEILISEARCH_URL || 'http://localhost:7700'
@@ -76,9 +86,8 @@ if (!MEILI_KEY || MEILI_KEY === 'masterKey') {
 }
 
 // ── Tier 0 hardening (2026-06-23): body cap + auth + rate limit ────
-// Request body size cap (OOM DoS guard). Content-Length fast-path in the dispatcher,
-// streaming cap in readBody() for chunked / lying-length requests.
-const MAX_BODY_BYTES = Number(process.env.QSEARCH_MAX_BODY_BYTES) || 10 * 1024 * 1024
+// Request body size cap (OOM DoS guard). MAX_BODY_BYTES + readBody live in
+// src/http/helpers.js now. Content-Length fast-path stays in the dispatcher below.
 
 // Auth config — only enforced when bound beyond loopback (see authGuard).
 const AUTH_OPTS = {
@@ -100,16 +109,7 @@ const rateLimiter = createRateLimiter({
   windowMs: Number(process.env.QSEARCH_RATE_WINDOW_MS) || 60_000,
   limits: process.env.QSEARCH_RATE_LIMITS ? parseLimits(process.env.QSEARCH_RATE_LIMITS) : DEFAULT_LIMITS
 })
-// Endpoints reachable without auth (load-balancer health, homepage).
-function isPublicPath (req) {
-  if (req.method !== 'GET') return false
-  return req.url === '/' || req.url === '/index.html' || req.url === '/health' || req.url.startsWith('/health?')
-}
-// Normalize req.url to a bare route key for rate-limit bucketing.
-function routeKey (url) {
-  const i = url.indexOf('?')
-  return i === -1 ? url : url.slice(0, i)
-}
+// isPublicPath + routeKey live in src/http/helpers.js now.
 const QDRANT_URL_ENV = process.env.QDRANT_URL || 'http://localhost:6333'
 
 // llama.cpp embedder takes priority over Ollama (used by some deployments). Default → Ollama.
@@ -185,45 +185,7 @@ refreshCorpusStatus().catch(() => {})
 setInterval(() => refreshCorpusStatus().catch(() => {}), 30_000)
 
 // ── Helpers ────────────────────────────────────────────────────────
-function readBody (req, maxBytes = MAX_BODY_BYTES) {
-  return new Promise((resolve, reject) => {
-    const chunks = []
-    let total = 0
-    req.on('data', (c) => {
-      total += c.length
-      if (total > maxBytes) {
-        const e = new Error(`request body exceeds ${maxBytes} bytes`)
-        e.status = 413
-        req.destroy(e)
-        reject(e)
-        return
-      }
-      chunks.push(c)
-    })
-    req.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')))
-    req.on('error', reject)
-  })
-}
-
-function parseSearchParams (req) {
-  if (req.method === 'GET') {
-    const url = new URL(req.url, `http://${req.headers.host}`)
-    return {
-      query: (url.searchParams.get('q') || '').trim(),
-      n_results: url.searchParams.get('n') || url.searchParams.get('n_results'),
-      freshness: url.searchParams.get('freshness'),
-      search_lang: url.searchParams.get('search_lang'),
-      country: url.searchParams.get('country'),
-      safesearch: url.searchParams.get('safesearch')
-    }
-  }
-  return null
-}
-
-function dedupeByUrl (items) {
-  const seen = new Set()
-  return items.filter(r => { if (seen.has(r.url)) return false; seen.add(r.url); return true })
-}
+// readBody / parseSearchParams / dedupeByUrl live in src/http/helpers.js now.
 
 // ── Corpus routing ─────────────────────────────────────────────────
 // Per-backend circuit breakers: between the 30s health polls a flapping/slow backend would otherwise
@@ -780,25 +742,8 @@ async function handleIndexStatus (req, res, job_id) {
   res.end(JSON.stringify(job, null, 2))
 }
 
-// rd275: render the Layer 8 rejected list as a markdown appendix. Only invoked
-// when ?include_rejected=true on /sweep or /cached_sweep. Lets users tune the
-// QSEARCH_QUALITY_THRESHOLD against composite_score breakdowns from real data.
-function renderRejectedSection (resultsMap) {
-  const lines = ['## Rejected (Layer 8 quality gate)']
-  let anyRejected = false
-  for (const [label, entry] of resultsMap) {
-    if (!entry?._rejected?.length) continue
-    anyRejected = true
-    lines.push('', `### ${label}`)
-    for (const r of entry._rejected) {
-      const parts = r._quality_parts || {}
-      const partsStr = Object.entries(parts).map(([k, v]) => `${k}=${Number(v).toFixed(3)}`).join(' ')
-      lines.push(`- composite=${r._quality_composite} ${partsStr} — ${r.url || r.title || '(no url)'}`)
-    }
-  }
-  if (!anyRejected) lines.push('', '_No rejections — quality gate either disabled or kept every result._')
-  return lines.join('\n')
-}
+// rd275: renderRejectedSection (Layer 8 rejected markdown appendix, used when
+// ?include_rejected=true on /sweep or /cached_sweep) lives in src/http/helpers.js now.
 
 // rd275: GET /backends/status — JSON snapshot of which backends are active and
 // why the others aren't. Beats grepping logs when a user sees SearXNG results
@@ -1265,19 +1210,7 @@ function sprintMetadataFromReq (req) {
   }
 }
 
-// Parse per-endpoint TTL query params (?ttl_web=7&ttl_news=1&ttl_context=30).
-// Returns null if no ttl_* params present (caller falls back to legacy max_age).
-function parseTtlMap (searchParams) {
-  const map = {}
-  let any = false
-  for (const ep of ['web', 'news', 'context']) {
-    const v = Number(searchParams.get(`ttl_${ep}`))
-    if (Number.isFinite(v) && v > 0) { map[ep] = v; any = true }
-  }
-  const def = Number(searchParams.get('ttl_default'))
-  if (Number.isFinite(def) && def > 0) { map.default = def; any = true }
-  return any ? map : null
-}
+// parseTtlMap (per-endpoint TTL query params) lives in src/http/helpers.js now.
 
 async function handleCachedSweep (req, res) {
   if (!queryCache) {
