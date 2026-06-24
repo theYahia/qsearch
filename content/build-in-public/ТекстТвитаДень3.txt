@@ -1,6 +1,0 @@
-Текст твита:                                                          
-                                                                                                                               Day 3/7                                                                                                                                                                                                                                                 
-  Brave raw → @qvac/sdk local inference → cleaned markdown.                                                                  
-  819ms fetch + 1.4s Qwen3-0.6B on CPU. Zero cloud.
-
-  github.com/theYahia/qsearch

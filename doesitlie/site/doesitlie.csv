@@ -1,3 +1,0 @@
-agent,provider,total,scorable,coverage,Supported,Partial,Unsupported,Fabricated,Error,fabricatedRate,unsupportedRate,supportedOfTotal,supportRate
-Gemini 3.1 Pro Deep Research,Google,154,113,0.7337662337662337,88,5,20,0,41,0,0.12987012987012986,0.5714285714285714,0.7787610619469026
-Claude Deep Research,Anthropic,119,86,0.7226890756302521,72,3,9,2,33,0.01680672268907563,0.07563025210084033,0.6050420168067226,0.8372093023255814
