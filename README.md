@@ -24,6 +24,26 @@ AI agents lose **17–33% of facts to hallucination** because they read 200-char
 
 ## Quick start
 
+**Run it in 5 minutes — free tier, no API key:**
+
+```bash
+git clone https://github.com/theYahia/qsearch.git && cd qsearch
+cp .env.example .env.local       # works as-is on the $0 SearXNG tier
+docker compose up -d             # Meilisearch + Qdrant + SearXNG
+npm install && npm start         # → qsearch on http://localhost:8080
+
+# multi-engine attribution in one call
+curl -X POST http://localhost:8080/sweep \
+  -H "Content-Type: text/plain" \
+  --data-binary $'t1|self-hosted search engine\n'
+# → parsed_snippets.md with "Engines: google, duckduckgo, brave (count=3)"
+```
+
+The `broad` sweep tier runs on self-hosted SearXNG and costs nothing. Add a Brave key only when you want the `focused`/`critical` tiers. Full setup (Brave key, Ollama, MCP server) below.
+
+<details>
+<summary><b>Full setup</b> — Brave BYOK + local LLM + MCP server</summary>
+
 ```bash
 # 1. Clone
 git clone https://github.com/theYahia/qsearch.git
@@ -60,6 +80,8 @@ curl -X POST http://localhost:8080/sweep \
 ```
 
 **BYOK design:** Brave key + SearXNG + Ollama all stay on your machine. No data exfiltration.
+
+</details>
 
 ---
 
@@ -147,6 +169,7 @@ The yellow node is your private corpus. URLs found by 5 engines + 3 sweeps + 4 t
 | `POST /sweep_context` | Local LLM page extraction (analogue of Brave LLM Context) | Ollama qwen2.5 |
 | `POST /news` | News search | Brave (requires key) |
 | `POST /context` | Deep page extraction | Brave (requires key) |
+| `POST /verify` | Citation honesty check — does the cited URL actually support a claim? Returns `Supported`/`Partial`/`Unsupported`/`Fabricated`/`Error` + verbatim excerpt | LLM-as-judge (local Ollama qwen2.5 or DeepSeek) |
 | `POST /index` | Crawl URL or index local `.md` glob | Crawl4AI |
 | `GET /trust/:url` | Trust score + provenance for any URL in corpus | — |
 | `GET /corpus/top` | Top URLs ranked by trust (`?limit=20&min_engines=3`) | — |
@@ -230,6 +253,7 @@ Available tools:
 - `mcp__qsearch__sweep` — batch research sweep with multi-engine attribution
 - `mcp__qsearch__academic_search` — peer-reviewed papers via arxiv + PubMed + Semantic Scholar
 - `mcp__qsearch__sweep_context` — Phase 3 local LLM page extraction (free, Ollama)
+- `mcp__qsearch__verify_citation` — does the cited URL actually support the claim? (`Supported`/`Partial`/`Unsupported`/`Fabricated`)
 - `mcp__qsearch__economy_report` — cost breakdown vs all-Brave baseline
 - `mcp__qsearch__index_research` — index local `.md` files by glob
 - `mcp__qsearch__news_search` — news search (Brave key required)
