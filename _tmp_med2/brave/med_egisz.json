@@ -1,0 +1,1172 @@
+{
+  "type": "search",
+  "query": {
+    "original": "ЕГИСЗ проблемы интеграция форум обсуждение врачи клиника",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": true,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "videos",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 19,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "videos": {
+    "type": "videos",
+    "results": [
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=xXk6q1YWw5Q",
+        "title": "Интеграция частной клиники и стома...",
+        "description": "Согласно действующему в отрасли законодательству медицинские организации, в том числе частной системы здравоохранения, должны использовать в своей работе мед...",
+        "age": "December 13, 2022",
+        "page_age": "2022-12-13T14:07:54",
+        "fetched_content_timestamp": 1757571390,
+        "video": {
+          "duration": "02:07:01",
+          "creator": "DentalPRO Автоматизация стоматологий",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Xs7mXbxyeIXraNuabqS37n8SiG6OtyjD1h-hg_vcZ6s/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS94/WGs2cTFZV3c1US9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/xXk6q1YWw5Q/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=l1_lxVrSio0",
+        "title": "Интеграция частных клиник с ЕГИСЗ - ...",
+        "description": "Интеграция с ЕГИСЗ частных клиник - инструкция по применению.Анна Игоревна Магерова, кандидат медицинских наук, научный консультант МИС «Инфоклиника/Инфодент...",
+        "age": "November 15, 2024",
+        "page_age": "2024-11-15T11:47:04",
+        "fetched_content_timestamp": 1765569306,
+        "video": {
+          "duration": "14:53",
+          "creator": "Oleg Penzin",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/rG9DfMU3zbZhWGxgI2fdCuNIXjcwLFWtVwIi9I--z_k/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9s/MV9seFZyU2lvMC9o/cWRlZmF1bHQuanBn/P3NxcD0tb2F5bXdF/bUNPQURFT2dDOHF1/S3FRTWE4QUVCLUFI/LUNZQUMwQVdLQWd3/SUFCQUJHRk1nWFNo/bE1BOD0mYW1wO3Jz/PUFPbjRDTENLWE51/UVZGZ21oSjdESGdU/UnVTUk1rcmp4TVE",
+          "original": "https://i.ytimg.com/vi/l1_lxVrSio0/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGFMgXShlMA8=&amp;rs=AOn4CLCKXNuQVFgmhJ7DHgTRuSRMkrjxMQ"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=Xsn6NV36oVo",
+        "title": "Вебинар ЕГИСЗ и частная клиника в 2024 ...",
+        "description": "Мы поговорили о том как, а главное зачем передавать данные в РЭМД. В частности:- Как клинике выполнить требование по подключению к ЕГИСЗ и передаче данных в ...",
+        "age": "February 7, 2024",
+        "page_age": "2024-02-07T08:42:13",
+        "fetched_content_timestamp": 1762542183,
+        "video": {
+          "duration": "01:27:30",
+          "creator": "PMT (POST MODERN TECHNOLOGY)",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/NPDDHgI4No5KeZE8ymsxmn_9ovcrwBwXb18ITPAtoYw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9Y/c242TlYzNm9Wby9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/Xsn6NV36oVo/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=FqAZhDlvY8c",
+        "title": "Интеграция с ЕГИСЗ: как соответств...",
+        "description": "Подробнее о БИТ.Управление Медицинским Центром: https://www.1cbit.ru/1csoft/bit-upravlenie-meditsinskim-tsentrom/?utm_source=youtube&utm_medium=perehod&utm_c",
+        "age": "May 2, 2024",
+        "page_age": "2024-05-02T08:03:06",
+        "fetched_content_timestamp": 1743403591,
+        "video": {
+          "duration": "50:13",
+          "views": 382,
+          "creator": "Первый Бит",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/nS8UPXhrGRm3OAk1u8-Fhl-UsdzjABqa3QuyAKybpsQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9G/cUFaaERsdlk4Yy9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/FqAZhDlvY8c/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=zvgFzFPsNcE",
+        "title": "Интеграция с ЕГИСЗ на базе решения ...",
+        "description": "\"1С:Медицина. Федеральные регистры\" разработан при поддержке «Фонда содействия развитию малых форм предприятий в научно-технической сфере», предназначен для ...",
+        "age": "April 28, 2021",
+        "page_age": "2021-04-28T00:00:00",
+        "fetched_content_timestamp": 1695967403,
+        "video": {
+          "duration": "12:42",
+          "views": 727,
+          "creator": "АРБИС: Прикладные решения",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Rqm7aqIu91uzDw6TcaJftGrEtqsPevYlVIFrjSJOq_k/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS96/dmdGekZQc05jRS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/zvgFzFPsNcE/maxresdefault.jpg"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Подключение клиники к ЕГИСЗ: ошибки и пути их недопущения",
+        "url": "https://www.1cbit.ru/blog/podklyuchenie-kliniki-k-egisz-oshibki-i-puti-ikh-nedopushcheniya/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "В случае необходимости, беспрепятственный доступ к данным пациента будут не только у него самого, но и у лечащих врачей. В настоящее время процесс является, по большей части, односторонним - медучреждения могут только направлять информацию. По мере развития ЕГИСЗ ситуация будет меняться. Готовое решение для интеграции частной или государственной клиники с сервисами ЕГИСЗ",
+        "profile": {
+          "name": "1C",
+          "url": "https://www.1cbit.ru/blog/podklyuchenie-kliniki-k-egisz-oshibki-i-puti-ikh-nedopushcheniya/",
+          "long_name": "1cbit.ru",
+          "img": "https://imgs.search.brave.com/qtP9mszxQAVsKWBDxJ1nn5enpJCipwrddtfuhFUaCrg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjcyZGUyMTVm/OGJjZWMyOGNlM2Jj/ZDNkMDYzNTkwODgy/YmEzNTY3ZmRlM2Y4/NTI3NDI5OTE5NDFk/Nzg2NWMyOS93d3cu/MWNiaXQucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "1cbit.ru",
+          "hostname": "www.1cbit.ru",
+          "favicon": "https://imgs.search.brave.com/qtP9mszxQAVsKWBDxJ1nn5enpJCipwrddtfuhFUaCrg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjcyZGUyMTVm/OGJjZWMyOGNlM2Jj/ZDNkMDYzNTkwODgy/YmEzNTY3ZmRlM2Y4/NTI3NDI5OTE5NDFk/Nzg2NWMyOS93d3cu/MWNiaXQucnUv",
+          "path": "  › 1с  › блог  › подключение клиники к егисз: ошибки и пути их недопущения"
+        },
+        "article": {
+          "author": []
+        },
+        "extra_snippets": [
+          "Расскажем, зачем нужна ЕГИСЗ и что диктует актуальное законодательство, кому нужно подключатся и что будет, если этого не сделать, как быть с ФРМО, ФРМР и РЭМД и как поможет МИС",
+          "В случае необходимости, беспрепятственный доступ к данным пациента будут не только у него самого, но и у лечащих врачей. В настоящее время процесс является, по большей части, односторонним - медучреждения могут только направлять информацию. По мере развития ЕГИСЗ ситуация будет меняться. Готовое решение для интеграции частной или государственной клиники с сервисами ЕГИСЗ",
+          "Ошибки, допущенные на стадии регистрации и интеграции с подсистемами, в итоге выльются в штрафы и значительные трудозатраты по исправлению и доработке. Для клиник, которые хотят выполнить настройки подсистем ФРМО, ФРМР, РЭМД собственными силами, на портале ЕГИСЗ есть все материалы https://portal.egisz.rosminzdrav.ru/materials",
+          "Удобным вариантом подключения частной медицинской клиники к ЕГИСЗ является интеграция через БИТ.Управление медицинским центром."
+        ]
+      },
+      {
+        "title": "ИНТЕГРАЦИЯ С ЕГИСЗ ЧАСТНЫХ КЛИНИК В 2025 ГОДУ - Smart Delta Systems",
+        "url": "https://sdsys.ru/blog/integracziya-s-egisz-chastnyh-klinik/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Интеграция медицинских организаций с ЕГИСЗ становится обязательной, и клиники должны учитывать актуальные нормативные акты, включая приказы 530-н и 90-н. Новые ...",
+        "page_age": "2025-04-04T06:39:48",
+        "profile": {
+          "name": "Smart Delta Systems",
+          "url": "https://sdsys.ru/blog/integracziya-s-egisz-chastnyh-klinik/",
+          "long_name": "sdsys.ru",
+          "img": "https://imgs.search.brave.com/lJhZgFbMzDEGNyNDTjNHHcrMl_K09a1jj1oqrIdIDlw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTFiNmRmYjFi/MmVkN2EwZTYyNDc3/ZTgyODZlYTgzZTBi/N2ExYzZjZDE2ODQ0/NThmODkwMTVhYTlk/MDdlMGZlNS9zZHN5/cy5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "sdsys.ru",
+          "hostname": "sdsys.ru",
+          "favicon": "https://imgs.search.brave.com/lJhZgFbMzDEGNyNDTjNHHcrMl_K09a1jj1oqrIdIDlw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTFiNmRmYjFi/MmVkN2EwZTYyNDc3/ZTgyODZlYTgzZTBi/N2ExYzZjZDE2ODQ0/NThmODkwMTVhYTlk/MDdlMGZlNS9zZHN5/cy5ydS8",
+          "path": "  › smart delta systems"
+        },
+        "age": "April 4, 2025",
+        "organization": {
+          "type": "organization",
+          "name": "Smart Delta Systems",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Интеграция медицинских организаций с ЕГИСЗ становится обязательной, и клиники должны учитывать актуальные нормативные акты, включая приказы 530-н и 90-н. Новые требования правительства обязывают медучреждения передавать данные в ФРМР и ФРМО, несоблюдение которых может привести к штрафам и приостановке лицензии до 90 д.",
+          "Что необходимо для успешной интеграции? Оформление заявки в техподдержку ЕГИСЗ. Согласование списка необходимых СЭМДов. Сверка данных с регистрами ФРМО и ФРМР. Обеспечение всех врачей УКЭП и использование этих сертификатов.",
+          "Какие клиники обязаны передавать данные? Каждая медицинская организация, имеющая лицензию на медицинскую деятельность, даже если это один вид медицинской деятельности, должна передавать данные в ЕГИСЗ, включая частные клиники любого размера и салоны красоты.",
+          "Для упрощения подключения можно воспользоваться порталом Инфоклиника.RU, который предлагает альтернативный путь для клиник. Самостоятельное подключение к ЕГИСЗ может занять до полугода, плюс нужно найти специалистов для получения сертификатов и документов."
+        ]
+      },
+      {
+        "title": "Что такое ЕГИСЗ в медицине: для чего она нужна и как это работает — Блог — Сегмент+",
+        "url": "https://kontur.ru/lp/segmentplus/blog/80491-egisz_v_medicine",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Подготовка к интеграции с ЕГИСЗ · Какие данные необходимо передавать в ЕГИСЗ · Популярные ошибки при передаче данных в ЕГИСЗ · Что ожидает клинику без подключения к ЕГИСЗ: риски и последствия",
+        "page_age": "2025-08-08T07:36:00",
+        "profile": {
+          "name": "Kontur",
+          "url": "https://kontur.ru/lp/segmentplus/blog/80491-egisz_v_medicine",
+          "long_name": "kontur.ru",
+          "img": "https://imgs.search.brave.com/xqZ5_2QGMDs1MFiMHRD4CwuvFsKF999CFl2SoEev0N4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2U1OGJhNzU5/YjgwMzkxMGRlM2My/NGM4YmZiYjk4NjNm/MGRlYTM3ZDNkYWQw/YjkyYzlmYTUzNDJh/MTMyNjQwNC9rb250/dXIucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "kontur.ru",
+          "hostname": "kontur.ru",
+          "favicon": "https://imgs.search.brave.com/xqZ5_2QGMDs1MFiMHRD4CwuvFsKF999CFl2SoEev0N4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2U1OGJhNzU5/YjgwMzkxMGRlM2My/NGM4YmZiYjk4NjNm/MGRlYTM3ZDNkYWQw/YjkyYzlmYTUzNDJh/MTMyNjQwNC9rb250/dXIucnUv",
+          "path": "  › сегмент +: блог"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/CpqUPothrWgm9f9ytamvnEtDOgTbNCfnfRHwB84-RSc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zZXJ2/aWNlcy5rb250dXIu/cnUvRmlsZXMvTW9k/dWxlcy9BcnRpY2xl/LzgwNDkxX2JpZy5q/cGc_dD0xNzU0NjQ5/NTk4",
+          "original": "https://services.kontur.ru/Files/Modules/Article/80491_big.jpg?t=1754649598",
+          "logo": false
+        },
+        "age": "August 8, 2025",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Рустам Батталов",
+              "thumbnail": {
+                "src": "https://imgs.search.brave.com/u_4FfzQtW9h8xpo_Aol0CzQpdbTij85Czr8_Dd32ZJ0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zZXJ2/aWNlcy5rb250dXIu/cnUvRmlsZXMvTW9k/dWxlcy9BdXRob3Iv/NzE1X20uanBnP3Q9/MTc0NTI0ODQyMw",
+                "original": "https://services.kontur.ru/Files/Modules/Author/715_m.jpg?t=1745248423"
+              }
+            }
+          ],
+          "date": "Aug 08, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "Контур",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/1GZaHXWZQHoAn2vtMvH2YSOdIalkv0FYHpUykuY1dxM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zLmtv/bnR1ci5ydS9jb21t/b24tdjIvaWNvbnMt/cHJvZHVjdHMva29u/dHVyL2F2YXRhci9r/b250dXItYXZhdGFy/LTUxMi5wbmc",
+              "original": "https://s.kontur.ru/common-v2/icons-products/kontur/avatar/kontur-avatar-512.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Узнайте, зачем создана ЕГИСЗ: основные цели, ключевые модули и как она работает. Какие организации вносятся в систему, какие данные передавать, как подготовиться к интеграции и избежать типичных ошибок.",
+          "Подготовка к интеграции с ЕГИСЗ · Какие данные необходимо передавать в ЕГИСЗ · Популярные ошибки при передаче данных в ЕГИСЗ · Что ожидает клинику без подключения к ЕГИСЗ: риски и последствия",
+          "Подключение к ЕГИСЗ — одно из требований для получения медицинской лицензии. Кто обязан передавать сведения в систему: больницы (в том числе детские, участковые и профильные); ... Чтобы интеграция прошла без сбоев, клинике важно заранее обновить бизнес-процессы для работы врачей и оформления пациентов, а также выбрать подходящий способ подключения к системе.",
+          "А также о предоставленных им услугах: посещениях врачей, назначениях, процедурах и операциях, результатах анализов и обследований. При передаче сведений в ЕГИСЗ могут возникать проблемы с идентификацией пациентов и сотрудников."
+        ]
+      },
+      {
+        "title": "Интеграция с ЕГИСЗ без боли: пошаговый гайд — Бизнес-аналитики из Salekit на vc.ru",
+        "url": "https://vc.ru/salekit/2112974-integratsiya-s-egisz",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Установлены ЭЦП врача и клиники. Есть хотя бы один визит в статусе «Отправлено». Журнал ошибок пуст. МИС 32top — это интеграция с ЕГИСЗ без боли: не нужны интеграторы, программисты и бесконечные доработки.",
+        "page_age": "2025-08-05T06:28:32",
+        "profile": {
+          "name": "Vc.ru",
+          "url": "https://vc.ru/salekit/2112974-integratsiya-s-egisz",
+          "long_name": "vc.ru",
+          "img": "https://imgs.search.brave.com/bM0KkEYXQT4V7IpgOoGP5oGezeQBMQ6PMg3cu7M1oB8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODQxMzViMTEw/ZDgxNDEwNjc5NTFk/NzQyZWYwZThmNDJl/NDYzYzI4MmNlYjFl/MDY1YmQ5OWVmZGJj/N2RhZDYyZC92Yy5y/dS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "vc.ru",
+          "hostname": "vc.ru",
+          "favicon": "https://imgs.search.brave.com/bM0KkEYXQT4V7IpgOoGP5oGezeQBMQ6PMg3cu7M1oB8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODQxMzViMTEw/ZDgxNDEwNjc5NTFk/NzQyZWYwZThmNDJl/NDYzYzI4MmNlYjFl/MDY1YmQ5OWVmZGJj/N2RhZDYyZC92Yy5y/dS8",
+          "path": "  › бизнес-аналитики из salekit"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/uvd5ect7wRkZbwGaNduBVcZA_77rid1lVA8DQYtWRac/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hcGku/dmMucnUvdjIuOS9j/b3Zlci9mYi9jLzIx/MTI5NzQvMTc1NTAx/MzE1OC9jb3Zlci5q/cGc",
+          "original": "https://api.vc.ru/v2.9/cover/fb/c/2112974/1755013158/cover.jpg",
+          "logo": false
+        },
+        "age": "August 5, 2025",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Бизнес-аналитики из Salekit",
+              "url": "https://vc.ru/salekit",
+              "thumbnail": {
+                "src": "https://imgs.search.brave.com/rTiYLESWDBT3OYN1zPCyIfzfM649AssEm0-owna2-ik/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9sZW9u/YXJkby5vc25vdmEu/aW8vYzRmMTRjZGYt/MjkzYi01MGEzLWFj/ZmItNTk5M2I1ZjBi/YzkwLy0vc2NhbGVf/Y3JvcC8xNDR4Lw",
+                "original": "https://leonardo.osnova.io/c4f14cdf-293b-50a3-acfb-5993b5f0bc90/-/scale_crop/144x/"
+              }
+            }
+          ],
+          "date": "Aug 05, 2025"
+        },
+        "extra_snippets": [
+          "Установлены ЭЦП врача и клиники. Есть хотя бы один визит в статусе «Отправлено». Журнал ошибок пуст. МИС 32top — это интеграция с ЕГИСЗ без боли: не нужны интеграторы, программисты и бесконечные доработки.",
+          "Даже маленькая частная клиника окупает вложение в МИС 32top за 1–2 месяца только за счёт экономии рабочего времени — не считая предотвращённого штрафа за ЕГИСЗ. Врач заходит под чужой учётной записью — подпись недействительна.",
+          "Частные стоматологии давно слышат об обязательной передаче данных в ЕГИСЗ. Но за страшной аббревиатурой скрывается реальный риск: штраф до 200 000 ₽ или даже временная приостановка лицензии. Чтобы этого не случилось, разберёмся, как подключиться к системе быстро и без лишней головной боли — на примере клиник, которые уже используют готовое решение.",
+          "С 1 апреля 2024 года вступили в силу поправки № 462-ФЗ к закону 323-ФЗ, которые ввели прямую административную ответственность за нарушение порядка или сроков передачи медицинских данных в ЕГИСЗ. Если частная стоматология (юридическое лицо) игнорирует выгрузку РЭМД, Росздравнадзор оформляет протокол, а суд может назначить штраф от"
+        ]
+      },
+      {
+        "title": "Интеграция федеральных медучреждений в ЕГИСЗ: проблемы и способы их решения | medwork",
+        "url": "https://www.medwork.ru/content/integratsiya-federalnykh-meduchrezhdenii-v-egisz-problemy-i-sposoby-ikh-resheniya",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Главная → Интеграция федеральных медучреждений в ЕГИСЗ: проблемы и способы их решения ... ENTERPRISE editionРешения для крупных клиник и федеральных центров",
+        "profile": {
+          "name": "Medwork",
+          "url": "https://www.medwork.ru/content/integratsiya-federalnykh-meduchrezhdenii-v-egisz-problemy-i-sposoby-ikh-resheniya",
+          "long_name": "medwork.ru",
+          "img": "https://imgs.search.brave.com/N9lI8IxkTBc38QQXWWcUtzNe6J9107K5ISziuePvmXM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGI4YTI2OTE2/MWIwMDVmZjYwZTg2/NTEyMzNmNmUwOGI5/NzgwYmY3ZTI1M2Yz/ZjYwMTNhZDIzMTNi/OTY2ZTg0My93d3cu/bWVkd29yay5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medwork.ru",
+          "hostname": "www.medwork.ru",
+          "favicon": "https://imgs.search.brave.com/N9lI8IxkTBc38QQXWWcUtzNe6J9107K5ISziuePvmXM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGI4YTI2OTE2/MWIwMDVmZjYwZTg2/NTEyMzNmNmUwOGI5/NzgwYmY3ZTI1M2Yz/ZjYwMTNhZDIzMTNi/OTY2ZTg0My93d3cu/bWVkd29yay5ydS8",
+          "path": "› content  › integratsiya-federalnykh-meduchrezhdenii-v-egisz-problemy-i-sposoby-ikh-resheniya"
+        },
+        "extra_snippets": [
+          "MedWork - профессиональная медицинская информационная система, разработанная компанией Master Lab для решения комплекса лечебных и управленческих задач, стоящих перед современными медицинскими организациями.",
+          "Главная → Интеграция федеральных медучреждений в ЕГИСЗ: проблемы и способы их решения ... ENTERPRISE editionРешения для крупных клиник и федеральных центров",
+          "Весь необходимый функционал для «общения» МИС медорганизации с ЕГИСЗ поддерживается этим интеграционным шлюзом. Он обеспечивает: обмен документами с сервисами РЭМД, получение и передачу информации о записи на приём к врачу через ФЭР, выгрузку и получение документов из сервисов ИЭМК, поддерживает работу ЭЦП.",
+          "До 10 апреля 2020 года федеральные медицинские учреждения, подчиняющиеся напрямую Минздраву, должны были направить в министерство планы по развитию своих МИС и полной интеграции в ЕГИСЗ. Эта обязанность на данные ЛПУ была возложена в феврале Письмом № 18-0/150. Реализовать планы и достичь всех ключевых показателей, указанных в них, необходимо в течение 2020-2021 гг. С какими проблемами при этом неизбежно столкнутся медорганизации и какие варианты их решения существуют, рассказываем ниже."
+        ]
+      },
+      {
+        "title": "Можно ли обойтись без интеграции с ЕГИСЗ в 2024 году?",
+        "url": "https://www.medmis.ru/blog/mozhno-li-obojtis-bez-integratsii-s-egisz-v-2024-godu",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Источник полезных статей и новостей о технологиях, которые помогают клиникам расти и улучшать сервис.",
+        "profile": {
+          "name": "Medmis",
+          "url": "https://www.medmis.ru/blog/mozhno-li-obojtis-bez-integratsii-s-egisz-v-2024-godu",
+          "long_name": "medmis.ru",
+          "img": "https://imgs.search.brave.com/b_SHgU2Yozt2jmtxlgQFilvlIMzUJSAjvFv5XZtu2vo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTEzMTI3MzYz/OTBiZTkyZTQ3YzA4/MDk5YTI0MTliYjQz/ODAxZmQ5ZDBjMTVm/YjhmZGE2OGE0MGJi/NjRjMTE1YS93d3cu/bWVkbWlzLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medmis.ru",
+          "hostname": "www.medmis.ru",
+          "favicon": "https://imgs.search.brave.com/b_SHgU2Yozt2jmtxlgQFilvlIMzUJSAjvFv5XZtu2vo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTEzMTI3MzYz/OTBiZTkyZTQ3YzA4/MDk5YTI0MTliYjQz/ODAxZmQ5ZDBjMTVm/YjhmZGE2OGE0MGJi/NjRjMTE1YS93d3cu/bWVkbWlzLnJ1Lw",
+          "path": "› blog  › mozhno-li-obojtis-bez-integratsii-s-egisz-v-2024-godu"
+        }
+      },
+      {
+        "title": "ЕГИСЗ оказалась загадкой для частных клиник | ComNews",
+        "url": "https://www.comnews.ru/content/219346/2022-03-21/2022-w12/egisz-okazalas-zagadkoy-dlya-chastnykh-klinik",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Большая часть опрошенных (88%) призналась, что нуждается в экспертной помощи в вопросах интеграции с Единой государственной информационной системой в сфере здравоохранения (ЕГИСЗ МЗ РФ)....",
+        "profile": {
+          "name": "ComNews",
+          "url": "https://www.comnews.ru/content/219346/2022-03-21/2022-w12/egisz-okazalas-zagadkoy-dlya-chastnykh-klinik",
+          "long_name": "comnews.ru",
+          "img": "https://imgs.search.brave.com/Aac_Wcp-J_HgV0GGJTlbzor1-hU8_X1bv2LHjGsktR8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGI5YzhkYWY4/NTk2MzcyYmQzODlk/MjNlOTQ4ZGVhYzBh/YmEzOTAyNDgxMjM1/MTU2YzE1YjczZDQw/OWJjOTM4OS93d3cu/Y29tbmV3cy5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "comnews.ru",
+          "hostname": "www.comnews.ru",
+          "favicon": "https://imgs.search.brave.com/Aac_Wcp-J_HgV0GGJTlbzor1-hU8_X1bv2LHjGsktR8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGI5YzhkYWY4/NTk2MzcyYmQzODlk/MjNlOTQ4ZGVhYzBh/YmEzOTAyNDgxMjM1/MTU2YzE1YjczZDQw/OWJjOTM4OS93d3cu/Y29tbmV3cy5ydS8",
+          "path": "› content  › 219346  › 2022-03-21  › 2022-w12  › egisz-okazalas-zagadkoy-dlya-chastnykh-klinik"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/iGOj7VicrgY71Hl3MDDb8vV5I6m4AgtMIdoQ6Z5XWdg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/Y29tbmV3cy5ydS9z/aXRlcy9kZWZhdWx0/L2ZpbGVzMjAxOS9h/cnRpY2xlcy8yMDIy/LTAzLyVEMCVCQyVE/MCVCNSVEMCVCNCVE/MCVCOCVEMSU4NiVE/MCVCOCVEMCVCRCVE/MCVCMF8xMS5qcGc",
+          "original": "https://www.comnews.ru/sites/default/files2019/articles/2022-03/%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D0%B0_11.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "К началу 2022 г. 94% российских клиник используют в своей работе медицинские информационные системы (МИС). Такие данные получены в ходе опроса, проведенного Национальной ассоциацией медицинских организаций (НАМО) совместно с компанией \"ЭлНетМед\".",
+          "К числу наиболее распространенных МИС среди клиник-респондентов относятся 1С, Arhimed+, Renovatio, \"Инфоклиника\". Большая часть опрошенных (88%) призналась, что нуждается в экспертной помощи в вопросах интеграции с Единой государственной информационной системой в сфере здравоохранения (ЕГИСЗ МЗ РФ).",
+          "Кроме того, 94% опрошенных знают о необходимости передачи данных в ЕГИСЗ МЗ РФ. Но только 31% клиник уже делают это, а 38% собираются начать процесс интеграции с Единой государственной информационной системой в сфере здравоохранения в ближайшем будущем.",
+          "Генеральный директор \"ЭлНетМед\", эксперт компании \"Нетрика Медицина\" Владимир Соловьев отмечает, что значительная часть клиник ассоциации потенциально готовы к интеграции с ЕГИСЗ МЗ РФ."
+        ]
+      },
+      {
+        "title": "ЕГИСЗ — что это: зачем нужна и как подключиться клинике",
+        "url": "https://www.medesk.ru/blog/zachem-nuzhna-egisz-i-kak-s-nei-rabotat/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Узнайте, что такое ЕГИСЗ и для чего она нужна. Разбираем подсистемы, способы интеграции, процесс подключения клиники, штрафы и частые ошибки.",
+        "page_age": "2026-06-04T00:00:00",
+        "profile": {
+          "name": "Medesk",
+          "url": "https://www.medesk.ru/blog/zachem-nuzhna-egisz-i-kak-s-nei-rabotat/",
+          "long_name": "medesk.ru",
+          "img": "https://imgs.search.brave.com/6taVqLxsIY5Gfa_LJdb_Dfj8UCUHU5awI-mZlwz2lhA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjZhMDU4MzRk/OGIwM2I5YzY3Yzk3/YTJiNjhjMWU5OWVl/Mjk0MGQ0ZWM2ZWZi/MDY4N2U4ODlhZDdj/MjA2Y2JjMi93d3cu/bWVkZXNrLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medesk.ru",
+          "hostname": "www.medesk.ru",
+          "favicon": "https://imgs.search.brave.com/6taVqLxsIY5Gfa_LJdb_Dfj8UCUHU5awI-mZlwz2lhA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjZhMDU4MzRk/OGIwM2I5YzY3Yzk3/YTJiNjhjMWU5OWVl/Mjk0MGQ0ZWM2ZWZi/MDY4N2U4ODlhZDdj/MjA2Y2JjMi93d3cu/bWVkZXNrLnJ1Lw",
+          "path": "› blog  › zachem-nuzhna-egisz-i-kak-s-nei-rabotat"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/xSQA6nQ-EAEryHg6opxX0gmczPwIrCSBEZoPbES2CbU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/bWVkZXNrLnJ1L2kv/SGZnaFl2ZDVHYk5o/ZVhXanlZdVhrL2E1/Y2UwZDNkNjAxYzli/M2JmYTNlNmFmYjMw/ZmJkMDViL2Jsb2Jp/ZDE2MjE4MzYxODM4/MDMuanBn",
+          "original": "https://www.medesk.ru/i/HfghYvd5GbNheXWjyYuXk/a5ce0d3d601c9b3bfa3e6afb30fbd05b/blobid1621836183803.jpg",
+          "logo": false
+        },
+        "age": "June 4, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Екатерина Лукошкова"
+            }
+          ],
+          "date": "Sep 07, 2021",
+          "publisher": {
+            "type": "organization",
+            "name": "Medesk",
+            "url": "https://www.medesk.ru",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/Y5ZtGdNgYMorxeCH3tuTStosHZQZkKeOdB-MznYScOI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/bWVkZXNrLnJ1L2Fz/c2V0cy9pbWFnZXMv/bWVkZXNrLWxvZ28u/cG5n",
+              "original": "https://www.medesk.ru/assets/images/medesk-logo.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Medesk предоставляет частным клиникам возможность автоматически формировать и передавать медицинские данные в ЕГИСЗ. Интеграция позволяет легко подключаться к существующим источникам данных и отправлять их в правильном формате.",
+          "При необходимости, доступ к информации могут получить как лечащие врачи, так и сам пациент. На данный момент, процесс выглядит скорее односторонним: клиники лишь отправляют данные. Это будет меняться по мере развития системы. В конечном итоге, главная цель ЕГИСЗ это сделать медицину более качественной и доступной для всех граждан.",
+          "Это локальные информационные системы частных и государственных клиник (МИС). Именно здесь врачи ведут прием, формируют электронные документы и инициируют их отправку в вышестоящие инстанции. ЕГИСЗ это не единая монолитная база данных, а комплекс из 13 взаимосвязанных подсистем.",
+          "Вход для медицинских организаций. Врачи и администраторы клиник проходят егисз вход в личный кабинет через портал Росминздрав (portal.egisz.rosminzdrav.ru)."
+        ]
+      },
+      {
+        "title": "Что такое ЕГИСЗ: зачем нужна, как работает и что важно знать клиникам",
+        "url": "https://fdoc.ru/blog/chto-takoe-egisz-i-kak-eto-rabotaet/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "1. Техническая сторона: Уделите максимум внимания выбору и настройке МИС, СКЗИ и КЭП. Неправильная интеграция — это технический сбой и остановка работы.",
+        "profile": {
+          "name": "Fdoc",
+          "url": "https://fdoc.ru/blog/chto-takoe-egisz-i-kak-eto-rabotaet/",
+          "long_name": "fdoc.ru",
+          "img": "https://imgs.search.brave.com/1HbOWEoI8LZP2zi9kun6K-2cXGTdvMHbBhHuGPH7g-k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWI4NWU5YWU0/MTVhYjFlOGNiNTJk/YzVjY2M2MGIyZWQ3/ODkyYzg4YzNkMDg1/MjZhMDIxYjMxYWZk/NmM5MmVhMy9mZG9j/LnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "fdoc.ru",
+          "hostname": "fdoc.ru",
+          "favicon": "https://imgs.search.brave.com/1HbOWEoI8LZP2zi9kun6K-2cXGTdvMHbBhHuGPH7g-k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWI4NWU5YWU0/MTVhYjFlOGNiNTJk/YzVjY2M2MGIyZWQ3/ODkyYzg4YzNkMDg1/MjZhMDIxYjMxYWZk/NmM5MmVhMy9mZG9j/LnJ1Lw",
+          "path": "› blog  › chto-takoe-egisz-i-kak-eto-rabotaet"
+        },
+        "extra_snippets": [
+          "На что нужно обратить особое внимание руководству клиники? 1. Техническая сторона: Уделите максимум внимания выбору и настройке МИС, СКЗИ и КЭП. Неправильная интеграция — это технический сбой и остановка работы. Убедитесь, что интеграция МИС с ЕГИСЗ осуществлена корректно.",
+          "Если у клиники или другой медструктуры нарушено взаимодействие с ЕГИСЗ, Минздрав рекомендует Росздравнадзору провести внеплановую проверку. Это чревато не только штрафами, но и предписаниями, а порой и приостановкой лицензии. Причиной для штрафа также может стать отсутствие МИС в клинике и УКЭП у врачей.",
+          "ЕГИСЗ решает задачи по четырем направлениям: 1. Для врачей и медицинских организаций: ... интеграция с оборудованием (например, результаты УЗИ, МРТ и пр.",
+          "Самостоятельно сотрудник сделать это не может — подобными полномочиями обладает руководитель или ответственное лицо от клиники, взаимодействующее с системой. Подробнее о регистре медицинских работников, о том, как в нем зарегистрироваться, читайте в нашей статье. 2. Должны ли регистрироваться в ЕГИСЗ салоны красоты, школьные медицинские кабинеты и другие организации, в которых представлены услуги, требующие медицинской лицензии?"
+        ]
+      },
+      {
+        "title": "Частные клиники в системе ЕГИСЗ: шесть советов по выбору МИС и интеграции | medwork",
+        "url": "https://www.medwork.ru/content/chastnye-kliniki-v-sisteme-egisz-shest-sovetov-po-vyboru-mis-i-integratsii",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "1. Обращайтесь к проверенным разработчикам, у которых есть большой опыт по внедрению МИС и интеграции с внешними системами. 2. Медицинская ИС должна быть зареги...",
+        "profile": {
+          "name": "Medwork",
+          "url": "https://www.medwork.ru/content/chastnye-kliniki-v-sisteme-egisz-shest-sovetov-po-vyboru-mis-i-integratsii",
+          "long_name": "medwork.ru",
+          "img": "https://imgs.search.brave.com/N9lI8IxkTBc38QQXWWcUtzNe6J9107K5ISziuePvmXM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGI4YTI2OTE2/MWIwMDVmZjYwZTg2/NTEyMzNmNmUwOGI5/NzgwYmY3ZTI1M2Yz/ZjYwMTNhZDIzMTNi/OTY2ZTg0My93d3cu/bWVkd29yay5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medwork.ru",
+          "hostname": "www.medwork.ru",
+          "favicon": "https://imgs.search.brave.com/N9lI8IxkTBc38QQXWWcUtzNe6J9107K5ISziuePvmXM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGI4YTI2OTE2/MWIwMDVmZjYwZTg2/NTEyMzNmNmUwOGI5/NzgwYmY3ZTI1M2Yz/ZjYwMTNhZDIzMTNi/OTY2ZTg0My93d3cu/bWVkd29yay5ydS8",
+          "path": "› content  › chastnye-kliniki-v-sisteme-egisz-shest-sovetov-po-vyboru-mis-i-integratsii"
+        },
+        "extra_snippets": [
+          "MedWork - профессиональная медицинская информационная система, разработанная компанией Master Lab для решения комплекса лечебных и управленческих задач, стоящих перед современными медицинскими организациями.",
+          "1. Обращайтесь к проверенным разработчикам, у которых есть большой опыт по внедрению МИС и интеграции с внешними системами. 2. Медицинская ИС должна быть зарегистрирована в реестре отечественного программного обеспечения. Вопрос импортозамещения рано или поздно коснётся каждой организации. 3. Для взаимодействия с ЕГИСЗ в МИС клиники обязательно должны быть следующие модули: регистратура, учёт услуг, электронная медицинская карта, запись к врачу, статистическая и финансовая отчётность.",
+          "Главная → Частные клиники в системе ЕГИСЗ: шесть советов по выбору МИС и интеграции",
+          "– Что касается взаимодействия с внешними системами, то у нас есть многолетний опыт интеграции с федеральными сервисами, такими как ЕГИСЗ, ТФОМС, ЕМИАС, лабораторными системами “Алиса”, “Медап”, “Ариадна”, Across, а также 1С,“Парус”и т.д.»."
+        ]
+      },
+      {
+        "title": "Подключение ЕГИСЗ в 2026 — понятие, структура и значение ЕГИСЗ в здравоохранении | Smart Delta Systems",
+        "url": "https://sdsys.ru/blog/chto-takoe-egisz/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Какие процессы нужно наладить внутри клиники для интеграции с ЕГИСЗ",
+        "page_age": "2026-01-25T14:37:06",
+        "profile": {
+          "name": "Smart Delta Systems",
+          "url": "https://sdsys.ru/blog/chto-takoe-egisz/",
+          "long_name": "sdsys.ru",
+          "img": "https://imgs.search.brave.com/lJhZgFbMzDEGNyNDTjNHHcrMl_K09a1jj1oqrIdIDlw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTFiNmRmYjFi/MmVkN2EwZTYyNDc3/ZTgyODZlYTgzZTBi/N2ExYzZjZDE2ODQ0/NThmODkwMTVhYTlk/MDdlMGZlNS9zZHN5/cy5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "sdsys.ru",
+          "hostname": "sdsys.ru",
+          "favicon": "https://imgs.search.brave.com/lJhZgFbMzDEGNyNDTjNHHcrMl_K09a1jj1oqrIdIDlw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTFiNmRmYjFi/MmVkN2EwZTYyNDc3/ZTgyODZlYTgzZTBi/N2ExYzZjZDE2ODQ0/NThmODkwMTVhYTlk/MDdlMGZlNS9zZHN5/cy5ydS8",
+          "path": "  › smart delta systems"
+        },
+        "age": "January 25, 2026",
+        "organization": {
+          "type": "organization",
+          "name": "Smart Delta Systems",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Разбираемся что такое ЕГИСЗ — единая государственная информационная система здравоохранения: назначение, структура, основные функции, порядок работы и значение для медицинских учреждений и разработчиков | Smart Delta Systems",
+          "Какие процессы нужно наладить внутри клиники для интеграции с ЕГИСЗ",
+          "ЕГИСЗ: что это такое, зачем нужна, как коммерческим клиникам подключиться к системе. Согласно Постановлению Правительства РФ от 01.06.2021 г. № 852 «О лицензировании медицинской деятельности» подключение и передача данных в ЕГИСЗ является обязательным условием для получения и продления лицензии на осуществления медицинской деятельности.",
+          "Клиники, состоящие в единой базе, получат дополнительный поток пациентов, записавшихся через ГосУслуги. Подробнее о целях и задачах ЕГИСЗ можно узнать из Положения, утвержденном Постановлением Правительства РФ № 140 от 9 февраля 2022 года."
+        ]
+      },
+      {
+        "title": "ЕГИСЗ - регистрация и подключение частных медицинских организаций",
+        "url": "https://n3health.ru/kak-podklyuchit-kliniku-k-egisz/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Оператор иной информационной системы берет на себя обязанность по отслеживанию изменений в ЕГИСЗ со стороны МЗ РФ и информированию клиники. Порядок внесения обновлений в сервисы и информирования, детально описаны в договоре. Подключение к ЕГИСЗ – процесс непростой, а для непогружённых в проблематику – дорогой и долгий.",
+        "profile": {
+          "name": "N3.Health",
+          "url": "https://n3health.ru/kak-podklyuchit-kliniku-k-egisz/",
+          "long_name": "n3health.ru",
+          "img": "https://imgs.search.brave.com/6caETQSL-Wkm3nAvy8BeACSexL5JiezaI-wcT2yNhPg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWJlMDk0YzU3/MTFiYzJkMjgxOGJl/Mjc4YzA5YzAxNGFk/ZjVlZjBkYzBkMzRl/ZGE2NGU4NTVmOTM3/NmJhMzhhZi9uM2hl/YWx0aC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "n3health.ru",
+          "hostname": "n3health.ru",
+          "favicon": "https://imgs.search.brave.com/6caETQSL-Wkm3nAvy8BeACSexL5JiezaI-wcT2yNhPg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWJlMDk0YzU3/MTFiYzJkMjgxOGJl/Mjc4YzA5YzAxNGFk/ZjVlZjBkYzBkMzRl/ZGE2NGU4NTVmOTM3/NmJhMzhhZi9uM2hl/YWx0aC5ydS8",
+          "path": "› kak-podklyuchit-kliniku-k-egisz"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/e99bb_u5c1OQZX1VNpc9H6M2T3eYZ1QF2l-5-xa_N94/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudGlsZGFjZG4u/Y29tL3RpbGQ2NjM4/LTM3MzQtNDUzMi1i/NjMzLTMwMzIzNjMw/NjYzOC8wMDMuanBn",
+          "original": "https://static.tildacdn.com/tild6638-3734-4532-b633-303236306638/003.jpg",
+          "logo": false
+        },
+        "organization": {
+          "type": "organization",
+          "name": "N3.Health",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Оператор иной информационной системы берет на себя обязанность по отслеживанию изменений в ЕГИСЗ со стороны МЗ РФ и информированию клиники. Порядок внесения обновлений в сервисы и информирования, детально описаны в договоре. Подключение к ЕГИСЗ – процесс непростой, а для непогружённых в проблематику – дорогой и долгий.",
+          "В N3.Health вы получите полную поддержку на этом пути: эксперты N3.Health уже подключили к ЕГИСЗ сотни клиник по всей России. ... Санкт-Петербург, пер. Фуражный, д. 3, лит. К. ... Санкт-Петербург, пер. Фуражный, д. 3, лит. К. ... Что будет, если не подключаться к ЕГИСЗ?",
+          "Согласно Постановлению Правительства № 852 c 1 сентября 2021 года клиники всех форм собственности обязаны передавать сведения об оказанной медицинской помощи в ЕГИСЗ.",
+          "Как видно из схемы, данные передаются оператору иной информационной системы, валидируются и только после этого уходят на федеральный уровень ЕГИСЗ. Такой способ подключения имеет преимущества перед другими по срокам, простоте подключения и дистанцирует клинику и разработчиков МИС клиники от необходимости постоянно отслеживать изменения, происходящие в ЕГИСЗ."
+        ]
+      },
+      {
+        "title": "Схема подключения к ЕГИСЗ для частных клиник | Программа для стоматологии Dental4Windows - официальный сайт",
+        "url": "https://d4w.ru/articles/2025-shema-podklyucheniya-k-egisz-dlya-chastnyh-klinik",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Клиникам, у которых уже установлена МИС, необходимо оценить, соответствует ли система требованиям, указанным в приказе Минздрава России от 24 декабря 2018 года № 911н, и потребует ли она доработки для интеграции с ЕГИСЗ.",
+        "profile": {
+          "name": "D4w",
+          "url": "https://d4w.ru/articles/2025-shema-podklyucheniya-k-egisz-dlya-chastnyh-klinik",
+          "long_name": "d4w.ru",
+          "img": "https://imgs.search.brave.com/TO5xUsobZ87QDMrsL3SJ7ZLVFso3uOquV76f7iiY1fs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2NjMTFiZGJh/NzdhZTNkYjRhOWQ3/MzcwOGRkMDM2NzEy/N2UzNDQ5MTAwZDMy/NTMyZjAzMmE2ODdl/ZmIzMjZkYS9kNHcu/cnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "d4w.ru",
+          "hostname": "d4w.ru",
+          "favicon": "https://imgs.search.brave.com/TO5xUsobZ87QDMrsL3SJ7ZLVFso3uOquV76f7iiY1fs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2NjMTFiZGJh/NzdhZTNkYjRhOWQ3/MzcwOGRkMDM2NzEy/N2UzNDQ5MTAwZDMy/NTMyZjAzMmE2ODdl/ZmIzMjZkYS9kNHcu/cnUv",
+          "path": "› articles  › 2025-shema-podklyucheniya-k-egisz-dlya-chastnyh-klinik"
+        },
+        "extra_snippets": [
+          "С 1 сентября 2021 года согласно Постановлению Правительства от 01.06.2021 № 852 медицинские организации, получающие лицензию впервые, должны были предоставлять информацию в ЕГИСЗ в подсистемы: Федеральный реестр медицинских организаций (ФРМО) и Федеральный регистр медицинских работников (ФРМР). С 1 сентября 2022 года клиники обязаны та",
+          "Клиникам, у которых уже установлена МИС, необходимо оценить, соответствует ли система требованиям, указанным в приказе Минздрава России от 24 декабря 2018 года № 911н, и потребует ли она доработки для интеграции с ЕГИСЗ.",
+          "Клиники, которым требуется внедрение новой МИС, могут выбрать уже готовое к такому взаимодействию решение в различной конфигурации: от коробочных версий для небольших клиник до вариантов с индивидуальным наполнением. В частности, одним из готовых решений является МИС «Dental4Windows», в которой реализована интеграция с ЕГИСЗ посредством иной информационной системы «N3.Health».",
+          "В согласии потребуется указать информацию о том, что клиника передает данные в ЕГИСЗ МЗ. ЭТАП 7. Обеспечить врачей электронными подписями."
+        ]
+      },
+      {
+        "title": "Подключение и обмен данными с ЕГИСЗ - все об интеграции МИС с системой Росминздрава",
+        "url": "https://mgerm.ru/egisz-rosminzdrav-frmo-frmr-remd-vhod-i-peredacha-dannyh-chastnye-kliniki",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "У руководителей государственных учреждений вопросов по взаимодействию с ЕГИСЗ возникает немного, так как эти задачи четко ставятся в виде приказов от вышестоящих органов управления здравоохранением. В ряде регионов существует единая МИС для всех ЛПУ и задача интеграции системы с ЕГИСЗ лежит полностью на плечах разработчиков программы.",
+        "profile": {
+          "name": "Mgerm",
+          "url": "https://mgerm.ru/egisz-rosminzdrav-frmo-frmr-remd-vhod-i-peredacha-dannyh-chastnye-kliniki",
+          "long_name": "mgerm.ru",
+          "img": "https://imgs.search.brave.com/PyJ4lx-qBJ4gUeINw5BCUbfsytywcDjDdZy-N5REtJU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTMyMGFhOGJi/M2IxYTk5OTJhN2I4/ZjhmOTFmMWZkOWRm/OWY3NDFhNGEzZTAy/ZTkwNDFiM2VjODdl/M2U2ODEyYS9tZ2Vy/bS5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mgerm.ru",
+          "hostname": "mgerm.ru",
+          "favicon": "https://imgs.search.brave.com/PyJ4lx-qBJ4gUeINw5BCUbfsytywcDjDdZy-N5REtJU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTMyMGFhOGJi/M2IxYTk5OTJhN2I4/ZjhmOTFmMWZkOWRm/OWY3NDFhNGEzZTAy/ZTkwNDFiM2VjODdl/M2U2ODEyYS9tZ2Vy/bS5ydS8",
+          "path": "› egisz-rosminzdrav-frmo-frmr-remd-vhod-i-peredacha-dannyh-chastnye-kliniki"
+        },
+        "extra_snippets": [
+          "ЕГИСЗ что это и когда нужно начать передавать данные частным клиникам. Рекомендованные МИС для ЕГИСЗ Минздрава РФ. Стоимость интеграции модулей МИС для коммерческих организаций.",
+          "Клиникам, поддержавшим модуль ЕГИСЗ МЗ РФ доступен оперативный обмен медицинскими данными с клиниками-партнерами и филиалами.",
+          "Согласно действующей нормативной документации все участники системы здравоохранения, в том числе частные клиники, должны передавать медицинские данные о случаях медицинского обслуживания пациентов в ЕГИСЗ МЗ РФ.",
+          "У руководителей государственных учреждений вопросов по взаимодействию с ЕГИСЗ возникает немного, так как эти задачи четко ставятся в виде приказов от вышестоящих органов управления здравоохранением. В ряде регионов существует единая МИС для всех ЛПУ и задача интеграции системы с ЕГИСЗ лежит полностью на плечах разработчиков программы."
+        ]
+      },
+      {
+        "title": "Что такое ЕГИСЗ: системы и подсистемы, законодательные акты, штрафы, документация",
+        "url": "https://n3health.ru/chto-takoe-egisz",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "В данной статье комплексно разберем вопросы по теме ЕГИСЗ, что это такое, какие задачи решает, как частным клиникам взаимодействовать с системой, в какие подсистемы какие сведения предоставлять, в какой срок, и главное, есть ли штрафы и санкции для клиник за отказ от интеграции.",
+        "profile": {
+          "name": "N3.Health",
+          "url": "https://n3health.ru/chto-takoe-egisz",
+          "long_name": "n3health.ru",
+          "img": "https://imgs.search.brave.com/6caETQSL-Wkm3nAvy8BeACSexL5JiezaI-wcT2yNhPg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWJlMDk0YzU3/MTFiYzJkMjgxOGJl/Mjc4YzA5YzAxNGFk/ZjVlZjBkYzBkMzRl/ZGE2NGU4NTVmOTM3/NmJhMzhhZi9uM2hl/YWx0aC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "n3health.ru",
+          "hostname": "n3health.ru",
+          "favicon": "https://imgs.search.brave.com/6caETQSL-Wkm3nAvy8BeACSexL5JiezaI-wcT2yNhPg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWJlMDk0YzU3/MTFiYzJkMjgxOGJl/Mjc4YzA5YzAxNGFk/ZjVlZjBkYzBkMzRl/ZGE2NGU4NTVmOTM3/NmJhMzhhZi9uM2hl/YWx0aC5ydS8",
+          "path": "› chto-takoe-egisz"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/2S0No-0eUCLQPI1agSFUG0wn2FyCIda5l413VOVfAZE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudGlsZGFjZG4u/Y29tL3RpbGQzNTM1/LTY1MzEtNDQzMC1i/NTM5LTYyMzQzMzY2/Mzc2My9tZWRpY2Fs/LWNoZWNrLXVwLmpw/Zw",
+          "original": "https://static.tildacdn.com/tild3535-6531-4430-b539-623433663763/medical-check-up.jpg",
+          "logo": false
+        },
+        "organization": {
+          "type": "organization",
+          "name": "N3.Health",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "ЕГИСЗ является центральной системой, которая собирает данные, поступающие из медицинских организаций, обрабатывает ее, формирует аналитическую информацию, позволяет оперативно принимать комплексные решения по управлению.",
+          "В данной статье комплексно разберем вопросы по теме ЕГИСЗ, что это такое, какие задачи решает, как частным клиникам взаимодействовать с системой, в какие подсистемы какие сведения предоставлять, в какой срок, и главное, есть ли штрафы и санкции для клиник за отказ от интеграции.",
+          "В первую очередь это касается организации работы медицинских учреждений государственных, но для частных клиник, особенно если они работают в системе ОМС, такой подход также дает возможность организовать работу через типовую МИС региона, которая, в том числе, обеспечивает интеграцию с ЕГИСЗ МЗ РФ.",
+          "Клинике необходимо доработать согласие на обработку персональных данных пациентов, дополнив его пунктом, извещающем пациентов о работе клиники с ЕГИСЗ и передаче сведений в ее подсистемы через определенного оператора. Для выгрузки данных в РЭМД, врачи клиники должны иметь электронные цифровые подписи."
+        ]
+      },
+      {
+        "title": "ЕГИСЗ — госреестр здравоохранения и интеграция медицинских систем | Smart Delta Systems",
+        "url": "https://sdsys.ru/egisz/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "При идеальном стечении обстоятельств это займет 2-3 месяца, но практика показывает, что на получение всех сертификаций и разрешений, а также на покупку всего необходимого уходит больше года и требует существенных затрат, которые полностью ложатся на клинику. Готовый интеграционный шлюзБыстрый и выгодный вариант интеграции. Предполагает использование готового интеграционного шлюза, через который можно организовать автоматизированный обмен данными с ЕГИСЗ для любой клиники.",
+        "page_age": "2026-01-25T14:25:28",
+        "profile": {
+          "name": "Smart Delta Systems",
+          "url": "https://sdsys.ru/egisz/",
+          "long_name": "sdsys.ru",
+          "img": "https://imgs.search.brave.com/lJhZgFbMzDEGNyNDTjNHHcrMl_K09a1jj1oqrIdIDlw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTFiNmRmYjFi/MmVkN2EwZTYyNDc3/ZTgyODZlYTgzZTBi/N2ExYzZjZDE2ODQ0/NThmODkwMTVhYTlk/MDdlMGZlNS9zZHN5/cy5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "sdsys.ru",
+          "hostname": "sdsys.ru",
+          "favicon": "https://imgs.search.brave.com/lJhZgFbMzDEGNyNDTjNHHcrMl_K09a1jj1oqrIdIDlw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTFiNmRmYjFi/MmVkN2EwZTYyNDc3/ZTgyODZlYTgzZTBi/N2ExYzZjZDE2ODQ0/NThmODkwMTVhYTlk/MDdlMGZlNS9zZHN5/cy5ydS8",
+          "path": "  › smart delta systems"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/mEJqYnDIKFhfQLPTsZph6N-BcxC_K_ZVYTjlg74fTfs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zZHN5/cy5ydS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMS8wOS9lZ2lz/ei0yNjY3eDc4Ny0x/LTEwMjR4MzAyLnBu/Zw",
+          "original": "https://sdsys.ru/wp-content/uploads/2021/09/egisz-2667x787-1-1024x302.png",
+          "logo": false
+        },
+        "age": "January 25, 2026",
+        "organization": {
+          "type": "organization",
+          "name": "Smart Delta Systems",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "ЕГИСЗ — единая государственная информационная система здравоохранения: требования, подключение, интеграция медицинских информационных систем, электронная отчетность и соответствие нормам.",
+          "При идеальном стечении обстоятельств это займет 2-3 месяца, но практика показывает, что на получение всех сертификаций и разрешений, а также на покупку всего необходимого уходит больше года и требует существенных затрат, которые полностью ложатся на клинику. Готовый интеграционный шлюзБыстрый и выгодный вариант интеграции. Предполагает использование готового интеграционного шлюза, через который можно организовать автоматизированный обмен данными с ЕГИСЗ для любой клиники.",
+          "У частных клиник есть два способа наладить обмен данными с ЕГИСЗ.",
+          "С какими подсистемами ЕГИСЗ нужно наладить обмен данными · Как подключить свою клинику к ЕГИСЗ"
+        ]
+      },
+      {
+        "title": "ЕГИСЗ для частного врача: подключение и работа",
+        "url": "https://archimed.pro/blog/egisz-dlya-vracha-kak-chastnomu-kabinetu-rabotat-s-egisz/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Первым делом зайдите в свою МИС и проверьте, может ли она передавать данные в ЕГИСЗ, и есть ли вообще интеграция с ЕГИСЗ.",
+        "profile": {
+          "name": "Archimed",
+          "url": "https://archimed.pro/blog/egisz-dlya-vracha-kak-chastnomu-kabinetu-rabotat-s-egisz/",
+          "long_name": "archimed.pro",
+          "img": "https://imgs.search.brave.com/JZGGS8thqIrIojEdDZdB-PNDfPhtTis5ZaCKYH3mCdE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWYxYzk0MGZk/NWVkMzBjMjE4N2Nk/NGMyZGE1ODkyMjg5/NGQxOWQ0ZWU2Nzhk/NzU3MGVmNDk0OWMx/YzE0MDlkZS9hcmNo/aW1lZC5wcm8v"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "archimed.pro",
+          "hostname": "archimed.pro",
+          "favicon": "https://imgs.search.brave.com/JZGGS8thqIrIojEdDZdB-PNDfPhtTis5ZaCKYH3mCdE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWYxYzk0MGZk/NWVkMzBjMjE4N2Nk/NGMyZGE1ODkyMjg5/NGQxOWQ0ZWU2Nzhk/NzU3MGVmNDk0OWMx/YzE0MDlkZS9hcmNo/aW1lZC5wcm8v",
+          "path": "› blog  › egisz-dlya-vracha-kak-chastnomu-kabinetu-rabotat-s-egisz"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/a4QaxWFsrfltgvMv27qMpgzcxl5bZ05Eb-u_g7SHqcA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hcmNo/aW1lZC5wcm8vYml0/cml4L3RlbXBsYXRl/cy9hcmNoaW1lZC9p/bWFnZXMvbG9nby5w/bmc",
+          "original": "https://archimed.pro/bitrix/templates/archimed/images/logo.png",
+          "logo": true
+        },
+        "organization": {
+          "type": "organization",
+          "name": "Archimed",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Полное руководство по работе с ЕГИСЗ для частных врачей: как подключить кабинет, передавать данные и избежать штрафов. Преимущества системы для увеличения потока пациентов и автоматизации документооборота.",
+          "Медицинская система Archimed+ Медицинская система для частных медицинских центров и стоматологических клиник",
+          "После того, как вы подключили услугу интеграции с ЕГИСЗ — нужно в ней зарегистрироваться. Это можно сделать как в самой МИС, так и на официальном сайте ЕГИСЗ. Вносим данные. Будут нужны данные об организации: ИНН, адрес, название, количество сотрудников, направление клиники, медицинская лицензия и т.п.",
+          "Первым делом зайдите в свою МИС и проверьте, может ли она передавать данные в ЕГИСЗ, и есть ли вообще интеграция с ЕГИСЗ. Если все в порядке и интеграция с ЕГИСЗ есть — подключите эту услугу."
+        ]
+      },
+      {
+        "title": "Начните передавать данные в ЕГИСЗ уже через 10 дней — всё проще, чем кажется",
+        "url": "https://rnova.ru/egisz/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Текущую тенденцию передаваемых данных в подсистему РЭМД ЕГИСЗ · Алгоритм подключения клиники к N3.Health · Тестирование и ввод в работу интеграции",
+        "profile": {
+          "name": "Rnova",
+          "url": "https://rnova.ru/egisz/",
+          "long_name": "rnova.ru",
+          "img": "https://imgs.search.brave.com/prruva1HuUXFPmtO5clMbdIugSGqa9oWPE80COmdCQw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmM4NDg1Nzli/ZjgyOTY3MGNmZDJi/ZDMzMDVlOTk2YmVk/YWVlOGRjZmE4YmJk/MTVmZDlhYjkxNjQw/Yzg2YWFiZC9ybm92/YS5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "rnova.ru",
+          "hostname": "rnova.ru",
+          "favicon": "https://imgs.search.brave.com/prruva1HuUXFPmtO5clMbdIugSGqa9oWPE80COmdCQw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmM4NDg1Nzli/ZjgyOTY3MGNmZDJi/ZDMzMDVlOTk2YmVk/YWVlOGRjZmE4YmJk/MTVmZDlhYjkxNjQw/Yzg2YWFiZC9ybm92/YS5ydS8",
+          "path": "  › главная  › начните передавать данные в егисз уже через 10 дней — всё проще, чем кажется"
+        },
+        "extra_snippets": [
+          "Перед отправкой в ЕГИСЗ каждый документ нужно подписывать двумя квалифицированными ЭЦП: врача (физлицо) и клиники (юрлицо).",
+          "Обычно, 1000 протоколов достаточно для частного врача или небольшой клиники · Если вам нужно больше — ознакомьтесь с другими тарифами N3.Health Другие тарифы N3.Health · Совместно с коллегами из N3.Health разобрались, как выполнить текущее требование Минздрава РФ по передаче данных в РЭМД ЕГИСЗ Программа вебинара",
+          "После обработки заявки коллеги из N3.Health передадут сотрудникам МИС Renovatio данные для подключения. Клинике необходимо предоставить ФИО сотрудника, зарегистрированного в ФРМР, который будет отправлять документы в ЕГИСЗ.",
+          "На вебинаре разобрали, как частным клиникам выполнить текущее требование Минздрава РФ по передаче данных в РЭМД ЕГИСЗ."
+        ]
+      },
+      {
+        "title": "Интеграция с ЕГИСЗ | medwork",
+        "url": "https://www.medwork.ru/content/integratsiya-s-egisz",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Форум · +7 (499) 346-42-94 · Заказать звонок · Главная → Интеграция с ЕГИСЗ · [ Вход | Регистрация ] BOX editionГотовые решения · PROF editionИндивидуальные решения · ENTERPRISE editionРешения для крупных клиник и федеральных центров ·",
+        "profile": {
+          "name": "Medwork",
+          "url": "https://www.medwork.ru/content/integratsiya-s-egisz",
+          "long_name": "medwork.ru",
+          "img": "https://imgs.search.brave.com/N9lI8IxkTBc38QQXWWcUtzNe6J9107K5ISziuePvmXM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGI4YTI2OTE2/MWIwMDVmZjYwZTg2/NTEyMzNmNmUwOGI5/NzgwYmY3ZTI1M2Yz/ZjYwMTNhZDIzMTNi/OTY2ZTg0My93d3cu/bWVkd29yay5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medwork.ru",
+          "hostname": "www.medwork.ru",
+          "favicon": "https://imgs.search.brave.com/N9lI8IxkTBc38QQXWWcUtzNe6J9107K5ISziuePvmXM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGI4YTI2OTE2/MWIwMDVmZjYwZTg2/NTEyMzNmNmUwOGI5/NzgwYmY3ZTI1M2Yz/ZjYwMTNhZDIzMTNi/OTY2ZTg0My93d3cu/bWVkd29yay5ydS8",
+          "path": "› content  › integratsiya-s-egisz"
+        },
+        "extra_snippets": [
+          "MedWork - профессиональная медицинская информационная система, разработанная компанией Master Lab для решения комплекса лечебных и управленческих задач, стоящих перед современными медицинскими организациями.",
+          "Форум · +7 (499) 346-42-94 · Заказать звонок · Главная → Интеграция с ЕГИСЗ · [ Вход | Регистрация ] BOX editionГотовые решения · PROF editionИндивидуальные решения · ENTERPRISE editionРешения для крупных клиник и федеральных центров ·",
+          "Просмотр электронных документов (протоколы осмотра, результаты диагностики и т.п.), сформированных в иных МО, подключенных к сервисам ЕГИСЗ; Подписание передаваемых документов электронной подписью. Взаимодействие реализовано через сервис интеграции прикладных подсистем ЕГИСЗ (ИПС), который играет роль единой точки входа для",
+          "Схемы работы МИС MedWork в клиниках с филиальной структурой · Схема работы с пациентами, направленными на лабораторные исследования · Автоматизации отдела платных услуг · Интеграция с online кассами в соответствии с 54-ФЗ ст.2 п.2."
+        ]
+      },
+      {
+        "title": "Интеграция с ЕГИСЗ - соответствие требованиям Минздрав России",
+        "url": "https://stoma1c.ru/vozmozhnosti/egisz/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Внести изменение в согласие на обработку данных пациентов, указав информацию о том, что клиника передает данные в ЕГИСЗ 3 · Установить программу для шифрования данных Континент-АП или ViPNet на компьютере (инструкцию предоставит менеджер) 4 · Обеспечить врачей электронными одписями (ЭЦП) 5 · Узнать подробнее об интеграции с ЕГИСЗ",
+        "profile": {
+          "name": "Stoma1c",
+          "url": "https://stoma1c.ru/vozmozhnosti/egisz/",
+          "long_name": "stoma1c.ru",
+          "img": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "stoma1c.ru",
+          "hostname": "stoma1c.ru",
+          "favicon": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw",
+          "path": "  › главная  › возможности  › интеграция с егисз"
+        },
+        "faq": {
+          "items": [
+            {
+              "question": "Какие нормативно-правовые акты регулируют обязательное использование ЕГИСЗ в медицинской практике?",
+              "answer": "Чтобы вести медицинскую деятельность и обслуживать пациентов, клиника должна быть зарегистрирована в Единой информационной системе в сфере здравоохранения (ЕГИСЗ) согласно действующим в отрасли Постановлениям (№ 852 от 1 июня 2021 г., № 140 от 9 февраля 2022 г. (ранее № 555 от 5 мая 2018 г))",
+              "title": "Интеграция с ЕГИСЗ - соответствие ...",
+              "url": "https://stoma1c.ru/vozmozhnosti/egisz/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "stoma1c.ru",
+                "hostname": "stoma1c.ru",
+                "favicon": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw",
+                "path": "  › главная  › возможности  › интеграция с егисз"
+              }
+            },
+            {
+              "question": "Какие организации обязаны подключиться к ЕГИЗ?",
+              "answer": "К обязательной регистрации в ЕГИСЗ подлежат юридические лица, осуществляющие медицинскую деятельность, соответствующую кодам ОКВЭД раздела 86 (деятельность в области здравоохранения), включая медицинские центры, стоматологические и косметологические клиники, больницы и другие подобные организации.",
+              "title": "Интеграция с ЕГИСЗ - соответствие ...",
+              "url": "https://stoma1c.ru/vozmozhnosti/egisz/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "stoma1c.ru",
+                "hostname": "stoma1c.ru",
+                "favicon": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw",
+                "path": "  › главная  › возможности  › интеграция с егисз"
+              }
+            },
+            {
+              "question": "Какие штрафы предусмотрены в случае не подключения к системе?",
+              "answer": "За каждый случай недостоверного или несвоевременного предоставления данных в ЕГИСЗ на клинику накладывается штраф от 10 000 рублей и выше, вплоть до приостановления мед. лицензии.",
+              "title": "Интеграция с ЕГИСЗ - соответствие ...",
+              "url": "https://stoma1c.ru/vozmozhnosti/egisz/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "stoma1c.ru",
+                "hostname": "stoma1c.ru",
+                "favicon": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw",
+                "path": "  › главная  › возможности  › интеграция с егисз"
+              }
+            },
+            {
+              "question": "Какие этапы включает в себя регистрация медицинской организации в ЕГИСЗ?",
+              "answer": "Процесс регистрации в ЕГИСЗ состоит из следующих этапов:\n\n\nПолучение доступа к личному кабинету ЕГИСЗ: Подача заявления через портал госуслуг.\nРегистрация медицинской организации: Внесение данных о медицинской организации в ФРМО.\nРегистрация медицинского персонала: Внесение данных о медицинском персонале в ФРМР.\nСоздание сертификатов электронной подписи (ЭЦП): для каждого врача, осуществляющего приёмы пациентов, и для медицинской организации.\nИнтеграция с МИС: Подключение ЕГИСЗ к используемой в медицинской организации МИС (например, 1С:Медицина.Стоматологическая клиника).\nНастройка защищённого канала связи: Организация защищенного канала связи с ЕГИСЗ (например, с использованием решений Континент-АП, ViPNet).\nПередача данных: Начало передачи данных в ЕГИСЗ.",
+              "title": "Интеграция с ЕГИСЗ - соответствие ...",
+              "url": "https://stoma1c.ru/vozmozhnosti/egisz/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "stoma1c.ru",
+                "hostname": "stoma1c.ru",
+                "favicon": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw",
+                "path": "  › главная  › возможности  › интеграция с егисз"
+              }
+            },
+            {
+              "question": "Какие технические средства и настройки необходимы для работы с ЕГИСЗ?",
+              "answer": "Для взаимодействия с ЕГИСЗ необходима медицинская информационная система (МИС), совместимая с государственным сервисом (например, 1С:Медицина.Стоматологическая клиника). При отсутствии такой совместимости потребуется замена МИС.\n\nКроме того, необходима корректная настройка МИС для обеспечения законного и надёжного обмена данными с ЕГИСЗ.\n\nДля защищённой передачи данных требуется создание защищённого канала связи (например, с использованием шлюзов VipNet или Континент-АП). Для электронной подписи документов потребуются квалифицированные сертификаты электронной подписи (ЭЦП) для каждого врача, осуществляющего приёмы пациентов, и для медицинской организации (как правило, руководителя).",
+              "title": "Интеграция с ЕГИСЗ - соответствие ...",
+              "url": "https://stoma1c.ru/vozmozhnosti/egisz/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "stoma1c.ru",
+                "hostname": "stoma1c.ru",
+                "favicon": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw",
+                "path": "  › главная  › возможности  › интеграция с егисз"
+              }
+            },
+            {
+              "question": "Какая ЭЦП потребуется для передачи данных?",
+              "answer": "Для врачей понадобится стандартная электронная цифровая подпись физлица. Необходимо следить, чтобы данные в подписи полностью соответствовали с информацией в ФРМР.\nЕсли в реестре не указано отчество физ.лица, то и в сертификате его тоже недолжно быть, как и в запросе в ЕГИСЗ.\nДля медицинской организации также потребуется подпись, можно использовать подпись без ОГРН/ОГРНИП. Проверка будет осуществляться по личному делу медицинского работника в ФРМР, наименованию и OID медицинской организации.",
+              "title": "Интеграция с ЕГИСЗ - соответствие ...",
+              "url": "https://stoma1c.ru/vozmozhnosti/egisz/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "stoma1c.ru",
+                "hostname": "stoma1c.ru",
+                "favicon": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw",
+                "path": "  › главная  › возможности  › интеграция с егисз"
+              }
+            },
+            {
+              "question": "Можно ли без МИС подключиться к ЕГИСЗ?",
+              "answer": "Первые этапы (подача заявление на доступ к личному кабинету, внесение данных в ФРМР и ФРМО) Вы можете сделать без МИС. Однако, дальнейшее взаимодействие с системой невозможно без МИС, так как она обеспечивает передачу данных о каждом приёме в необходимом формате и в установленные сроки (не позднее 24 часов с момента оказания медицинских услуг).",
+              "title": "Интеграция с ЕГИСЗ - соответствие ...",
+              "url": "https://stoma1c.ru/vozmozhnosti/egisz/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "stoma1c.ru",
+                "hostname": "stoma1c.ru",
+                "favicon": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw",
+                "path": "  › главная  › возможности  › интеграция с егисз"
+              }
+            },
+            {
+              "question": "Сколько времени занимает подключение интеграции с ЕГИСЗ?",
+              "answer": "Среднее время подключения составляет 2-3 недели. (Требуется произвести настройки в системе, установить защищенный канал связи и получить ЭЦП).",
+              "title": "Интеграция с ЕГИСЗ - соответствие ...",
+              "url": "https://stoma1c.ru/vozmozhnosti/egisz/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "stoma1c.ru",
+                "hostname": "stoma1c.ru",
+                "favicon": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw",
+                "path": "  › главная  › возможности  › интеграция с егисз"
+              }
+            },
+            {
+              "question": "Сколько стоит интеграция?",
+              "answer": "Стоимость услуг зависит от выбранного срока подключения и от количества клиник. Для 1 клиники стоимость начинается от 1750 рублей в месяц.",
+              "title": "Интеграция с ЕГИСЗ - соответствие ...",
+              "url": "https://stoma1c.ru/vozmozhnosti/egisz/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "stoma1c.ru",
+                "hostname": "stoma1c.ru",
+                "favicon": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw",
+                "path": "  › главная  › возможности  › интеграция с егисз"
+              }
+            },
+            {
+              "question": "Может ли один врач подписывать все приемы?",
+              "answer": "Если все приёмы будут подписаны одним врачом, это будет означать, что он лично провёл все процедуры. При передаче данных в ЕГИСЗ система сопоставляет данные о врачах, проводивших приёмы, с информацией из ФРМР. Несоответствие может послужить основанием для претензий со стороны контролирующих органов или жалоб пациентов на некорректность данных.",
+              "title": "Интеграция с ЕГИСЗ - соответствие ...",
+              "url": "https://stoma1c.ru/vozmozhnosti/egisz/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "stoma1c.ru",
+                "hostname": "stoma1c.ru",
+                "favicon": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw",
+                "path": "  › главная  › возможности  › интеграция с егисз"
+              }
+            },
+            {
+              "question": "Можно ли не передавать данные по пациентам в ЕГИСЗ?",
+              "answer": "Клиника обязана передавать данные по всем проведенным приемам в ЕГИСЗ.\nПациент может написать отказ от передачи данных в свободной форме. В таком случае клиника все равно обязана передать информацию о приеме в ЕГИСЗ, но в обезличенном виде. Заявление об отказе должно храниться в клинике в течение 5 лет.",
+              "title": "Интеграция с ЕГИСЗ - соответствие ...",
+              "url": "https://stoma1c.ru/vozmozhnosti/egisz/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "stoma1c.ru",
+                "hostname": "stoma1c.ru",
+                "favicon": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw",
+                "path": "  › главная  › возможности  › интеграция с егисз"
+              }
+            }
+          ]
+        },
+        "organization": {
+          "type": "organization",
+          "name": "1С:Медицина",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Внести изменение в согласие на обработку данных пациентов, указав информацию о том, что клиника передает данные в ЕГИСЗ 3 · Установить программу для шифрования данных Континент-АП или ViPNet на компьютере (инструкцию предоставит менеджер) 4 · Обеспечить врачей электронными одписями (ЭЦП) 5 · Узнать подробнее об интеграции с ЕГИСЗ",
+          "Создание сертификатов электронной подписи (ЭЦП): для каждого врача, осуществляющего приёмы пациентов, и для медицинской организации. Интеграция с МИС: Подключение ЕГИСЗ к используемой в медицинской организации МИС (например, 1С:Медицина.Стоматологическая клиника).",
+          "Для 1 клиники стоимость начинается от 1750 рублей в месяц. Если все приёмы будут подписаны одним врачом, это будет означать, что он лично провёл все процедуры. При передаче данных в ЕГИСЗ система сопоставляет данные о врачах, проводивших приёмы, с информацией из ФРМР.",
+          "Чтобы вести медицинскую деятельность и обслуживать пациентов, клиника должна быть зарегистрирована в Единой информационной системе в сфере здравоохранения (ЕГИСЗ) согласно действующим в отрасли Постановлениям (№ 852 от 1 июня 2021 г., № 140 от 9 февраля 2022 г."
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

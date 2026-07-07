@@ -1,0 +1,962 @@
+{
+  "type": "search",
+  "query": {
+    "original": "форум стоматологов программа клиника учёт не хватает жалобы",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "discussions": {
+    "type": "search",
+    "results": [
+      {
+        "title": "СТОМАТОЛОГИЧЕСКИЙ ФОРУМ",
+        "url": "https://e-stomatology.ru/pressa/periodika/forum/02_1/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "e-Stomatology.ru - Официальный сайт Стоматологической Ассоциации России",
+        "fetched_content_timestamp": 1779296665,
+        "language": "ru",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "e-stomatology.ru",
+          "hostname": "e-stomatology.ru",
+          "favicon": "https://imgs.search.brave.com/lNXos2VAUZdO1zSO8pxupEx2SnqvZQWQSJzBsMyPNp0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTg3OTQ3ODY5/MGYxN2MyYWFkZjVi/M2EzNWVkZTJhYmRi/NTQ4OGU3MDg2YWYz/NzU4Y2VlMTg1ZTA4/YWRmZjdhMy9lLXN0/b21hdG9sb2d5LnJ1/Lw",
+          "path": "› pressa  › periodika  › forum  › 02_1"
+        },
+        "data": {
+          "forum_name": "e-stomatology.ru"
+        }
+      },
+      {
+        "title": "Стоматологический форум 🦷 | Woman.ru",
+        "url": "https://www.woman.ru/health/dentistry/forum/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Все о стамотолигии, лечении и удалении зубов. 🦷 Отзывы о стоматологических клиниках и врачах, вопросы о зубной боли, протезировании и и имплантологии.",
+        "fetched_content_timestamp": 1748067399,
+        "language": "ru",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "woman.ru",
+          "hostname": "www.woman.ru",
+          "favicon": "https://imgs.search.brave.com/WAcG462Bbtvrnu55Yh2782c3xyh8WxtLuQGp4lN40Mo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzU0NDI0Mzdi/ODVlMmQzOTQxM2Fl/OWI0MmU1YmNmNTRj/ZWQ3ZjliNzUwZmE5/NDJlYTdkYzExYTYx/ZjZmMjdkYS93d3cu/d29tYW4ucnUv",
+          "path": "› health  › dentistry  › forum"
+        },
+        "data": {
+          "forum_name": "woman.ru"
+        }
+      },
+      {
+        "title": "Бесплатные консультации стоматологов онлайн. Стоматологический форум 32top.ru",
+        "url": "https://forum.32top.ru/boards/board10.html/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Если у Вас возникли вопросы о стоматологических заболеваниях, лечении и профилактике зубов, или Вам просто нужны консультации опытных стоматологов, то мы ...",
+        "fetched_content_timestamp": 1755945922,
+        "language": "ru",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forum.32top.ru",
+          "hostname": "forum.32top.ru",
+          "favicon": "https://imgs.search.brave.com/mvBRYr4SB336N7qj9m4IYb3Nw3f3zcB8OdXTwZizF14/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjU2MjFkYjJh/ZjdhZjc0ZGVmMWJl/ZmFiMThkNmI0Nzlk/Y2Y3NjM4MjY3MDEw/NjY1ZDIyY2ExN2Rj/MWMxZTkxZi9mb3J1/bS4zMnRvcC5ydS8",
+          "path": "› boards  › board10.html"
+        },
+        "data": {
+          "forum_name": "forum.32top.ru"
+        }
+      },
+      {
+        "title": "Стоматологический форум ДентаЛэнд - задайте вопрос врачу стоматологу",
+        "url": "https://dentaland.ru/forums/forum/stomatologiya/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Самый большой стоматологический форум в России, можно бесплатно задать вопрос стоматологу и получить стоматологическую консультацию онлайн, без регистрации.",
+        "fetched_content_timestamp": 1751539568,
+        "language": "ru",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "dentaland.ru",
+          "hostname": "dentaland.ru",
+          "favicon": "https://imgs.search.brave.com/eT4uSah1ezWf4Zm0QVo2PHud9fhYDqAB0P6b9Zbo-ac/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDc0NTRmMWU1/YjRiMWY4NDJmNjM3/MDA1YWU2N2IzYjEy/ZjNmMGUyOTIwZjY2/OGYwMjIwZmQ5NDQ5/ZjAyNmZkZi9kZW50/YWxhbmQucnUv",
+          "path": "› forums  › forum  › stomatologiya"
+        },
+        "age": "February 26, 2025",
+        "data": {
+          "forum_name": "dentaland.ru"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "discussions",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 19,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Куда обратиться с жалобой - Стоматология - Форум стоматологов (стоматологический форум) - Профессиональный стоматологический портал (сайт) «Клуб стоматологов»",
+        "url": "https://stomatologclub.ru/forum/stomatologiya-2/kuda-obratitsya-s-zhaloboj-639/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "(Хотя в моем понимании это флюс-шишка над зубом с гнойным содержимым и болит).Когда в очер раз надулась шишка пошла в стомат и решила взять документальное подтв о том что зуб здоров а после очередного осмотра диагноз:из за того что карман глубокий сгнил корень зуба и надо удалять хотя три мес назад сказали обычный диагноз.Хочу наказать стоматологию за свои мучения как сформулировать граммотно жалобу, чтобы была реакция госорганов а не просто отписка.",
+        "profile": {
+          "name": "Stomatologclub",
+          "url": "https://stomatologclub.ru/forum/stomatologiya-2/kuda-obratitsya-s-zhaloboj-639/",
+          "long_name": "stomatologclub.ru",
+          "img": "https://imgs.search.brave.com/7WRG1Kt1fy-ez5PCpKCFR_JUiLVQxPmHDrX4MvwcMTE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzdkMmQzZDdh/MWY5YzcwMDE2OThh/NzdjZDhkOTczYTg2/YjM2OTFkMzYyZjg0/YTkyZWVlYjI1NmQ3/NGM5NjRkMS9zdG9t/YXRvbG9nY2x1Yi5y/dS8"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "stomatologclub.ru",
+          "hostname": "stomatologclub.ru",
+          "favicon": "https://imgs.search.brave.com/7WRG1Kt1fy-ez5PCpKCFR_JUiLVQxPmHDrX4MvwcMTE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzdkMmQzZDdh/MWY5YzcwMDE2OThh/NzdjZDhkOTczYTg2/YjM2OTFkMzYyZjg0/YTkyZWVlYjI1NmQ3/NGM5NjRkMS9zdG9t/YXRvbG9nY2x1Yi5y/dS8",
+          "path": "› forum  › stomatologiya-2  › kuda-obratitsya-s-zhaloboj-639"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/qanRzomfiapHBp27drYMqRbba90MGckfREaJdd05SxQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdG9t/YXRvbG9nY2x1Yi5y/dS9hc3NldHMvMzRh/NDIyNTkvaW1nL2Jp/Zy1sb2dvLnBuZw",
+          "original": "https://stomatologclub.ru/assets/34a42259/img/big-logo.png",
+          "logo": true
+        },
+        "extra_snippets": [
+          "Обратилась с флюсом в гор стоматологию по полису.Разрезали десну промыли.назначили антибиотики.Заверили что нехватка витаминов.Еще три раза в течении года надувался флюс я приходила к стоматологу два раза делали рентген.И еще процедуру электричеством для уточнения чувств.Диагноз:зубы здоровы, это глуб десневой карман и это не флюс а просто воспаление десны.",
+          "Тема форума стоматологов «Куда обратиться с жалобой» в разделе «Стоматология» на стоматологическом портале (сайте) «Клуб стоматологов».",
+          "(Хотя в моем понимании это флюс-шишка над зубом с гнойным содержимым и болит).Когда в очер раз надулась шишка пошла в стомат и решила взять документальное подтв о том что зуб здоров а после очередного осмотра диагноз:из за того что карман глубокий сгнил корень зуба и надо удалять хотя три мес назад сказали обычный диагноз.Хочу наказать стоматологию за свои мучения как сформулировать граммотно жалобу, чтобы была реакция госорганов а не просто отписка.",
+          "Я теперь тоже многое не люблю особенно стоматологов которые в беспл поликлинике колечат чтобы перелечивать в платной без гарантии."
+        ]
+      },
+      {
+        "title": "Учёт пациентов в стоматологии — ИНТЕРЛОГИКА",
+        "url": "https://interlogika.ru/blog/tpost/hkmh49nuv1-uchyot-patsientov-v-stomatologii",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "По сравнению с другими программами для стоматологических клиник, Dental Pro может иметь следующие недостатки:Некоторые пользователи ...",
+        "profile": {
+          "name": "Interlogika",
+          "url": "https://interlogika.ru/blog/tpost/hkmh49nuv1-uchyot-patsientov-v-stomatologii",
+          "long_name": "interlogika.ru",
+          "img": "https://imgs.search.brave.com/iezrayKwikaoOHNnRKE9fq8HY0bSw0C_iVWoNvdM4JI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzc0ZjA3OTZj/MDFmZWM5OTg3MmE3/Mjc5OGI5NGVmOGUx/ZGJhOGZiNzYxNjQ1/MDA4NDk1ZjU0M2Q1/YjBlZDc0Mi9pbnRl/cmxvZ2lrYS5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "interlogika.ru",
+          "hostname": "interlogika.ru",
+          "favicon": "https://imgs.search.brave.com/iezrayKwikaoOHNnRKE9fq8HY0bSw0C_iVWoNvdM4JI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzc0ZjA3OTZj/MDFmZWM5OTg3MmE3/Mjc5OGI5NGVmOGUx/ZGJhOGZiNzYxNjQ1/MDA4NDk1ZjU0M2Q1/YjBlZDc0Mi9pbnRl/cmxvZ2lrYS5ydS8",
+          "path": "› blog  › tpost  › hkmh49nuv1-uchyot-patsientov-v-stomatologii"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/vRHPL9werpPSCGECHbn2mFS3AfkaAr4Q97n4kyXqexI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudGlsZGFjZG4u/Y29tL3RpbGQ2NDM0/LTM5NjUtNDUzMC1h/MjYxLTM1MzIzOTYy/MzAzNy91Y2h5b3Qt/cGF0aWVudC1ibG9n/LS5qcGc",
+          "original": "https://static.tildacdn.com/tild6434-3965-4530-a261-353239623037/uchyot-patient-blog-.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "По сравнению с другими программами для стоматологических клиник, Dental Pro может иметь следующие недостатки:Некоторые пользователи отмечают, что программе не хватает полезных функций, таких как автоматическое напоминание о назначениях или интеграция с другими медицинскими системами.Перед началом работы потребуется длительное обучение, так как программа сама по себе сложная при внедрении — много индивидуальных настроек.",
+          "И это не потому что мы предвзяты! 1С Стоматология — это комплексная программа для автоматизации бизнес-процессов в стоматологических клиниках.",
+          "Описание программы Dental ProDental Pro — это программа для учёта пациентов в стоматологических клиниках, предлагающая широкий спектр функций для автоматизации бизнес-процессов.",
+          "Однако Dental Pro также имеет ряд преимуществ перед другими программами для стоматологических клиник:Широкий спектр функций для автоматизации бизнес-процессов.Возможность интеграции с другими медицинскими системами, что делает её особенно полезной в больших клиниках и больницах.Поддержка ведения бухгалтерии, получения месячных отчётов, анализа приходов и расходов, планирования бюджета."
+        ]
+      },
+      {
+        "title": "Форум стоматологов России (стоматологический форум для врачей) - Профессиональный стоматологический портал (сайт) «Клуб стоматологов»",
+        "url": "https://stomatologclub.ru/forum/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Форум стоматологов России (стоматологический форум для врачей) на стоматологическом портале (сайте) «Клуб стоматологов» — обсуждение различных тем, связанных ...",
+        "profile": {
+          "name": "Stomatologclub",
+          "url": "https://stomatologclub.ru/forum/",
+          "long_name": "stomatologclub.ru",
+          "img": "https://imgs.search.brave.com/7WRG1Kt1fy-ez5PCpKCFR_JUiLVQxPmHDrX4MvwcMTE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzdkMmQzZDdh/MWY5YzcwMDE2OThh/NzdjZDhkOTczYTg2/YjM2OTFkMzYyZjg0/YTkyZWVlYjI1NmQ3/NGM5NjRkMS9zdG9t/YXRvbG9nY2x1Yi5y/dS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "stomatologclub.ru",
+          "hostname": "stomatologclub.ru",
+          "favicon": "https://imgs.search.brave.com/7WRG1Kt1fy-ez5PCpKCFR_JUiLVQxPmHDrX4MvwcMTE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzdkMmQzZDdh/MWY5YzcwMDE2OThh/NzdjZDhkOTczYTg2/YjM2OTFkMzYyZjg0/YTkyZWVlYjI1NmQ3/NGM5NjRkMS9zdG9t/YXRvbG9nY2x1Yi5y/dS8",
+          "path": "› forum"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/qanRzomfiapHBp27drYMqRbba90MGckfREaJdd05SxQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdG9t/YXRvbG9nY2x1Yi5y/dS9hc3NldHMvMzRh/NDIyNTkvaW1nL2Jp/Zy1sb2dvLnBuZw",
+          "original": "https://stomatologclub.ru/assets/34a42259/img/big-logo.png",
+          "logo": true
+        },
+        "extra_snippets": [
+          "Форум стоматологов России (стоматологический форум для врачей) на стоматологическом портале (сайте) «Клуб стоматологов» — обсуждение различных тем, связанных со стоматологией.",
+          "Присоединяйтесь к Клубу стоматологов в",
+          "Клуб стоматологов stomatologclub.ru",
+          "Вы не можете написать личное сообщение данному человеку, так как не состоите в Клубе стоматологов."
+        ]
+      },
+      {
+        "title": "Стоматология Форум Экспо | 0 отзывов",
+        "url": "https://docdoc.ru/clinic/stomatologiya_forum_ekspo/doctor-stomatolog",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "We cannot provide a description for this page right now",
+        "profile": {
+          "name": "Docdoc",
+          "url": "https://docdoc.ru/clinic/stomatologiya_forum_ekspo/doctor-stomatolog",
+          "long_name": "docdoc.ru",
+          "img": "https://imgs.search.brave.com/oGpYvYWhj54un_XDIIhBdbT7mZvHKxq_LjR5UNmW-rI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWMwM2QyYTZi/ZWQwYjFhZmU1OTAx/OGQ1YTAyMTE2MTI5/MGMxMzU2MTU5YmUz/NDA2MGVkYzYxYzJi/ZDhiYTk0My9kb2Nk/b2MucnUv"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docdoc.ru",
+          "hostname": "docdoc.ru",
+          "favicon": "https://imgs.search.brave.com/oGpYvYWhj54un_XDIIhBdbT7mZvHKxq_LjR5UNmW-rI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWMwM2QyYTZi/ZWQwYjFhZmU1OTAx/OGQ1YTAyMTE2MTI5/MGMxMzU2MTU5YmUz/NDA2MGVkYzYxYzJi/ZDhiYTk0My9kb2Nk/b2MucnUv",
+          "path": "› clinic  › stomatologiya_forum_ekspo  › doctor-stomatolog"
+        }
+      },
+      {
+        "title": "Форум стоматологов: для общения врачей и пациентов",
+        "url": "https://stom.ru/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Автор Женька, 13 часов назад в Хирургическая стоматология ... Задавайте вопросы, делитесь проблемами, размещайте снимки... ... Хочу вылечить зубы и почистить челюсть под седацией, возможно ли? ... Реклама клиник, стоматологических и прочих технологий.",
+        "profile": {
+          "name": "Stom",
+          "url": "https://stom.ru/",
+          "long_name": "stom.ru",
+          "img": "https://imgs.search.brave.com/CGeg36FYA_umdihdSWJdfzmDahyqDrqcq_VgxrsB39Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiN2Q5ZTNj/Njk2NWFjMGRkNTNl/NGE5YjE2M2RjNWU4/YTcyMWM1ODNhZTYx/ZmQ1ZTE1ZDczNjE1/OGY0YjEzZC9zdG9t/LnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "stom.ru",
+          "hostname": "stom.ru",
+          "favicon": "https://imgs.search.brave.com/CGeg36FYA_umdihdSWJdfzmDahyqDrqcq_VgxrsB39Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2ZiN2Q5ZTNj/Njk2NWFjMGRkNTNl/NGE5YjE2M2RjNWU4/YTcyMWM1ODNhZTYx/ZmQ1ZTE1ZDczNjE1/OGY0YjEzZC9zdG9t/LnJ1Lw",
+          "path": ""
+        },
+        "extra_snippets": [
+          "Стоматологический форум: узнайте всё о здоровье зубов и лечении кариеса. Обсуждения, консультации, обмен опытом. Присоединяйтесь к сообществу стоматологов и получите полезные советы!",
+          "Автор Женька, 13 часов назад в Хирургическая стоматология ... Задавайте вопросы, делитесь проблемами, размещайте снимки... ... Хочу вылечить зубы и почистить челюсть под седацией, возможно ли? ... Реклама клиник, стоматологических и прочих технологий."
+        ]
+      },
+      {
+        "title": "CRM системы и МИС для стоматологии: топ лучших программ для стоматологических клиник",
+        "url": "https://demokrat-fr.com/poleznyye-materiali/top-7-mis-dlya-stomatologij-v-2025-godu/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Склад: учёт расходных материалов. Отчёты для руководителей: аналитика и контроль работы клиники. У StomX есть бесплатный тариф с ограниченным функционалом; платный тариф стоит 6 700 ₽/мес. БИТ.Стоматология – комплексная программа для автоматизации работы стоматологических клиник на платформе 1С.",
+        "page_age": "2026-01-15T09:59:10",
+        "profile": {
+          "name": "Demokrat-fr",
+          "url": "https://demokrat-fr.com/poleznyye-materiali/top-7-mis-dlya-stomatologij-v-2025-godu/",
+          "long_name": "demokrat-fr.com",
+          "img": "https://imgs.search.brave.com/y2QCX7zZG680j1bVZT8iuFP_kIgA4Cbr-VCJ2vxofFo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWZkYzU1ZDk2/ODdiZWVjNTkxOTI4/ZDM5Y2NkZWQyYzJl/YjdlMzUxNmM3ODI3/NDQyOGJhYjJhOWQz/YjU4MmY2My9kZW1v/a3JhdC1mci5jb20v"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "demokrat-fr.com",
+          "hostname": "demokrat-fr.com",
+          "favicon": "https://imgs.search.brave.com/y2QCX7zZG680j1bVZT8iuFP_kIgA4Cbr-VCJ2vxofFo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWZkYzU1ZDk2/ODdiZWVjNTkxOTI4/ZDM5Y2NkZWQyYzJl/YjdlMzUxNmM3ODI3/NDQyOGJhYjJhOWQz/YjU4MmY2My9kZW1v/a3JhdC1mci5jb20v",
+          "path": "  › главная  › статьи  › топ-7 мис для стоматологий в 2025 году"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/_835UYVYgjCI1cbNSWp_wVsiJqQpFDIiRYmUSCrfTF8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kZW1v/a3JhdC1mci5jb20v/d3AtY29udGVudC93/ZWJwYy1wYXNzdGhy/dS5waHA_c3JjPWh0/dHBzOi8vZGVtb2ty/YXQtZnIuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI0LzEy/L3RvcF83X21pc19k/bHlhX3N0b21hdG9s/b2dpal92XzIwMjVf/Z29kdS5qcGcmYW1w/O25vY2FjaGU9MQ",
+          "original": "https://demokrat-fr.com/wp-content/webpc-passthru.php?src=https://demokrat-fr.com/wp-content/uploads/2024/12/top_7_mis_dlya_stomatologij_v_2025_godu.jpg&amp;nocache=1",
+          "logo": false
+        },
+        "age": "January 15, 2026",
+        "extra_snippets": [
+          "Склад: учёт расходных материалов. Отчёты для руководителей: аналитика и контроль работы клиники. У StomX есть бесплатный тариф с ограниченным функционалом; платный тариф стоит 6 700 ₽/мес. БИТ.Стоматология – комплексная программа для автоматизации работы стоматологических клиник на платформе 1С.",
+          "Учёт заработной платы и материалов. Встроенные аналитические отчёты для руководителей. Это удобная и функциональная программа для управления стоматологией — всё, что нужно для работы клиники, в одном месте.",
+          "IDENT — система, разработанная для упрощения работы стоматологов и избавления от бумажной рутины. Она эффективно управляет процессами в клинике: от расписания до учёта материалов.",
+          "Финансовый контроль: управление зарплатами, расчёт прибыли, учёт расходов и аналитика по клинике. Безопасность и интеграция с ЕГИСЗ: соблюдение законодательства и защита данных пациентов. Тарифы. Источник: dental‑pro.online · Каждая программа из списка более‑менее подходит для базовых нужд современной стоматологической клиники."
+        ]
+      },
+      {
+        "title": "Форум практикующих стоматологов",
+        "url": "https://vk.com/forumstomatologov",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "‌‌",
+        "profile": {
+          "name": "VK",
+          "url": "https://vk.com/forumstomatologov",
+          "long_name": "vk.com",
+          "img": "https://imgs.search.brave.com/MQK8gqZ0Gg4_DGQkhUiblqmOhR298jpWq-MDEnaVAjE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDlkNTQxZmQw/MTAyNjVmY2YwMzdh/MmQ0ZTlmZTMwZTFm/M2Y1YjBjNjk5ZDU4/ZDdiYTkxZWM3MDgz/ZDc2N2E5Ni92ay5j/b20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "vk.com",
+          "hostname": "vk.com",
+          "favicon": "https://imgs.search.brave.com/MQK8gqZ0Gg4_DGQkhUiblqmOhR298jpWq-MDEnaVAjE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDlkNTQxZmQw/MTAyNjVmY2YwMzdh/MmQ0ZTlmZTMwZTFm/M2Y1YjBjNjk5ZDU4/ZDdiYTkxZWM3MDgz/ZDc2N2E5Ni92ay5j/b20v",
+          "path": "› forumstomatologov"
+        }
+      },
+      {
+        "title": "Стоматология Форум Экспо 🔎 - 7 врачей, 0 отзывов, ...",
+        "url": "https://docdoc.ru/clinic/stomatologiya_forum_ekspo",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "We cannot provide a description for this page right now",
+        "profile": {
+          "name": "Docdoc",
+          "url": "https://docdoc.ru/clinic/stomatologiya_forum_ekspo",
+          "long_name": "docdoc.ru",
+          "img": "https://imgs.search.brave.com/oGpYvYWhj54un_XDIIhBdbT7mZvHKxq_LjR5UNmW-rI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWMwM2QyYTZi/ZWQwYjFhZmU1OTAx/OGQ1YTAyMTE2MTI5/MGMxMzU2MTU5YmUz/NDA2MGVkYzYxYzJi/ZDhiYTk0My9kb2Nk/b2MucnUv"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "docdoc.ru",
+          "hostname": "docdoc.ru",
+          "favicon": "https://imgs.search.brave.com/oGpYvYWhj54un_XDIIhBdbT7mZvHKxq_LjR5UNmW-rI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWMwM2QyYTZi/ZWQwYjFhZmU1OTAx/OGQ1YTAyMTE2MTI5/MGMxMzU2MTU5YmUz/NDA2MGVkYzYxYzJi/ZDhiYTk0My9kb2Nk/b2MucnUv",
+          "path": "› clinic  › stomatologiya_forum_ekspo"
+        }
+      },
+      {
+        "title": "СТОМАТОЛОГИЧЕСКИЙ ФОРУМ",
+        "url": "https://e-stomatology.ru/pressa/periodika/forum/02_1/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "e-Stomatology.ru - Официальный сайт Стоматологической Ассоциации России",
+        "profile": {
+          "name": "E-stomatology",
+          "url": "https://e-stomatology.ru/pressa/periodika/forum/02_1/",
+          "long_name": "e-stomatology.ru",
+          "img": "https://imgs.search.brave.com/lNXos2VAUZdO1zSO8pxupEx2SnqvZQWQSJzBsMyPNp0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTg3OTQ3ODY5/MGYxN2MyYWFkZjVi/M2EzNWVkZTJhYmRi/NTQ4OGU3MDg2YWYz/NzU4Y2VlMTg1ZTA4/YWRmZjdhMy9lLXN0/b21hdG9sb2d5LnJ1/Lw"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "e-stomatology.ru",
+          "hostname": "e-stomatology.ru",
+          "favicon": "https://imgs.search.brave.com/lNXos2VAUZdO1zSO8pxupEx2SnqvZQWQSJzBsMyPNp0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTg3OTQ3ODY5/MGYxN2MyYWFkZjVi/M2EzNWVkZTJhYmRi/NTQ4OGU3MDg2YWYz/NzU4Y2VlMTg1ZTA4/YWRmZjdhMy9lLXN0/b21hdG9sb2d5LnJ1/Lw",
+          "path": "› pressa  › periodika  › forum  › 02_1"
+        }
+      },
+      {
+        "title": "Стоматологический форум",
+        "url": "http://dentaforumugra.ru/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Гайнуллин Рафаэл Рамильевич, врач анестезиолог-реаниматолог стоматологических клиник «Дента Имидж» и «Зубастик» Ортодонтологические проблемы.",
+        "profile": {
+          "name": "Dentaforumugra",
+          "url": "http://dentaforumugra.ru/",
+          "long_name": "dentaforumugra.ru",
+          "img": "https://imgs.search.brave.com/oAIWXfp1Ed0NzGC6868yh8LEXzu-NJ-SE2yLijtYFwc/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGJkNjE3OTI0/OTRmOTI0YmE4ZDU4/MWIxZmNlOWIwMjk1/ZDljYjQxYmI3ZDU2/YTYzNzg4OTI3ZmJj/MzFiMmVjOS9kZW50/YWZvcnVtdWdyYS5y/dS8"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "http",
+          "netloc": "dentaforumugra.ru",
+          "hostname": "dentaforumugra.ru",
+          "favicon": "https://imgs.search.brave.com/oAIWXfp1Ed0NzGC6868yh8LEXzu-NJ-SE2yLijtYFwc/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGJkNjE3OTI0/OTRmOTI0YmE4ZDU4/MWIxZmNlOWIwMjk1/ZDljYjQxYmI3ZDU2/YTYzNzg4OTI3ZmJj/MzFiMmVjOS9kZW50/YWZvcnVtdWdyYS5y/dS8",
+          "path": ""
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Qq8R6ompqsfFHkkcqMvbOhZWR74op8v6MJy_6YEBV9c/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly90aGIu/dGlsZGFjZG4uY29t/L3RpbGQ2MTYxLTMy/NjYtNDM2NS1iMTMw/LTMxMzIzNzYzNjQz/NS8tL3Jlc2l6ZS81/MDR4L18xLnBuZw",
+          "original": "https://thb.tildacdn.com/tild6161-3266-4365-b130-313237636435/-/resize/504x/_1.png",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Форум-выставка с участием ведущих государственных и частных стоматологических клиник Сургута станет площадкой, где профессиональное сообщество сможет не только обменяться опытом, но и презентовать населению свои уникальные предложения, познакомить жителей с новыми технологиями и доступными методами в профилактике и лечении стоматологических заболеваний.",
+          "Ожидаемое количество участников и посетителей – 150+ человек В рамках форума организована выставка с участием производителей медицинских материалов и изделий, средств для гигиены полости рта, представителей стоматологических клиник и страховых компаний с экспозицией их возможностей и предложений.",
+          "Работа выставки Работа интерактивной зоны: Экспресс стоматологическая диагностика - стоматоскопия от Сургутских городских клинических стоматологических поликлиник №1 и №2 Мастер-класс по гигиене полости рта: как правильно чистить зубы от стоматологических клиник «Дента Имидж» / «Зубастик» Мастер-класс «Цифровые технологии в стоматологии: дизайн улыбки» от Центра эстетической стоматологии и имплантации «Орхидея»",
+          "Гайнуллин Рафаэл Рамильевич, врач анестезиолог-реаниматолог стоматологических клиник «Дента Имидж» и «Зубастик» Ортодонтологические проблемы."
+        ]
+      },
+      {
+        "title": "Некачественные стоматологические услуги | Защита прав потребителей в Санкт-Петербурге",
+        "url": "https://prava-potrebitela.ru/uslugi/medicinskij-yurist/nekachestvennye-stomatologicheskie-uslugi/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Профессиональная юридическая помощь при некачественном оказании стоматологических услуг. Особенности составления жалоб при платном и бесплатном лечении.",
+        "page_age": "2024-11-29T00:00:00",
+        "profile": {
+          "name": "Права Потребителя",
+          "url": "https://prava-potrebitela.ru/uslugi/medicinskij-yurist/nekachestvennye-stomatologicheskie-uslugi/",
+          "long_name": "prava-potrebitela.ru",
+          "img": "https://imgs.search.brave.com/giZPDtc9e2oXVZPufGt9d63Jsv1ajV-jEDT1LQWGJJw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2Q2NzkxNmFk/Y2E0YmM0MjNmNjVm/MTBmYWNlN2MxNzYw/NDA3MTRhYzA4NjQw/N2VmYTMxNDY2Y2Fl/YmZkNWE0NC9wcmF2/YS1wb3RyZWJpdGVs/YS5ydS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "prava-potrebitela.ru",
+          "hostname": "prava-potrebitela.ru",
+          "favicon": "https://imgs.search.brave.com/giZPDtc9e2oXVZPufGt9d63Jsv1ajV-jEDT1LQWGJJw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2Q2NzkxNmFk/Y2E0YmM0MjNmNjVm/MTBmYWNlN2MxNzYw/NDA3MTRhYzA4NjQw/N2VmYTMxNDY2Y2Fl/YmZkNWE0NC9wcmF2/YS1wb3RyZWJpdGVs/YS5ydS8",
+          "path": "  › консультация по защите прав потребителей  › услуги  › медицинский юрист"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/WwZAQQDuB9NxDVFw1TyVUzORUx8yYZm3Bezk6VpUSUw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9wcmF2/YS1wb3RyZWJpdGVs/YS5ydS9sb2NhbC90/ZW1wbGF0ZXMvbWFp/bi90cGwvaW1nL2lj/b25zL2xvZ28ucG5n",
+          "original": "https://prava-potrebitela.ru/local/templates/main/tpl/img/icons/logo.png",
+          "logo": true
+        },
+        "age": "November 29, 2024",
+        "article": {
+          "author": [],
+          "date": "May 16, 2022"
+        },
+        "extra_snippets": [
+          "Неудовлетворительное качество стоматологических услуг — явление, встречающиеся как при бесплатном лечении в государственных и муниципальных учреждениях, так и в частных клиниках.",
+          "подтверждением факта лечение у конкретного специалиста (копия страницы медкарточки или талон на прием, по запросу Росздравнадзора может быть сделана выписка из учётных актов регистратуры);"
+        ]
+      },
+      {
+        "title": "Как выстроить доверительные отношения с пациентами стоматологии | 1С:Медицина. Стоматологическая клиника",
+        "url": "https://stoma1c.ru/blog/kak-vystroit-doveritelnye-otnosheniya-s-paczientami-stomatologii/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Стоматологическая клиника: https://stoma1c.ru/. В программе можно настроить чат-бота, который будет собирать отзывы через WhatsApp.",
+        "page_age": "2025-05-05T08:53:27",
+        "profile": {
+          "name": "Stoma1c",
+          "url": "https://stoma1c.ru/blog/kak-vystroit-doveritelnye-otnosheniya-s-paczientami-stomatologii/",
+          "long_name": "stoma1c.ru",
+          "img": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "stoma1c.ru",
+          "hostname": "stoma1c.ru",
+          "favicon": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw",
+          "path": "  › главная  › блог"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ETNQ_dzWcgGUzPpN_adWuvnwq-d_tb0OKzMVgBFA3ms/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdG9t/YTFjLnJ1L2Jsb2cv/d3AtY29udGVudC91/cGxvYWRzLzIwMjQv/MDYva2FrLXZ5c3Ry/b2l0LWRvdmVyaXRl/bG55ZS1vdG5vc2hl/bml5YS1zLXBhY2ll/bnRhbWktc3RvbWF0/b2xvZ2lpLTEud2Vi/cA",
+          "original": "https://stoma1c.ru/blog/wp-content/uploads/2024/06/kak-vystroit-doveritelnye-otnosheniya-s-pacientami-stomatologii-1.webp",
+          "logo": false
+        },
+        "age": "May 5, 2025",
+        "extra_snippets": [
+          "Это особенно важно для тех, кто испытывает подсознательную тревогу перед посещением стоматолога. Такой подход демонстрирует готовность помочь и формирует положительное впечатление от знакомства. Во время первичного осмотра необходимо внимательно выслушать жалобы пациента.",
+          "В данной статье мы рассмотрим основные стратегии и методы, которые помогут выстроить прочные отношения с пациентами стоматологической клиники.",
+          "Знакомство пациента со стоматологией часто происходит через администратора на ресепшене или в регистратуре. Важно, чтобы это взаимодействие было максимально эффективным. Администратор должен обладать терпением и хорошо ориентироваться в услугах клиники, чтобы быстро направить посетителя к нужному специалисту.",
+          "Сбор обратной связи от пациентов позволяет выявить проблемные места в работе клиники и быстро внедрить необходимые изменения. Чтобы оптимизировать этот процесс, можно использовать программное обеспечение 1С:Медицина. Стоматологическая клиника: https://stoma1c.ru/. В программе можно настроить чат-бота, который будет собирать отзывы через WhatsApp."
+        ]
+      },
+      {
+        "title": "Стоматологический форум 🦷 | Woman.ru",
+        "url": "https://www.woman.ru/health/dentistry/forum/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Все о стамотолигии, лечении и удалении зубов. 🦷 Отзывы о стоматологических клиниках и врачах, вопросы о зубной боли, протезировании и и имплантологии.",
+        "profile": {
+          "name": "Woman.ru",
+          "url": "https://www.woman.ru/health/dentistry/forum/",
+          "long_name": "woman.ru",
+          "img": "https://imgs.search.brave.com/WAcG462Bbtvrnu55Yh2782c3xyh8WxtLuQGp4lN40Mo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzU0NDI0Mzdi/ODVlMmQzOTQxM2Fl/OWI0MmU1YmNmNTRj/ZWQ3ZjliNzUwZmE5/NDJlYTdkYzExYTYx/ZjZmMjdkYS93d3cu/d29tYW4ucnUv"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "woman.ru",
+          "hostname": "www.woman.ru",
+          "favicon": "https://imgs.search.brave.com/WAcG462Bbtvrnu55Yh2782c3xyh8WxtLuQGp4lN40Mo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzU0NDI0Mzdi/ODVlMmQzOTQxM2Fl/OWI0MmU1YmNmNTRj/ZWQ3ZjliNzUwZmE5/NDJlYTdkYzExYTYx/ZjZmMjdkYS93d3cu/d29tYW4ucnUv",
+          "path": "› health  › dentistry  › forum"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/1Qll0jhJfy-km80AQ9asxulic876ASi9bL1OoeCQsF0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pNDEt/Y2RuLndvbWFuLnJ1/L2kvdGh1bWJfb2df/MjA0eDMwMC5qcGc_/MDI",
+          "original": "https://i41-cdn.woman.ru/i/thumb_og_204x300.jpg?02",
+          "logo": false
+        },
+        "extra_snippets": [
+          "СтоматологияПсихологияБеременностьДиеты и ЗОЖАрхивСтатьи"
+        ]
+      },
+      {
+        "title": "Бесплатные консультации стоматологов онлайн. Стоматологический форум 32top.ru",
+        "url": "https://forum.32top.ru/boards/board10.html/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Если у Вас возникли вопросы о стоматологических заболеваниях, лечении и профилактике зубов, или Вам просто нужны консультации опытных стоматологов, то мы ...",
+        "profile": {
+          "name": "32top",
+          "url": "https://forum.32top.ru/boards/board10.html/",
+          "long_name": "forum.32top.ru",
+          "img": "https://imgs.search.brave.com/mvBRYr4SB336N7qj9m4IYb3Nw3f3zcB8OdXTwZizF14/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjU2MjFkYjJh/ZjdhZjc0ZGVmMWJl/ZmFiMThkNmI0Nzlk/Y2Y3NjM4MjY3MDEw/NjY1ZDIyY2ExN2Rj/MWMxZTkxZi9mb3J1/bS4zMnRvcC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forum.32top.ru",
+          "hostname": "forum.32top.ru",
+          "favicon": "https://imgs.search.brave.com/mvBRYr4SB336N7qj9m4IYb3Nw3f3zcB8OdXTwZizF14/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjU2MjFkYjJh/ZjdhZjc0ZGVmMWJl/ZmFiMThkNmI0Nzlk/Y2Y3NjM4MjY3MDEw/NjY1ZDIyY2ExN2Rj/MWMxZTkxZi9mb3J1/bS4zMnRvcC5ydS8",
+          "path": "› boards  › board10.html"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/jtoZ14QNETqaP8eNKU0uU97WWiaMvXSTW8OaTAKMzCc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/MzJ0b3AucnUvZGlz/dC9pbWFnZXNfc2l0/ZS9zcHJpdGVfbGFy/Z2UuMzc1NjlhYmNk/Y2E4ODNiYzQyYTUu/d2VicA",
+          "original": "https://cdn.32top.ru/dist/images_site/sprite_large.37569abcdca883bc42a5.webp",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Если у Вас возникли вопросы о стоматологических заболеваниях, лечении и профилактике зубов, или Вам просто нужны консультации опытных стоматологов, то мы предоставляем возможность получить быстрые тветы, не выходя из дома. На нашем форуме бесплатно отвечает врач-стоматолог Григорян Давид Гамлетович."
+        ]
+      },
+      {
+        "title": "Стоматологический форум «Стоматология.су» для врачей ...",
+        "url": "http://forum.stomatologija.su/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Большой стоматологический форум: обсуждение стоматологических проблем, методов лечения зубных заболеваний, консультация профессиональных врачей стоматологов на форуме Стоматология.Су.",
+        "page_age": "2016-02-09T00:00:00",
+        "profile": {
+          "name": "Stomatologija",
+          "url": "http://forum.stomatologija.su/",
+          "long_name": "forum.stomatologija.su",
+          "img": "https://imgs.search.brave.com/5u1xeDHwGuyJ4C7rWrhqILqsqAndDgGwl7sZeGF9CdE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWIxMTVmODJj/NWU2MzM1YzViYTJl/MTgyODQyNjIyN2Zm/YTg2NzZjZjlkYTky/NDJlMjQzNTVmOTcx/M2JmNjZmZi9mb3J1/bS5zdG9tYXRvbG9n/aWphLnN1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "http",
+          "netloc": "forum.stomatologija.su",
+          "hostname": "forum.stomatologija.su",
+          "favicon": "https://imgs.search.brave.com/5u1xeDHwGuyJ4C7rWrhqILqsqAndDgGwl7sZeGF9CdE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWIxMTVmODJj/NWU2MzM1YzViYTJl/MTgyODQyNjIyN2Zm/YTg2NzZjZjlkYTky/NDJlMjQzNTVmOTcx/M2JmNjZmZi9mb3J1/bS5zdG9tYXRvbG9n/aWphLnN1Lw",
+          "path": ""
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Z1shIEGlXcXTAgsggGibTC8Eg28COmrPAcSOLvuNNk0/rs:fit:200:200:1:0/g:ce/aHR0cDovL2ZvcnVt/LnN0b21hdG9sb2dp/amEuc3UvdXBsb2Fk/cy9tb250aGx5XzIw/MTZfMDEvNTZhYmJm/YzEzODUxNV8ucG5n/LjkxNGI0NjBiMDRm/YzI1MTg5OGM1YmYy/YzgwZWU2MDJkLnRo/dW1iLnBuZy41NGZl/ZDA1NDc0OTkxNGY0/YmIwMWU0ODhmMmVh/YmM4Ni5wbmc",
+          "original": "http://forum.stomatologija.su/uploads/monthly_2016_01/56abbfc138515_.png.914b460b04fc251898c5bf2c80ee602d.thumb.png.54fed054749914f4bb01e488f2eabc86.png",
+          "logo": false
+        },
+        "age": "February 9, 2016",
+        "extra_snippets": [
+          "Большой стоматологический форум: обсуждение стоматологических проблем, методов лечения зубных заболеваний, консультация профессиональных врачей стоматологов на форуме Стоматология.Су.",
+          "Организация работы персонала, привлечение и обслуживание пациентов, управление стоматологическим бизнесом. ... Аренда кабинетов, кресел, продажа клиник и лабораторий",
+          "Российские производители стоматологической продукции · Виды имплантов, обсуждение производителей ... Экономическое чудо для 3 типов клиник или Как мы победили кариес",
+          "Приветствуем! Вы зашли на «Стоматологический форум Стоматология.Су»: обсуждение стоматологических проблем, методов лечения зубных заболеваний."
+        ]
+      },
+      {
+        "title": "Форум практикующих стоматологов - журнал | ИСТИНА – Интеллектуальная Система Тематического Исследования НАукометрических данных",
+        "url": "https://istina.msu.ru/journals/18969376/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Тема обращения: · Описание проблемы:",
+        "profile": {
+          "name": "Istina",
+          "url": "https://istina.msu.ru/journals/18969376/",
+          "long_name": "istina.msu.ru",
+          "img": "https://imgs.search.brave.com/QNv7HRhMTdQZUQZQpbNVVWSJOK7jISfZWGD99XOBcQo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDkxZjRhZTdj/YjliYjBiMjlkYTRj/Mzg4MWJjYzlhNGJk/ODM1ZjYwYjhhYmIw/OGI4MmEyMmMwNmQ0/MTg0MGU3MS9pc3Rp/bmEubXN1LnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "istina.msu.ru",
+          "hostname": "istina.msu.ru",
+          "favicon": "https://imgs.search.brave.com/QNv7HRhMTdQZUQZQpbNVVWSJOK7jISfZWGD99XOBcQo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDkxZjRhZTdj/YjliYjBiMjlkYTRj/Mzg4MWJjYzlhNGJk/ODM1ZjYwYjhhYmIw/OGI4MmEyMmMwNmQ0/MTg0MGU3MS9pc3Rp/bmEubXN1LnJ1Lw",
+          "path": "› journals  › 18969376"
+        },
+        "extra_snippets": [
+          "2014 Стоматологическая реабилитация пациентов с новообразованиями челюстно-лицевой области",
+          "в журнале Форум практикующих стоматологов, № 3, с."
+        ]
+      },
+      {
+        "title": "Gd",
+        "url": "https://www.gd.ru/articles/9585-aktualnye-i-ostrye-problemy-sovremennoy-stomatologii",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Читайте статьи сайта журнала &quot;Генеральны Директор&quot;.",
+        "page_age": "2017-12-04T00:00:00",
+        "profile": {
+          "name": "Gd",
+          "url": "https://www.gd.ru/articles/9585-aktualnye-i-ostrye-problemy-sovremennoy-stomatologii",
+          "long_name": "gd.ru",
+          "img": "https://imgs.search.brave.com/TmLPiIYj6KYav07dtgCkM7tfEJeXVfDTbkxgjdIt8c8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2NlNGZlYzI4/ZTIzYTNjMjZlYTQ1/NDE1ZWIxODNiNzRm/ZDJhMTI4Mjk4NGZj/NGI5ZTdiZmJkNWNj/NjAxYjczYS93d3cu/Z2QucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "gd.ru",
+          "hostname": "www.gd.ru",
+          "favicon": "https://imgs.search.brave.com/TmLPiIYj6KYav07dtgCkM7tfEJeXVfDTbkxgjdIt8c8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2NlNGZlYzI4/ZTIzYTNjMjZlYTQ1/NDE1ZWIxODNiNzRm/ZDJhMTI4Mjk4NGZj/NGI5ZTdiZmJkNWNj/NjAxYjczYS93d3cu/Z2QucnUv",
+          "path": "› articles  › 9585-aktualnye-i-ostrye-problemy-sovremennoy-stomatologii"
+        },
+        "age": "December 4, 2017"
+      },
+      {
+        "title": "Порядок обработки жалоб клиентов в стоматологической клинике \"Два дантиста\"",
+        "url": "https://dvadantista.ru/about/poryadok-obrabotki-zhalob/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Порядок обработки жалоб клиентов в стоматологической клинике",
+        "profile": {
+          "name": "Dvadantista",
+          "url": "https://dvadantista.ru/about/poryadok-obrabotki-zhalob/",
+          "long_name": "dvadantista.ru",
+          "img": "https://imgs.search.brave.com/edmrBaBtGFOgLFx9JntDRr2epy7-hifKY_6o01VXG8s/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZmM4ZGEwNzg0/MWY0MWJiNTNkNjlk/ZDhlNzhjMDEwZmU5/ZjI0M2U2NjViZDQ5/Mjk5YTZjMzgzMmNj/YTE4OWQxZS9kdmFk/YW50aXN0YS5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "location",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "dvadantista.ru",
+          "hostname": "dvadantista.ru",
+          "favicon": "https://imgs.search.brave.com/edmrBaBtGFOgLFx9JntDRr2epy7-hifKY_6o01VXG8s/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZmM4ZGEwNzg0/MWY0MWJiNTNkNjlk/ZDhlNzhjMDEwZmU5/ZjI0M2U2NjViZDQ5/Mjk5YTZjMzgzMmNj/YTE4OWQxZS9kdmFk/YW50aXN0YS5ydS8",
+          "path": "› about  › poryadok-obrabotki-zhalob"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/2-3M5ujMP0U0nf1xAFd6iBndr8cwXcissVqOcGp_43Q/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kdmFk/YW50aXN0YS5ydS9p/bWFnZXMvaS9sb2dv/LW5ldy5wbmc",
+          "original": "https://dvadantista.ru/images/i/logo-new.png",
+          "logo": true
+        },
+        "location": {
+          "title": "Стоматология Два дантиста",
+          "url": "https://dvadantista.ru/about/poryadok-obrabotki-zhalob/",
+          "is_source_local": false,
+          "is_source_both": false,
+          "family_friendly": true,
+          "type": "location_result",
+          "provider_url": "https://dvadantista.ru/about/poryadok-obrabotki-zhalob/",
+          "zoom_level": 7,
+          "postal_address": {
+            "type": "PostalAddress",
+            "streetAddress": "г. Санкт-Петербург, Московский проспект, 183/185 лит Б.",
+            "displayAddress": "г. Санкт-Петербург, Московский проспект, 183/185 лит Б."
+          },
+          "contact": {
+            "telephone": "+7 (812) 438-21-17"
+          },
+          "profiles": [
+            {
+              "type": "external",
+              "name": "dvadantista.ru",
+              "url": "https://dvadantista.ru/about/poryadok-obrabotki-zhalob/",
+              "img": "https://imgs.search.brave.com/edmrBaBtGFOgLFx9JntDRr2epy7-hifKY_6o01VXG8s/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZmM4ZGEwNzg0/MWY0MWJiNTNkNjlk/ZDhlNzhjMDEwZmU5/ZjI0M2U2NjViZDQ5/Mjk5YTZjMzgzMmNj/YTE4OWQxZS9kdmFk/YW50aXN0YS5ydS8"
+            }
+          ],
+          "categories": []
+        },
+        "extra_snippets": [
+          "Обработка жалоб в нашей стоматологической клинике происходит в следующей последовательности:",
+          "Премиум-стоматология в Санкт-Петербурге",
+          "Поиск контактов пациента. Сотрудник находит контактную информацию пациента в медицинской карте или регистратуре клиники.",
+          "Оказание услуг. Во время приема врач клиники проводит все необходимые процедуры для решения проблемы, указанной в жалобе."
+        ]
+      },
+      {
+        "title": "Стоматологический форум ДентаЛэнд - задайте вопрос врачу стоматологу",
+        "url": "https://dentaland.ru/forums/forum/stomatologiya/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "На сайте dentaland.ru возможно задать вопрос стоматологу онлайн бесплатно в любое время суток и в любой день.",
+        "page_age": "2025-02-26T14:22:43",
+        "profile": {
+          "name": "Dentaland",
+          "url": "https://dentaland.ru/forums/forum/stomatologiya/",
+          "long_name": "dentaland.ru",
+          "img": "https://imgs.search.brave.com/eT4uSah1ezWf4Zm0QVo2PHud9fhYDqAB0P6b9Zbo-ac/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDc0NTRmMWU1/YjRiMWY4NDJmNjM3/MDA1YWU2N2IzYjEy/ZjNmMGUyOTIwZjY2/OGYwMjIwZmQ5NDQ5/ZjAyNmZkZi9kZW50/YWxhbmQucnUv"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "dentaland.ru",
+          "hostname": "dentaland.ru",
+          "favicon": "https://imgs.search.brave.com/eT4uSah1ezWf4Zm0QVo2PHud9fhYDqAB0P6b9Zbo-ac/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDc0NTRmMWU1/YjRiMWY4NDJmNjM3/MDA1YWU2N2IzYjEy/ZjNmMGUyOTIwZjY2/OGYwMjIwZmQ5NDQ5/ZjAyNmZkZi9kZW50/YWxhbmQucnUv",
+          "path": "  › главная  › форумы  › стоматология"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/vm2x2Vrq1p07Thwjo-RPenb35FtDRMbNY3aJmeTAln8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kZW50/YWxhbmQucnUvd3At/Y29udGVudC91cGxv/YWRzLzIwMjUvMDIv/ZGVudGFsYW5kLWJh/bm5lci1zb2NpYWwu/anBn",
+          "original": "https://dentaland.ru/wp-content/uploads/2025/02/dentaland-banner-social.jpg",
+          "logo": false
+        },
+        "age": "February 26, 2025",
+        "faq": {
+          "items": [
+            {
+              "question": "Самый большой стоматологический форум в России, можно бесплатно задать вопрос стоматологу и получить стоматологическую консультацию онлайн, без регистрации.",
+              "answer": "<p>Для того, чтобы узнать интересующие Вас вопросы, касающиеся лечения и имплантации зубов, Вы можете посетить наш стоматологический форум. Если Вы захотите задать вопрос стоматологу, то для этой цели предусмотрена очень полезная и бесплатная услуга — консультация стоматолога онлайн.</p><p>На сайте dentaland.ru возможно задать вопрос стоматологу онлайн бесплатно в любое время суток и в любой день. Вопросы стоматологу от пациента рассматриваются в течение одного час с 10 утра до 23:00 ежедневно. Если же вопрос стоматологу поступил после 23 часов, то консультация стоматолога онлайн бесплатно будет для Вас доступна на следующий день с 10 утра.</p><p>Наш стоматологический форум для пациентов интересен тем, что на Ваши вопросы отвечает врач-стоматолог, доктор медицинских наук, который поможет Вам разобраться с интересующей Вас ситуацией в полости рта и посоветует необходимого специалиста. В том случае, если Вы желаете задать вопрос стоматологу онлайн и получить ответ по Вашему номеру телефона, то это тоже возможно.</p><p>Наш стоматологический форум работает с 2002 года. За это время мы помогли тысячам пациентов определить необходимый вид лечения и подобрать оптимальную стоматологическую клинику в Москве. При необходимости мы проводим консультацию и по направленным к нам результатам рентгенологического исследования и данным компьютерной томографии.</p><p>При желании пациента провести предварительный расчет предполагаемого лечения, то мы готовы оказать Вам эту услугу с рассмотрением нескольких вариантов комплексного лечения. В том случае, когда пациенты проживают в других городах и регионах, мы можем после проведенной онлайн консультации зарезервировать время для первичного приема в день предполагаемого посещения клиники.</p><p>Мы рады ответить на все Ваши вопросы на нашем форуме.</p>",
+              "title": "Стоматологический форум ДентаЛэнд ...",
+              "url": "https://dentaland.ru/forums/forum/stomatologiya/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "dentaland.ru",
+                "hostname": "dentaland.ru",
+                "favicon": "https://imgs.search.brave.com/eT4uSah1ezWf4Zm0QVo2PHud9fhYDqAB0P6b9Zbo-ac/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDc0NTRmMWU1/YjRiMWY4NDJmNjM3/MDA1YWU2N2IzYjEy/ZjNmMGUyOTIwZjY2/OGYwMjIwZmQ5NDQ5/ZjAyNmZkZi9kZW50/YWxhbmQucnUv",
+                "path": "  › главная  › форумы  › стоматология"
+              }
+            }
+          ]
+        },
+        "organization": {
+          "type": "organization",
+          "name": "ООО «Швейцарский центр имплантации зубов «ДентаЛэнд»",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Наш стоматологический форум работает с 2002 года. За это время мы помогли тысячам пациентов определить необходимый вид лечения и подобрать оптимальную стоматологическую клинику в Москве.",
+          "Для того, чтобы узнать интересующие Вас вопросы, касающиеся лечения и имплантации зубов, Вы можете посетить наш стоматологический форум.",
+          "Если Вы захотите задать вопрос стоматологу, то для этой цели предусмотрена очень полезная и бесплатная услуга — консультация стоматолога онлайн.",
+          "На сайте dentaland.ru возможно задать вопрос стоматологу онлайн бесплатно в любое время суток и в любой день. Вопросы стоматологу от пациента рассматриваются в течение одного час с 10 утра до 23:00 ежедневно."
+        ]
+      },
+      {
+        "title": "Претензия к стоматологической клинике",
+        "url": "https://els24.com/article/505-pretenziya-k-stomatologicheskoy-klinike/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Куда и за что можно предъявлять претензии к стоматологической клинике? Когда ошибка врача очевидна, а когда нет? Как отвечают врачи, и на что может рассчитывать ...",
+        "page_age": "2024-04-06T21:00:00",
+        "profile": {
+          "name": "ELS24",
+          "url": "https://els24.com/article/505-pretenziya-k-stomatologicheskoy-klinike/",
+          "long_name": "els24.com",
+          "img": "https://imgs.search.brave.com/HlPO5tTlmGgxP3rCaI2N4kv9oh0HqG6rH1QSwqlactU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZmM3YjJjMjFl/NDNhNDNkMzNiZGRl/OWY4MmE1ODg3ZWJm/MmFjY2IyYWMwNWMy/ZDIyNzE2YTBhNWNl/ZDNkMGI4ZC9lbHMy/NC5jb20v"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "els24.com",
+          "hostname": "els24.com",
+          "favicon": "https://imgs.search.brave.com/HlPO5tTlmGgxP3rCaI2N4kv9oh0HqG6rH1QSwqlactU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZmM3YjJjMjFl/NDNhNDNkMzNiZGRl/OWY4MmE1ODg3ZWJm/MmFjY2IyYWMwNWMy/ZDIyNzE2YTBhNWNl/ZDNkMGI4ZC9lbHMy/NC5jb20v",
+          "path": "  › главная  › правовой журнал  › права потребителей"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Kyr9TMbGfxCQJhD3oiPDz2tQUUO4DDQzhFj5PTZCE6A/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9lbHMy/NC5jb20vdXBsb2Fk/L2libG9jay8xZjAv/azY0YzNqMHR2Nnkw/ZjJneHVzM3RpZ285/a2lyMWljdXIvODQ3/LUtvZ2RhLW1vemhu/by1wb2RhdC16aGFs/b2J1LW5hLXN0b21h/dG9sb2dpY2hlc2t1/eXUta2xpbmlrdS5w/bmc",
+          "original": "https://els24.com/upload/iblock/1f0/k64c3j0tv6y0f2gxus3tigo9kir1icur/847-Kogda-mozhno-podat-zhalobu-na-stomatologicheskuyu-kliniku.png",
+          "logo": false
+        },
+        "age": "April 6, 2024",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Цын Юлия Сергеевна",
+              "url": "https://els24.com/author/tsyn-yuliya-sergeevna/"
+            }
+          ],
+          "publisher": {
+            "type": "organization",
+            "name": "ЕЮС",
+            "url": "https://els24.com",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/mIS2T4lHYhAVqZUwLrcIOT_yFUB5_sns_Hi7YZob2fk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9lbHMy/NC5jb20vbG9jYWwv/dGVtcGxhdGVzL3Bv/cnRhbC9pbWcvZmF2/aWNvbi9hcHBsZS10/b3VjaC1pY29uLTE4/MHgxODAucG5n",
+              "original": "https://els24.com/local/templates/portal/img/favicon/apple-touch-icon-180x180.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Куда и за что можно предъявлять претензии к стоматологической клинике? Когда ошибка врача очевидна, а когда нет? Как отвечают врачи, и на что может рассчитывать пациент - все это в нашей статье",
+          "Услуги, предоставляемые в стоматологической клинике в 2025 году, считаются одними из самых востребованных и самых дорогих. Зубную боль терпеть невозможно, единственный выход – только лечение.",
+          "6 ФЗ № 323 сохраняется приоритет интересов пациента при оказании ему медицинской помощи. Претензия или жалоба на стоматологическую клинику может содержать доводы, опирающиеся на вышеуказанные медицинские нормы и на ЗоЗПП.",
+          "Мы составим жалобу в стоматологическую клинику и в соответствующие органы, будем вести весь процесс разбирательств и вернем деньги за ущерб здоровью."
+        ]
+      }
+    ],
+    "family_friendly": false
+  }
+}

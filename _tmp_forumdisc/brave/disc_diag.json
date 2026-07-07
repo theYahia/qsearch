@@ -1,0 +1,874 @@
+{
+  "type": "search",
+  "query": {
+    "original": "форум автодиагностов обсуждение программ сканеров жалобы не работает",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "discussions": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Раздел для новичков нашего форума и начинающих диагностов - ChipTuner Forum",
+        "url": "https://chiptuner.ru/forum/forumdisplay.php?f=227",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Общение начинается здесь! Приветствия, знакомство с форумом и его обитателями, с правилами общения и написания постов.",
+        "fetched_content_timestamp": 1770524994,
+        "language": "ru",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "chiptuner.ru",
+          "hostname": "chiptuner.ru",
+          "favicon": "https://imgs.search.brave.com/hqEYW-EnDJafbYgoWDznWHojtgkjyscvHGC4S4ZoQj4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGYyMGI1NTM2/OTY5ZmM5MDUyOTJi/MjBkOTMzYTYzZGUx/NjEzYzBjNjVkOTU5/N2YxN2YzYzdhNGMz/MGJhMjU3Ni9jaGlw/dHVuZXIucnUv",
+          "path": "› forum  › forumdisplay.php"
+        },
+        "data": {
+          "forum_name": "chiptuner.ru"
+        }
+      },
+      {
+        "title": "Форум по диагностике и ремонту автоэлектроники и автоэлектрики - Форум автомастеров carmasters.org",
+        "url": "https://carmasters.org/forum/5-%D1%84%D0%BE%D1%80%D1%83%D0%BC-%D0%BF%D0%BE-%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%B5-%D0%B8-%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%D1%83-%D0%B0%D0%B2%D1%82%D0%BE%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%B8-%D0%B8-%D0%B0%D0%B2%D1%82%D0%BE%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D0%BA%D0%B8/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Забули пароль · Форум по обслуживанию, диагностике и ремонту автомобилей Mercedes и Smart",
+        "fetched_content_timestamp": 1754847492,
+        "language": "en",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "carmasters.org",
+          "hostname": "carmasters.org",
+          "favicon": "https://imgs.search.brave.com/5kLuA4gzah86naHGV6caPuvKHhCxY1lko0cmJ97GTGo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODE2YWYzMzAw/ZTRjZWJhMTRjMDky/NWIzMWY4ZDMyMGIx/M2U0ODQzYmI3ZmM0/MGI1YWExOTRhNzM4/ZTJkNTkyOC9jYXJt/YXN0ZXJzLm9yZy8",
+          "path": "› forum  › 5-форум-по-диагностике-и-ремонту-автоэлектроники-и-автоэлектрики"
+        },
+        "data": {
+          "forum_name": "carmasters.org"
+        }
+      },
+      {
+        "title": "Форум автомобильных диагностов Autodata.ru Диагностика и ремонт автомобилей :: Оборудование, ПО и инструменты для диагностики: обсуждения :: Если не хватает для приобритения диллерских сканеров",
+        "url": "http://forum.autodata.ru/3/20913",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Профессиональный форум по диагностике и ремонту автомобилей: японские, корейские, китайские, европейские, американские и отечественные марки, коммерческий ...",
+        "fetched_content_timestamp": 0,
+        "language": "ru",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "http",
+          "netloc": "forum.autodata.ru",
+          "hostname": "forum.autodata.ru",
+          "favicon": "https://imgs.search.brave.com/FRBCwdC8q0UgEevg8efeg29UhlYugl7BBF0KnFHI4qU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmM2Zjk5YmU2/YjcxNDgxNTUyODdl/OGY4ZTA0YzI1Zjcw/YzExZTExYjNjZWI5/OTFiYjE3MjkzNDIz/ZWE3NDc3My9mb3J1/bS5hdXRvZGF0YS5y/dS8",
+          "path": "› 3  › 20913"
+        },
+        "data": {
+          "forum_name": "forum.autodata.ru"
+        }
+      },
+      {
+        "title": "Программы для Диагностики | otomotiv-forum.com",
+        "url": "https://otomotiv-forum.com/forums/programmy-dlya-diagnostiki.22/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Следуйте инструкциям в видео ниже, чтобы узнать, как установить наш сайт как веб-приложение на главный экран вашего устройства · Примечание: Эта функция может ...",
+        "fetched_content_timestamp": 1778886241,
+        "language": "ru",
+        "family_friendly": true,
+        "type": "discussion",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "otomotiv-forum.com",
+          "hostname": "otomotiv-forum.com",
+          "favicon": "https://imgs.search.brave.com/7DvRRSEyx3DW2ri6XJxCyJV8X2q-zjiGBAHDB-oUFeQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGYyMmNhZmIy/MWViYmUwMDc4ODFk/MzdiN2FhMDVkMTky/MDI1Nzk3ZDQ1ZGFm/NmViZGNiOGE3ZDA3/ODAyY2UyZi9vdG9t/b3Rpdi1mb3J1bS5j/b20v",
+          "path": "› forums  › programmy-dlya-diagnostiki.22"
+        },
+        "data": {
+          "forum_name": "otomotiv-forum.com"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "discussions",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 19,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Форум по автодиагностике, автосканерам, ремонту, обслуживанию и эксплуатации автомобилей - Powered by vBulletin",
+        "url": "https://autoprogs.ru/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Форум по автодиагностике и автосканерам. Обмен опытом, настройка установка. Руководства, мануалы, инструкции по ремонту, обслуживанию эксплуатации автомобилей.",
+        "profile": {
+          "name": "Autoprogs",
+          "url": "https://autoprogs.ru/",
+          "long_name": "autoprogs.ru",
+          "img": "https://imgs.search.brave.com/26y2tTWVhlogm7SP2e0OTyylKvfhPn2qluGpiJ6hx3k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2E5YTlhNWNh/NjhjYmEzZDc2MTc0/ZDRjZTM3M2EzOWFi/M2RjN2RhM2RhYTNi/YmIxNjg3NzllZDE0/ZTg1ZmE1OC9hdXRv/cHJvZ3MucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "autoprogs.ru",
+          "hostname": "autoprogs.ru",
+          "favicon": "https://imgs.search.brave.com/26y2tTWVhlogm7SP2e0OTyylKvfhPn2qluGpiJ6hx3k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2E5YTlhNWNh/NjhjYmEzZDc2MTc0/ZDRjZTM3M2EzOWFi/M2RjN2RhM2RhYTNi/YmIxNjg3NzllZDE0/ZTg1ZmE1OC9hdXRv/cHJvZ3MucnUv",
+          "path": ""
+        },
+        "extra_snippets": [
+          "Добро пожаловать на форум по автодиагностике, автосканерам!",
+          "Автосканеры и программы для диагностики: BMW: BMW ICOM | BMW INPA | BMW Esys | BMW ISPI NEXT | BMW Rheingold Peugeot / Citroen: Lexia 3 | Diagbox Ford / Mazda: Ford VCM 2 | Ford VCM | Ford IDS Honda: Honda HIM KIA / Hyundai: Hyundai / Kia GDS VCI Land Rover / Jaguar: DA-VINA 2534 | Jaguar / Land Rover VCM SDD | JLR Mongoose Mercedes: Sd Connect | Star Diagnosis Nissan: Nissan Consult 3 Opel: OP-COM Porsche: PIWIS Tester 2 Renault: Renault CAN Clip Subaru: Subaru Select Monitor III Toyota / Lexus: Toyota Intelligent Tester II VAG: VAG-COM / VCDS | VAS 5054a | VAG Odis | VAS PC VOLVO: Volvo VIDA | Volvo DICE Программаторы: Carprog | XProg Чип-тюнинг: Kess v2 | K-Tag | Galletto 2 | MPPS | Tactrix Openport | Piasini | BDM100"
+        ]
+      },
+      {
+        "title": "Диагностика грузовиков и коммерческого транспорта | ремонт электроники - Форум по автодиагностике, автосканерам, ремонту, обслуживанию и эксплуатации автомобилей",
+        "url": "https://autoprogs.ru/diagnostika-gruzovikov-i-kommercheskogo-transporta-remont-elektroniki-223/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Добро пожаловать на форум по автодиагностике, автосканерам!",
+        "profile": {
+          "name": "Autoprogs",
+          "url": "https://autoprogs.ru/diagnostika-gruzovikov-i-kommercheskogo-transporta-remont-elektroniki-223/",
+          "long_name": "autoprogs.ru",
+          "img": "https://imgs.search.brave.com/26y2tTWVhlogm7SP2e0OTyylKvfhPn2qluGpiJ6hx3k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2E5YTlhNWNh/NjhjYmEzZDc2MTc0/ZDRjZTM3M2EzOWFi/M2RjN2RhM2RhYTNi/YmIxNjg3NzllZDE0/ZTg1ZmE1OC9hdXRv/cHJvZ3MucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "autoprogs.ru",
+          "hostname": "autoprogs.ru",
+          "favicon": "https://imgs.search.brave.com/26y2tTWVhlogm7SP2e0OTyylKvfhPn2qluGpiJ6hx3k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2E5YTlhNWNh/NjhjYmEzZDc2MTc0/ZDRjZTM3M2EzOWFi/M2RjN2RhM2RhYTNi/YmIxNjg3NzllZDE0/ZTg1ZmE1OC9hdXRv/cHJvZ3MucnUv",
+          "path": "› diagnostika-gruzovikov-i-kommercheskogo-transporta-remont-elektroniki-223"
+        },
+        "extra_snippets": [
+          "Добро пожаловать на форум по автодиагностике, автосканерам!"
+        ]
+      },
+      {
+        "title": "Лучший автосканер - Форум по автодиагностике, автосканерам, ремонту, обслуживанию и эксплуатации автомобилей",
+        "url": "https://autoprogs.ru/multimarochnye-diagnosticheskie-skanery-168/luchshii-avtoskaner-24899/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Программное обеспечение Как и любой компьютер, так и каждый автомобильный сканер не будет работать без нужного программного обеспечения.",
+        "profile": {
+          "name": "Autoprogs",
+          "url": "https://autoprogs.ru/multimarochnye-diagnosticheskie-skanery-168/luchshii-avtoskaner-24899/",
+          "long_name": "autoprogs.ru",
+          "img": "https://imgs.search.brave.com/26y2tTWVhlogm7SP2e0OTyylKvfhPn2qluGpiJ6hx3k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2E5YTlhNWNh/NjhjYmEzZDc2MTc0/ZDRjZTM3M2EzOWFi/M2RjN2RhM2RhYTNi/YmIxNjg3NzllZDE0/ZTg1ZmE1OC9hdXRv/cHJvZ3MucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "autoprogs.ru",
+          "hostname": "autoprogs.ru",
+          "favicon": "https://imgs.search.brave.com/26y2tTWVhlogm7SP2e0OTyylKvfhPn2qluGpiJ6hx3k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2E5YTlhNWNh/NjhjYmEzZDc2MTc0/ZDRjZTM3M2EzOWFi/M2RjN2RhM2RhYTNi/YmIxNjg3NzllZDE0/ZTg1ZmE1OC9hdXRv/cHJvZ3MucnUv",
+          "path": "› multimarochnye-diagnosticheskie-skanery-168  › luchshii-avtoskaner-24899"
+        },
+        "extra_snippets": [
+          "Программное обеспечение Как и любой компьютер, так и каждый автомобильный сканер не будет работать без нужного программного обеспечения.",
+          "Современный автопром, для ремонта требует предварительной диагностики на современном сканерном оборудовании. В основе каждого сканера, заложено соответствующее программное обеспечение, которое определяет их функционал.",
+          "В списке обозреваемых сканеров, имеется в виду именно копия Autocom CDP Pro. Клоны из Китая являются одними из самых дешевых, что продаются, но функционал у них достойный. Несомненно, сама программа – это дитё Шведских программистов, но не Китайцев, которые её взломали.",
+          "Доступность, учитывая, что сканер мультимарочный; Наличие беспроводной связи. Явные минусы: Русификация программы через переводчик;"
+        ]
+      },
+      {
+        "title": "Форум автомобильных диагностов Autodata.ru",
+        "url": "https://forum.autodata.ru/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Профессиональный форум по диагностике и ремонту автомобилей: японские, корейские, китайские, европейские, американские и отечественные марки, коммерческий ...",
+        "profile": {
+          "name": "Autodata",
+          "url": "https://forum.autodata.ru/",
+          "long_name": "forum.autodata.ru",
+          "img": "https://imgs.search.brave.com/FRBCwdC8q0UgEevg8efeg29UhlYugl7BBF0KnFHI4qU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmM2Zjk5YmU2/YjcxNDgxNTUyODdl/OGY4ZTA0YzI1Zjcw/YzExZTExYjNjZWI5/OTFiYjE3MjkzNDIz/ZWE3NDc3My9mb3J1/bS5hdXRvZGF0YS5y/dS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forum.autodata.ru",
+          "hostname": "forum.autodata.ru",
+          "favicon": "https://imgs.search.brave.com/FRBCwdC8q0UgEevg8efeg29UhlYugl7BBF0KnFHI4qU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmM2Zjk5YmU2/YjcxNDgxNTUyODdl/OGY4ZTA0YzI1Zjcw/YzExZTExYjNjZWI5/OTFiYjE3MjkzNDIz/ZWE3NDc3My9mb3J1/bS5hdXRvZGF0YS5y/dS8",
+          "path": ""
+        },
+        "extra_snippets": [
+          "Профессиональный форум по диагностике и ремонту автомобилей: японские, корейские, китайские, европейские, американские и отечественные марки, коммерческий транспорт"
+        ]
+      },
+      {
+        "title": "Раздел для новичков нашего форума и начинающих диагностов - ChipTuner Forum",
+        "url": "https://chiptuner.ru/forum/forumdisplay.php?f=227",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Общение начинается здесь! Приветствия, знакомство с форумом и его обитателями, с правилами общения и написания постов.",
+        "profile": {
+          "name": "Chiptuner",
+          "url": "https://chiptuner.ru/forum/forumdisplay.php?f=227",
+          "long_name": "chiptuner.ru",
+          "img": "https://imgs.search.brave.com/hqEYW-EnDJafbYgoWDznWHojtgkjyscvHGC4S4ZoQj4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGYyMGI1NTM2/OTY5ZmM5MDUyOTJi/MjBkOTMzYTYzZGUx/NjEzYzBjNjVkOTU5/N2YxN2YzYzdhNGMz/MGJhMjU3Ni9jaGlw/dHVuZXIucnUv"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "chiptuner.ru",
+          "hostname": "chiptuner.ru",
+          "favicon": "https://imgs.search.brave.com/hqEYW-EnDJafbYgoWDznWHojtgkjyscvHGC4S4ZoQj4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGYyMGI1NTM2/OTY5ZmM5MDUyOTJi/MjBkOTMzYTYzZGUx/NjEzYzBjNjVkOTU5/N2YxN2YzYzdhNGMz/MGJhMjU3Ni9jaGlw/dHVuZXIucnUv",
+          "path": "› forum  › forumdisplay.php"
+        }
+      },
+      {
+        "title": "Форуми - Форум автомастеров carmasters.org",
+        "url": "https://carmasters.org/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Обсуждение работы форума, функции, правила, особенности использования и отлов глюков.",
+        "profile": {
+          "name": "Carmasters",
+          "url": "https://carmasters.org/",
+          "long_name": "carmasters.org",
+          "img": "https://imgs.search.brave.com/5kLuA4gzah86naHGV6caPuvKHhCxY1lko0cmJ97GTGo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODE2YWYzMzAw/ZTRjZWJhMTRjMDky/NWIzMWY4ZDMyMGIx/M2U0ODQzYmI3ZmM0/MGI1YWExOTRhNzM4/ZTJkNTkyOC9jYXJt/YXN0ZXJzLm9yZy8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "carmasters.org",
+          "hostname": "carmasters.org",
+          "favicon": "https://imgs.search.brave.com/5kLuA4gzah86naHGV6caPuvKHhCxY1lko0cmJ97GTGo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODE2YWYzMzAw/ZTRjZWJhMTRjMDky/NWIzMWY4ZDMyMGIx/M2U0ODQzYmI3ZmM0/MGI1YWExOTRhNzM4/ZTJkNTkyOC9jYXJt/YXN0ZXJzLm9yZy8",
+          "path": ""
+        },
+        "extra_snippets": [
+          "Форум о оборудовании для работы с иммобилайзерами: программаторы ключей, сканнеры, читалки и т.д. ... OBDSTAR Keymaster G3/X300 + DC706 + P50 + ODO master / ECU Master. Обмен опытом ... Обсуждение выбора, настройки и ремонта оборудования для чип-тюнинга автомобилей",
+          "Обсуждение вопросов, связанных с диагностикой, ремонтом и восстановлением штатных противоугонных систем",
+          "Обсуждение работы форума, функции, правила, особенности использования и отлов глюков.",
+          "Предложения оказания платных услуг: пересчет пинов, логинов, калькуляция дампов, правка пробегов, настройка программ и т.д."
+        ]
+      },
+      {
+        "title": "Программа для диагностики авто: список лучших программ и приложений для диагностики автомобиля — Avtocod на DRIVE2",
+        "url": "https://www.drive2.ru/o/b/701760548722719975/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "В этом посте я расскажу о приложениях и программах для диагностики авто. Выясним, что это такое, для чего они нужны, как выбрать лучшую. ПРОГРАММА ДЛЯ ДИАГНОСТИКИ ...",
+        "page_age": "2025-04-21T00:00:00",
+        "profile": {
+          "name": "Drive2",
+          "url": "https://www.drive2.ru/o/b/701760548722719975/",
+          "long_name": "drive2.ru",
+          "img": "https://imgs.search.brave.com/qPf9gRczk73bdflMCHYKcgr4FDqcEbIEiHtEA6AcZ4s/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDA3N2M1Y2E0/OGNkZjM5NDJkZTA5/YWNiMzY5ODAzMTlm/OTkzYmU0YjkwMGVk/MDU3MzlmNTZmM2Q2/ZjdkMTM2OC93d3cu/ZHJpdmUyLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "drive2.ru",
+          "hostname": "www.drive2.ru",
+          "favicon": "https://imgs.search.brave.com/qPf9gRczk73bdflMCHYKcgr4FDqcEbIEiHtEA6AcZ4s/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDA3N2M1Y2E0/OGNkZjM5NDJkZTA5/YWNiMzY5ODAzMTlm/OTkzYmU0YjkwMGVk/MDU3MzlmNTZmM2Q2/ZjdkMTM2OC93d3cu/ZHJpdmUyLnJ1Lw",
+          "path": "  › ilyaavtocod  › блог"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/fzObqpoJqGHiYWQFpf7ep8Toeckpq-p1lrRS3B2qZe8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hMS5k/cml2ZS1kYXRhLnJ1/L0UyWVp4cWpGWHhV/dE0xZUNoUENfNDUy/MDhWcy05NjAuanBn",
+          "original": "https://a1.drive-data.ru/E2YZxqjFXxUtM1eChPC_45208Vs-960.jpg",
+          "logo": false
+        },
+        "age": "April 21, 2025",
+        "organization": {
+          "type": "organization",
+          "name": "Drive2",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "В этом посте я расскажу о приложениях и программах для диагностики авто. Выясним, что это такое, для чего они нужны, как выбрать лучшую. ПРОГРАММА ДЛЯ ДИАГНОСТИКИ АВТО – ЧТО ЭТО ТАКОЕ Программы для…",
+          "Минус – поддерживает только сканер ScanDoc Compact J2534.",
+          "ScanMaster ELM ей то какой сканер нужен 🤔?!",
+          "Подключается в том числе по USB. Искал именно по этому параметру, ибо у меня сканер ELM 327 с USB портом.Функций для непрофессионала хватает за глаза."
+        ]
+      },
+      {
+        "title": "Решил я заняться автодиагностикой - с чего начать? - Страница 7 - forum.injectorservice.com.ua",
+        "url": "https://forum.injectorservice.com.ua/viewtopic.php?t=7927&start=90",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Кол-во проверок не обратно-пропорционально кол-ву жалоб. Дело не в количестве проверок. ... ↳ Атлас автомобильных синалов / Библиотека осциллограмм · ↳ Эталоны синхронизации ДПКВ-ДПРВ / Эталоны Px ... ↳ Диагностика системы подачи топлива при помощи сканера подачи топлива",
+        "profile": {
+          "name": "Injectorservice",
+          "url": "https://forum.injectorservice.com.ua/viewtopic.php?t=7927&start=90",
+          "long_name": "forum.injectorservice.com.ua",
+          "img": "https://imgs.search.brave.com/YcmUr4Mt3Rqe8bJm8mSVCuDkjZUAlIefkSfBXBUyqYA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2NiZGUzNWE1/ZWZlN2QzMTFkYTI1/YTM4Njc0ODJmZWU1/ZTM4NDU1YjY0NzEw/MjFjMGJmYzIyOTdj/YzZmMGM5Yi9mb3J1/bS5pbmplY3RvcnNl/cnZpY2UuY29tLnVh/Lw"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forum.injectorservice.com.ua",
+          "hostname": "forum.injectorservice.com.ua",
+          "favicon": "https://imgs.search.brave.com/YcmUr4Mt3Rqe8bJm8mSVCuDkjZUAlIefkSfBXBUyqYA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2NiZGUzNWE1/ZWZlN2QzMTFkYTI1/YTM4Njc0ODJmZWU1/ZTM4NDU1YjY0NzEw/MjFjMGJmYzIyOTdj/YzZmMGM5Yi9mb3J1/bS5pbmplY3RvcnNl/cnZpY2UuY29tLnVh/Lw",
+          "path": "  › автомобильная диагностика  › вопросы о разном  › обучение, трудоустройство, расценки"
+        },
+        "extra_snippets": [
+          "Кол-во проверок не обратно-пропорционально кол-ву жалоб. Дело не в количестве проверок. ... ↳ Атлас автомобильных синалов / Библиотека осциллограмм · ↳ Эталоны синхронизации ДПКВ-ДПРВ / Эталоны Px ... ↳ Диагностика системы подачи топлива при помощи сканера подачи топлива",
+          "-Сканер (какой сканер тема отдельная, думаю здесь обсуждать нет смысла, лучше отдельный опрос); -Осциллограф (мотортестер); -Мультиметр; -Ноутбук; -Дымогенератор; -Набор слесарного инструмента; -Светодиодная контролька; -Фонарик.",
+          "Предложений много, лично я, в свое время начал с «Реаниматора», предлагаемого на этом сайте. Так и пользуюсь им в большинстве случаев до сих пор. 9. Сканер.",
+          "Я считаю,если диагностикой, то можно обойтись без стенда для форсунок и (пока) без газоанализатора. Сканер для начала можно и такой, это просто обзор."
+        ]
+      },
+      {
+        "title": "Форум по диагностике и ремонту автоэлектроники и автоэлектрики - Форум автомастеров carmasters.org",
+        "url": "https://carmasters.org/forum/5-%D1%84%D0%BE%D1%80%D1%83%D0%BC-%D0%BF%D0%BE-%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%B5-%D0%B8-%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%D1%83-%D0%B0%D0%B2%D1%82%D0%BE%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%B8-%D0%B8-%D0%B0%D0%B2%D1%82%D0%BE%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D0%BA%D0%B8/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Обсуждение вопросов, связанных с диагностикой, ремонтом и восстановлением штатных противоугонных систем",
+        "profile": {
+          "name": "Carmasters",
+          "url": "https://carmasters.org/forum/5-%D1%84%D0%BE%D1%80%D1%83%D0%BC-%D0%BF%D0%BE-%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%B5-%D0%B8-%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82%D1%83-%D0%B0%D0%B2%D1%82%D0%BE%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%B8-%D0%B8-%D0%B0%D0%B2%D1%82%D0%BE%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D0%BA%D0%B8/",
+          "long_name": "carmasters.org",
+          "img": "https://imgs.search.brave.com/5kLuA4gzah86naHGV6caPuvKHhCxY1lko0cmJ97GTGo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODE2YWYzMzAw/ZTRjZWJhMTRjMDky/NWIzMWY4ZDMyMGIx/M2U0ODQzYmI3ZmM0/MGI1YWExOTRhNzM4/ZTJkNTkyOC9jYXJt/YXN0ZXJzLm9yZy8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "carmasters.org",
+          "hostname": "carmasters.org",
+          "favicon": "https://imgs.search.brave.com/5kLuA4gzah86naHGV6caPuvKHhCxY1lko0cmJ97GTGo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODE2YWYzMzAw/ZTRjZWJhMTRjMDky/NWIzMWY4ZDMyMGIx/M2U0ODQzYmI3ZmM0/MGI1YWExOTRhNzM4/ZTJkNTkyOC9jYXJt/YXN0ZXJzLm9yZy8",
+          "path": "› forum  › 5-форум-по-диагностике-и-ремонту-автоэлектроники-и-автоэлектрики"
+        },
+        "extra_snippets": [
+          "Обсуждение вопросов, связанных с диагностикой, ремонтом и восстановлением штатных противоугонных систем"
+        ]
+      },
+      {
+        "title": "ФОРУМ ДИАГНОСТОВ - forum.injectorservice.com.ua",
+        "url": "https://forum.injectorservice.com.ua/viewtopic.php?t=918",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Ответы: организация курсов для начинающих, вопросы ценообразования в Украине на услуги автосервиса, спорные ситуации при работе с клиентом, обсуждение часто встречающихся в диагностике ошибок, диагностические сканеры, обзор баз данных по ТО, диагностика дизелей, обслуживание кондиционеров…",
+        "page_age": "2007-10-15T00:00:00",
+        "profile": {
+          "name": "Injectorservice",
+          "url": "https://forum.injectorservice.com.ua/viewtopic.php?t=918",
+          "long_name": "forum.injectorservice.com.ua",
+          "img": "https://imgs.search.brave.com/YcmUr4Mt3Rqe8bJm8mSVCuDkjZUAlIefkSfBXBUyqYA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2NiZGUzNWE1/ZWZlN2QzMTFkYTI1/YTM4Njc0ODJmZWU1/ZTM4NDU1YjY0NzEw/MjFjMGJmYzIyOTdj/YzZmMGM5Yi9mb3J1/bS5pbmplY3RvcnNl/cnZpY2UuY29tLnVh/Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forum.injectorservice.com.ua",
+          "hostname": "forum.injectorservice.com.ua",
+          "favicon": "https://imgs.search.brave.com/YcmUr4Mt3Rqe8bJm8mSVCuDkjZUAlIefkSfBXBUyqYA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2NiZGUzNWE1/ZWZlN2QzMTFkYTI1/YTM4Njc0ODJmZWU1/ZTM4NDU1YjY0NzEw/MjFjMGJmYzIyOTdj/YzZmMGM5Yi9mb3J1/bS5pbmplY3RvcnNl/cnZpY2UuY29tLnVh/Lw",
+          "path": "  › автомобильная диагностика  › диагностика с помощью usb autoscope"
+        },
+        "age": "October 15, 2007",
+        "extra_snippets": [
+          "Ответы: организация курсов для начинающих, вопросы ценообразования в Украине на услуги автосервиса, спорные ситуации при работе с клиентом, обсуждение часто встречающихся в диагностике ошибок, диагностические сканеры, обзор баз данных по ТО, диагностика дизелей, обслуживание кондиционеров…",
+          "↳ Диагностика системы подачи топлива при помощи сканера подачи топлива · ↳ Lambda Meter - измерение соотношения воздух/топливо · Разработка, модернизация, настройка комплекса USB Autoscope, сайта, форума · ↳ Разработка программного и аппаратного обеспечения USB Autoscope, модернизация",
+          "Да слёт диагностов даёт многое и многим .Но только дойдёт ли єто до всех.Причина в том что у всех разній уровень знаний и опіт...значит нужно предисловье\"курс ввода\"То есть наверное есть смісл заранее перед слётом ОГЛАШАТЬ темі или обьект обсуждения.Тогда я думаю вопросов будет ещё больше но ани будут целенаправленні.Общенее станет легкче и бістрее ---вариант...."
+        ]
+      },
+      {
+        "title": "При покупке и обновлении сканера...",
+        "url": "https://launch.in.ua/Pri-pokupke-i-obnovlenii-skanera..._s-257.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "При покупке или обновлениии сканера у некоторых пользователей возникают трудности с установкой софта и пр. На этой странице будет вся нужная вам информация.",
+        "profile": {
+          "name": "Launch",
+          "url": "https://launch.in.ua/Pri-pokupke-i-obnovlenii-skanera..._s-257.html",
+          "long_name": "launch.in.ua",
+          "img": "https://imgs.search.brave.com/PBgBDje9_zwOZLTMOK8jkZEHtBJTvSEiGUM5VmZ5sEw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWRiZjI4NmYz/MTRkOGVlNGQ2Njhm/OWJmMGIwNmY1OTU0/Mzc3OGUxZjE3ODIy/NDIwMzY1ZmIyZTJj/ZmE1ZmIzNi9sYXVu/Y2guaW4udWEv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "launch.in.ua",
+          "hostname": "launch.in.ua",
+          "favicon": "https://imgs.search.brave.com/PBgBDje9_zwOZLTMOK8jkZEHtBJTvSEiGUM5VmZ5sEw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWRiZjI4NmYz/MTRkOGVlNGQ2Njhm/OWJmMGIwNmY1OTU0/Mzc3OGUxZjE3ODIy/NDIwMzY1ZmIyZTJj/ZmE1ZmIzNi9sYXVu/Y2guaW4udWEv",
+          "path": "› Pri-pokupke-i-obnovlenii-skanera..._s-257.html"
+        },
+        "extra_snippets": [
+          "При покупке и обновлении сканера..."
+        ]
+      },
+      {
+        "title": "Форум автомобильных диагностов Autodata.ru Диагностика и ремонт автомобилей :: Оборудование, ПО и инструменты для диагностики: обсуждения :: Если не хватает для приобритения диллерских сканеров",
+        "url": "http://forum.autodata.ru/3/20913",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Профессиональный форум по диагностике и ремонту автомобилей: японские, корейские, китайские, европейские, американские и отечественные марки, коммерческий ...",
+        "profile": {
+          "name": "Autodata",
+          "url": "http://forum.autodata.ru/3/20913",
+          "long_name": "forum.autodata.ru",
+          "img": "https://imgs.search.brave.com/FRBCwdC8q0UgEevg8efeg29UhlYugl7BBF0KnFHI4qU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmM2Zjk5YmU2/YjcxNDgxNTUyODdl/OGY4ZTA0YzI1Zjcw/YzExZTExYjNjZWI5/OTFiYjE3MjkzNDIz/ZWE3NDc3My9mb3J1/bS5hdXRvZGF0YS5y/dS8"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "http",
+          "netloc": "forum.autodata.ru",
+          "hostname": "forum.autodata.ru",
+          "favicon": "https://imgs.search.brave.com/FRBCwdC8q0UgEevg8efeg29UhlYugl7BBF0KnFHI4qU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmM2Zjk5YmU2/YjcxNDgxNTUyODdl/OGY4ZTA0YzI1Zjcw/YzExZTExYjNjZWI5/OTFiYjE3MjkzNDIz/ZWE3NDc3My9mb3J1/bS5hdXRvZGF0YS5y/dS8",
+          "path": "› 3  › 20913"
+        },
+        "extra_snippets": [
+          "Профессиональный форум по диагностике и ремонту автомобилей: японские, корейские, китайские, европейские, американские и отечественные марки, коммерческий транспорт"
+        ]
+      },
+      {
+        "title": "Популярные поломки сканеров",
+        "url": "https://ruprinters.ru/stati/naibolee-chastye-problemy-rabotosposobnosti-skanera/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Ответ: Похоже, что из строя вышел один из датчиков сканера.",
+        "profile": {
+          "name": "Ruprinters",
+          "url": "https://ruprinters.ru/stati/naibolee-chastye-problemy-rabotosposobnosti-skanera/",
+          "long_name": "ruprinters.ru",
+          "img": "https://imgs.search.brave.com/4UkmKUxi01DT4DE75hYMfEP9V56vhTC1HGi9yL3rM-Q/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzIxYTg1NmU2/NjExZjgzNGQ3YjQx/ODhmMjA5YmZkNGU4/YzQwMjMzMzdmMzVk/NzY5NzJlMWQ2ZWQ5/MjQ0MzU1Yy9ydXBy/aW50ZXJzLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "ruprinters.ru",
+          "hostname": "ruprinters.ru",
+          "favicon": "https://imgs.search.brave.com/4UkmKUxi01DT4DE75hYMfEP9V56vhTC1HGi9yL3rM-Q/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzIxYTg1NmU2/NjExZjgzNGQ3YjQx/ODhmMjA5YmZkNGU4/YzQwMjMzMzdmMzVk/NzY5NzJlMWQ2ZWQ5/MjQ0MzU1Yy9ydXBy/aW50ZXJzLnJ1Lw",
+          "path": "› stati  › naibolee-chastye-problemy-rabotosposobnosti-skanera"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/V7dYmbmvHWaNas-5soLhi27YCiNx4fLNW4zrWCtI09E/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9ydXBy/aW50ZXJzLnJ1L3Vw/bG9hZC9pYmxvY2sv/M2Q4LzNkODBlOTk1/YjY4YmMzZjllN2M5/MzFkYzNkNzg4ZWIw/LmpwZw",
+          "original": "https://ruprinters.ru/upload/iblock/3d8/3d80e995b68bc3f9e7c931dc3d788eb0.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Сканеры для бухгалтеров и бизнеса - устройства надёжные, но иногда возникают проблемы, требующие немедленного решения. Что может произойти и как устранить неполадки - читайте в статье.",
+          "О том, для какого типа сканеров свойственна та или иная поломка - укажем в заголовке.",
+          "Ответ: Похоже, что из строя вышел один из датчиков сканера.",
+          "Это может быть связано не только с плохой сохранностью исходного файла (хотя и это тоже веская причина, тк во многих моделях сканеров нет оптических датчиков, повышающих качество отсканированных файлов)."
+        ]
+      },
+      {
+        "title": "OBD сканер с реальной версией 1.5",
+        "url": "https://mysku.club/blog/diy/67038.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Ну да, решение же Вам принимать :) Дело в том, что я ошибки могу считать и без этого сканера (у меня есть БК + умею непосредственно с разъема это делать с помощью скрепки) и то прикупил себе играться :) Программок очень много, думаю Торк самая известная — что мешает Вам попробовать несколько?",
+        "page_age": "2022-05-22T07:13:22",
+        "profile": {
+          "name": "MySKU",
+          "url": "https://mysku.club/blog/diy/67038.html",
+          "long_name": "mysku.club",
+          "img": "https://imgs.search.brave.com/3hzH9D9R9hy4HNucMnmbEqAciVrB9ui9mDFrSEEyX-w/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWI1YjQxMjc5/MmI2NWUyNjY5ZGEx/MzhkYjFlMjkxMDNm/NDA4ODQyMzhiNGQz/MTI2NDhhNWMxNmQz/ZTAwN2M1My9teXNr/dS5jbHViLw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mysku.club",
+          "hostname": "mysku.club",
+          "favicon": "https://imgs.search.brave.com/3hzH9D9R9hy4HNucMnmbEqAciVrB9ui9mDFrSEEyX-w/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWI1YjQxMjc5/MmI2NWUyNjY5ZGEx/MzhkYjFlMjkxMDNm/NDA4ODQyMzhiNGQz/MTI2NDhhNWMxNmQz/ZTAwN2M1My9teXNr/dS5jbHViLw",
+          "path": "  › главная  › сообщества  › diy, или сделай сам  › obd сканер с реальной версией 1.5"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/OWI-yB6l8AbcMb-F_aa5S7nD_qufs1vTJExqfbQiMBc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9leHQu/bXlza3Utc3QubmV0/LzI1MHMvYWUwMS5h/bGljZG4uY29tL2tm/L0hUQjF5OFlQT3BY/WFhYYmRhcFhYcTZ4/WEZYWFh1L1ZnYXRl/LUVMTTMyNy1WMS01/LVBJQzE4RjI1Szgw/LU9CRDItQmx1ZXRv/b3RoLU9CRDItT0JE/SUktRUxNLTMyNy1W/MS01LmpwZw",
+          "original": "https://ext.mysku-st.net/250s/ae01.alicdn.com/kf/HTB1y8YPOpXXXXbdapXXq6xXFXXXu/Vgate-ELM327-V1-5-PIC18F25K80-OBD2-Bluetooth-OBD2-OBDII-ELM-327-V1-5.jpg",
+          "logo": false
+        },
+        "age": "May 22, 2022",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "koalexx",
+              "url": "https://mysku.club/profile/koalexx"
+            }
+          ],
+          "date": "Dec 05, 2018",
+          "publisher": {
+            "type": "organization",
+            "name": "MYSKU.club",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/sEgHU6JLe0NL4gvs41f-XlhN2EjnfrRr9M_6bzjobCQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9teXNr/dS5jbHViL3RlbXBs/YXRlcy9za2luL215/c2t1LnYzL2ltYWdl/cy9sb2dvcy9teXNr/dS5leHQucG5n",
+              "original": "https://mysku.club/templates/skin/mysku.v3/images/logos/mysku.ext.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Проверка версии адаптера и его подключение к автомобилям имеющим редкие, «нестандартные» протоколы Давненько хотелось посмотреть «работу своего авто» сканером, но все время не получалось.",
+          "Ну да, решение же Вам принимать :) Дело в том, что я ошибки могу считать и без этого сканера (у меня есть БК + умею непосредственно с разъема это делать с помощью скрепки) и то прикупил себе играться :) Программок очень много, думаю Торк самая известная — что мешает Вам попробовать несколько?",
+          "Покупал потому, что на момент покупки, только эта программа «без танцев с бубном» понимала мой автомобиль + понравилась работа поддержки (на форуме)+ цена по акции была совсем смешная Для проверки вполне подойдет бесплатный вариант программы, который доступен и на маркете и на сайте производителя.",
+          "Какие последствия могут наступить при попытке использования поддельного сканера? В большинстве случаев, Вы просто не сможете использовать редкие протоколы (подключиться к блоку управления двигателем через программы, оптимизированные для работы с двигателем)."
+        ]
+      },
+      {
+        "title": "Ремонт и Диагностика автомобилей | otomotiv-forum.com",
+        "url": "https://otomotiv-forum.com/categories/remont-i-diagnostika-avtomobilej.19/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Раздел посвященный ремонт и диагностике автомобилей",
+        "profile": {
+          "name": "Otomotiv-forum",
+          "url": "https://otomotiv-forum.com/categories/remont-i-diagnostika-avtomobilej.19/",
+          "long_name": "otomotiv-forum.com",
+          "img": "https://imgs.search.brave.com/7DvRRSEyx3DW2ri6XJxCyJV8X2q-zjiGBAHDB-oUFeQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGYyMmNhZmIy/MWViYmUwMDc4ODFk/MzdiN2FhMDVkMTky/MDI1Nzk3ZDQ1ZGFm/NmViZGNiOGE3ZDA3/ODAyY2UyZi9vdG9t/b3Rpdi1mb3J1bS5j/b20v"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "otomotiv-forum.com",
+          "hostname": "otomotiv-forum.com",
+          "favicon": "https://imgs.search.brave.com/7DvRRSEyx3DW2ri6XJxCyJV8X2q-zjiGBAHDB-oUFeQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGYyMmNhZmIy/MWViYmUwMDc4ODFk/MzdiN2FhMDVkMTky/MDI1Nzk3ZDQ1ZGFm/NmViZGNiOGE3ZDA3/ODAyY2UyZi9vdG9t/b3Rpdi1mb3J1bS5j/b20v",
+          "path": "  › форум"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/UKG6Ku0-guTkU409hde4NQW-XvoZTgXxdfPHaeHF2T8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vdG9t/b3Rpdi1mb3J1bS5j/b20vc3R5bGVzL290/b21vdGl2L2ltZy9v/dG9tb3Rpdi1sb2dv/LW9nLnBuZz9fdj0y",
+          "original": "https://otomotiv-forum.com/styles/otomotiv/img/otomotiv-logo-og.png?_v=2",
+          "logo": true
+        }
+      },
+      {
+        "title": "Форумы по автодиагностике",
+        "url": "https://scanmatik.ru/support/useful/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "&quot;АВТОМОБИЛЬНОЕ ВРЕМЯ&quot; ... &quot;Сканеры OBD2&quot;- опубликована в журнале &quot;Новости Авторемонта&quot; 2/2005, pdf Weber MS &quot;OBD на прилавке&quot; - опубликована в журнале &quot;12 Вольт&quot; 4/2005, pdf Анатомия OBD2 - опубликована в журнале &quot;Новости Авторемонта&quot; 11/2004, pdf · Форум по автодиагностике oktja Форум ...",
+        "profile": {
+          "name": "Scanmatik",
+          "url": "https://scanmatik.ru/support/useful/",
+          "long_name": "scanmatik.ru",
+          "img": "https://imgs.search.brave.com/tpZ6Vv2bBaiD78zzTIjTSmXuoE537YNHM4Fx2SuXn80/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTJjZmFjMjc1/YmRhYWQ2OWEyMDlj/OTk2NDc3N2I3ZTBl/NmM2OTk1ZjY4ZDZl/NjlkYmZmY2MwYzUz/YzQ1ZDc5Ny9zY2Fu/bWF0aWsucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "scanmatik.ru",
+          "hostname": "scanmatik.ru",
+          "favicon": "https://imgs.search.brave.com/tpZ6Vv2bBaiD78zzTIjTSmXuoE537YNHM4Fx2SuXn80/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTJjZmFjMjc1/YmRhYWQ2OWEyMDlj/OTk2NDc3N2I3ZTBl/NmM2OTk1ZjY4ZDZl/NjlkYmZmY2MwYzUz/YzQ1ZDc5Ny9zY2Fu/bWF0aWsucnUv",
+          "path": "› support  › useful"
+        },
+        "extra_snippets": [
+          "\"АВТОМОБИЛЬНОЕ ВРЕМЯ\" Геннадий Емелькин \"Новый игрок\" - опубликована в журнале \"За Рулем\" 3/2007, pdf Сергей Газетин \"OBD2 Руководство пользователя\", часть 1 - опубликована в журнале \"12 Вольт\", 02/2005, pdf Сергей Газетин \"OBD2 Руководство пользователя\", часть 2 - опубликована в журнале \"12 Вольт\", 03/2005, pdf Константин АНДРЕЕВ \"Сканеры OBD2\"- опубликована"
+        ]
+      },
+      {
+        "title": "Официальный форум компании АРС АДАКТ",
+        "url": "https://forum.adact.ru/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Официальный форум компании АРС АДАКТ для специалистов по диагностике и чип-тюнингу автомобилей. ✔ Техподдержка по прошивкам АДАКТ, работе сайта и ПО.",
+        "profile": {
+          "name": "Adact",
+          "url": "https://forum.adact.ru/",
+          "long_name": "forum.adact.ru",
+          "img": "https://imgs.search.brave.com/xI0CVMX7VGFpqjS0HAARpNOFH--rt7dV045ePzLsjII/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTk5MTJhYWFm/YjJlZjhhODE1ZGMz/YjBiNGYxOTU1MDkz/ZTFmZjdmZWM3Mzg5/NGU0ZmI2YjI1NzVk/Y2I4ZDMxYS9mb3J1/bS5hZGFjdC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forum.adact.ru",
+          "hostname": "forum.adact.ru",
+          "favicon": "https://imgs.search.brave.com/xI0CVMX7VGFpqjS0HAARpNOFH--rt7dV045ePzLsjII/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTk5MTJhYWFm/YjJlZjhhODE1ZGMz/YjBiNGYxOTU1MDkz/ZTFmZjdmZWM3Mzg5/NGU0ZmI2YjI1NzVk/Y2I4ZDMxYS9mb3J1/bS5hZGFjdC5ydS8",
+          "path": ""
+        },
+        "extra_snippets": [
+          "Здесь вы можете высказать свои пожелания или задать вопросы по программе \"Pro\""
+        ]
+      },
+      {
+        "title": "Программы для Диагностики | otomotiv-forum.com",
+        "url": "https://otomotiv-forum.com/forums/programmy-dlya-diagnostiki.22/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Следуйте инструкциям в видео ниже, чтобы узнать, как установить наш сайт как веб-приложение на главный экран вашего устройства · Примечание: Эта функция может ...",
+        "profile": {
+          "name": "Otomotiv-forum",
+          "url": "https://otomotiv-forum.com/forums/programmy-dlya-diagnostiki.22/",
+          "long_name": "otomotiv-forum.com",
+          "img": "https://imgs.search.brave.com/7DvRRSEyx3DW2ri6XJxCyJV8X2q-zjiGBAHDB-oUFeQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGYyMmNhZmIy/MWViYmUwMDc4ODFk/MzdiN2FhMDVkMTky/MDI1Nzk3ZDQ1ZGFm/NmViZGNiOGE3ZDA3/ODAyY2UyZi9vdG9t/b3Rpdi1mb3J1bS5j/b20v"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "otomotiv-forum.com",
+          "hostname": "otomotiv-forum.com",
+          "favicon": "https://imgs.search.brave.com/7DvRRSEyx3DW2ri6XJxCyJV8X2q-zjiGBAHDB-oUFeQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGYyMmNhZmIy/MWViYmUwMDc4ODFk/MzdiN2FhMDVkMTky/MDI1Nzk3ZDQ1ZGFm/NmViZGNiOGE3ZDA3/ODAyY2UyZi9vdG9t/b3Rpdi1mb3J1bS5j/b20v",
+          "path": "  › форум  › ремонт и диагностика автомобилей"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/UKG6Ku0-guTkU409hde4NQW-XvoZTgXxdfPHaeHF2T8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9vdG9t/b3Rpdi1mb3J1bS5j/b20vc3R5bGVzL290/b21vdGl2L2ltZy9v/dG9tb3Rpdi1sb2dv/LW9nLnBuZz9fdj0y",
+          "original": "https://otomotiv-forum.com/styles/otomotiv/img/otomotiv-logo-og.png?_v=2",
+          "logo": true
+        }
+      },
+      {
+        "title": "Автодиагностика - Форум по автодиагностике, автосканерам, ремонту, обслуживанию и эксплуатации автомобилей",
+        "url": "https://autoprogs.ru/multimarochnye-diagnosticheskie-skanery-168/avtodiagnostika-24544/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Автодиагностика – быстрый и удобный способ самостоятельно обнаружить причину неполадок транспортного средства. Программы для сканирования автомобиля – оптимальное средство разобраться с поломкой без поездки в автосервис, экономя время и средства.",
+        "page_age": "2017-09-08T00:00:00",
+        "profile": {
+          "name": "Autoprogs",
+          "url": "https://autoprogs.ru/multimarochnye-diagnosticheskie-skanery-168/avtodiagnostika-24544/",
+          "long_name": "autoprogs.ru",
+          "img": "https://imgs.search.brave.com/26y2tTWVhlogm7SP2e0OTyylKvfhPn2qluGpiJ6hx3k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2E5YTlhNWNh/NjhjYmEzZDc2MTc0/ZDRjZTM3M2EzOWFi/M2RjN2RhM2RhYTNi/YmIxNjg3NzllZDE0/ZTg1ZmE1OC9hdXRv/cHJvZ3MucnUv"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "autoprogs.ru",
+          "hostname": "autoprogs.ru",
+          "favicon": "https://imgs.search.brave.com/26y2tTWVhlogm7SP2e0OTyylKvfhPn2qluGpiJ6hx3k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2E5YTlhNWNh/NjhjYmEzZDc2MTc0/ZDRjZTM3M2EzOWFi/M2RjN2RhM2RhYTNi/YmIxNjg3NzllZDE0/ZTg1ZmE1OC9hdXRv/cHJvZ3MucnUv",
+          "path": "› multimarochnye-diagnosticheskie-skanery-168  › avtodiagnostika-24544"
+        },
+        "age": "September 8, 2017",
+        "extra_snippets": [
+          "Автодиагностика – быстрый и удобный способ самостоятельно обнаружить причину неполадок транспортного средства. Программы для сканирования автомобиля – оптимальное средство разобраться с поломкой без поездки в автосервис, экономя время и средства.",
+          "Для того чтобы автодиагностика авто прошла успешно, необходимо иметь в наличии полный комплект устройств и программного обеспечения. К трём составляющим этого комплекта относятся: Сканер или адаптер типа OBD2 – микросхема, заключённая в герметичный корпус, со шнуром для подсоединения к компьютеру или смартфону.",
+          "Программа автодиагностики, анализирующая и преобразовывающая данные из сканера в понятный для автовладельца вид. Данные выводятся на дисплей как перечень кодов неисправностей.",
+          "В настоящее время возможности проверки состояния транспортного средства значительно расширились благодаря доступному в сети программному обеспечению для осуществления диагностики. Каждый автовладелец, имеющий в распоряжении сканер с подсоединённым к нему смартфоном, планшетом или ноутбуком, может скачать автодиагностику и просканировать свою машину при появлении отклонений в её работе."
+        ]
+      },
+      {
+        "title": "Программы для диагностики автомобиля: какую лучше выбрать",
+        "url": "https://centr-to.ru/blog/diagnosticheskoe-oborudovanie/programma-dlya-diagnostiki-avtomobilya",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "В статье говорится о том, какие есть программы для диагностики автомобиля. Программы бывают нескольких типов и позволяют, подключившись к электронике автомобиля, через планшет, ноутбук или смартфон протестировать все системы и выявить неисправности",
+        "page_age": "2023-04-11T21:00:00",
+        "profile": {
+          "name": "Centr TO",
+          "url": "https://centr-to.ru/blog/diagnosticheskoe-oborudovanie/programma-dlya-diagnostiki-avtomobilya",
+          "long_name": "centr-to.ru",
+          "img": "https://imgs.search.brave.com/eaS2DDIB3dgztS67lbKcUqnO0yJl-t5TfP5V-gwv52g/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmY5Yzk1OWFh/MjlkNWU0MGExMjIx/NGMwNzY2MzVmY2M2/OGI1YzA0NzNiMmMx/MmIzOTA3NTg5ODc3/N2VlZTY0OC9jZW50/ci10by5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "centr-to.ru",
+          "hostname": "centr-to.ru",
+          "favicon": "https://imgs.search.brave.com/eaS2DDIB3dgztS67lbKcUqnO0yJl-t5TfP5V-gwv52g/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmY5Yzk1OWFh/MjlkNWU0MGExMjIx/NGMwNzY2MzVmY2M2/OGI1YzA0NzNiMmMx/MmIzOTA3NTg5ODc3/N2VlZTY0OC9jZW50/ci10by5ydS8",
+          "path": "  › главная  › блог  › диагностическое оборудование"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/tIT9qYErt12SAkeBPbXwMSYGuSA-7iDtxOgUrWKYDKw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZW50/ci10by5ydS9zdG9y/YWdlL2ltYWdlcy9h/cnRpY2xlcy85NGQ2/ZTZlMDQ5MWVhMWZi/NzM4ODEwOGE5NWVl/YWI1NS5qcGVn",
+          "original": "https://centr-to.ru/storage/images/articles/94d6e6e0491ea1fb7388108a95eeab55.jpeg",
+          "logo": false
+        },
+        "age": "April 11, 2023",
+        "extra_snippets": [
+          "В статье говорится о том, какие есть программы для диагностики автомобиля. Программы бывают нескольких типов и позволяют, подключившись к электронике автомобиля, через планшет, ноутбук или смартфон протестировать все системы и выявить неисправности",
+          "Устройство позволяет считать код неисправности и точно определить, какой ремонт требуется. Сканер также подключается к ноутбуку посредством USB-порта или разъема RS-232.",
+          "Чтобы не возникало путаницы, остановимся на значении этих маркировок подробнее. OBD-II обозначает сам порт, к которому подключается сканер.",
+          "Такая маркировка точнее отражает устройство сканера, ведь он не транслирует данные напрямую от OBD-II, а преобразует их в другой формат и только после этого передает информацию компьютеру."
+        ]
+      }
+    ],
+    "family_friendly": false
+  }
+}
