@@ -196,6 +196,37 @@ export async function verifyCitation (input) {
   return res
 }
 
+/**
+ * Decide whether PASSAGES support a CLAIM — the verifier's judgment half, with no fetching.
+ *
+ * Split out of computeVerdict so an external evaluation (SciFact and friends, which hand you the
+ * evidence directly) exercises the SAME passage-ranking and the SAME judge prompt the leaderboard
+ * runs on. A benchmark number measured against a reimplementation would measure the reimplementation.
+ *
+ * @param {{claim: string, paragraphs: string[]}} input
+ * @returns {Promise<{verdict: string, evidence: string, confidence: number|null, excerpt: string, error: string|null}>}
+ */
+export async function judgePassages ({ claim, paragraphs }) {
+  const base = { verdict: 'Error', evidence: '', confidence: null, excerpt: '', error: null }
+
+  const excerpt = await selectExcerpt(claim, paragraphs)
+  if (!excerpt) return { ...base, error: 'no relevant passage' }
+
+  let out
+  try {
+    out = await judgeComplete(JUDGE_SYSTEM, `CLAIM: ${claim}\n\nSOURCE PASSAGES:\n${excerpt}\n\nReturn the JSON verdict.`)
+  } catch (e) {
+    return { ...base, excerpt: excerpt.slice(0, 500), error: `judge failed: ${e.message}` }
+  }
+  const parsed = parseVerdict(out)
+  // NOTE: an unparseable judge reply currently scores against the source as Unsupported. It fired
+  // zero times on the published board; it is kept here unchanged so the external evaluation measures
+  // the shipped behaviour rather than a variant of it.
+  if (!parsed) return { ...base, verdict: 'Unsupported', excerpt: excerpt.slice(0, 500), error: `unparseable judge output: ${String(out).slice(0, 120)}` }
+
+  return { verdict: parsed.verdict, evidence: parsed.evidence, confidence: parsed.confidence, excerpt: excerpt.slice(0, 600), error: null }
+}
+
 async function computeVerdict ({ claim, url }) {
   const base = { claim, source_url: url, verdict: 'Error', evidence: '', confidence: null, excerpt: '', error: null }
 
@@ -211,28 +242,18 @@ async function computeVerdict ({ claim, url }) {
   if (!paragraphs.length) return { ...base, error: fc.error || 'no extractable content' }
   if (paragraphs.join(' ').length < 200) return { ...base, error: fc.error || `too little content (${paragraphs.join(' ').length} chars)` }
 
-  // 3. Relevant-passage selection (lexical → embedding rerank).
-  const excerpt = await selectExcerpt(claim, paragraphs)
-  if (!excerpt) return { ...base, error: 'no relevant passage' }
-
-  // 4. LLM-as-judge entailment (qwen2.5:14b).
-  let out
-  try {
-    out = await judgeComplete(JUDGE_SYSTEM, `CLAIM: ${claim}\n\nSOURCE PASSAGES:\n${excerpt}\n\nReturn the JSON verdict.`)
-  } catch (e) {
-    return { ...base, excerpt: excerpt.slice(0, 500), error: `judge failed: ${e.message}` }
-  }
-  const parsed = parseVerdict(out)
-  if (!parsed) return { ...base, verdict: 'Unsupported', excerpt: excerpt.slice(0, 500), error: `unparseable judge output: ${String(out).slice(0, 120)}` }
+  // 3-4. Passage selection + judge.
+  const j = await judgePassages({ claim, paragraphs })
+  if (j.error && j.verdict === 'Error') return { ...base, excerpt: j.excerpt, error: j.error }
 
   return {
     claim,
     source_url: url,
-    verdict: parsed.verdict,
-    evidence: parsed.evidence,
-    confidence: parsed.confidence,
-    excerpt: excerpt.slice(0, 600),
-    error: null,
+    verdict: j.verdict,
+    evidence: j.evidence,
+    confidence: j.confidence,
+    excerpt: j.excerpt,
+    error: j.error,
     // Present only when the cited host blocked us and the SAME document was read from a canonical
     // mirror (mirrors.js). Rides into audit.json so the receipt discloses the substitution.
     ...(fc.via ? { checked_via: fc.via } : {})
