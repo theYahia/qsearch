@@ -11,6 +11,7 @@
 import { fetchHtml, extractMainContent } from '../fetch/html.js'
 import { crawl } from '../crawl/crawl4ai.js'
 import { mirrorsFor } from './mirrors.js'
+import { archivedSnapshot, snapshotDate } from './wayback.js'
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
 
@@ -60,15 +61,37 @@ function isDead (msg) {
 
 const MIN_USABLE = 200
 
+// A dead link is only evidence of invention if the URL never worked. 404/410 and a domain that no
+// longer resolves are exactly what link rot looks like too, so those go to the archive before we
+// call anything Fabricated. An SSRF block or a malformed URL is a different thing — we refuse to
+// fetch it, which is not the archive's business.
+function isRotCandidate (msg) {
+  return /HTTP 404|HTTP 410/i.test(msg) || /DNS lookup failed/i.test(msg)
+}
+
 /**
  * Fetch a citation's source text.
  * Direct read first; if the publisher blocks robots (Justia/Cloudflare, uscode.house.gov) or serves
  * nothing readable, re-read THE SAME document from a canonical public mirror and report where via
- * `via` — the receipt shows the swap. Dead links are never mirrored: a 404 stays Fabricated.
+ * `via` — the receipt shows the swap.
+ *
+ * A dead link goes to the Internet Archive first: if the URL once answered, this is link rot, not a
+ * fabricated citation, and the archived copy is read in its place (disclosed on the receipt like any
+ * other substitution). Only a dead link the archive never saw stays Fabricated.
  */
 export async function fetchContent (url) {
   const direct = await fetchDirect(url)
-  if (direct.fabricated) return direct
+  if (direct.fabricated) {
+    if (!isRotCandidate(direct.error || '')) return direct
+    const snap = await archivedSnapshot(url)
+    if (!snap) return direct                                   // never archived → genuinely absent
+    const on = snapshotDate(snap.timestamp)
+    const via = { url: snap.url, label: `Internet Archive${on ? ` — captured ${on}` : ''}`, blocked: direct.error }
+    const alt = await fetchDirect(snap.url)
+    if ((alt.paragraphs || []).join(' ').length >= MIN_USABLE) return { paragraphs: alt.paragraphs, via }
+    // Archived but we cannot read the capture: still not fabricated — it existed. Coverage gap.
+    return { error: `link rot: ${direct.error} — archived ${on || 'previously'}, capture unreadable`, rotted: via }
+  }
   if ((direct.paragraphs || []).join(' ').length >= MIN_USABLE) return direct
 
   for (const m of mirrorsFor(url)) {

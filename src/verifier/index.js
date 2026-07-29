@@ -200,10 +200,14 @@ async function computeVerdict ({ claim, url }) {
   const base = { claim, source_url: url, verdict: 'Error', evidence: '', confidence: null, excerpt: '', error: null }
 
   // 1-2. Fetch + extract readable content. Chain (fetch_content.js):
-  //   PDF→pdfjs · HTML→fetchHtml · 403/timeout/JS-shell→Crawl4AI headless · dead(404/DNS)→Fabricated.
+  //   PDF→pdfjs · HTML→fetchHtml · 403/timeout/JS-shell→Crawl4AI headless ·
+  //   dead(404/DNS)→Internet Archive → read the capture, else Fabricated only if never archived.
   const fc = await fetchContent(url)
   if (fc.fabricated) return { ...base, verdict: 'Fabricated', error: fc.error }
   const paragraphs = fc.paragraphs || []
+  // Dead but previously archived: the citation was real when written. That is link rot, not
+  // invention, so it lands in the coverage gap and the receipt says which.
+  if (fc.rotted) return { ...base, error: fc.error, checked_via: fc.rotted }
   if (!paragraphs.length) return { ...base, error: fc.error || 'no extractable content' }
   if (paragraphs.join(' ').length < 200) return { ...base, error: fc.error || `too little content (${paragraphs.join(' ').length} chars)` }
 
