@@ -228,6 +228,9 @@ async function computeVerdict ({ claim, url }) {
     evidence: parsed.evidence,
     confidence: parsed.confidence,
     excerpt: excerpt.slice(0, 600),
-    error: null
+    error: null,
+    // Present only when the cited host blocked us and the SAME document was read from a canonical
+    // mirror (mirrors.js). Rides into audit.json so the receipt discloses the substitution.
+    ...(fc.via ? { checked_via: fc.via } : {})
   }
 }

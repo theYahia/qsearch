@@ -10,6 +10,7 @@
 
 import { fetchHtml, extractMainContent } from '../fetch/html.js'
 import { crawl } from '../crawl/crawl4ai.js'
+import { mirrorsFor } from './mirrors.js'
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
 
@@ -57,7 +58,29 @@ function isDead (msg) {
   return /HTTP 404|HTTP 410/i.test(msg) || /DNS lookup failed|invalid URL/i.test(msg) || /SSRF blocked.*(private|loopback)/i.test(msg)
 }
 
+const MIN_USABLE = 200
+
+/**
+ * Fetch a citation's source text.
+ * Direct read first; if the publisher blocks robots (Justia/Cloudflare, uscode.house.gov) or serves
+ * nothing readable, re-read THE SAME document from a canonical public mirror and report where via
+ * `via` — the receipt shows the swap. Dead links are never mirrored: a 404 stays Fabricated.
+ */
 export async function fetchContent (url) {
+  const direct = await fetchDirect(url)
+  if (direct.fabricated) return direct
+  if ((direct.paragraphs || []).join(' ').length >= MIN_USABLE) return direct
+
+  for (const m of mirrorsFor(url)) {
+    const alt = await fetchDirect(m.url)
+    if ((alt.paragraphs || []).join(' ').length >= MIN_USABLE) {
+      return { paragraphs: alt.paragraphs, via: { ...m, blocked: direct.error || 'no extractable content' } }
+    }
+  }
+  return direct
+}
+
+async function fetchDirect (url) {
   // PDF by extension → pdfjs.
   if (/\.pdf(\?|#|$)/i.test(url)) {
     try { return { paragraphs: await fetchPdfParagraphs(url) } }
