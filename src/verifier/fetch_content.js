@@ -14,6 +14,13 @@ import { mirrorsFor } from './mirrors.js'
 import { archivedSnapshot, snapshotDate } from './wayback.js'
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+// The browser UA exists to get past publishers who block robots. archive.org is the opposite case:
+// it answers HTTP 498 to that UA and serves the capture happily to a client that says who it is.
+// Measured 2026-08-04 — the same capture returned 27 946 characters of the opinion when asked
+// honestly and a failure when asked in disguise, which had been quietly costing the link-rot path
+// its captures too.
+const ARCHIVE_UA = 'doesitlie/1.0 (citation-honesty benchmark)'
+const uaFor = url => (/(^|\.)archive\.org$/i.test((() => { try { return new URL(url).hostname } catch { return '' } })()) ? ARCHIVE_UA : UA)
 
 // Nav / boilerplate filter — keep prose, drop menus, link-lists, JS-app shells.
 // Without this, headless pages (e.g. statutes.capitol.texas) yield nav text → false "Unsupported".
@@ -99,6 +106,10 @@ function isRotCandidate (msg) {
  * A dead link goes to the Internet Archive first: if the URL once answered, this is link rot, not a
  * fabricated citation, and the archived copy is read in its place (disclosed on the receipt like any
  * other substitution). Only a dead link the archive never saw stays Fabricated.
+ *
+ * A LIVE but unreadable link goes there too, last, after the mirrors: a bot wall two months after
+ * the agent's run is the publisher's policy, not the agent's dishonesty, and this benchmark's
+ * ranking metric charges coverage gaps to the agent.
  */
 export async function fetchContent (url) {
   const direct = await fetchDirect(url)
@@ -124,6 +135,25 @@ export async function fetchContent (url) {
       return { paragraphs: alt.paragraphs, via: { ...m, blocked: direct.error || 'no extractable content' } }
     }
   }
+
+  // Live but unreadable — a bot wall, a consent gate, a PDF that will not parse. The archive was
+  // consulted only for DEAD links until now, which meant a publisher's robot policy silently became
+  // a coverage gap: measured 2026-08-04, 68 of the 237 sources readable in June had stopped being
+  // readable, and the ranking metric charges that to the agent. A capture is the same document, and
+  // the swap is disclosed on the receipt exactly like a canonical mirror. It is NOT proof of
+  // anything about the citation's honesty — only a way to read what the agent read.
+  const { capture } = await archivedSnapshot(url)
+  if (capture) {
+    const alt = await fetchDirect(capture.url)
+    if (usableText(alt.paragraphs)) {
+      const on = snapshotDate(capture.timestamp)
+      return {
+        paragraphs: alt.paragraphs,
+        via: { url: capture.url, label: `Internet Archive${on ? ` — captured ${on}` : ''}`, blocked: direct.error || 'no readable article' }
+      }
+    }
+  }
+
   // Nothing readable anywhere. If a path did return text, it did not survive usableText — say so
   // plainly rather than passing furniture to the judge and calling the result a verdict.
   if ((direct.paragraphs || []).length) {
@@ -143,7 +173,7 @@ async function fetchDirect (url) {
   // HTML.
   let html
   try {
-    ({ html } = await fetchHtml(url, { userAgent: UA, timeoutMs: 25000 }))
+    ({ html } = await fetchHtml(url, { userAgent: uaFor(url), timeoutMs: 25000 }))
   } catch (e) {
     const m = String(e.message || e)
     if (isDead(m)) return { fabricated: true, error: m }

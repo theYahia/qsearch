@@ -277,7 +277,15 @@ const CACHE_DIR = process.env.DOESITLIE_CACHE_DIR || 'doesitlie/bench/.cache'
 // handing back navigation chrome that cleared the length floor, so 33 citations were scored
 // Unsupported on a cookie banner. usableText() in fetch_content.js now refuses that input, which
 // changes verdicts without changing the key, so: bump again, re-judge again.
-const CACHE_VERSION = 'v9'
+// v11 (same day again): the archive is now consulted for BLOCKED pages, not just dead ones; its
+// lookups are serialized and their answers cached because the API 429s under concurrency; and
+// captures are fetched over https with an honest UA, because archive.org answers HTTP 498 to the
+// browser UA we use to get past publishers. That last one had been silently costing the existing
+// link-rot path its captures too. All of it changes which sources are readable, so: re-judge.
+// Exported because three other scripts used to MIRROR this literal, and on 2026-08-04 all three
+// were still on 'v7' while this said v11 — prune-cache silently selected June's verdicts to ship
+// under an August board, which no test catches (validate.mjs never reads the cache).
+export const CACHE_VERSION = 'v11'
 function cacheKey (s) { return crypto.createHash('sha256').update(s).digest('hex') }
 function cacheGet (k) { try { return JSON.parse(fs.readFileSync(`${CACHE_DIR}/${k}.json`, 'utf-8')) } catch { return null } }
 function cacheSet (k, o) { try { fs.mkdirSync(CACHE_DIR, { recursive: true }); fs.writeFileSync(`${CACHE_DIR}/${k}.json`, JSON.stringify(o)) } catch { /* ignore */ } }

@@ -157,10 +157,23 @@ export function qsearchTool (server) {
   )
 
   // --- context_search ---
+  // Anything absent from this shape is stripped before the HTTP call, so a knob the server
+  // understands is invisible to agents until it is declared here.
   const contextSearchSchema = z.object({
     query: z.string().describe('Search query for deep page content extraction'),
-    n_results: z.union([z.number(), z.string()]).transform(Number).pipe(z.number().min(1).max(2)).optional().default(1)
-      .describe('Number of sources (1-2 max — each source has 2-28 snippets, all get cleaned. CPU-bound, ~25s/source. Default 1.)')
+    // Ceiling raised 2 → 10. The cap is a latency guard, not a Brave limit: each source is
+    // cleaned by the local LLM at ~25s. Default stays 1 so nothing gets slower by accident.
+    n_results: z.union([z.number(), z.string()]).transform(Number).pipe(z.number().min(1).max(10)).optional().default(1)
+      .describe('Number of sources (1-10). Each source is locally cleaned at ~25s, so 10 sources ≈ 4 minutes. Default 1.'),
+    context_threshold_mode: z.enum(['disabled', 'strict', 'balanced', 'lenient']).optional()
+      .describe('Grounding strictness. strict = higher precision, fewer passages. Brave default: balanced.'),
+    freshness: z.string().optional().describe('pd | pw | pm | py | YYYY-MM-DDtoYYYY-MM-DD'),
+    country: z.string().length(2).optional().describe('2-letter country, e.g. ru. Raises RU source share on Russian queries.'),
+    search_lang: z.string().optional().describe('Search language, e.g. ru'),
+    maximum_number_of_tokens: z.number().min(1024).max(32768).optional()
+      .describe('Total grounding budget (Brave default 8192)'),
+    maximum_number_of_tokens_per_url: z.number().min(512).max(8192).optional()
+      .describe('Per-source token budget (Brave default 4096)')
   })
 
   server.registerTool(
@@ -280,7 +293,7 @@ export function qsearchTool (server) {
     'verify_citation',
     {
       title: 'Verify Citation (qsearch)',
-      description: 'Check whether a cited source actually SUPPORTS a claim — the doesitlie citation-honesty method, live. Fetches the URL (PDF/HTML/headless render, SSRF-guarded), selects the most relevant passages, and an LLM-as-judge at temperature 0 returns a verdict: Supported | Partial | Unsupported | Fabricated (URL dead/bogus) | Error (could not fetch). Returns the verbatim supporting excerpt so you can audit it. Use before trusting a citation an agent produced.',
+      description: 'Check whether a cited source actually SUPPORTS a claim — the doesitlie citation-honesty method, live. Fetches the URL (PDF/HTML/headless render, SSRF-guarded), selects the most relevant passages, and an LLM-as-judge at temperature 0 returns a verdict: Supported | Partial | Unsupported (source is silent on it) | Contradicted (source says the opposite) | Fabricated (URL dead/bogus) | Error (could not fetch). Returns the verbatim supporting excerpt so you can audit it. Use before trusting a citation an agent produced.',
       inputSchema: verifyCitationSchema.shape,
       annotations: { readOnlyHint: true, openWorldHint: true }
     },

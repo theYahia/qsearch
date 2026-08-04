@@ -14,7 +14,7 @@ import { registrableDomain, meetsFloor, tierRank } from './tiers.js'
 /**
  * @typedef {Object} VerifiedSource
  * @property {string} source_url
- * @property {'Supported'|'Partial'|'Unsupported'|'Fabricated'|'Error'} verdict
+ * @property {'Supported'|'Partial'|'Unsupported'|'Contradicted'|'Fabricated'|'Error'} verdict
  * @property {import('./tiers.js').Tier} tier
  * @property {string} [evidence]
  * @property {string} [excerpt]
