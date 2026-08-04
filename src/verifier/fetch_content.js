@@ -61,6 +61,27 @@ function isDead (msg) {
 
 const MIN_USABLE = 200
 
+/**
+ * Is this text a readable document, or the site's furniture?
+ *
+ * A bot-walled page and a headless re-render both "succeed" while handing back navigation: menu
+ * items, a cookie banner, logo alt text. That clears a naive length floor, so the judge is asked
+ * whether a menu supports the claim, correctly answers no — and the board files OUR extraction
+ * failure as the AGENT's dishonesty. Measured 2026-08-04: ftc.gov returned 238 characters of
+ * consent banner, gdhm.com 648 of menu, wsgr.com 1 555 of menu; the same corpus in June returned
+ * whole articles from the same URLs. 33 verdicts flipped Supported → Unsupported on that alone.
+ *
+ * Prose has sentences and a menu does not, so anything short must show a few real ones. Erring
+ * toward "unreadable" is the safe direction: a coverage gap costs the agent nothing and is
+ * disclosed, while a false Unsupported is an accusation we cannot back.
+ */
+export function usableText (paragraphs) {
+  const t = (paragraphs || []).join(' ')
+  if (t.length < MIN_USABLE) return false
+  if (t.length >= 2000) return true
+  return (t.match(/[^.!?]{60,}?[.!?](\s|$)/g) || []).length >= 3
+}
+
 // A dead link is only evidence of invention if the URL never worked. 404/410 and a domain that no
 // longer resolves are exactly what link rot looks like too, so those go to the archive before we
 // call anything Fabricated. An SSRF block or a malformed URL is a different thing — we refuse to
@@ -83,22 +104,31 @@ export async function fetchContent (url) {
   const direct = await fetchDirect(url)
   if (direct.fabricated) {
     if (!isRotCandidate(direct.error || '')) return direct
-    const snap = await archivedSnapshot(url)
+    const { capture: snap, known } = await archivedSnapshot(url)
+    // Could not ask (429/outage) → we do not know whether this link rotted or was invented, and the
+    // harshest verdict must never be the default answer to a network failure. Coverage gap instead.
+    if (!snap && !known) return { error: `${direct.error} — archive unreachable, existence unverified` }
     if (!snap) return direct                                   // never archived → genuinely absent
     const on = snapshotDate(snap.timestamp)
     const via = { url: snap.url, label: `Internet Archive${on ? ` — captured ${on}` : ''}`, blocked: direct.error }
     const alt = await fetchDirect(snap.url)
-    if ((alt.paragraphs || []).join(' ').length >= MIN_USABLE) return { paragraphs: alt.paragraphs, via }
+    if (usableText(alt.paragraphs)) return { paragraphs: alt.paragraphs, via }
     // Archived but we cannot read the capture: still not fabricated — it existed. Coverage gap.
     return { error: `link rot: ${direct.error} — archived ${on || 'previously'}, capture unreadable`, rotted: via }
   }
-  if ((direct.paragraphs || []).join(' ').length >= MIN_USABLE) return direct
+  if (usableText(direct.paragraphs)) return direct
 
   for (const m of mirrorsFor(url)) {
     const alt = await fetchDirect(m.url)
-    if ((alt.paragraphs || []).join(' ').length >= MIN_USABLE) {
+    if (usableText(alt.paragraphs)) {
       return { paragraphs: alt.paragraphs, via: { ...m, blocked: direct.error || 'no extractable content' } }
     }
+  }
+  // Nothing readable anywhere. If a path did return text, it did not survive usableText — say so
+  // plainly rather than passing furniture to the judge and calling the result a verdict.
+  if ((direct.paragraphs || []).length) {
+    const n = direct.paragraphs.join(' ').length
+    return { error: `no readable article (${n} chars of navigation/consent chrome after headless retry)` }
   }
   return direct
 }
@@ -127,10 +157,15 @@ async function fetchDirect (url) {
   }
 
   let paragraphs = []
-  try { ({ paragraphs } = extractMainContent(html)) } catch (e) { return { error: `extract failed: ${e.message}` } }
+  let title = ''
+  // `title` rides along so the judge can tell WHICH document it is holding — extractMainContent
+  // already parses it, and the other paths (PDF, headless crawl, mirrors) simply have none.
+  try { ({ paragraphs, title } = extractMainContent(html)) } catch (e) { return { error: `extract failed: ${e.message}` } }
   // HTML fetched but yielded no readable body (JS-app shell, e.g. leginfo/capitol) → headless retry.
-  if (paragraphs.join(' ').length < 200) {
-    try { const p = await crawlParagraphs(url); if (p.join(' ').length >= 200) return { paragraphs: p } } catch { /* keep what we had */ }
+  // Gated on usableText, not a bare length: a consent banner is 238 characters of nothing and used
+  // to skip the retry entirely by clearing the floor.
+  if (!usableText(paragraphs)) {
+    try { const p = await crawlParagraphs(url); if (usableText(p)) return { paragraphs: p, title } } catch { /* keep what we had */ }
   }
-  return { paragraphs }
+  return { paragraphs, title }
 }

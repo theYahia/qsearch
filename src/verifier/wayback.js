@@ -19,9 +19,15 @@
 const AVAILABILITY = 'https://archive.org/wayback/available'
 
 /**
+ * Rule 2 lives in the RETURN TYPE, because a boolean cannot carry it. "The archive has no capture"
+ * and "the archive did not answer" are opposite facts that both used to come back as `null`, and the
+ * caller turned `null` into `Fabricated` — so an archive.org outage silently produced this
+ * benchmark's harshest verdict. Measured 2026-08-04: the availability API answers 429 under any
+ * concurrency worth using, so this is the normal case, not the rare one.
+ *
  * @param {string} url
- * @returns {Promise<{url: string, timestamp: string} | null>} the archived snapshot, or null when
- *   the archive has no usable capture (including on any error — absence of proof, not proof of absence).
+ * @returns {Promise<{capture: {url: string, timestamp: string} | null, known: boolean}>}
+ *   `known:false` means we could not ask — the caller must not conclude anything from it.
  */
 export async function archivedSnapshot (url) {
   let json
@@ -30,17 +36,21 @@ export async function archivedSnapshot (url) {
       headers: { 'User-Agent': 'doesitlie/1.0 (citation-honesty benchmark)' },
       signal: AbortSignal.timeout(12000)
     })
-    if (!res.ok) return null
+    if (!res.ok) return { capture: null, known: false }
     json = await res.json()
-  } catch { return null }
+  } catch { return { capture: null, known: false } }
 
-  const snap = json?.archived_snapshots?.closest
-  if (!snap?.available || !snap.url) return null
+  // A body we cannot parse is also "don't know": archive.org serves HTML error pages under load,
+  // and `{}` from an error page must not read as "this URL was never archived".
+  if (!json || typeof json !== 'object' || !json.archived_snapshots) return { capture: null, known: false }
+
+  const snap = json.archived_snapshots.closest
+  if (!snap?.available || !snap.url) return { capture: null, known: true }
   // Rule 1: a capture of a 404 proves nothing.
   const status = Number.parseInt(snap.status, 10)
-  if (!Number.isFinite(status) || status < 200 || status >= 400) return null
+  if (!Number.isFinite(status) || status < 200 || status >= 400) return { capture: null, known: true }
 
-  return { url: String(snap.url), timestamp: String(snap.timestamp || '') }
+  return { capture: { url: String(snap.url), timestamp: String(snap.timestamp || '') }, known: true }
 }
 
 /** "20240115030405" → "2024-01-15", for the receipt. Returns '' when unparseable. */
