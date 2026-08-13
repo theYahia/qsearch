@@ -24,7 +24,14 @@ export const COST_PER_CALL = {
   academic: 0,
   yandex: Number(process.env.QSEARCH_COST_YANDEX) || 0,
   brave_web: Number(process.env.QSEARCH_COST_BRAVE_WEB) || 0.005,
+  // A `critical` QUERY, not a single request: the tier fires web + llm/context
+  // (src/sweep/router.js:65,72), so 2 × $0.005. The unit here is one queries.txt line.
   brave_context: Number(process.env.QSEARCH_COST_BRAVE_CTX) || 0.01,
+  // A single llm/context REQUEST. brave_sweep.py counts web_ok and context_ok separately,
+  // so labelling its context calls `brave_context` would bill $0.015 for a critical query
+  // ($0.01 context + $0.005 web) instead of $0.010 — a silent 50% overstatement.
+  // Same endpoint, different unit; hence a different label.
+  brave_context_call: Number(process.env.QSEARCH_COST_BRAVE_CTX_CALL) || 0.005,
   brave_news: Number(process.env.QSEARCH_COST_BRAVE_NEWS) || 0.005
 }
 
@@ -264,19 +271,28 @@ export class QueryCache {
   /**
    * Record one sweep/sweep_context invocation. Cost computed from COST_PER_CALL[backend]
    * × (queries - cacheHits). Cache hits cost $0.
-   * @param {{sprintId?,topic?,endpoint:string,priority?,backend:string,queries:number,cacheHits?:number,cacheMisses?:number,durationMs?:number}} m
+   *
+   * `timestamp` (epoch ms) exists for backfill only. Live callers omit it and get now();
+   * a historical import needs it, or several months of past runs all land on today's date
+   * and every /economy_report time filter becomes meaningless.
+   * @param {{sprintId?,topic?,endpoint:string,priority?,backend:string,queries:number,cacheHits?:number,cacheMisses?:number,durationMs?:number,timestamp?:number}} m
    * @returns {number} row id
    */
   recordSprintMetric (m) {
     const { sprintId = null, topic = null, endpoint, priority = null, backend, queries,
-      cacheHits = 0, cacheMisses = 0, durationMs = null } = m
+      cacheHits = 0, cacheMisses = 0, durationMs = null, timestamp = null } = m
     const billable = Math.max(0, (queries || 0) - (cacheHits || 0))
     const cost = (COST_PER_CALL[backend] != null ? COST_PER_CALL[backend] : 0) * billable
+    // Reject anything that isn't a plausible epoch-ms value rather than writing a row that
+    // would silently distort every subsequent aggregate.
+    const ts = Number.isFinite(Number(timestamp)) && Number(timestamp) > 0
+      ? Math.round(Number(timestamp))
+      : Date.now()
     const stmt = this.db.prepare(`
       INSERT INTO sprint_metrics (sprint_id, topic, timestamp, endpoint, priority, backend, queries, cost_usd, cache_hits, cache_misses, duration_ms)
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `)
-    const r = stmt.run(sprintId, topic, Date.now(), endpoint, priority, backend, queries || 0, cost, cacheHits, cacheMisses, durationMs)
+    const r = stmt.run(sprintId, topic, ts, endpoint, priority, backend, queries || 0, cost, cacheHits, cacheMisses, durationMs)
     return Number(r.lastInsertRowid)
   }
 

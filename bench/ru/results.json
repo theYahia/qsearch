@@ -1,0 +1,796 @@
+{
+  "generated": "2026-08-04T12:52:19.168Z",
+  "judge": "qwen2.5:14b-instruct",
+  "provider": "ollama",
+  "summary": {
+    "n": 28,
+    "web": {
+      "Supported": 18,
+      "Partial": 8,
+      "Unsupported": 1,
+      "Fabricated": 0,
+      "Error": 1,
+      "supportedPct": 64.3,
+      "supportedOrPartialPct": 92.9
+    },
+    "context": {
+      "Supported": 18,
+      "Partial": 9,
+      "Unsupported": 1,
+      "Fabricated": 0,
+      "Error": 0,
+      "supportedPct": 64.3,
+      "supportedOrPartialPct": 96.4
+    },
+    "byGroup": {
+      "web": {
+        "n": 10,
+        "web": {
+          "Supported": 7,
+          "Partial": 2,
+          "Unsupported": 0,
+          "Fabricated": 0,
+          "Error": 1,
+          "supportedPct": 70,
+          "supportedOrPartialPct": 90
+        },
+        "context": {
+          "Supported": 3,
+          "Partial": 6,
+          "Unsupported": 1,
+          "Fabricated": 0,
+          "Error": 0,
+          "supportedPct": 30,
+          "supportedOrPartialPct": 90
+        },
+        "deltaPp": -40
+      },
+      "context": {
+        "n": 10,
+        "web": {
+          "Supported": 6,
+          "Partial": 4,
+          "Unsupported": 0,
+          "Fabricated": 0,
+          "Error": 0,
+          "supportedPct": 60,
+          "supportedOrPartialPct": 100
+        },
+        "context": {
+          "Supported": 10,
+          "Partial": 0,
+          "Unsupported": 0,
+          "Fabricated": 0,
+          "Error": 0,
+          "supportedPct": 100,
+          "supportedOrPartialPct": 100
+        },
+        "deltaPp": 40
+      },
+      "independent": {
+        "n": 8,
+        "web": {
+          "Supported": 5,
+          "Partial": 2,
+          "Unsupported": 1,
+          "Fabricated": 0,
+          "Error": 0,
+          "supportedPct": 62.5,
+          "supportedOrPartialPct": 87.5
+        },
+        "context": {
+          "Supported": 5,
+          "Partial": 3,
+          "Unsupported": 0,
+          "Fabricated": 0,
+          "Error": 0,
+          "supportedPct": 62.5,
+          "supportedOrPartialPct": 100
+        },
+        "deltaPp": 0
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "npd_limit_2400000",
+      "form": "закон/порог",
+      "type": "factual",
+      "country": "ru",
+      "reference_from": "web",
+      "webPassages": 2,
+      "ctxPassages": 1,
+      "webPassagesAvailable": 100,
+      "ctxPassagesAvailable": 50,
+      "webChars": 351,
+      "ctxChars": 8000,
+      "web": {
+        "verdict": "Error",
+        "confidence": null,
+        "error": "judge failed: judge 500: {\"error\":\"llama-server process has terminated: exit status 0xe06d7363: NTSTATUS 0xe06d7363\"}",
+        "evidence": ""
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Физлица и ИП теряют право на льготный налог самозанятого, если с начала года заработали больше 2,4 миллиона рублей... Доход самозанятого считается с начала каждого календарного года. Считать с даты регистрации в «Мой налог», если она была в прошлом году, не надо. Ограничения по доходу в месяц нет: м"
+      }
+    },
+    {
+      "id": "npd_422fz_bans",
+      "form": "закон/норматив",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "context",
+      "webPassages": 32,
+      "ctxPassages": 12,
+      "webPassagesAvailable": 91,
+      "ctxPassagesAvailable": 47,
+      "webChars": 7962,
+      "ctxChars": 7866,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Проект налога на ... зарабатывать до 2,4 млн в год, не нанимать работников и не перепродавать товары чужого производства..."
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "работа, связанная с добычей и реализацией полезных ископаемых; перепродажа товаров, кроме вещей собственного производства; реализация подакцизных товаров и товаров, подлежащих обязательной маркировке; работа в интересах другого лица на основе агентского договора, договора поручения и комиссии; сдача"
+      }
+    },
+    {
+      "id": "npd_agent_contract",
+      "form": "закон/уточнение",
+      "type": "factual",
+      "country": "ru",
+      "reference_from": "context",
+      "webPassages": 33,
+      "ctxPassages": 11,
+      "webPassagesAvailable": 99,
+      "ctxPassagesAvailable": 49,
+      "webChars": 7963,
+      "ctxChars": 7941,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Самозанятый может выступать агентом (действовать от имени принципала и за его счёт) только тогда, когда он оказывает конкретную услугу — например, поиск клиентов или организацию мероприятий. Получать агентское вознаграждение как перепродажу чужих товаров нельзя — это запрещено для плательщиков НПД."
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Да, но с ограничениями. Самозанятый может выступать агентом (действовать от имени принципала и за его счёт) только тогда, когда он оказывает конкретную услугу — например, поиск клиентов или организацию мероприятий. Получать агентское вознаграждение как перепродажу чужих товаров нельзя — это запрещен"
+      }
+    },
+    {
+      "id": "152fz_processor_contract",
+      "form": "закон/норматив",
+      "type": "factual",
+      "country": "ru",
+      "reference_from": "web",
+      "webPassages": 32,
+      "ctxPassages": 10,
+      "webPassagesAvailable": 100,
+      "ctxPassagesAvailable": 49,
+      "webChars": 7985,
+      "ctxChars": 7946,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "В соответствии с ч. 3 ст. 6 Федерального закона от 27.07.2006 №152-ФЗ «О персональных данных» (далее – ФЗ о ПДн), оператор вправе поручить обработку персональных данных другому лицу с согласия субъекта персональных данных, если иное не предусмотрено федеральным законом, на основании заключаемого с э"
+      },
+      "context": {
+        "verdict": "Partial",
+        "confidence": 0.8,
+        "error": null,
+        "evidence": "Уполномоченная сторона обязана придерживаться принципов, закрепленных в ст. 5 Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных», соблюдать конфиденциальность персональных данных и обеспечивать их безопасность."
+      }
+    },
+    {
+      "id": "152fz_crossborder_notice",
+      "form": "закон/свежесть",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "context",
+      "webPassages": 32,
+      "ctxPassages": 11,
+      "webPassagesAvailable": 87,
+      "ctxPassagesAvailable": 50,
+      "webChars": 7967,
+      "ctxChars": 7904,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "С 1 марта 2023 года действует новая редакция статьи 12 про ТППД в Законе № 152-ФЗ (п. 7 ст. 1 Федерального закона от 14.07.2022 № 266-ФЗ). Основным условием для передачи личной информации российских граждан в другую страну стало уведомление Роскомнадзора о намерении осуществлять трансграничную перед"
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "В соответствии с частью 3 статьи 12 Федерального закона № 152-ФЗ «О персональных данных» трансграничная передача персональных данных на территорию иностранного государства может осуществляться только после специального отдельного уведомления Роскомнадзора о намерении осуществлять такую трансграничну"
+      }
+    },
+    {
+      "id": "vat_acquiring_2026",
+      "form": "свежесть/налоги",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "context",
+      "webPassages": 35,
+      "ctxPassages": 13,
+      "webPassagesAvailable": 91,
+      "ctxPassagesAvailable": 35,
+      "webChars": 7976,
+      "ctxChars": 7990,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "С 1 января 2026 года услуги по обслуживанию банковских карт, эквайрингу и процессингу начинают облагаться НДС по ставке 22%."
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "С 1 января 2026 года услуги по обслуживанию банковских карт, эквайрингу и процессингу начинают облагаться НДС по ставке 22%. Комиссия за переводы по СБП увеличится на 22% за счет НДС."
+      }
+    },
+    {
+      "id": "anthropic_ban_triggers",
+      "form": "конкретная компания",
+      "type": "factual",
+      "country": "ru",
+      "reference_from": "context",
+      "webPassages": 26,
+      "ctxPassages": 8,
+      "webPassagesAvailable": 83,
+      "ctxPassagesAvailable": 28,
+      "webChars": 6138,
+      "ctxChars": 7990,
+      "web": {
+        "verdict": "Partial",
+        "confidence": 0.8,
+        "error": null,
+        "evidence": "Помнить, что доступ из неподдерживаемого региона по AUP — формальный повод для блокировки"
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Сред among формулировок политики — «Coordinate malicious activity across multiple accounts to avoid detection» (запрет на координированную активность), «Utilize automation in account creation or to engage in spammy behavior» (запрет автоматизированной регистрации), отдельный пункт про доступ к Claud"
+      }
+    },
+    {
+      "id": "antilopay_complaints",
+      "form": "форум/отзывы",
+      "type": "reputational",
+      "country": "us",
+      "reference_from": "web",
+      "webPassages": 38,
+      "ctxPassages": 3,
+      "webPassagesAvailable": 68,
+      "ctxPassagesAvailable": 6,
+      "webChars": 6750,
+      "ctxChars": 1446,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Редакция нашла в сети негативные отзывы об Antilopay. Пользователи жалуются, что деньги с карты списываются, но до получателя не доходят. Поддержка молчит по несколько дней или вообще не отвечает."
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Пользователи жалуются, что деньги с карты списываются, но до получателя не доходят. Поддержка молчит по несколько дней или вообще не отвечает. В комментариях описывают такую ситуацию: деньги списали, а на экране – ошибка платежа. В итоге ни возврата, ни зачисления. И так может длиться несколько дней"
+      }
+    },
+    {
+      "id": "usdt_legal_status_ru",
+      "form": "закон/широкая ниша",
+      "type": "factual",
+      "country": "ru",
+      "reference_from": "context",
+      "webPassages": 23,
+      "ctxPassages": 5,
+      "webPassagesAvailable": 97,
+      "ctxPassagesAvailable": 16,
+      "webChars": 4583,
+      "ctxChars": 2882,
+      "web": {
+        "verdict": "Partial",
+        "confidence": 0.75,
+        "error": null,
+        "evidence": "ЦБ выпустил новое указание, регулирующее иностранные цифровые права. Документ взбудоражил российских инвесторов, которые начали активно обсуждать, что регулятор фактически запрещает стейблкоин USDT на территории России."
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "С точки зрения российского законодательства, говорит управляющий партнер Digital & Analogue Юрий Брисов, USDT — не является ни ЦФА, потому что фактически не удостоверяет никакие права на какие-либо цифровые активы, ни криптовалютой, потому что теоретически за него можно олучить один доллар США. Росс"
+      }
+    },
+    {
+      "id": "ru_dev_pays_foreign_ai",
+      "form": "широкая ниша",
+      "type": "factual",
+      "country": "ru",
+      "reference_from": "web",
+      "webPassages": 29,
+      "ctxPassages": 4,
+      "webPassagesAvailable": 100,
+      "ctxPassagesAvailable": 20,
+      "webChars": 7984,
+      "ctxChars": 7931,
+      "web": {
+        "verdict": "Partial",
+        "confidence": 0.8,
+        "error": null,
+        "evidence": "Поэтому схема через посредника выглядит логично: вы заранее понимаете, сколько хотите закинуть, оплачиваете в рублях и используете API по мере расхода токенов. Режим работы Oplatym.ru: в будни с 9:00 до 24:00 по Москве."
+      },
+      "context": {
+        "verdict": "Partial",
+        "confidence": 0.8,
+        "error": null,
+        "evidence": "Российские карты Visa, Mastercard и Мир система, естественно, не принимает."
+      }
+    },
+    {
+      "id": "npd_422fz_st6_object",
+      "form": "закон/норматив",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "web",
+      "webPassages": 31,
+      "ctxPassages": 6,
+      "webPassagesAvailable": 77,
+      "ctxPassagesAvailable": 42,
+      "webChars": 7929,
+      "ctxChars": 7840,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "На основании ч. 1 ст. 6 Закона № 422-ФЗ объектом налогообложения по НПД признаются доходы от реализации товаров, работ, услуг, имущественных прав.\n\nПеречень доходов, которые не признаются объектом · налогообложения, определен ст. 6 закона 422-ФЗ. Налоговым периодом признается · календарный месяц ·"
+      },
+      "context": {
+        "verdict": "Partial",
+        "confidence": 0.8,
+        "error": null,
+        "evidence": "доходы, получаемые в рамках трудовых отношений; от продажи недвижимого имущества и транспортных средств; от передачи прав на недвижимое имущество (за исключением аренды (найма) жилых помещений); от продажи имущества, использовавшегося для личных, домашних и (или) иных подобных нужд; от оказания услу"
+      }
+    },
+    {
+      "id": "fz115_p2p_block",
+      "form": "закон/практика",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "web",
+      "webPassages": 35,
+      "ctxPassages": 1,
+      "webPassagesAvailable": 87,
+      "ctxPassagesAvailable": 9,
+      "webChars": 7994,
+      "ctxChars": 7667,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "По данным юридической практики 2026 года, при регулярных P2P-операциях вероятность заблокировать карту в течение полугода — 40–50%. Это не маркетинговая страшилка, это математика. И этой математикой банки сейчас занимаются 24/7 с помощью своих AML-систем."
+      },
+      "context": {
+        "verdict": "Partial",
+        "confidence": 0.75,
+        "error": null,
+        "evidence": "Система научилась видеть паттерны. Система стала точнее и блокирует агрессивнее."
+      }
+    },
+    {
+      "id": "currency_control_2026",
+      "form": "свежесть/норматив",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "web",
+      "webPassages": 37,
+      "ctxPassages": 12,
+      "webPassagesAvailable": 90,
+      "ctxPassagesAvailable": 49,
+      "webChars": 7896,
+      "ctxChars": 7971,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Обязанность ... контракт нужно ставить на учёт при рублёвом эквиваленте свыше 3 млн для импортных и свыше 10 млн для экспортных сделок, а с 2026 года требование подтверждающих документов начинается уже с 1 млн вместо прежних 600 000..."
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "С 8 декабря 2025 года Банк России отменил ранее установленные лимиты на переводы иностранной валюты за рубеж для граждан России и физических лиц – нерезидентов из дружественных стран ( Информация Банка России от 05.12.2025). Напомним: ранее было установлено , что до 31 марта 2026 года граждане Росси"
+      }
+    },
+    {
+      "id": "skycapital_reputation",
+      "form": "форум/отзывы",
+      "type": "reputational",
+      "country": "us",
+      "reference_from": "web",
+      "webPassages": 39,
+      "ctxPassages": 11,
+      "webPassagesAvailable": 72,
+      "ctxPassagesAvailable": 46,
+      "webChars": 7980,
+      "ctxChars": 7985,
+      "web": {
+        "verdict": "Partial",
+        "confidence": 0.8,
+        "error": null,
+        "evidence": "Признаков того, что предлагающий покупку при помощи российских карт обменник SkyCapital является скамом, мы не обнаружили.\n\nСкладывается впечатление, что ресурс — развод на деньги, провести выгодную конвертацию здесь вряд ли получится..."
+      },
+      "context": {
+        "verdict": "Partial",
+        "confidence": 0.8,
+        "error": null,
+        "evidence": "Признаков того, что предлагающий покупку при помощи российских карт обменник SkyCapital является скамом, мы не обнаружили."
+      }
+    },
+    {
+      "id": "cis_payments_2026",
+      "form": "широкая ниша/свежесть",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "web",
+      "webPassages": 14,
+      "ctxPassages": 4,
+      "webPassagesAvailable": 97,
+      "ctxPassagesAvailable": 21,
+      "webChars": 2921,
+      "ctxChars": 7877,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Три рабочих маршрута: сервис-посредник с оплатой в рублях через СБП, зарубежная карта (Казахстан, Армения, Грузия, Турция) или виртуальный платежный инструмент с иностранным BIN-кодом... В этом случае нужно открыть счет в банке Казахстана, ОАЭ, Армении или Грузии — и получить полноценную карту Visa "
+      },
+      "context": {
+        "verdict": "Partial",
+        "confidence": 0.8,
+        "error": null,
+        "evidence": "Казахстан, ОАЭ, Армении или Грузии — и получить полноценную карту Visa или Mastercard, которая принимается везде."
+      }
+    },
+    {
+      "id": "npd_foreign_clients",
+      "form": "закон/свежесть",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "context",
+      "webPassages": 36,
+      "ctxPassages": 14,
+      "webPassagesAvailable": 94,
+      "ctxPassagesAvailable": 50,
+      "webChars": 7987,
+      "ctxChars": 7940,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Режим действует до 31 декабря 2028 года (Федеральный закон от 27.11.2018 № 422-ФЗ, далее — Закон о самозанятых). На основании официальной позиции Правительства РФ можно с уверенностью сказать: отмены самозанятости в 2026 году не планируется. Режим будет действовать как минимум до конца 2028 года."
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Правительство не приняло предложение Совета Федерации о завершении эксперимента в 2026 году, заявив, что условия режима остаются неизменными до 31 декабря 2028 года"
+      }
+    },
+    {
+      "id": "npd_software_license",
+      "form": "закон/уточнение",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "context",
+      "webPassages": 7,
+      "ctxPassages": 10,
+      "webPassagesAvailable": 88,
+      "ctxPassagesAvailable": 30,
+      "webChars": 1823,
+      "ctxChars": 6191,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "При этом Закон N 422-ФЗ не содержит запрета на применение физическим лицом специального налогового режима НПД в отношении доходов от предоставления права использования его интеллектуальной собственности по договору, заключенному таким физическим лицом с юридическим лицом в связи с передачей последне"
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Закон N 422-ФЗ не содержит запрета на применение физическим лицом специального налогового режима НПД в отношении доходов от предоставления права использования его интеллектуальной собственности по договору, заключенному таким физическим лицом с юридическим лицом в связи с передачей последнему прав п"
+      }
+    },
+    {
+      "id": "a7a5_stablecoin",
+      "form": "конкретная компания/свежесть",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "context",
+      "webPassages": 30,
+      "ctxPassages": 14,
+      "webPassagesAvailable": 90,
+      "ctxPassagesAvailable": 31,
+      "webChars": 7959,
+      "ctxChars": 7885,
+      "web": {
+        "verdict": "Partial",
+        "confidence": 0.8,
+        "error": null,
+        "evidence": "A7A5 — под санкциями ЕС с октября 2025 года. RUBx — под запретом с 24 мая 2026 года."
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 0.95,
+        "error": null,
+        "evidence": "A7A5 — под санкциями ЕС с октября 2025 года. RUBx — под запретом с 24 мая 2026 года. Grinex, Garantex и их преемники — под санкциями США, ЕС и Великобритании; Grinex прекратил работу в апреле 2026 года. Любые российские криптобиржи и платформы — с 24 мая 2026 года полный запрет для EU-субъектов. HTX"
+      }
+    },
+    {
+      "id": "openai_access_2026",
+      "form": "конкретная компания",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "context",
+      "webPassages": 49,
+      "ctxPassages": 5,
+      "webPassagesAvailable": 76,
+      "ctxPassagesAvailable": 35,
+      "webChars": 7852,
+      "ctxChars": 7985,
+      "web": {
+        "verdict": "Partial",
+        "confidence": 0.8,
+        "error": null,
+        "evidence": "Большинство популярных VPN (NordVPN, ExpressVPN, Surfshark, ProtonVPN) не работают потому что OpenAI распознаёт их IP-диапазоны и при логине выдаёт ошибку Country not supported или блокирует аккаунт."
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "OpenAI блокирует пользователей из России, Беларуси, Ирана, Северной Кореи, Кубы и Сирии на уровне IP. Без объяснений. Все оставшиеся credits сгорают. Апеллировать можно — но в 2026 году по нашему наблюдению восстанавливается меньше 5% обращений из РФ"
+      }
+    },
+    {
+      "id": "152fz_consent_requirements",
+      "form": "закон/норматив",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "independent",
+      "webPassages": 37,
+      "ctxPassages": 12,
+      "webPassagesAvailable": 96,
+      "ctxPassagesAvailable": 23,
+      "webChars": 7917,
+      "ctxChars": 7916,
+      "web": {
+        "verdict": "Partial",
+        "confidence": 0.8,
+        "error": null,
+        "evidence": "Согласие на обработку персональных данных должно быть конкретным, предметным, информированным, сознательным и однозначным."
+      },
+      "context": {
+        "verdict": "Partial",
+        "confidence": 0.8,
+        "error": null,
+        "evidence": "Согласие человека должно быть конкретным, предметным, информированным, сознательным и однозначным (ч. 1 ст. 9 Закона N 152-ФЗ)."
+      }
+    },
+    {
+      "id": "152fz_notification_exemptions",
+      "form": "закон/норматив",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "independent",
+      "webPassages": 1,
+      "ctxPassages": 2,
+      "webPassagesAvailable": 95,
+      "ctxPassagesAvailable": 50,
+      "webChars": 92,
+      "ctxChars": 7661,
+      "web": {
+        "verdict": "Unsupported",
+        "confidence": null,
+        "error": null,
+        "evidence": ""
+      },
+      "context": {
+        "verdict": "Partial",
+        "confidence": 0.8,
+        "error": null,
+        "evidence": "оператор обрабатывает ПД без автоматизации;\nПД включены в государственные информационные системы, созданные в целях защиты безопасности государства и общественного порядка;\nобработка ПД в случаях, предусмотренных законодательством РФ о транспортной безопасности."
+      }
+    },
+    {
+      "id": "152fz_operator_measures",
+      "form": "закон/норматив",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "independent",
+      "webPassages": 31,
+      "ctxPassages": 10,
+      "webPassagesAvailable": 92,
+      "ctxPassagesAvailable": 50,
+      "webChars": 7989,
+      "ctxChars": 7800,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "1) назначение оператором, являющимся юридическим лицом, ответственного за организацию обработки персональных данных; 2) издание оператором, являющимся юридическим лицом, документов, определяющих политику оператора в отношении обработки персональных данных; 4) осуществление внутреннего контроля и (ил"
+      },
+      "context": {
+        "verdict": "Partial",
+        "confidence": 0.8,
+        "error": null,
+        "evidence": "Оператор обязан принимать необходимые меры, в том числе: назначить ответственного за организацию обработки персональных данных, если оператор — юридическое лицо; издать документы, определяющие политику обработки персональных данных, и локальные акты; применять правовые, организационные и технические"
+      }
+    },
+    {
+      "id": "pdn_localization_18_5",
+      "form": "закон/норматив",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "independent",
+      "webPassages": 30,
+      "ctxPassages": 8,
+      "webPassagesAvailable": 87,
+      "ctxPassagesAvailable": 50,
+      "webChars": 7912,
+      "ctxChars": 7860,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "«При сборе персональных данных, в том числе посредством сети «Интернет», оператор обязан обеспечить запись, систематизация, накопление, хранение, уточнение (обновление, изменение), извлечение персональных данных граждан РФ с использованием баз данных, находящихся на за пределами территории РФ, не до"
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 0.95,
+        "error": null,
+        "evidence": "В соответствии с ч. 5 ст. 18 ФЗ «О персональных данных» сбор персональных данных, их обновление и изменение должны производиться с использованием баз данных, расположенных на территории Российской Федерации, за исключением случаев, указанных в пунктах 2, 3, 4, 8 ч. 1 ст. 6 ФЗ «О персональных данных»"
+      }
+    },
+    {
+      "id": "edu_license_273fz",
+      "form": "закон/норматив",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "independent",
+      "webPassages": 28,
+      "ctxPassages": 9,
+      "webPassagesAvailable": 96,
+      "ctxPassagesAvailable": 50,
+      "webChars": 6427,
+      "ctxChars": 7908,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Образовательная деятельность подлежит лицензированию в соответствии с законодательством Российской Федерации о лицензировании отдельных видов деятельности с учетом особенностей, установленных настоящей статьей."
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Образовательная деятельность подлежит лицензированию в соответствии с Федеральным законом от 04.05.2011 N 99-ФЗ \"О лицензировании отдельных видов деятельности\" с учетом особенностей, установленных статьей 91 Федерального закона N 273-ФЗ."
+      }
+    },
+    {
+      "id": "kkt_npd_exemption",
+      "form": "закон/норматив",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "independent",
+      "webPassages": 34,
+      "ctxPassages": 12,
+      "webPassagesAvailable": 92,
+      "ctxPassagesAvailable": 48,
+      "webChars": 7915,
+      "ctxChars": 7578,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Контрольно-кассовая техника не применяется индивидуальными предпринимателями, применяющими специальный налоговый режим \"Налог на профессиональный доход\" в отношении доходов, облагаемых налогом на профессиональный доход."
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Самозанятые прямо освобождены от требования применять контрольно-кассовую технику согласно пункту 2.2 статьи 2 Федерального закона № 54-ФЗ . Закон говорит, что физические лица, применяющие специальный налоговый режим НПД, не обязаны использовать ККТ."
+      }
+    },
+    {
+      "id": "ad_traceability_38fz",
+      "form": "закон/норматив",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "independent",
+      "webPassages": 35,
+      "ctxPassages": 12,
+      "webPassagesAvailable": 100,
+      "ctxPassagesAvailable": 49,
+      "webChars": 7987,
+      "ctxChars": 7860,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Статья 18.1 Федерального закона от 13.03.2006 № 38-ФЗ «О рекламе» регулирует рекламу и социальную рекламу в информационно-телекоммуникационной сети «Интернет». В целях обеспечения прослеживаемости такой рекламы федеральный орган исполнительной власти, осуществляющий функции по контролю и надзору в с"
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Статья 18.1 Закона № 38-ФЗ регулирует рекламу и социальную рекламу в информационно-телекоммуникационной сети «Интернет». Вся реклама, ориентированная на российских пользователей, должна регистрироваться в ОРД (оператор рекламных данных) и получать токен (erid), который размещается в креативе (реклам"
+      }
+    },
+    {
+      "id": "152fz_legal_basis",
+      "form": "закон/норматив",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "independent",
+      "webPassages": 37,
+      "ctxPassages": 2,
+      "webPassagesAvailable": 93,
+      "ctxPassagesAvailable": 50,
+      "webChars": 7962,
+      "ctxChars": 7756,
+      "web": {
+        "verdict": "Partial",
+        "confidence": 0.75,
+        "error": null,
+        "evidence": "3) обработка персональных данных осуществляется в связи с участием лица в конституционном, гражданском, административном, уголовном судопроизводстве, судопроизводстве в арбитражных судах;"
+      },
+      "context": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Обработка персональных данных осуществляется с согласия субъекта персональных данных на обработку его персональных данных; обработка персональных данных необходима для защиты жизни, здоровья или иных жизненно важных интересов субъекта персональных данны, если получение согласия субъекта персональных"
+      }
+    },
+    {
+      "id": "ai_reseller_margin",
+      "form": "широкая ниша/экономика",
+      "type": "factual",
+      "country": "us",
+      "reference_from": "web",
+      "webPassages": 46,
+      "ctxPassages": 2,
+      "webPassagesAvailable": 76,
+      "ctxPassagesAvailable": 10,
+      "webChars": 7946,
+      "ctxChars": 7815,
+      "web": {
+        "verdict": "Supported",
+        "confidence": 1,
+        "error": null,
+        "evidence": "Наценка выше: комиссия платформы составляет около 14% от цены оригинальных провайдеров, что делает сервис дороже прямого доступа к API."
+      },
+      "context": {
+        "verdict": "Unsupported",
+        "confidence": 1,
+        "error": null,
+        "evidence": ""
+      }
+    }
+  ]
+}

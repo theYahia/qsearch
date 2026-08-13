@@ -16,7 +16,11 @@ export const DEFAULT_LIMITS = {
   '/sweep': 30,
   '/cached_sweep': 30,
   '/search': 100,
-  '/academic_search': 60
+  '/academic_search': 60,
+  // Writes ledger rows to SQLite. One sweep reports once, so 60/min is far above real use;
+  // the cap only exists so an exposed instance can't be made to grow the DB unbounded.
+  // Backfill sends its whole history as a single batched request, so it is unaffected.
+  '/sprint_metric': 60
 }
 
 // Parse "/index=10,/search=100" → { '/index': 10, '/search': 100 }.

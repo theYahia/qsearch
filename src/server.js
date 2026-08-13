@@ -1,5 +1,12 @@
 // qsearch v0.3 — Own Corpus layer over Brave proxy.
 // Endpoints: POST /search, POST /news, POST /context, POST /index, GET /index/:job_id, GET /corpus/stats, GET /health
+// MUST stay the first import: ESM evaluates the whole import graph before this file's own
+// statements, so .env.local has to be applied from inside an import to reach modules that
+// read process.env at module scope (trust.js, rerank/pipeline.js, sweep/runner.js,
+// backends/brave.js …). Parsing it further down — as this file used to — silently left all
+// of them on the ambient environment.
+import './env.js'
+
 import http from 'node:http'
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { glob as fsGlob } from 'glob'
@@ -7,13 +14,6 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const envPath = join(__dirname, '..', '.env.local')
-if (existsSync(envPath)) {
-  for (const line of readFileSync(envPath, 'utf8').split(/\r?\n/)) {
-    const m = line.match(/^([A-Z_][A-Z0-9_]*)=(.*)$/)
-    if (m) process.env[m[1]] = m[2].trim().replace(/^["']|["']$/g, '')
-  }
-}
 
 const PORT = Number(process.env.PORT) || 8080
 const BRAVE_KEY = process.env.BRAVE_API_KEY
@@ -27,7 +27,7 @@ if (!BRAVE_KEY) {
   console.warn('No BRAVE_API_KEY — using SearXNG as primary backend (free, self-hosted)')
 }
 
-// ── Imports (after env loading) ────────────────────────────────────
+// ── Remaining imports (env already applied by ./env.js above) ──────
 import { braveFetch } from './backends/brave.js'
 import { createSweepRouter } from './sweep/router.js'
 import { parseQueriesText, runSweep } from './sweep/runner.js'
@@ -49,7 +49,8 @@ import { createJob, getJob, updateJob } from './jobs/store.js'
 import { syncToObsidian, appendDailyLog } from './obsidian/sync.js'
 import { rerankByTrust } from './search/rerank.js'
 import { ingestBraveDir } from './ingest/brave.js'
-import { QueryCache, inferEndpoint } from './cache.js'
+import { QueryCache, inferEndpoint, COST_PER_CALL } from './cache.js'
+import { snippetToText } from './clean/structured.js'
 import { runSweepContext } from './sweep_context.js'
 import { fetchHtml, extractMainContent } from './fetch/html.js'
 import { runPreSweepCheck } from './sweep/pre_check.js'
@@ -181,6 +182,20 @@ setInterval(() => refreshCorpusStatus().catch(() => {}), 30_000)
 // make every corpus search wait out its timeout. The breaker skips a failing backend instantly after a
 // few failures and probes for recovery — so a dead Qdrant degrades to Meilisearch-only in ms, not seconds.
 const CORPUS_TIMEOUT_MS = Number(process.env.QSEARCH_CORPUS_TIMEOUT_MS) || 4000
+
+// Grounding knobs applied to every critical-tier llm/context call. All default to null,
+// i.e. Brave's own defaults, so behaviour is unchanged until one is set. brave_sweep.py has
+// exercised these for months; the server sent only `count` until 2026-08-04.
+// `strict` raises precision at the cost of recall — worth setting when a sweep feeds
+// load-bearing claims rather than scoping.
+const SWEEP_CONTEXT_PARAMS = {
+  context_threshold_mode: process.env.QSEARCH_CTX_THRESHOLD_MODE || null,
+  maximum_number_of_urls: Number(process.env.QSEARCH_CTX_MAX_URLS) || null,
+  maximum_number_of_tokens: Number(process.env.QSEARCH_CTX_MAX_TOKENS) || null,
+  maximum_number_of_tokens_per_url: Number(process.env.QSEARCH_CTX_MAX_TOKENS_PER_URL) || null,
+  maximum_number_of_snippets: Number(process.env.QSEARCH_CTX_MAX_SNIPPETS) || null,
+  maximum_number_of_snippets_per_url: Number(process.env.QSEARCH_CTX_MAX_SNIPPETS_PER_URL) || null
+}
 const meiliBreaker = new CircuitBreaker({ name: 'meili', failureThreshold: 3, cooldownMs: 15_000, timeoutMs: CORPUS_TIMEOUT_MS })
 const qdrantBreaker = new CircuitBreaker({ name: 'qdrant', failureThreshold: 3, cooldownMs: 15_000, timeoutMs: CORPUS_TIMEOUT_MS })
 
@@ -496,15 +511,38 @@ async function handleContext (req, res) {
     return
   }
 
-  const count = Math.min(Math.max(Number(body.n_results) || 3, 1), 10)
-  let braveMs = null
+  // Brave documents count as 1–50 for llm/context. The old ceiling of 10 (default 3) was
+  // this server's own invention and quietly capped the endpoint at a fifth of its range.
+  const count = Math.min(Math.max(Number(body.n_results) || 20, 1), 50)
 
+  // The seven grounding knobs. Until now the server sent `count` and `freshness` and
+  // nothing else, so every server-side context call ran on Brave's defaults — while
+  // brave_sweep.py had been setting all of them for months.
+  //
+  // Idiom: braveFetch skips a param when it is `!= null` (src/backends/brave.js), so `null`
+  // means "omit". Numbers go through Number()||null, otherwise NaN would serialise as
+  // the string "NaN". enable_source_metadata is a boolean and must NOT use `|| null`:
+  // `false || null` is null, which would drop an explicit false instead of sending it.
+  const num = v => Number(v) || null
+  const contextParams = {
+    count,
+    freshness: body.freshness || null,
+    context_threshold_mode: body.context_threshold_mode || null,
+    maximum_number_of_urls: num(body.maximum_number_of_urls),
+    maximum_number_of_tokens: num(body.maximum_number_of_tokens),
+    maximum_number_of_tokens_per_url: num(body.maximum_number_of_tokens_per_url),
+    maximum_number_of_snippets: num(body.maximum_number_of_snippets),
+    maximum_number_of_snippets_per_url: num(body.maximum_number_of_snippets_per_url),
+    enable_source_metadata: body.enable_source_metadata === undefined ? null : Boolean(body.enable_source_metadata),
+    country: body.country || null,
+    search_lang: body.search_lang || null,
+    goggles: Array.isArray(body.goggles) ? body.goggles : (body.goggles || null)
+  }
+
+  let braveMs = null
   let data
   try {
-    ;({ data, ms: braveMs } = await braveFetch('llm/context', query, {
-      count,
-      freshness: body.freshness || null
-    }))
+    ;({ data, ms: braveMs } = await braveFetch('llm/context', query, contextParams))
   } catch (err) {
     res.writeHead(err.status || 502, { 'Content-Type': 'application/json' })
     res.end(JSON.stringify({ error: 'brave_api_error', status: err.status, detail: err.detail || String(err) }))
@@ -517,11 +555,15 @@ async function handleContext (req, res) {
 
   for (const item of grounding) {
     const itemStart = Date.now()
-    const { cleanSnippets, cleaned_markdown } = await cleanContext(item)
+    const { cleaned_markdown } = await cleanContext(item)
     results.push({
       url: item.url,
       title: item.title,
       snippet_count: item.snippets?.length || 0,
+      // Structured payloads (tables, JSON-LD FAQ/Article) arrive serialised inside snippet
+      // strings; cleanContext length-filters and truncates them into prose. Surface what
+      // was in there instead of discarding it — see src/clean/structured.js.
+      snippets: (item.snippets || []).map(snippetToText),
       cleaned_markdown,
       clean_ms: Date.now() - itemStart,
       source: 'brave'
@@ -536,6 +578,9 @@ async function handleContext (req, res) {
     type: 'context',
     brave_endpoint: 'llm/context',
     freshness: body.freshness || null,
+    // Echo the knobs that were actually applied — without this a caller cannot tell a
+    // deliberate `strict` run from one where the parameter was silently dropped.
+    applied: Object.fromEntries(Object.entries(contextParams).filter(([, v]) => v != null)),
     total_results: results.length,
     model: localLlmAvailable ? CLEAN_MODEL?.name : null,
     brave_ms: braveMs,
@@ -932,6 +977,7 @@ async function handleSweep (req, res) {
     searxng, academic, yandex, braveKey: BRAVE_KEY,
     braveFetch, searxngAsBraveResponse, academicAsBraveResponse, yandexAsBraveResponse,
     corpusLookup: corpusLookupAsBrave,
+    contextParams: SWEEP_CONTEXT_PARAMS,
     endpointName: '/sweep'
   })
   console.log(`[sweep] starting ${queries.length} queries via priority router (broad→${searxng ? 'SearXNG' : 'Brave'}, focused/critical→${BRAVE_KEY ? 'Brave' : 'SearXNG fallback'}, scholarly→${academic ? 'Academic' : 'disabled'}, ru→${yandex ? 'Yandex' : 'SearXNG+ru-RU'})`)
@@ -1011,35 +1057,92 @@ async function handleSweep (req, res) {
   // Index results into corpus (background, don't block response)
   setImmediate(async () => {
     let indexed = 0
+    let ctxEnriched = 0
+    let ctxOnly = 0
     for (const { label } of queries) {
       const entry = results.get(label)
       if (!entry?.ok) continue
+
+      // Brave LLM Context passages, keyed by canonical URL.
+      //
+      // Until 2026-08-04 this loop walked entry.results only, so context grounding was
+      // never indexed — $43 of the deepest text in the stack (1077 chars/passage against
+      // 261 for a web snippet) went to markdown files and nowhere else. The corpus that
+      // ultra-broad, /pre_sweep_check and trust ranking read had never seen any of it.
+      const ctxByUrl = new Map()
+      for (const g of (entry.context_grounding || [])) {
+        if (!g?.url) continue
+        const text = (g.snippets || []).filter(Boolean).map(snippetToText).join('\n').trim()
+        if (!text) continue
+        const key = canonicalizeUrl(g.url)
+        ctxByUrl.set(key, { url: key, title: g.title || '', text, raw: g.url })
+      }
+
+      const crawledAt = new Date().toISOString()
+
       for (const r of entry.results) {
         if (!r.url) continue
         try {
           const cleanUrl = canonicalizeUrl(r.url)
           const engines = Array.isArray(r.engines) ? r.engines : []
+          const ctx = ctxByUrl.get(cleanUrl)
+          if (ctx) ctxByUrl.delete(cleanUrl) // consumed here; the rest become their own docs
           const doc = {
             url: cleanUrl,
             title: sanitizeText(r.title || ''),
             description: sanitizeText(r.description || ''),
-            text: sanitizeText([r.title, r.description, ...(r.extra_snippets || [])].filter(Boolean).join('\n')),
+            // Context passages ride alongside the web snippets rather than replacing them:
+            // index() spreads the new doc over the existing one, so writing a context-only
+            // `text` here would clobber the web text for that URL.
+            text: sanitizeText([r.title, r.description, ...(r.extra_snippets || []), ctx?.text]
+              .filter(Boolean).join('\n')),
             namespace: 'sweep',
             sweep_label: label,
             engines,
             engine_count: engines.length,
             backend_source: r.source || null,
-            crawled_at: new Date().toISOString()
+            has_context: Boolean(ctx),
+            crawled_at: crawledAt
           }
           await meili.index(doc)
           indexed++
+          if (ctx) ctxEnriched++
         } catch (e) {
           console.error('[sweep] index error:', r.url, e.message)
         }
       }
+
+      // Context routinely surfaces sources the web results did not (measured: 5565
+      // context-only hostnames across 8184 pairs). Those would otherwise stay invisible.
+      for (const ctx of ctxByUrl.values()) {
+        try {
+          await meili.index({
+            url: ctx.url,
+            title: sanitizeText(ctx.title),
+            description: '',
+            text: sanitizeText([ctx.title, ctx.text].filter(Boolean).join('\n')),
+            namespace: 'sweep',
+            sweep_label: label,
+            // It did come from Brave. Leaving engines empty would zero-collapse the doc
+            // under the v1 trust formula (see docs/trust-v2-flip-plan.md).
+            engines: ['brave'],
+            engine_count: 1,
+            backend_source: 'brave_context',
+            has_context: true,
+            crawled_at: crawledAt
+          })
+          indexed++
+          ctxOnly++
+        } catch (e) {
+          console.error('[sweep] context index error:', ctx.url, e.message)
+        }
+      }
     }
     if (indexed) {
-      console.log(`[sweep] indexed ${indexed} results into corpus`)
+      const extra = ctxEnriched || ctxOnly
+        ? ` (${ctxEnriched} enriched with LLM Context, ${ctxOnly} context-only sources)`
+        : ''
+      console.log(`[sweep] indexed ${indexed} results into corpus${extra}`)
       await refreshCorpusStatus()
     }
   })
@@ -1201,6 +1304,7 @@ async function handleCachedSweep (req, res) {
     searxng, academic, yandex, braveKey: BRAVE_KEY,
     braveFetch, searxngAsBraveResponse, academicAsBraveResponse, yandexAsBraveResponse,
     corpusLookup: corpusLookupAsBrave,
+    contextParams: SWEEP_CONTEXT_PARAMS,
     endpointName: '/cached_sweep'
   })
 
@@ -1405,6 +1509,77 @@ async function handleCacheStore (req, res) {
   } catch (err) {
     res.writeHead(500, { 'Content-Type': 'application/json' })
     res.end(JSON.stringify({ error: 'store failed', detail: String(err) }))
+  }
+}
+
+/**
+ * POST /sprint_metric — let an out-of-process sweep report its spend into the ledger.
+ *
+ * Why this exists: brave_sweep.py calls Brave directly and never wrote a sprint_metrics
+ * row, so GET /economy_report reported only the Node share. Measured 2026-08-04: $42.5
+ * visible against $227.69 actually spent — 18.7%. Every "this got cheaper" claim was
+ * being made against a number that omitted 84% of the spend.
+ *
+ * Accepts one metric or a batch (`{metrics: [...]}` or a bare array) — the batch form is
+ * what the historical backfill uses. Cost is computed server-side by recordSprintMetric
+ * from COST_PER_CALL, so no caller can invent its own pricing.
+ *
+ * Body per metric: { backend, queries, endpoint?, sprintId?, topic?, priority?,
+ *                    cacheHits?, cacheMisses?, durationMs?, timestamp? }
+ */
+async function handleSprintMetric (req, res) {
+  if (!queryCache) {
+    res.writeHead(503, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'cache unavailable' }))
+    return
+  }
+  let body
+  try { body = JSON.parse((await readBody(req)) || '{}') } catch {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'invalid JSON body' }))
+    return
+  }
+
+  const metrics = Array.isArray(body) ? body : (Array.isArray(body.metrics) ? body.metrics : [body])
+  if (!metrics.length) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'no metrics supplied' }))
+    return
+  }
+
+  const ids = []
+  const warnings = []
+  try {
+    for (const [i, m] of metrics.entries()) {
+      const backend = typeof m?.backend === 'string' ? m.backend.trim() : ''
+      const queries = Number(m?.queries)
+      if (!backend || !Number.isFinite(queries) || queries < 0) {
+        warnings.push(`metric[${i}]: skipped — backend (string) and queries (number >= 0) required`)
+        continue
+      }
+      // An unknown backend is priced at $0 by recordSprintMetric. Silent $0 is exactly how
+      // spend goes missing, so say it out loud rather than accept a typo'd label.
+      if (COST_PER_CALL[backend] == null) {
+        warnings.push(`metric[${i}]: unknown backend "${backend}" — recorded at $0`)
+      }
+      ids.push(queryCache.recordSprintMetric({
+        sprintId: m.sprintId ?? m.sprint_id ?? null,
+        topic: m.topic ?? null,
+        endpoint: m.endpoint || '/sweep',
+        priority: m.priority ?? null,
+        backend,
+        queries,
+        cacheHits: Number(m.cacheHits ?? m.cache_hits) || 0,
+        cacheMisses: Number(m.cacheMisses ?? m.cache_misses) || 0,
+        durationMs: Number(m.durationMs ?? m.duration_ms) || null,
+        timestamp: m.timestamp ?? null
+      }))
+    }
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ ok: true, recorded: ids.length, skipped: metrics.length - ids.length, ids, warnings }))
+  } catch (err) {
+    res.writeHead(500, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'record failed', detail: String(err), recorded: ids.length, warnings }))
   }
 }
 
@@ -1795,6 +1970,10 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === 'POST' && req.url === '/cache_store') {
     handleCacheStore(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
+    return
+  }
+  if (req.method === 'POST' && req.url === '/sprint_metric') {
+    handleSprintMetric(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
     return
   }
   if (req.method === 'GET' && req.url === '/cache_stats') {

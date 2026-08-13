@@ -26,8 +26,13 @@ export class MeilisearchCorpus extends CorpusBackend {
     // updateSettings() is async on Meilisearch side — index keeps serving while
     // reindex runs in background. Existing 143k docs without crawled_at remain
     // queryable (Meilisearch allows missing fields). Backfill via separate script.
-    await idx.updateFilterableAttributes(['engines', 'engine_count', 'namespace', 'backend_source', 'sweep_label', 'url', 'crawled_at'])
-    await idx.updateSortableAttributes(['engine_count', 'sweep_count', 'first_seen', 'crawled_at'])
+    // crawled_at_ms: numeric companion to crawled_at. Meilisearch's >= is a NUMERIC operator,
+    // so `crawled_at >= "2026-07-05T10:07:57.629Z"` fails with invalid_search_filter
+    // ("invalid float literal") — verified against the live index. Every freshness-filtered
+    // lookup therefore threw and silently retried unfiltered, which made
+    // QSEARCH_ULTRA_BROAD_MAX_AGE_DAYS a no-op and cost two Meilisearch round-trips per call.
+    await idx.updateFilterableAttributes(['engines', 'engine_count', 'namespace', 'backend_source', 'sweep_label', 'url', 'crawled_at', 'crawled_at_ms'])
+    await idx.updateSortableAttributes(['engine_count', 'sweep_count', 'first_seen', 'crawled_at', 'crawled_at_ms'])
     this._ready = true
   }
 
@@ -72,6 +77,11 @@ export class MeilisearchCorpus extends CorpusBackend {
       }
       merged.appeared_in_sweeps = [{ sweep_label: doc.sweep_label ?? null, crawled_at: doc.crawled_at, engines: doc.engines || [] }]
     }
+
+    // Kept in step with crawled_at on every write so the freshness filter has something
+    // numeric to compare. Docs written before this existed need scripts/backfill-crawled-at-ms.mjs.
+    const ms = Date.parse(merged.crawled_at)
+    if (Number.isFinite(ms)) merged.crawled_at_ms = ms
 
     await idx.addDocuments([merged])
   }
@@ -119,15 +129,25 @@ export class MeilisearchCorpus extends CorpusBackend {
     const base = {
       limit: opts.limit || 5,
       showRankingScore: true,
-      attributesToRetrieve: ['url', 'title', 'text', 'crawled_at', 'engines', 'engine_count', 'appeared_in_sweeps', 'sweep_label']
+      attributesToRetrieve: ['url', 'title', 'text', 'crawled_at', 'crawled_at_ms', 'engines', 'engine_count', 'appeared_in_sweeps', 'sweep_label']
     }
     let res
+    let freshnessFiltered = false
     if (maxAgeDays > 0) {
-      const cutoff = new Date(Date.now() - maxAgeDays * 86400000).toISOString()
+      const cutoffMs = Date.now() - maxAgeDays * 86400000
       try {
-        res = await idx.search(query, { ...base, filter: `crawled_at >= "${cutoff}"` })
-      } catch {
-        // crawled_at not filterable yet (schema migration pending) — degrade unfiltered.
+        res = await idx.search(query, { ...base, filter: `crawled_at_ms >= ${cutoffMs}` })
+        freshnessFiltered = true
+      } catch (e) {
+        // Degrade unfiltered, but say so ONCE. The previous bare `catch` hid a filter that
+        // threw on every single call for the life of the feature; a silent fallback turns a
+        // broken freshness gate into an invisible one, and the next regression would be just
+        // as invisible. Warned once per process, not per call, to stay out of hot paths.
+        if (!MeilisearchCorpus._warnedFreshness) {
+          MeilisearchCorpus._warnedFreshness = true
+          console.warn(`[corpus] freshness filter unavailable, serving UNFILTERED results: ${e.message}. ` +
+            'Run scripts/backfill-crawled-at-ms.mjs if crawled_at_ms is missing.')
+        }
         res = await idx.search(query, base)
       }
     } else {
@@ -154,7 +174,15 @@ export class MeilisearchCorpus extends CorpusBackend {
       count: hits.length,
       avgScore,
       max_trust: Number(maxTrust.toFixed(2)),
-      hits: hits.map(h => ({
+      // Whether the freshness gate this lookup promises was actually applied. Callers and the
+      // threshold sweep both need to know; it used to be unknowable from the outside.
+      freshness_filtered: freshnessFiltered,
+      // Per-hit score, not just the mean. `sufficient` gates on the AVERAGE, so a set scoring
+      // 0.9 / 0.5 / 0.3 passes a 0.55 floor on the strength of one hit. Exposing the spread is
+      // what lets the threshold sweep compare mean, per-hit floor and rankingScoreThreshold
+      // instead of taking the current rule on faith.
+      scores,
+      hits: hits.map((h, i) => ({
         url: h.url,
         title: h.title,
         description: h.text?.slice(0, 300) || null,
@@ -163,6 +191,7 @@ export class MeilisearchCorpus extends CorpusBackend {
         page_age: h.crawled_at || null,
         language: null,
         engines: h.engines || [],
+        ranking_score: scores[i],
         source: 'corpus'
       }))
     }

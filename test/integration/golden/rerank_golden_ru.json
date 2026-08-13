@@ -1,0 +1,420 @@
+{
+  "_comment": "Auto-derived from bench/ru/questions.jsonl by scripts/build_rerank_golden.mjs. grade 3 = cited in the reference answer; 2 = returned by both /web/search and /llm/context; 1 = returned by /llm/context only; unlisted = 0. Only URLs actually present in the corpus are kept — grading a document the index lacks measures ingestion, not ranking.",
+  "generated": "2026-08-04T12:29:14.666Z",
+  "min_in_corpus": 3,
+  "queries": [
+    {
+      "query": "самозанятый превысил лимит 2,4 млн рублей что делать переход УСН",
+      "relevance": {
+        "https://allo.tochka.com/question/q/cto-delat-esli-limit-prevysil-samozaniatyi-fizlico": 2,
+        "https://qugo.ru/blog/dohod-samozanyatogo-prevysil-limit-chto-delat": 2,
+        "https://xn--80aapgyievp4gwb.xn--p1ai/blog/samozanyatiy-prevysil-dopustimiy-limit-po-dokhodu-za-god-kak-byt-dalshe": 3,
+        "https://xn--80aapgyievp4gwb.xn--p1ai/blog/npd-previsil-limit": 2,
+        "https://seller.ozon.ru/media/instructions/chto-delat-esli-prevyshen-limit-po-samozanyatosti": 2,
+        "https://b2b.polis.online/blog/obshchee/chto-delat-esli-samozanyatiy-prevysil-limit-dokhoda-2-4-mln-podrobnaya-instruktsiya-dlya-strakhovykh-agentov": 2,
+        "https://skillstaff.ru/blog/kak-perejti-s-samozanyatosti-na-ip": 2,
+        "https://e-kontur.ru/enquiry/1723/limit-dlya-samozanyatogo": 3,
+        "https://nalog-nalog.ru/samozanyatye/vyruchka-samozanyatogo-prevysila-2-400-000-rub-chto-delat": 2
+      },
+      "_bench_id": "npd_limit_2400000"
+    },
+    {
+      "query": "422-ФЗ статья 4 статья 6 ограничения виды деятельности налог на профессиональный доход что нельзя|focused",
+      "relevance": {
+        "https://kontur.ru/elba/spravka/81251-ogranicheniya_i_zaprety_dlya_samozanyatyh": 2,
+        "https://sberbusiness.live/publications/vidy-deiatelnosti-dlia-samozaniatykh-v-2021-godu": 3,
+        "https://msb-orel.ru/wp-content/themes/msbo/assets/nalogovyi-rezhim-na-professionalnyi-dohod/iscliucheniia-422fz.html": 2,
+        "https://astral.ru/aj/elem/novye-pravila-dlya-samozanyatykh-s-1-yanvarya-2025-goda-chto-izmenitsya-i-kakie-zakony-vstupyat-v-si": 2,
+        "https://jump.finance/articles/zakon-o-samozanyatykh-fz-422-glavnye-izmeneniya-i-novye-pravila-2025-goda": 2,
+        "https://normativ.kontur.ru/document?moduleId=1&documentId=503200": 2,
+        "https://korenovsk.ru/v-sootvetstvii-s-federalnym-zakonom-ot-27-11-2018-422-fz-o-provedenii-jeksperimenta-po-ustanovleniju-specialnogo-nalogovogo-rezhima-nalog-na-professionalnyj-dohod-realizuetsja-jeksperiment-po-ustanovl": 2,
+        "https://xn--80aapgyievp4gwb.xn--p1ai/blog/zakon-o-samozanyatyh-grazhdanah": 2,
+        "https://get-sign.ru/blog/law/tpost/gaxyrxx411-samozanyatie-i-fz-422-polnii-obzor": 2,
+        "https://incrussia.ru/learn/akie-vidy-deyatelnosti-dya-samozanyatogo": 2,
+        "https://spasskd.ru/index.php/organizatsii-goroda/nalogovaya-inspektsiya/26103-ob-ogranicheniyakh-sushchestvuyushchikh-dlya-primeneniya-spetsialnogo-nalogovogo-rezhima-nalog-na-professionalnyj-dokhod": 2,
+        "https://znanierussia.ru/articles/%D0%A1%D0%B0%D0%BC%D0%BE%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D1%8B%D0%B9_(%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F)": 1
+      },
+      "_bench_id": "npd_422fz_bans"
+    },
+    {
+      "query": "НПД посредническая деятельность агентский договор запрет самозанятый перепродажа",
+      "relevance": {
+        "https://xn--80aapgyievp4gwb.xn--p1ai/blog/agentskiy-dogovor-s-samozanyatym": 3,
+        "https://xn--80aapgyievp4gwb.xn--p1ai/blog/kak-samozanyatomu-platit-agentu": 3,
+        "https://e-kontur.ru/enquiry/1688/npd-tolko-v-svoih-interesah": 2,
+        "https://kontur.ru/elba/spravka/81251-ogranicheniya_i_zaprety_dlya_samozanyatyh": 2,
+        "https://kabinet-ur-help.orgs.biz/news/381": 2,
+        "https://vc.ru/legal/1552978-mozhet-li-samozanyatyi-zaklyuchat-agentskie-dogovory": 2,
+        "https://ppt.ru/art/samozanyatie/mozhet-li-samozanyatyy-zaklyuchat-agentskiy-dogovor": 2,
+        "https://astral.ru/aj/elem/ogranicheniya-i-zaprety-dlya-samozanyatykh-polnyy-spisok": 2,
+        "https://konsol.pro/blog/agentskii-dogovor-s-samozanyatym": 2,
+        "https://pravo.rg.ru/rubrics/question/75409": 2,
+        "https://qugo.ru/blog/mozhet-li-samozanyatyj-rabotat-po-agentskomu-dogovoru": 2
+      },
+      "_bench_id": "npd_agent_contract"
+    },
+    {
+      "query": "договор поручения обработки персональных данных обязательные условия 152-ФЗ",
+      "relevance": {
+        "https://gba.business.ru/dogovor_na_poruchenie_obrabotki_personalnyh_dannyh": 2,
+        "https://astral.ru/aj/elem/osobennosti-dogovora-porucheniya-i-dogovora-peredachi-dannykh-tretim-litsam": 2,
+        "https://72.rkn.gov.ru/p21978/p25026/p25030": 3,
+        "https://service.securitm.ru/docs/152-fz/statia-6-punkt-3": 2,
+        "https://sps-ib.ru/analitika:poruchenie_obrabotki_personalnyx_dannyx": 2,
+        "https://mip-expert.ru/articles/personalnye-dannye/poruchenie-obrabotki-personalnykh-dannykh-drugomu-litsu-poshagovyy-algoritm-vybora-provaydera": 2,
+        "https://habr.com/ru/articles/972070": 2,
+        "https://ngo-law.ru/0424/article_17042024": 3,
+        "https://b-152.ru/komu-mozhno-poruchit-obrabotku-personalnyh-dannyh": 2,
+        "https://normativ.kontur.ru/document?moduleId=1&documentId=501173": 2,
+        "https://legalacts.ru/doc/152_FZ-o-personalnyh-dannyh/glava-2/statja-6": 3
+      },
+      "_bench_id": "152fz_processor_contract"
+    },
+    {
+      "query": "152-ФЗ трансграничная передача персональных данных уведомление РКН 2026",
+      "relevance": {
+        "https://data-sec.ru/personal-data/cross-border-countries": 3,
+        "https://pobedaprava.ru/pd/transgranichnaya-peredacha-dannikh": 3,
+        "https://pod-ft.ru/baza-znaniy/kak-pravilno-osushchestvlyat-transgranichnuyu-peredachu-personalnykh-dannykh": 2,
+        "https://b-152.ru/transgranichnaya-peredacha-personalnyh-dannyh": 2,
+        "https://roskom24.ru/trans_peredacha": 2,
+        "https://pdaudit.ru/blog/transgranichnaya-peredacha-pdn": 2,
+        "https://e-office24.ru/news/transgranichnaya-peredacha-personalnykh-dannykh": 2,
+        "https://ppt.ru/art/personal-data/transgranichnaya-peredacha-personalnykh-dannykh": 2,
+        "https://ic-tech.ru/blog/knowledge-base/transgranichnaya-peredacha-personalnyh-dannyh-kak-soblyudat-152-fz": 2,
+        "https://sberbusiness.live/publications/kak-uvedomit-o-transgranichnoi-peredache-personalnykh-dannykh-v-2023-godu": 2,
+        "https://roskom.online/articles/kak-uvedomit-o-transgranichnoy-peredache-personalnyh-dannyh": 2,
+        "https://sberbusiness.live/publications/persdannie-urok-2-5-uvedomlenie-o-transgranichnoi-peredache-dannih": 2
+      },
+      "_bench_id": "152fz_crossborder_notice"
+    },
+    {
+      "query": "федеральный закон НДС эквайринг 2026 изменения статья 149 НК РФ текст нормы комиссия за переводы денежных средств СБП",
+      "relevance": {
+        "https://1csputnikit-kmv.ru/stat_i/nds_bank_uslugi_1c_cbp": 3,
+        "https://cloudpayments.ru/blog/nds": 3,
+        "https://ppt.ru/obzory/minfin/pozitsiya-minfina-rf-o-nds-na-ekvayring-protsessing-i-perevody-po-kartam-s-2026-goda": 2,
+        "https://habr.com/ru/articles/1015346": 2,
+        "https://cbr.ru/rbr/dir_decisions/rsd_2026-03-27_45_01": 2,
+        "https://delovoymir.biz/nds-na-komissiyu-ekvayringa-chto-izmenilos-i-kak-biznesu-sohranit-marzhu.html": 2
+      },
+      "_bench_id": "vat_acquiring_2026"
+    },
+    {
+      "query": "легально ли юридическому лицу обменивать рубли на USDC 2026",
+      "relevance": {
+        "https://vc.ru/crypto/2899130-ofitsialnyy-kriptoobmennik-v-rossii": 2,
+        "https://vc.ru/crypto/2866289-obmen-usdt-v-rossii-luchshie-obmenniki": 2,
+        "https://vc.ru/crypto/2910006-izmeneniya-dlya-derzhateley-usdt-v-rossii": 2,
+        "https://1tab.co/ru/blog/how-russian-companies-can-buy-cryptocurrency": 2,
+        "https://vc.ru/crypto/2811514-legalnyj-obmen-kriptovaljuty-v-rossii": 2,
+        "https://profinvestment.com/withdraw-usdt-rub-russia": 2
+      },
+      "_bench_id": "usdt_legal_status_ru"
+    },
+    {
+      "query": "как российский разработчик принимает оплату за AI приложение токены",
+      "relevance": {
+        "https://vc.ru/services/2997419-oplata-deepseek-iz-rossii": 2,
+        "https://vc.ru/services/2958426-kak-oplatit-deepseek-api-iz-rossii": 2,
+        "https://vc.ru/services/2966723-kak-oplatit-openai-api-iz-rossii": 2,
+        "https://dtf.ru/howto/5078240-oplata-deepseek-api-dlya-razrabotchikov-iz-rossii": 3,
+        "https://vc.ru/services/2960961-qwen-kupit-podpiska-qwen-code-api-klyuchi-iz-rossii": 2,
+        "https://vc.ru/services/2745472-kak-oplatit-openai-iz-rossii-v-2026-godu": 2,
+        "https://pyyplbot.com/kak-oplatit/chatgpt": 3,
+        "https://pikabu.ru/story/qwen_podpiska_v_2026_godu_kak_kupit_i_oplatit_iz_rossii_13908396": 2,
+        "https://dtf.ru/howto/5098562-kak-kupit-qwen-podpiska-qwen-code-api-key-i-tokeny-iz-rossii": 2,
+        "https://vc.ru/services/2943944-kak-oplatit-deepseek-api-iz-rossii": 2,
+        "https://habr.com/ru/articles/1037638": 2,
+        "https://vc.ru/services/2983098-oplata-deepseek-api-iz-rossii": 3
+      },
+      "_bench_id": "ru_dev_pays_foreign_ai"
+    },
+    {
+      "query": "422-ФЗ статья 6 часть 2 не признаются объектом налогообложения НПД перечень доходов",
+      "relevance": {
+        "https://admoktpos.ru/govinfo/govinfofns/media/2022/11/22/spetsialnyij-nalogovyij-rezhim-nalog-na-professionalnyij-dohod-npd": 2,
+        "https://msb-orel.ru/wp-content/themes/msbo/assets/nalogovyi-rezhim-na-professionalnyi-dohod/iscliucheniia-422fz.html": 2,
+        "https://base.garant.ru/72113648/8b7b3c1c76e91f88d33c08b3736aa67a": 1,
+        "https://rg.ru/documents/2018/11/30/nalog-dok.html": 2,
+        "https://nalogov.net/analytics/articles/1812-nalogovyy-rezhim-samozanyatykh": 2,
+        "https://normativ.kontur.ru/document?moduleId=1&documentId=503200": 2,
+        "https://pravovest-audit.ru/nashi-statii-nalogi-i-buhuchet/nalogooblozhenie-dokhodov-samozanyatykh-rabotayushchikh-s-organizatsiey-za-komissionnoe-voznagrazhde": 2,
+        "https://yarcevo.admin-smolensk.ru/maloe-i-srednee-predprinimatelstvo/nalog-na-professionalnyj-dohod": 2,
+        "https://admkogalym.ru/news/detail/?ELEMENT_ID=24027": 2
+      },
+      "_bench_id": "npd_422fz_st6_object"
+    },
+    {
+      "query": "115-ФЗ блокировка ИП перевод криптообменник кейсы 2025 2026",
+      "relevance": {
+        "https://vc.ru/life/2576967-115-fz-i-p2p-obmen-kriptovaljuty": 2,
+        "https://vc.ru/id1377271/2033834-kak-otvetit-na-zapros-po-115-fz-ot-tinkoff": 2,
+        "https://vasilev-law.ru/blog/faq-po-115-fz-pri-prodazhe-kriptovalyuty-cherez-obmenniki-ili-p2p-kak-otvetit-banku-snyat-blokirovku-scheta-i-izbezhat-povtornyh-zaprosov": 3,
+        "https://blog.mexc.com/ru/115-fz-blokirovka-2025": 2,
+        "https://stanishevski.ru/blog/161": 2,
+        "https://altcoinlog.com/zablokirovali-kartu-po-115-fz": 2,
+        "https://spark.ru/startup/pgon/blog/327598/p2p-kripta-i-161-fz-kak-biznes-teryaet-dengi-na-blokirovkah-v-2026": 3,
+        "https://companies.rbc.ru/news/WJPEGLzKMc/kriptovalyuta-i-115-fz-pochemu-p2p-ne-narushaet-zakonyi-rossijskoj-federatsii": 3
+      },
+      "_bench_id": "fz115_p2p_block"
+    },
+    {
+      "query": "валютный контроль ИП поступления из-за рубежа лимиты 2026",
+      "relevance": {
+        "https://finuslugi.ru/navigator/kak-ehto-rabotaet/stat_operacii-s-valyutoy-2026": 2,
+        "https://vc.ru/money/2756926-denezhnye-perevody-v-rossiyu-iz-za-granitsy": 2,
+        "https://help.solarstaff.com/ru/articles/9239875-%D0%B2%D0%B0%D0%BB%D1%8E%D1%82%D0%BD%D1%8B%D0%B9-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-%D0%B8%D0%BF-%D1%80%D1%84": 2,
+        "https://habr.com/ru/articles/956854": 2,
+        "https://nalog-nalog.ru/valyutnye_operacii/valyutnyj-kontrol-v-2021-godu-dlya-yuridicheskih-i-fizicheskih-lic": 2,
+        "https://finance.mail.ru/article/valyutnye-ogranicheniya-63956286": 2,
+        "https://mosdigitals.ru/blog/valyutnyj-kontrol-pri-ved-v-2026-godu-trebovaniya-dokumenty-i-shtrafy": 2,
+        "https://sberbusiness.live/publications/valyutnii-kontrol-kak-provodit-mezhdunarodnie-rascheti-ne-narushaya-zakonodatelstva": 2,
+        "https://mellow.io/ru/mellow-media/chto-takoe-valyutnyy-kontrol-i-zachem-on-nuzhen": 2
+      },
+      "_bench_id": "currency_control_2026"
+    },
+    {
+      "query": "SkyCapital отзывы реальные надёжность развод мошенники скам или нет 2026",
+      "relevance": {
+        "https://bitok.blog/skycapital-group-ru-otzyvy": 3,
+        "https://todzhinsky.ru/invest/sky-capital-trader": 2,
+        "https://torforex.com/rejting-trejderov/skycapital-group-ru-otzyvy": 3,
+        "https://cryptorussia.ru/skycapital-group-moshennichestvo": 2,
+        "https://cryptorussia.ru/skycapital-group-ru-moshennichestvo": 3,
+        "https://torforex.com/rejting-trejderov/skycapital-group-otzyvy": 2,
+        "https://cryptorussia.ru/skyfort-capital-otzyvy": 2,
+        "https://coinmania.com/rejting-luchshikh-trejderov/skycapital-group-razoblachenie": 2,
+        "https://pikabu.ru/story/skycapital__pervyiy_legalnyiy_kriptoobmennik_yurist_razoblachaet_opasnyiy_obman_12547822": 2,
+        "https://brokerchooser.com/safety/sky-capital-broker-safe-or-scam": 2,
+        "https://otzovik.com/reviews/investicionno-konsaltingovaya_kompaniya_sky_capital_consulting_kirgizstan_bishkek": 2,
+        "https://bitok.blog/skycapital-group-otzyvy": 1
+      },
+      "_bench_id": "skycapital_reputation"
+    },
+    {
+      "query": "Казахстан Узбекистан Армения оплата зарубежных сервисов разработчики 2026",
+      "relevance": {
+        "https://companies.rbc.ru/news/lX20PJwp1m/kak-oplatit-zarubezhnyie-servisyi-iz-rossii-v-2026-godu-bez-ogranichenij": 3,
+        "https://vc.ru/crypto/2871016-kak-oplachivat-zarubezhnye-uslugi-i-servisy-bez-blokirovok": 2,
+        "https://vc.ru/services/2868178-oplata-zarubezhnykh-servisov-iz-rossii-kak-oformit-virtualnuyu-kartu": 2,
+        "https://dolphinpay.ru/blog/posts/oplata-ai-servisov-iz-rossii-2026": 2,
+        "https://habr.com/ru/articles/1037638": 3,
+        "https://companies.rbc.ru/news/qU6dmTf2hy/kak-oplatit-zarubezhnyie-podpiski-iz-rossii-v-2026-godu": 2,
+        "https://vc.ru/services/2795350-oplata-zarubezhnyh-servisov-iz-rossii-v-2026-godu": 2,
+        "https://companies.rbc.ru/news/5MDqjsMGfL/oplata-zarubezhnyih-servisov-iz-rossii-6-sposobov-oplatyi-v-2026-godu": 2,
+        "https://vc.ru/growth/2964683-mezhdunarodnye-platezhi-dlya-biznesa-iz-rossii": 2
+      },
+      "_bench_id": "cis_payments_2026"
+    },
+    {
+      "query": "НПД самозанятый иностранные клиенты валютная выручка 2026 законность",
+      "relevance": {
+        "https://bitoffice.by/blog/samozanyatost-npd-belarus-2026": 2,
+        "https://astral.ru/aj/elem/samozanyatost-dlya-inostrantsev-kto-vprave-primenyat-npd-i-kakie-est-ogranicheniya": 2,
+        "https://robokassa.com/blog/articles/kak-prinimat-oplatu-s-inostrannykh-kart": 2,
+        "https://emchd.ru/blog/stati/samozanyatye-po-zakonu-nalogi-riski-registracziya-v-2026": 3,
+        "https://xn--80aapgyievp4gwb.xn--p1ai/blog/ya-rabotayu-s-inostrannym-zakazchikom-kak-soblyusti-novye-pravila": 2,
+        "https://vitvet.com/articles/nalogi/po_nalogam/npd_2026": 3,
+        "https://e-kontur.ru/enquiry/2657/otmenyat-li-npd": 3,
+        "https://svoefermerstvo.ru/svoemedia/articles/samozanyatost-bez-syurprizov-kak-v-2026-godu-zakonno-rabotat-na-npd": 2,
+        "https://rahmat.ru/blog/yuridicheskaya_informaciya/samozanyatyy_inostrannyy_grazhdanin_v_rossii_v_2026_godu_usloviya_registratsiya_nalogi": 2,
+        "https://kontur.ru/articles/4818": 2,
+        "https://konsol.pro/blog/chto-takoe-npd-stavki-limity-kak-platit-nalog": 2,
+        "https://konsol.pro/blog/prava-samozanyatyh": 2,
+        "https://payanyway.ru/info/w/ru/public/blog/uslovia-dlya-samozanyatogo-2026.htm": 2
+      },
+      "_bench_id": "npd_foreign_clients"
+    },
+    {
+      "query": "самозанятый лицензия на собственное программное обеспечение доход НПД можно ли",
+      "relevance": {
+        "https://xn--80aapgyievp4gwb.xn--p1ai/blog/dogovor-s-samozanyatym-programmistom": 3,
+        "https://pravoved.ru/question/2961588": 3,
+        "https://vseadvokaty.ru/questions/intellektualnaya-sobstvennost-i-informatsionnoe-pravo/28241": 2,
+        "https://xn--90aivcdt6dxbc.xn--p1ai/articles/useful/mozhet-li-samozanyatyy-poluchit-litsenziyu-dlya-raboty": 2,
+        "https://jump.finance/articles/samozanyatyy-it-spetsialist-programmist": 2,
+        "https://dmitry-robionek.ru/samozanjatoj-grazhdanin/prodazha-programm.html": 2,
+        "https://torg.1c.ru/wiki/samozanyatye-litsa-nalog-na-professionalnyy-dokhod": 2,
+        "https://konsol.pro/blog/mozhet-li-programmist-byt-samozanyatym": 2,
+        "https://nalog-nalog.ru/nds/lgoty_po_nds/zakonna_li_prodazha_programmnogo_obespecheniya_bez_nds-nn": 2,
+        "https://fpa.ru/info/chto-takoe-npd-polnoe-rukovodstvo-po-sisteme-nalogooblozhenija-dlja-samozanjatyh-i-ip": 2,
+        "https://t-j.ru/license-npd": 2,
+        "https://tochka.com/knowledge/registraciya-biznesa/chem-otlichaetsya-ip-na-npd-ot-samozanyatogo": 1
+      },
+      "_bench_id": "npd_software_license"
+    },
+    {
+      "query": "A7A5 что это стейблкоин биржа обменник рубль санкции Garantex отзывы 2026",
+      "relevance": {
+        "https://web3ru.ai/cex-block-russia": 3,
+        "https://investfuture.ru/articles/chto-takoe-a7-a5-kripto-rubl-kotoriy-proslavila-financial-times": 2,
+        "https://coindaily.ru/articles/htx-pod-sanktsiyami-velikobritanii-2026": 3,
+        "https://te-st.org/2026/06/09/sanctions20": 3,
+        "https://ru.themoscowtimes.com/2026/04/16/kriptobirzha-gde-torguetsya-rossiiskii-steiblkoin-dlya-obhoda-sanktsii-obyavila-ob-ostanovke-raboti-iz-za-vzloma-i-krazhi-1-mlrd-rublei-a192936": 2,
+        "https://ru.beincrypto.com/certik-stejblkoin-a7a5-obhodit-sankczii": 2,
+        "https://24.kg/ekonomika/334234_chto_skryivaet_steyblkoin_A7A5_milliardyi_sanktsii_ianonimnyie_shemyi": 2,
+        "https://ru.beincrypto.com/czb-rf-doklad-o-stejblkoinov": 2,
+        "https://crypto-insite.com/a7a5": 1,
+        "https://coinspot.io/news/law/russia_sng/a7a5-ruble-stablecoin-linked-to-grinex": 2,
+        "https://finance.mail.ru/article/kak-novyie-sanktsii-povliyali-na-kriptu-v-rossii-chto-uchityivat-polzovatelyu-69210989": 2
+      },
+      "_bench_id": "a7a5_stablecoin"
+    },
+    {
+      "query": "вернётся ли официальный доступ openai anthropic в Россию 2026 2027 разблокировка",
+      "relevance": {
+        "https://gist.github.com/evilork/01e4a7fdd2abab9dd24ed11f02e8e6ca": 3,
+        "https://promptra.ru/ru/blog/openai-api-rossiya-2026": 3,
+        "https://ainsider.ru/blog/tekhnologii/openrouter-zablokiroval-dostup-k-modelyam-google-i-antropic-dlya-rf": 2,
+        "https://vc.ru/id744127/2996105-blokirovka-akkauntov-openai-v-rossii": 2,
+        "https://tass.ru/ekonomika/27745977": 2,
+        "https://hi-tech.mail.ru/articles/144775-kogda-razblokiruyut-roblox-v-rossii": 2,
+        "https://dtf.ru/flood/4773334-kak-poluchit-dostup-k-openai-v-rossii": 2,
+        "https://vc.ru/services/2990311-openai-v-rossii-vozmozhnosti-chatgpt-gpt-5-5-i-codex": 2,
+        "https://aitunnel.ru/guide/openai-zablokirovan-v-rossii": 2
+      },
+      "_bench_id": "openai_access_2026"
+    },
+    {
+      "query": "152-ФЗ статья 9 согласие на обработку персональных данных несовершеннолетнего consultant.ru|critical",
+      "relevance": {
+        "https://pravovest.ru/hotnews/faq/192940": 2,
+        "https://normativ.kontur.ru/document?moduleId=1&documentId=501173": 2,
+        "https://base.garant.ru/12148567/493aff9450b0b89b29b367693300b74a": 2,
+        "https://legalacts.ru/doc/152_FZ-o-personalnyh-dannyh/glava-2/statja-9": 3
+      },
+      "_bench_id": "152fz_consent_requirements"
+    },
+    {
+      "query": "152-ФЗ статья 22 исключения уведомление Роскомнадзор оператор не обязан consultant.ru|critical",
+      "relevance": {
+        "https://kontursm.ru/kontur-extern/tpost/di851bb1l1-kak-i-zachem-podat-uvedomlenie-ob-obrabo": 2,
+        "https://pravovest-audit.ru/nashi-statii-nalogi-i-buhuchet/otvetstvennost-za-nepodachu-uvedomleniya-v-roskomnadzor-ob-obrabotke-personalnykh": 2,
+        "https://ic-tech.ru/blog/faq/questions-rkn/chto-budet-esli-ne-podat-uvedomlenie-v-roskomnadzor-v-2025-godu": 2,
+        "https://sapelkin.ru/blog/kak-podat-uvedomlenie-v-roskomnadzor-ob-obrabotke-personalnykh-dannykh-poshagovaya-instruktsiya-na-2": 2,
+        "https://59.rkn.gov.ru/directions/p18637": 2,
+        "https://roskom.online/articles/kak-proverit-sebya-v-reestre-operatorov-personalnyh-dannyh": 2,
+        "https://kadis.org/useful-materials/liniya-konsultatsij/nazvanie-uvedomlenie-roskomnadzora-o-personalnykh-dannykh-chto-izmenitsya-s-30-maya-2025-goda": 2,
+        "https://59.rkn.gov.ru/directions/control/p18626/p18627/p18631": 2,
+        "https://habr.com/ru/articles/914414": 2,
+        "https://b-152.ru/kto-obyazan-soblyudat-152-fz": 2,
+        "https://tochka.com/knowledge/buhgalteriya/zakon-o-personalnyh-dannyh-152-fz-komu-neobhodimo-podavat-uvedomlenie-v-rkn": 2
+      },
+      "_bench_id": "152fz_notification_exemptions"
+    },
+    {
+      "query": "политика конфиденциальности обработки персональных данных требования состав 152-ФЗ статья 18.1|critical",
+      "relevance": {
+        "https://b-152.ru/shtraf-za-ispolzovanie-personalnyh-dannyh-bez-soglasiya": 2,
+        "https://normativ.kontur.ru/document?moduleId=1&documentId=501173": 2,
+        "https://xn--80abwtcbllj6b9f.xn--p1ai/confidence": 2,
+        "https://ic-tech.ru/blog/knowledge-base/pdn-152fz-2025": 2,
+        "https://agrovolga.org/lp/politika_konfidentcialnosti": 2,
+        "https://service.securitm.ru/docs/152-fz/statya-18-1-punkt-1": 2,
+        "https://regulhub.kaspersky.ru/laws/fz-152": 2,
+        "https://edu.garant.ru/teacher/ppk/personaldata": 2,
+        "https://policy.privacy-check.ru/article-privacy-policy": 2,
+        "https://ic-tech.ru/blog/faq/questions-rkn/kakie-mery-po-st-18-1-i-19-obyazatelny-dlya-mikrobiznesa": 2,
+        "https://tilda.education/articles-personal-data-law": 2,
+        "https://cisoclub.ru/pochemu-vazhno-sobljudat-152-fz-dazhe-esli-u-vas-net-dpo": 2
+      },
+      "_bench_id": "152fz_operator_measures"
+    },
+    {
+      "query": "242-ФЗ локализация персональных данных граждан РФ на территории России требования базы данных|critical",
+      "relevance": {
+        "https://rppa.pro/npa/minkomsvyaz_25.08.2015": 1,
+        "https://wcr-consulting.com/blog/2026/03/13/lokalizaciya-baz-dannyh-personalnyh-dannyh": 2,
+        "https://zarlaw.ru/lifehacks/articles/lokalizatsiya-personalnykh-dannykh": 2,
+        "https://habr.com/ru/companies/cloud4y/articles/338882": 2,
+        "https://rkn.gov.ru/news/rsoc/news40624.htm": 2,
+        "https://sps-ib.ru/analitika:242-fz": 2,
+        "https://rppa.pro/_media/analitika/242_fz.pdf": 2,
+        "https://m.seonews.ru/analytics/novye-trebovaniya-k-lokalizatsii-baz-dannykh-soderzhashchikh-personalnye-dannye-kak-izbezhat-riskov-": 2,
+        "https://docspace.ru/docspace-news/law-on-personal-data": 2,
+        "https://comply.ru/tpost/c43ezsout1-lokalizatsiya-i-transgranichnaya-peredac": 2,
+        "https://ic-tech.ru/blog/faq/questions-152fz/kakie-personalnye-dannye-obyazatelno-lokalizovat-v-rossii": 2,
+        "https://rppa.pro/analitika/242-fz": 1,
+        "https://b1.ru/insights/law-messenger/localization-of-personal-data-of-russian-citizens-6-march-2025": 2
+      },
+      "_bench_id": "pdn_localization_18_5"
+    },
+    {
+      "query": "273-ФЗ статья 91 лицензирование образовательной деятельности текст consultant.ru|critical",
+      "relevance": {
+        "https://xn--273--84d1f.xn--p1ai/kommentarii/statya-91": 2,
+        "https://rulaws.ru/laws/Federalnyy-zakon-ot-29.12.2012-N-273-FZ/Statya-91": 2,
+        "https://obrnadzor.tatarstan.ru/litsenzirovanie.htm": 2,
+        "https://legalacts.ru/doc/273_FZ-ob-obrazovanii/glava-12/statja-91": 3,
+        "https://fzrf.su/zakon/ob-obrazovanii-273-fz/st-91.php": 2,
+        "https://base.garant.ru/70291362/547649ff63bad80904f288cab03c5176": 2,
+        "https://9111.ru/laws/273fz/glava_12/statia_91": 2
+      },
+      "_bench_id": "edu_license_273fz"
+    },
+    {
+      "query": "ИП самозанятый НПД обязан ли применять контрольно-кассовую технику 54-ФЗ пункт 2.2 статьи 2|critical",
+      "relevance": {
+        "https://robokassa.com/blog/articles/kassa-dlya-samozanyatykh-i-ip-na-npd": 2,
+        "https://xn--80aapgyievp4gwb.xn--p1ai/blog/onlayn-kassa-dlya-samozanyatykh": 2,
+        "https://ofd.ru/blog/obzornews/kogda-samozanyatomu-nuzhna-kassa": 2,
+        "https://ofd-ya.ru/about/news/kkt_samozanyaty": 2,
+        "https://sberbusiness.live/publications/54-fz-o-primenenii-kontrolno-kassovoj-tekhniki": 2,
+        "https://kontur.ru/market/spravka/31012-kassa_dlya_samozanyatyh": 2,
+        "https://astral.ru/aj/elem/kak-ip-rabotat-s-onlayn-kassoy": 2,
+        "https://robokassa.com/blog/articles/osnovnye-trebovanija-54-fz": 2,
+        "https://kontur.ru/articles/5219": 2
+      },
+      "_bench_id": "kkt_npd_exemption"
+    },
+    {
+      "query": "статья 18.1 ФЗ-38 о рекламе маркировка интернет-реклама токен ОРД кто обязан|focused",
+      "relevance": {
+        "https://its.1c.ru/db/content/bizlegsup/src/4050200_%D1%82_%D0%BC%D0%B0%D1%80%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B2_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%D0%B5.htm": 2,
+        "https://sberbusiness.live/publications/markirovka-reklamy-v-internete": 2,
+        "https://dhprime.ru/blog/articles/bazovyy-gayd-po-ispolneniyu-zakona-o-markirovke-reklamy-i-nastroyki-otchetnosti-v-ord": 2,
+        "https://kurs.alfabank.ru/articles/ord-erir-erid-chto-vsyo-ehto-znachit-i-kak-markirovat-reklamu": 2,
+        "https://iusov.ru/markirovka-reklamy-v-internete-erir-erid-ord-i-drugie-rugatelnye-slova-kak-izbezhat-shtrafa-ot-roskomnadzora": 2,
+        "https://ord-a.ru/help/wiki/korotko-o-novom-zakone": 2,
+        "https://rkn.gov.ru/treatments/chasto-zadavaemye-voprosy/p1575": 2,
+        "https://vc.ru/id5657117/2772540-markirovka-internet-reklamy-2026": 2,
+        "https://dashamail.ru/blog/adv_labeling": 2,
+        "https://help152.ru/articles/markirovka-reklamy-v-internete-zakon-i-praktika": 2
+      },
+      "_bench_id": "ad_traceability_38fz"
+    },
+    {
+      "query": "152-ФЗ статья 6 часть 1 пункт 1 правовые основания обработки персональных данных текст|critical",
+      "relevance": {
+        "https://service.securitm.ru/docs/152-fz/statia-6-punkt-1": 2,
+        "https://42.rkn.gov.ru/p32466/p32470": 2,
+        "https://72.rkn.gov.ru/p21978/p25026/p25030": 2,
+        "https://normativ.kontur.ru/document?moduleId=1&documentId=501173": 2,
+        "https://legalacts.ru/doc/152_FZ-o-personalnyh-dannyh/glava-2/statja-6": 2,
+        "https://dogovor-urist.ru/%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD%D1%8B/%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD_%D0%BE_%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/%D1%81%D1%82_6": 2,
+        "https://dumahmao.ru/decisions/detail.php?ID=22207": 2,
+        "https://38.rkn.gov.ru/personal-data/p20744": 2,
+        "https://base.garant.ru/12148567/8b7b3c1c76e91f88d33c08b3736aa67a": 2,
+        "https://fzrf.su/zakon/o-personalnyh-dannyh-152-fz/st-6.php": 2,
+        "https://priemnaya.duma.gov.ru/ru/info/inf/fz/2": 2,
+        "https://docs.cntd.ru/document/901990046": 2,
+        "https://letters.kremlin.ru/info-service/acts/9": 2
+      },
+      "_bench_id": "152fz_legal_basis"
+    },
+    {
+      "query": "перепродажа api нейросетей Россия маржа наценка конкуренция демпинг race to zero 2026",
+      "relevance": {
+        "https://habr.com/ru/articles/1037638": 3,
+        "https://vc.ru/id5981553/2944248-kak-zarabotat-na-neyrosetyakh": 2,
+        "https://vc.ru/promptra/2959144-agregatory-llm-api-v-rossii": 2,
+        "https://polza.ai/blog/rossiyskiy-api-dlya-neyrosetey-bez-vpn-polnyy-gayd-2026": 2,
+        "https://crazyrouter.com/en/blog/ai-api-pricing-guide-2026": 2,
+        "https://profinvestment.com/ai-aggregators": 3,
+        "https://dtf.ru/reviews/4841184-luchshie-rossijskie-nejroseti-2026-goda-top-14-servisov": 3
+      },
+      "_bench_id": "ai_reseller_margin"
+    }
+  ]
+}

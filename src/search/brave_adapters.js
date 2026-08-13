@@ -33,14 +33,33 @@ export function createBraveAdapters (deps) {
       minTrust: Number(process.env.QSEARCH_ULTRA_BROAD_MIN_TRUST) || 0,
       limit: params.count || 5
     })
-    if (!r.sufficient) return { sufficient: false, count: r.count, avgScore: r.avgScore }
+    // Pass the diagnostics through on the fall-through path too. corpusLookup already computes
+    // max_trust, the per-hit scores and whether the freshness filter applied; dropping them here
+    // left "why did this query miss the corpus?" answerable only by querying Meilisearch around
+    // this module. `sufficient` gates on the MEAN score, so the spread is the interesting part.
+    if (!r.sufficient) {
+      return {
+        sufficient: false,
+        count: r.count,
+        avgScore: r.avgScore,
+        max_trust: r.max_trust,
+        scores: r.scores,
+        freshness_filtered: r.freshness_filtered
+      }
+    }
     return {
       sufficient: true,
       response: {
         data: {
           web: { results: r.hits },
           _corpus: true,
-          _ultra_broad: { count: r.count, avg_score: Number(r.avgScore.toFixed(3)) }
+          _ultra_broad: {
+            count: r.count,
+            avg_score: Number(r.avgScore.toFixed(3)),
+            max_trust: r.max_trust,
+            scores: r.scores,
+            freshness_filtered: r.freshness_filtered
+          }
         },
         ms: Date.now() - t0,
         corpus: true

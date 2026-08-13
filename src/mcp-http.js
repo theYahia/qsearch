@@ -9,6 +9,13 @@
 // The qsearch REST server (src/server.js) must already be running on :8080.
 // Start both with: `npm start` (REST) then `npm run start:mcp` (MCP-HTTP).
 
+// First import, same reason as in server.js: ESM evaluates the import graph before this
+// file's statements, so .env.local must be applied from inside an import to reach
+// module-scope process.env reads. This entry point never loaded it at all — MCP_PORT,
+// MCP_HOST, QSEARCH_API_KEY and the auth allowlist were only ever read from the ambient
+// environment.
+import './env.js'
+
 import http from 'node:http'
 import { randomUUID } from 'node:crypto'
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'

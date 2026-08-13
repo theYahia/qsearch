@@ -160,3 +160,79 @@ describe('QueryCache sweep_context hit counter', () => {
     assert.equal(row.hit_count, 0)
   })
 })
+
+// The `timestamp` override exists so historical sweeps can be imported into the ledger.
+// Without it every backfilled run lands on import day and /economy_report's time filters
+// report nonsense — which is how $185 of Python spend stayed invisible.
+describe('QueryCache.recordSprintMetric — timestamp override', () => {
+  const row = c => c.db.prepare('SELECT timestamp, cost_usd, queries FROM sprint_metrics ORDER BY id DESC LIMIT 1').get()
+
+  test('defaults to now when timestamp is omitted', () => {
+    const c = freshCache()
+    const before = Date.now()
+    c.recordSprintMetric({ endpoint: '/sweep', backend: 'brave_web', queries: 10 })
+    const r = row(c)
+    assert.ok(r.timestamp >= before && r.timestamp <= Date.now(), `got ${r.timestamp}`)
+  })
+
+  test('honours an explicit historical timestamp', () => {
+    const c = freshCache()
+    const past = Date.UTC(2026, 3, 17, 9, 22, 44) // matches the oldest real _sweep_log.json
+    c.recordSprintMetric({ endpoint: '/sweep', backend: 'brave_web', queries: 5, timestamp: past })
+    assert.equal(row(c).timestamp, past)
+  })
+
+  test('rejects a nonsense timestamp instead of writing it', () => {
+    const c = freshCache()
+    const before = Date.now()
+    for (const bad of ['not-a-date', NaN, -1, 0, null, undefined]) {
+      c.recordSprintMetric({ endpoint: '/sweep', backend: 'brave_web', queries: 1, timestamp: bad })
+      const r = row(c)
+      assert.ok(r.timestamp >= before, `bad timestamp ${String(bad)} leaked through as ${r.timestamp}`)
+    }
+  })
+
+  test('cost stays server-computed and cache hits are free', () => {
+    const c = freshCache()
+    c.recordSprintMetric({ endpoint: '/sweep', backend: 'brave_web', queries: 10, cacheHits: 4 })
+    // 6 billable × $0.005
+    assert.ok(Math.abs(row(c).cost_usd - 0.03) < 1e-9, `got ${row(c).cost_usd}`)
+  })
+
+  test('unknown backend records the queries but prices them at zero', () => {
+    const c = freshCache()
+    c.recordSprintMetric({ endpoint: '/sweep', backend: 'not_a_backend', queries: 7 })
+    const r = row(c)
+    assert.equal(r.queries, 7)
+    assert.equal(r.cost_usd, 0)
+  })
+
+  // brave_context is priced PER CRITICAL QUERY (web + llm/context together).
+  // brave_context_call is priced PER REQUEST, for callers that count the two separately.
+  // Collapsing them bills a critical query at $0.015 instead of $0.010 — 50% too high,
+  // and invisible unless something asserts the distinction.
+  test('brave_context and brave_context_call are different units', () => {
+    const c = freshCache()
+    c.recordSprintMetric({ endpoint: '/sweep', backend: 'brave_context', queries: 100 })
+    const perQuery = row(c).cost_usd
+    c.recordSprintMetric({ endpoint: '/brave_sweep', backend: 'brave_context_call', queries: 100 })
+    const perCall = row(c).cost_usd
+    assert.ok(Math.abs(perQuery - 1.0) < 1e-9, `critical-query rate wrong: ${perQuery}`)
+    assert.ok(Math.abs(perCall - 0.5) < 1e-9, `per-request rate wrong: ${perCall}`)
+    assert.ok(perQuery === perCall * 2, 'a critical query must cost exactly two requests')
+  })
+
+  test('a critical query costs the same whichever path reports it', () => {
+    const c = freshCache()
+    // Node reports one row per critical query.
+    c.recordSprintMetric({ endpoint: '/sweep', backend: 'brave_context', queries: 10 })
+    const viaNode = row(c).cost_usd
+    // brave_sweep.py reports the same 10 queries as 10 web calls + 10 context calls.
+    c.recordSprintMetric({ endpoint: '/brave_sweep', backend: 'brave_web', queries: 10 })
+    const web = row(c).cost_usd
+    c.recordSprintMetric({ endpoint: '/brave_sweep', backend: 'brave_context_call', queries: 10 })
+    const ctx = row(c).cost_usd
+    assert.ok(Math.abs(viaNode - (web + ctx)) < 1e-9,
+      `paths disagree: node ${viaNode} vs python ${web}+${ctx}`)
+  })
+})

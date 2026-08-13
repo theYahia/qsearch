@@ -22,6 +22,9 @@ export function createSweepRouter (deps) {
     academicAsBraveResponse,
     yandexAsBraveResponse,
     corpusLookup,
+    // Grounding knobs for the critical tier's llm/context call. Defaults to {} so the
+    // dependency literal in test/unit/sweep/router.test.js keeps working untouched.
+    contextParams = {},
     endpointName = '/sweep'
   } = deps
 
@@ -69,7 +72,14 @@ export function createSweepRouter (deps) {
       // `brave_context` cost label (server.js) instead of silently behaving like `focused`.
       if (priority === 'critical') {
         try {
-          const { data: ctx } = await braveFetch('llm/context', query, { count: params.count })
+          // `count` plus whatever grounding knobs the operator configured. Previously this
+          // sent count alone — not even freshness reached the context call, because params
+          // was never spread here.
+          const { data: ctx } = await braveFetch('llm/context', query, {
+            count: params.count,
+            freshness: params.freshness ?? null,
+            ...contextParams
+          })
           const grounding = ctx?.grounding?.generic
           if (Array.isArray(grounding) && grounding.length && web?.data) {
             web.data.context_grounding = grounding
