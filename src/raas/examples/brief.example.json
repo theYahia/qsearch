@@ -1,0 +1,25 @@
+{
+  "question": "What is the willingness-to-pay for AI citation-verification tools among solo/small legal practices in 2026?",
+  "candidatesFixture": "candidates.fixture.json",
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Clearbrief charges $300 per user per month on its Solo & Small plan (unlimited use).",
+      "priority": "focused",
+      "queries": [
+        "Clearbrief pricing solo small plan per month 2026",
+        "Clearbrief $300 per user unlimited legal citation"
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The Nevada State Bar AI Work Group rated Clearbrief 40.5 out of 50, its highest-rated tool.",
+      "priority": "focused",
+      "queries": [
+        "Nevada State Bar AI Work Group Clearbrief rating 40.5",
+        "Nevada bar AI tool evaluation scores legal"
+      ]
+    }
+  ],
+  "_note": "DESIGN example. The two claims above are grounded in monetization-2026-06-08/40_funding_sources.md so a real verify run could actually triangulate them. candidatesFixture lets the pipeline run offline (no live qsearch) for M1/M2."
+}

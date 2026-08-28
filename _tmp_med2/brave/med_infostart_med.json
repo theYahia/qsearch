@@ -1,0 +1,1146 @@
+{
+  "type": "search",
+  "query": {
+    "original": "infostart 1С Медицина ЕГИСЗ обсуждение проблема разработчик",
+    "show_strict_warning": false,
+    "is_navigational": true,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "videos",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 19,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "videos": {
+    "type": "videos",
+    "results": [
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=OKvOkbpHFhc",
+        "title": "Запись вебинара \"Подключение медиц...",
+        "description": "Единая государственная информационная система здравоохранения (ЕГИСЗ) — ключевой элемент цифровизации медицины в России. Подключение к ней обязательно для вс...",
+        "age": "May 29, 2025",
+        "page_age": "2025-05-29T14:52:57",
+        "fetched_content_timestamp": 1750906241,
+        "video": {
+          "duration": "50:38",
+          "creator": "1C-Архитектор Бизнеса",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/GLHyuGsCAYiu0xV30WO-jqo8AfDEGGalVS58-iJ26Vc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9P/S3ZPa2JwSEZoYy9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/OKvOkbpHFhc/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=zvgFzFPsNcE",
+        "title": "Интеграция с ЕГИСЗ на базе решения ...",
+        "description": "\"1С:Медицина. Федеральные регистры\" разработан при поддержке «Фонда содействия развитию малых форм предприятий в научно-технической сфере», предназначен для ...",
+        "age": "April 28, 2021",
+        "page_age": "2021-04-28T00:00:00",
+        "fetched_content_timestamp": 1695967403,
+        "video": {
+          "duration": "12:42",
+          "views": 727,
+          "creator": "АРБИС: Прикладные решения",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Rqm7aqIu91uzDw6TcaJftGrEtqsPevYlVIFrjSJOq_k/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS96/dmdGekZQc05jRS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/zvgFzFPsNcE/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=e-9o_83X6WY",
+        "title": "1С Медицина интеграция с РС ЕГИСЗ | 1С ...",
+        "description": "ГК \"СофтБаланс\" https://sb-vnedr.ru/Интеграция МИС с РС ЕГИСЗ Санкт-Петербурга и Ленинградской области | 1С МИСОпыт внедрения 1С МИС https://sb-vnedr.ru/vned",
+        "age": "April 22, 2021",
+        "page_age": "2021-04-22T00:00:00",
+        "fetched_content_timestamp": 1674530365,
+        "video": {
+          "duration": "18:18",
+          "views": 230,
+          "creator": "SoftBalanceIT - ГК СофтБаланс",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/QcLgDg26y3MiF0vvIeXDS1zQ7esRis6VrRouM46-E_g/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9l/LTlvXzgzWDZXWS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/e-9o_83X6WY/maxresdefault.jpg"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "СЭМД в 1с Медицина - Форум.Инфостарт",
+        "url": "https://forum.infostart.ru/forum9/topic327904/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Интеграция 1С с ЕГИСЗ для передачи СЭМД в ЕГИСЗ (через N3.Health-оператора ЕГИСЗ). СЭМД 230 и 103(медосмотры) Шлюз-обмен между старой Больницей и новой. Выгрузка СЭМД для РЭМД · Ответы Подписаться на ответы Инфостарт бот Сортировка: Древо развёрнутое ... (1) Зубов 32, глаз только 2. А далее куча доработок, но главная проблема - потом все это регулярно обновлять.",
+        "page_age": "2025-06-16T00:00:00",
+        "profile": {
+          "name": "Infostart",
+          "url": "https://forum.infostart.ru/forum9/topic327904/",
+          "long_name": "forum.infostart.ru",
+          "img": "https://imgs.search.brave.com/kFPNPWwedKKFnshn65_rliNUbfAvl6OMEWvP8_BlCis/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTlkMjVkZmUy/ZjJiODRhNWM4ODY5/YTI0NjMyYmMxMmFi/Y2ZiZDdjYTI1Zjlk/ZTAxZWFmMjQ0M2E2/Nzc0OTJiMi9mb3J1/bS5pbmZvc3RhcnQu/cnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forum.infostart.ru",
+          "hostname": "forum.infostart.ru",
+          "favicon": "https://imgs.search.brave.com/kFPNPWwedKKFnshn65_rliNUbfAvl6OMEWvP8_BlCis/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTlkMjVkZmUy/ZjJiODRhNWM4ODY5/YTI0NjMyYmMxMmFi/Y2ZiZDdjYTI1Zjlk/ZTAxZWFmMjQ0M2E2/Nzc0OTJiMi9mb3J1/bS5pbmZvc3RhcnQu/cnUv",
+          "path": "› forum9  › topic327904"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Jnea7T9h-LX1zbfI7qqIHJdzOYd48xP4DXQIAKFpLZ0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9mb3J1/bS5pbmZvc3RhcnQu/cnUvdXBsb2FkL2lt/Zy9sb2dvMzAweDMw/MC5qcGc",
+          "original": "https://forum.infostart.ru/upload/img/logo300x300.jpg",
+          "logo": true
+        },
+        "age": "June 16, 2025",
+        "extra_snippets": [
+          "Интеграция 1С с ЕГИСЗ для передачи СЭМД в ЕГИСЗ (через N3.Health-оператора ЕГИСЗ). СЭМД 230 и 103(медосмотры) Шлюз-обмен между старой Больницей и новой. Выгрузка СЭМД для РЭМД · Ответы Подписаться на ответы Инфостарт бот Сортировка: Древо развёрнутое ... (1) Зубов 32, глаз только 2. А далее куча доработок, но главная проблема - потом все это регулярно обновлять.",
+          "Добрый день! Удалось вам настроить отправку документов в РЭМД? Столкнулись с проблемой.",
+          "Здравоохранение, медицина, стоматология"
+        ]
+      },
+      {
+        "title": "Интеграция 1С с ЕГИСЗ для передачи СЭМД в ЕГИСЗ , в подсистему РЭМД (через N3.Health-оператора ЕГИСЗ). СЭМД 230 и 103(медосмотры)",
+        "url": "https://infostart.ru/marketplace/1715143/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "К созданной заявке подключается специалист. Дальнейшее обсуждение проблемы будет проходить в тикете техподдержки.",
+        "profile": {
+          "name": "Инфостарт",
+          "url": "https://infostart.ru/marketplace/1715143/",
+          "long_name": "infostart.ru",
+          "img": "https://imgs.search.brave.com/risZ6GoSr9tqzk81rvK2pCrln14FQjeWdBygyBRJNX8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzdiOWY0NzVj/MzlkZGJmNTJmODM2/YWZiNTg0ZjZhNjMz/ZjUxOGE4N2I3M2Vm/Njk2YjZhZDc4MzFl/MzgzZGE4Mi9pbmZv/c3RhcnQucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "product",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "infostart.ru",
+          "hostname": "infostart.ru",
+          "favicon": "https://imgs.search.brave.com/risZ6GoSr9tqzk81rvK2pCrln14FQjeWdBygyBRJNX8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzdiOWY0NzVj/MzlkZGJmNTJmODM2/YWZiNTg0ZjZhNjMz/ZjUxOGE4N2I3M2Vm/Njk2YjZhZDc4MzFl/MzgzZGE4Mi9pbmZv/c3RhcnQucnUv",
+          "path": "› marketplace  › 1715143"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/M01ym_XxfOAeLAjdw2j3amAfRaV4PCgID8yzIceI3Vw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbmZv/c3RhcnQucnUvdXBs/b2FkL2ltZy9sb2dv/MzAweDMwMC5qcGc",
+          "original": "https://infostart.ru/upload/img/logo300x300.jpg",
+          "logo": true
+        },
+        "article": {
+          "author": []
+        },
+        "product": {
+          "type": "Product",
+          "name": "Интеграция 1С с ЕГИСЗ для передачи СЭМД в ЕГИСЗ , в подсистему РЭМД (через N3.Health-оператора ЕГИСЗ). СЭМД 230 и 103(медосмотры)",
+          "url": "https://infostart.ru/marketplace/1715143/",
+          "price": "3500.0",
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/3RBMnxYseildftI1SWAXfoPt1vEdZds5eBXHn8ZvPFw/rs:fit:360:283:1:0/g:ce/aHR0cHM6Ly9pbmZv/c3RhcnQucnUvdXBs/b2FkL2ltZy9sb2dv/MzAweDMwMC5qcGc",
+            "original": "https://infostart.ru/upload/img/logo300x300.jpg"
+          },
+          "description": "Конфигурация МИС \"Регистратура ЕГИСЗ 1.8\" предназначена для отправки медицинских,инструментальных , лабораторных случаев обслуживания , выписных эпикризовв формате CDA в Единую государственную информационную систему в сфере здравоохранения (ЕГИСЗ) в подсистему РЭМД через N.3Health -официального оператора передачи данных в ЕГИСЗ. Может быть интегрирована в любую конфигурацию 1С на управляемых формах.",
+          "offers": [
+            {
+              "url": "https://infostart.ru/marketplace/1715143/",
+              "priceCurrency": "RUB",
+              "price": "24400.0"
+            },
+            {
+              "url": "https://infostart.ru/marketplace/1715143/",
+              "priceCurrency": "RUB",
+              "price": "3500.0"
+            },
+            {
+              "url": "https://infostart.ru/marketplace/1715143/",
+              "priceCurrency": "RUB",
+              "price": "7500.0"
+            },
+            {
+              "url": "https://infostart.ru/marketplace/1715143/",
+              "priceCurrency": "RUB",
+              "price": "5000.0"
+            }
+          ]
+        },
+        "extra_snippets": [
+          "Конфигурация МИС \"Регистратура ЕГИСЗ 1.8\" предназначена для отправки медицинских,инструментальных , лабораторных случаев обслуживания , выписных эпикризовв формате CDA в Единую государственную информационную систему в сфере здравоохранения (ЕГИСЗ) в подсистему РЭМД через N.3Health -официального оператора передачи данных в ЕГИСЗ.",
+          "Конфигурация может использоваться как самостоятельное программное решение, так и для интеграции с МИС или иными разработками на базе 1С:Предприятие 8.3. Перед приобретением конфигурации обязательно согласуйте возможность и условия подключения вашей медицинской организации у официального оператора ЕГИСЗ!",
+          "Точную конфигурацию 1С, и версию платформы, на которой используете купленное решение (наименование и версию 1С можно взять из раздела \"О программе\"), версию купленной программы. К созданной заявке подключается специалист. Дальнейшее обсуждение проблемы будет проходить в тикете техподдержки.",
+          "Консультация по ЕГИСЗ, после покупки конфигурации \"Регистратура ЕГИСЗ\" - 1 час 1 час ... Передача медицинских случаев в ЕГИСЗ является обязательной, причем отправляться должны РЭМД-подписанные ЭЦП МО и врача заключения."
+        ]
+      },
+      {
+        "title": "Шлюз-обмен между старой Больницей и новой. Выгрузка СЭМД для РЭМД",
+        "url": "https://infostart.ru/1c/tools/2074592/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Знакомая на практике ситуация, когда конфигурацию так &quot;замучали&quot;, что она уже не поддается обновлению((...А по приказу Минздрава необходимо отправлять медицинские документы (СЭМД) в РЭМД (ЕГИСЗ). Да, в ручном режиме, конечно, можно через промед набивать, но если есть существующая база данных с необходимыми значениями (1С:Медицина.Больница версии 1.1.3.1/1.1.4.2), то хорошо бы автоматизировать весь процесс работы с РЭМД.",
+        "profile": {
+          "name": "Инфостарт",
+          "url": "https://infostart.ru/1c/tools/2074592/",
+          "long_name": "infostart.ru",
+          "img": "https://imgs.search.brave.com/risZ6GoSr9tqzk81rvK2pCrln14FQjeWdBygyBRJNX8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzdiOWY0NzVj/MzlkZGJmNTJmODM2/YWZiNTg0ZjZhNjMz/ZjUxOGE4N2I3M2Vm/Njk2YjZhZDc4MzFl/MzgzZGE4Mi9pbmZv/c3RhcnQucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "infostart.ru",
+          "hostname": "infostart.ru",
+          "favicon": "https://imgs.search.brave.com/risZ6GoSr9tqzk81rvK2pCrln14FQjeWdBygyBRJNX8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzdiOWY0NzVj/MzlkZGJmNTJmODM2/YWZiNTg0ZjZhNjMz/ZjUxOGE4N2I3M2Vm/Njk2YjZhZDc4MzFl/MzgzZGE4Mi9pbmZv/c3RhcnQucnUv",
+          "path": "› 1c  › tools  › 2074592"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/M01ym_XxfOAeLAjdw2j3amAfRaV4PCgID8yzIceI3Vw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbmZv/c3RhcnQucnUvdXBs/b2FkL2ltZy9sb2dv/MzAweDMwMC5qcGc",
+          "original": "https://infostart.ru/upload/img/logo300x300.jpg",
+          "logo": true
+        },
+        "article": {
+          "author": []
+        },
+        "extra_snippets": [
+          "Обмен 1С=1С: веб-сервис без собственного XDTO. Старые версии 1С:Больницы: 1С:Медицина.Больница версии 1.1.3.1 или 1С:Медицина.Больница версии 1.1.4.2 1С Платформа для старой версии 1С:Больница 8.3.20.1789.",
+          "Знакомая на практике ситуация, когда конфигурацию так \"замучали\", что она уже не поддается обновлению((...А по приказу Минздрава необходимо отправлять медицинские документы (СЭМД) в РЭМД (ЕГИСЗ). Да, в ручном режиме, конечно, можно через промед набивать, но если есть существующая база данных с необходимыми значениями (1С:Медицина.Больница версии 1.1.3.1/1.1.4.2), то хорошо бы автоматизировать весь процесс работы с РЭМД.",
+          "Было принято решение: создать шлюз-обмен необходимыми данными из старой реальной 1С:Медицина.Больница версии 1.1.4.2 (далее \"Боль1\") в новую 1С:Медицина.Больница версии 2.0.12.16 (далее \"Боль2\"), а уже из нее прямым соединением с Тестовой/Промышленной средой ЕГИСЗ -> отправлять СЭМД в РЭМД.",
+          "Также зарегистрироваться в Тех. поддержка ЕГИСЗ <egisz@stp-egisz.ru> на портале Портал тех.поддержки ЕГИСЗ · Конечно, в телеграмме ищите канал \"1с Медицина\"."
+        ]
+      },
+      {
+        "title": "1С:Медицина через Интернет",
+        "url": "https://med.1cfresh.com/proxy.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "доработка локальной МИС в соответствии с техническим описанием API предоставленным разработчиком «1C:Медицина. Регион» для обеспечения интеграции двух систем. Для прикладных решений для медицины на базе платформы 1С:Предприятие 8 рекомендуем использовать продукт 1С:Библиотека интеграции с РЭМД ЕГИСЗ для подключения &quot;1С:ЕГИСЗ&quot;.",
+        "profile": {
+          "name": "1cfresh",
+          "url": "https://med.1cfresh.com/proxy.html",
+          "long_name": "med.1cfresh.com",
+          "img": "https://imgs.search.brave.com/0s3Cl0DTwFlNSpPavOVq-2UxqNxIFN7WeJx1-SGNTwE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWI5MzM0NjQy/M2UzNWFjYzE3NmIw/NmZmN2M3MGM0NmM1/NTMwZTY4NzYyMDFh/YzFhZWFhYWNhMGUx/ZTFjNzNmZC9tZWQu/MWNmcmVzaC5jb20v"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "med.1cfresh.com",
+          "hostname": "med.1cfresh.com",
+          "favicon": "https://imgs.search.brave.com/0s3Cl0DTwFlNSpPavOVq-2UxqNxIFN7WeJx1-SGNTwE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWI5MzM0NjQy/M2UzNWFjYzE3NmIw/NmZmN2M3MGM0NmM1/NTMwZTY4NzYyMDFh/YzFhZWFhYWNhMGUx/ZTFjNzNmZC9tZWQu/MWNmcmVzaC5jb20v",
+          "path": "› proxy.html"
+        },
+        "extra_snippets": [
+          "доработка локальной МИС в соответствии с техническим описанием API предоставленным разработчиком «1C:Медицина. Регион» для обеспечения интеграции двух систем. Для прикладных решений для медицины на базе платформы 1С:Предприятие 8 рекомендуем использовать продукт 1С:Библиотека интеграции с РЭМД ЕГИСЗ для подключения \"1С:ЕГИСЗ\".",
+          "«1С:ЕГИСЗ» выполняет роль прокси-сервера, обеспечивая обмен информацией между локальной МИС абонента и ЕГИСЗ, являясь, в своей очередь, частью Информационной системы «Защищенный сегмент облачной платформы «1C:Fresh». Интеграция с подсистемами ЕГИСЗ, в соответствии с п.",
+          "Ввиду того, что 16.02.2023 года ООО «Научно-производственный центр 1С», являющийся оператором ИС «Защищенный сегмент облачной платформы «1C:Fresh», получил разрешение на подключение к ЕГИСЗ в качестве \"Иной информационной системы в здравоохранении\", как потребителя и поставщика данных - медицинские организации, являющиеся пользователями «1С:ЕГИСЗ», могут осуществлять размещение данных в ЕГИСЗ непосредственно из него.",
+          "\"1С:Библиотека интеграции с РЭМД ЕГИСЗ\" распространяется в виде конфигурации в составе информационно-технологического сопровождения (1С:ИТС или 1С:КП)."
+        ]
+      },
+      {
+        "title": "1С:Медицина",
+        "url": "https://consulting.1c.ru/med/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Больничная аптека». Проект решает проблему несогласованности информации о запасах и закупках, ускоряет процессы и обеспечивает оперативное управление на уровне региона...",
+        "profile": {
+          "name": "1c",
+          "url": "https://consulting.1c.ru/med/",
+          "long_name": "consulting.1c.ru",
+          "img": "https://imgs.search.brave.com/zCD4Y-O_72_D2e9j2WEWX2RtNVAa8zq6yMne3Thbe38/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWIwMjZjZmVh/MjljZGNjYzU5YjA1/ZjIxMzRjMWFmNjI0/YjQyYjc1NGU3MTA2/ZjgwMzI2MWNkMWUw/NzdiNGI4OC9jb25z/dWx0aW5nLjFjLnJ1/Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "location",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "consulting.1c.ru",
+          "hostname": "consulting.1c.ru",
+          "favicon": "https://imgs.search.brave.com/zCD4Y-O_72_D2e9j2WEWX2RtNVAa8zq6yMne3Thbe38/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWIwMjZjZmVh/MjljZGNjYzU5YjA1/ZjIxMzRjMWFmNjI0/YjQyYjc1NGU3MTA2/ZjgwMzI2MWNkMWUw/NzdiNGI4OC9jb25z/dWx0aW5nLjFjLnJ1/Lw",
+          "path": "› med"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/6pQuaFSJGnUJ69E6E5il7Z7jewQikBmMaktzMEyezXQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jb25z/dWx0aW5nLjFjLnJ1/L3VwbG9hZC9pYmxv/Y2svZDQ1L2Q0NTAw/NTRkZDQ4MGFmZWJh/N2Q2OTM0MjMwN2Rl/M2I4LnBuZw",
+          "original": "https://consulting.1c.ru/upload/iblock/d45/d450054dd480afeba7d69342307de3b8.png",
+          "logo": false
+        },
+        "location": {
+          "title": "АО \"Группа 1С\"",
+          "url": "https://consulting.1c.ru/med/",
+          "is_source_local": false,
+          "is_source_both": false,
+          "family_friendly": true,
+          "type": "location_result",
+          "provider_url": "https://consulting.1c.ru/med/",
+          "zoom_level": 7,
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/lFKyBUspiC7wQ-bXawaNxWI_Ol7O7qpURE9D7ItsLx4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jb25z/dWx0aW5nLjFjLnJ1/L3VwbG9hZC9pYmxv/Y2svZDQ1L2Q0NTAw/NTRkZDQ4MGFmZWJh/N2Q2OTM0MjMwN2Rl/M2I4LnBuZw",
+            "original": "https://consulting.1c.ru/upload/iblock/d45/d450054dd480afeba7d69342307de3b8.png"
+          },
+          "postal_address": {
+            "type": "PostalAddress",
+            "postalCode": "123056",
+            "streetAddress": "ул. Селезневская, 21",
+            "addressLocality": "Россия, Москва",
+            "displayAddress": "ул. Селезневская, 21, 123056, Россия, Москва"
+          },
+          "contact": {
+            "telephone": "+7 (495) 681-37-63"
+          },
+          "profiles": [
+            {
+              "type": "external",
+              "name": "consulting.1c.ru",
+              "url": "https://consulting.1c.ru/med/",
+              "img": "https://imgs.search.brave.com/zCD4Y-O_72_D2e9j2WEWX2RtNVAa8zq6yMne3Thbe38/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWIwMjZjZmVh/MjljZGNjYzU5YjA1/ZjIxMzRjMWFmNjI0/YjQyYjc1NGU3MTA2/ZjgwMzI2MWNkMWUw/NzdiNGI4OC9jb25z/dWx0aW5nLjFjLnJ1/Lw"
+            }
+          ],
+          "pictures": {
+            "results": [
+              {
+                "src": "https://imgs.search.brave.com/lFKyBUspiC7wQ-bXawaNxWI_Ol7O7qpURE9D7ItsLx4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jb25z/dWx0aW5nLjFjLnJ1/L3VwbG9hZC9pYmxv/Y2svZDQ1L2Q0NTAw/NTRkZDQ4MGFmZWJh/N2Q2OTM0MjMwN2Rl/M2I4LnBuZw",
+                "original": "https://consulting.1c.ru/upload/iblock/d45/d450054dd480afeba7d69342307de3b8.png"
+              }
+            ]
+          },
+          "categories": []
+        },
+        "organization": {
+          "type": "organization",
+          "name": "1c",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Разработаны единые формы электронных медицинских документов, в соответствии с требованием действующего законодательства, а также требованиям к СЭМД ЕГИСЗ.",
+          "Благодаря разработанным сервисам и их интеграции в единый цифровой контур здравоохранения на основе ЕГИСЗ, выросла оперативность обслуживания пациентов при обращении в медицинские учреждения других населенных пунктов.",
+          "Больничная аптека». Проект решает проблему несогласованности информации о запасах и закупках, ускоряет процессы и обеспечивает оперативное управление на уровне региона."
+        ]
+      },
+      {
+        "title": "1С:Медицина. Регион - Интеграция с сервисами ЕГИСЗ",
+        "url": "https://solutions.1c.ru/catalog/region/proxy",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Продукт предназначен для подключения к подсистемам РЭМД, ФЭР, ИЭМК Единой государственной информационной системы в сфере здравоохранения сетей медицинских организаций различных форм собственности",
+        "profile": {
+          "name": "1c",
+          "url": "https://solutions.1c.ru/catalog/region/proxy",
+          "long_name": "solutions.1c.ru",
+          "img": "https://imgs.search.brave.com/W6pnrBR0helLI3R5SEm06gKC4QOljCbo1qkvb7EQxRU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzc1NDNiMDdi/NjdlZjhmZWFhOWY1/NmMxNjExZTIxMWEw/N2I0OWVkOWU2YzRk/M2RhMmM0YjRiNTIy/ODZkMjVkNC9zb2x1/dGlvbnMuMWMucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "solutions.1c.ru",
+          "hostname": "solutions.1c.ru",
+          "favicon": "https://imgs.search.brave.com/W6pnrBR0helLI3R5SEm06gKC4QOljCbo1qkvb7EQxRU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzc1NDNiMDdi/NjdlZjhmZWFhOWY1/NmMxNjExZTIxMWEw/N2I0OWVkOWU2YzRk/M2RhMmM0YjRiNTIy/ODZkMjVkNC9zb2x1/dGlvbnMuMWMucnUv",
+          "path": "› catalog  › region  › proxy"
+        },
+        "extra_snippets": [
+          "Продукт предназначен для подключения к подсистемам РЭМД, ФЭР, ИЭМК Единой государственной информационной системы в сфере здравоохранения сетей медицинских организаций различных форм собственности",
+          "Подсистема «Интеграция с сервисами ЕГИСЗ» предназначена для интеграции со следующими федеральными государственными информационными системами:",
+          "Регион\" и медицинскими информационными системами используется те же самые протоколы, которые используются для связи \"1С:Медицина. Регион\" с подсистемами ЕГИСЗ.",
+          "другие программные продукты, которые поддерживают протоколы обмена с подсистемми ФЭР, РЭМД ЕГИСЗ в соответствии с техническими спецификациями, опубликованными на портале оперативного взаимодействия участников ЕГИСЗ (http://portal.egisz.rosminzdrav.ru/)."
+        ]
+      },
+      {
+        "title": "1С:Медицина. Поликлиника - Интеграция с сервисами ЕГИСЗ",
+        "url": "https://solutions.1c.ru/catalog/clinic/egisz",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Система мониторинга проведения диспансеризации детей-сирот и детей, находящихся в трудной жизненной ситуации, и прохождения несовершеннолетними медицинских осмотров (ДС) Список поддерживаемых СЭМД можно найти на странице Электронные медицинские карты. В продукте поддержано несколько вариантов подключения к ЕГИСЗ:",
+        "profile": {
+          "name": "1c",
+          "url": "https://solutions.1c.ru/catalog/clinic/egisz",
+          "long_name": "solutions.1c.ru",
+          "img": "https://imgs.search.brave.com/W6pnrBR0helLI3R5SEm06gKC4QOljCbo1qkvb7EQxRU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzc1NDNiMDdi/NjdlZjhmZWFhOWY1/NmMxNjExZTIxMWEw/N2I0OWVkOWU2YzRk/M2RhMmM0YjRiNTIy/ODZkMjVkNC9zb2x1/dGlvbnMuMWMucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "solutions.1c.ru",
+          "hostname": "solutions.1c.ru",
+          "favicon": "https://imgs.search.brave.com/W6pnrBR0helLI3R5SEm06gKC4QOljCbo1qkvb7EQxRU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzc1NDNiMDdi/NjdlZjhmZWFhOWY1/NmMxNjExZTIxMWEw/N2I0OWVkOWU2YzRk/M2RhMmM0YjRiNTIy/ODZkMjVkNC9zb2x1/dGlvbnMuMWMucnUv",
+          "path": "› catalog  › clinic  › egisz"
+        },
+        "extra_snippets": [
+          "Через сервис 1С:ЕГИСЗ.",
+          "Поддерживается интеграции со следующими подсистемами ЕГИСЗ:",
+          "Система мониторинга проведения диспансеризации детей-сирот и детей, находящихся в трудной жизненной ситуации, и прохождения несовершеннолетними медицинских осмотров (ДС) Список поддерживаемых СЭМД можно найти на странице Электронные медицинские карты. В продукте поддержано несколько вариантов подключения к ЕГИСЗ:",
+          "Рекомендуем частным клиникам подключение через 1С:ЕГИСЗ или использовать облачную 1С:Медицина. Больница."
+        ]
+      },
+      {
+        "title": "«1С:Медицина»: интеграция с ЕГИСЗ и повышение цен на коробочные продукты",
+        "url": "https://infostart.ru/journal/news/mir-1s/1s-meditsina-integratsiya-s-egisz-i-povyshenie-tsen-na-korobochnye-produkty_1340571/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Фирма «1С» анонсировала обновление функциональных возможностей и условий продаж для линейки программных продуктов по автоматизации медучреждений «1С:Медицина». Главное новшество здесь – это поддержка интеграции с сервисами ЕГИСЗ.",
+        "profile": {
+          "name": "Инфостарт",
+          "url": "https://infostart.ru/journal/news/mir-1s/1s-meditsina-integratsiya-s-egisz-i-povyshenie-tsen-na-korobochnye-produkty_1340571/",
+          "long_name": "infostart.ru",
+          "img": "https://imgs.search.brave.com/risZ6GoSr9tqzk81rvK2pCrln14FQjeWdBygyBRJNX8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzdiOWY0NzVj/MzlkZGJmNTJmODM2/YWZiNTg0ZjZhNjMz/ZjUxOGE4N2I3M2Vm/Njk2YjZhZDc4MzFl/MzgzZGE4Mi9pbmZv/c3RhcnQucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "infostart.ru",
+          "hostname": "infostart.ru",
+          "favicon": "https://imgs.search.brave.com/risZ6GoSr9tqzk81rvK2pCrln14FQjeWdBygyBRJNX8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzdiOWY0NzVj/MzlkZGJmNTJmODM2/YWZiNTg0ZjZhNjMz/ZjUxOGE4N2I3M2Vm/Njk2YjZhZDc4MzFl/MzgzZGE4Mi9pbmZv/c3RhcnQucnUv",
+          "path": "› journal  › news  › mir-1s  › 1s-meditsina-integratsiya-s-egisz-i-povyshenie-tsen-na-korobochnye-produkty_1340571"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/M01ym_XxfOAeLAjdw2j3amAfRaV4PCgID8yzIceI3Vw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbmZv/c3RhcnQucnUvdXBs/b2FkL2ltZy9sb2dv/MzAweDMwMC5qcGc",
+          "original": "https://infostart.ru/upload/img/logo300x300.jpg",
+          "logo": true
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Елена Черепнева"
+            }
+          ]
+        },
+        "extra_snippets": [
+          "Фирма «1С» выпустила новые редакции программных продуктов «1С:Медицина. Больница 2» и «1С:Медицина.Поликлиника 3», а также сообщила о планах повысить цены на эти конфигурации.",
+          "Фирма «1С» анонсировала обновление функциональных возможностей и условий продаж для линейки программных продуктов по автоматизации медучреждений «1С:Медицина». Главное новшество здесь – это поддержка интеграции с сервисами ЕГИСЗ.",
+          "Теперь «1С:Медицина. Поликлиника. Редакция 3» и «1С:Медицина. Больница. Редакция 2» будут поддерживать интеграцию с компонентами ЕГИСЗ:",
+          "«1С:Медицина»: интеграция с ЕГИСЗ и повышение цен на коробочные продукты"
+        ]
+      },
+      {
+        "title": "Краткая инструкция по работе в конфигурации 1С «Медицина. Поликлиника, редакции 3.0» - «ИнфоСофт»",
+        "url": "https://is1c.ru/about/pc/article/kratkaya-instruktsiya-po-rabote-v-konfiguratsii-1s-meditsina-poliklinika-redaktsii-3-0/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Также врач может посмотреть Электронную медицинскую карту пациента с предыдущими медицинскими документами. ... Кризис не даёт шансов никому, но справиться с ним мы можем вместе. ... Интеграция с ФГИС МДЛП в 1С: варианты, сложности и решения.",
+        "profile": {
+          "name": "Is1c",
+          "url": "https://is1c.ru/about/pc/article/kratkaya-instruktsiya-po-rabote-v-konfiguratsii-1s-meditsina-poliklinika-redaktsii-3-0/",
+          "long_name": "is1c.ru",
+          "img": "https://imgs.search.brave.com/Kmy2-ckb9aNPjJOvhUHuOolGlEIqD0DR1taJffhwUQI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWZhOGYxYWQw/NDVmNzk5YWNhYzJh/NTRlNDVlMDRkNTBj/YzZhYWJjN2ZlMWFm/YTg4MTFlNDQ0NTAy/ZWJhM2EzMy9pczFj/LnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "location",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "is1c.ru",
+          "hostname": "is1c.ru",
+          "favicon": "https://imgs.search.brave.com/Kmy2-ckb9aNPjJOvhUHuOolGlEIqD0DR1taJffhwUQI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWZhOGYxYWQw/NDVmNzk5YWNhYzJh/NTRlNDVlMDRkNTBj/YzZhYWJjN2ZlMWFm/YTg4MTFlNDQ0NTAy/ZWJhM2EzMy9pczFj/LnJ1Lw",
+          "path": "  › главная  › о партнерской сети  › блог  › статьи"
+        },
+        "location": {
+          "title": "ИнфоСофт",
+          "url": "https://is1c.ru/about/pc/article/kratkaya-instruktsiya-po-rabote-v-konfiguratsii-1s-meditsina-poliklinika-redaktsii-3-0/",
+          "is_source_local": false,
+          "is_source_both": false,
+          "family_friendly": true,
+          "type": "location_result",
+          "provider_url": "https://is1c.ru/about/pc/article/kratkaya-instruktsiya-po-rabote-v-konfiguratsii-1s-meditsina-poliklinika-redaktsii-3-0/",
+          "zoom_level": 7,
+          "postal_address": {
+            "type": "PostalAddress",
+            "country": "Россия",
+            "postalCode": "630091",
+            "streetAddress": "ул. Крылова, 31.",
+            "addressRegion": "Новосибирск",
+            "addressLocality": "Новосибирск",
+            "displayAddress": "ул. Крылова, 31., 630091, Новосибирск"
+          },
+          "contact": {
+            "email": "info@is1c.ru",
+            "telephone": "+7 (383) 247-97-40"
+          },
+          "profiles": [
+            {
+              "type": "external",
+              "name": "is1c.ru",
+              "url": "https://is1c.ru/about/pc/article/kratkaya-instruktsiya-po-rabote-v-konfiguratsii-1s-meditsina-poliklinika-redaktsii-3-0/",
+              "img": "https://imgs.search.brave.com/Kmy2-ckb9aNPjJOvhUHuOolGlEIqD0DR1taJffhwUQI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWZhOGYxYWQw/NDVmNzk5YWNhYzJh/NTRlNDVlMDRkNTBj/YzZhYWJjN2ZlMWFm/YTg4MTFlNDQ0NTAy/ZWJhM2EzMy9pczFj/LnJ1Lw"
+            }
+          ],
+          "categories": []
+        },
+        "article": {
+          "author": []
+        },
+        "extra_snippets": [
+          "Также врач может посмотреть Электронную медицинскую карту пациента с предыдущими медицинскими документами. ... Кризис не даёт шансов никому, но справиться с ним мы можем вместе. ... Интеграция с ФГИС МДЛП в 1С: варианты, сложности и решения.",
+          "1С:Документооборот государственного учреждения КОРП. Регион · Здравоохранение и медицина",
+          "КОРП Платформа 1С:Предприятие 8 (корпоративное лицензирование) ... Комплексная автоматизация медицинских организаций Подробнее",
+          "К нам стали часто обращаться с запросами по внедрению 1С для медицинских организаций, проводящих приемы разных специалистов, оказывающих различного рода медицинские услуги, профосмотры, взаимодействие с организациями ДМС и т.д."
+        ]
+      },
+      {
+        "title": "1С:Медицина. Регион для интеграции с ЕГИСЗ - Неосистемы Северо-Запад ЛТД",
+        "url": "https://neosystems.ru/info/news/novosti-kompanii/1s-meditsina-region-dlya-integratsii-s-egisz/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Компания «Неосистемы Северо-Запад» оказывает услуги по настройке системы передачи данных в ЕГИСЗ «под ключ». Наши специалисты всегда готовы проконсультировать Вас по вопросам настройки интеграции, для этого достаточно связаться любым удобным способом – по телефону +7 (8142) 67-21-20, либо по почте promo@neosystems.ru",
+        "profile": {
+          "name": "Neosystems",
+          "url": "https://neosystems.ru/info/news/novosti-kompanii/1s-meditsina-region-dlya-integratsii-s-egisz/",
+          "long_name": "neosystems.ru",
+          "img": "https://imgs.search.brave.com/0lo9cn_cG6Sov-qEm79SJpm1a-p2uloNHLPxXvwt5eY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTFhMzJkNzEy/NWFiOGUzMWNhZDY0/YzFhNWM5YzgwNDNh/MjA3NjQzMTgzYmU4/ODYxM2Y2MWMzMDZk/MDkzZDY0OS9uZW9z/eXN0ZW1zLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "neosystems.ru",
+          "hostname": "neosystems.ru",
+          "favicon": "https://imgs.search.brave.com/0lo9cn_cG6Sov-qEm79SJpm1a-p2uloNHLPxXvwt5eY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTFhMzJkNzEy/NWFiOGUzMWNhZDY0/YzFhNWM5YzgwNDNh/MjA3NjQzMTgzYmU4/ODYxM2Y2MWMzMDZk/MDkzZDY0OS9uZW9z/eXN0ZW1zLnJ1Lw",
+          "path": "  › главная  › информация  › новости  › 1с:медицина. регион для интеграции с егисз"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/E9JZsRDxV0-iOMyxthWoatrw9Q5NL7nIyz1fv4RveMA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9uZW9z/eXN0ZW1zLnJ1OjQ0/My91cGxvYWQvaWJs/b2NrLzE5MC8xc21l/ZGl0c2luYXJlZ2lv/bmRseWFpbnRlZ3Jh/dHNpaXNlZ2lzemtv/bXBhbmlpbmVvc2lz/dGVteXNldmVyb3ph/cGFkLnBuZw",
+          "original": "https://neosystems.ru:443/upload/iblock/190/1smeditsinaregiondlyaintegratsiisegiszkompaniineosistemyseverozapad.png",
+          "logo": false
+        },
+        "extra_snippets": [
+          "взаимодействие в сегменте приема и передачи сведений в систему в пределах объема и сроках, регламентированных Постановлением Правительства о ЕГИСЗ №140",
+          "Если коротко, то теперь любая организация, оказывающая медицинские услуги населению, обязана настроить интеграцию своей учетной системы с ЕГИСЗ и обеспечить регулярную передачу данных.",
+          "Регион для интеграции с ЕГИСЗ» позволяет обмениваться информацией между локальной МИС Заказчика и ЕГИСЗ, являясь частью Информационной системы «Защищенный сегмент облачной платформы «1C:Fresh». При использовании Сервиса для подключения к защищенной сети Минздрава РФ (ЗСПД) не требуется приобретение дополнительного дорогостоящего оборудования, проведение длительного и затратного процесса оценки информационной системы клиента.",
+          "Компания «Неосистемы Северо-Запад» оказывает услуги по настройке системы передачи данных в ЕГИСЗ «под ключ». Наши специалисты всегда готовы проконсультировать Вас по вопросам настройки интеграции, для этого достаточно связаться любым удобным способом – по телефону +7 (8142) 67-21-20, либо по почте promo@neosystems.ru"
+        ]
+      },
+      {
+        "title": "Интеграция 1С:Бит УМЦ (Управление медицинским центром), 1С:ЗУП 3.1, 1С:БП 3.0 для получения данных СНИЛС из ПФР через оператора N3.Health",
+        "url": "https://infostart.ru/1c/tools/2448351/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "1C:Бит УМЦ (Управление медицинским центром), 2.1.25.32 · Код открыт. В случае возникновения ошибок рекомендуем ознакомиться с описанием и документацией программы. Если не нашли решения своей проблемы в документации или решение не помогает - тогда создайте обращение по инструкции ниже:",
+        "profile": {
+          "name": "Инфостарт",
+          "url": "https://infostart.ru/1c/tools/2448351/",
+          "long_name": "infostart.ru",
+          "img": "https://imgs.search.brave.com/risZ6GoSr9tqzk81rvK2pCrln14FQjeWdBygyBRJNX8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzdiOWY0NzVj/MzlkZGJmNTJmODM2/YWZiNTg0ZjZhNjMz/ZjUxOGE4N2I3M2Vm/Njk2YjZhZDc4MzFl/MzgzZGE4Mi9pbmZv/c3RhcnQucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "product",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "infostart.ru",
+          "hostname": "infostart.ru",
+          "favicon": "https://imgs.search.brave.com/risZ6GoSr9tqzk81rvK2pCrln14FQjeWdBygyBRJNX8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzdiOWY0NzVj/MzlkZGJmNTJmODM2/YWZiNTg0ZjZhNjMz/ZjUxOGE4N2I3M2Vm/Njk2YjZhZDc4MzFl/MzgzZGE4Mi9pbmZv/c3RhcnQucnUv",
+          "path": "› 1c  › tools  › 2448351"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/M01ym_XxfOAeLAjdw2j3amAfRaV4PCgID8yzIceI3Vw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbmZv/c3RhcnQucnUvdXBs/b2FkL2ltZy9sb2dv/MzAweDMwMC5qcGc",
+          "original": "https://infostart.ru/upload/img/logo300x300.jpg",
+          "logo": true
+        },
+        "article": {
+          "author": []
+        },
+        "product": {
+          "type": "Product",
+          "name": "Интеграция 1С:Бит УМЦ (Управление медицинским центром), 1С:ЗУП 3.1, 1С:БП 3.0 для получения данных СНИЛС из ПФР через оператора N3.Health",
+          "url": "https://infostart.ru/1c/tools/2448351/",
+          "price": "14640.0",
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/3RBMnxYseildftI1SWAXfoPt1vEdZds5eBXHn8ZvPFw/rs:fit:360:283:1:0/g:ce/aHR0cHM6Ly9pbmZv/c3RhcnQucnUvdXBs/b2FkL2ltZy9sb2dv/MzAweDMwMC5qcGc",
+            "original": "https://infostart.ru/upload/img/logo300x300.jpg"
+          },
+          "description": "Интеграция реализована в виде расширений для конфигураций УМЦ (Управление медицинским центром), 1С:Зарплата и управление персоналом, 1С:Бухгалтерия предприятия 3.0. Предназначена для получения СНИЛС в ПФР через официального оператора передачи данных в ЕГИСЗ - N3.Health.",
+          "offers": [
+            {
+              "url": "https://infostart.ru/1c/tools/2448351/",
+              "priceCurrency": "RUB",
+              "price": "14640.0"
+            }
+          ]
+        },
+        "extra_snippets": [
+          "Интеграция реализована в виде расширений для конфигураций УМЦ (Управление медицинским центром), 1С:Зарплата и управление персоналом, 1С:Бухгалтерия предприятия 3.0. Предназначена для получения СНИЛС в ПФР через официального оператора передачи данных в ЕГИСЗ - N3.Health.",
+          "1C:Бит УМЦ (Управление медицинским центром), 2.1.25.32 · Код открыт. В случае возникновения ошибок рекомендуем ознакомиться с описанием и документацией программы. Если не нашли решения своей проблемы в документации или решение не помогает - тогда создайте обращение по инструкции ниже:",
+          "с последующей обработкой результатов в информационной базе Запросы передаются в сервисы N3.Health - детальнее о подключении к сервисам необходимо обратиться к официальному оператору передачи данных в ЕГИСЗ - N3.Health",
+          "СНИЛС ПФР ЕГИСЗ УМЦ БП ЗУП Обогащение Сервис N3.Health N3.Health"
+        ]
+      },
+      {
+        "title": "Фирма «1С» выпустила новую стандартную библиотеку для интеграции с ЕГИСЗ",
+        "url": "https://infostart.ru/journal/news/mir-1s/firma-1s-vypustila-novuyu-standartnuyu-biblioteku-dlya-integratsii-s-egisz_1731529/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Фирма «1С» выпустила новую стандартную библиотеку для интеграции с ЕГИСЗ ... «1С:Библиотека интеграции с Федеральным реестром электронных медицинских документов» предназначена для разработки прикладных конфигураций, в которых необходимо обмениваться данными с РЭМД – одной из ключевых подсистем ЕГИС в сфере здравоохранения.",
+        "profile": {
+          "name": "Инфостарт",
+          "url": "https://infostart.ru/journal/news/mir-1s/firma-1s-vypustila-novuyu-standartnuyu-biblioteku-dlya-integratsii-s-egisz_1731529/",
+          "long_name": "infostart.ru",
+          "img": "https://imgs.search.brave.com/risZ6GoSr9tqzk81rvK2pCrln14FQjeWdBygyBRJNX8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzdiOWY0NzVj/MzlkZGJmNTJmODM2/YWZiNTg0ZjZhNjMz/ZjUxOGE4N2I3M2Vm/Njk2YjZhZDc4MzFl/MzgzZGE4Mi9pbmZv/c3RhcnQucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "infostart.ru",
+          "hostname": "infostart.ru",
+          "favicon": "https://imgs.search.brave.com/risZ6GoSr9tqzk81rvK2pCrln14FQjeWdBygyBRJNX8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzdiOWY0NzVj/MzlkZGJmNTJmODM2/YWZiNTg0ZjZhNjMz/ZjUxOGE4N2I3M2Vm/Njk2YjZhZDc4MzFl/MzgzZGE4Mi9pbmZv/c3RhcnQucnUv",
+          "path": "› journal  › news  › mir-1s  › firma-1s-vypustila-novuyu-standartnuyu-biblioteku-dlya-integratsii-s-egisz_1731529"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/M01ym_XxfOAeLAjdw2j3amAfRaV4PCgID8yzIceI3Vw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbmZv/c3RhcnQucnUvdXBs/b2FkL2ltZy9sb2dv/MzAweDMwMC5qcGc",
+          "original": "https://infostart.ru/upload/img/logo300x300.jpg",
+          "logo": true
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Елена Черепнева"
+            }
+          ]
+        },
+        "extra_snippets": [
+          "Фирма «1С» выпустила новую стандартную библиотеку для интеграции с ЕГИСЗ ... «1С:Библиотека интеграции с Федеральным реестром электронных медицинских документов» предназначена для разработки прикладных конфигураций, в которых необходимо обмениваться данными с РЭМД – одной из ключевых подсистем ЕГИС в сфере здравоохранения.",
+          "В качестве примера на странице информационного письма приводится сценарий работы с рецептами: «В процессе передачи данных СЭМД в РЭМД посредством 1С:Медицина.Регион в его информационной базе сохраняются все сведения о документах. Таким образом, создается единое информационное пространство между медицинскими и фармацевтическими организациями». Общая схема взаимодействия между ЕГИСЗ, медицинскими и фармацевтическими организациями.",
+          "В состав ЕГИСЗ сейчас входит 13 различных подсистем, среди которых наиболее крупная и значимая – Федеральный реестр электронных медицинских документов (РЭМД).",
+          "Фирма «1С» сообщила о выходе новой стандартной библиотеки для интеграции с Единой государственной информационной системой в сфере здравоохранения (ЕГИСЗ)."
+        ]
+      },
+      {
+        "title": "1С:Медицина. Регион - О решении - Возможности",
+        "url": "https://solutions.1c.ru/catalog/region/features",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Продукт предназначен для подключения к подсистемам РЭМД, ФЭР, ИЭМК Единой государственной информационной системы в сфере здравоохранения сетей медицинских организаций различных форм собственности",
+        "profile": {
+          "name": "1c",
+          "url": "https://solutions.1c.ru/catalog/region/features",
+          "long_name": "solutions.1c.ru",
+          "img": "https://imgs.search.brave.com/W6pnrBR0helLI3R5SEm06gKC4QOljCbo1qkvb7EQxRU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzc1NDNiMDdi/NjdlZjhmZWFhOWY1/NmMxNjExZTIxMWEw/N2I0OWVkOWU2YzRk/M2RhMmM0YjRiNTIy/ODZkMjVkNC9zb2x1/dGlvbnMuMWMucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "solutions.1c.ru",
+          "hostname": "solutions.1c.ru",
+          "favicon": "https://imgs.search.brave.com/W6pnrBR0helLI3R5SEm06gKC4QOljCbo1qkvb7EQxRU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzc1NDNiMDdi/NjdlZjhmZWFhOWY1/NmMxNjExZTIxMWEw/N2I0OWVkOWU2YzRk/M2RhMmM0YjRiNTIy/ODZkMjVkNC9zb2x1/dGlvbnMuMWMucnUv",
+          "path": "› catalog  › region  › features"
+        },
+        "extra_snippets": [
+          "Продукт предназначен для подключения к подсистемам РЭМД, ФЭР, ИЭМК Единой государственной информационной системы в сфере здравоохранения сетей медицинских организаций различных форм собственности"
+        ]
+      },
+      {
+        "title": "Подготовка справочников для интеграции ЕГИСЗ - 1С:Медицина. Стоматологическая клиника.",
+        "url": "https://stoma1c.ru/knowledge-base/integratsiya-s-egisz/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Подготовка справочников для интеграции ЕГИСЗ. В данной статье рассматриваются возможности и функции прикладного решения 1С:Медицина. Стоматологическая клиника.",
+        "profile": {
+          "name": "Stoma1c",
+          "url": "https://stoma1c.ru/knowledge-base/integratsiya-s-egisz/",
+          "long_name": "stoma1c.ru",
+          "img": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "stoma1c.ru",
+          "hostname": "stoma1c.ru",
+          "favicon": "https://imgs.search.brave.com/-elRHoS51jmharEl5oDYayLtYlEVrDfQLd4En8tuyBk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjVjM2RmZjI3/NWFiMmQ2ODhhNDE5/NDZhZGNlYmZlNDNi/ZmQ2YjgxZjYwZmE2/MjlmZTUxNmNhZjk0/NmQ2NzM1Ny9zdG9t/YTFjLnJ1Lw",
+          "path": "  › главная  › база знаний  › подготовка справочников для интеграции егисз"
+        },
+        "organization": {
+          "type": "organization",
+          "name": "1С:Медицина",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Подключение к ЕГИСЗ происходит после подачи заявки на Информационном портале ЕГИСЗ Минздрава. Перед подключением интеграции необходимо в 1С выполнить ряд настроек:",
+          "Согласно Постановлению Правительства РФ от 01.06.2021 г. № 852 «О лицензировании медицинской деятельности» подключение и передача данных в ЕГИСЗ является обязательным условием для получения и продления лицензии на осуществления медицинской деятельности.",
+          "Требования Постановления касаются всех медицинских организаций, вне зависимости от формы собственности. ЕГИСЗ — единая государственная информационная система здравоохранения.",
+          "Здесь хранятся и обрабатываются данные обо всех медицинских организациях страны, медицинских сотрудниках и пациентах. Главная цель создания ЕГИСЗ — повышение уровня качества и доступности медицинских услуг за счёт цифровизации и объединения всех данных в единую систему."
+        ]
+      },
+      {
+        "title": "Интеграция 1C Стоматология с ЕГИСЗ через МедФлекс - МедФлекс",
+        "url": "https://help.medflex.me/1s-medicina-stomatologiya-egisz/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "3. Данные ЭЦП организации нужно внести в 1С. ... Зачем: Убеждаемся, что в карточках врачей и пациентов есть все необходимые данные для отправки в ЕГИСЗ.",
+        "profile": {
+          "name": "Medflex",
+          "url": "https://help.medflex.me/1s-medicina-stomatologiya-egisz/",
+          "long_name": "help.medflex.me",
+          "img": "https://imgs.search.brave.com/OypnDiHh4X1w7gApgOiI2UWxZTLhoZqkH8gdomWbV4U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTBkYTNjOTVj/OGRjOWQ2ZDViZGQz/NmJhZGYzZjEyNzk2/YjY2ZDAwZjhmOWZk/ZTM2YzE1OGQ0NDY0/MWZmZmE1Yy9oZWxw/Lm1lZGZsZXgubWUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "help.medflex.me",
+          "hostname": "help.medflex.me",
+          "favicon": "https://imgs.search.brave.com/OypnDiHh4X1w7gApgOiI2UWxZTLhoZqkH8gdomWbV4U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTBkYTNjOTVj/OGRjOWQ2ZDViZGQz/NmJhZGYzZjEyNzk2/YjY2ZDAwZjhmOWZk/ZTM2YzE1OGQ0NDY0/MWZmZmE1Yy9oZWxw/Lm1lZGZsZXgubWUv",
+          "path": "› 1s-medicina-stomatologiya-egisz"
+        },
+        "extra_snippets": [
+          "Инструкция по настройке 1С: Стоматология для работы с ЕГИСЗ ... Лимиты на количество записей одним пациентом через виджеты ... Условия технической поддержки расширения для онлайн-записи в 1С ... Для расширений с HTTP-сервисами (Медицина.Стоматология, МедАнгел, Аналит: Учет медицинских услуг)",
+          "Интеграция с 1С: Медицина.",
+          "3. Данные ЭЦП организации нужно внести в 1С. ... Зачем: Убеждаемся, что в карточках врачей и пациентов есть все необходимые данные для отправки в ЕГИСЗ.",
+          "Настройки в модуле РЭМД ЕГИСЗ для 1С"
+        ]
+      },
+      {
+        "title": "Интеграция 1C Поликлиника с ЕГИСЗ через МедФлекс - МедФлекс",
+        "url": "https://help.medflex.me/1s-poliklinika/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Инструкция по настройке 1С: Стоматология для работы с ЕГИСЗ ... Лимиты на количество записей одним пациентом через виджеты · Авторизация пациентов в виджетах ... Условия технической поддержки расширения для онлайн-записи в 1С ... Для расширений с HTTP-сервисами (Медицина.Стоматология, МедАнгел, Аналит: Учет медицинских услуг)",
+        "profile": {
+          "name": "Medflex",
+          "url": "https://help.medflex.me/1s-poliklinika/",
+          "long_name": "help.medflex.me",
+          "img": "https://imgs.search.brave.com/OypnDiHh4X1w7gApgOiI2UWxZTLhoZqkH8gdomWbV4U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTBkYTNjOTVj/OGRjOWQ2ZDViZGQz/NmJhZGYzZjEyNzk2/YjY2ZDAwZjhmOWZk/ZTM2YzE1OGQ0NDY0/MWZmZmE1Yy9oZWxw/Lm1lZGZsZXgubWUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "help.medflex.me",
+          "hostname": "help.medflex.me",
+          "favicon": "https://imgs.search.brave.com/OypnDiHh4X1w7gApgOiI2UWxZTLhoZqkH8gdomWbV4U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTBkYTNjOTVj/OGRjOWQ2ZDViZGQz/NmJhZGYzZjEyNzk2/YjY2ZDAwZjhmOWZk/ZTM2YzE1OGQ0NDY0/MWZmZmE1Yy9oZWxw/Lm1lZGZsZXgubWUv",
+          "path": "› 1s-poliklinika"
+        },
+        "extra_snippets": [
+          "Инструкция по настройке 1С: Стоматология для работы с ЕГИСЗ ... Лимиты на количество записей одним пациентом через виджеты · Авторизация пациентов в виджетах ... Условия технической поддержки расширения для онлайн-записи в 1С ... Для расширений с HTTP-сервисами (Медицина.Стоматология, МедАнгел, Аналит: Учет медицинских услуг)",
+          "Выполнить ряд настроек в 1С. ЕГИСЗ — Единая государственная информационная система здравоохранения. РЭМД — Реестр электронных медицинских документов.",
+          "Интеграция с 1С: Медицина.",
+          "Условия выгрузки данных 1С: Медицина."
+        ]
+      },
+      {
+        "title": "1С:Медицина. Клиническая лаборатория - Поддержка ЕГИСЗ",
+        "url": "https://solutions.1c.ru/catalog/clinical-lis/egisz",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Поддерживается интеграция с РЭМД ЕГИСЗ с передачей протоколов в формате PDF/A или CDA",
+        "profile": {
+          "name": "1c",
+          "url": "https://solutions.1c.ru/catalog/clinical-lis/egisz",
+          "long_name": "solutions.1c.ru",
+          "img": "https://imgs.search.brave.com/W6pnrBR0helLI3R5SEm06gKC4QOljCbo1qkvb7EQxRU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzc1NDNiMDdi/NjdlZjhmZWFhOWY1/NmMxNjExZTIxMWEw/N2I0OWVkOWU2YzRk/M2RhMmM0YjRiNTIy/ODZkMjVkNC9zb2x1/dGlvbnMuMWMucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "solutions.1c.ru",
+          "hostname": "solutions.1c.ru",
+          "favicon": "https://imgs.search.brave.com/W6pnrBR0helLI3R5SEm06gKC4QOljCbo1qkvb7EQxRU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzc1NDNiMDdi/NjdlZjhmZWFhOWY1/NmMxNjExZTIxMWEw/N2I0OWVkOWU2YzRk/M2RhMmM0YjRiNTIy/ODZkMjVkNC9zb2x1/dGlvbnMuMWMucnUv",
+          "path": "› catalog  › clinical-lis  › egisz"
+        },
+        "extra_snippets": [
+          "Решение предназначено для автоматизации технологического процесса и учета в государственных и коммерческих медицинских лабораториях: регистрации пациентов и заказов на проведение лабораторных исследований, регистрации результатов исследований, учета оказываемых лабораторией медицинских услуг.",
+          "Федеральный справочник лабораторных исследований (ФСЛИ) можно загрузить с ФНСИ ЕГИСЗ (nsi.rosminzdrav.ru)",
+          "Поддерживается интеграция с РЭМД ЕГИСЗ с передачей протоколов в формате PDF/A или CDA"
+        ]
+      },
+      {
+        "title": "Сопровождение 1С:Медицина — поддержка МДЛП, ЕГИСЗ, больничных аптек, поликлиник",
+        "url": "https://ms1c.ru/uslugi/soprovozhdenie_1s_meditsiny/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Сопровождением медицинских программ занимаются консультанты, специалисты технической службы и программисты отдела под руководством Евгения Кузнецова — эксперта с 20-летним стажем в сфере 1С. Команда отлично ориентируется в процессах больничных аптек и поликлиник и системах МДЛП и ЕГИСЗ.",
+        "page_age": "2025-12-01T00:00:00",
+        "profile": {
+          "name": "Ms1c",
+          "url": "https://ms1c.ru/uslugi/soprovozhdenie_1s_meditsiny/",
+          "long_name": "ms1c.ru",
+          "img": "https://imgs.search.brave.com/uD_Wh8AZ1tuRGG7_9-m8TJnXJaRdnqxCZKHuK_fUQQk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTc0NzJlODYw/YjZjNWMwMDczZGE4/M2QyY2FmNTJkNDE4/NDA2ZTQ5MDA0MzU3/ZTkxNzQzNjIyY2Y2/ZmY2OWE1Yy9tczFj/LnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "location",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "ms1c.ru",
+          "hostname": "ms1c.ru",
+          "favicon": "https://imgs.search.brave.com/uD_Wh8AZ1tuRGG7_9-m8TJnXJaRdnqxCZKHuK_fUQQk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTc0NzJlODYw/YjZjNWMwMDczZGE4/M2QyY2FmNTJkNDE4/NDA2ZTQ5MDA0MzU3/ZTkxNzQzNjIyY2Y2/ZmY2OWE1Yy9tczFj/LnJ1Lw",
+          "path": "  › поддержка 1с  › сопровождение 1с:медицины"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/hVXvStBu_L9uVBKV1sPiv2DCN2D584B-WTQ26pWot5k/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tczFj/LnJ1L3VwbG9hZC9p/YmxvY2svNDQ3L294/Z2FrM2FyaGxtbmFp/NWU1YzBzNms3dDEw/YjRrNzI2LndlYnA",
+          "original": "https://ms1c.ru/upload/iblock/447/oxgak3arhlmnai5e5c0s6k7t10b4k726.webp"
+        },
+        "age": "December 1, 2025",
+        "location": {
+          "title": "ООО «МастерСофт – Cервис»",
+          "url": "https://ms1c.ru/uslugi/soprovozhdenie_1s_meditsiny/",
+          "is_source_local": false,
+          "is_source_both": false,
+          "family_friendly": true,
+          "type": "location_result",
+          "provider_url": "https://ms1c.ru/uslugi/soprovozhdenie_1s_meditsiny/",
+          "zoom_level": 7,
+          "postal_address": {
+            "type": "PostalAddress",
+            "streetAddress": "610017, г. Киров, ул. Маклина, 40",
+            "displayAddress": "610017, г. Киров, ул. Маклина, 40"
+          },
+          "contact": {
+            "telephone": "(8332) 22-22-44"
+          },
+          "profiles": [
+            {
+              "type": "external",
+              "name": "ms1c.ru",
+              "url": "https://ms1c.ru/uslugi/soprovozhdenie_1s_meditsiny/",
+              "img": "https://imgs.search.brave.com/uD_Wh8AZ1tuRGG7_9-m8TJnXJaRdnqxCZKHuK_fUQQk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTc0NzJlODYw/YjZjNWMwMDczZGE4/M2QyY2FmNTJkNDE4/NDA2ZTQ5MDA0MzU3/ZTkxNzQzNjIyY2Y2/ZmY2OWE1Yy9tczFj/LnJ1Lw"
+            }
+          ],
+          "categories": []
+        },
+        "extra_snippets": [
+          "Мы предлагаем профессиональное сопровождение медицинских решений 1С, чтобы вы работали уверенно — без технических проблем, потерь данных и задержек в процессах. ... с Единой государственной информационной системой в сфере здравоохранения (ЕГИСЗ) — передавайте данные о медицинской организации, ее сотрудниках и пациентах, информацию из электронных медицинских карт в ЕГИСЗ с помощью сервиса 1С:Медицина.",
+          "Сопровождением медицинских программ занимаются консультанты, специалисты технической службы и программисты отдела под руководством Евгения Кузнецова — эксперта с 20-летним стажем в сфере 1С. Команда отлично ориентируется в процессах больничных аптек и поликлиник и системах МДЛП и ЕГИСЗ.",
+          "4 часа работы консультантов по 1С, технических специалистов и разработчиков (если потребуется больше 4 часов, дополнительный час — 2 800 ₽) — отвечаем на вопросы по 1С, помогаем настроить программу или доработать ее под ваши потребности;"
+        ]
+      },
+      {
+        "title": "Помощник ЕГАИС для 1С:Розница 2.3 и 1С:УНФ/Розница 3.0",
+        "url": "https://infostart.ru/marketplace/441543/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "К созданной заявке подключается специалист. Дальнейшее обсуждение проблемы будет проходить в тикете техподдержки.",
+        "profile": {
+          "name": "Инфостарт",
+          "url": "https://infostart.ru/marketplace/441543/",
+          "long_name": "infostart.ru",
+          "img": "https://imgs.search.brave.com/risZ6GoSr9tqzk81rvK2pCrln14FQjeWdBygyBRJNX8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzdiOWY0NzVj/MzlkZGJmNTJmODM2/YWZiNTg0ZjZhNjMz/ZjUxOGE4N2I3M2Vm/Njk2YjZhZDc4MzFl/MzgzZGE4Mi9pbmZv/c3RhcnQucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "product",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "infostart.ru",
+          "hostname": "infostart.ru",
+          "favicon": "https://imgs.search.brave.com/risZ6GoSr9tqzk81rvK2pCrln14FQjeWdBygyBRJNX8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzdiOWY0NzVj/MzlkZGJmNTJmODM2/YWZiNTg0ZjZhNjMz/ZjUxOGE4N2I3M2Vm/Njk2YjZhZDc4MzFl/MzgzZGE4Mi9pbmZv/c3RhcnQucnUv",
+          "path": "› marketplace  › 441543"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/M01ym_XxfOAeLAjdw2j3amAfRaV4PCgID8yzIceI3Vw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbmZv/c3RhcnQucnUvdXBs/b2FkL2ltZy9sb2dv/MzAweDMwMC5qcGc",
+          "original": "https://infostart.ru/upload/img/logo300x300.jpg",
+          "logo": true
+        },
+        "article": {
+          "author": []
+        },
+        "product": {
+          "type": "Product",
+          "name": "Помощник ЕГАИС для 1С:Розница 2.3 и 1С:УНФ/Розница 3.0",
+          "url": "https://infostart.ru/marketplace/441543/",
+          "price": "3500.0",
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/3RBMnxYseildftI1SWAXfoPt1vEdZds5eBXHn8ZvPFw/rs:fit:360:283:1:0/g:ce/aHR0cHM6Ly9pbmZv/c3RhcnQucnUvdXBs/b2FkL2ltZy9sb2dv/MzAweDMwMC5qcGc",
+            "original": "https://infostart.ru/upload/img/logo300x300.jpg"
+          },
+          "description": "Помощник ЕГАИС предназначен для облегчения работы с алкогольной продукцией, а также для проведения инвентаризации",
+          "offers": [
+            {
+              "url": "https://infostart.ru/marketplace/441543/",
+              "priceCurrency": "RUB",
+              "price": "12000.0"
+            },
+            {
+              "url": "https://infostart.ru/marketplace/441543/",
+              "priceCurrency": "RUB",
+              "price": "7200.0"
+            },
+            {
+              "url": "https://infostart.ru/marketplace/441543/",
+              "priceCurrency": "RUB",
+              "price": "3600.0"
+            },
+            {
+              "url": "https://infostart.ru/marketplace/441543/",
+              "priceCurrency": "RUB",
+              "price": "6600.0"
+            },
+            {
+              "url": "https://infostart.ru/marketplace/441543/",
+              "priceCurrency": "RUB",
+              "price": "3600.0"
+            },
+            {
+              "url": "https://infostart.ru/marketplace/441543/",
+              "priceCurrency": "RUB",
+              "price": "8400.0"
+            },
+            {
+              "url": "https://infostart.ru/marketplace/441543/",
+              "priceCurrency": "RUB",
+              "price": "12000.0"
+            },
+            {
+              "url": "https://infostart.ru/marketplace/441543/",
+              "priceCurrency": "RUB",
+              "price": "3600.0"
+            },
+            {
+              "url": "https://infostart.ru/marketplace/441543/",
+              "priceCurrency": "RUB",
+              "price": "8400.0"
+            },
+            {
+              "url": "https://infostart.ru/marketplace/441543/",
+              "priceCurrency": "RUB",
+              "price": "7200.0"
+            },
+            {
+              "url": "https://infostart.ru/marketplace/441543/",
+              "priceCurrency": "RUB",
+              "price": "3600.0"
+            },
+            {
+              "url": "https://infostart.ru/marketplace/441543/",
+              "priceCurrency": "RUB",
+              "price": "3500.0"
+            }
+          ]
+        },
+        "extra_snippets": [
+          "Точную конфигурацию 1С, и версию платформы, на которой используете купленное решение (наименование и версию 1С можно взять из раздела \"О программе\"), версию купленной программы. К созданной заявке подключается специалист. Дальнейшее обсуждение проблемы будет проходить в тикете техподдержки.",
+          "Заполнить импортеров в импортной продукции (если они отсутствуют) по справкам 1 (в 1С по такой продукции должны быть справки 2) Будьте на связи: в РМК теперь отображается статус УТМ, а также расчетный остаток продукции в ЕГАИСе! Вам не страшны проблемы с ККТ и внезапные сбои: отсканированные в РМК марки сохраняются в файл (ТОЛЬКО ДЛЯ ФАЙЛОВЫХ БАЗ!)",
+          "В помарочной инвентаризации 3.0 исправлена проблема, когда в акты ЕГАИС попадала немаркируемая продукция ... Расширение адаптировано под версию 1С:Розница версии 2.3.2.28",
+          "Помощник ЕГАИС для 1С:УНФ/Розница 3.0 3 мес."
+        ]
+      },
+      {
+        "title": "1С:Медицина. Поликлиника - О решении - Описание",
+        "url": "https://solutions.1c.ru/catalog/clinic",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Поликлиника&quot; и &quot;1С:Медицина. Больница&quot; с поддержкой сервисов ЕГИСЗ, повышении цен, введении платного апгрейда и снятии с поддержки предыдущих редакций",
+        "profile": {
+          "name": "1c",
+          "url": "https://solutions.1c.ru/catalog/clinic",
+          "long_name": "solutions.1c.ru",
+          "img": "https://imgs.search.brave.com/W6pnrBR0helLI3R5SEm06gKC4QOljCbo1qkvb7EQxRU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzc1NDNiMDdi/NjdlZjhmZWFhOWY1/NmMxNjExZTIxMWEw/N2I0OWVkOWU2YzRk/M2RhMmM0YjRiNTIy/ODZkMjVkNC9zb2x1/dGlvbnMuMWMucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "solutions.1c.ru",
+          "hostname": "solutions.1c.ru",
+          "favicon": "https://imgs.search.brave.com/W6pnrBR0helLI3R5SEm06gKC4QOljCbo1qkvb7EQxRU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzc1NDNiMDdi/NjdlZjhmZWFhOWY1/NmMxNjExZTIxMWEw/N2I0OWVkOWU2YzRk/M2RhMmM0YjRiNTIy/ODZkMjVkNC9zb2x1/dGlvbnMuMWMucnUv",
+          "path": "› catalog  › clinic"
+        },
+        "extra_snippets": [
+          "Поликлиника\" и \"1С:Медицина. Больница\" с поддержкой сервисов ЕГИСЗ, повышении цен, введении платного апгрейда и снятии с поддержки предыдущих редакций"
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

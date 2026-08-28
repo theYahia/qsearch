@@ -1,0 +1,38 @@
+{
+  "_comment": "Query set for the corpus-first coverage threshold sweep (C4). Three groups, because a coverage gate can fail in two opposite directions and one group cannot see both. `covered` measures recall (does the gate serve what the corpus really holds?), `alien` measures false positives (does it claim coverage it does not have?), and `plausible_uncovered` is the hard middle: Russian, on-topic-sounding, but not swept — where a token-overlap score is most likely to be fooled.",
+  "_covered_selection": "NOT chosen by eye. These are the 10 golden queries with the most graded URLs actually present in the index (9,9,8,7,7,5,5,4,3,3 of them), measured against the live corpus. A query is 'covered' only if the documents that answer it are demonstrably there.",
+  "_alien_note": "'цена на бананы в Эквадоре сегодня' is here because it already passed the shipped gate at avg _rankingScore 0.604 against a 0.55 floor — a verified false positive, not a hypothetical one.",
+  "groups": {
+    "covered": [
+      { "q": "SkyCapital отзывы реальные надёжность развод", "graded_in_corpus": 9 },
+      { "q": "242-ФЗ локализация персональных данных граждан РФ серверы", "graded_in_corpus": 9 },
+      { "q": "A7A5 что это стейблкоин биржа обменник рубль", "graded_in_corpus": 8 },
+      { "q": "152-ФЗ трансграничная передача персональных данных уведомление", "graded_in_corpus": 7 },
+      { "q": "273-ФЗ статья 91 лицензирование образовательной деятельности", "graded_in_corpus": 7 },
+      { "q": "договор поручения обработки персональных данных требования", "graded_in_corpus": 5 },
+      { "q": "самозанятый лицензия на собственное программное обеспечение", "graded_in_corpus": 5 },
+      { "q": "валютный контроль ИП поступления из-за рубежа", "graded_in_corpus": 4 },
+      { "q": "самозанятый превысил лимит 2,4 млн рублей что делать", "graded_in_corpus": 3 },
+      { "q": "422-ФЗ статья 4 статья 6 ограничения виды деятельности", "graded_in_corpus": 3 }
+    ],
+    "plausible_uncovered": [
+      { "q": "регистрация товарного знака Роспатент сроки пошлина 2026" },
+      { "q": "нормы СанПиН освещённость групповой комнаты детского сада" },
+      { "q": "как оформить наследство на квартиру без завещания сроки" },
+      { "q": "техосмотр грузового автомобиля периодичность 2026 правила" },
+      { "q": "лицензия на образовательную деятельность для автошколы требования к площадке" },
+      { "q": "уплата утилизационного сбора при ввозе спецтехники ставки" },
+      { "q": "правила содержания домашних животных в многоквартирном доме" },
+      { "q": "порядок увольнения по сокращению штата выплаты компенсации" },
+      { "q": "требования пожарной безопасности к складским помещениям класс Ф5.2" },
+      { "q": "субсидия на газификацию частного дома условия получения" }
+    ],
+    "alien": [
+      { "q": "цена на бананы в Эквадоре сегодня", "_verified_false_positive": true },
+      { "q": "как испечь хлеб на закваске в горах" },
+      { "q": "zzzz qqqq nonexistent gibberish" },
+      { "q": "лучшие маршруты для треккинга в Патагонии в марте" },
+      { "q": "рецепт том ям с кокосовым молоком пошагово" }
+    ]
+  }
+}

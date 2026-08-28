@@ -1,0 +1,740 @@
+{
+  "type": "search",
+  "query": {
+    "original": "rusmedserv форум организация здравоохранения МИС обсуждение",
+    "show_strict_warning": false,
+    "altered": "rusmedserv форум организация здравоохранения мис обсуждение",
+    "is_navigational": true,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Дискуссионный Клуб Русского Медицинского Сервера",
+        "url": "https://forums.rusmedserv.com/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Медицинский Форум для врачей и пациентов. Бесплатные консультации, консилиумы, ответы на вопросы, свободное обсуждение медицинских проблем. Доказательная ...",
+        "profile": {
+          "name": "Rusmedserv",
+          "url": "https://forums.rusmedserv.com/",
+          "long_name": "forums.rusmedserv.com",
+          "img": "https://imgs.search.brave.com/70cCyTwpbgJ_CTgTbx2S4ZiB11mFi2kQgJJPfNT4a-Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Y2ODQyYzlk/MWI1MTE4MTk3Zjcw/NjgyMzM4NzI0YmQx/NTRlYzhjMjJmZjZh/YmRkODY0MGY1YmVk/MDExY2I1Ny9mb3J1/bXMucnVzbWVkc2Vy/di5jb20v"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forums.rusmedserv.com",
+          "hostname": "forums.rusmedserv.com",
+          "favicon": "https://imgs.search.brave.com/70cCyTwpbgJ_CTgTbx2S4ZiB11mFi2kQgJJPfNT4a-Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Y2ODQyYzlk/MWI1MTE4MTk3Zjcw/NjgyMzM4NzI0YmQx/NTRlYzhjMjJmZjZh/YmRkODY0MGY1YmVk/MDExY2I1Ny9mb3J1/bXMucnVzbWVkc2Vy/di5jb20v",
+          "path": ""
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/fJTOiCdAS6NCrZmjD37rKt1sAOEiYjhYRGnrMN6hv9U/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9mb3J1/bXMucnVzbWVkc2Vy/di5jb20vaW1hZ2Vz/L21pc2MvbG9nby5n/aWY.jpeg",
+          "original": "https://forums.rusmedserv.com/images/misc/logo.gif",
+          "logo": true
+        },
+        "extra_snippets": [
+          "Медицинский Форум для врачей и пациентов. Бесплатные консультации, консилиумы, ответы на вопросы, свободное обсуждение медицинских проблем. Доказательная медицина."
+        ]
+      },
+      {
+        "title": "Обработка персональных данных в медицинском учреждении [Архив] - медицинская консультация врача онлайн бесплатно - форум",
+        "url": "https://forums.rusmedserv.com/archive/index.php/t-120817.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Дискуссионный Клуб Русского Медицинского Сервера &gt; Форумы врачебных консультаций &gt; Медицинское право &gt; Обработка персональных данных в медицинском учреждении ... Уважаемые коллеги! Департамент здравоохранения Ханты - Мансийского автономного округа выложил в открытый доступ методические материалы к семинару ([Ссылки могут видеть только зарегистрированные и активированные пользователи]), прошедшему 10.12 по теме, обозначенной названием топика.",
+        "profile": {
+          "name": "Rusmedserv",
+          "url": "https://forums.rusmedserv.com/archive/index.php/t-120817.html",
+          "long_name": "forums.rusmedserv.com",
+          "img": "https://imgs.search.brave.com/70cCyTwpbgJ_CTgTbx2S4ZiB11mFi2kQgJJPfNT4a-Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Y2ODQyYzlk/MWI1MTE4MTk3Zjcw/NjgyMzM4NzI0YmQx/NTRlYzhjMjJmZjZh/YmRkODY0MGY1YmVk/MDExY2I1Ny9mb3J1/bXMucnVzbWVkc2Vy/di5jb20v"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forums.rusmedserv.com",
+          "hostname": "forums.rusmedserv.com",
+          "favicon": "https://imgs.search.brave.com/70cCyTwpbgJ_CTgTbx2S4ZiB11mFi2kQgJJPfNT4a-Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Y2ODQyYzlk/MWI1MTE4MTk3Zjcw/NjgyMzM4NzI0YmQx/NTRlYzhjMjJmZjZh/YmRkODY0MGY1YmVk/MDExY2I1Ny9mb3J1/bXMucnVzbWVkc2Vy/di5jb20v",
+          "path": "› archive  › index.php  › t-120817.html"
+        },
+        "extra_snippets": [
+          "В общем случае оператор ПД — учреждение здравоохранения, фонд обязательного медицинского страхования (ОМС), страховая медицинская организация — должен: 1.",
+          "В соответствии с перечисленными документами ИС организаций здравоохранения, в которых обрабатываются персональные данные о состоянии здоровья пациентов, необходимо отнести к следующим классам: * класс 1Г (максимальный гриф обрабатываемой информации — “конфиденциально”) — согласно руководящему документу, указанному в при",
+          "К сожалению, в настоящее время в штатных расписаниях учреждений здравоохранения сотрудники по информационной безопасности за очень редкими исключениями не предусмотрены. Так же как и в бюджетах большинства медицинских учреждений не предусмотрены расходы на организацию системы защиты информации.",
+          "Дискуссионный Клуб Русского Медицинского Сервера > Форумы врачебных консультаций > Медицинское право > Обработка персональных данных в медицинском учреждении ... Уважаемые коллеги! Департамент здравоохранения Ханты - Мансийского автономного округа выложил в открытый доступ методические материалы к семинару ([Ссылки могут видеть только зарегистрированные и активированные пользователи]), прошедшему 10.12 по теме, обозначенной названием топика."
+        ]
+      },
+      {
+        "title": "Отзывы о Forums.rusmedserv.com - Дискуссионный клуб Русского Медицинского Сервера",
+        "url": "https://otzovik.com/reviews/forums_rusmedserv_com-diskussionniy_klub_russkogo_medicinskogo_servera/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "На форуме forums.rusmedserv.com можно, конечно, получить компетентную информацию, но для этого необходимо самому хорошо разбираться в медици...",
+        "profile": {
+          "name": "Otzovik",
+          "url": "https://otzovik.com/reviews/forums_rusmedserv_com-diskussionniy_klub_russkogo_medicinskogo_servera/",
+          "long_name": "otzovik.com",
+          "img": "https://imgs.search.brave.com/YhklxbIXu1ciRdvGwvEhzGRWNv3XyhCGmlVJj-_CHQw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTk5ZDkwYjky/ZTA5YmZmY2FmZjdm/YmM1YTc1YzRhOThk/NDA5YTQ5ZTcwNGY0/ZTg3MzVmYTUwNDQ1/YjNjN2E1Ni9vdHpv/dmlrLmNvbS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "otzovik.com",
+          "hostname": "otzovik.com",
+          "favicon": "https://imgs.search.brave.com/YhklxbIXu1ciRdvGwvEhzGRWNv3XyhCGmlVJj-_CHQw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTk5ZDkwYjky/ZTA5YmZmY2FmZjdm/YmM1YTc1YzRhOThk/NDA5YTQ5ZTcwNGY0/ZTg3MzVmYTUwNDQ1/YjNjN2E1Ni9vdHpv/dmlrLmNvbS8",
+          "path": "› reviews  › forums_rusmedserv_com-diskussionniy_klub_russkogo_medicinskogo_servera"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/lap9lQo_EJtIESOGaddBqRCdM-ltcAo_o3_jYOrBB9Q/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLm90/em92aWsuY29tL29i/amVjdHMvYi80MDAw/MC8zMDM0Mi53ZWJw",
+          "original": "https://i.otzovik.com/objects/b/40000/30342.webp",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Платформа предоставляет возможность обмена мнениями и получения консультаций по медицинским вопросам. В ней собрана обширная база знаний и архив материалов, что способствует информированному подходу к здоровью.",
+          "На форуме forums.rusmedserv.com можно, конечно, получить компетентную информацию, но для этого необходимо самому хорошо разбираться в медицинских вопросах - уметь анализировать спец.",
+          "Недостатки: Не выполняют своей функции независимого онлайн обсуждения, форум слабоумных с одним ответом \"к врачу очно\"",
+          "Обратился на ресурс rusmedserv когда появилась повышенная потливость всего тела, я заранее сдал кровь, мочу и т. п., в крови оказался повышенный гемоглобин (почти 190), эритроциты, гематокрит и некоторые другие показатели."
+        ]
+      },
+      {
+        "title": "Медицинская информатика [Архив] - медицинский форум",
+        "url": "https://forums.rusmedserv.com/archive/index.php/t-14067.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Какие здесь ... вопросов, предложенных нами для обсуждения. (PC WEEK/RE, 15 мая 2007). Автор: Инна Лапрун, СК ПРЕСС. Как оценивать МИС....",
+        "profile": {
+          "name": "Rusmedserv",
+          "url": "https://forums.rusmedserv.com/archive/index.php/t-14067.html",
+          "long_name": "forums.rusmedserv.com",
+          "img": "https://imgs.search.brave.com/70cCyTwpbgJ_CTgTbx2S4ZiB11mFi2kQgJJPfNT4a-Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Y2ODQyYzlk/MWI1MTE4MTk3Zjcw/NjgyMzM4NzI0YmQx/NTRlYzhjMjJmZjZh/YmRkODY0MGY1YmVk/MDExY2I1Ny9mb3J1/bXMucnVzbWVkc2Vy/di5jb20v"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forums.rusmedserv.com",
+          "hostname": "forums.rusmedserv.com",
+          "favicon": "https://imgs.search.brave.com/70cCyTwpbgJ_CTgTbx2S4ZiB11mFi2kQgJJPfNT4a-Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Y2ODQyYzlk/MWI1MTE4MTk3Zjcw/NjgyMzM4NzI0YmQx/NTRlYzhjMjJmZjZh/YmRkODY0MGY1YmVk/MDExY2I1Ny9mb3J1/bXMucnVzbWVkc2Vy/di5jb20v",
+          "path": "› archive  › index.php  › t-14067.html"
+        },
+        "extra_snippets": [
+          "Какие здесь наметились принципиальные подходы, какие новые технологии способствуют развитию процесса, что является тормозом и каковы перспективы -- вот неполный перечень вопросов, предложенных нами для обсуждения. (PC WEEK/RE, 15 мая 2007). Автор: Инна Лапрун, СК ПРЕСС. Как оценивать МИС.",
+          "Американская телемедицинская ассоциация – ведущая организация, содействующая доступу потребителей медицинских услуг и специалистов в области здравоохранения к медицинскому обслуживанию при помощи телекоммуникационной технологии в США.",
+          "Мы надеемся, что Вы найдете время принять участие в этой работе, чтобы потом не жаловаться, что важные решения принимаются без широкого обсуждения. Наталья П. ... Журнал \"Врач и информационные технологии\", 2007, N 2 Статья ИНФОРМАТИЗАЦИЯ ЗДРАВООХРАНЕНИЯ: НОВЫЕ РЕФОРМЫ - СТАРЫЕ ПРОБЛЕМЫ",
+          "Участники могут рассказать о своих услугах, узнать об услугах других, предложить другим поучаствовать в новом проекте или самим войти в новый совместный проект. Они также смогут открыть новую тему обсуждения на форуме, поучаствовать в обсуждении других тем и многое другое."
+        ]
+      },
+      {
+        "title": "Русский Медицинский Сервер - Медицина и здоровье в России - Russian Medical Server - Доказательная медицина - Все о медицине. Лечение, здоровье, лекарства. Статьи, рефераты и истории болезни. Акушерство и гинекология. Все о беременности, родах, аборте и б",
+        "url": "https://www.rusmedserv.com/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Практически все методики снижения веса, существующие в мире, нашли отражение на страницах нашего сайта. Самый большой в рунете ФОРУМ по вопросам хирургического снижения веса.",
+        "profile": {
+          "name": "Rusmedserv",
+          "url": "https://www.rusmedserv.com/",
+          "long_name": "rusmedserv.com",
+          "img": "https://imgs.search.brave.com/yDpttXhM9hkB7ZDTKtejww5OmL-jLmt-zKQPmNghuD8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTE4YWFkNzZm/Yjg4Yjg2MTk4OWRm/YTI2MjE2MWM3MGY0/MDUwMDc1Mjk2Mjlj/Njc4MWFiMDQ2NDRi/YjMzNzA2OS93d3cu/cnVzbWVkc2Vydi5j/b20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "rusmedserv.com",
+          "hostname": "www.rusmedserv.com",
+          "favicon": "https://imgs.search.brave.com/yDpttXhM9hkB7ZDTKtejww5OmL-jLmt-zKQPmNghuD8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTE4YWFkNzZm/Yjg4Yjg2MTk4OWRm/YTI2MjE2MWM3MGY0/MDUwMDc1Mjk2Mjlj/Njc4MWFiMDQ2NDRi/YjMzNzA2OS93d3cu/cnVzbWVkc2Vydi5j/b20v",
+          "path": ""
+        },
+        "extra_snippets": [
+          "Медицина и Здоровье. Все о Медицине в России. Болезни и лекарства, консультации специалистов, рекомендации по лечению. Аптека и лекарства. Здоровье и здоровый образ жизни.",
+          "Аналитическая компания MAR Consult провела исследование про отношение населения к использованию электронных медицинских карт (ЭМК). Исследование показало смешанное отношение пользователей к внедрению новых технологий в систему здравоохранения.",
+          "Практически все методики снижения веса, существующие в мире, нашли отражение на страницах нашего сайта. Самый большой в рунете ФОРУМ по вопросам хирургического снижения веса."
+        ]
+      },
+      {
+        "title": "Отказ в принятии рекомендаций из частной клиники [Архив] - медицинский форум",
+        "url": "https://forums.rusmedserv.com/archive/index.php/t-486242.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "[Архив] Отказ в принятии рекомендаций из частной клиники Медицинское право",
+        "page_age": "2023-02-08T00:00:00",
+        "profile": {
+          "name": "Rusmedserv",
+          "url": "https://forums.rusmedserv.com/archive/index.php/t-486242.html",
+          "long_name": "forums.rusmedserv.com",
+          "img": "https://imgs.search.brave.com/70cCyTwpbgJ_CTgTbx2S4ZiB11mFi2kQgJJPfNT4a-Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Y2ODQyYzlk/MWI1MTE4MTk3Zjcw/NjgyMzM4NzI0YmQx/NTRlYzhjMjJmZjZh/YmRkODY0MGY1YmVk/MDExY2I1Ny9mb3J1/bXMucnVzbWVkc2Vy/di5jb20v"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forums.rusmedserv.com",
+          "hostname": "forums.rusmedserv.com",
+          "favicon": "https://imgs.search.brave.com/70cCyTwpbgJ_CTgTbx2S4ZiB11mFi2kQgJJPfNT4a-Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Y2ODQyYzlk/MWI1MTE4MTk3Zjcw/NjgyMzM4NzI0YmQx/NTRlYzhjMjJmZjZh/YmRkODY0MGY1YmVk/MDExY2I1Ny9mb3J1/bXMucnVzbWVkc2Vy/di5jb20v",
+          "path": "› archive  › index.php  › t-486242.html"
+        },
+        "age": "February 8, 2023",
+        "extra_snippets": [
+          "\"За свой счёт\" имеет право выписать рецепт врач, работающий в любой системе здравоохранения. Не хочет выписывать врач ОМС - обратитесь в частную клинику.",
+          "А вот льготный препарат может выписать только врач, работающий в учреждении здравоохранения государственном (муниципальном) и только при условии включения в соответствующий реестр.",
+          "Запрещена выписка препаратов списков II и III только индивидуальным предпринимателям, осуществляющим медицинскую деятельность (п.7 прил.1 к приказу Министерства здравоохранения Российской Федерации от 24 ноября 2021 г.",
+          "Дискуссионный Клуб Русского Медицинского Сервера > Форумы врачебных консультаций > Медицинское право > Отказ в принятии рекомендаций из частной клиники"
+        ]
+      },
+      {
+        "title": "Отзыв о Forums.rusmedserv.com - Дискуссионный клуб Русского Медицинского Сервера | РусМедСервер. Страх и Ненависть на Форуме. \"Предсказание\" смерти от \"врача\" - модератора Dr. Vad",
+        "url": "https://otzovik.com/review_16667444.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Коротко моя история и проблема: Обратилась я на этот форум не от хорошей жизни. Привела меня туда одна моя нарастающая и повторяющиеся проблема с женским здоровьем.",
+        "profile": {
+          "name": "Otzovik",
+          "url": "https://otzovik.com/review_16667444.html",
+          "long_name": "otzovik.com",
+          "img": "https://imgs.search.brave.com/YhklxbIXu1ciRdvGwvEhzGRWNv3XyhCGmlVJj-_CHQw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTk5ZDkwYjky/ZTA5YmZmY2FmZjdm/YmM1YTc1YzRhOThk/NDA5YTQ5ZTcwNGY0/ZTg3MzVmYTUwNDQ1/YjNjN2E1Ni9vdHpv/dmlrLmNvbS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "review",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "otzovik.com",
+          "hostname": "otzovik.com",
+          "favicon": "https://imgs.search.brave.com/YhklxbIXu1ciRdvGwvEhzGRWNv3XyhCGmlVJj-_CHQw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTk5ZDkwYjky/ZTA5YmZmY2FmZjdm/YmM1YTc1YzRhOThk/NDA5YTQ5ZTcwNGY0/ZTg3MzVmYTUwNDQ1/YjNjN2E1Ni9vdHpv/dmlrLmNvbS8",
+          "path": "› review_16667444.html"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/lap9lQo_EJtIESOGaddBqRCdM-ltcAo_o3_jYOrBB9Q/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLm90/em92aWsuY29tL29i/amVjdHMvYi80MDAw/MC8zMDM0Mi53ZWJw",
+          "original": "https://i.otzovik.com/objects/b/40000/30342.webp",
+          "logo": false
+        },
+        "review": {
+          "type": "Review",
+          "name": "РусМедСервер. Страх и Ненависть на Форуме. \"Предсказание\" смерти от \"врача\" - модератора Dr. Vad",
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/9d2ikNX4xrdNtsyQqJ7lsSQiACmBulww5QSQdas1Hr4/rs:fit:360:283:1:0/g:ce/aHR0cHM6Ly9pLm90/em92aWsuY29tL29i/amVjdHMvYi80MDAw/MC8zMDM0Mi53ZWJw",
+            "original": "https://i.otzovik.com/objects/b/40000/30342.webp"
+          },
+          "description": "Коротко моя история и проблема Обратилась я на этот форум не от хорошей жизни. Привела меня туда одна моя нарастающая и повторяющиеся проблема с женским здоровьем. Коротко моя история и проблема:Обратилась я на этот форум не от хорошей жизни. Привела меня туда одна моя нарастающая и повторяющиеся проблема с женским здоровьем. Я женщина перешагнувшая порог тридцатицлетия, не замужем и без детей, поэтому тема для меня болезненная и очень тревожащая. У врачей в наших местных поликлиниках очень мало времени и большая текучка. Платные врачи тоже не сильно заинтересованы в беседах, больше сосредоточены на анализах и диагностике. Решилась на поиски ответов онлайн и пришла на РусМедСервер. · Изначально мне помогали с ответами на мои вопросы, плюс я пошла к знакомому гинекологу за советами и рецептами на лекарство, начала их принимать, чтобы сдать потом анализы на гормоны по совеу врача с РусМедСервера. Но так же местная гинеколог настойчиво рекомендовала мне пропить курс КОКов в течении 6 месяцев, когда на форуме мне сказали что есть противопоказания. Здесь начинается про сообщения полные ненависти к людям с ожирением от Dr. Vad:Я хотела узнать, что мне делать, как выбрать безопасный КОК на время, потому что пока что я худеть не собираюсь. На экстремальные диеты я не сажусь (кето, низкоуглеводная), потому что в моей жизненной ситуации это срыв 100%. Мне нужно было временное решение пока я встаю на рельсы здоровья.Dr. Vad дальше начал сравнивать тягу к углеводам и сахарам с наркоманией и алкоголизмом. Якобы, вот, им тоже нельзя до конца жизни употреблять. (А ничего, что их никто и не заставлял начинать? А еда - необходимость с первых дней жизни). И вы не смейте жрать. Кинул ссылку на сомнительные исследования, которые рассказывали что у мышей и грызунов сахар вызывает реакцию как на кокаин( вспоминается шутка одного фитнес тренера \"Когда за пачку сахара будут сосать в туалете клуба как за пакетик кокаина, тогда я и назову это наркотиком\"). В самом начале исследования и говорилось, что исследование не нашло достоверного подтверждения что сахар вызывает зависимость у грызунов. Просто уровень экспертности в теме у Dr. Vad - бабка у подъе…",
+          "rating": {
+            "ratingValue": 1.0,
+            "bestRating": 5.0,
+            "is_tripadvisor": false
+          }
+        },
+        "extra_snippets": [
+          "Коротко моя история и проблема: Обратилась я на этот форум не от хорошей жизни. Привела меня туда одна моя нарастающая и повторяющиеся проблема с женским здоровьем.",
+          "Но так же местная гинеколог настойчиво рекомендовала мне пропить курс КОКов в течении 6 месяцев, когда на форуме мне сказали что есть противопоказания.",
+          "Недостатки: форум больше вредит.",
+          "Я был зарегистрирован на форуме давно, но форум превратился во что-то противное и не полезное!"
+        ]
+      },
+      {
+        "title": "Конференции российские [Архив] - медицинский форум",
+        "url": "https://forums.rusmedserv.com/archive/index.php/t-30748.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "3. Обеспечение доступности высокотехнологичной медицинской помощи в рамках реализации приоритетного национального проекта в сфере здравоохранения.",
+        "profile": {
+          "name": "Rusmedserv",
+          "url": "https://forums.rusmedserv.com/archive/index.php/t-30748.html",
+          "long_name": "forums.rusmedserv.com",
+          "img": "https://imgs.search.brave.com/70cCyTwpbgJ_CTgTbx2S4ZiB11mFi2kQgJJPfNT4a-Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Y2ODQyYzlk/MWI1MTE4MTk3Zjcw/NjgyMzM4NzI0YmQx/NTRlYzhjMjJmZjZh/YmRkODY0MGY1YmVk/MDExY2I1Ny9mb3J1/bXMucnVzbWVkc2Vy/di5jb20v"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forums.rusmedserv.com",
+          "hostname": "forums.rusmedserv.com",
+          "favicon": "https://imgs.search.brave.com/70cCyTwpbgJ_CTgTbx2S4ZiB11mFi2kQgJJPfNT4a-Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Y2ODQyYzlk/MWI1MTE4MTk3Zjcw/NjgyMzM4NzI0YmQx/NTRlYzhjMjJmZjZh/YmRkODY0MGY1YmVk/MDExY2I1Ny9mb3J1/bXMucnVzbWVkc2Vy/di5jb20v",
+          "path": "› archive  › index.php  › t-30748.html"
+        },
+        "extra_snippets": [
+          "3. Утвердить: - перечень основных вопросов, планируемых для рассмотрения на конференции, согласно приложению N 1; - состав организационного комитета конференции, согласно приложению N 2. 4. Рекомендовать руководителям органов управления здравоохранением субъектов Российской Федерации, руководителям учреждений здравоохранения",
+          "5. Организационному комитету конференции в недельный срок после проведения конференции представить в Департамент фармацевтической деятельности, обеспечения благополучия человека, науки, образования Министерства здравоохранения и социального развития Российской Федерации отчет о ее проведении.",
+          "3. Обеспечение доступности высокотехнологичной медицинской помощи в рамках реализации приоритетного национального проекта в сфере здравоохранения. 4. Организационно-методические аспекты взаимодействия научных организаций и практического здравоохранения по вопросам реализации научных разработок высокотехнологичной медицинской помощи.",
+          "Рекомендации FDA по ведению беременных с острым и рецидивирующим циститом, пиелонефритом и бессимптомной бактериурией\", а также итоговой конференции в Перинатальном медицинском центре (Севастопольский проспект, дом 24А, строение 1). Департамент здравоохранения поручает: оказывать содействие представителям АО \"Замбон Групп\" в о"
+        ]
+      },
+      {
+        "title": "Прошедшие мероприятия — СПб ГБУЗ МИАЦ",
+        "url": "https://spbmiac.ru/regionam/proshedshie-meropriyatiya/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "9 сессий и круглых ... для обсуждения завтрашнего дня здравоохранения. Регистрация: на сайте форума https://telemedforum.ru/ По всем вопросам обращаться в Организационный ...",
+        "profile": {
+          "name": "Spbmiac",
+          "url": "https://spbmiac.ru/regionam/proshedshie-meropriyatiya/",
+          "long_name": "spbmiac.ru",
+          "img": "https://imgs.search.brave.com/-hNAwcWzJHGOhD7dlBjcmoN7VLDFVoa4OhUd5gvN6E8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZGIxNDhmOGFh/MDBmZDNhNDU4NTVi/M2ZmNGZkMTA3NmY0/YmQ3NmZjZmYwMTVh/NGNhOGRiNmRiZDg3/ZWEzNzU2Ni9zcGJt/aWFjLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "spbmiac.ru",
+          "hostname": "spbmiac.ru",
+          "favicon": "https://imgs.search.brave.com/-hNAwcWzJHGOhD7dlBjcmoN7VLDFVoa4OhUd5gvN6E8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZGIxNDhmOGFh/MDBmZDNhNDU4NTVi/M2ZmNGZkMTA3NmY0/YmQ3NmZjZmYwMTVh/NGNhOGRiNmRiZDg3/ZWEzNzU2Ni9zcGJt/aWFjLnJ1Lw",
+          "path": "› regionam  › proshedshie-meropriyatiya"
+        },
+        "extra_snippets": [
+          "9 сессий и круглых столов по цифровизации здравоохранения, телемедицине, импортозамещению, образованию, управлению и инвестициям соберут ведущих экспертов и участников для обсуждения завтрашнего дня здравоохранения. Регистрация: на сайте форума https://telemedforum.ru/ По всем вопросам обращаться в Организационный комитет:",
+          "производство и лицензирование гаджетов, унификация МИС; ... сервисные модели, позволяющие не разориться на цифровизации; ... новая логистика международного сотрудничества в здравоохранении; Сайт мероприятия: https://telemedforum.ru/ ... Форум - масштабное деловое событие, ориентированное на социально-экономическое развитие территорий, выстраивание эффективных деловых коммуникаций, привлечение инвестиций в многоотраслевые проекты регионов и городов стран БРИКС, а также государств-партнёров.",
+          "Форум – главная на Северо-Западе России презентационная площадка достижений и проектов развития медицинской науки и практики, медицинской промышленности и организации здравоохранения.",
+          "Обеспечение преемственности оказания медицинской помощи при цифровой трансформации ГИС и МИС. Информационная среда здравоохранения на основе данных."
+        ]
+      },
+      {
+        "title": "Дискуссионный Клуб Русского Медицинского Сервера | отзывы",
+        "url": "https://irecommend.ru/content/diskussionnyi-klub-russkogo-meditsinskogo-servera",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Форум русмедсервера - консультирование по медицинским вопросам.. Здравствуйте! Часто мы прибегаем к помощи интернета, чтобы найти ответы на проблемы со здоровьем, ...",
+        "profile": {
+          "name": "iRecommend",
+          "url": "https://irecommend.ru/content/diskussionnyi-klub-russkogo-meditsinskogo-servera",
+          "long_name": "irecommend.ru",
+          "img": "https://imgs.search.brave.com/OG5oa7mJV01T_cAVRpXPWKInUsiDH00upyqGVS9Mnkw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTNlOGM0YTYz/YjJjNjdlODNlOTg0/YjFkZjlkNTkyODY2/MjM5YTJkZDcwNzAx/ZTRlNjVhYTFlYmZh/MDNhNTk0My9pcmVj/b21tZW5kLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "irecommend.ru",
+          "hostname": "irecommend.ru",
+          "favicon": "https://imgs.search.brave.com/OG5oa7mJV01T_cAVRpXPWKInUsiDH00upyqGVS9Mnkw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTNlOGM0YTYz/YjJjNjdlODNlOTg0/YjFkZjlkNTkyODY2/MjM5YTJkZDcwNzAx/ZTRlNjVhYTFlYmZh/MDNhNTk0My9pcmVj/b21tZW5kLnJ1Lw",
+          "path": "  › каталог отзывов  › разное  › сайты"
+        },
+        "extra_snippets": [
+          "Форум русмедсервера - консультирование по медицинским вопросам.. Здравствуйте! Часто мы прибегаем к помощи интернета, чтобы найти ответы на проблемы со здоровьем, проверить…",
+          "Форум Русмедсервер - популярный ресурс. Можно ли доверять советам врачей с интернета? Особенно когда это касается ребенка? Плюс возможность получить порцию легкого хамства и снобизма. Сайт Дискуссионный клуб Русмедсервера forums.rusmedserv.com",
+          "Форум русмедсервера - консультирование по медицинским вопросам. Здравствуйте!",
+          "В медвопросах доверяю только ему! Форум Русмедсервера назову лучшим сайтом в медицинских вопросах."
+        ]
+      },
+      {
+        "title": "Forums.rusmedserv.com - Дискуссионный клуб Русского Медицинского Сервера — не рекомендуют! 17 отзывов и фото | Рубрикатор",
+        "url": "https://rubrikator.org/items/forums-rusmedserv-com_232646",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Сначала не понял где я написал рекламу, затем зашел на их главную страницу, а там куча клиник и услуг лечение в Израиле, Германии и т.п. Понятно они не дадут людям обсуждать качество услуг своих спонсоров. Вобщем это не форум для свободного обсуждения медицинских тем, а скрытое продвижение своих услуг, с запретами на их обсуждение.",
+        "profile": {
+          "name": "Рубрикатор",
+          "url": "https://rubrikator.org/items/forums-rusmedserv-com_232646",
+          "long_name": "rubrikator.org",
+          "img": "https://imgs.search.brave.com/xaxfZrz64G0fo3aJczP0J6QSKMjLPwO1wiTMqfUfBDU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODY0M2E3YzU1/MWEyMTUyZTkwZmY1/OGU1Mjg2ZTQ5OGE3/Yzg0ZDcxZjUyNGNj/YmFlNmVlYjU1NGMx/YTYyYzkzNC9ydWJy/aWthdG9yLm9yZy8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "rubrikator.org",
+          "hostname": "rubrikator.org",
+          "favicon": "https://imgs.search.brave.com/xaxfZrz64G0fo3aJczP0J6QSKMjLPwO1wiTMqfUfBDU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODY0M2E3YzU1/MWEyMTUyZTkwZmY1/OGU1Mjg2ZTQ5OGE3/Yzg0ZDcxZjUyNGNj/YmFlNmVlYjU1NGMx/YTYyYzkzNC9ydWJy/aWthdG9yLm9yZy8",
+          "path": "  › интернет  › разное"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/18R25avMlnEPiyjIu965FhTYrz5_witnlEB9Zg77mRE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9ydWJy/aWthdG9yLm9yZy9v/Zy9leUowSWpvaWFT/SXNJbk1pT2pJek1q/WTBOaXdpYUNJNklt/aGthMkp1TWlKOS5q/cGc",
+          "original": "https://rubrikator.org/og/eyJ0IjoiaSIsInMiOjIzMjY0NiwiaCI6Imhka2JuMiJ9.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Я отвела своего ребенка к этому врачу, разумеется, с результатами разных исследований. Она не подтвердила диагноз, поставленный Дробитовой, напротив, успокоила, т. к. никакого диагноза у ребенка не оказалось. На форуме forums. rusmedserv.",
+          "Обман и скрытое продвижение своих услуг. Я создал на форуме rusmedserv.com дискуссию про сравнение медицины в России, Беларуси, Австралии и Германии.",
+          "Сначала не понял где я написал рекламу, затем зашел на их главную страницу, а там куча клиник и услуг лечение в Израиле, Германии и т.п. Понятно они не дадут людям обсуждать качество услуг своих спонсоров. Вобщем это не форум для свободного обсуждения медицинских тем, а скрытое продвижение своих услуг, с запретами на их обсуждение.",
+          "— Плюсы: нет — Минусы: Не выполняют своей функции независимого онлайн обсуждения, форум слабоумных с одним ответом \"к врачу очно\" Год пользования услугами: 2016"
+        ]
+      },
+      {
+        "title": "Петербургский медицинский форум",
+        "url": "https://medforumspb.ru/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "В качестве дополнительного функционала выступают различные возможности онлайн-подписания документов, интеграции с CRM и МИС, оплата через СБП и другие возможности...",
+        "profile": {
+          "name": "Medforumspb",
+          "url": "https://medforumspb.ru/",
+          "long_name": "medforumspb.ru",
+          "img": "https://imgs.search.brave.com/-zOvIubmDJS12qep4P_ekUPXGTv6WGI-DXlWLiinbkg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDY4MjUxMjg3/OGJiN2Y0M2I4ZTFj/ZTBkODc0MThjMzk5/M2ExYzQ5MWJhMjEx/NWZiMGI3M2MzYzA1/ZTU3MmY4Yy9tZWRm/b3J1bXNwYi5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medforumspb.ru",
+          "hostname": "medforumspb.ru",
+          "favicon": "https://imgs.search.brave.com/-zOvIubmDJS12qep4P_ekUPXGTv6WGI-DXlWLiinbkg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDY4MjUxMjg3/OGJiN2Y0M2I4ZTFj/ZTBkODc0MThjMzk5/M2ExYzQ5MWJhMjEx/NWZiMGI3M2MzYzA1/ZTU3MmY4Yy9tZWRm/b3J1bXNwYi5ydS8",
+          "path": ""
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/d72JU6LAmX3GH9h1srokmObPSmxUwkGL2N1kD6Owo6E/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRm/b3J1bXNwYi5ydS9p/bWcvMzM3MTY3M18x/MjAwL29nLmpwZw",
+          "original": "https://medforumspb.ru/img/3371673_1200/og.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "В рамках дискуссионной площадки XIX «Петербургского медицинского форума» 17-19 июня 2026 года мы продолжаем обсуждение профессионалами отрасли, путей развития российского здравоохранения, которое назвали - медицинская литургия. 1. С.А. Вы начинали как врач, затем прошли путь в управление, консалтинг, инвестиционные и организационные проекты.",
+          "5. Как генеральный директор крупного центра Вы наверняка осмысливали один из важных вопросов в организации здравоохранения: какими качествами - личными и профессиональными должен обладать руководитель клиники?",
+          "Медицинская литургия №7 \"Пациент не должен становиться коммерческим проектом\" Собеседник: Станислав Николаевич Жирков, генеральный директор Республиканской больницы №1 - Национального центра медицины имени М.Е.Николаева, Республика Саха (Якутия) Ведущий: Михаил Торичеллиевич Югай, доцент кафедры экономики и управления здра",
+          "В качестве дополнительного функционала выступают различные возможности онлайн-подписания документов, интеграции с CRM и МИС, оплата через СБП и другие возможности."
+        ]
+      },
+      {
+        "title": "V Юбилейный научно-методический форум организаторов здравоохранения",
+        "url": "https://niioz.ru/projects/forum-organizatorov-zdravookhraneniya/2023/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Ключевой темой форума станет обсуждение важнейших вопросов организации и управления системой московского здравоохранения, включая кадровые стратегические решения и предложения по эффективному финансовому планированию...",
+        "profile": {
+          "name": "Niioz",
+          "url": "https://niioz.ru/projects/forum-organizatorov-zdravookhraneniya/2023/",
+          "long_name": "niioz.ru",
+          "img": "https://imgs.search.brave.com/QACdv1yx32sar6H1eEkI6NWHbvV3flC04nDmmk6tQRs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzJiZWI0MGEw/NGYxZDBiYmNlZWFm/NDBmNzFiZTA5NzIz/ODg2OWY0YTg2ZDMx/ZDljMWMwZTU2N2Uz/NzdmMGFhYS9uaWlv/ei5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "niioz.ru",
+          "hostname": "niioz.ru",
+          "favicon": "https://imgs.search.brave.com/QACdv1yx32sar6H1eEkI6NWHbvV3flC04nDmmk6tQRs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzJiZWI0MGEw/NGYxZDBiYmNlZWFm/NDBmNzFiZTA5NzIz/ODg2OWY0YTg2ZDMx/ZDljMWMwZTU2N2Uz/NzdmMGFhYS9uaWlv/ei5ydS8",
+          "path": "› projects  › forum-organizatorov-zdravookhraneniya  › 2023"
+        },
+        "extra_snippets": [
+          "О том, как меняется столичная медицина, об основных достижениях и успешных управленческих практиках расскажут на пленарном заседании и панельных секциях главные врачи столичных клиник, организаторы здравоохранения, врачи, ученые, эксперты. Ключевой темой форума станет обсуждение важнейших вопросов организации и управления системой московского здравоохранения, включая кадровые стратегические решения и предложения по эффективному финансовому планированию.",
+          "Сведения об организации, осуществляющей образовательную деятельность ... V Юбилейный научно-методический форум организаторов здравоохранения",
+          "«Пациентоориентированные инновационные подходы в организации нефрологической помощи в столичном здравоохранении»",
+          "А. С. Логинова ДЗМ», ведущий специалист организационно-методического отдела по гастроэнтерологии ГБУ «НИИОЗММ ДЗМ», д.м.н. ... главный гастроэнтеролог СЗАО ДЗМ, ведущий специалист ОМО по гастроэнтерологии Департамента здравоохранения города Москвы, заведующий гастроэнтерологическим отделением ГБУЗ МКНЦ им."
+        ]
+      },
+      {
+        "title": "13 мая 2026 г. Всероссийский научно-образовательный форум с международным участием «Проблемы общественного здоровья и организации здравоохранения: от первичного звена – до международных программ»",
+        "url": "https://education.almazovcentre.ru/en/2026/03/23/vserossijskij-nauchno-obrazovatelnyj-forum-s-mezhdunarodnym-uchastiem-problemy-obshhestvennogo-zdorovya-i-organizaczii-zdravoohraneniya-ot-pervichnogo-zvena-do-mezhdun/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Цель форума — знакомство с лучшими методическими разработками по организации медицинской помощи и управлению медицинскими и фармацевтическими организациями.",
+        "page_age": "2026-03-23T11:29:06",
+        "profile": {
+          "name": "Almazovcentre",
+          "url": "https://education.almazovcentre.ru/en/2026/03/23/vserossijskij-nauchno-obrazovatelnyj-forum-s-mezhdunarodnym-uchastiem-problemy-obshhestvennogo-zdorovya-i-organizaczii-zdravoohraneniya-ot-pervichnogo-zvena-do-mezhdun/",
+          "long_name": "education.almazovcentre.ru",
+          "img": "https://imgs.search.brave.com/z5g-iW6RjAvZgPy51oIeXrmCJml_FwAUIhczKm5MjI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZGQ0YjhkYmEy/NWJhM2QxMWM3OTU3/MGJmODA4ODE5ZWNk/ZGNhZDJhMTAwNjRl/YzBlODY3MWZmOTMz/YWU1MmVlMy9lZHVj/YXRpb24uYWxtYXpv/dmNlbnRyZS5ydS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "education.almazovcentre.ru",
+          "hostname": "education.almazovcentre.ru",
+          "favicon": "https://imgs.search.brave.com/z5g-iW6RjAvZgPy51oIeXrmCJml_FwAUIhczKm5MjI0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZGQ0YjhkYmEy/NWJhM2QxMWM3OTU3/MGJmODA4ODE5ZWNk/ZGNhZDJhMTAwNjRl/YzBlODY3MWZmOTMz/YWU1MmVlMy9lZHVj/YXRpb24uYWxtYXpv/dmNlbnRyZS5ydS8",
+          "path": "  › главная страница  › новости  › 13 мая 2026 г. всероссийский научно-образовательный форум с международным участием «проблемы общественного здоровья и организации здравоохранения: от первичного звена – до международных программ»"
+        },
+        "age": "March 23, 2026",
+        "organization": {
+          "type": "organization",
+          "name": "Институт Медицинского Образования ФГБУ «НМИЦ им. В.А. Алмазова»",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Уважаемые студенты, ординаторы, аспиранты, молодые учёные и специалисты! Приглашаем Вас принять участие в работе Всероссийского научно-образовательного форума с международным участием «Проблемы общественного здоровья и организации здравоохранения: от первичного звена – до международных программ». Цель форума - знакомство с лучшими методическими разработками по организации медицинской помощи и управлению медицинскими и фармацевтическими организациями.",
+          "13 мая 2026 г. Всероссийский научно-образовательный форум с международным участием «Проблемы общественного здоровья и организации здравоохранения: от первичного звена – до международных программ»",
+          "Цель форума — знакомство с лучшими методическими разработками по организации медицинской помощи и управлению медицинскими и фармацевтическими организациями. В программе форума выступления ведущих специалистов — организаторов здравоохранения Курской области, России и ближнего зарубежья.",
+          "Дата проведения: 13 мая 2026 г. Формат участия: очный (включает доклады и открытые лекции специалистов центральных НИИ, ведущих вузов и региональных органов управления здравоохранением, ориентированные на руководителей медицинских организаций и их подразделений, главных (старших) медицинских сестер и акушерок, практикующих врачей, студентов, ординаторов и аспирантов) Место проведения: Курский государственный медицинский университет, аудитория Анатомического театра"
+        ]
+      },
+      {
+        "title": "forums.rusmedserv.com Competitors - Top Sites Like forums.rusmedserv.com | Similarweb",
+        "url": "https://www.similarweb.com/website/forums.rusmedserv.com/competitors/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "медицинский форум для врачей и пациентов. бесплатные консультации, консилиумы, ответы на вопросы, свободное обсуждение медицинских проблем.",
+        "profile": {
+          "name": "Similarweb",
+          "url": "https://www.similarweb.com/website/forums.rusmedserv.com/competitors/",
+          "long_name": "similarweb.com",
+          "img": "https://imgs.search.brave.com/U6PC3sxswGYIexJuUmh1mObFeIsCkn6ufh1cOfcskhI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjRkZWZkNzBh/NDNiOTEzYzMyNjY0/ZDU5MmEyMGM2Mzlm/NTRkZDUxNjM1YTQ0/ZmZlMGZjNDYxYmE4/MzkyMjlkNi93d3cu/c2ltaWxhcndlYi5j/b20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "similarweb.com",
+          "hostname": "www.similarweb.com",
+          "favicon": "https://imgs.search.brave.com/U6PC3sxswGYIexJuUmh1mObFeIsCkn6ufh1cOfcskhI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjRkZWZkNzBh/NDNiOTEzYzMyNjY0/ZDU5MmEyMGM2Mzlm/NTRkZDUxNjM1YTQ0/ZmZlMGZjNDYxYmE4/MzkyMjlkNi93d3cu/c2ltaWxhcndlYi5j/b20v",
+          "path": "  › home  › forums.rusmedserv.com  › top 10 forums.rusmedserv.com competitors"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/iBlOMlzZCRtDCufGyZ8eFVJ51Er_t1djgOFL-ElVXYs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtdXMtZWFzdC0x/LnNpbWlsYXJjZG4u/Y29tL2J1aWxkLzIw/MjQwNjExLm1hc3Rl/ci5kM2ZjNTI2L2Rp/c3Qvc2NyaXB0cy9s/aXRlLWFwcC9hc3Nl/dHMvZTIzY2YzNTA4/Y2YxMGNiM2I1ODAu/cG5n",
+          "original": "https://static-us-east-1.similarcdn.com/build/20240611.master.d3fc526/dist/scripts/lite-app/assets/e23cf3508cf10cb3b580.png",
+          "logo": false
+        },
+        "extra_snippets": [
+          "forums.rusmedserv.com top 10 competitors & alternatives. Analyze sites like forums.rusmedserv.com ranked by keyword and audience similarity for free with one click here",
+          "универсальный многопрофильный медицинский сервер, включающий в себя библиотеку, архив рефератов, новости медицины, календарь медицинских событий, биржу труда, доски объявлений, каталоги медицинских сайтов и учреждений, медицинские форумы, психологические тесты и комплекс медицинских магазинов. ... правовые проблемы медицины, указы президента, федеральные законы, постановления правительства рф в области здравоохранения и медицины, приказы мз рф.",
+          "медицинский форум для врачей и пациентов. бесплатные консультации, консилиумы, ответы на вопросы, свободное обсуждение медицинских проблем.",
+          "Медицинский форум, у нас можно задать вопрос врачу, предлагаем для Вас бесплатную консультацию врача онлайн, а также психологические консультации."
+        ]
+      },
+      {
+        "title": "2013: переходим на стандарты и качество помощи [Архив] - медицинская консультация врача онлайн бесплатно - форум",
+        "url": "https://forums.rusmedserv.com/archive/index.php/t-256701.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Всемирная организация здравоохранения понимает под качеством медицинской помощи совокупность свойств и характеристик медицинских услуг, которые определяют ...",
+        "profile": {
+          "name": "Rusmedserv",
+          "url": "https://forums.rusmedserv.com/archive/index.php/t-256701.html",
+          "long_name": "forums.rusmedserv.com",
+          "img": "https://imgs.search.brave.com/70cCyTwpbgJ_CTgTbx2S4ZiB11mFi2kQgJJPfNT4a-Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Y2ODQyYzlk/MWI1MTE4MTk3Zjcw/NjgyMzM4NzI0YmQx/NTRlYzhjMjJmZjZh/YmRkODY0MGY1YmVk/MDExY2I1Ny9mb3J1/bXMucnVzbWVkc2Vy/di5jb20v"
+        },
+        "language": "ru",
+        "family_friendly": false,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forums.rusmedserv.com",
+          "hostname": "forums.rusmedserv.com",
+          "favicon": "https://imgs.search.brave.com/70cCyTwpbgJ_CTgTbx2S4ZiB11mFi2kQgJJPfNT4a-Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2Y2ODQyYzlk/MWI1MTE4MTk3Zjcw/NjgyMzM4NzI0YmQx/NTRlYzhjMjJmZjZh/YmRkODY0MGY1YmVk/MDExY2I1Ny9mb3J1/bXMucnVzbWVkc2Vy/di5jb20v",
+          "path": "› archive  › index.php  › t-256701.html"
+        },
+        "extra_snippets": [
+          "Всемирная организация здравоохранения понимает под качеством медицинской помощи совокупность свойств и характеристик медицинских услуг, которые определяют их способность удовлетворять предполагаемые потребности пациента.",
+          "ов и уровнем их квалификации; 3) возможностью выбора медицинской организации и врача в соответствии с настоящим Федеральным законом; 4) применением порядков оказания медицинской помощи и стандартов медицинской помощи (с 1 января 2013 года); 5) предоставлением медицинской организацией гарантированного объема медицинской помощи в",
+          "цинской помощи, в том числе оценка правильности выбора медицинской технологии, степени достижения запланированного результата и установление причинно-следственных связей выявленных дефектов в оказании медицинской помощи (согласно определению ФЗ от 29.11.2010 N 326-ФЗ \"Об обязательном медицинском страховании в Российской Федерац",
+          "Стандартизации подвергались: медицинское оборудование, хирургические инструменты, здания и сооружения, освещение, отопление, специальные медицинские автотранспортные средства Отечественные исследователи выделяли (Мыльникова И.С., Кричагин В.И., Индейкин Е.Н., 1992). 1. Стандарты на ресурсы здравоохранения. 2. Стандарты организации медицинских служб и учреждений."
+        ]
+      },
+      {
+        "title": "Форум организаторов здравоохранения",
+        "url": "https://niioz.ru/projects/forum-organizatorov-zdravookhraneniya/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Научно-методический форум организаторов здравоохранения: видеоитоги",
+        "profile": {
+          "name": "Niioz",
+          "url": "https://niioz.ru/projects/forum-organizatorov-zdravookhraneniya/",
+          "long_name": "niioz.ru",
+          "img": "https://imgs.search.brave.com/QACdv1yx32sar6H1eEkI6NWHbvV3flC04nDmmk6tQRs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzJiZWI0MGEw/NGYxZDBiYmNlZWFm/NDBmNzFiZTA5NzIz/ODg2OWY0YTg2ZDMx/ZDljMWMwZTU2N2Uz/NzdmMGFhYS9uaWlv/ei5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "niioz.ru",
+          "hostname": "niioz.ru",
+          "favicon": "https://imgs.search.brave.com/QACdv1yx32sar6H1eEkI6NWHbvV3flC04nDmmk6tQRs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzJiZWI0MGEw/NGYxZDBiYmNlZWFm/NDBmNzFiZTA5NzIz/ODg2OWY0YTg2ZDMx/ZDljMWMwZTU2N2Uz/NzdmMGFhYS9uaWlv/ei5ydS8",
+          "path": "› projects  › forum-organizatorov-zdravookhraneniya"
+        },
+        "extra_snippets": [
+          "Сведения об организации, осуществляющей образовательную деятельность ... Форум организаторов здравоохранения «Постпандемия: новые векторы развития здравоохранения и здоровья», 2024 год",
+          "Форум организаторов здравоохранения «Организационные решения - каркас столичного здравоохранения», 2023 год",
+          "Форум организаторов здравоохранения «Клиники Москвы: практики устойчивого развития», 2019 год",
+          "Научно-методический форум организаторов здравоохранения: видеоитоги"
+        ]
+      },
+      {
+        "title": "Форум русмедсервера - консультирование по медицинским вопросам.",
+        "url": "https://irecommend.ru/content/forum-rusmedservera-konsultirovanie-po-meditsinskim-voprosam",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Дискуссионный Клуб Русского Медицинского Сервера",
+        "profile": {
+          "name": "iRecommend",
+          "url": "https://irecommend.ru/content/forum-rusmedservera-konsultirovanie-po-meditsinskim-voprosam",
+          "long_name": "irecommend.ru",
+          "img": "https://imgs.search.brave.com/OG5oa7mJV01T_cAVRpXPWKInUsiDH00upyqGVS9Mnkw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTNlOGM0YTYz/YjJjNjdlODNlOTg0/YjFkZjlkNTkyODY2/MjM5YTJkZDcwNzAx/ZTRlNjVhYTFlYmZh/MDNhNTk0My9pcmVj/b21tZW5kLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "review",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "irecommend.ru",
+          "hostname": "irecommend.ru",
+          "favicon": "https://imgs.search.brave.com/OG5oa7mJV01T_cAVRpXPWKInUsiDH00upyqGVS9Mnkw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTNlOGM0YTYz/YjJjNjdlODNlOTg0/YjFkZjlkNTkyODY2/MjM5YTJkZDcwNzAx/ZTRlNjVhYTFlYmZh/MDNhNTk0My9pcmVj/b21tZW5kLnJ1Lw",
+          "path": "  › каталог отзывов  › разное  › сайты"
+        },
+        "review": {
+          "type": "Review",
+          "name": "Форум русмедсервера - консультирование по медицинским вопросам.",
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/zKh88Hz8dVoDBI4COXKm0y6rwNxE3GSgXYjCANm1h-Y/rs:fit:360:283:1:0/g:ce/aHR0cHM6Ly9pcmVj/b21tZW5kLnJ1L3Np/dGVzL2RlZmF1bHQv/ZmlsZXMvcHJvZHVj/dC1pbWFnZXMvMTY3/NTY4L3ZidWxsZXRp/bjNfbG9nb193aGl0/ZS5naWY.jpeg",
+            "original": "https://irecommend.ru/sites/default/files/product-images/167568/vbulletin3_logo_white.gif"
+          },
+          "description": "Здравствуйте! Часто мы прибегаем к помощи интернета, чтобы найти ответы на проблемы со здоровьем, проверить… Здравствуйте! Часто мы прибегаем к помощи интернета, чтобы найти ответы на проблемы со здоровьем, проверить лекарственный препарат, разобраться в диагнозе... Однажды я натолкнулась на сайт Русского медицинского сервера, на форуме (дискуссионном клубе) которого врачи давали рекомендации в русле доказательной медицины, опираясь на опыт иностранных коллег (чтобы стать консультантом форума, нужно подтвердить свою квалификацию врача документально). Зачастую эта информация расходится с тем, что можно услышать от врачей в районных поликлиниках. · Будучи молодой матерью, я чаще всего захожу в раздел педиатрия. Обращаясь к специальной литературе и иностранным источникам, я убеждаюсь в правоте рекомендаций консультантов форума. Кроме того, здесь можно узнать, насколько проверено то или иное лекарственное средство, скорректировать график прививок и т. д. Лично я раз десять перепроверяю то, что назначают моему ребенку. · Чтобы получить ответ, следуйте правилам форума, иначе вам просто не ответят. Четко формулируйте вопрос, указывая всю необходимую и полную информацию о пациенте, если есть сканированные документы (или фото - по обстоятельствам) - выкладывайте. Также предварительно рекомендую воспользоваться поиском, возможно, ваш вопрос из ряда часто задаваемых. · Если вы решите получить здесь консультацию, имейте в виду, что юмор/попытка поторопить с ответом вызовут негативную реакцию со стороны модераторов. И уж не дай Бог чем-либо задеть консультанта. Однажды я читала переписку, в которой накинулись на мамашу, которая написала \"пож-та\" вместо \"пожалуйста\". Шутить можно только врачам, равно как и проявлять неуважение. Также мне не понятна мотивация консультантов, когда длинной тирадой отсылают к поиску (если вопрос из ряда часто задаваемых), вместо того, чтобы кратко ответить. Лично для меня поиск на форуме не самый удобный и быстрый. Не смотря на перечисленные минусы, я все же рекомендую получить еще одно мнение от врачей на этом форуме в дополнение к рекомендациям вашего оч… Категория:Сайты · Тематика сайта:Консультирование онлайн",
+          "rating": {
+            "ratingValue": 4.0,
+            "bestRating": 5.0,
+            "is_tripadvisor": false
+          }
+        },
+        "extra_snippets": [
+          "Дискуссионный Клуб Русского Медицинского Сервера"
+        ]
+      }
+    ],
+    "family_friendly": false
+  }
+}

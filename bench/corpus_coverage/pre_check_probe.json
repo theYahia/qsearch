@@ -1,0 +1,252 @@
+{
+  "generated": "2026-08-04T15:11:22.059Z",
+  "freshness_days": 7,
+  "groups": {
+    "covered": [
+      {
+        "query": "SkyCapital отзывы реальные надёжность развод",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 20,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 1,
+        "verdict": "miss"
+      },
+      {
+        "query": "242-ФЗ локализация персональных данных граждан РФ серверы",
+        "corpus_hits": 20,
+        "high_trust": 1,
+        "fresh_hits": 18,
+        "fresh_high_trust": 1,
+        "fresh_ratio": 0.9,
+        "verdict": "partial"
+      },
+      {
+        "query": "A7A5 что это стейблкоин биржа обменник рубль",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 16,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.8,
+        "verdict": "miss"
+      },
+      {
+        "query": "152-ФЗ трансграничная передача персональных данных уведомление",
+        "corpus_hits": 20,
+        "high_trust": 2,
+        "fresh_hits": 19,
+        "fresh_high_trust": 2,
+        "fresh_ratio": 0.95,
+        "verdict": "partial"
+      },
+      {
+        "query": "273-ФЗ статья 91 лицензирование образовательной деятельности",
+        "corpus_hits": 20,
+        "high_trust": 1,
+        "fresh_hits": 17,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.85,
+        "verdict": "miss"
+      },
+      {
+        "query": "договор поручения обработки персональных данных требования",
+        "corpus_hits": 20,
+        "high_trust": 2,
+        "fresh_hits": 20,
+        "fresh_high_trust": 2,
+        "fresh_ratio": 1,
+        "verdict": "partial"
+      },
+      {
+        "query": "самозанятый лицензия на собственное программное обеспечение",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 15,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.75,
+        "verdict": "miss"
+      },
+      {
+        "query": "валютный контроль ИП поступления из-за рубежа",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 19,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.95,
+        "verdict": "miss"
+      },
+      {
+        "query": "самозанятый превысил лимит 2,4 млн рублей что делать",
+        "corpus_hits": 20,
+        "high_trust": 3,
+        "fresh_hits": 18,
+        "fresh_high_trust": 3,
+        "fresh_ratio": 0.9,
+        "verdict": "partial"
+      },
+      {
+        "query": "422-ФЗ статья 4 статья 6 ограничения виды деятельности",
+        "corpus_hits": 20,
+        "high_trust": 1,
+        "fresh_hits": 19,
+        "fresh_high_trust": 1,
+        "fresh_ratio": 0.95,
+        "verdict": "partial"
+      }
+    ],
+    "covered_tally": {
+      "covered": 0,
+      "partial": 5,
+      "miss": 5
+    },
+    "plausible_uncovered": [
+      {
+        "query": "регистрация товарного знака Роспатент сроки пошлина 2026",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 19,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.95,
+        "verdict": "miss"
+      },
+      {
+        "query": "нормы СанПиН освещённость групповой комнаты детского сада",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 8,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.4,
+        "verdict": "miss"
+      },
+      {
+        "query": "как оформить наследство на квартиру без завещания сроки",
+        "corpus_hits": 20,
+        "high_trust": 3,
+        "fresh_hits": 1,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.05,
+        "verdict": "miss"
+      },
+      {
+        "query": "техосмотр грузового автомобиля периодичность 2026 правила",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 9,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.45,
+        "verdict": "miss"
+      },
+      {
+        "query": "лицензия на образовательную деятельность для автошколы требования к площадке",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 11,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.55,
+        "verdict": "miss"
+      },
+      {
+        "query": "уплата утилизационного сбора при ввозе спецтехники ставки",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 20,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 1,
+        "verdict": "miss"
+      },
+      {
+        "query": "правила содержания домашних животных в многоквартирном доме",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 15,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.75,
+        "verdict": "miss"
+      },
+      {
+        "query": "порядок увольнения по сокращению штата выплаты компенсации",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 9,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.45,
+        "verdict": "miss"
+      },
+      {
+        "query": "требования пожарной безопасности к складским помещениям класс Ф5.2",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 15,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.75,
+        "verdict": "miss"
+      },
+      {
+        "query": "субсидия на газификацию частного дома условия получения",
+        "corpus_hits": 20,
+        "high_trust": 1,
+        "fresh_hits": 3,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.15,
+        "verdict": "miss"
+      }
+    ],
+    "plausible_uncovered_tally": {
+      "covered": 0,
+      "partial": 0,
+      "miss": 10
+    },
+    "alien": [
+      {
+        "query": "цена на бананы в Эквадоре сегодня",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 15,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.75,
+        "verdict": "miss"
+      },
+      {
+        "query": "как испечь хлеб на закваске в горах",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 6,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.3,
+        "verdict": "miss"
+      },
+      {
+        "query": "zzzz qqqq nonexistent gibberish",
+        "corpus_hits": 1,
+        "high_trust": 0,
+        "fresh_hits": 0,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0,
+        "verdict": "miss"
+      },
+      {
+        "query": "лучшие маршруты для треккинга в Патагонии в марте",
+        "corpus_hits": 20,
+        "high_trust": 0,
+        "fresh_hits": 11,
+        "fresh_high_trust": 0,
+        "fresh_ratio": 0.55,
+        "verdict": "miss"
+      },
+      {
+        "query": "рецепт том ям с кокосовым молоком пошагово",
+        "corpus_hits": 20,
+        "high_trust": 2,
+        "fresh_hits": 10,
+        "fresh_high_trust": 2,
+        "fresh_ratio": 0.5,
+        "verdict": "partial"
+      }
+    ],
+    "alien_tally": {
+      "covered": 0,
+      "partial": 1,
+      "miss": 4
+    }
+  }
+}

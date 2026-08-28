@@ -1,0 +1,164 @@
+{
+  "generated": "2026-08-04T07:35:03.609Z",
+  "summary": {
+    "queries": 5,
+    "paidRequests": 15,
+    "usd": 0.075,
+    "latencyMs": {
+      "web_us": {
+        "mean": 726.6,
+        "p95": 1155
+      },
+      "web_ru": {
+        "mean": 593.4,
+        "p95": 601
+      },
+      "ctx_ru": {
+        "mean": 507.8,
+        "p95": 552
+      }
+    },
+    "ruSharePct": {
+      "web_us": 88.9,
+      "web_ru": 93,
+      "ctx_ru": 91.6
+    },
+    "sources": {
+      "web_us": 19.8,
+      "web_ru": 19.8,
+      "ctx_ru": 15
+    },
+    "chars": {
+      "web_us": 22942.2,
+      "web_ru": 22818,
+      "ctx_ru": 29536
+    }
+  },
+  "rows": [
+    {
+      "id": "npd_limit_2400000",
+      "question": "Самозанятый превысил годовой лимит НПД 2,4 млн ₽. Что происходит со статусом и что нужно сделать?",
+      "web_us": {
+        "ms": 1155,
+        "sources": 20,
+        "ruSources": 16,
+        "ruPct": 80,
+        "chars": 22252
+      },
+      "web_ru": {
+        "ms": 601,
+        "sources": 20,
+        "ruSources": 17,
+        "ruPct": 85,
+        "chars": 22627
+      },
+      "ctx_ru": {
+        "ms": 552,
+        "sources": 14,
+        "ruSources": 11,
+        "ruPct": 78.6,
+        "chars": 27246
+      }
+    },
+    {
+      "id": "npd_422fz_bans",
+      "question": "Какие виды деятельности запрещены плательщику НПД по ст. 4 422-ФЗ?",
+      "web_us": {
+        "ms": 618,
+        "sources": 20,
+        "ruSources": 19,
+        "ruPct": 95,
+        "chars": 22755
+      },
+      "web_ru": {
+        "ms": 589,
+        "sources": 20,
+        "ruSources": 19,
+        "ruPct": 95,
+        "chars": 22024
+      },
+      "ctx_ru": {
+        "ms": 519,
+        "sources": 14,
+        "ruSources": 13,
+        "ruPct": 92.9,
+        "chars": 26038
+      }
+    },
+    {
+      "id": "npd_agent_contract",
+      "question": "Может ли самозанятый работать по агентскому договору и в какой роли?",
+      "web_us": {
+        "ms": 615,
+        "sources": 20,
+        "ruSources": 18,
+        "ruPct": 90,
+        "chars": 19357
+      },
+      "web_ru": {
+        "ms": 598,
+        "sources": 20,
+        "ruSources": 18,
+        "ruPct": 90,
+        "chars": 19446
+      },
+      "ctx_ru": {
+        "ms": 471,
+        "sources": 13,
+        "ruSources": 12,
+        "ruPct": 92.3,
+        "chars": 28854
+      }
+    },
+    {
+      "id": "152fz_processor_contract",
+      "question": "Какие условия обязательно определить в договоре поручения обработки персональных данных по 152-ФЗ?",
+      "web_us": {
+        "ms": 675,
+        "sources": 19,
+        "ruSources": 17,
+        "ruPct": 89.5,
+        "chars": 25829
+      },
+      "web_ru": {
+        "ms": 592,
+        "sources": 20,
+        "ruSources": 19,
+        "ruPct": 95,
+        "chars": 26517
+      },
+      "ctx_ru": {
+        "ms": 497,
+        "sources": 17,
+        "ruSources": 16,
+        "ruPct": 94.1,
+        "chars": 34254
+      }
+    },
+    {
+      "id": "152fz_crossborder_notice",
+      "question": "Что оператор обязан сделать до начала трансграничной передачи персональных данных?",
+      "web_us": {
+        "ms": 570,
+        "sources": 20,
+        "ruSources": 18,
+        "ruPct": 90,
+        "chars": 24518
+      },
+      "web_ru": {
+        "ms": 587,
+        "sources": 19,
+        "ruSources": 19,
+        "ruPct": 100,
+        "chars": 23476
+      },
+      "ctx_ru": {
+        "ms": 500,
+        "sources": 17,
+        "ruSources": 17,
+        "ruPct": 100,
+        "chars": 31288
+      }
+    }
+  ]
+}

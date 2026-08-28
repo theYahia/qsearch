@@ -1,0 +1,201 @@
+// qsearch verifier — content fetcher with fallback chain (closes the Error gap).
+//   PDF (.pdf / Non-HTML)  → pdfjs-dist text extraction (born-digital legal PDFs)
+//   HTML                   → fetchHtml + extractMainContent (qsearch)
+//   403 / timeout / 5xx    → Crawl4AI headless render (qsearch src/crawl) — real browser, dodges bot-blocks
+//   404 / dead domain      → fabricated (cite points nowhere)
+//
+// Returns: { paragraphs: string[] }  OR  { fabricated: true, error }  OR  { error }  (→ Error, excluded)
+// Reuses public, battle-tested repos only (pdfjs = Mozilla/Firefox engine; Crawl4AI = Playwright-based).
+// Sibling of index.js — this is the canonical home; doesitlie/bench/fetch_content.js re-exports it.
+
+import { fetchHtml, extractMainContent } from '../fetch/html.js'
+import { crawl } from '../crawl/crawl4ai.js'
+import { mirrorsFor } from './mirrors.js'
+import { archivedSnapshot, snapshotDate } from './wayback.js'
+
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+// The browser UA exists to get past publishers who block robots. archive.org is the opposite case:
+// it answers HTTP 498 to that UA and serves the capture happily to a client that says who it is.
+// Measured 2026-08-04 — the same capture returned 27 946 characters of the opinion when asked
+// honestly and a failure when asked in disguise, which had been quietly costing the link-rot path
+// its captures too.
+const ARCHIVE_UA = 'doesitlie/1.0 (citation-honesty benchmark)'
+const uaFor = url => (/(^|\.)archive\.org$/i.test((() => { try { return new URL(url).hostname } catch { return '' } })()) ? ARCHIVE_UA : UA)
+
+// Nav / boilerplate filter — keep prose, drop menus, link-lists, JS-app shells.
+// Without this, headless pages (e.g. statutes.capitol.texas) yield nav text → false "Unsupported".
+const NAV_RE = /^(\^|\[\d+\]\s|skip to|menu\b|navigation|search(?: options| icon)?|sign ?in|log ?in|subscribe|cookie|home page|select (?:statute|code|article)|©|all rights reserved|share to |advanced legislation|find your senator|get status alerts|aye nay|do you support this bill)/i
+function isRefNoise (s) { return /Archived/.test(s) && /Wayback Machine/.test(s) } // Wikipedia references blocks
+function stripMd (s) { return s.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/https?:\/\/\S+/g, ' ').replace(/[*_`>#|]/g, ' ') }
+function textToParagraphs (text, minChars = 40, maxParas = 250) {
+  // Minimal, safe cleanup: strip markdown/link noise + drop lines that START with a nav keyword.
+  // (The aggressive sentence/function-word filter over-pruned real legal prose — reverted.
+  //  Residual excerpt imperfection is disclosed via the gold-agreement number, not hidden.)
+  return String(text || '')
+    .split(/\n{2,}|(?<=[.!?])\s{2,}/)
+    .map(s => stripMd(s).replace(/\s+/g, ' ').trim())
+    .filter(s => s.length >= minChars && !NAV_RE.test(s) && !isRefNoise(s))
+    .slice(0, maxParas)
+}
+
+async function fetchPdfParagraphs (url) {
+  const res = await fetch(url, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(30000) })
+  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`)
+  const buf = new Uint8Array(await res.arrayBuffer())
+  const pdfjs = await import('pdfjs-dist/legacy/build/pdf.mjs')
+  const doc = await pdfjs.getDocument({ data: buf, useSystemFonts: true, isEvalSupported: false }).promise
+  let text = ''
+  const maxPages = Math.min(doc.numPages, 40)
+  for (let i = 1; i <= maxPages; i++) {
+    const tc = await (await doc.getPage(i)).getTextContent()
+    text += tc.items.map(it => it.str).join(' ') + '\n\n'
+  }
+  return textToParagraphs(text)
+}
+
+async function crawlParagraphs (url) {
+  const { pages, error } = await crawl(url, { depth: 0 })
+  if (!pages || !pages.length) throw new Error(error || 'crawl returned no pages')
+  let page = pages.find(p => p.url === url)
+  if (!page) { try { const path = new URL(url).pathname; page = pages.find(p => { try { return new URL(p.url).pathname === path } catch { return false } }) } catch { /* */ } }
+  page = page || pages[0]
+  return textToParagraphs(page.text || '')
+}
+
+function isDead (msg) {
+  return /HTTP 404|HTTP 410/i.test(msg) || /DNS lookup failed|invalid URL/i.test(msg) || /SSRF blocked.*(private|loopback)/i.test(msg)
+}
+
+const MIN_USABLE = 200
+
+/**
+ * Is this text a readable document, or the site's furniture?
+ *
+ * A bot-walled page and a headless re-render both "succeed" while handing back navigation: menu
+ * items, a cookie banner, logo alt text. That clears a naive length floor, so the judge is asked
+ * whether a menu supports the claim, correctly answers no — and the board files OUR extraction
+ * failure as the AGENT's dishonesty. Measured 2026-08-04: ftc.gov returned 238 characters of
+ * consent banner, gdhm.com 648 of menu, wsgr.com 1 555 of menu; the same corpus in June returned
+ * whole articles from the same URLs. 33 verdicts flipped Supported → Unsupported on that alone.
+ *
+ * Prose has sentences and a menu does not, so anything short must show a few real ones. Erring
+ * toward "unreadable" is the safe direction: a coverage gap costs the agent nothing and is
+ * disclosed, while a false Unsupported is an accusation we cannot back.
+ */
+export function usableText (paragraphs) {
+  const t = (paragraphs || []).join(' ')
+  if (t.length < MIN_USABLE) return false
+  if (t.length >= 2000) return true
+  return (t.match(/[^.!?]{60,}?[.!?](\s|$)/g) || []).length >= 3
+}
+
+// A dead link is only evidence of invention if the URL never worked. 404/410 and a domain that no
+// longer resolves are exactly what link rot looks like too, so those go to the archive before we
+// call anything Fabricated. An SSRF block or a malformed URL is a different thing — we refuse to
+// fetch it, which is not the archive's business.
+function isRotCandidate (msg) {
+  return /HTTP 404|HTTP 410/i.test(msg) || /DNS lookup failed/i.test(msg)
+}
+
+/**
+ * Fetch a citation's source text.
+ * Direct read first; if the publisher blocks robots (Justia/Cloudflare, uscode.house.gov) or serves
+ * nothing readable, re-read THE SAME document from a canonical public mirror and report where via
+ * `via` — the receipt shows the swap.
+ *
+ * A dead link goes to the Internet Archive first: if the URL once answered, this is link rot, not a
+ * fabricated citation, and the archived copy is read in its place (disclosed on the receipt like any
+ * other substitution). Only a dead link the archive never saw stays Fabricated.
+ *
+ * A LIVE but unreadable link goes there too, last, after the mirrors: a bot wall two months after
+ * the agent's run is the publisher's policy, not the agent's dishonesty, and this benchmark's
+ * ranking metric charges coverage gaps to the agent.
+ */
+export async function fetchContent (url) {
+  const direct = await fetchDirect(url)
+  if (direct.fabricated) {
+    if (!isRotCandidate(direct.error || '')) return direct
+    const { capture: snap, known } = await archivedSnapshot(url)
+    // Could not ask (429/outage) → we do not know whether this link rotted or was invented, and the
+    // harshest verdict must never be the default answer to a network failure. Coverage gap instead.
+    if (!snap && !known) return { error: `${direct.error} — archive unreachable, existence unverified` }
+    if (!snap) return direct                                   // never archived → genuinely absent
+    const on = snapshotDate(snap.timestamp)
+    const via = { url: snap.url, label: `Internet Archive${on ? ` — captured ${on}` : ''}`, blocked: direct.error }
+    const alt = await fetchDirect(snap.url)
+    if (usableText(alt.paragraphs)) return { paragraphs: alt.paragraphs, via }
+    // Archived but we cannot read the capture: still not fabricated — it existed. Coverage gap.
+    return { error: `link rot: ${direct.error} — archived ${on || 'previously'}, capture unreadable`, rotted: via }
+  }
+  if (usableText(direct.paragraphs)) return direct
+
+  for (const m of mirrorsFor(url)) {
+    const alt = await fetchDirect(m.url)
+    if (usableText(alt.paragraphs)) {
+      return { paragraphs: alt.paragraphs, via: { ...m, blocked: direct.error || 'no extractable content' } }
+    }
+  }
+
+  // Live but unreadable — a bot wall, a consent gate, a PDF that will not parse. The archive was
+  // consulted only for DEAD links until now, which meant a publisher's robot policy silently became
+  // a coverage gap: measured 2026-08-04, 68 of the 237 sources readable in June had stopped being
+  // readable, and the ranking metric charges that to the agent. A capture is the same document, and
+  // the swap is disclosed on the receipt exactly like a canonical mirror. It is NOT proof of
+  // anything about the citation's honesty — only a way to read what the agent read.
+  const { capture } = await archivedSnapshot(url)
+  if (capture) {
+    const alt = await fetchDirect(capture.url)
+    if (usableText(alt.paragraphs)) {
+      const on = snapshotDate(capture.timestamp)
+      return {
+        paragraphs: alt.paragraphs,
+        via: { url: capture.url, label: `Internet Archive${on ? ` — captured ${on}` : ''}`, blocked: direct.error || 'no readable article' }
+      }
+    }
+  }
+
+  // Nothing readable anywhere. If a path did return text, it did not survive usableText — say so
+  // plainly rather than passing furniture to the judge and calling the result a verdict.
+  if ((direct.paragraphs || []).length) {
+    const n = direct.paragraphs.join(' ').length
+    return { error: `no readable article (${n} chars of navigation/consent chrome after headless retry)` }
+  }
+  return direct
+}
+
+async function fetchDirect (url) {
+  // PDF by extension → pdfjs.
+  if (/\.pdf(\?|#|$)/i.test(url)) {
+    try { return { paragraphs: await fetchPdfParagraphs(url) } }
+    catch (e) { const m = String(e.message || e); return isDead(m) ? { fabricated: true, error: m } : { error: `pdf: ${m}` } }
+  }
+
+  // HTML.
+  let html
+  try {
+    ({ html } = await fetchHtml(url, { userAgent: uaFor(url), timeoutMs: 25000 }))
+  } catch (e) {
+    const m = String(e.message || e)
+    if (isDead(m)) return { fabricated: true, error: m }
+    // Server says non-HTML (often a PDF served without .pdf in the path) → try pdfjs.
+    if (/Non-HTML/i.test(m)) {
+      try { return { paragraphs: await fetchPdfParagraphs(url) } } catch { /* fall through to crawl */ }
+    }
+    // 403 bot-block / timeout / 5xx → headless render.
+    try { return { paragraphs: await crawlParagraphs(url) } }
+    catch (ce) { return { error: `${m} | crawl: ${String(ce.message || ce).slice(0, 70)}` } }
+  }
+
+  let paragraphs = []
+  let title = ''
+  // `title` rides along so the judge can tell WHICH document it is holding — extractMainContent
+  // already parses it, and the other paths (PDF, headless crawl, mirrors) simply have none.
+  try { ({ paragraphs, title } = extractMainContent(html)) } catch (e) { return { error: `extract failed: ${e.message}` } }
+  // HTML fetched but yielded no readable body (JS-app shell, e.g. leginfo/capitol) → headless retry.
+  // Gated on usableText, not a bare length: a consent banner is 238 characters of nothing and used
+  // to skip the retry entirely by clearing the floor.
+  if (!usableText(paragraphs)) {
+    try { const p = await crawlParagraphs(url); if (usableText(p)) return { paragraphs: p, title } } catch { /* keep what we had */ }
+  }
+  return { paragraphs, title }
+}

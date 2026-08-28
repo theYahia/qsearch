@@ -24,3 +24,27 @@ data/*.db-shm
 research/
 docs/legacy/
 _raw_data/
+.gstack/
+
+# v5 ship-enablement: doesitlie repo-split staging (fresh-tree export target; has its own nested .git — never tracked by qsearch)
+doesitlie/_publish-staging/
+
+# privacy / internal — never publish (added 2026-06-24 pre-publish safety)
+BURN-LOG-*.md
+CSO-OPS-2026-05-21.md
+REVIEW-2026-05-21.md
+MEMCACHE_DESIGN_2026-05-07.md
+MEMCACHE_DESIGN_REFRESH_2026-05-10.md
+MEMCACHE_PHASE_1_LOG.md
+V92_EFFECT_2026-05-10.md
+V92_FULL_VERIFICATION_2026-05-10.md
+STATUS.md
+ANALYSIS-2026-06-23.md
+YC_APPLICATION_DRAFT_2026-05-10.md
+raas-roadmap.md
+docs/ideas/qsearchcash.md
+*.err
+cards/
+_scratch/
+content/
+doesitlie/

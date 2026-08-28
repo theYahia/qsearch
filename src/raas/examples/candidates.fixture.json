@@ -1,0 +1,12 @@
+{
+  "_note": "Offline candidate-source fixture so the pipeline + tests run without a live qsearch /sweep. Shape: { [claimId]: Candidate[] }. engine_count mirrors the multi-engine provenance /sweep returns. URLs/domains are illustrative placeholders for DESIGN — a real run gets these from /sweep.",
+  "c1": [
+    { "url": "https://www.clearbrief.com/pricing", "title": "Clearbrief Pricing", "engine_count": 4 },
+    { "url": "https://legaltechhub.com/clearbrief-review", "title": "Clearbrief review", "engine_count": 3 },
+    { "url": "https://reddit.com/r/Lawyertalk/clearbrief", "title": "Clearbrief thread", "engine_count": 1 }
+  ],
+  "c2": [
+    { "url": "https://nvbar.org/ai-work-group-report", "title": "Nevada Bar AI Work Group", "engine_count": 2 },
+    { "url": "https://www.reuters.com/legal/nevada-bar-ai-tools", "title": "Nevada bar rates AI tools", "engine_count": 3 }
+  ]
+}

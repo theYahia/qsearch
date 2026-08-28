@@ -1,0 +1,20 @@
+{
+  "_comment": "Golden relevance judgments for the NDCG rerank benchmark (Tier 4). Fill `queries` with real research queries and grade the URLs you consider relevant (0=irrelevant, 1=marginal, 2=relevant, 3=highly relevant). Unlisted URLs grade 0. Aim for 20+ queries with 3+ graded URLs each before drawing conclusions. See ANALYSIS-2026-06-23.md Tier 4 and scripts/rerank_benchmark.js.",
+  "queries": [
+    {
+      "query": "self-hosted vector database benchmarks 2026",
+      "relevance": {
+        "https://qdrant.tech/benchmarks/": 3,
+        "https://github.com/qdrant/vector-db-benchmark": 3,
+        "https://weaviate.io/blog/vector-search-benchmarks": 2
+      }
+    },
+    {
+      "query": "model context protocol mcp server examples",
+      "relevance": {
+        "https://modelcontextprotocol.io/": 3,
+        "https://github.com/modelcontextprotocol/servers": 3
+      }
+    }
+  ]
+}

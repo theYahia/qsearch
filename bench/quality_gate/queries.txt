@@ -1,0 +1,35 @@
+# Quality-gate A/B set — C2. Identical file for BOTH arms; the only difference between runs
+# is QSEARCH_QUALITY_GATE_ENABLED. Both arms run with QSEARCH_RERANK_ENABLED=true, because the
+# gate lives inside the rerank pipeline (pipeline.js:58-63) and never executes without it —
+# with rerank off in one arm, the difference would measure rerank, not the gate.
+#
+# 20 queries, all `focused`: Brave web + extra_snippets, ~$0.005 each → ~$0.10 per arm, $0.20 total.
+#
+# Deliberately drawn from the same RU legal/fintech ground as bench/ru/questions.jsonl. That is
+# what makes the overriding rule testable: if the gate rejects a URL cited in a bench reference
+# answer — a source known to carry the answer — the gate is harmful whatever its rejection rate.
+#
+# Known ceiling, recorded before the run: stage 2 (LLM rerank) only runs on `critical`, so on a
+# focused sweep the llm component is 0 and the composite cannot exceed 0.8 (weights
+# .4 emb / .3 auth / .2 llm / .1 trust). With the default threshold at 0.4 that leaves room, but
+# a rejection rate read without knowing this would look like the gate being strict.
+qg_01|самозанятый превысил лимит 2,4 млн рублей последствия|focused
+qg_02|422-ФЗ ограничения виды деятельности самозанятых|focused
+qg_03|НПД агентский договор посредническая деятельность запрет|focused
+qg_04|152-ФЗ поручение обработки персональных данных требования к договору|focused
+qg_05|трансграничная передача персональных данных уведомление Роскомнадзор|focused
+qg_06|242-ФЗ локализация персональных данных серверы в России|focused
+qg_07|152-ФЗ согласие на обработку персональных данных обязательные элементы|focused
+qg_08|уведомление Роскомнадзора об обработке ПДн исключения|focused
+qg_09|НДС эквайринг 2026 изменения для бизнеса|focused
+qg_10|валютный контроль ИП поступления из-за рубежа документы|focused
+qg_11|115-ФЗ блокировка счёта ИП криптообменник|focused
+qg_12|легальность обмена рублей на USDT юридическим лицом|focused
+qg_13|A7A5 стейблкоин рубль что известно|focused
+qg_14|самозанятый иностранные клиенты валютная выручка|focused
+qg_15|российский разработчик оплата зарубежных сервисов способы|focused
+qg_16|оплата зарубежных сервисов через Казахстан Армению|focused
+qg_17|маркировка интернет-рекламы 38-ФЗ статья 18.1 требования|focused
+qg_18|лицензирование образовательной деятельности 273-ФЗ статья 91|focused
+qg_19|ККТ самозанятый обязанность применять кассу|focused
+qg_20|перепродажа API нейросетей в России маржа наценка|focused

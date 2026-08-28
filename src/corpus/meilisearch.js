@@ -1,5 +1,6 @@
 import { Meilisearch } from 'meilisearch'
 import { CorpusBackend } from './interface.js'
+import { computeTrust, topicDiversity, daysSince, latestCrawledAt } from './trust.js'
 
 const INDEX_NAME = 'qsearch_corpus'
 
@@ -25,8 +26,13 @@ export class MeilisearchCorpus extends CorpusBackend {
     // updateSettings() is async on Meilisearch side — index keeps serving while
     // reindex runs in background. Existing 143k docs without crawled_at remain
     // queryable (Meilisearch allows missing fields). Backfill via separate script.
-    await idx.updateFilterableAttributes(['engines', 'engine_count', 'namespace', 'backend_source', 'sweep_label', 'url', 'crawled_at'])
-    await idx.updateSortableAttributes(['engine_count', 'sweep_count', 'first_seen', 'crawled_at'])
+    // crawled_at_ms: numeric companion to crawled_at. Meilisearch's >= is a NUMERIC operator,
+    // so `crawled_at >= "2026-07-05T10:07:57.629Z"` fails with invalid_search_filter
+    // ("invalid float literal") — verified against the live index. Every freshness-filtered
+    // lookup therefore threw and silently retried unfiltered, which made
+    // QSEARCH_ULTRA_BROAD_MAX_AGE_DAYS a no-op and cost two Meilisearch round-trips per call.
+    await idx.updateFilterableAttributes(['engines', 'engine_count', 'namespace', 'backend_source', 'sweep_label', 'url', 'crawled_at', 'crawled_at_ms'])
+    await idx.updateSortableAttributes(['engine_count', 'sweep_count', 'first_seen', 'crawled_at', 'crawled_at_ms'])
     this._ready = true
   }
 
@@ -72,6 +78,11 @@ export class MeilisearchCorpus extends CorpusBackend {
       merged.appeared_in_sweeps = [{ sweep_label: doc.sweep_label ?? null, crawled_at: doc.crawled_at, engines: doc.engines || [] }]
     }
 
+    // Kept in step with crawled_at on every write so the freshness filter has something
+    // numeric to compare. Docs written before this existed need scripts/backfill-crawled-at-ms.mjs.
+    const ms = Date.parse(merged.crawled_at)
+    if (Number.isFinite(ms)) merged.crawled_at_ms = ms
+
     await idx.addDocuments([merged])
   }
 
@@ -110,14 +121,33 @@ export class MeilisearchCorpus extends CorpusBackend {
     const minScore = opts.minScore ?? 0.55
     const minHits = opts.minHits ?? 3
     const maxAgeDays = opts.maxAgeDays ?? 30
-    const base = { limit: opts.limit || 5, showRankingScore: true }
+    // Optional trust gate (QSEARCH_ULTRA_BROAD_MIN_TRUST; default 0 = off). When set,
+    // a high-BM25 but low-trust hit (single engine / single sweep) no longer short-circuits
+    // a paid sweep. Default off because making trust a *sufficiency* gate (vs a rerank
+    // signal) is a design change to the ultra-broad tier — see ANALYSIS-2026-06-23.md T2.
+    const minTrust = opts.minTrust ?? 0
+    const base = {
+      limit: opts.limit || 5,
+      showRankingScore: true,
+      attributesToRetrieve: ['url', 'title', 'text', 'crawled_at', 'crawled_at_ms', 'engines', 'engine_count', 'appeared_in_sweeps', 'sweep_label']
+    }
     let res
+    let freshnessFiltered = false
     if (maxAgeDays > 0) {
-      const cutoff = new Date(Date.now() - maxAgeDays * 86400000).toISOString()
+      const cutoffMs = Date.now() - maxAgeDays * 86400000
       try {
-        res = await idx.search(query, { ...base, filter: `crawled_at >= "${cutoff}"` })
-      } catch {
-        // crawled_at not filterable yet (schema migration pending) — degrade unfiltered.
+        res = await idx.search(query, { ...base, filter: `crawled_at_ms >= ${cutoffMs}` })
+        freshnessFiltered = true
+      } catch (e) {
+        // Degrade unfiltered, but say so ONCE. The previous bare `catch` hid a filter that
+        // threw on every single call for the life of the feature; a silent fallback turns a
+        // broken freshness gate into an invisible one, and the next regression would be just
+        // as invisible. Warned once per process, not per call, to stay out of hot paths.
+        if (!MeilisearchCorpus._warnedFreshness) {
+          MeilisearchCorpus._warnedFreshness = true
+          console.warn(`[corpus] freshness filter unavailable, serving UNFILTERED results: ${e.message}. ` +
+            'Run scripts/backfill-crawled-at-ms.mjs if crawled_at_ms is missing.')
+        }
         res = await idx.search(query, base)
       }
     } else {
@@ -126,11 +156,33 @@ export class MeilisearchCorpus extends CorpusBackend {
     const hits = res.hits || []
     const scores = hits.map(h => (typeof h._rankingScore === 'number' ? h._rankingScore : 0))
     const avgScore = scores.length ? scores.reduce((a, b) => a + b, 0) / scores.length : 0
+    // Peak trust across hits (only computed when the gate is active).
+    let maxTrust = 0
+    if (minTrust > 0) {
+      for (const h of hits) {
+        const sweeps = h.appeared_in_sweeps || []
+        const sweepCount = Math.max(1, sweeps.length || (h.sweep_label ? 1 : 0))
+        const engineDiversity = new Set(h.engines || []).size || (h.engine_count || 0)
+        const labels = sweeps.map(s => s.sweep_label).filter(Boolean)
+        if (!labels.length && h.sweep_label) labels.push(h.sweep_label)
+        const t = computeTrust({ sweepCount, engineDiversity, topicDiversity: topicDiversity(labels) || 1, daysSinceLastSeen: daysSince(latestCrawledAt(sweeps)) })
+        if (t > maxTrust) maxTrust = t
+      }
+    }
     return {
-      sufficient: hits.length >= minHits && avgScore >= minScore,
+      sufficient: hits.length >= minHits && avgScore >= minScore && (minTrust <= 0 || maxTrust >= minTrust),
       count: hits.length,
       avgScore,
-      hits: hits.map(h => ({
+      max_trust: Number(maxTrust.toFixed(2)),
+      // Whether the freshness gate this lookup promises was actually applied. Callers and the
+      // threshold sweep both need to know; it used to be unknowable from the outside.
+      freshness_filtered: freshnessFiltered,
+      // Per-hit score, not just the mean. `sufficient` gates on the AVERAGE, so a set scoring
+      // 0.9 / 0.5 / 0.3 passes a 0.55 floor on the strength of one hit. Exposing the spread is
+      // what lets the threshold sweep compare mean, per-hit floor and rankingScoreThreshold
+      // instead of taking the current rule on faith.
+      scores,
+      hits: hits.map((h, i) => ({
         url: h.url,
         title: h.title,
         description: h.text?.slice(0, 300) || null,
@@ -139,6 +191,7 @@ export class MeilisearchCorpus extends CorpusBackend {
         page_age: h.crawled_at || null,
         language: null,
         engines: h.engines || [],
+        ranking_score: scores[i],
         source: 'corpus'
       }))
     }
@@ -208,14 +261,10 @@ export class MeilisearchCorpus extends CorpusBackend {
 
     const sweepLabels = new Set()
     const allEngines = new Set()
-    const topics = new Set()
     const appearedInSweeps = []
 
     for (const h of hits) {
-      if (h.sweep_label) {
-        sweepLabels.add(h.sweep_label)
-        topics.add(h.sweep_label.split('_')[0])
-      }
+      if (h.sweep_label) sweepLabels.add(h.sweep_label)
       for (const e of h.engines || []) allEngines.add(e)
       appearedInSweeps.push({
         sweep_label: h.sweep_label,
@@ -226,8 +275,10 @@ export class MeilisearchCorpus extends CorpusBackend {
 
     const sweepCount = sweepLabels.size
     const engineDiversity = allEngines.size
-    const topicDiversity = topics.size
-    const trustScore = Math.log(sweepCount + 1) * engineDiversity * topicDiversity
+    const topicDiv = topicDiversity([...sweepLabels])
+    const daysSinceLastSeen = daysSince(latestCrawledAt(appearedInSweeps))
+    // Single formula (src/corpus/trust.js) — same as both topByTrust branches.
+    const trustScore = computeTrust({ sweepCount, engineDiversity, topicDiversity: topicDiv, daysSinceLastSeen })
 
     return {
       url,
@@ -235,7 +286,7 @@ export class MeilisearchCorpus extends CorpusBackend {
       trust_score: Number(trustScore.toFixed(2)),
       sweep_count: sweepCount,
       engine_count: engineDiversity,
-      topic_diversity: topicDiversity,
+      topic_diversity: topicDiv,
       engines: [...allEngines],
       first_seen: hits.map((h) => h.crawled_at).filter(Boolean).sort()[0] || null,
       appeared_in_sweeps: appearedInSweeps
@@ -254,28 +305,38 @@ export class MeilisearchCorpus extends CorpusBackend {
     await this._ensureIndex()
     const idx = this._client.index(INDEX_NAME)
 
+    // One row builder so every sort path returns a consistent trust_score. The
+    // non-trust branch previously hardcoded topic_diversity=1, so the same URL got a
+    // ~10x lower trust_score under ?sort=engine_count than ?sort=trust — fixed here.
+    const trustRow = (h) => {
+      const sweeps = h.appeared_in_sweeps || []
+      const sweepCount = Math.max(1, sweeps.length || (h.sweep_label ? 1 : 0))
+      const engineDiversity = new Set(h.engines || []).size || (h.engine_count || 0)
+      const labels = sweeps.map(s => s.sweep_label).filter(Boolean)
+      if (!labels.length && h.sweep_label) labels.push(h.sweep_label)
+      const topicDiv = topicDiversity(labels) || 1
+      const daysSinceLastSeen = daysSince(latestCrawledAt(sweeps))
+      const trustScore = computeTrust({ sweepCount, engineDiversity, topicDiversity: topicDiv, daysSinceLastSeen })
+      return {
+        url: h.url,
+        title: h.title || '',
+        trust_score: Number(trustScore.toFixed(2)),
+        sweep_count: sweepCount,
+        engine_count: engineDiversity,
+        topic_diversity: topicDiv
+      }
+    }
+
     if (sort === 'trust') {
       const { hits } = await idx.search('', {
         filter: `engine_count >= ${minEngines}`,
         limit: 5000,
-        attributesToRetrieve: ['url', 'title', 'engines', 'engine_count', 'appeared_in_sweeps', 'sweep_label']
+        attributesToRetrieve: ['url', 'title', 'engines', 'engine_count', 'appeared_in_sweeps', 'sweep_label', 'crawled_at']
       })
       const seen = new Map()
       for (const h of hits) {
         if (!h.url || seen.has(h.url)) continue
-        const sweepCount = Math.max(1, (h.appeared_in_sweeps || []).length || (h.sweep_label ? 1 : 0))
-        const engines = new Set(h.engines || [])
-        const topics = new Set((h.appeared_in_sweeps || []).map(s => s.sweep_label?.split('_')[0]).filter(Boolean))
-        if (!topics.size && h.sweep_label) topics.add(h.sweep_label.split('_')[0])
-        const trustScore = Math.log(sweepCount + 1) * engines.size * (topics.size || 1)
-        seen.set(h.url, {
-          url: h.url,
-          title: h.title || '',
-          trust_score: Number(trustScore.toFixed(2)),
-          sweep_count: sweepCount,
-          engine_count: engines.size,
-          topic_diversity: topics.size || 1
-        })
+        seen.set(h.url, trustRow(h))
       }
       return [...seen.values()]
         .sort((a, b) => b.trust_score - a.trust_score)
@@ -289,15 +350,8 @@ export class MeilisearchCorpus extends CorpusBackend {
       sort: [msSort],
       limit,
       offset,
-      attributesToRetrieve: ['url', 'title', 'engine_count', 'sweep_count', 'first_seen', 'appeared_in_sweeps', 'sweep_label']
+      attributesToRetrieve: ['url', 'title', 'engines', 'engine_count', 'sweep_count', 'first_seen', 'appeared_in_sweeps', 'sweep_label', 'crawled_at']
     })
-    return hits.map(h => ({
-      url: h.url,
-      title: h.title || '',
-      trust_score: Number((Math.log(((h.appeared_in_sweeps || []).length || 1) + 1) * (h.engine_count || 0)).toFixed(2)),
-      sweep_count: (h.appeared_in_sweeps || []).length || (h.sweep_label ? 1 : 0),
-      engine_count: h.engine_count || 0,
-      topic_diversity: 1
-    }))
+    return hits.map(trustRow)
   }
 }

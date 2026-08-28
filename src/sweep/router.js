@@ -22,6 +22,9 @@ export function createSweepRouter (deps) {
     academicAsBraveResponse,
     yandexAsBraveResponse,
     corpusLookup,
+    // Grounding knobs for the critical tier's llm/context call. Defaults to {} so the
+    // dependency literal in test/unit/sweep/router.test.js keeps working untouched.
+    contextParams = {},
     endpointName = '/sweep'
   } = deps
 
@@ -46,6 +49,14 @@ export function createSweepRouter (deps) {
     if (priority === 'ultra-broad' && corpusLookup) {
       const r = await corpusLookup(query, params)
       if (r && r.sufficient) return r.response
+      // Make the cost/coverage trade-off visible: why did this query fall through to
+      // a (possibly paid) broad sweep instead of being served from the corpus?
+      if (r) {
+        const reason = r.count != null
+          ? `hits=${r.count}, avg_score=${r.avgScore != null ? Number(r.avgScore).toFixed(2) : 'n/a'}`
+          : 'no corpus match'
+        console.log(`[${endpointName}] ultra-broad "${query.slice(0, 40)}" → broad fall-through (${reason})`)
+      }
     }
     if (priority === 'broad' || priority === 'ultra-broad') {
       if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
@@ -53,7 +64,32 @@ export function createSweepRouter (deps) {
       throw new Error('broad priority needs SEARXNG_URL or BRAVE_API_KEY')
     }
     // focused / critical — prefer Brave with extra_snippets, SearXNG fallback only on missing key.
-    if (braveKey) return await braveFetch('web', query, { ...params, extra_snippets: true })
+    if (braveKey) {
+      const web = await braveFetch('web', query, { ...params, extra_snippets: true })
+      // critical ($0.01 tier): layer in the Brave LLM Context endpoint for richer grounding.
+      // Soft-fail — a context error must not drop the web results we already have. This makes
+      // the server /sweep match brave_sweep.py (web + llm/context = 2 calls) and earns the
+      // `brave_context` cost label (server.js) instead of silently behaving like `focused`.
+      if (priority === 'critical') {
+        try {
+          // `count` plus whatever grounding knobs the operator configured. Previously this
+          // sent count alone — not even freshness reached the context call, because params
+          // was never spread here.
+          const { data: ctx } = await braveFetch('llm/context', query, {
+            count: params.count,
+            freshness: params.freshness ?? null,
+            ...contextParams
+          })
+          const grounding = ctx?.grounding?.generic
+          if (Array.isArray(grounding) && grounding.length && web?.data) {
+            web.data.context_grounding = grounding
+          }
+        } catch (e) {
+          console.warn(`[${endpointName}] critical LLM Context soft-fail: ${e.message}`)
+        }
+      }
+      return web
+    }
     if (searxng) return await searxngAsBraveResponse(query, params, searxngOpts)
     throw new Error(`${priority} priority needs BRAVE_API_KEY (or SEARXNG_URL fallback)`)
   }

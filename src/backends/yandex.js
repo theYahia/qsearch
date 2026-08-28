@@ -1,9 +1,17 @@
 import { SearchBackend } from './interface.js'
 
-// Yandex Cloud Search API (XML).
+// Yandex Cloud Search API (XML) — legacy endpoint, 0 executions ever (WORK-413 дефект №7).
 // Endpoint: https://yandex.com/search/xml — GET with folderid + apikey query params.
 // Docs: https://yandex.cloud/en/docs/search-api/quickstart
 // Free tier: 1000 queries/day after Yandex Cloud account setup.
+//
+// ponytail: env var name was YANDEX_API_KEY, which no other integration in this repo
+// uses — all 8 working Yandex Cloud integrations (Wordstat included) use
+// YANDEX_SEARCH_API_KEY against searchapi.api.cloud.yandex.net. Renamed for consistency
+// so a key dropped into .env.local following the project convention actually gets picked
+// up here too. Did NOT touch the XML request/response shape or switch to the newer
+// Search API v2 host — that's a different wire format I haven't verified against real
+// responses, and guessing it would be worse than leaving this backend unconfigured.
 
 function decodeXmlEntities (s) {
   if (!s) return ''
@@ -33,11 +41,11 @@ function stripHl (s) { return String(s || '').replace(/<\/?hlword[^>]*>/g, '').t
 export class YandexBackend extends SearchBackend {
   constructor (opts = {}) {
     super()
-    this._apiKey = opts.apiKey || process.env.YANDEX_API_KEY || null
+    this._apiKey = opts.apiKey || process.env.YANDEX_SEARCH_API_KEY || null
     this._folderId = opts.folderId || process.env.YANDEX_FOLDER_ID || null
     this._base = opts.base || process.env.YANDEX_BASE_URL || 'https://yandex.com/search/xml'
     if (!this._apiKey || !this._folderId) {
-      throw new Error('YandexBackend requires YANDEX_API_KEY and YANDEX_FOLDER_ID')
+      throw new Error('YandexBackend requires YANDEX_SEARCH_API_KEY and YANDEX_FOLDER_ID')
     }
   }
 

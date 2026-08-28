@@ -1,0 +1,486 @@
+{
+  "generated": "2026-08-04T13:40:38.292Z",
+  "priority": "critical",
+  "threshold": 0.4,
+  "topN": 10,
+  "total": 140,
+  "kept": 140,
+  "rejected": 0,
+  "rejection_rate": 0,
+  "percentiles": {
+    "p10": 0.575,
+    "p50": 0.612,
+    "p90": 0.644
+  },
+  "composites": [
+    0.531,
+    0.537,
+    0.549,
+    0.553,
+    0.555,
+    0.558,
+    0.559,
+    0.561,
+    0.561,
+    0.561,
+    0.563,
+    0.565,
+    0.566,
+    0.572,
+    0.575,
+    0.579,
+    0.58,
+    0.583,
+    0.584,
+    0.585,
+    0.586,
+    0.587,
+    0.587,
+    0.587,
+    0.589,
+    0.589,
+    0.591,
+    0.591,
+    0.592,
+    0.592,
+    0.592,
+    0.593,
+    0.594,
+    0.594,
+    0.596,
+    0.596,
+    0.597,
+    0.599,
+    0.599,
+    0.6,
+    0.601,
+    0.601,
+    0.601,
+    0.602,
+    0.602,
+    0.602,
+    0.602,
+    0.602,
+    0.603,
+    0.603,
+    0.603,
+    0.604,
+    0.604,
+    0.605,
+    0.606,
+    0.608,
+    0.608,
+    0.609,
+    0.609,
+    0.609,
+    0.61,
+    0.61,
+    0.61,
+    0.61,
+    0.61,
+    0.611,
+    0.612,
+    0.612,
+    0.612,
+    0.612,
+    0.612,
+    0.613,
+    0.613,
+    0.614,
+    0.614,
+    0.614,
+    0.614,
+    0.615,
+    0.615,
+    0.615,
+    0.615,
+    0.616,
+    0.616,
+    0.616,
+    0.617,
+    0.617,
+    0.619,
+    0.62,
+    0.62,
+    0.621,
+    0.621,
+    0.621,
+    0.621,
+    0.622,
+    0.622,
+    0.624,
+    0.624,
+    0.624,
+    0.625,
+    0.627,
+    0.628,
+    0.628,
+    0.63,
+    0.631,
+    0.631,
+    0.631,
+    0.632,
+    0.632,
+    0.634,
+    0.634,
+    0.635,
+    0.636,
+    0.636,
+    0.636,
+    0.637,
+    0.637,
+    0.638,
+    0.639,
+    0.64,
+    0.64,
+    0.641,
+    0.641,
+    0.642,
+    0.642,
+    0.643,
+    0.643,
+    0.644,
+    0.648,
+    0.649,
+    0.649,
+    0.651,
+    0.653,
+    0.655,
+    0.659,
+    0.659,
+    0.664,
+    0.668,
+    0.675,
+    0.676,
+    0.695
+  ],
+  "composite_spread": 0.16399999999999992,
+  "part_stats": {
+    "emb": {
+      "min": 0.7357091826341228,
+      "p50": 0.8317422813351049,
+      "max": 0.9283624011575294,
+      "spread": 0.19265321852340667,
+      "weighted_spread": 0.07706128740936267
+    },
+    "authority": {
+      "min": 0.3,
+      "p50": 0.35,
+      "max": 0.65,
+      "spread": 0.35000000000000003,
+      "weighted_spread": 0.10500000000000001
+    },
+    "llm": {
+      "min": 0.5,
+      "p50": 1,
+      "max": 1,
+      "spread": 0.5,
+      "weighted_spread": 0.1
+    },
+    "trust": {
+      "min": 0,
+      "p50": 0,
+      "max": 0,
+      "spread": 0,
+      "weighted_spread": 0
+    }
+  },
+  "threshold_sweep": [
+    {
+      "t": 0.3,
+      "rejected_pct": 0
+    },
+    {
+      "t": 0.35,
+      "rejected_pct": 0
+    },
+    {
+      "t": 0.38,
+      "rejected_pct": 0
+    },
+    {
+      "t": 0.4,
+      "rejected_pct": 0
+    },
+    {
+      "t": 0.42,
+      "rejected_pct": 0
+    },
+    {
+      "t": 0.44,
+      "rejected_pct": 0
+    },
+    {
+      "t": 0.46,
+      "rejected_pct": 0
+    },
+    {
+      "t": 0.48,
+      "rejected_pct": 0
+    },
+    {
+      "t": 0.5,
+      "rejected_pct": 0
+    },
+    {
+      "t": 0.55,
+      "rejected_pct": 2.1
+    }
+  ],
+  "stage1_skipped_queries": 0,
+  "rejected_bench_sources": [],
+  "rows": [
+    {
+      "id": "npd_limit_2400000",
+      "query": "самозанятый превысил лимит 2,4 млн рублей что делать переход УСН",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.643,
+      "stage1_skipped": false
+    },
+    {
+      "id": "npd_422fz_bans",
+      "query": "422-ФЗ статья 4 статья 6 ограничения виды деятельности налог на профессиональный доход что нельзя|focused",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.616,
+      "stage1_skipped": false
+    },
+    {
+      "id": "npd_agent_contract",
+      "query": "НПД посредническая деятельность агентский договор запрет самозанятый перепродажа",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.642,
+      "stage1_skipped": false
+    },
+    {
+      "id": "152fz_processor_contract",
+      "query": "договор поручения обработки персональных данных обязательные условия 152-ФЗ",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.631,
+      "stage1_skipped": false
+    },
+    {
+      "id": "152fz_crossborder_notice",
+      "query": "152-ФЗ трансграничная передача персональных данных уведомление РКН 2026",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.612,
+      "stage1_skipped": false
+    },
+    {
+      "id": "vat_acquiring_2026",
+      "query": "федеральный закон НДС эквайринг 2026 изменения статья 149 НК РФ текст нормы комиссия за переводы денежных средств СБП",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.649,
+      "stage1_skipped": false
+    },
+    {
+      "id": "anthropic_ban_triggers",
+      "query": "Anthropic блокировка аккаунтов скоординированная активность перепродажа",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.622,
+      "stage1_skipped": false
+    },
+    {
+      "id": "antilopay_complaints",
+      "query": "antilopay отзывы заморозка средств блокировка не выводят деньги",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.594,
+      "stage1_skipped": false
+    },
+    {
+      "id": "usdt_legal_status_ru",
+      "query": "легально ли юридическому лицу обменивать рубли на USDC 2026",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.575,
+      "stage1_skipped": false
+    },
+    {
+      "id": "ru_dev_pays_foreign_ai",
+      "query": "как российский разработчик принимает оплату за AI приложение токены",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.559,
+      "stage1_skipped": false
+    },
+    {
+      "id": "npd_422fz_st6_object",
+      "query": "422-ФЗ статья 6 часть 2 не признаются объектом налогообложения НПД перечень доходов",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.634,
+      "stage1_skipped": false
+    },
+    {
+      "id": "fz115_p2p_block",
+      "query": "115-ФЗ блокировка ИП перевод криптообменник кейсы 2025 2026",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.612,
+      "stage1_skipped": false
+    },
+    {
+      "id": "currency_control_2026",
+      "query": "валютный контроль ИП поступления из-за рубежа лимиты 2026",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.603,
+      "stage1_skipped": false
+    },
+    {
+      "id": "skycapital_reputation",
+      "query": "SkyCapital отзывы реальные надёжность развод мошенники скам или нет 2026",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.589,
+      "stage1_skipped": false
+    },
+    {
+      "id": "cis_payments_2026",
+      "query": "Казахстан Узбекистан Армения оплата зарубежных сервисов разработчики 2026",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.603,
+      "stage1_skipped": false
+    },
+    {
+      "id": "npd_foreign_clients",
+      "query": "НПД самозанятый иностранные клиенты валютная выручка 2026 законность",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.608,
+      "stage1_skipped": false
+    },
+    {
+      "id": "npd_software_license",
+      "query": "самозанятый лицензия на собственное программное обеспечение доход НПД можно ли",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.603,
+      "stage1_skipped": false
+    },
+    {
+      "id": "a7a5_stablecoin",
+      "query": "A7A5 что это стейблкоин биржа обменник рубль санкции Garantex отзывы 2026",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.596,
+      "stage1_skipped": false
+    },
+    {
+      "id": "openai_access_2026",
+      "query": "вернётся ли официальный доступ openai anthropic в Россию 2026 2027 разблокировка",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.561,
+      "stage1_skipped": false
+    },
+    {
+      "id": "152fz_consent_requirements",
+      "query": "152-ФЗ статья 9 согласие на обработку персональных данных несовершеннолетнего consultant.ru|critical",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.61,
+      "stage1_skipped": false
+    },
+    {
+      "id": "152fz_notification_exemptions",
+      "query": "152-ФЗ статья 22 исключения уведомление Роскомнадзор оператор не обязан consultant.ru|critical",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.609,
+      "stage1_skipped": false
+    },
+    {
+      "id": "152fz_operator_measures",
+      "query": "политика конфиденциальности обработки персональных данных требования состав 152-ФЗ статья 18.1|critical",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.615,
+      "stage1_skipped": false
+    },
+    {
+      "id": "pdn_localization_18_5",
+      "query": "242-ФЗ локализация персональных данных граждан РФ на территории России требования базы данных|critical",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.641,
+      "stage1_skipped": false
+    },
+    {
+      "id": "edu_license_273fz",
+      "query": "273-ФЗ статья 91 лицензирование образовательной деятельности текст consultant.ru|critical",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.628,
+      "stage1_skipped": false
+    },
+    {
+      "id": "kkt_npd_exemption",
+      "query": "ИП самозанятый НПД обязан ли применять контрольно-кассовую технику 54-ФЗ пункт 2.2 статьи 2|critical",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.621,
+      "stage1_skipped": false
+    },
+    {
+      "id": "ad_traceability_38fz",
+      "query": "статья 18.1 ФЗ-38 о рекламе маркировка интернет-реклама токен ОРД кто обязан|focused",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.612,
+      "stage1_skipped": false
+    },
+    {
+      "id": "152fz_legal_basis",
+      "query": "152-ФЗ статья 6 часть 1 пункт 1 правовые основания обработки персональных данных текст|critical",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.636,
+      "stage1_skipped": false
+    },
+    {
+      "id": "ai_reseller_margin",
+      "query": "перепродажа api нейросетей Россия маржа наценка конкуренция демпинг race to zero 2026",
+      "kept": 5,
+      "rejected": 0,
+      "rejection_rate": 0,
+      "median_composite": 0.572,
+      "stage1_skipped": false
+    }
+  ]
+}

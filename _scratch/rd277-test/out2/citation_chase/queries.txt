@@ -1,5 +1,0 @@
-cc_00|Weaviate setup documentation sources|focused|general
-cc_01|Weaviate quickstart documentation sources|focused|general
-cc_02|OLLAMA cited sources documents|focused|general
-cc_03|Weaviate deployment documentation sources|focused|general
-cc_04|Weaviate pricing citation sources|focused|general

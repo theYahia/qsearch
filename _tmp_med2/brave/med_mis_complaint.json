@@ -1,0 +1,1075 @@
+{
+  "type": "search",
+  "query": {
+    "original": "форум врачи МИС неудобная жалобы медицинская информационная система",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": true,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "videos",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 19,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "videos": {
+    "type": "videos",
+    "results": [
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=cFzFVAbuQWQ",
+        "title": "Медицинская информационная система ...",
+        "description": "Узнайте, как эффективно использовать медицинскую информационную систему | МИС для автоматизации клиники, вести электронные медицинские карты, а также секреты...",
+        "age": "September 20, 2023",
+        "page_age": "2023-09-20T12:00:36",
+        "fetched_content_timestamp": 1748503691,
+        "video": {
+          "duration": "08:27",
+          "creator": "Medesk - Медицинская информационная система",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/JdyPuNZHfiNkj2XVWDUijDZtPlpNMiOvT28pdB8IcZw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9j/RnpGVkFidVFXUS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/cFzFVAbuQWQ/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=Q88yTJg2DQw",
+        "title": "МИС - медицинская информационная ...",
+        "description": "Модуль МедВебстор [Регистратура] позволяет администраторам вашей клиники удобно обрабатывать входящие заявки, будь то звонки или другие виды обращений, и эфф...",
+        "age": "May 7, 2024",
+        "page_age": "2024-05-07T03:00:36",
+        "fetched_content_timestamp": 1753868845,
+        "video": {
+          "duration": "06:17",
+          "creator": "Mywebstor - Интегратор CRM Bitrix24",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/UGtIw26mvdAVJAcehsHeV0r0TTExncQw7-eFHnKeYM0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9R/ODh5VEpnMkRRdy9o/cWRlZmF1bHQuanBn",
+          "original": "https://i.ytimg.com/vi/Q88yTJg2DQw/hqdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=WfsaO01rXCU",
+        "title": "Обучение медицинского персонала ...",
+        "description": "На вебинаре рассказали о важности цифровой грамотности для врача и о возможных форматах обучения: бесплатных вебинарах и курсе с баллами НМО.",
+        "age": "September 22, 2022",
+        "page_age": "2022-09-22T09:50:15",
+        "fetched_content_timestamp": 1753868844,
+        "video": {
+          "duration": "48:15",
+          "creator": "РТ МИС",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/20PBt1wOAHDHkCWZu9edHa3DBchNX29ku2IPa7Nj34w/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9X/ZnNhTzAxclhDVS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/WfsaO01rXCU/maxresdefault.jpg"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Все отзывы о Инфоклиника.RU - Реальный опыт. Плюсы, минусы.",
+        "url": "https://a2is.ru/catalog/programs-for-clinics/infoklinikaru/reviews-infoklinikaru",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "С софтом который у нас был на старте сводить все документацию и статистику было крайне неудобно. Но МИС Инфоклиника решили эту задачу на все 100%. Да, были некоторые трудности при переходе, но благодаря хорошей тех.поддержки с их команды, прошли можно сказать безболезненно и быстро.",
+        "profile": {
+          "name": "A2is",
+          "url": "https://a2is.ru/catalog/programs-for-clinics/infoklinikaru/reviews-infoklinikaru",
+          "long_name": "a2is.ru",
+          "img": "https://imgs.search.brave.com/ich80x0TxzdOGJ-v1y2JNxgw83Cpai9SJH3aGjw6OT4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjA3YWViOGEz/ZmU0ZmJjZDI2ZTcy/ZWFkYTU3MmNiZTQz/YzBiNTZmNWNhY2I4/Njk1ZmJmNGNmMTEy/NTg3Yzc3ZS9hMmlz/LnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "a2is.ru",
+          "hostname": "a2is.ru",
+          "favicon": "https://imgs.search.brave.com/ich80x0TxzdOGJ-v1y2JNxgw83Cpai9SJH3aGjw6OT4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjA3YWViOGEz/ZmU0ZmJjZDI2ZTcy/ZWFkYTU3MmNiZTQz/YzBiNTZmNWNhY2I4/Njk1ZmJmNGNmMTEy/NTg3Yzc3ZS9hMmlz/LnJ1Lw",
+          "path": "› catalog  › programs-for-clinics  › infoklinikaru  › reviews-infoklinikaru"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/qx-7ef9CuupIampbKcU0u5xawDqvMf6ipu6CfGQrHZc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hMmlz/LnJ1L2ltZy9sb2dv/X3ZrLmpwZw",
+          "original": "https://a2is.ru/img/logo_vk.jpg",
+          "logo": true
+        },
+        "extra_snippets": [
+          "Читайте последние отзывы и реальные истории пользователей Инфоклиника.RU. С отзывами от клиентов вы узнаете о плюсах и минусах сервиса, с точки зрения простоты использования, удобства, работы техподдержки и многое другое.",
+          "Настройка прав по ролям позволяет закрыть финансовую информацию от врачей, а медицинскую от кассиров. В плане безопасности это лучшая МИС что мы пользовались.",
+          "С софтом который у нас был на старте сводить все документацию и статистику было крайне неудобно. Но МИС Инфоклиника решили эту задачу на все 100%. Да, были некоторые трудности при переходе, но благодаря хорошей тех.поддержки с их команды, прошли можно сказать безболезненно и быстро.",
+          "Серьезная МИС которая комплексно решает весь спектр по клинике в информационном поле"
+        ]
+      },
+      {
+        "title": "МИС (медицинская информационная система): что это, виды, как выбрать",
+        "url": "https://fdoc.ru/blog/mis-mediczinskaya-informaczionnaya-sistema-chto-eto-vidy-kak-vybrat/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Помните, что переход на использование информационных систем в медицине нужен для оптимизации процессов. Если линейному персоналу сложно понять, как работать с МИС, если она неудобна для врачей, лаборантов, административного корпуса, рассмотрите альтернативные варианты.",
+        "profile": {
+          "name": "Fdoc",
+          "url": "https://fdoc.ru/blog/mis-mediczinskaya-informaczionnaya-sistema-chto-eto-vidy-kak-vybrat/",
+          "long_name": "fdoc.ru",
+          "img": "https://imgs.search.brave.com/1HbOWEoI8LZP2zi9kun6K-2cXGTdvMHbBhHuGPH7g-k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWI4NWU5YWU0/MTVhYjFlOGNiNTJk/YzVjY2M2MGIyZWQ3/ODkyYzg4YzNkMDg1/MjZhMDIxYjMxYWZk/NmM5MmVhMy9mZG9j/LnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "fdoc.ru",
+          "hostname": "fdoc.ru",
+          "favicon": "https://imgs.search.brave.com/1HbOWEoI8LZP2zi9kun6K-2cXGTdvMHbBhHuGPH7g-k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWI4NWU5YWU0/MTVhYjFlOGNiNTJk/YzVjY2M2MGIyZWQ3/ODkyYzg4YzNkMDg1/MjZhMDIxYjMxYWZk/NmM5MmVhMy9mZG9j/LnJ1Lw",
+          "path": "› blog  › mis-mediczinskaya-informaczionnaya-sistema-chto-eto-vidy-kak-vybrat"
+        },
+        "extra_snippets": [
+          "Чтобы выбрать МИС для медицинского учреждения, необходимо знать, какими функциями они обладают и каким требованиям должны соответствовать. Расскажем об этом подробно.",
+          "Помните, что переход на использование информационных систем в медицине нужен для оптимизации процессов. Если линейному персоналу сложно понять, как работать с МИС, если она неудобна для врачей, лаборантов, административного корпуса, рассмотрите альтернативные варианты.",
+          "После того как системе передаются рутинные задачи (например, рассылка уведомлений о предстоящем приеме, подтверждение визита к врачу и т. д.), высвобождается административный ресурс. Нагрузка на сотрудников снижается, но о полной взаимозаменяемости МИС и администраторов говорить преждевременно.",
+          "В 2022 году в России было принято Постановление о единой информационной медицинской системе. Цель этого акта – обеспечить электронный документооборот в сфере здравоохранения. У пациентов должна быть возможность записаться на прием к врачу онлайн, а у клиник – обмениваться сведениями и передавать информацию."
+        ]
+      },
+      {
+        "title": "Как работает медицинская информационная система: виды и выбор МИС, интеграция — Блог — Сегмент+",
+        "url": "https://kontur.ru/lp/segmentplus/blog/80510-medicinskaya_informacionnaya_sistema",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Разрозненность информации и человеческий фактор = накладки в расписании, утеря личных карт и жалобы. Клиника переходит на МИС. Теперь вся информация находится в едином интерфейсе. Сотрудники перестали тратить время на поиск документов и ручной ввод данных, выросло качество работы врачей, а администраторы избавились от рутины — программа автоматически напоминает пациентам о визите.",
+        "page_age": "2025-08-13T07:36:00",
+        "profile": {
+          "name": "Kontur",
+          "url": "https://kontur.ru/lp/segmentplus/blog/80510-medicinskaya_informacionnaya_sistema",
+          "long_name": "kontur.ru",
+          "img": "https://imgs.search.brave.com/xqZ5_2QGMDs1MFiMHRD4CwuvFsKF999CFl2SoEev0N4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2U1OGJhNzU5/YjgwMzkxMGRlM2My/NGM4YmZiYjk4NjNm/MGRlYTM3ZDNkYWQw/YjkyYzlmYTUzNDJh/MTMyNjQwNC9rb250/dXIucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "kontur.ru",
+          "hostname": "kontur.ru",
+          "favicon": "https://imgs.search.brave.com/xqZ5_2QGMDs1MFiMHRD4CwuvFsKF999CFl2SoEev0N4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2U1OGJhNzU5/YjgwMzkxMGRlM2My/NGM4YmZiYjk4NjNm/MGRlYTM3ZDNkYWQw/YjkyYzlmYTUzNDJh/MTMyNjQwNC9rb250/dXIucnUv",
+          "path": "  › сегмент +: блог"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/1GZaHXWZQHoAn2vtMvH2YSOdIalkv0FYHpUykuY1dxM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zLmtv/bnR1ci5ydS9jb21t/b24tdjIvaWNvbnMt/cHJvZHVjdHMva29u/dHVyL2F2YXRhci9r/b250dXItYXZhdGFy/LTUxMi5wbmc",
+          "original": "https://s.kontur.ru/common-v2/icons-products/kontur/avatar/kontur-avatar-512.png",
+          "logo": true
+        },
+        "age": "August 13, 2025",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Рустам Батталов",
+              "thumbnail": {
+                "src": "https://imgs.search.brave.com/u_4FfzQtW9h8xpo_Aol0CzQpdbTij85Czr8_Dd32ZJ0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zZXJ2/aWNlcy5rb250dXIu/cnUvRmlsZXMvTW9k/dWxlcy9BdXRob3Iv/NzE1X20uanBnP3Q9/MTc0NTI0ODQyMw",
+                "original": "https://services.kontur.ru/Files/Modules/Author/715_m.jpg?t=1745248423"
+              }
+            }
+          ],
+          "date": "Aug 13, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "Контур",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/1GZaHXWZQHoAn2vtMvH2YSOdIalkv0FYHpUykuY1dxM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zLmtv/bnR1ci5ydS9jb21t/b24tdjIvaWNvbnMt/cHJvZHVjdHMva29u/dHVyL2F2YXRhci9r/b250dXItYXZhdGFy/LTUxMi5wbmc",
+              "original": "https://s.kontur.ru/common-v2/icons-products/kontur/avatar/kontur-avatar-512.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Что такое медицинская информационная система (МИС), зачем она нужна и какие задачи решает. Основные функции, классификация, соответствие законодательству и возможность интеграции с внешними сервисами.",
+          "Как итог: внешние сервисы расширяют возможности МИС, повышают скорость работы врача и администратора, делают организацию гибкой, готовой к масштабированию. Внедрение медицинской информационной системы — это не просто шаг в сторону цифровизации.",
+          "Разрозненность информации и человеческий фактор = накладки в расписании, утеря личных карт и жалобы. Клиника переходит на МИС. Теперь вся информация находится в едином интерфейсе. Сотрудники перестали тратить время на поиск документов и ручной ввод данных, выросло качество работы врачей, а администраторы избавились от рутины — программа автоматически напоминает пациентам о визите.",
+          "Медицинская информационная система: что это и зачем нужна · Основные задачи, которые решает МИС"
+        ]
+      },
+      {
+        "title": "МИС Медицинский помощник, МИС без абонентской платы",
+        "url": "https://www.xn--d1abkaaaggdlhiembn4a1g3c.xn--p1ai/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Редакторы шаблонов приемов – жалобы, история заболевания, локальный статус, диагноз, рекомендации, редактор МКБ10, редактор УЗИ",
+        "profile": {
+          "name": "Xn--d1abkaaaggdlhiembn4a1g3c",
+          "url": "https://www.xn--d1abkaaaggdlhiembn4a1g3c.xn--p1ai/",
+          "long_name": "xn--d1abkaaaggdlhiembn4a1g3c.xn--p1ai",
+          "img": "https://imgs.search.brave.com/dGAhS8Fn6M1AgRs1_sc1y3jhs-1R8Wh_8Zf2u5BYCiA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTVmNTQwNzZk/ZTU2ZGIwYTkxNDIx/MDI4ZTQwZjlmZDcx/MzQxNGUwYzIyNjY1/N2EwZDg3NzliM2Zj/NzE3N2U4OS93d3cu/eG4tLWQxYWJrYWFh/Z2dkbGhpZW1ibjRh/MWczYy54bi0tcDFh/aS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "xn--d1abkaaaggdlhiembn4a1g3c.xn--p1ai",
+          "hostname": "www.xn--d1abkaaaggdlhiembn4a1g3c.xn--p1ai",
+          "favicon": "https://imgs.search.brave.com/dGAhS8Fn6M1AgRs1_sc1y3jhs-1R8Wh_8Zf2u5BYCiA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTVmNTQwNzZk/ZTU2ZGIwYTkxNDIx/MDI4ZTQwZjlmZDcx/MzQxNGUwYzIyNjY1/N2EwZDg3NzliM2Zj/NzE3N2U4OS93d3cu/eG4tLWQxYWJrYWFh/Z2dkbGhpZW1ibjRh/MWczYy54bi0tcDFh/aS8",
+          "path": ""
+        },
+        "extra_snippets": [
+          "Редакторы шаблонов приемов – жалобы, история заболевания, локальный статус, диагноз, рекомендации, редактор МКБ10, редактор УЗИ",
+          "У администратора нет доступа к содержимому амбулаторных карт, содержимое доступно для просмотра только врачам (безопасность по работе с персональными данными) в день приема.",
+          "Печать дубликатов заключений (оформленных только этим доктором). По правам настраивается доступ и для других врачей.",
+          "Отправка результатов на почту пациентам, прикрепление в карту пациента для просмотра врачами и в личном кабинете пациента"
+        ]
+      },
+      {
+        "title": "РТ МИС. Сервисы для врачей и пациентов",
+        "url": "https://rtmis.ru/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "В Екатеринбурге прошла выставка-форум «Здравоохранение Урала-2022» · Процесс информатизации дошел до всех сельских медпунктов Наримановского района · РТ МИС запускает годовой цикл бесплатных вебинаров для сотрудников медицинских организаций · Все врачи в Карелии перешли на ведение электронных карт своих пациентов",
+        "profile": {
+          "name": "Rtmis",
+          "url": "https://rtmis.ru/",
+          "long_name": "rtmis.ru",
+          "img": "https://imgs.search.brave.com/qskv0vlUrtYeo9Kvigm8mZ0ceUVjlkmKJ7ZEwrtSgx8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDM5YjliYmI1/NmRkMGYzMjU2MTZm/NTM3ZmI0MWZiYzI2/ODI3ODdjMTEwMDRj/YWEwYzIyMzZmYWRi/ZDkzNDBhMS9ydG1p/cy5ydS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "rtmis.ru",
+          "hostname": "rtmis.ru",
+          "favicon": "https://imgs.search.brave.com/qskv0vlUrtYeo9Kvigm8mZ0ceUVjlkmKJ7ZEwrtSgx8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDM5YjliYmI1/NmRkMGYzMjU2MTZm/NTM3ZmI0MWZiYzI2/ODI3ODdjMTEwMDRj/YWEwYzIyMzZmYWRi/ZDkzNDBhMS9ydG1p/cy5ydS8",
+          "path": ""
+        },
+        "extra_snippets": [
+          "В Калужской области обновилась региональная медицинская информационная система · Подтверждена совместимость информационных систем «РТ МИС» с «Ред ОС»",
+          "С 1 февраля в Рязанской области заработает обновлённая медицинская информационная система · Итоги модернизации медицинской информационной системы Карелии за 2022 год · РТ МИС выступит экспертом в программе «Неограниченные возможности»",
+          "В Екатеринбурге прошла выставка-форум «Здравоохранение Урала-2022» · Процесс информатизации дошел до всех сельских медпунктов Наримановского района · РТ МИС запускает годовой цикл бесплатных вебинаров для сотрудников медицинских организаций · Все врачи в Карелии перешли на ведение электронных карт своих пациентов",
+          "В Рязанской области стартовало обучение врачей работе в обновлённой МИС · Врачи по паллиативной медицинской помощи из агентства «Дедморозим» прошли обучение по работе в МИС"
+        ]
+      },
+      {
+        "title": "Блог|Медицинская информационная система. МИС. АРМ врача.",
+        "url": "https://www.medmis.ru/blog",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Бунт на корабле: почему сорудники клиник сопротивляются внедрению МИС, как бороться с саботажем и как корректно и мягко подготовить команду к изменениям в работе. ... Как с помощью АРМ в МЕДМИС обеспечить прозрачный контроль и аналитику работы врачей",
+        "profile": {
+          "name": "Medmis",
+          "url": "https://www.medmis.ru/blog",
+          "long_name": "medmis.ru",
+          "img": "https://imgs.search.brave.com/b_SHgU2Yozt2jmtxlgQFilvlIMzUJSAjvFv5XZtu2vo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTEzMTI3MzYz/OTBiZTkyZTQ3YzA4/MDk5YTI0MTliYjQz/ODAxZmQ5ZDBjMTVm/YjhmZGE2OGE0MGJi/NjRjMTE1YS93d3cu/bWVkbWlzLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medmis.ru",
+          "hostname": "www.medmis.ru",
+          "favicon": "https://imgs.search.brave.com/b_SHgU2Yozt2jmtxlgQFilvlIMzUJSAjvFv5XZtu2vo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTEzMTI3MzYz/OTBiZTkyZTQ3YzA4/MDk5YTI0MTliYjQz/ODAxZmQ5ZDBjMTVm/YjhmZGE2OGE0MGJi/NjRjMTE1YS93d3cu/bWVkbWlzLnJ1Lw",
+          "path": "› blog"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/5GBIhWP6ESnkuH_YeqBkRHfTNOAwcCCGe65i8KRTvyY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudGlsZGFjZG4u/Y29tL3RpbGQ2MjM0/LTY2MzMtNDMzMS1h/NjM4LTMzMzczNDY1/MzUzNy9waG90by5z/dmc",
+          "original": "https://static.tildacdn.com/tild6234-6633-4331-a638-333734653537/photo.svg",
+          "logo": true
+        },
+        "extra_snippets": [
+          "Узнайте, как эффективная мотивация врачей в медицинской клинике может повысить уровень обслуживания и успех на рынке здравоохранения. Изучите роли медицинской информационной системы (МИС) в создании стимулирующей среды и оптимизации работы врачей.",
+          "Бунт на корабле: почему сорудники клиник сопротивляются внедрению МИС, как бороться с саботажем и как корректно и мягко подготовить команду к изменениям в работе. ... Как с помощью АРМ в МЕДМИС обеспечить прозрачный контроль и аналитику работы врачей",
+          "Эта статья расскажет о понятии АРМ врача, его важности для современной медицины, функционале, предоставляемом МИС, и даст советы по оптимальному использованию этого инструмента для повышения эффективности и качества медицинской практики.",
+          "Для стабильной работы клиники нужна полноценная медицинская информационная система, объединяющая процессы в одном интерфейсе. В статье — ключевые аспекты выбора МИС, которые помогают вести учет пациентов, документов и финансов без лишних сложностей."
+        ]
+      },
+      {
+        "title": "Как выбрать медицинскую информационную систему? Топ-5 ошибок",
+        "url": "https://www.medesk.ru/blog/top-5-oshibok-medicinskoy-informacionnoy-sistemy/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Ошибка 2: Не учитывать возможности основных пользователей медицинской информационной системы · Ошибка 3: Экономия на технической поддержке · Ошибка 4: Приобретение МИС без пробной версии",
+        "page_age": "2019-12-13T00:00:00",
+        "profile": {
+          "name": "Medesk",
+          "url": "https://www.medesk.ru/blog/top-5-oshibok-medicinskoy-informacionnoy-sistemy/",
+          "long_name": "medesk.ru",
+          "img": "https://imgs.search.brave.com/6taVqLxsIY5Gfa_LJdb_Dfj8UCUHU5awI-mZlwz2lhA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjZhMDU4MzRk/OGIwM2I5YzY3Yzk3/YTJiNjhjMWU5OWVl/Mjk0MGQ0ZWM2ZWZi/MDY4N2U4ODlhZDdj/MjA2Y2JjMi93d3cu/bWVkZXNrLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medesk.ru",
+          "hostname": "www.medesk.ru",
+          "favicon": "https://imgs.search.brave.com/6taVqLxsIY5Gfa_LJdb_Dfj8UCUHU5awI-mZlwz2lhA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjZhMDU4MzRk/OGIwM2I5YzY3Yzk3/YTJiNjhjMWU5OWVl/Mjk0MGQ0ZWM2ZWZi/MDY4N2U4ODlhZDdj/MjA2Y2JjMi93d3cu/bWVkZXNrLnJ1Lw",
+          "path": "› blog  › top-5-oshibok-medicinskoy-informacionnoy-sistemy"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/JNvq6NZItWHuqi1MIGC1z3oOWAmtAJvfJ_BFu8yQ9Qg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/bWVkZXNrLnJ1L2kv/NURnY2tBRjBHbDN1/aE9rQzVrc3pUVS9m/YWM2MDg2ODJmNmE2/MTg5ZGQ1NWMyNDI5/MmVmZmVmNi9jaG9v/c2luZ19wcmFjdGlj/ZV9tYW5hZ2VtZW50/X3NvZnR3YXJlLmpw/Zw",
+          "original": "https://www.medesk.ru/i/5DgckAF0Gl3uhOkC5kszTU/fac608682f6a6189dd55c24292effef6/choosing_practice_management_software.jpg",
+          "logo": false
+        },
+        "age": "December 13, 2019",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Екатерина Попович",
+              "url": "https://www.linkedin.com/in/ekaterina-popovich-134891103/",
+              "thumbnail": {
+                "src": "https://imgs.search.brave.com/_NpkLOsCRk0bUcSgf6EmjYnbBKGq2KnIZVgm5FGmqhA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/bWVkZXNrLnJ1L2kv/M3FXUkdZek1uT2Fx/WmZLdGlxSGMxcC9i/YmIyZTczYzY2ZjBj/YjE0YWNiMWIxY2Y3/NTNmY2RmNi9la2F0/ZXJpbmEtcG9wb3Zp/Y2guanBn",
+                "original": "https://www.medesk.ru/i/3qWRGYzMnOaqZfKtiqHc1p/bbb2e73c66f0cb14acb1b1cf753fcdf6/ekaterina-popovich.jpg"
+              }
+            }
+          ],
+          "date": "Dec 13, 2019",
+          "publisher": {
+            "type": "organization",
+            "name": "Medesk",
+            "url": "https://www.medesk.ru",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/Y5ZtGdNgYMorxeCH3tuTStosHZQZkKeOdB-MznYScOI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/bWVkZXNrLnJ1L2Fz/c2V0cy9pbWFnZXMv/bWVkZXNrLWxvZ28u/cG5n",
+              "original": "https://www.medesk.ru/assets/images/medesk-logo.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Программа для клиники Medesk представляет собой редкое сочетание современных IT-технологий и внимательного подхода к потребностям врачей и руководителей клиник. Вы точно сможете решить большинство проблем, подобрав систему, которая подходит под ваши бизнес-процессы. Главное — знать, что такое МИС и как не ошибиться с выбором. Читать: Как выбрать медицинскую информационную систему для клиники",
+          "Медицинская информационная система (МИС) — это единая цифровая среда, предназначенная для автоматизации управленческих, финансовых и лечебных процессов в здравоохранении. Она аккумулирует все данные о пациентах, расписании врачей, складских запасах и доходах клиники.",
+          "Тенденции развития медицинских информационных систем в 2026 году · Интеграция МИС: почему возможность связи с другими сервисами критически важна",
+          "Ошибка 2: Не учитывать возможности основных пользователей медицинской информационной системы · Ошибка 3: Экономия на технической поддержке · Ошибка 4: Приобретение МИС без пробной версии"
+        ]
+      },
+      {
+        "title": "Инфоклиника — Медицинские информационные системы",
+        "url": "https://xn--80akiadv6abcde.xn--p1acf/infoklinika/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "В МИС «Инфоклиника» запущена интеграция с «Честным знаком»",
+        "profile": {
+          "name": "Xn--80akiadv6abcde",
+          "url": "https://xn--80akiadv6abcde.xn--p1acf/infoklinika/",
+          "long_name": "xn--80akiadv6abcde.xn--p1acf",
+          "img": "https://imgs.search.brave.com/5AJ7abl_MEl6GvDKoquH5paXwQkLgMGoAF19tPKbOws/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmU3ZWU1Zjky/MWU3ZGE1YWZhYWIz/NmU2MThjMjQ2YzI2/YmQ5MmVjYmQyYWQz/ODU0ZDVlYzlmZTMy/YzhhYzM0Mi94bi0t/ODBha2lhZHY2YWJj/ZGUueG4tLXAxYWNm/Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "xn--80akiadv6abcde.xn--p1acf",
+          "hostname": "xn--80akiadv6abcde.xn--p1acf",
+          "favicon": "https://imgs.search.brave.com/5AJ7abl_MEl6GvDKoquH5paXwQkLgMGoAF19tPKbOws/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmU3ZWU1Zjky/MWU3ZGE1YWZhYWIz/NmU2MThjMjQ2YzI2/YmQ5MmVjYmQyYWQz/ODU0ZDVlYzlmZTMy/YzhhYzM0Mi94bi0t/ODBha2lhZHY2YWJj/ZGUueG4tLXAxYWNm/Lw",
+          "path": "› infoklinika"
+        },
+        "extra_snippets": [
+          "МИС «ИНФОКЛИНИКА» — это готовое решение с отлаженной технологией внедрения, отработанными на практике программами обучения персонала и большим количеством заполненных справочников, готовых протоколов, шаблонов для истории болезни и отчётов.",
+          "В МИС «Инфоклиника» запущена интеграция с «Честным знаком»",
+          "— Интуитивно понятный интерфейс — Программа Инфоклиника постоянно совершенствуется уже более 15 лет — Система управления сетью филиалов с распределенными базами данных — Входит в Единый реестр российских программ для ЭВМ и БД Министерства связи РФ и реестр медицинских изделий Росздравнадзора РФ — CRM Инфоклиника — отвечае"
+        ]
+      },
+      {
+        "title": "Как интуитивно понятная МИС снижает выгорание персонала и текучку » Медвестник",
+        "url": "https://medvestnik.ru/content/articles/kak-intuitivno-ponyatnaya-mis-snijaet-vygoranie-personala-i-tekuchku.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Врач приходит лечить людей, а не осваивать программные продукты. Когда интерфейс МИС перегружен, когда для создания протокола осмотра ...",
+        "page_age": "2026-03-30T02:59:54",
+        "profile": {
+          "name": "Медвестник",
+          "url": "https://medvestnik.ru/content/articles/kak-intuitivno-ponyatnaya-mis-snijaet-vygoranie-personala-i-tekuchku.html",
+          "long_name": "medvestnik.ru",
+          "img": "https://imgs.search.brave.com/D-2TxKu8QaI4BKOuTABttOvebuaZKRcycCNqxzDEWas/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjQzNmFjNmMy/Zjc0MGZiMjg0NDk2/MDFmYTE2YjlmZmIz/NWE5MGI5ZDg2MzI2/YTBmNjRlYjIxOTEx/Y2U5YmJhMy9tZWR2/ZXN0bmlrLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medvestnik.ru",
+          "hostname": "medvestnik.ru",
+          "favicon": "https://imgs.search.brave.com/D-2TxKu8QaI4BKOuTABttOvebuaZKRcycCNqxzDEWas/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjQzNmFjNmMy/Zjc0MGZiMjg0NDk2/MDFmYTE2YjlmZmIz/NWE5MGI5ZDg2MzI2/YTBmNjRlYjIxOTEx/Y2U5YmJhMy9tZWR2/ZXN0bmlrLnJ1Lw",
+          "path": "› content  › articles  › kak-intuitivno-ponyatnaya-mis-snijaet-vygoranie-personala-i-tekuchku.html"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/si_XW4we5tiFC0SJty5SmI55zRS-sD2kjpgKUiLs2ec/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWR2/ZXN0bmlrLnJ1L2Fw/cHMvbXYvYXNzZXRz/L2ZpbGVzL2NvbnRl/bnQvYXJ0aWNsZXMv/MTIvMTIwNS9mcm9u/dC5qcGc",
+          "original": "https://medvestnik.ru/apps/mv/assets/files/content/articles/12/1205/front.jpg",
+          "logo": false
+        },
+        "age": "March 30, 2026",
+        "extra_snippets": [
+          "Интуитивно понятная МИС снимает рутину с врачей и администраторов, снижает время на запись и документацию, уменьшает выгорание и текучку, повышая лояльность персонала и пациентов.",
+          "И если зарплату и график вы уже оптимизировали, есть еще один фактор, который часто недооценивают, — программа, с которой врач работает каждый день. ... Неудобная медицинская информационная система (МИС) приводит к потерянному времени, ошибкам в документации и постоянному стрессу.",
+          "Врач приходит лечить людей, а не осваивать программные продукты. Когда интерфейс МИС перегружен, когда для создания протокола осмотра требуется открыть пять вкладок, а для оформления рецепта вспомнить путь по сложному меню, начинается сопротивление.",
+          "Врач начинает искать обходные пути: вести заметки в блокноте, использовать Word. Все это снижает скорость приема, увеличивает риск ошибок и, что самое важное, создает ощущение, что система мешает работать. Хорошая МИС незаметна."
+        ]
+      },
+      {
+        "title": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВА-",
+        "url": "https://amurgma.ru/upload/iblock/7fa/kmoiq7ixbibqcee2s8kl7239f2l29ybg/Medicinskie_informacionnye_sistemy.pdf",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Основными задачами, решаемыми с помощью МИС, являются: 1. Сбор и передача информации о законченных случаях фактов оказанной · медицинской помощи населению. 2. Информационная поддержка функционирования и взаимодействия со-",
+        "profile": {
+          "name": "Amurgma",
+          "url": "https://amurgma.ru/upload/iblock/7fa/kmoiq7ixbibqcee2s8kl7239f2l29ybg/Medicinskie_informacionnye_sistemy.pdf",
+          "long_name": "amurgma.ru",
+          "img": "https://imgs.search.brave.com/h5kj-QSoqih4IoHA5vmedmTdzhVF4WQ8sZeiKuA5HCI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjAyZmU3OWZk/OTU1NDY4MjNlMzVl/NTczZGU4NDZmMTdk/MmQ1ZDJkMDVkYzZj/OGQxZGUwMWNlNDc4/M2U5NWUxNy9hbXVy/Z21hLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "amurgma.ru",
+          "hostname": "amurgma.ru",
+          "favicon": "https://imgs.search.brave.com/h5kj-QSoqih4IoHA5vmedmTdzhVF4WQ8sZeiKuA5HCI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjAyZmU3OWZk/OTU1NDY4MjNlMzVl/NTczZGU4NDZmMTdk/MmQ1ZDJkMDVkYzZj/OGQxZGUwMWNlNDc4/M2U5NWUxNy9hbXVy/Z21hLnJ1Lw",
+          "path": "› upload  › iblock  › 7fa  › kmoiq7ixbibqcee2s8kl7239f2l29ybg  › Medicinskie_informacionnye_sistemy.pdf"
+        },
+        "content_type": "pdf",
+        "extra_snippets": [
+          "Медицинская информационная система (МИС) - это совокупность",
+          "информационных систем (МИС). Информационная система (ИС) - это система, построенная на базе",
+          "Основными задачами, решаемыми с помощью МИС, являются: 1. Сбор и передача информации о законченных случаях фактов оказанной · медицинской помощи населению. 2. Информационная поддержка функционирования и взаимодействия со-",
+          "В МИС территориального уровня выделяют несколько подсистем, важными из которых являются: - административно-управленческая информационная система;"
+        ]
+      },
+      {
+        "title": "МИС (медицинская информационная система) — что это такое и как выбрать для частной клиники",
+        "url": "https://n3health.ru/medicinskaya-informacionnaya-sistema/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Здесь между локальными и облачными решениями нет большой разницы, хотя ещё пять лет назад облачные МИС сильно уступали локальным. Поэтому более логично проводить сравнение между конкретными решениями. Главное требование — система должна удовлетворять потребностям всех заинтересованных лиц: и врачей, и сотрудников регистратуры, и менеджеров, отвечающих за управление клиникой, и ИТ-специалистов.",
+        "page_age": "2026-06-30T14:40:04",
+        "profile": {
+          "name": "N3.Health",
+          "url": "https://n3health.ru/medicinskaya-informacionnaya-sistema/",
+          "long_name": "n3health.ru",
+          "img": "https://imgs.search.brave.com/6caETQSL-Wkm3nAvy8BeACSexL5JiezaI-wcT2yNhPg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWJlMDk0YzU3/MTFiYzJkMjgxOGJl/Mjc4YzA5YzAxNGFk/ZjVlZjBkYzBkMzRl/ZGE2NGU4NTVmOTM3/NmJhMzhhZi9uM2hl/YWx0aC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "faq",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "n3health.ru",
+          "hostname": "n3health.ru",
+          "favicon": "https://imgs.search.brave.com/6caETQSL-Wkm3nAvy8BeACSexL5JiezaI-wcT2yNhPg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWJlMDk0YzU3/MTFiYzJkMjgxOGJl/Mjc4YzA5YzAxNGFk/ZjVlZjBkYzBkMzRl/ZGE2NGU4NTVmOTM3/NmJhMzhhZi9uM2hl/YWx0aC5ydS8",
+          "path": "› medicinskaya-informacionnaya-sistema"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ES1FPJ1y1EuiA1e5AE5H3R1SYAnGFw5yic_dt_8njJw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudGlsZGFjZG4u/Y29tL3RpbGQzNzM3/LTMwMzctNDUzMy1i/MTY1LTYxNjU2NjYy/NjQzMS8wMDEuanBn",
+          "original": "https://static.tildacdn.com/tild3737-3037-4533-b165-616566626431/001.jpg",
+          "logo": false
+        },
+        "age": "1 week ago",
+        "faq": {
+          "items": [
+            {
+              "question": "Что такое МИС в медицине?",
+              "answer": "Это система для автоматизации работы клиники, которая упрощает учет пациентов, документооборот, финансовые и операционные процессы.",
+              "title": "МИС (медицинская информационная ...",
+              "url": "https://n3health.ru/medicinskaya-informacionnaya-sistema/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "n3health.ru",
+                "hostname": "n3health.ru",
+                "favicon": "https://imgs.search.brave.com/6caETQSL-Wkm3nAvy8BeACSexL5JiezaI-wcT2yNhPg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWJlMDk0YzU3/MTFiYzJkMjgxOGJl/Mjc4YzA5YzAxNGFk/ZjVlZjBkYzBkMzRl/ZGE2NGU4NTVmOTM3/NmJhMzhhZi9uM2hl/YWx0aC5ydS8",
+                "path": "› medicinskaya-informacionnaya-sistema"
+              }
+            },
+            {
+              "question": "Нужна ли МИС частной клинике?",
+              "answer": "Да, обязательно, особенно если клиника обязана передавать данные в РЭМД ЕГИСЗ, хочет автоматизировать процессы работы и управлять бизнесом на основе данных.",
+              "title": "МИС (медицинская информационная ...",
+              "url": "https://n3health.ru/medicinskaya-informacionnaya-sistema/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "n3health.ru",
+                "hostname": "n3health.ru",
+                "favicon": "https://imgs.search.brave.com/6caETQSL-Wkm3nAvy8BeACSexL5JiezaI-wcT2yNhPg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWJlMDk0YzU3/MTFiYzJkMjgxOGJl/Mjc4YzA5YzAxNGFk/ZjVlZjBkYzBkMzRl/ZGE2NGU4NTVmOTM3/NmJhMzhhZi9uM2hl/YWx0aC5ydS8",
+                "path": "› medicinskaya-informacionnaya-sistema"
+              }
+            },
+            {
+              "question": "Какая МИС лучше — облачная или локальная?",
+              "answer": "Облачная, как правило, подходит небольшим клиникам за счет простоты внедрения, локальная — крупным организациям с индивидуальными требованиями. МИС подбирается индивидуально в зависимости от потребностей и внутренних процессов клиники.",
+              "title": "МИС (медицинская информационная ...",
+              "url": "https://n3health.ru/medicinskaya-informacionnaya-sistema/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "n3health.ru",
+                "hostname": "n3health.ru",
+                "favicon": "https://imgs.search.brave.com/6caETQSL-Wkm3nAvy8BeACSexL5JiezaI-wcT2yNhPg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWJlMDk0YzU3/MTFiYzJkMjgxOGJl/Mjc4YzA5YzAxNGFk/ZjVlZjBkYzBkMzRl/ZGE2NGU4NTVmOTM3/NmJhMzhhZi9uM2hl/YWx0aC5ydS8",
+                "path": "› medicinskaya-informacionnaya-sistema"
+              }
+            },
+            {
+              "question": "Сколько стоит внедрение МИС?",
+              "answer": "Стоимость зависит от типа системы, количества пользователей, набора функциональных блоков, объема индивидуальных доработок.",
+              "title": "МИС (медицинская информационная ...",
+              "url": "https://n3health.ru/medicinskaya-informacionnaya-sistema/",
+              "meta_url": {
+                "scheme": "https",
+                "netloc": "n3health.ru",
+                "hostname": "n3health.ru",
+                "favicon": "https://imgs.search.brave.com/6caETQSL-Wkm3nAvy8BeACSexL5JiezaI-wcT2yNhPg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWJlMDk0YzU3/MTFiYzJkMjgxOGJl/Mjc4YzA5YzAxNGFk/ZjVlZjBkYzBkMzRl/ZGE2NGU4NTVmOTM3/NmJhMzhhZi9uM2hl/YWx0aC5ydS8",
+                "path": "› medicinskaya-informacionnaya-sistema"
+              }
+            }
+          ]
+        },
+        "organization": {
+          "type": "organization",
+          "name": "N3.Health",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "МИС (медицинская информационная система) — это система, предназначенная для автоматизации работы клиники: ее бизнес-процессов, документооборота, взаимодействия с пациентом, процессов аналитики и контроля.",
+          "Здесь между локальными и облачными решениями нет большой разницы, хотя ещё пять лет назад облачные МИС сильно уступали локальным. Поэтому более логично проводить сравнение между конкретными решениями. Главное требование — система должна удовлетворять потребностям всех заинтересованных лиц: и врачей, и сотрудников регистратуры, и менеджеров, отвечающих за управление клиникой, и ИТ-специалистов.",
+          "Рабочее место врача может быть организовано на любом компьютере. При выборе облачной МИС клинике не нужно беспокоиться об информационной безопасности — достаточно обеспечить защиту каналов связи, а также рабочих мест сотрудников.",
+          "Медицинская информационная система (МИС) — это программное решение, которое автоматизирует работу клиники, включая учет пациентов, документооборот, финансы и взаимодействие с государственными системами."
+        ]
+      },
+      {
+        "title": "ТОП 5 медицинских информационных систем: обзор лучших МИС для медицины",
+        "url": "https://fdoc.ru/blog/obzor-luchshih-mis-dlya-mediczinskih-klinik/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Пользователи отмечают прозрачные условия подписки: облачный сервис оплачивается ежемесячно за каждого врача. Единичным потребителям такая модель показалась неудобной — в случаях, когда врачи ведут несколько приемов в месяц.",
+        "profile": {
+          "name": "Fdoc",
+          "url": "https://fdoc.ru/blog/obzor-luchshih-mis-dlya-mediczinskih-klinik/",
+          "long_name": "fdoc.ru",
+          "img": "https://imgs.search.brave.com/1HbOWEoI8LZP2zi9kun6K-2cXGTdvMHbBhHuGPH7g-k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWI4NWU5YWU0/MTVhYjFlOGNiNTJk/YzVjY2M2MGIyZWQ3/ODkyYzg4YzNkMDg1/MjZhMDIxYjMxYWZk/NmM5MmVhMy9mZG9j/LnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "fdoc.ru",
+          "hostname": "fdoc.ru",
+          "favicon": "https://imgs.search.brave.com/1HbOWEoI8LZP2zi9kun6K-2cXGTdvMHbBhHuGPH7g-k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYWI4NWU5YWU0/MTVhYjFlOGNiNTJk/YzVjY2M2MGIyZWQ3/ODkyYzg4YzNkMDg1/MjZhMDIxYjMxYWZk/NmM5MmVhMy9mZG9j/LnJ1Lw",
+          "path": "› blog  › obzor-luchshih-mis-dlya-mediczinskih-klinik"
+        },
+        "extra_snippets": [
+          "Обзор современных МИС для частных медицинских центров и кабинетов. Разбираемся в функциональности и тарифах, изучаем отзывы заказчиков, внедривших медицинские системы.",
+          "Медицинские информационные системы или МИС — незаменимый помощник частной клиники. МИС помогают автоматизировать работу организации и позволяют: вести врачебную и финансовую отчетность,",
+          "В облачной версии стоимость зависит от количества врачей, ведущих прием, — за каждого нужно платить 1 090 рублей в месяц. Чем больше докторов, тем больше размер скидки, до 30%. Стационарная МИС оплачивается раз и навсегда.",
+          "Пользователи отмечают прозрачные условия подписки: облачный сервис оплачивается ежемесячно за каждого врача. Единичным потребителям такая модель показалась неудобной — в случаях, когда врачи ведут несколько приемов в месяц."
+        ]
+      },
+      {
+        "title": "Медицинская информационная система (МИС) как продукт / Хабр",
+        "url": "https://habr.com/ru/articles/461547/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "В итоге попробую, как смогу кратко, изложить все свои наблюдения по основным моментам, на которые стоит обращать внимание разработчикам медицинских информационных систем, чтобы получить безграничную любовь пользователей. Основные жалобы, связанные с финансовой стороной, относились к непрозрачному ценообразованию и непрогнозируемой стоимости владения подобных систем в период сопровождения.",
+        "page_age": "2019-07-27T09:25:09",
+        "profile": {
+          "name": "Habr",
+          "url": "https://habr.com/ru/articles/461547/",
+          "long_name": "habr.com",
+          "img": "https://imgs.search.brave.com/U9Ky9LVSKyuSR1f51Am9A1Z_G_Uks9iCqa79Zhf1zGk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmI1ZTI1NmUy/MTc1ODVkODlkODAw/MzA1ZjcyMTlmNzVk/MzljMWU1ZmRiODlh/ZDg2NzkwNWVlOWYy/NzIyMTYwNy9oYWJy/LmNvbS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "habr.com",
+          "hostname": "habr.com",
+          "favicon": "https://imgs.search.brave.com/U9Ky9LVSKyuSR1f51Am9A1Z_G_Uks9iCqa79Zhf1zGk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmI1ZTI1NmUy/MTc1ODVkODlkODAw/MzA1ZjcyMTlmNzVk/MzljMWU1ZmRiODlh/ZDg2NzkwNWVlOWYy/NzIyMTYwNy9oYWJy/LmNvbS8",
+          "path": "› ru  › articles  › 461547"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/xhEjTbbRLmOdgvm_sDxPvF_nwe24SmOcqnNXl_YGxrc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9oYWJy/LmNvbS9zaGFyZS9w/dWJsaWNhdGlvbi80/NjE1NDcvNDYxNGYz/ZjAyMzc0MGZiODI1/MjNiMDY2MWJmOTY1/OGEv",
+          "original": "https://habr.com/share/publication/461547/4614f3f023740fb82523b0661bf9658a/",
+          "logo": false
+        },
+        "age": "July 27, 2019",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Gennadiy"
+            }
+          ],
+          "date": "Jul 27, 2019",
+          "publisher": {
+            "type": "organization",
+            "name": "Habr",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/BzRGGmG6881f37VDE7AS_NhkjRzNTATxUr0bbFoFNNg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9oYWJy/YXN0b3JhZ2Uub3Jn/L3dlYnQvYV8vbGsv/OW0vYV9sazltamtj/Y2pveC16Y2NqcnBm/b2xta21xLnBuZw",
+              "original": "https://habrastorage.org/webt/a_/lk/9m/a_lk9mjkccjox-zccjrpfolmkmq.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Так над реализацией каких фич стоит поразмыслить менеджеру продукта в компании-разработчике МИС, чтобы сделать свой программный продукт лучшим на витрине? Очень много внимания в отзывах уделяется наличию портала пациента, где можно в удобном виде смотреть историю посещений врача и результаты анализов, на котором можно выбрать необходимого врача и записаться к нему на прием.",
+          "Также такой портал может поддерживать функционал чата с врачом, если у пациента возникли какие-то вопросы уже после приема, ну и конечно различные варианты удаленного взаимодействия (телемедицина, дистанционный мониторинг и т.п.) Помимо портала пациента у некоторых разработчиков есть также внутренний портал для врачей, котор",
+          "Что отмечают пользователи различных МИС как удачные примеры дизайна и юзабилити? Не перегруженный элементами интерфейс и возможность его конфигурации под нужды конкретного специалиста, настраиваемый рабочий стола врача, куда он может вынести основные используемые задачи, настраиваемые меню, легкость навигации в приложени",
+          "В итоге попробую, как смогу кратко, изложить все свои наблюдения по основным моментам, на которые стоит обращать внимание разработчикам медицинских информационных систем, чтобы получить безграничную любовь пользователей. Основные жалобы, связанные с финансовой стороной, относились к непрозрачному ценообразованию и непрогнозируемой стоимости владения подобных систем в период сопровождения."
+        ]
+      },
+      {
+        "title": "МИС Medwork - медицинская информационная система медицинских организаций | medwork",
+        "url": "https://www.medwork.ru/content/mis-medwork",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Сегодня, благодаря двадцатилетнему опыту эксплуатации и развития системы, мы можем предложить полнофункциональный, масштабируемый и открытый продукт – рабочий инструмент руководителя, врача и всех сотрудников клиники. МИС Medwork соответствует требованиям ГОСТ Р 52636-2006 «Электронная история болезни», следует рекомендациям по обеспечению функциональных возможностей МИС МО Министерства здравоохранения РФ.",
+        "profile": {
+          "name": "Medwork",
+          "url": "https://www.medwork.ru/content/mis-medwork",
+          "long_name": "medwork.ru",
+          "img": "https://imgs.search.brave.com/N9lI8IxkTBc38QQXWWcUtzNe6J9107K5ISziuePvmXM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGI4YTI2OTE2/MWIwMDVmZjYwZTg2/NTEyMzNmNmUwOGI5/NzgwYmY3ZTI1M2Yz/ZjYwMTNhZDIzMTNi/OTY2ZTg0My93d3cu/bWVkd29yay5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medwork.ru",
+          "hostname": "www.medwork.ru",
+          "favicon": "https://imgs.search.brave.com/N9lI8IxkTBc38QQXWWcUtzNe6J9107K5ISziuePvmXM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGI4YTI2OTE2/MWIwMDVmZjYwZTg2/NTEyMzNmNmUwOGI5/NzgwYmY3ZTI1M2Yz/ZjYwMTNhZDIzMTNi/OTY2ZTg0My93d3cu/bWVkd29yay5ydS8",
+          "path": "› content  › mis-medwork"
+        },
+        "extra_snippets": [
+          "MedWork - профессиональная медицинская информационная система, разработанная компанией Master Lab для решения комплекса лечебных и управленческих задач, стоящих перед современными медицинскими организациями.",
+          "Сегодня, благодаря двадцатилетнему опыту эксплуатации и развития системы, мы можем предложить полнофункциональный, масштабируемый и открытый продукт – рабочий инструмент руководителя, врача и всех сотрудников клиники. МИС Medwork соответствует требованиям ГОСТ Р 52636-2006 «Электронная история болезни», следует рекомендациям по обеспечению функциональных возможностей МИС МО Министерства здравоохранения РФ.",
+          "Наличие в системе лабораторного модуля сокращает затраты медицинского учреждения на автоматизацию, предоставляя возможность использования единой информационной системы как в лечебных, так и в диагностических подразделениях без необходимости интеграции разнородных программных продуктов. Call-центр позволит автоматизировать работу регистратур, приемных, врачей и других подразделений при входящих звонках, а также систематизировать полученную информацию.",
+          "Развитие медицинских информационных систем организаций, подведомственным Минздраву России в 2020 и 2021 гг. ... Требования к техническому и программному обеспечению системы MedWork ... Главная → МИС Medwork - медицинская информационная система медицинских организаций"
+        ]
+      },
+      {
+        "title": "Медицинские информационные системы",
+        "url": "https://sparm.com/publications/mediczinskie-informaczionnye-sistemy-bazovogo-urovnya",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "В основе находятся информационные системы медицинских (МИС МО) и фармацевтических организаций (ИС ФО). И более никакого сегментирования внутри МИС нет. Каждая единица здравоохранения, будь то частный врачебный кабинет или многопрофильная клиника, является медицинской организацией и использует соответствующую информационную систему с определенным набором функций.",
+        "page_age": "2025-10-24T11:25:47",
+        "profile": {
+          "name": "Sparm",
+          "url": "https://sparm.com/publications/mediczinskie-informaczionnye-sistemy-bazovogo-urovnya",
+          "long_name": "sparm.com",
+          "img": "https://imgs.search.brave.com/aSFN07Pao5YQmJB1FtyWTd8o5snQd-ealM5JzBXJQAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjZlZmJjYzgx/MTI5NWI4MmFlMWMy/ZGI1YTFlYTk3N2Fj/ZWYyYTUwYTEwMTQ1/NGZmNmVjM2NiYjA3/YzZmN2YwMy9zcGFy/bS5jb20v"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "sparm.com",
+          "hostname": "sparm.com",
+          "favicon": "https://imgs.search.brave.com/aSFN07Pao5YQmJB1FtyWTd8o5snQd-ealM5JzBXJQAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjZlZmJjYzgx/MTI5NWI4MmFlMWMy/ZGI1YTFlYTk3N2Fj/ZWYyYTUwYTEwMTQ1/NGZmNmVjM2NiYjA3/YzZmN2YwMy9zcGFy/bS5jb20v",
+          "path": "  › главная  › медицинские информационные системы"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Ah4ZXVq3iM1JotivYFA1AxW91WllUEci60MkW6E5wmk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zcGFy/bS5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjAvMDYvNS0x/LTEucG5n",
+          "original": "https://sparm.com/wp-content/uploads/2020/06/5-1-1.png",
+          "logo": false
+        },
+        "age": "October 24, 2025",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Ксения Талан"
+            }
+          ],
+          "date": "Mar 01, 2019",
+          "publisher": {
+            "type": "organization",
+            "name": "СП.АРМ",
+            "url": "https://sparm.com/",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/X1ZrJwBwlxBcqmPjK-yPad2cF1yUXNzErJUayemGg8s/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zcGFy/bS5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMTkvMDgvbG9n/by5wbmc",
+              "original": "https://sparm.com/wp-content/uploads/2019/08/logo.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "МИС базового уровня — это информационные системы, которые используют доктора в своей ежедневной практике. Они оказывают информационную, справочную, экспертную поддержку врачебной деятельности.",
+          "Таким образом, все описанные выше группы базовых МИС должны иметь интеграцию с АРМ. Автоматизированные рабочие места врачей используются как на базовом уровне, так и на уровне медицинских учреждений. Современные медицинские информационные системы предоставляют необходимый инструментарий для работы врачей практически любой специализации.",
+          "Задача МИС консультационных центров – предоставить информационную поддержку врачам в случае оказания неотложной помощи. Так же указанные системы обеспечивают работу самих консультационных центров.",
+          "В основе находятся информационные системы медицинских (МИС МО) и фармацевтических организаций (ИС ФО). И более никакого сегментирования внутри МИС нет. Каждая единица здравоохранения, будь то частный врачебный кабинет или многопрофильная клиника, является медицинской организацией и использует соответствующую информационную систему с определенным набором функций."
+        ]
+      },
+      {
+        "title": "Медицинская информационная система",
+        "url": "https://egiszmed.ru/blog/meditsinskaya-informatsionnaya-sistema/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Программа для медицинской клиники помогает управлять потоком клиентов, а также она необходима для передачи сведений в ЕГИСЗ. Какую выбрать и как подключиться к МИС.",
+        "profile": {
+          "name": "Egiszmed",
+          "url": "https://egiszmed.ru/blog/meditsinskaya-informatsionnaya-sistema/",
+          "long_name": "egiszmed.ru",
+          "img": "https://imgs.search.brave.com/6I3qIWMdHX5RcOlRta9wNRx-RpSIWppwRnK_x6So3S4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDlmNWE2NmI4/YjQyZmI4YWE0OWNi/MWEyZjVjZjljYTJh/ZDYwMThkZTJiZmRk/OTk4ZDVmNzBkNTM1/YjM0YWRmOC9lZ2lz/em1lZC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "egiszmed.ru",
+          "hostname": "egiszmed.ru",
+          "favicon": "https://imgs.search.brave.com/6I3qIWMdHX5RcOlRta9wNRx-RpSIWppwRnK_x6So3S4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDlmNWE2NmI4/YjQyZmI4YWE0OWNi/MWEyZjVjZjljYTJh/ZDYwMThkZTJiZmRk/OTk4ZDVmNzBkNTM1/YjM0YWRmOC9lZ2lz/em1lZC5ydS8",
+          "path": "› blog  › meditsinskaya-informatsionnaya-sistema"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/tsulyKqmECcI9OJv4NGbCZ7huKvtax-gFHmpUtfP0bs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9lZ2lz/em1lZC5ydS9vZ19p/bWcuanBn",
+          "original": "https://egiszmed.ru/og_img.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Программа для медицинской клиники помогает управлять потоком клиентов, а также она необходима для передачи сведений в ЕГИСЗ. Какую выбрать и как подключиться к МИС.",
+          "Система МИС способсвует оперативному получению информации о пациенте. Неважно где раньше наблюдался пациент, если его поликлиника была подключена к ЕГИСЗ, то его история болезни будет доступна и вам. Также теперь врачам не нужно тратить время на ведение и заполнение бумажных отчетов.",
+          "МИС - это медицинская информационная система, позволяющая клинике наиболее эффективно управлять потоком клиентов, повышать качество работы и контролировать рабочие процессы.",
+          "Федеральный Закон № 323 от 02.07.2021, пункт 16: «Медицинские организации обязаны обеспечивать предоставление информации в единую государственную информационную систему в сфере здравоохранения в соответствии с законодательством Российской Федерации» · Проще говоря, МИС - это специальная программа для медицинской клиники, позволяющая упростить работу и управление."
+        ]
+      },
+      {
+        "title": "Медицинская информационная система МИС qMS",
+        "url": "https://sparm.com/products/qms-mis",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Часто у медицинской организации есть специальные запросы к системе. Для МИС qMS дополнения возможны · Интеграции с государственными информационными системами здравоохранения",
+        "page_age": "2019-05-20T06:41:58",
+        "profile": {
+          "name": "Sparm",
+          "url": "https://sparm.com/products/qms-mis",
+          "long_name": "sparm.com",
+          "img": "https://imgs.search.brave.com/aSFN07Pao5YQmJB1FtyWTd8o5snQd-ealM5JzBXJQAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjZlZmJjYzgx/MTI5NWI4MmFlMWMy/ZGI1YTFlYTk3N2Fj/ZWYyYTUwYTEwMTQ1/NGZmNmVjM2NiYjA3/YzZmN2YwMy9zcGFy/bS5jb20v"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "sparm.com",
+          "hostname": "sparm.com",
+          "favicon": "https://imgs.search.brave.com/aSFN07Pao5YQmJB1FtyWTd8o5snQd-ealM5JzBXJQAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjZlZmJjYzgx/MTI5NWI4MmFlMWMy/ZGI1YTFlYTk3N2Fj/ZWYyYTUwYTEwMTQ1/NGZmNmVjM2NiYjA3/YzZmN2YwMy9zcGFy/bS5jb20v",
+          "path": "  › главная  › медицинская crm от сп.арм  › медицинская информационная система мис qms"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/99pzaOjm3_ADUWBVoiyLhk1WzphmmxPXCrUwCrPHNXw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zcGFy/bS5jb20vd3AtY29u/dGVudC90aGVtZXMv/c3Bhcm0vbWVkaWEv/YmdfcHJlc3NfbG9n/b0AyeC5wbmc",
+          "original": "https://sparm.com/wp-content/themes/sparm/media/bg_press_logo@2x.png",
+          "logo": true
+        },
+        "age": "May 20, 2019",
+        "extra_snippets": [
+          "Здравоохранение 360: пациент и врач в центре управления системой качества медицины ... Полнофункциональная МИС qMS объединяет руководителей клиник, медперсонал, лабораторные службы, страховые организации и пациентов в едином информационном пространстве, универсальном для организаций разных профилей и доступном с разных устройств.",
+          "МИС qMS структурирует все основные информационно-аналитические процессы учреждения и адаптируется под клинику любого масштаба.",
+          "Часто у медицинской организации есть специальные запросы к системе. Для МИС qMS дополнения возможны · Интеграции с государственными информационными системами здравоохранения",
+          "В qMS есть готовые интеграционные протоколы для следующих информационных систем: Региональных фрагментов ЕГИСЗ регионов; ... Федеральный сервис записи к врачу через Интернет (ФЭР);"
+        ]
+      },
+      {
+        "title": "Обзор медицинских информационных систем в 2026",
+        "url": "https://www.medesk.ru/blog/medicinskie-informacionnii-sistemi-spisok/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Как выбрать идеальную МИС для вашей клиники · Часто задаваемые вопросы (FAQ) ... Обновлено: апр. 15, 2026 ... Выбор медицинской информационной системы определяет эффективность работы клиники: от скорости обслуживания пациентов до прозрачности финансовых процессов.",
+        "page_age": "2026-04-15T23:25:27",
+        "profile": {
+          "name": "Medesk",
+          "url": "https://www.medesk.ru/blog/medicinskie-informacionnii-sistemi-spisok/",
+          "long_name": "medesk.ru",
+          "img": "https://imgs.search.brave.com/6taVqLxsIY5Gfa_LJdb_Dfj8UCUHU5awI-mZlwz2lhA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjZhMDU4MzRk/OGIwM2I5YzY3Yzk3/YTJiNjhjMWU5OWVl/Mjk0MGQ0ZWM2ZWZi/MDY4N2U4ODlhZDdj/MjA2Y2JjMi93d3cu/bWVkZXNrLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medesk.ru",
+          "hostname": "www.medesk.ru",
+          "favicon": "https://imgs.search.brave.com/6taVqLxsIY5Gfa_LJdb_Dfj8UCUHU5awI-mZlwz2lhA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjZhMDU4MzRk/OGIwM2I5YzY3Yzk3/YTJiNjhjMWU5OWVl/Mjk0MGQ0ZWM2ZWZi/MDY4N2U4ODlhZDdj/MjA2Y2JjMi93d3cu/bWVkZXNrLnJ1Lw",
+          "path": "› blog  › medicinskie-informacionnii-sistemi-spisok"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/B6F_znvuBXBZFVW69Q4rEzA3YHLa3LBOwYaQMuj7bio/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/bWVkZXNrLnJ1L2kv/Mk5Kbk9SNEV2dXhh/MGpQeXFGOWJUaC82/MmUwNWU3NjFhZWIy/MjYzYzE1OWUwMmUz/NTkxYTJkMC9tZWRp/Y2FsLXByYWN0aWNl/LW1hbmFnZW1lbnQt/cG5nMy5wbmc",
+          "original": "https://www.medesk.ru/i/2NJnOR4Evuxa0jPyqF9bTh/62e05e761aeb2263c159e02e3591a2d0/medical-practice-management-png3.png",
+          "logo": false
+        },
+        "age": "April 15, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Екатерина Лукошкова"
+            }
+          ],
+          "date": "Sep 18, 2025",
+          "publisher": {
+            "type": "organization",
+            "name": "Medesk",
+            "url": "https://www.medesk.ru",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/Y5ZtGdNgYMorxeCH3tuTStosHZQZkKeOdB-MznYScOI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/bWVkZXNrLnJ1L2Fz/c2V0cy9pbWFnZXMv/bWVkZXNrLWxvZ28u/cG5n",
+              "original": "https://www.medesk.ru/assets/images/medesk-logo.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "популярность и востребованность МИС среди клиник, отзывы медицинских организаций, реальный функционал и удобство использования, а также перспективность системы для работы в 2026 году. Узнайте, как упростить работу врачей и освободить больше времени для пациентов с помощью Medesk.",
+          "Как выбрать идеальную МИС для вашей клиники · Часто задаваемые вопросы (FAQ) ... Обновлено: апр. 15, 2026 ... Выбор медицинской информационной системы определяет эффективность работы клиники: от скорости обслуживания пациентов до прозрачности финансовых процессов.",
+          "В этой статье мы рассмотрим конкретные примеры медицинских информационных систем, чтобы помочь вам сориентироваться на рынке. Читайте наш обзор лучших МИС для медицинских клиник, чтобы выбрать подходящее решение.",
+          "Формат внедрения определяет, как быстро клиника сможет начать работу с МИС и какие ресурсы для этого понадобятся: облачные решения подходят для гибкого роста, локальные - для тех, кто ценит полный контроль. Функциональность напрямую связана с тем, насколько система закрывает повседневные задачи - от ведения электронных карт до онлайн-записи и финансового учёта."
+        ]
+      },
+      {
+        "title": "МИС (медицинская информационная система) – что это такое и как выбрать",
+        "url": "https://www.1ab.ru/blog/detail/mis-chto-ehto/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Она помогает сделать медицинскую помощь более качественной и организованной, освободив время врачей от бумажной волокиты, а пациентам обеспечив удобство. В статье мы расскажем, как работает медицинская информационная система, зачем она нужна, какие задачи решает и как выбрать подходящую МИС для вашего учреждения.",
+        "profile": {
+          "name": "1ab",
+          "url": "https://www.1ab.ru/blog/detail/mis-chto-ehto/",
+          "long_name": "1ab.ru",
+          "img": "https://imgs.search.brave.com/XCMPepOZl6lDQAVzXTWxnV77GQ0fHtYbbjeMcg0R3Zo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTY0MWRiYjll/MmY5MzdiZjg4NzUy/YjAzNmE3YWZkMzBi/NTc5OTI3YjUxZTZk/MTU3ZDJmNTRjYTI4/ZmFhN2RhZi93d3cu/MWFiLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "1ab.ru",
+          "hostname": "www.1ab.ru",
+          "favicon": "https://imgs.search.brave.com/XCMPepOZl6lDQAVzXTWxnV77GQ0fHtYbbjeMcg0R3Zo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTY0MWRiYjll/MmY5MzdiZjg4NzUy/YjAzNmE3YWZkMzBi/NTc5OTI3YjUxZTZk/MTU3ZDJmNTRjYTI4/ZmFhN2RhZi93d3cu/MWFiLnJ1Lw",
+          "path": "› blog  › detail  › mis-chto-ehto"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/vSmMgpnXqHpWnzGxuuXoSGjEtn1znq7gCv7ooRZz6kw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/MWFiLnJ1L2ltYWdl/cy9sb2dvLnBuZw",
+          "original": "https://www.1ab.ru/images/logo.png",
+          "logo": true
+        },
+        "organization": {
+          "type": "organization",
+          "name": "1С-Архитектор бизнеса",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "МИС (медицинская информационная система) – это система, предназначенная для автоматизации работы клиники: ее бизнес-процессов, документооборота, взаимодействия с пациентом, процессов аналитики и контроля.",
+          "Она помогает сделать медицинскую помощь более качественной и организованной, освободив время врачей от бумажной волокиты, а пациентам обеспечив удобство. В статье мы расскажем, как работает медицинская информационная система, зачем она нужна, какие задачи решает и как выбрать подходящую МИС для вашего учреждения.",
+          "Представьте поликлинику, где не нужно перелистывать стопки бумажных карт, а все данные о пациентах, врачах и финансах собраны в одной умной компьютерной программе. Это и есть медицинская информационная система (МИС).",
+          "Врачи вовремя получают достоверные данные для постановки диагноза, а также принятия решений, которые влияют на ход лечения. Эту МИС можно сочетать с другими информационными системами (рис.4)."
+        ]
+      },
+      {
+        "title": "Информационная система / О нас / СПб ГБУЗ «Городская поликлиника №107»",
+        "url": "https://p107.spb.ru/about/informatsionnaya-sistema/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "И да, и нет - даже при хорошей системе, внутренняя организация может &quot;хромать&quot;, и само наличие мощной и функциональной МИС не является гарантией качества обслуживания пациентов. С другой стороны, существует и множество медицинских организаций, где оказывается качественная помощь вообще при отсутствии какой бы то ни было информационной системы вовсе.",
+        "profile": {
+          "name": "Spb",
+          "url": "https://p107.spb.ru/about/informatsionnaya-sistema/",
+          "long_name": "p107.spb.ru",
+          "img": "https://imgs.search.brave.com/V-KCMzmN_K7xaF1j4Z0qTk5bBtF6Ses4A5T4MV_EYsA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzZjNGI5ZjNl/OWFlMWMzZTJiMTNm/YTY3ZWQwYTNjYzEw/YTk5OTMyNTFiZmJh/NzI3NzFiMGQzODRk/NWEwNmQ1ZS9wMTA3/LnNwYi5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "p107.spb.ru",
+          "hostname": "p107.spb.ru",
+          "favicon": "https://imgs.search.brave.com/V-KCMzmN_K7xaF1j4Z0qTk5bBtF6Ses4A5T4MV_EYsA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzZjNGI5ZjNl/OWFlMWMzZTJiMTNm/YTY3ZWQwYTNjYzEw/YTk5OTMyNTFiZmJh/NzI3NzFiMGQzODRk/NWEwNmQ1ZS9wMTA3/LnNwYi5ydS8",
+          "path": "› about  › informatsionnaya-sistema"
+        },
+        "extra_snippets": [
+          "122, 246-73-27 № 11, Центр общей врачебной практики «Цветной город» на Пейзажная ул., д. 10 ... Информационная система (МИС) - сердце любого современного медицинского учреждения, благодаря чему пациенты получают доступ к информации о своем здоровье, медицинский персонал избавлен от многочисленной рутинной работы, а руководство имеет возможность контролировать нагрузку специалистов, тем самым повышая качество оказания услуг населению.",
+          "Одна простая интеграция между поликлиникой детской и взрослой сети навсегда сократит время накопления медицинских данных о таком пациенте до нуля. И это только один из множества примеров. А каждая реализованная интеграция решает одну конкретную, но зачастую очень важную задачу для оптимизации работы врачей и медсестер. 5. МИС ведёт к автоматически формируемой отчетности",
+          "Таким образом, каждый пациент, даже если он теряет свою медицинскую карту, сможет получить все медицинские данные за несколько лет. Мы описали не все функции нашей МИС, а только несколько примеров из множества, как реализованных, так и доступных к претворению в жизнь.",
+          "И да, и нет - даже при хорошей системе, внутренняя организация может \"хромать\", и само наличие мощной и функциональной МИС не является гарантией качества обслуживания пациентов. С другой стороны, существует и множество медицинских организаций, где оказывается качественная помощь вообще при отсутствии какой бы то ни было информационной системы вовсе."
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

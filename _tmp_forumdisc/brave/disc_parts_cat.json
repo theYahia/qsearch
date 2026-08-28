@@ -1,0 +1,918 @@
+{
+  "type": "search",
+  "query": {
+    "original": "запчасти каталог TecDoc не хватает форум механики жалобы",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 19,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Электронный каталог TecDoc для подбора не оригинальных запчастей и заменителей",
+        "url": "https://epc-system.ru/info/tecdoc/tecdoc.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Каталог TecDoc (ТехДок) для профессионального подбора не оригинальных запчастей, .",
+        "profile": {
+          "name": "Epc-system",
+          "url": "https://epc-system.ru/info/tecdoc/tecdoc.html",
+          "long_name": "epc-system.ru",
+          "img": "https://imgs.search.brave.com/znFbSbdFW1jk8Eg_dmE8eH7QloxrszZC6PI2hUIkIXA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzU0MzY5OTE0/NDBlZjFlY2RjYTQw/MTEyNDUxZTZjYTVm/MjUyYmYzM2RkZGFi/ZDFkZTUzOTBkYzdh/ZDE3OWQ4MS9lcGMt/c3lzdGVtLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "epc-system.ru",
+          "hostname": "epc-system.ru",
+          "favicon": "https://imgs.search.brave.com/znFbSbdFW1jk8Eg_dmE8eH7QloxrszZC6PI2hUIkIXA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzU0MzY5OTE0/NDBlZjFlY2RjYTQw/MTEyNDUxZTZjYTVm/MjUyYmYzM2RkZGFi/ZDFkZTUzOTBkYzdh/ZDE3OWQ4MS9lcGMt/c3lzdGVtLnJ1Lw",
+          "path": "› info  › tecdoc  › tecdoc.html"
+        }
+      },
+      {
+        "title": "Каталоги для подбора автозапчастей - TecDoc, оригинальные каталоги, каталог ТО, каталоги производителей",
+        "url": "https://avtostandart.by/partscat/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Для поиска автозапчасти используйте один из каталогов. Правильный подбор возможнее только в том случае, если точно указаны характеристики автомобиля, на который ...",
+        "profile": {
+          "name": "Avtostandart",
+          "url": "https://avtostandart.by/partscat/",
+          "long_name": "avtostandart.by",
+          "img": "https://imgs.search.brave.com/KNok017n1ChVDyKGGQo1TjfEu_dbJlQQpkkyYphvM9o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2EyMmQyNDcz/NjI1ZDg4YzRhYWE4/MjdlMWI3ZDI5NWVj/ZDRkODYyZmFjOTJm/NjBlZWExYTU3Yjhh/NWVmYmRlNy9hdnRv/c3RhbmRhcnQuYnkv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "avtostandart.by",
+          "hostname": "avtostandart.by",
+          "favicon": "https://imgs.search.brave.com/KNok017n1ChVDyKGGQo1TjfEu_dbJlQQpkkyYphvM9o/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2EyMmQyNDcz/NjI1ZDg4YzRhYWE4/MjdlMWI3ZDI5NWVj/ZDRkODYyZmFjOTJm/NjBlZWExYTU3Yjhh/NWVmYmRlNy9hdnRv/c3RhbmRhcnQuYnkv",
+          "path": "  › главная  › каталоги"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/pydqJQLe18rUI1DY7tNpHWm_RnLM8JgT6HXJ-jM1AP8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hdnRv/c3RhbmRhcnQuYnkv/bWVkaWEvZmlsZXMv/c2V0dGluZ3MvaW5z/aWRlLXBsYWNlaG9s/ZGVyLUF2dG9zdGFu/ZGFydF9sb2dvMi5w/bmc",
+          "original": "https://avtostandart.by/media/files/settings/inside-placeholder-Avtostandart_logo2.png",
+          "logo": true
+        },
+        "extra_snippets": [
+          "Для поиска автозапчасти используйте один из каталогов. Правильный подбор возможнее только в том случае, если точно указаны характеристики автомобиля, на который производится подбор детали.",
+          "Поиск запчастей по названию даёт возможность найти деталь тем, кто слабо знаком с устройством автомобиля, но знает наименование."
+        ]
+      },
+      {
+        "title": "Каталог TecDoc AMC - полная база данных запчастей для вашего автомобиля!",
+        "url": "https://mytecdoc.com/katalog-tecdoc-amc/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Исследуйте обширный каталог TecDoc AMC, включающий в себя справочник, реестр и каталожную базу, чтобы получить всю необходимую информацию о запчастях и аксессуарах ...",
+        "page_age": "2024-04-22T21:53:54",
+        "profile": {
+          "name": "MyTecDoc",
+          "url": "https://mytecdoc.com/katalog-tecdoc-amc/",
+          "long_name": "mytecdoc.com",
+          "img": "https://imgs.search.brave.com/14aSDZKOtrPnGVFb-fSnNdUBpg3NG453DXT38IAQgyk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGQxMzdmMDMx/MDc4ZDJiYmVhZmI0/MGMyN2M5Y2U3NDIy/YmZiN2I3MzQ4ZDRj/M2ExNDE2MTQzYjA0/NGU3ODIyMy9teXRl/Y2RvYy5jb20v"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mytecdoc.com",
+          "hostname": "mytecdoc.com",
+          "favicon": "https://imgs.search.brave.com/14aSDZKOtrPnGVFb-fSnNdUBpg3NG453DXT38IAQgyk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGQxMzdmMDMx/MDc4ZDJiYmVhZmI0/MGMyN2M5Y2U3NDIy/YmZiN2I3MzQ4ZDRj/M2ExNDE2MTQzYjA0/NGU3ODIyMy9teXRl/Y2RvYy5jb20v",
+          "path": "› katalog-tecdoc-amc"
+        },
+        "age": "April 22, 2024",
+        "organization": {
+          "type": "organization",
+          "name": "MyTecDoc",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Исследуйте обширный каталог TecDoc AMC, включающий в себя справочник, реестр и каталожную базу, чтобы получить всю необходимую информацию о запчастях и аксессуарах для автомобилей.",
+          "TecDoc AMC — это каталог, содержащий полную базу данных запчастей для автомобилей. Этот справочник помогает автовладельцам и механикам быстро и точно подобрать нужные запчасти для ремонта или обслуживания их транспортного средства.",
+          "Мы уделяем особое внимание актуальности данных и их полноте, чтобы каждый пользователь мог быть уверен в том, что находит именно то, что ему нужно. TecDoc AMC – это не просто каталог, это ваш верный спутник в мире автомобильных запчастей!",
+          "Благодаря этому, вы можете быть уверены в том, что выбираете правильную запчасть с первого раза, без лишних затрат времени и денег. Каталог TecDoc AMC – это не просто обычный список запчастей."
+        ]
+      },
+      {
+        "title": "Каталог TecDoc - самая полная информация о ...",
+        "url": "https://mytecdoc.com/en/katalog-tecdoc/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "LANGUAGES · Terms and Conditions · Catalog TechDoc · 01.01.2026 · ЗАКАЗАТЬ САЙТ · Для начала установки сайта, заполните всё поля формы · Telegram · Этот сайт использует cookie для хранения данных.",
+        "page_age": "2024-04-05T10:17:51",
+        "profile": {
+          "name": "MyTecDoc",
+          "url": "https://mytecdoc.com/en/katalog-tecdoc/",
+          "long_name": "mytecdoc.com",
+          "img": "https://imgs.search.brave.com/14aSDZKOtrPnGVFb-fSnNdUBpg3NG453DXT38IAQgyk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGQxMzdmMDMx/MDc4ZDJiYmVhZmI0/MGMyN2M5Y2U3NDIy/YmZiN2I3MzQ4ZDRj/M2ExNDE2MTQzYjA0/NGU3ODIyMy9teXRl/Y2RvYy5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mytecdoc.com",
+          "hostname": "mytecdoc.com",
+          "favicon": "https://imgs.search.brave.com/14aSDZKOtrPnGVFb-fSnNdUBpg3NG453DXT38IAQgyk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGQxMzdmMDMx/MDc4ZDJiYmVhZmI0/MGMyN2M5Y2U3NDIy/YmZiN2I3MzQ4ZDRj/M2ExNDE2MTQzYjA0/NGU3ODIyMy9teXRl/Y2RvYy5jb20v",
+          "path": "› en  › katalog-tecdoc"
+        },
+        "age": "April 5, 2024",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "mytecdoc"
+            }
+          ],
+          "date": "Aug 24, 2015",
+          "publisher": {
+            "type": "organization",
+            "name": "MyTecDoc",
+            "url": "https://mytecdoc.com"
+          }
+        },
+        "organization": {
+          "type": "organization",
+          "name": "MyTecDoc",
+          "contact_points": []
+        }
+      },
+      {
+        "title": "Каталог TecDoc (TecAlliance) — Подборщик запчастей на vc.ru",
+        "url": "https://vc.ru/s/1258983-podborshchik-zapchastey/472568-katalog-tecdoc-tecalliance",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "VINPIN.RU стал официальным реселлером компании TecAlliance. А это значит, что всем постоянным и новым пользователям системы VINPIN стал доступен каталог запчастей TecDoc (ТекДок) ...",
+        "page_age": "2022-07-29T13:34:43",
+        "profile": {
+          "name": "Vc.ru",
+          "url": "https://vc.ru/s/1258983-podborshchik-zapchastey/472568-katalog-tecdoc-tecalliance",
+          "long_name": "vc.ru",
+          "img": "https://imgs.search.brave.com/bM0KkEYXQT4V7IpgOoGP5oGezeQBMQ6PMg3cu7M1oB8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODQxMzViMTEw/ZDgxNDEwNjc5NTFk/NzQyZWYwZThmNDJl/NDYzYzI4MmNlYjFl/MDY1YmQ5OWVmZGJj/N2RhZDYyZC92Yy5y/dS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "vc.ru",
+          "hostname": "vc.ru",
+          "favicon": "https://imgs.search.brave.com/bM0KkEYXQT4V7IpgOoGP5oGezeQBMQ6PMg3cu7M1oB8/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODQxMzViMTEw/ZDgxNDEwNjc5NTFk/NzQyZWYwZThmNDJl/NDYzYzI4MmNlYjFl/MDY1YmQ5OWVmZGJj/N2RhZDYyZC92Yy5y/dS8",
+          "path": "  › подборщик запчастей"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Jm7iVYAHjpF9-tNhEXLG9UeJttAbWnOBi0mZznjcxSA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly92Yy5y/dS9jb3Zlci9mYi9j/LzQ3MjU2OC8xNjU5/MTAxNjgzL2NvdmVy/LmpwZw",
+          "original": "https://vc.ru/cover/fb/c/472568/1659101683/cover.jpg",
+          "logo": false
+        },
+        "age": "July 29, 2022",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Подборщик запчастей 1258983",
+              "url": "https://vc.ru/s/1258983-podborshchik-zapchastey"
+            }
+          ],
+          "date": "Jul 29, 2022",
+          "publisher": {
+            "type": "organization",
+            "name": "vc.ru",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/0WYZ4m-PaV5M9hXG3whf-yCpoOHeG5kHVQxmzHbxp9o/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly92Yy5y/dS9zdGF0aWMvYnVp/bGQvdmMucnUvaW1h/Z2VzL2FtcF9sb2dv/LnBuZw",
+              "original": "https://vc.ru/static/build/vc.ru/images/amp_logo.png"
+            }
+          }
+        },
+        "organization": {
+          "type": "organization",
+          "name": "vc.ru",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "VINPIN.RU стал официальным реселлером компании TecAlliance. А это значит, что всем постоянным и новым пользователям системы VINPIN стал доступен каталог запчастей TecDoc (ТекДок) — один из самых полных, известный и востребованных во всем мире.",
+          "Интернет-каталог TecDoc имеет ряд выгодных преимуществ. В этом специализированном каталоге собрано огромное количество идентификационных номеров неоригинальных запчастей.",
+          "Для того, чтобы подобрать нужные автокомпоненты пользователь системы может использовать не только идентификационный номер запчасти, но осуществить поиск по марке, по году выпуска автомобиля или по информации о его двигателе (тип мотора и его мощность). Другое очевидное преимущество каталога TecDoc заключается в его наглядности.",
+          "Эти и другие преимущества делают TecDoc универсальным, гибким и понятным инструментом для подбора нужных запчастей."
+        ]
+      },
+      {
+        "title": "TecDoc (каталог запчастей)",
+        "url": "https://autodealer.ru/downloads_file/soft/autodealer/WebHelp/tecdoc.htm",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "TecDoc - крупнейший каталог автозапчастей и аксессуаров неоригинальных и OEM производителей. В электронном каталоге содержится информация о более 100.000 транспортных ...",
+        "profile": {
+          "name": "Autodealer",
+          "url": "https://autodealer.ru/downloads_file/soft/autodealer/WebHelp/tecdoc.htm",
+          "long_name": "autodealer.ru",
+          "img": "https://imgs.search.brave.com/LU12gUNoEREL-pJ__yJoqqzJV9LJ_Cz1enKwEPqDEUs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2E0ZmU2YWE1/ZjUzMDk1OGVmZGYw/ODU3ODcxZDNhN2Qy/MWI1ZGY2MzI5ZTgw/NzIzYjMyOGVhZTgx/Y2FkMTg2ZS9hdXRv/ZGVhbGVyLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "autodealer.ru",
+          "hostname": "autodealer.ru",
+          "favicon": "https://imgs.search.brave.com/LU12gUNoEREL-pJ__yJoqqzJV9LJ_Cz1enKwEPqDEUs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2E0ZmU2YWE1/ZjUzMDk1OGVmZGYw/ODU3ODcxZDNhN2Qy/MWI1ZGY2MzI5ZTgw/NzIzYjMyOGVhZTgx/Y2FkMTg2ZS9hdXRv/ZGVhbGVyLnJ1Lw",
+          "path": "› downloads_file  › soft  › autodealer  › WebHelp  › tecdoc.htm"
+        },
+        "extra_snippets": [
+          "Для поиска номера необходимо нажать на кнопку «TecDoc» в модуле Магазин. В результате появится окно, в котором Вы можете выбрать категорию автомобиля «легковые», «грузовые» и т.д.",
+          "Каждый артикул в TecDoc имеет дополнительную информацию, которую Вы можете посмотреть."
+        ]
+      },
+      {
+        "title": "Полный каталог запчастей TecDoc для спецтехники JCB: доступ и информация",
+        "url": "https://mytecdoc.com/katalog-tecdoc-jcb/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "В этом разделе мы расскажем о том, как использовать TecDoc каталог в вашей работе с техникой JCB. Вы узнаете о различных функциях, которые помогут вам сократить время на поиск нужных запчастей и обеспечат вас точной информацией о их совместимости и характеристиках.",
+        "page_age": "2024-04-22T21:56:26",
+        "profile": {
+          "name": "MyTecDoc",
+          "url": "https://mytecdoc.com/katalog-tecdoc-jcb/",
+          "long_name": "mytecdoc.com",
+          "img": "https://imgs.search.brave.com/14aSDZKOtrPnGVFb-fSnNdUBpg3NG453DXT38IAQgyk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGQxMzdmMDMx/MDc4ZDJiYmVhZmI0/MGMyN2M5Y2U3NDIy/YmZiN2I3MzQ4ZDRj/M2ExNDE2MTQzYjA0/NGU3ODIyMy9teXRl/Y2RvYy5jb20v"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mytecdoc.com",
+          "hostname": "mytecdoc.com",
+          "favicon": "https://imgs.search.brave.com/14aSDZKOtrPnGVFb-fSnNdUBpg3NG453DXT38IAQgyk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGQxMzdmMDMx/MDc4ZDJiYmVhZmI0/MGMyN2M5Y2U3NDIy/YmZiN2I3MzQ4ZDRj/M2ExNDE2MTQzYjA0/NGU3ODIyMy9teXRl/Y2RvYy5jb20v",
+          "path": "› katalog-tecdoc-jcb"
+        },
+        "age": "April 22, 2024",
+        "organization": {
+          "type": "organization",
+          "name": "MyTecDoc",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Познакомьтесь с полным каталогом запчастей для техники JCB в формате TecDoc - удобным инструментом для быстрого поиска и заказа необходимых деталей для обслуживания и ремонта вашей техники.",
+          "Одним из основных преимуществ такой интеграции является доступ к перечню запчастей TecDoc, специально подобранных для обслуживания и ремонта техники JCB. Это словно ты получаешь список деталей, которые точно подходят под твою технику, без лишних затрат времени на поиск и сравнение. Теперь механики и сервисные центры могут работать более организованно и производительно.",
+          "В этом разделе мы расскажем о том, как использовать TecDoc каталог в вашей работе с техникой JCB. Вы узнаете о различных функциях, которые помогут вам сократить время на поиск нужных запчастей и обеспечат вас точной информацией о их совместимости и характеристиках.",
+          "Именно здесь, в формате электронного перечня, находится целый мир возможностей – именно здесь, в каталоге TecDoc, можно найти все необходимые компоненты для обслуживания вашего оборудования. Список запчастей для JCB и многих других марок техники доступен в одном месте."
+        ]
+      },
+      {
+        "title": "Онлайн-каталог автозапчастей TECDOC - Люкс Трэвел",
+        "url": "https://luxtrevel.ru/tecdoc/all/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Автокаталог TecDoc - это удобный поиск артикулов не оригинальных производителей запчастей по маркам и моделям автомобилей, по сборочным узлам а так же группам ...",
+        "profile": {
+          "name": "Luxtrevel",
+          "url": "https://luxtrevel.ru/tecdoc/all/",
+          "long_name": "luxtrevel.ru",
+          "img": "https://imgs.search.brave.com/qjkPVSuWN_H_WFQq2ihe_iW7NiPsWBqb9d2ZIgXAwyM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDg1ZDY1Mzlk/ZjM3NDNkZDNlOGFj/MDdkNzUyNDAxYThh/MDZjNGQ5MjNkYjQ4/N2YwMDY1YmI0OWEw/NmRhNWQ2OS9sdXh0/cmV2ZWwucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "luxtrevel.ru",
+          "hostname": "luxtrevel.ru",
+          "favicon": "https://imgs.search.brave.com/qjkPVSuWN_H_WFQq2ihe_iW7NiPsWBqb9d2ZIgXAwyM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDg1ZDY1Mzlk/ZjM3NDNkZDNlOGFj/MDdkNzUyNDAxYThh/MDZjNGQ5MjNkYjQ4/N2YwMDY1YmI0OWEw/NmRhNWQ2OS9sdXh0/cmV2ZWwucnUv",
+          "path": "  › главная  › каталог tecdoc"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/WXv5QbDJy4OqjgBX046bYkQ7BR1uMwDRMUifS8u13LI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9sdXh0/cmV2ZWwucnUvdXBs/b2FkL0NNYXgvMTMx/L2xvZ28ucG5n",
+          "original": "https://luxtrevel.ru/upload/CMax/131/logo.png",
+          "logo": true
+        },
+        "extra_snippets": [
+          "Автокаталог TecDoc - это удобный поиск артикулов не оригинальных производителей запчастей по маркам и моделям автомобилей, по сборочным узлам а так же группам товаров с выводом товаров в наличие и под заказ."
+        ]
+      },
+      {
+        "title": "Модуль запчастей TecDoc + Кроссы для Shop-Script X",
+        "url": "https://www.webasyst.ru/store/plugin/shop/tdm/reviews/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Решили создать магазин авто запчастей на SS. Где то месяц искали БД Tecdoc. Как раз тогда и вышел данный плагин. Запчасти подбирает корректно, снял много головной боли.",
+        "profile": {
+          "name": "Webasyst",
+          "url": "https://www.webasyst.ru/store/plugin/shop/tdm/reviews/",
+          "long_name": "webasyst.ru",
+          "img": "https://imgs.search.brave.com/DvJCawfoTyaXSeRGwZajGs-4bUgcZr80dSs_6NE54OU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDk4ZDJhMjEw/NjBlMmM4YzE4Zjg1/NGNiOWM2OWJhNjQ1/NjFmNzI5M2RmMWZm/ZDA1MDk0MjEwN2Fi/YjJjYjhlYS93d3cu/d2ViYXN5c3QucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "webasyst.ru",
+          "hostname": "www.webasyst.ru",
+          "favicon": "https://imgs.search.brave.com/DvJCawfoTyaXSeRGwZajGs-4bUgcZr80dSs_6NE54OU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDk4ZDJhMjEw/NjBlMmM4YzE4Zjg1/NGNiOWM2OWJhNjQ1/NjFmNzI5M2RmMWZm/ZDA1MDk0MjEwN2Fi/YjJjYjhlYS93d3cu/d2ViYXN5c3QucnUv",
+          "path": "› store  › plugin  › shop  › tdm  › reviews"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/xfZXXzPAbvxJ6-r8PXX0EWbnigMWQ_fUR4JrvtRz9e8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/d2ViYXN5c3QucnUv/d2EtZGF0YS9wdWJs/aWMvdXBkYXRlcy9p/bWcvNjgvMjI2OC9p/Y29uLnJ1X1JVLnBu/Zz92PTIuNDIuMTYy/NTEzOTc0MA",
+          "original": "https://www.webasyst.ru/wa-data/public/updates/img/68/2268/icon.ru_RU.png?v=2.42.1625139740",
+          "logo": true
+        },
+        "extra_snippets": [
+          "Продукт «Модуль запчастей TecDoc + Кроссы» обновлен до версии 2.42 4 декабря 2016.",
+          "Решили создать магазин авто запчастей на SS. Где то месяц искали БД Tecdoc. Как раз тогда и вышел данный плагин. Запчасти подбирает корректно, снял много головной боли.",
+          "модуль для подбора запчастей"
+        ]
+      },
+      {
+        "title": "Автозапчасти (), запчасти на все модели - Автомаг",
+        "url": "https://www.amag.ru/tecdoc/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Также в интернет-каталоге указывается применимость запчасти к определенным моделям автомобилей. Информация о наличии. Обновление базы TecDoc происходит регулярно, как только изменяется ассортимент запчастей.",
+        "profile": {
+          "name": "Amag",
+          "url": "https://www.amag.ru/tecdoc/",
+          "long_name": "amag.ru",
+          "img": "https://imgs.search.brave.com/UyGCGrVgSYz1UHdZMU3VlHuIZzln6K-7vOyyILS1KoU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDAxYzUxOGY3/OTJlZmQ1MzM3OTg5/MzdhMTA2YzYyNThm/NTljZTk4YmJmODc4/ZTZmYWUwNzMyMTJl/YTBkZjg1ZC93d3cu/YW1hZy5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "amag.ru",
+          "hostname": "www.amag.ru",
+          "favicon": "https://imgs.search.brave.com/UyGCGrVgSYz1UHdZMU3VlHuIZzln6K-7vOyyILS1KoU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDAxYzUxOGY3/OTJlZmQ1MzM3OTg5/MzdhMTA2YzYyNThm/NTljZTk4YmJmODc4/ZTZmYWUwNzMyMTJl/YTBkZjg1ZC93d3cu/YW1hZy5ydS8",
+          "path": "  › главная  › tecdoc. выбор марки"
+        },
+        "extra_snippets": [
+          "Также в интернет-каталоге указывается применимость запчасти к определенным моделям автомобилей. Информация о наличии. Обновление базы TecDoc происходит регулярно, как только изменяется ассортимент запчастей.",
+          "Сеть магазинов «AGA-АВТОМАГ» предлагает приобрести через интернет запчасти для автомобилей российских и иностранных марок. Цены на детали зависят от производителя и модели авто. Необходимые запчасти поможет выбрать интернет-каталог TecDoc.",
+          "Поиск ведется по ID детали или характеристикам авто. Специализированная база TecDoc позволяет узнавать идентификационные номера запчастей без их снятия с автомобиля.",
+          "Дополнительную информацию о товарах, представленных в каталоге автозапчастей с ценами, можно получить, обратившись к менеджерам по телефонам, указанным в разделе «Контакты»."
+        ]
+      },
+      {
+        "title": "TecDoc Webservice ONLINE. Подбор запчастей по базе TecDoc, поиск артикула по обновленной актуальной базе TecDoc 2026",
+        "url": "https://avtox.by/tecdoc/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Поддержка более 1000 брендов запчастей · Полная совместимость по автомобилям (егковые, грузовые, спецтехника) Минимизация ошибок подбора → меньше возвратов и лишних расходов · Перейдите в наш каталог TecDoc ONLINE и выберите удобный способ поиска:",
+        "profile": {
+          "name": "Avtox",
+          "url": "https://avtox.by/tecdoc/",
+          "long_name": "avtox.by",
+          "img": "https://imgs.search.brave.com/anU1jykUIrE4tnyPBAtHo7j8GE9CklPGheABLjSD_hU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzJiMmZkYjM0/YzFjMDFmOTRkOWI4/MDRhOGYxN2M5ZjFk/MGIxNjI1ZWJjZGI1/YWM2ZjdmNTNjN2E1/MmE3Yjg5NS9hdnRv/eC5ieS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "avtox.by",
+          "hostname": "avtox.by",
+          "favicon": "https://imgs.search.brave.com/anU1jykUIrE4tnyPBAtHo7j8GE9CklPGheABLjSD_hU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzJiMmZkYjM0/YzFjMDFmOTRkOWI4/MDRhOGYxN2M5ZjFk/MGIxNjI1ZWJjZGI1/YWM2ZjdmNTNjN2E1/MmE3Yjg5NS9hdnRv/eC5ieS8",
+          "path": "  › автозапчасти avtox.by  › tecdoc webservice online (обновление 2026)"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/tZgM42-A3Gz7FmLUFvHYNNQWXegR06WJ5EPObxVBT88/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hdnRv/eC5ieS9tZWRpYS9m/aWxlcy9zZXR0aW5n/cy9pbnNpZGUtcGxh/Y2Vob2xkZXItMTgx/LnBuZw",
+          "original": "https://avtox.by/media/files/settings/inside-placeholder-181.png",
+          "logo": false
+        },
+        "organization": {
+          "type": "organization",
+          "name": "Avtox",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "TecDoc Webservice ONLINE 2026 Update. Подбор запчастей по базе TecDoc. бесплатно, на русском языке, TecDoc Informations System GmbH. Поиск запчастей по марке и модели автомобиля, по сборочным узлам и группам товара, по номеру двигателя.",
+          "Поддержка более 1000 брендов запчастей · Полная совместимость по автомобилям (егковые, грузовые, спецтехника) Минимизация ошибок подбора → меньше возвратов и лишних расходов · Перейдите в наш каталог TecDoc ONLINE и выберите удобный способ поиска:",
+          "Поддержка менеджеров — если сомневаетесь в совместимости (особенно для редких модификаций), укажите VIN при заказе — наши специалисты бесплатно проверят по оригинальным каталогам производителей · Актуальность 2026 — новые модели авто и запчастей уже в базе · Можно ли доверять аналогам из TecDoc?",
+          "Перейдите в каталог и добавьте необходимые товары. Вы также можете посмотреть историю заказов ... TecDoc (ТекДок) — глобальный стандарт каталога автозапчастей, которому доверяют тысячи магазинов, СТО и водителей по всему миру."
+        ]
+      },
+      {
+        "title": "Что такое TecDoc? Как устроен и как работает каталог автозапчастей аналогов – Allzap CMS",
+        "url": "https://allzap.pro/blog/google-for-the-aftermarket-populyarno-o-tecdoc/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Структурно TecDoc представляет собой древо поиска запчастей по ряду параметров (маркам, моделям, узлам, группам и т.д.). Наличие информации о кроссах (заменах) позволяет легко отыскать все разнообразие альтернативных вариантов от разных производителей. Среди признанных клиентами достоинств TecDoc:",
+        "profile": {
+          "name": "Allzap",
+          "url": "https://allzap.pro/blog/google-for-the-aftermarket-populyarno-o-tecdoc/",
+          "long_name": "allzap.pro",
+          "img": "https://imgs.search.brave.com/j9MPBK2IzGazv9E75-4HIhS2dQ4qbO2793HRpsTAn74/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjQ0YjA5M2Uy/ZDMzNTM0OGRkNzI2/OTlhYTE5OTRhMWYw/MjQ5Yzk4Mjk4NTJi/ODgwNjRhMTU4ZWY0/ZDc5MmNmNS9hbGx6/YXAucHJvLw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "allzap.pro",
+          "hostname": "allzap.pro",
+          "favicon": "https://imgs.search.brave.com/j9MPBK2IzGazv9E75-4HIhS2dQ4qbO2793HRpsTAn74/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjQ0YjA5M2Uy/ZDMzNTM0OGRkNzI2/OTlhYTE5OTRhMWYw/MjQ5Yzk4Mjk4NTJi/ODgwNjRhMTU4ZWY0/ZDc5MmNmNS9hbGx6/YXAucHJvLw",
+          "path": "› blog  › google-for-the-aftermarket-populyarno-o-tecdoc"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/q6WPl3lBVEpzIF-9eV6uTRD0YbfHSE3cBUNrrllMg4I/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hbGx6/YXAucHJvL2FsbC9i/MjAvZ29vZ2xlLWZv/ci10aGUtYWZ0ZXJt/YXJrZXQtcG9wdWx5/YXJuby1vLXRlY2Rv/Y19uOTB4dTZpbzlt/bTIucG5n",
+          "original": "https://allzap.pro/all/b20/google-for-the-aftermarket-populyarno-o-tecdoc_n90xu6io9mm2.png",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Результат настолько удовлетворяет представителей различных сфер, что рекомендуется Европейским Союзом Поставщиков Автомобильных Запчастей (European Union of Automobile Parts Suppliers – CLEPA) как универсальный. Ценность продуктов TecDoc в том, что они полезны различным пользователям: ... Постоянное обновление каталогов позволяет получать актуальную информацию о производимых аналоговых запчастях.",
+          "Многие продавцы и покупатели автомобильных запчастей наслышаны о базах-каталогах неоригинальных запчастей TecDoc.",
+          "Создателем уникального информационного продукта в мире аналоговых запчастей является германская компания TecDoc Informations System GmbH, основанная в 1994 году несколькими ведущими производителями автомобильных деталей.",
+          "Структурно TecDoc представляет собой древо поиска запчастей по ряду параметров (маркам, моделям, узлам, группам и т.д.). Наличие информации о кроссах (заменах) позволяет легко отыскать все разнообразие альтернативных вариантов от разных производителей. Среди признанных клиентами достоинств TecDoc:"
+        ]
+      },
+      {
+        "title": "Модуль TecDoc для Вашего Интернет-Магазина",
+        "url": "https://mytecdoc.com/en/modul-tecdoc/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Однак, пошук та надання інформації про запчастини може бути викликом. Тут на допомогу приходить TecDoc – передовий модуль, що базується на базі даних з технічною інформацією та каталогом автозапчастин.",
+        "page_age": "2024-04-05T10:18:09",
+        "profile": {
+          "name": "MyTecDoc",
+          "url": "https://mytecdoc.com/en/modul-tecdoc/",
+          "long_name": "mytecdoc.com",
+          "img": "https://imgs.search.brave.com/14aSDZKOtrPnGVFb-fSnNdUBpg3NG453DXT38IAQgyk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGQxMzdmMDMx/MDc4ZDJiYmVhZmI0/MGMyN2M5Y2U3NDIy/YmZiN2I3MzQ4ZDRj/M2ExNDE2MTQzYjA0/NGU3ODIyMy9teXRl/Y2RvYy5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mytecdoc.com",
+          "hostname": "mytecdoc.com",
+          "favicon": "https://imgs.search.brave.com/14aSDZKOtrPnGVFb-fSnNdUBpg3NG453DXT38IAQgyk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGQxMzdmMDMx/MDc4ZDJiYmVhZmI0/MGMyN2M5Y2U3NDIy/YmZiN2I3MzQ4ZDRj/M2ExNDE2MTQzYjA0/NGU3ODIyMy9teXRl/Y2RvYy5jb20v",
+          "path": "› en  › modul-tecdoc"
+        },
+        "age": "April 5, 2024",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "mytecdoc"
+            }
+          ],
+          "date": "Aug 25, 2015",
+          "publisher": {
+            "type": "organization",
+            "name": "MyTecDoc",
+            "url": "https://mytecdoc.com"
+          }
+        },
+        "organization": {
+          "type": "organization",
+          "name": "MyTecDoc",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Однак, пошук та надання інформації про запчастини може бути викликом. Тут на допомогу приходить TecDoc – передовий модуль, що базується на базі даних з технічною інформацією та каталогом автозапчастин.",
+          "Цей модуль пропонує користувачеві доступ до інформації про деталі, їх характеристики, аналоги та застосовність до різних моделей автомобілів. TecDoc – це не просто каталог, це всебічний інструмент, який допомагає користувачам точно визначити необхідні запчастини для ремонту чи заміни.",
+          "Великий каталог автозапчастин: TecDoc пропонує доступ до бази даних, що містить інформацію про запчастини для широкого спектру автомобілів різних марок та моделей.",
+          "Точність та актуальність даних: Користувачі отримують доступ до точної та актуальної інформації про запчастини, що дозволяє надавати клієнтам найкращий сервіс. Інтеграція з інтернет-магазином: Модуль TecDoc легко інтегрується з інтернет-магазинами, забезпечуючи зручний та швидкий пошук запчастин для клієнтів."
+        ]
+      },
+      {
+        "title": "Возможности интернет-магазина автозапчастей | Каталог TecDoc | Аренда оригинальных каталогов",
+        "url": "https://tecdoconline.com.ua/features/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "В блоке выводятся сслыки \u0003на группы выбранных запчастей. Это повышает ссылочный вес страницы. Хороший способ максимально автоматизировать все процессы, чтобы уделить больше времени там, где его не хватает.",
+        "profile": {
+          "name": "Tecdoconline",
+          "url": "https://tecdoconline.com.ua/features/",
+          "long_name": "tecdoconline.com.ua",
+          "img": "https://imgs.search.brave.com/lBEm928nYWTSfdfIYT3jVTq4FsLGFWd_MOqyn_QCqos/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTFhMzI3NjY3/NTQ1YTg1YzRlNTBh/ZWQyNDEzODAzMWQ3/NzU3NDJmNzY0Y2Vh/MTAyYzE2MDdmYWQz/NTQxYThjZi90ZWNk/b2NvbmxpbmUuY29t/LnVhLw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "tecdoconline.com.ua",
+          "hostname": "tecdoconline.com.ua",
+          "favicon": "https://imgs.search.brave.com/lBEm928nYWTSfdfIYT3jVTq4FsLGFWd_MOqyn_QCqos/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTFhMzI3NjY3/NTQ1YTg1YzRlNTBh/ZWQyNDEzODAzMWQ3/NzU3NDJmNzY0Y2Vh/MTAyYzE2MDdmYWQz/NTQxYThjZi90ZWNk/b2NvbmxpbmUuY29t/LnVhLw",
+          "path": "› features"
+        },
+        "extra_snippets": [
+          "В блоке выводятся сслыки \u0003на группы выбранных запчастей. Это повышает ссылочный вес страницы. Хороший способ максимально автоматизировать все процессы, чтобы уделить больше времени там, где его не хватает.",
+          "Поиск запчастей по артикулу. Сравнение цен и сроков от различных поставщиков. Актуальные кроссы от поставщиков. Детальные характеристики в карточках товаров. Сортировка товаров в разделах каталога.",
+          "Поиск запчастей по году и марке автомобиля · Это онлайн-каталог для подбора автомобильных запчастей. Содержит описание, характеристики, фотографии деталей, информацию о применяемости и взаимозаменяемости.",
+          "Данные стандарты постоянно совершенствуются и дорабатываются в процессе непрерывного диалога компаний-производителей, компаний-реализаторов продукции и сервисного обслуживания автомобилей. В настоящее время электронные каталоги признаны единственным достоверным источником информации на рынке автомобильных запчастей."
+        ]
+      },
+      {
+        "title": "Каталог TecDoc для сайта автозапчастей | adata.by",
+        "url": "https://adata.by/chto-takoe-katalog-tecdoc/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Включает поиск по товарным группам автомобильных запчастей и сборочным узлам. МодульTecDoc для сайта не требует обязательное знание VIN-кода. Выполняет поиск автозапчастей по артикулам оригинальных производителей, а также по артикулам дубликатов. Преимущества модуля TecDoc для сайта на платформе АДАТА",
+        "page_age": "2024-10-14T00:00:00",
+        "profile": {
+          "name": "Adata",
+          "url": "https://adata.by/chto-takoe-katalog-tecdoc/",
+          "long_name": "adata.by",
+          "img": "https://imgs.search.brave.com/R2YxSmuEg8DQ-PKnALF-u8pVX-PVuaGwh1K7nWWOgsA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTVjNmQ1Y2I4/OTBiZGI3MjAwMmQy/YzE3MzMzZTM1ZjJk/N2U3YTMwZjBjNWU5/NDkxNzhjYTFmZDgy/NThhMWQ2Ny9hZGF0/YS5ieS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "adata.by",
+          "hostname": "adata.by",
+          "favicon": "https://imgs.search.brave.com/R2YxSmuEg8DQ-PKnALF-u8pVX-PVuaGwh1K7nWWOgsA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTVjNmQ1Y2I4/OTBiZGI3MjAwMmQy/YzE3MzMzZTM1ZjJk/N2U3YTMwZjBjNWU5/NDkxNzhjYTFmZDgy/NThhMWQ2Ny9hZGF0/YS5ieS8",
+          "path": "› chto-takoe-katalog-tecdoc"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/KXycYWR1NOWwiu72_fYr8osFusdFMuEEtS5uiQLYO68/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hZGF0/YS5ieS9tZWRpYS9m/aWxlcy9wYWdlcy90/ZWNkb2NfbG9nby5q/cGc",
+          "original": "https://adata.by/media/files/pages/tecdoc_logo.jpg",
+          "logo": true
+        },
+        "age": "October 14, 2024",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "ADATA Soft",
+              "url": "https://adata.by"
+            }
+          ],
+          "date": "Jan 21, 2021",
+          "publisher": {
+            "type": "organization",
+            "name": "ADATA Soft",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/5tUvxbj8KzBiiO1LqsxUidB1uedqvq8DCFT-PimwtGs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hZGF0/YS5ieS9hc3NldHMv/aW1nL2xvZ28ucG5n",
+              "original": "https://adata.by/assets/img/logo.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Модуль TecDoc для сайта на базе платформы АДАТА генерирует адаптивную выборку из прайсов поставщиков, интегрированных веб-сервисов и создает полные результаты подбора.",
+          "Для решения всех перечисленных задач, и предназначен каталог TecDoc. TecDoc это один из крупнейших, но не единственный в мире, каталог транспортных средств и запчастей к ним.",
+          "Включает поиск по товарным группам автомобильных запчастей и сборочным узлам. МодульTecDoc для сайта не требует обязательное знание VIN-кода. Выполняет поиск автозапчастей по артикулам оригинальных производителей, а также по артикулам дубликатов. Преимущества модуля TecDoc для сайта на платформе АДАТА",
+          "Это облегчает задачу тем, кто продает запчасти малоизвестных производителей. Например, компания не загрузила информацию в TecDoc купить, её продукцию соответственно можно будет только в магазине, где установлена база кроссов разработанная в Adata."
+        ]
+      },
+      {
+        "title": "Онлайн каталог автозапчастей TecDoc (ТекДок) – Официальный сайт Part-auto",
+        "url": "https://part.avtomir.ru/news/SHirokiy-assortiment-zapchastey-v-kataloge-TecDoc",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "На нашем сайте вы можете воспользоваться каталогом автозапчастей TecDoc для поиска нужных деталей. Разработанный немецкими специалистами компании TecDocInformationsSystemGmbH, ...",
+        "profile": {
+          "name": "Avtomir",
+          "url": "https://part.avtomir.ru/news/SHirokiy-assortiment-zapchastey-v-kataloge-TecDoc",
+          "long_name": "part.avtomir.ru",
+          "img": "https://imgs.search.brave.com/hJgBYkKE0naFgFkIAx20IekpNHcshnMiP5elC9sINQk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2JmNTVjYWNm/NjQ2YjZkOTE3ZTVi/NDUwNzk5NDMwYWIw/MDI1YjRjODRkMzMw/MjI4NDlmMjM5NDRk/Mzg5ZDExYi9wYXJ0/LmF2dG9taXIucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "part.avtomir.ru",
+          "hostname": "part.avtomir.ru",
+          "favicon": "https://imgs.search.brave.com/hJgBYkKE0naFgFkIAx20IekpNHcshnMiP5elC9sINQk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2JmNTVjYWNm/NjQ2YjZkOTE3ZTVi/NDUwNzk5NDMwYWIw/MDI1YjRjODRkMzMw/MjI4NDlmMjM5NDRk/Mzg5ZDExYi9wYXJ0/LmF2dG9taXIucnUv",
+          "path": "› news  › SHirokiy-assortiment-zapchastey-v-kataloge-TecDoc"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/AcdeyozXTC-IYjqwjb7riWBxNSA-Nu-jUXx1TvksJGU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9wYXJ0/LmF2dG9taXIucnUv/bmV3cy9TSGlyb2tp/eS1hc3NvcnRpbWVu/dC16YXBjaGFzdGV5/LXYta2F0YWxvZ2Ut/VGVjRG9j",
+          "original": "https://part.avtomir.ru/news/SHirokiy-assortiment-zapchastey-v-kataloge-TecDoc",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Разработанный немецкими специалистами компании TecDocInformationsSystemGmbH, каталог TecDoc представляет собой универсальную систему подбора неоригинальных автомобильных запчастей.",
+          "подбор с помощью сравнения цен и технических данных запчастей от разных производителей; актуальная информация о ценах и наличии на складе; быстрый отклик (не более 0,4 секунд ожидания ответа) благодаря пдключению к мощным серверам TecDoc по технологии Webservice.",
+          "На данный момент каталоги TecDoc онлайн содержат информацию о продукции почти двух с половиной тысяч независимых компаний-производителей кроссов (аналогов) оригинальных запчастей.",
+          "В базе данных онлайн каталога ТекДок (TecDoc) содержится самая полная на сегодняшний день информация о неоригинальных запчастях для легковых и грузовых автомобилей."
+        ]
+      },
+      {
+        "title": "Возможности каталога TecDoc для автобизнеса - автоблог Bipmix",
+        "url": "https://bipmix.ru/blog/novosti-tecdoc/tecdoc-samyy-polnyy-katalog-podbora-i-spravochnoy-informatsii-po-avtozapchastyam-i-avtomobilyam-dlya/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Каталог TecDoc - это наиболее популярный инструмент поиска запчастей не только в России, но и во всем мире. Соответственно, каждый производитель автозапчастей мечтает попасть в его базу данных.",
+        "page_age": "2020-04-30T00:00:00",
+        "profile": {
+          "name": "Bipmix",
+          "url": "https://bipmix.ru/blog/novosti-tecdoc/tecdoc-samyy-polnyy-katalog-podbora-i-spravochnoy-informatsii-po-avtozapchastyam-i-avtomobilyam-dlya/",
+          "long_name": "bipmix.ru",
+          "img": "https://imgs.search.brave.com/HREWJ-ug0L-3EtQIPsCLDTFAVU0xQViG8iOByM-cZ9k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDQwZjkzMmI5/NzczYmFjZWU3MzEz/MDA1YjllYzAyYjQx/MDQxNWUxNDZmZWQw/OGNkNzEzYzRiYTc2/NWFlNGVjMC9iaXBt/aXgucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "bipmix.ru",
+          "hostname": "bipmix.ru",
+          "favicon": "https://imgs.search.brave.com/HREWJ-ug0L-3EtQIPsCLDTFAVU0xQViG8iOByM-cZ9k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDQwZjkzMmI5/NzczYmFjZWU3MzEz/MDA1YjllYzAyYjQx/MDQxNWUxNDZmZWQw/OGNkNzEzYzRiYTc2/NWFlNGVjMC9iaXBt/aXgucnUv",
+          "path": "› blog  › novosti-tecdoc  › tecdoc-samyy-polnyy-katalog-podbora-i-spravochnoy-informatsii-po-avtozapchastyam-i-avtomobilyam-dlya"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/_hcw7vdvwhp-5dWqApgJmOvZMnasersMEGRa7vz9nIk/rs:fit:200:200:1:0/g:ce/aHR0cDovL2JpcG1p/eC5ydS91cGxvYWQv/aWJsb2NrLzIwNS8y/MDU5MTQ3Yzk2Nzc3/ZGRkOTQxZTE4YWQ1/NGE0M2Q0NC5qcGc",
+          "original": "http://bipmix.ru/upload/iblock/205/2059147c96777ddd941e18ad54a43d44.jpg",
+          "logo": false
+        },
+        "age": "April 30, 2020",
+        "extra_snippets": [
+          "TecDoc – это универсальный каталог автомобильных запчастей от огромного количества производителей. Он разработан немецкой компанией TecAlliance. Изначально каталог TecDoc создавался для связи между производителями запчастей и торговыми компаниями.",
+          "Для конечного пользователя - будь то менеджер по подбору запчастей в оффлайн-магазине или владелец автомобиля, сидящий дома на диване - прежде всего важны удобство, простота и скорость нахождения детали. Именно это и дает пользователям каталог TecDoc.",
+          "TecDoc оптимален для автосервисов, автомагазинов и складов, торгующих запчастями к автомобилям и спецтехнике как российского, так и зарубежного производства для постгарантийного обслуживания большинства автомобилей российского авторынка.",
+          "Каталог TecDoc - это наиболее популярный инструмент поиска запчастей не только в России, но и во всем мире. Соответственно, каждый производитель автозапчастей мечтает попасть в его базу данных."
+        ]
+      },
+      {
+        "title": "TecDoc онлайн подбор запчастей",
+        "url": "https://info-parts.ru/all-publications/item/3762-tecdoc-onlayn-podbor-zapchastey.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "В онлайн-каталоге TecDoc глобально доступны два варианта поиска запчастей — по различным номерам деталей или в привязке к модели и модификации автомобиля.",
+        "page_age": "2021-11-12T00:00:00",
+        "profile": {
+          "name": "Info-parts",
+          "url": "https://info-parts.ru/all-publications/item/3762-tecdoc-onlayn-podbor-zapchastey.html",
+          "long_name": "info-parts.ru",
+          "img": "https://imgs.search.brave.com/B92uTnXhs_2XCCoK5zeB5ofJa0Alskt_2867gw_4_xo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzdkOWFkOWM4/NTNhNDQ3Yjg1YmY1/MTY3NzM5MjgzNjI3/M2U5ZmM2MGIwZTM2/NjQwNDVkOTgxZDMx/YWM2NTM5Mi9pbmZv/LXBhcnRzLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "info-parts.ru",
+          "hostname": "info-parts.ru",
+          "favicon": "https://imgs.search.brave.com/B92uTnXhs_2XCCoK5zeB5ofJa0Alskt_2867gw_4_xo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzdkOWFkOWM4/NTNhNDQ3Yjg1YmY1/MTY3NzM5MjgzNjI3/M2U5ZmM2MGIwZTM2/NjQwNDVkOTgxZDMx/YWM2NTM5Mi9pbmZv/LXBhcnRzLnJ1Lw",
+          "path": "› all-publications  › item  › 3762-tecdoc-onlayn-podbor-zapchastey.html"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/LMbDDUyhIuuPYcQnrS965SmQlTSIFmIMGODhyFF43C4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbmZv/LXBhcnRzLnJ1L21l/ZGlhL2syL2l0ZW1z/L2NhY2hlLzg1NmVl/ZGU4NDU2OWU3ODdm/ODg5Mjc2YTEzNjg3/YzRjX0wuanBn",
+          "original": "https://info-parts.ru/media/k2/items/cache/856eede84569e787f889276a13687c4c_L.jpg",
+          "logo": false
+        },
+        "age": "November 12, 2021",
+        "article": {
+          "author": []
+        },
+        "extra_snippets": [
+          "В онлайн-каталоге TecDoc глобально доступны два варианта поиска запчастей — по различным номерам деталей или в привязке к модели и модификации автомобиля.",
+          "Скачивайте мобильное приложение TecDoc бесплатно, если вы пользователь Premium Version или основной лицензии TecDoc! Продукцию компании TecAlliance, а именно электронный каталог по подбору запчастей TecDoc WebCat 3.0 можно купить в Украине официально!",
+          "Tags: подбор запчастей, программное обеспечение, TecDoc, TecAlliance · TecDoc включили в учебное пособие для специалистов automotive aftermarket Компания TecAlliance, владелец самого популярного каталога подбора запчастей TecDoc, понимает значение...",
+          "Естественно, в онлайн-каталоге TecDoc хранится огромное количество информации. А количество “фишек” не ограничивается вариантами поиска."
+        ]
+      },
+      {
+        "title": "TecDoc — глобальный каталог транспортных средств и запчастей",
+        "url": "https://www.abcp.ru/news/ABCP--avtorizovannyiy-reseller-TecAlliance--TecDoc",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "информацию об аналогах (кроссах) запчасти (в разработке); поиск автомобиля по VIN-номеру. Если вам нужны дополнительные возможности API.ABCP для TecDoc, имеющиеся в оригинальном веб-сервисе TecDoc, вы можете оставить заявку со сылкой на необходимый пункт в документации веб-сервиса TecDoc, доступной по ссылке.",
+        "profile": {
+          "name": "Abcp",
+          "url": "https://www.abcp.ru/news/ABCP--avtorizovannyiy-reseller-TecAlliance--TecDoc",
+          "long_name": "abcp.ru",
+          "img": "https://imgs.search.brave.com/ZoNmBVU5gYYor9reQvBKF83cnwepK8qrdmSvJtm2Jlg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmMxMmY5YWE2/MWVlNzMzNmU1YWJm/NmQ4YmZkNmM2Y2M2/YTE0ODE1NjliZThi/NDdmYmRiNTU3Y2Zh/NTQyNDVhYy93d3cu/YWJjcC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "abcp.ru",
+          "hostname": "www.abcp.ru",
+          "favicon": "https://imgs.search.brave.com/ZoNmBVU5gYYor9reQvBKF83cnwepK8qrdmSvJtm2Jlg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmMxMmY5YWE2/MWVlNzMzNmU1YWJm/NmQ4YmZkNmM2Y2M2/YTE0ODE1NjliZThi/NDdmYmRiNTU3Y2Zh/NTQyNDVhYy93d3cu/YWJjcC5ydS8",
+          "path": "  › платформа №1 для автомагазинов  › новости"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/VThkkUy5DaYbQLbauLJEBiMrDBDT6UzzU6xlRGdXjIQ/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9mLm5v/ZGFjZG4ubmV0LzM4/NTU4MQ",
+          "original": "https://f.nodacdn.net/385581",
+          "logo": false
+        },
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Платформа ABCP"
+            }
+          ],
+          "publisher": {
+            "type": "organization",
+            "name": "Платформа ABCP",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/00YJjDAZoIBNxnLRVkmbhfV9BqCcAbwVHqDvxCNM4Ao/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9mLm5v/ZGFjZG4ubmV0LzI2/ODYyMQ",
+              "original": "https://f.nodacdn.net/268621"
+            }
+          }
+        },
+        "organization": {
+          "type": "organization",
+          "name": "Abcp",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "TecDoc — глобальный каталог транспортных средств и запчастей. Всемирно признанный TecDoc Standard является знаком качества информации о продукте.",
+          "Мы предоставляем доступ к веб-сервису TecDoc через адаптированное для вашего удобства API собственной разработки. Документация по API.ABCP. информацию для отображения каталога (производители, модели, модификации, узлы, списки неоригинальных запчастей);",
+          "информацию об аналогах (кроссах) запчасти (в разработке); поиск автомобиля по VIN-номеру. Если вам нужны дополнительные возможности API.ABCP для TecDoc, имеющиеся в оригинальном веб-сервисе TecDoc, вы можете оставить заявку со сылкой на необходимый пункт в документации веб-сервиса TecDoc, доступной по ссылке.",
+          "информацию о применимости запчасти;"
+        ]
+      },
+      {
+        "title": "Каталог автозапчастей - TecDoc Online",
+        "url": "https://tecdoconline.com.ua/tecdoc/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "TecDoc — это онлай-каталог для подбора автомобильных запчастей. Содержит описание, характеристики, фотографии деталей, информацию о применяемости и взаимозаменяемости.",
+        "profile": {
+          "name": "Tecdoconline",
+          "url": "https://tecdoconline.com.ua/tecdoc/",
+          "long_name": "tecdoconline.com.ua",
+          "img": "https://imgs.search.brave.com/lBEm928nYWTSfdfIYT3jVTq4FsLGFWd_MOqyn_QCqos/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTFhMzI3NjY3/NTQ1YTg1YzRlNTBh/ZWQyNDEzODAzMWQ3/NzU3NDJmNzY0Y2Vh/MTAyYzE2MDdmYWQz/NTQxYThjZi90ZWNk/b2NvbmxpbmUuY29t/LnVhLw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "tecdoconline.com.ua",
+          "hostname": "tecdoconline.com.ua",
+          "favicon": "https://imgs.search.brave.com/lBEm928nYWTSfdfIYT3jVTq4FsLGFWd_MOqyn_QCqos/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNTFhMzI3NjY3/NTQ1YTg1YzRlNTBh/ZWQyNDEzODAzMWQ3/NzU3NDJmNzY0Y2Vh/MTAyYzE2MDdmYWQz/NTQxYThjZi90ZWNk/b2NvbmxpbmUuY29t/LnVhLw",
+          "path": "› tecdoc"
+        },
+        "extra_snippets": [
+          "TecDoc — это онлай-каталог для подбора автомобильных запчастей. Содержит описание, характеристики, фотографии деталей, информацию о применяемости и взаимозаменяемости.",
+          "Данные стандарты постоянно совершенствуются и дорабатываются в процессе непрерывного диалога компаний-производителей, компаний-реализаторов продукции и сервисного обслуживания автомобилей. В настоящее время электронные продукты Tecdoc признаны единственным достоверным источником информации на рынке автомобильных запчастей."
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

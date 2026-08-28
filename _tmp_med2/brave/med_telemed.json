@@ -1,0 +1,944 @@
+{
+  "type": "search",
+  "query": {
+    "original": "телемедицина сервис проблемы врачи сообщество обсуждение",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 19,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Телемедицина (российский рынок)",
+        "url": "https://zdrav.expert/index.php/%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D1%8F:%D0%A2%D0%B5%D0%BB%D0%B5%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D0%B0_(%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D1%8B%D0%BD%D0%BE%D0%BA)",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Депутат призвала разрешить получать услуги в рамках ОМС, в том числе ставить предварительные диагнозы, назначать лечение, оформлять электронные больничные листы и выписывать препараты с электронной подписью врача. По словам премьер-министра, вопрос расширения применения телемедицины нужно обязательно обсуждать аккуратно с медицинским сообществом, хотя в правительстве поддерживают «всё инновационное и технологичное». Вопрос с включением телемедицины в ОМС он поручил отработать.",
+        "page_age": "2024-08-29T00:00:00",
+        "profile": {
+          "name": "Zdrav",
+          "url": "https://zdrav.expert/index.php/%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D1%8F:%D0%A2%D0%B5%D0%BB%D0%B5%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D0%B0_(%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D1%8B%D0%BD%D0%BE%D0%BA)",
+          "long_name": "zdrav.expert",
+          "img": "https://imgs.search.brave.com/w-YuWh1YO0v09eOPPskFkDBtOB8gYSe59szkiMPirVk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTJhOGM0YTAw/M2E5N2YwZWE1ZDk0/NmU0M2E5YjlkMWRm/Y2ZlMjZjYjRhNzBj/Mjk5NmZlMDQ1Nzkx/ZWUyMDRkYy96ZHJh/di5leHBlcnQv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "zdrav.expert",
+          "hostname": "zdrav.expert",
+          "favicon": "https://imgs.search.brave.com/w-YuWh1YO0v09eOPPskFkDBtOB8gYSe59szkiMPirVk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTJhOGM0YTAw/M2E5N2YwZWE1ZDk0/NmU0M2E5YjlkMWRm/Y2ZlMjZjYjRhNzBj/Mjk5NmZlMDQ1Nzkx/ZWUyMDRkYy96ZHJh/di5leHBlcnQv",
+          "path": "› index.php  › Статья:Телемедицина_(российский_рынок)"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/jyRPB2vjUnoDTpwvdmWKOG9YGbEdTF7gVFPYhgNCFJM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly90YWR2/aXNlci5ydS9pbWFn/ZXMvdGh1bWIvOC84/My8lRDAlOTQlRDAl/QjglRDElODElRDEl/ODIlRDAlQjAlRDAl/QkQlRDElODYlRDAl/QjglRDAlQkUlRDAl/QkQlRDAlQkQlRDAl/QkUlRDAlQjVfJUQw/JUJCJUQwJUI1JUQx/JTg3JUQwJUI1JUQw/JUJEJUQwJUI4JUQw/JUI1LmpwZy8zNDBw/eC0lRDAlOTQlRDAl/QjglRDElODElRDEl/ODIlRDAlQjAlRDAl/QkQlRDElODYlRDAl/QjglRDAlQkUlRDAl/QkQlRDAlQkQlRDAl/QkUlRDAlQjVfJUQw/JUJCJUQwJUI1JUQx/JTg3JUQwJUI1JUQw/JUJEJUQwJUI4JUQw/JUI1LmpwZw",
+          "original": "https://tadviser.ru/images/thumb/8/83/%D0%94%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5.jpg/340px-%D0%94%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5.jpg",
+          "logo": false
+        },
+        "age": "August 29, 2024",
+        "extra_snippets": [
+          "Статья Телемедицина (российский рынок), Телемедицина будущее здравоохранения, Мировой рынок, Проекты телемедицины в России, Коммерческие сервисы телемедицины, Проблемы телемедицины в России, Законодательное регулирование, 2024 В России создают сверхбыстрые магистральные сети для телемедицины и промышленности Проект поддерж",
+          "Депутат призвала разрешить получать услуги в рамках ОМС, в том числе ставить предварительные диагнозы, назначать лечение, оформлять электронные больничные листы и выписывать препараты с электронной подписью врача. По словам премьер-министра, вопрос расширения применения телемедицины нужно обязательно обсуждать аккуратно с медицинским сообществом, хотя в правительстве поддерживают «всё инновационное и технологичное». Вопрос с включением телемедицины в ОМС он поручил отработать.",
+          "Кроме того, в первой половине 2024 года наблюдался рост спроса на дистанционные консультации врачей лечебной физкультуры, травматологов и стоматологов. Частные медицинские сервисы также отмечают увеличение интереса к телемедицине.",
+          "Как сообщает РБК со ссылкой на гендиректора сервиса «Доктор рядом» Дениса Швецов, а ЭПР в телемедицине даст возможность врачу поставить диагноз, назначить или скорректировать ранее назначенное лечение."
+        ]
+      },
+      {
+        "title": "Доктор рядом телемедицина — онлайн-консультация с любым врачом",
+        "url": "https://dr-telemed.ru/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Врач уточнит Ваши основные жалобы, задаст вопросы о симптомах, может запросить результаты Ваших недавних анализов или обследований, если они есть.",
+        "profile": {
+          "name": "Dr-telemed",
+          "url": "https://dr-telemed.ru/",
+          "long_name": "dr-telemed.ru",
+          "img": "https://imgs.search.brave.com/wVXzbVRtqdfejbk3X70qXNvXLfgXKawPpPeMyUHx4_k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWJjM2JlMjY4/YTlmMWNiNmY5ZTA4/ZjczZmE2YzgwYjVk/MDZiZWM3Y2YzNDI2/NWIwNjcwYmU2Yjg3/ZTlhNzc3OC9kci10/ZWxlbWVkLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "dr-telemed.ru",
+          "hostname": "dr-telemed.ru",
+          "favicon": "https://imgs.search.brave.com/wVXzbVRtqdfejbk3X70qXNvXLfgXKawPpPeMyUHx4_k/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWJjM2JlMjY4/YTlmMWNiNmY5ZTA4/ZjczZmE2YzgwYjVk/MDZiZWM3Y2YzNDI2/NWIwNjcwYmU2Yjg3/ZTlhNzc3OC9kci10/ZWxlbWVkLnJ1Lw",
+          "path": ""
+        },
+        "extra_snippets": [
+          "Отличный сервис, а в условиях самоизоляции, просто спасение! Удобно подгружать файлы и фотографии прямо во время консультации. Спасибо Вам ... Внимательный, грамотный врач.",
+          "Выберите нужного врача, назначьте срочную консультацию (врач свяжется с Вами в течение 5-и минут), либо выберите удобное время для записи. За 5 минут до консультации придет напоминание о предстоящей консультации.",
+          "Врач уточнит Ваши основные жалобы, задаст вопросы о симптомах, может запросить результаты Ваших недавних анализов или обследований, если они есть.",
+          "На основе собранной информации врач поставит предварительный диагноз, даст рекомендации, назначит дополнительные обследования или анализы, если это необходимо."
+        ]
+      },
+      {
+        "title": "Компьютерная программа Телемедицина «Доктор Рядом» | отзывы",
+        "url": "https://irecommend.ru/content/kompyuternaya-programma-telemeditsina-doktor-ryadom",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Пользовалась им 3 раза и каждый раз были проблемы. Во-первых, ужаснейшее качество связи, доктора почти не слышно и не видно. ... ЕМИАС: Телемедицина. Чем сможет помочь телемедицинский доктор при коронавирусе? Как найти врача, если вызвать его невозможно?",
+        "profile": {
+          "name": "iRecommend",
+          "url": "https://irecommend.ru/content/kompyuternaya-programma-telemeditsina-doktor-ryadom",
+          "long_name": "irecommend.ru",
+          "img": "https://imgs.search.brave.com/OG5oa7mJV01T_cAVRpXPWKInUsiDH00upyqGVS9Mnkw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTNlOGM0YTYz/YjJjNjdlODNlOTg0/YjFkZjlkNTkyODY2/MjM5YTJkZDcwNzAx/ZTRlNjVhYTFlYmZh/MDNhNTk0My9pcmVj/b21tZW5kLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "irecommend.ru",
+          "hostname": "irecommend.ru",
+          "favicon": "https://imgs.search.brave.com/OG5oa7mJV01T_cAVRpXPWKInUsiDH00upyqGVS9Mnkw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMTNlOGM0YTYz/YjJjNjdlODNlOTg0/YjFkZjlkNTkyODY2/MjM5YTJkZDcwNzAx/ZTRlNjVhYTFlYmZh/MDNhNTk0My9pcmVj/b21tZW5kLnJ1Lw",
+          "path": "  › каталог отзывов  › техника  › компьютеры  › компьютерные программы  › мобильное приложение"
+        },
+        "extra_snippets": [
+          "Пользовалась им 3 раза и каждый раз были проблемы. Во-первых, ужаснейшее качество связи, доктора почти не слышно и не видно. ... ЕМИАС: Телемедицина. Чем сможет помочь телемедицинский доктор при коронавирусе? Как найти врача, если вызвать его невозможно?",
+          "Телемедицина в чем-то полезна, чтобы никуда не ходить Как известно, сейчас можно получить больничный по ОРВИ по телефону. Компьютерная программа My Doc ... Идите к врачу, а не в телефон Имел неосторожность столкнуться с ними, о чем жалею и в то же время радуюсь, опыт все-таки?!",
+          "См он незадолго до этого предложения сам пользовался услугами названного сервиса. Компьютерная программа My Doc ... медицинская помощь на диване Давно болела голова - но в нашей поликлинике попасть на прием к неврологу практически невозможно - запись на месяц вперед!! ... Ужасно Приложение само по себе нормальное. Но врачи - не профессионалы.",
+          "Врач на связи в любое время: мой опыт с сервисом «Врач Ответит» Недавно воспользовался сервисом «Врач Ответит» , и хочу поделиться своим опытом."
+        ]
+      },
+      {
+        "title": "Онлайн-консультации — Сберздоровье",
+        "url": "https://lk.sberhealth.ru/telemed",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Обратите внимание: в рамках онлайн-консультации врач не сможет выписать рецепт на лекарственные препараты, оформить больничный лист и выдать медицинские справки. Психологи готовы помочь вам разобраться с личными проблемами, карьерным ростом и другими важными для вас темами.",
+        "profile": {
+          "name": "Sberhealth",
+          "url": "https://lk.sberhealth.ru/telemed",
+          "long_name": "lk.sberhealth.ru",
+          "img": "https://imgs.search.brave.com/K35oB2iFGIIm-30FwMlZo0DFRWHM4RIOOp5RsFymdOk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGU2NTc5YWQ1/NTM1NDY2MjE2ZWY2/MjEzNmJmMzE1ODQx/ZTVjODIzNmU5ZjI0/ODIzZGIwNDMwOTM2/ZjhjYWJhMy9say5z/YmVyaGVhbHRoLnJ1/Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "lk.sberhealth.ru",
+          "hostname": "lk.sberhealth.ru",
+          "favicon": "https://imgs.search.brave.com/K35oB2iFGIIm-30FwMlZo0DFRWHM4RIOOp5RsFymdOk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGU2NTc5YWQ1/NTM1NDY2MjE2ZWY2/MjEzNmJmMzE1ODQx/ZTVjODIzNmU5ZjI0/ODIzZGIwNDMwOTM2/ZjhjYWJhMy9say5z/YmVyaGVhbHRoLnJ1/Lw",
+          "path": "› telemed"
+        },
+        "extra_snippets": [
+          "Обратите внимание: в рамках онлайн-консультации врач не сможет выписать рецепт на лекарственные препараты, оформить больничный лист и выдать медицинские справки. Психологи готовы помочь вам разобраться с личными проблемами, карьерным ростом и другими важными для вас темами.",
+          "Онлайн-консультации позволяют получать медицинскую помощь удаленно, не выходя из дома. Вы можете общаться с врачами и психологами через аудио, видео или чат, что делает процесс удобным и быстрым.",
+          "Консультация может проходить в удобном для вас формате: через чат, аудио или видеозвонок. После консультации, врач предоставит вам медицинское заключение.",
+          "Если вам нужна срочная помощь, рекомендуем обратиться к дежурному специалисту — вас примет первый освободившийся врач в течение 2 минут. Если нужно записаться к узкопрофильному специалисту, вы сможете выбрать конкретного врача и удобное время."
+        ]
+      },
+      {
+        "title": "Телемедицина: что это, виды, где применяется | РБК Тренды",
+        "url": "https://trends.rbc.ru/trends/innovation/5d8e297f9a79478c40cd4369",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Технические проблемы (провайдеры должны быть обучены тому, как правильно обслуживать телемедицинские системы); Недостаточная квалификация врачей;",
+        "page_age": "2024-06-16T11:00:00",
+        "profile": {
+          "name": "RBC Trends",
+          "url": "https://trends.rbc.ru/trends/innovation/5d8e297f9a79478c40cd4369",
+          "long_name": "trends.rbc.ru",
+          "img": "https://imgs.search.brave.com/0k78fBTTNxZgZ5c-USu6lzIolLN1L0-jdTQrZCSP-dM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmMyMzIxODJj/OGNkN2YzN2FlNTNm/OGNlZGFkM2M3NGY1/NDcwZjY0NDM1MDQ5/NGQ2MDA5M2Q2ODcw/NDY1NmUyNi90cmVu/ZHMucmJjLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "location",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "trends.rbc.ru",
+          "hostname": "trends.rbc.ru",
+          "favicon": "https://imgs.search.brave.com/0k78fBTTNxZgZ5c-USu6lzIolLN1L0-jdTQrZCSP-dM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmMyMzIxODJj/OGNkN2YzN2FlNTNm/OGNlZGFkM2M3NGY1/NDcwZjY0NDM1MDQ5/NGQ2MDA5M2Q2ODcw/NDY1NmUyNi90cmVu/ZHMucmJjLnJ1Lw",
+          "path": "  › ✅рбк тренды  › ✅инновации  › ✅что такое телемедицина?"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/kma4YIh1Sir3x_OzekxmdVteMr0zk898VhgDD9NpBOA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zMC5y/YmsucnUvdjZfdG9w/X3BpY3MvbWVkaWEv/aW1nLzEvNDYvNzU1/Njk4MjIxNDQ0NDYx/LmpwZw",
+          "original": "https://s0.rbk.ru/v6_top_pics/media/img/1/46/755698221444461.jpg",
+          "logo": false
+        },
+        "age": "June 16, 2024",
+        "location": {
+          "title": "РБК",
+          "url": "https://trends.rbc.ru/trends/innovation/5d8e297f9a79478c40cd4369",
+          "is_source_local": false,
+          "is_source_both": false,
+          "family_friendly": true,
+          "type": "location_result",
+          "provider_url": "https://trends.rbc.ru/trends/innovation/5d8e297f9a79478c40cd4369",
+          "zoom_level": 7,
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/gbpPjnRJ9ebKrcQ5C7kesJQSk0zyDqvz3N-3_S5PDOU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zMC5y/YmsucnUvdjZfdG9w/X3BpY3MvbWVkaWEv/aW1nLzEvNDYvNzU1/Njk4MjIxNDQ0NDYx/LmpwZw",
+            "original": "https://s0.rbk.ru/v6_top_pics/media/img/1/46/755698221444461.jpg"
+          },
+          "postal_address": {
+            "type": "PostalAddress",
+            "streetAddress": "Россия, г.Москва, улица Ленинская Слобода, дом 26, строение 3",
+            "displayAddress": "Россия, г.Москва, улица Ленинская Слобода, дом 26, строение 3"
+          },
+          "contact": {
+            "telephone": "+7(495)363-11-11"
+          },
+          "profiles": [
+            {
+              "type": "external",
+              "name": "trends.rbc.ru",
+              "url": "https://trends.rbc.ru/trends/innovation/5d8e297f9a79478c40cd4369",
+              "img": "https://imgs.search.brave.com/0k78fBTTNxZgZ5c-USu6lzIolLN1L0-jdTQrZCSP-dM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmMyMzIxODJj/OGNkN2YzN2FlNTNm/OGNlZGFkM2M3NGY1/NDcwZjY0NDM1MDQ5/NGQ2MDA5M2Q2ODcw/NDY1NmUyNi90cmVu/ZHMucmJjLnJ1Lw"
+            }
+          ],
+          "pictures": {
+            "results": [
+              {
+                "src": "https://imgs.search.brave.com/gbpPjnRJ9ebKrcQ5C7kesJQSk0zyDqvz3N-3_S5PDOU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zMC5y/YmsucnUvdjZfdG9w/X3BpY3MvbWVkaWEv/aW1nLzEvNDYvNzU1/Njk4MjIxNDQ0NDYx/LmpwZw",
+                "original": "https://s0.rbk.ru/v6_top_pics/media/img/1/46/755698221444461.jpg"
+              }
+            ]
+          },
+          "categories": []
+        },
+        "extra_snippets": [
+          "Для тех, кто нуждается в постоянном уходе, получат круглосуточный онлайн-доступ к врачам, медсестрам и сиделкам. Это особенно актуально с учетом общемировой тенденции к старению населения. Что касается технологий, то сервисы телемедицины будут активнее использовать ИИ и большие данные для диагнозов и онлайн-консультаций, а также — умные носимые трекеры для мониторинга жизненных показателей, AR и VR.",
+          "Технические проблемы (провайдеры должны быть обучены тому, как правильно обслуживать телемедицинские системы); Недостаточная квалификация врачей;",
+          "Примеры взаимодействия «врач — врач»: использование электронной информации, интегрированных цифровых и телекоммуникационных технологий для обмена данными между врачами, а также для управления в сфере медобразования, здравоохранения и медуслуг. ... С развитием телемедицины человек экономит время и силы, потому что может пообщаться со специалистом онлайн.",
+          "Но телемедицинские технологии — это еще и выход для людей, живущих в сельской местности, потому что, как правило, высококвалифицированные врачи работают в городах."
+        ]
+      },
+      {
+        "title": "MyDoc - современный сервис телемедицины",
+        "url": "https://mydoc.ru/info/about",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "современный сервис телемедицины, который предлагает клиентам посещение государственных и частных медицинских центров в режиме онлайн. Сталкиваясь с проблемами ...",
+        "profile": {
+          "name": "Mydoc",
+          "url": "https://mydoc.ru/info/about",
+          "long_name": "mydoc.ru",
+          "img": "https://imgs.search.brave.com/ABmrICOhFdf2taT9fFy4pEOKHxVQ8SCLGoXcI_ONrPU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjhhNDI0MTEx/NGNiYTEzN2RkZGJm/YWE2MTVhMTI1YWVh/ZTM1YjQ3MzdhYTg3/NTZkNzhlYWI2MDJh/YWE5MjBmMi9teWRv/Yy5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "mydoc.ru",
+          "hostname": "mydoc.ru",
+          "favicon": "https://imgs.search.brave.com/ABmrICOhFdf2taT9fFy4pEOKHxVQ8SCLGoXcI_ONrPU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjhhNDI0MTEx/NGNiYTEzN2RkZGJm/YWE2MTVhMTI1YWVh/ZTM1YjQ3MzdhYTg3/NTZkNzhlYWI2MDJh/YWE5MjBmMi9teWRv/Yy5ydS8",
+          "path": "› info  › about"
+        },
+        "extra_snippets": [
+          "современный сервис телемедицины, который предлагает клиентам посещение государственных и частных медицинских центров в режиме онлайн. Сталкиваясь с проблемами здоровья, мы часто откладываем консультацию со специалистом из-за нехватки времени, отсутствия возможности посетить медицинское учреждение и найти врача необходимой квалификации.",
+          "Могу ли я использовать сервис MyDoc для ребёнка? Да. Вы, как родитель, можете обратиться к врачу с проблемами, касающимися здоровья ребенка.",
+          "Посредством телемедицины большое количество пациентов получает профессиональную помощь без посещения врача, освобождая время специалиста для пациентов, нуждающихся в очном приеме.",
+          "Или же пациенту трудно обратиться к врачу по деликатным вопросам, когда проблемы связаны, например, с половой системой или кожными высыпаниями."
+        ]
+      },
+      {
+        "title": "Обзор — рейтинг сервисов, программ и приложений для системы телемедицины",
+        "url": "https://medreclama.ru/blog/obzor-rejting-servisov-programm-i-prilozhenij-dlya-sistemy-telemeditsiny",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Принцип оплаты — ... В некоторых отзывах пишут о проблемах с авторизацией врача, но техническая поддержка быстро реагирует и устраняет сложности...",
+        "profile": {
+          "name": "Medreclama",
+          "url": "https://medreclama.ru/blog/obzor-rejting-servisov-programm-i-prilozhenij-dlya-sistemy-telemeditsiny",
+          "long_name": "medreclama.ru",
+          "img": "https://imgs.search.brave.com/zJ5LeEgH76XdRS2uaedkbLeeKUTsPvWFzBP6s9e4GeY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmExNTRkNDNh/YTNjNjBkZTFjYTMx/NmZmODAyMGE4OTAy/MDU2YjhhZWE4ODZi/YzgxYjViNDY3YjY5/MmE3OGQzNy9tZWRy/ZWNsYW1hLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "medreclama.ru",
+          "hostname": "medreclama.ru",
+          "favicon": "https://imgs.search.brave.com/zJ5LeEgH76XdRS2uaedkbLeeKUTsPvWFzBP6s9e4GeY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmExNTRkNDNh/YTNjNjBkZTFjYTMx/NmZmODAyMGE4OTAy/MDU2YjhhZWE4ODZi/YzgxYjViNDY3YjY5/MmE3OGQzNy9tZWRy/ZWNsYW1hLnJ1Lw",
+          "path": "  › агентство медицинского маркетинга  › блог  › обзор — рейтинг сервисов, программ и приложений для системы телемедицины"
+        },
+        "extra_snippets": [
+          "Нужно указать: вид предоставляемых услуг, вариант телемедицины, количество врачей, подключаемых к платформе, способ записи, технические опции. Принцип оплаты — за реальные визиты в клинику. В некоторых отзывах пишут о проблемах с авторизацией врача, но техническая поддержка быстро реагирует и устраняет сложности.",
+          "Система телемедицины, являясь коробочным решением, открывает перед клиниками следующие возможности: 3 модуля (администратора, врача, пациента), настраиваются под потребности клиники.",
+          "Современная платформа (telemedicine platform) онлайн-взаимодействия врачей и пациентов, направленная на увеличение эффективности и автоматизацию рабочих процессов клиники. ... видеоконференции с пациентами (интеграция с телемедицинскими устройствами),",
+          "Телемедицинская система со следующими возможностями: ... Клиент может записываться через менеджера, если оставляет свой номер телефона. Запись производится после ввода кода, присланного в СМС. Рейтинг врачей формируется на базе математической модели (учитываются отзывы пациентов, специализация, образование, опыт работы)."
+        ]
+      },
+      {
+        "title": "Как выбрать надежный сервис телемедицины | Эксперты объясняют от Роскачества",
+        "url": "https://rskrf.ru/tips/eksperty-obyasnyayut/kak-vybrat-nadezhnyy-servis-telemeditsiny/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Выбирайте сервисы, в которых работают квалифицированные врачи и медицинские работники. Проверьте через интернет информацию о них: образование, опыт работы и специализацию. ... Независимо от того, каким сервисом телемедицины вы пользуетесь, судя по комментариям, у всех пользователей возникают похожие проблемы.",
+        "profile": {
+          "name": "Roskachestvo",
+          "url": "https://rskrf.ru/tips/eksperty-obyasnyayut/kak-vybrat-nadezhnyy-servis-telemeditsiny/",
+          "long_name": "rskrf.ru",
+          "img": "https://imgs.search.brave.com/hDnJZrFd1YCeYlGjTMPLxrtPxIT4SadDw8VdVHYEw64/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlMTUzOGQy/OTU0NmM5OWRjZGM0/ZjE4OGY5MDExZTE4/MDMwNTc1MjQxY2Qy/NTQ5NTc4ZmM1NjFh/Y2I2MjYyMC9yc2ty/Zi5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "rskrf.ru",
+          "hostname": "rskrf.ru",
+          "favicon": "https://imgs.search.brave.com/hDnJZrFd1YCeYlGjTMPLxrtPxIT4SadDw8VdVHYEw64/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDZlMTUzOGQy/OTU0NmM5OWRjZGM0/ZjE4OGY5MDExZTE4/MDMwNTc1MjQxY2Qy/NTQ5NTc4ZmM1NjFh/Y2I2MjYyMC9yc2ty/Zi5ydS8",
+          "path": "› tips  › eksperty-obyasnyayut  › kak-vybrat-nadezhnyy-servis-telemeditsiny"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/0yabAWG-sB_fkI6nHmK3mk8aK-PnELhP6fmNKZ7hDRA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9yc2ty/Zi5ydS91cGxvYWQv/aWJsb2NrL2UzNy9j/OGlwcmJiM3I5Z21k/NXoxN2gzcDN4dXox/OTJuMHFxMi5wbmc",
+          "original": "https://rskrf.ru/upload/iblock/e37/c8iprbb3r9gmd5z17h3p3xuz192n0qq2.png",
+          "logo": false
+        },
+        "article": {
+          "author": []
+        },
+        "extra_snippets": [
+          "Эксперты Центра цифровой экспертизы Роскачества рассказывают о тонкостях выбора надежного сервиса телемедицины, учитывая пользовательский опыт, распространенные проблемы и важные аспекты безопасности.",
+          "Центр цифровой экспертизы Роскачества провел социологическое исследование, спросив у тысячи пользователей телемедицины их мнение о сервисах. Результаты удивили: оказалось, большинство респондентов уверены, что телемедицина может полностью заменить очные походы к врачу.",
+          "Результаты исследования свидетельствуют о растущей востребованности и признании россиянами телемедицинских услуг. Для повышения лояльности и дальнейшего развития сервисам необходимо уделять особое внимание вопросам квалификации врачей, обеспечивать безопасность данных и упрощать технические аспекты использования.",
+          "Выбирайте сервисы, в которых работают квалифицированные врачи и медицинские работники. Проверьте через интернет информацию о них: образование, опыт работы и специализацию. ... Независимо от того, каким сервисом телемедицины вы пользуетесь, судя по комментариям, у всех пользователей возникают похожие проблемы."
+        ]
+      },
+      {
+        "title": "Приложения для телемедицины: платные и бесплатные консультации с врачами на Android и iOS",
+        "url": "https://t-j.ru/short/telemedicine-apps/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Егор Ивановriestercor, как представитель одного из сервисов скажу, что заставить врачей принимать онлайн сложная задача. мы эту задачу до конца не смогли решить, поэтому не все врачи с очного приема ведут такие консультации.",
+        "page_age": "2024-01-11T09:03:46",
+        "profile": {
+          "name": "T-J.RU",
+          "url": "https://t-j.ru/short/telemedicine-apps/",
+          "long_name": "t-j.ru",
+          "img": "https://imgs.search.brave.com/wdMyIn67Qr5IBJK7vvkybU9PjDDQQrhVApZMgY0KL5U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODFlNGRjNjBm/NDdkNDY4NjcxYWU0/ZmRiM2YzNTAyNWQy/ZjUyMTMzZDkzN2Zj/MzA4OGJlZWM5Y2Ni/ZGM2Njc0ZC90LWou/cnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "t-j.ru",
+          "hostname": "t-j.ru",
+          "favicon": "https://imgs.search.brave.com/wdMyIn67Qr5IBJK7vvkybU9PjDDQQrhVApZMgY0KL5U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODFlNGRjNjBm/NDdkNDY4NjcxYWU0/ZmRiM2YzNTAyNWQy/ZjUyMTMzZDkzN2Zj/MzA4OGJlZWM5Y2Ni/ZGM2Njc0ZC90LWou/cnUv",
+          "path": "  › т⁠—⁠ж"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Ih9foWZyI6b9xReCebmBzOn_tBg4_hGSuKRmjzP8uJg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbWct/Y2RuLnRpbmtvZmZq/b3VybmFsLnJ1L3Rl/bGVtZWRpY2luZS1h/cHBzLWZiLndtejdy/dmh4ZXp3aS4ucG5n",
+          "original": "https://img-cdn.tinkoffjournal.ru/telemedicine-apps-fb.wmz7rvhxezwi..png",
+          "logo": false
+        },
+        "age": "January 11, 2024",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Виктория Зорина",
+              "url": "https://t-j.ru/user340203/"
+            }
+          ],
+          "date": "Jan 11, 2024",
+          "publisher": {
+            "type": "organization",
+            "name": "Т⁠—⁠Ж",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/2ep4Q4PWW8--1l2cXlJVUy0bSnAkebZrTZ2Fommf4tI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtY2RuLnRpbmtv/ZmZqb3VybmFsLnJ1/L2ltZy9jb3JlLWxv/Z28uMzUweDYwLnBu/Zw",
+              "original": "https://static-cdn.tinkoffjournal.ru/img/core-logo.350x60.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Врач не сможет выписать рецепт или больничный лист — для телемедицины это запрещено, — но подскажет, что означают результаты анализов и как действовать дальше.",
+          "Новости о здоровье, интервью с врачами и инструкции для пациентв — в нашем телеграм-канале. Подписывайтесь, чтобы быть в курсе происходящего: @t_zdorov ... Виктория ЗоринаКонсультировались через приложение? Расскажите о своем опыте: Olesya BasirovaКупила недавно подписку сервиса \"НаПоправку\".",
+          "Егор Ивановriestercor, как представитель одного из сервисов скажу, что заставить врачей принимать онлайн сложная задача. мы эту задачу до конца не смогли решить, поэтому не все врачи с очного приема ведут такие консультации.",
+          "Как найти лекарство по действующему веществу: 5 сервисов ... 6 обследований, которые врачи не советуют делать без показаний"
+        ]
+      },
+      {
+        "title": "Система телемедицины",
+        "url": "https://gostelemed.ru/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "We cannot provide a description for this page right now",
+        "profile": {
+          "name": "Gostelemed",
+          "url": "https://gostelemed.ru/",
+          "long_name": "gostelemed.ru",
+          "img": "https://imgs.search.brave.com/EzyulLQoOY8i5TMlaQ-fDMtzdLIee_x5zgvOvpfbjVI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjlkNDM4MDhm/MGU0YmZjMDVkNDVm/YmY1ZGYzNGM2NTdm/M2RhN2YzYmU0ZTk2/Yjk0OWRiYWM5MDIx/YjUzNzdlZi9nb3N0/ZWxlbWVkLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "gostelemed.ru",
+          "hostname": "gostelemed.ru",
+          "favicon": "https://imgs.search.brave.com/EzyulLQoOY8i5TMlaQ-fDMtzdLIee_x5zgvOvpfbjVI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjlkNDM4MDhm/MGU0YmZjMDVkNDVm/YmY1ZGYzNGM2NTdm/M2RhN2YzYmU0ZTk2/Yjk0OWRiYWM5MDIx/YjUzNzdlZi9nb3N0/ZWxlbWVkLnJ1Lw",
+          "path": ""
+        }
+      },
+      {
+        "title": "ТОП-10 лучшие сервисы телемедицины с приложением на Апрель 2026, онлайн консультации врачей — Лучшие сервисы телемедицины",
+        "url": "https://xn----ctbhbcaaufa2anr4anes3f5dm.xn--p1ai/s-prilozheniyem/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Очень тактичные врачи, на каждый вопрос получаешь исчерпывающий ответ, а главное - при беседе врач состредоточен только на твоей проблеме, не отвлекается по другим ...",
+        "page_age": "2024-01-30T16:27:12",
+        "profile": {
+          "name": "Xn----ctbhbcaaufa2anr4anes3f5dm",
+          "url": "https://xn----ctbhbcaaufa2anr4anes3f5dm.xn--p1ai/s-prilozheniyem/",
+          "long_name": "xn----ctbhbcaaufa2anr4anes3f5dm.xn--p1ai",
+          "img": "https://imgs.search.brave.com/tGSdb_GL4BwJtvadvFy17wW0UCRHm0VENjTwU3nEOSI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmY5NDIyNjg4/MjZiYmZjMWFhYzBj/OTc3ZWRmZDU5NWI2/ZmViYjRkZDllMGRm/MmViMWRhZmQ5MzIz/NzZjNzRhYi94bi0t/LS1jdGJoYmNhYXVm/YTJhbnI0YW5lczNm/NWRtLnhuLS1wMWFp/Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "xn----ctbhbcaaufa2anr4anes3f5dm.xn--p1ai",
+          "hostname": "xn----ctbhbcaaufa2anr4anes3f5dm.xn--p1ai",
+          "favicon": "https://imgs.search.brave.com/tGSdb_GL4BwJtvadvFy17wW0UCRHm0VENjTwU3nEOSI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmY5NDIyNjg4/MjZiYmZjMWFhYzBj/OTc3ZWRmZDU5NWI2/ZmViYjRkZDllMGRm/MmViMWRhZmQ5MzIz/NzZjNzRhYi94bi0t/LS1jdGJoYmNhYXVm/YTJhbnI0YW5lczNm/NWRtLnhuLS1wMWFp/Lw",
+          "path": "› s-prilozheniyem"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/tQ_GedjvRuZw3OTWq9t2-HlzRgiiRP6JFu0WYYdBE6A/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly94bi0t/LS1jdGJoYmNhYXVm/YTJhbnI0YW5lczNm/NWRtLnhuLS1wMWFp/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIz/LzA5L2xvZ28ucG5n",
+          "original": "https://xn----ctbhbcaaufa2anr4anes3f5dm.xn--p1ai/wp-content/uploads/2023/09/logo.png",
+          "logo": true
+        },
+        "age": "January 30, 2024",
+        "extra_snippets": [
+          "Очень тактичные врачи, на каждый вопрос получаешь исчерпывающий ответ, а главное - при беседе врач состредоточен только на твоей проблеме, не отвлекается по другим вопросам.",
+          "Практикующий врач, автор медицинских курсов. Специализируется на сложных клинических случаях, когда необходимы знания множества смежных специализаций.",
+          "Их отличает возможность проведения консультации с опытными врачами из разных медицинских сфер, а также понятный интерфейс, простота и удобство использования.",
+          "Интернет-ресурс дает возможность получить онлайн-консультацию специалиста в любое удобное время. Врач общается с пациентом в чате или по видеозвонку."
+        ]
+      },
+      {
+        "title": "Телемедицина - онлайн-консультации врачей и психологов за 2 300 рублей в год",
+        "url": "https://reso.ru/individual/medicine/telemedicine/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Купите полис онлайн или у агента компании и получите видеоконсультации врачей 24/4, неограниченное количество обращений к психологу, второе медицинское мнение ...",
+        "profile": {
+          "name": "Reso",
+          "url": "https://reso.ru/individual/medicine/telemedicine/",
+          "long_name": "reso.ru",
+          "img": "https://imgs.search.brave.com/G_0wTBNcw67kl4Q8VVdy5TKvpSOOoAKmGa0p04QVxXc/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTgzOWZmZGMw/N2NlOGRjNjgyN2Rm/YTkzMjgyZTAyYTQw/MjE1N2EyNjdlZjBm/YTliYWJjZDllNzFm/ZmE4M2YzYi9yZXNv/LnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "reso.ru",
+          "hostname": "reso.ru",
+          "favicon": "https://imgs.search.brave.com/G_0wTBNcw67kl4Q8VVdy5TKvpSOOoAKmGa0p04QVxXc/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTgzOWZmZGMw/N2NlOGRjNjgyN2Rm/YTkzMjgyZTAyYTQw/MjE1N2EyNjdlZjBm/YTliYWJjZDllNzFm/ZmE4M2YzYi9yZXNv/LnJ1Lw",
+          "path": "  › главная  › частным лицам  › дмс  › телемедицина"
+        },
+        "extra_snippets": [
+          "Купите полис онлайн или у агента компании и получите видеоконсультации врачей 24/4, неограниченное количество обращений к психологу, второе медицинское мнение и т.д.",
+          "После покупки полиса скачайте приложение \"Телемедицина РЕСО\" (Google play, App Store) Зарегистрируйтесь или авторизуйтесь, если уже ранее регистрировались в иных сервисах компании - Личном кабинете или приложении РЕСО Мобайл · Выберите врача, дату и время для консультации",
+          "В рамках федерального закона при проведении консультаций (первичное обращение) с применением телемедицинских технологий лечащим врачом может быть назначено симптоматическое лечение (безрецептурные препараты), если консультация происходит после очного посещения врача, постановки диагноза и назначении лечения, то на телеме",
+          "Услуга оказывается признанными в своей области российскими лицензированными врачами-специалистами различных профилей. ... В случае выявления онкологического заболевания застрахованному предоставляются: Телемедицинские консультации с врачом-онкологом из московской сети клиник MedSwiss"
+        ]
+      },
+      {
+        "title": "Лучшие сервисы телемедицины",
+        "url": "https://xn----ctbhbcaaufa2anr4anes3f5dm.xn--p1ai/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Очень тактичные врачи, на каждый вопрос получаешь исчерпывающий ответ, а главное - при беседе врач состредоточен только на твоей проблеме, не отвлекается по другим ...",
+        "page_age": "2024-01-30T13:38:54",
+        "profile": {
+          "name": "Xn----ctbhbcaaufa2anr4anes3f5dm",
+          "url": "https://xn----ctbhbcaaufa2anr4anes3f5dm.xn--p1ai/",
+          "long_name": "xn----ctbhbcaaufa2anr4anes3f5dm.xn--p1ai",
+          "img": "https://imgs.search.brave.com/tGSdb_GL4BwJtvadvFy17wW0UCRHm0VENjTwU3nEOSI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmY5NDIyNjg4/MjZiYmZjMWFhYzBj/OTc3ZWRmZDU5NWI2/ZmViYjRkZDllMGRm/MmViMWRhZmQ5MzIz/NzZjNzRhYi94bi0t/LS1jdGJoYmNhYXVm/YTJhbnI0YW5lczNm/NWRtLnhuLS1wMWFp/Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "product",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "xn----ctbhbcaaufa2anr4anes3f5dm.xn--p1ai",
+          "hostname": "xn----ctbhbcaaufa2anr4anes3f5dm.xn--p1ai",
+          "favicon": "https://imgs.search.brave.com/tGSdb_GL4BwJtvadvFy17wW0UCRHm0VENjTwU3nEOSI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMmY5NDIyNjg4/MjZiYmZjMWFhYzBj/OTc3ZWRmZDU5NWI2/ZmViYjRkZDllMGRm/MmViMWRhZmQ5MzIz/NzZjNzRhYi94bi0t/LS1jdGJoYmNhYXVm/YTJhbnI0YW5lczNm/NWRtLnhuLS1wMWFp/Lw",
+          "path": ""
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/oG5YwZFWX_XHUseNsB-g76QtbmCsgzSKBGsJRbLWDAw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly94bi0t/LS1jdGJoYmNhYXVm/YTJhbnI0YW5lczNm/NWRtLnhuLS1wMWFp/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIz/LzExLzItMzAweDMw/MC5qcGVn",
+          "original": "https://xn----ctbhbcaaufa2anr4anes3f5dm.xn--p1ai/wp-content/uploads/2023/11/2-300x300.jpeg",
+          "logo": false
+        },
+        "age": "January 30, 2024",
+        "product": {
+          "type": "Product",
+          "name": "СпросиВрача",
+          "price": "300.0",
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/WWRPYCnw-wmtqEd6e4emMPNbnqiWJDYJljwczKhszQo/rs:fit:360:283:1:0/g:ce/aHR0cHM6Ly94bi0t/LS1jdGJoYmNhYXVm/YTJhbnI0YW5lczNm/NWRtLnhuLS1wMWFp/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIz/LzExLzItMzAweDMw/MC5qcGVn",
+            "original": "https://xn----ctbhbcaaufa2anr4anes3f5dm.xn--p1ai/wp-content/uploads/2023/11/2-300x300.jpeg"
+          },
+          "offers": [
+            {
+              "url": "https://xn----ctbhbcaaufa2anr4anes3f5dm.xn--p1ai/",
+              "priceCurrency": "RUB",
+              "price": "300.0"
+            }
+          ],
+          "rating": {
+            "ratingValue": 4.0,
+            "bestRating": 5.0,
+            "reviewCount": 17,
+            "is_tripadvisor": false
+          }
+        },
+        "extra_snippets": [
+          "Очень тактичные врачи, на каждый вопрос получаешь исчерпывающий ответ, а главное - при беседе врач состредоточен только на твоей проблеме, не отвлекается по другим вопросам.",
+          "Услуги оказываются в удалённом формате, но качество при это поддерживается на должном уровне. Врачи профессиональные и компетентные, действительно помогают решить проблемы со здоровьем.",
+          "Практикующий врач, автор медицинских курсов. Специализируется на сложных клинических случаях, когда необходимы знания множества смежных специализаций.",
+          "Их отличает возможность проведения консультации с опытными врачами из разных медицинских сфер, а также понятный интерфейс, простота и удобство использования."
+        ]
+      },
+      {
+        "title": "Что такое телемедицина – как выбрать сервис и подключить для клиники",
+        "url": "https://n3health.ru/chto-takoe-telemedicina-i-kak-podklyuchit-kliniku",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Телемедицина используется врачами для междисциплинарного сотрудничества: второе мнение, консилиумы для обсуждения сложных клинических случаев, обмена мнениями, выработки тактики ведения пациента и плана лечения.",
+        "profile": {
+          "name": "N3.Health",
+          "url": "https://n3health.ru/chto-takoe-telemedicina-i-kak-podklyuchit-kliniku",
+          "long_name": "n3health.ru",
+          "img": "https://imgs.search.brave.com/6caETQSL-Wkm3nAvy8BeACSexL5JiezaI-wcT2yNhPg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWJlMDk0YzU3/MTFiYzJkMjgxOGJl/Mjc4YzA5YzAxNGFk/ZjVlZjBkYzBkMzRl/ZGE2NGU4NTVmOTM3/NmJhMzhhZi9uM2hl/YWx0aC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "n3health.ru",
+          "hostname": "n3health.ru",
+          "favicon": "https://imgs.search.brave.com/6caETQSL-Wkm3nAvy8BeACSexL5JiezaI-wcT2yNhPg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWJlMDk0YzU3/MTFiYzJkMjgxOGJl/Mjc4YzA5YzAxNGFk/ZjVlZjBkYzBkMzRl/ZGE2NGU4NTVmOTM3/NmJhMzhhZi9uM2hl/YWx0aC5ydS8",
+          "path": "› chto-takoe-telemedicina-i-kak-podklyuchit-kliniku"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ST3qwf_OGRZaeW1Z78xmW0qI0ygzQC8R0OebMVYZECo/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudGlsZGFjZG4u/Y29tL3RpbGQ2MzM1/LTM0MzMtNDIzMS1i/OTM4LTYxMzIzNDYx/MzYzNy9pbWFnZTEu/cG5n",
+          "original": "https://static.tildacdn.com/tild6335-3433-4231-b938-613234613637/image1.png",
+          "logo": false
+        },
+        "organization": {
+          "type": "organization",
+          "name": "N3.Health",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Телемедицина используется врачами для междисциплинарного сотрудничества: второе мнение, консилиумы для обсуждения сложных клинических случаев, обмена мнениями, выработки тактики ведения пациента и плана лечения.",
+          "Подготовка к операции: согласование комплекта медицинских документов и административных вопросов для поступления в стационар, обсуждение плана операционного дня, обсуждение плана реабилитации; Послеоперационное наблюдение, реабилитация. Разберемся с тем, что дает телемедицина медицинской организации. Она поможет вашему медицинскому бизнесу: Обеспечить плотность расписания и загрузку врачей.",
+          "Вот почему принципиально важно выбрать такой сервис телемедицины, который будет учитывать все нюансы в части защиты и безопасности ПДн пациента. Частные медицинские учреждения сами определяют порядок записи пациентов на телемедицинский прием. Врачу и пациенту необходимо зарегистрироваться в системе заранее, пациенту нужно подписать:",
+          "Приложение MILA предоставляет клиникам возможность запустить сервис телемедицины под ключ. Решение состоит из четырех компонентов: личные кабинеты (врача, пациента, клиники), виджет записи."
+        ]
+      },
+      {
+        "title": "Доктор онлайн: правовые аспекты телемедицины в России | Аналитические статьи: ГАРАНТ.РУ",
+        "url": "https://www.garant.ru/article/1405237/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Поэтому основные ... – несоблюдение безопасности персональных данных пациентов и нарушение конфиденциальности врачебной тайны...",
+        "profile": {
+          "name": "Гарант.РУ",
+          "url": "https://www.garant.ru/article/1405237/",
+          "long_name": "garant.ru",
+          "img": "https://imgs.search.brave.com/OGV4R5g32ytMjAcEMu5I7mmQGJAQ9AnCoSvE75lBnLk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2MwMzc1YmI0/YTI1OGZhZmI5M2Zl/ZTM1OTVlOThlZTYz/MDA3YTM0ZGY5Y2Yz/YzBlZTA2YmE3Njcy/NWY2MGI4Ny93d3cu/Z2FyYW50LnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "garant.ru",
+          "hostname": "www.garant.ru",
+          "favicon": "https://imgs.search.brave.com/OGV4R5g32ytMjAcEMu5I7mmQGJAQ9AnCoSvE75lBnLk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2MwMzc1YmI0/YTI1OGZhZmI5M2Zl/ZTM1OTVlOThlZTYz/MDA3YTM0ZGY5Y2Yz/YzBlZTA2YmE3Njcy/NWY2MGI4Ny93d3cu/Z2FyYW50LnJ1Lw",
+          "path": "  › новости и аналитика  › аналитические статьи"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/zmOluTEJHU9_ZO1JeWxAJ-PY3jG-NNB5D0QJuO-aO6A/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/Z2FyYW50LnJ1L2Zp/bGVzLzcvMy8xNDA1/MjM3L2Rva3Rvcl9v/bmxham5fcHJhdm92/eWVfYXNwZWt0eV90/ZWxlbWVkaWNpbnlf/dl9yb3NzaWlfMTIw/MHg2MzAuanBn",
+          "original": "https://www.garant.ru/files/7/3/1405237/doktor_onlajn_pravovye_aspekty_telemediciny_v_rossii_1200x630.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "По данным экспертов, спрос на услуги телемедицины в период пандемии вырос на 177%. | Аналитические статьи: ГАРАНТ.РУ",
+          "Представители профессионального сообщества: в России должна формироваться пациент-ориентированная медицина · Эксперты: телемедицина требует развития инфраструктуры в сельской местности и внедрения мобильного приложения для взаимодействия между врачами и пациентами",
+          "Поэтому основные проблемы, которые могут возникнуть в сфере телемедицины с точки зрения информационной безопасности, – несоблюдение безопасности персональных данных пациентов и нарушение конфиденциальности врачебной тайны.",
+          "Пандемия новой коронавирусной инфекции в значительной степени повлияла на формирование потребности россиян в телемедицинских услугах. Так, эксперты Страховка.Ру на основании поисковых запросов выявили рост спроса на дистанционные консультации врачей в I полугодии текущего года на 177% по сравнению с аналогичным периодом 2019 года."
+        ]
+      },
+      {
+        "title": "Телемедицина - онлайн-консультации врачей- ...",
+        "url": "https://www.k31.ru/en/service/telemedicine/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Excision of the skin and subcutaneous adipose tissue (With plasty of the aponeurosis of the rectus abdominis muscles and hernioplasty) · What if I was confirmed for an online consultation, but I did not pay · What if I paid for an online consultation but did not show up",
+        "page_age": "2025-07-30T12:06:55",
+        "profile": {
+          "name": "Круп",
+          "url": "https://www.k31.ru/en/service/telemedicine/",
+          "long_name": "k31.ru",
+          "img": "https://imgs.search.brave.com/WuTNI8nUii1ZJT2PtfZ2X1Z0v-a2YvwIWvCdDmFShnM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDdjODNlODQz/YzU4N2JlN2EyM2Iw/OTc0ODIyYzAxYjE0/MWMyNWVhMjI2MThk/ZDNjZGQxM2QwY2Yy/ZWViMjU0ZC93d3cu/azMxLnJ1Lw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "k31.ru",
+          "hostname": "www.k31.ru",
+          "favicon": "https://imgs.search.brave.com/WuTNI8nUii1ZJT2PtfZ2X1Z0v-a2YvwIWvCdDmFShnM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDdjODNlODQz/YzU4N2JlN2EyM2Iw/OTc0ODIyYzAxYjE0/MWMyNWVhMjI2MThk/ZDNjZGQxM2QwY2Yy/ZWViMjU0ZC93d3cu/azMxLnJ1Lw",
+          "path": "  › home  › departments  › telemedicine"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/5M1wYymxnJemLYDMbYBzNK4bNq1AofJjls4lLbrsbDg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/azMxLnJ1L3VwbG9h/ZHMvaW1nL29nLnBu/Zw",
+          "original": "https://www.k31.ru/uploads/img/og.png",
+          "logo": false
+        },
+        "age": "July 30, 2025"
+      },
+      {
+        "title": "Телемедицинские консультации | КБ №85 ФМБА России",
+        "url": "https://www.kb85.ru/telemed/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Для записи на онлайн-консультацию перейдите в систему «Телемед» и выберите врача и время. Если вы не увидели в системе нужного вам ...",
+        "page_age": "2026-01-26T07:06:01",
+        "profile": {
+          "name": "KB85",
+          "url": "https://www.kb85.ru/telemed/",
+          "long_name": "kb85.ru",
+          "img": "https://imgs.search.brave.com/Lh9ydJJui_fwRFdui0mPXO7oD2kqcDSeHyxeeOMmuPc/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODhjY2QwZGRl/MDRkOTRmYjAxMDRh/OTMwMGI4MTY1YjYz/NTNlMjQ4MGI1Y2Y1/M2VjNjA2Y2JiYmUx/MjYzYWE4MS93d3cu/a2I4NS5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "kb85.ru",
+          "hostname": "www.kb85.ru",
+          "favicon": "https://imgs.search.brave.com/Lh9ydJJui_fwRFdui0mPXO7oD2kqcDSeHyxeeOMmuPc/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODhjY2QwZGRl/MDRkOTRmYjAxMDRh/OTMwMGI4MTY1YjYz/NTNlMjQ4MGI1Y2Y1/M2VjNjA2Y2JiYmUx/MjYzYWE4MS93d3cu/a2I4NS5ydS8",
+          "path": "  › главная  › телемедицинские консультации"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Y3EX5PmZ48x0Vq4U1N_mhBwmiKU7VSetPmNUMETpxEA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/a2I4NS5ydS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNC8wNC91/bnRpdGxlZC0xLTEu/anBn",
+          "original": "https://www.kb85.ru/wp-content/uploads/2024/04/untitled-1-1.jpg",
+          "logo": false
+        },
+        "age": "January 26, 2026",
+        "extra_snippets": [
+          "Мы внедрили систему телемедицинских консультаций , чтобы упростить пациентам взаимодействие с лечащим врачом и предоставить возможность консультаций от ведущих специалистов нашей клиники, независимо от места нахождения, на всей территории России.",
+          "Для записи на онлайн-консультацию перейдите в систему «Телемед» и выберите врача и время. Если вы не увидели в системе нужного вам специалиста или столкнулись с другими проблемами, оставьте нам сообщение.",
+          "Стрессовое недержание мочи: деликатная проблема, у которой есть эффективное решение Прием врача-гинеколога Текар-терапия INDIBA в гинекологии Лечение недержания мочи Лечение онкогинекологических заболеваний Консервативная гинекологическая Гинекологическая эндокринология Реконструктивно-пластические операции Лапароскопи",
+          "Информационная телемедицинская консультация носит рекомендательный характер и не предполагает постановки диагноза"
+        ]
+      },
+      {
+        "title": "ТОП - 5 медицинских онлайн – сервисов - 2026 - выбрать лучший сервис в каталоге MARKETING-TECH",
+        "url": "https://marketing-tech.ru/online-services_tags/medtech/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Кому помогут онлайн – сервисы медицинских услуг: Частным лицам – услуги онлайн консультаций, записи, наблюдения врачей. Юридическим лицам – компании могут покупать пакеты обслуживания для сотрудников в дополнение или вместо ДМС, телемедицина дешевле и экономит средства организации.",
+        "profile": {
+          "name": "MARKETING-TECH",
+          "url": "https://marketing-tech.ru/online-services_tags/medtech/",
+          "long_name": "marketing-tech.ru",
+          "img": "https://imgs.search.brave.com/sc3ZTHJhEHm7SpaOAkm17pQdVzodIITfgUasKAYGRxI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTg2MzBlODcy/YWEyNTBmYWQ4NGMw/NjE1NmYyM2QyN2Q3/YTBlZGY1NmM3ODEy/NDZjYjkwN2U0MWI1/Y2Q2NWZjMC9tYXJr/ZXRpbmctdGVjaC5y/dS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "marketing-tech.ru",
+          "hostname": "marketing-tech.ru",
+          "favicon": "https://imgs.search.brave.com/sc3ZTHJhEHm7SpaOAkm17pQdVzodIITfgUasKAYGRxI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTg2MzBlODcy/YWEyNTBmYWQ4NGMw/NjE1NmYyM2QyN2Q3/YTBlZGY1NmM3ODEy/NDZjYjkwN2U0MWI1/Y2Q2NWZjMC9tYXJr/ZXRpbmctdGVjaC5y/dS8",
+          "path": "  › главная  › онлайн сервисы медицинских услуг"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/q3JNMb-BE8GR5ZE3uNC0q96nEV8HfKACk4e51GFKayU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRpbmctdGVjaC5y/dS9tdHdwL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDI0LzA5L9CR/0LXQty3QvdCw0LfQ/stCw0L3QuNGPLmpw/Zw",
+          "original": "https://marketing-tech.ru/mtwp/wp-content/uploads/2024/09/Без-названия.jpg",
+          "logo": false
+        },
+        "extra_snippets": [
+          "ONDOC – онлайн сервис телемедицины, онлайн-записи в клинику. К сервису подключено уже 160 клиник, пациент может получать услуги у врачей своего региона офлайн, а услугами телемедицины пользоваться с любыми клиниками.",
+          "Онлайн-сервисы оказались популярны и среди пациентов пожилого возраста — помимо практической информации они ценят возможность регулярного контакта с врачом. Более доступное и удобное медицинское обслуживание для пациентов — движущая сила телемедицины. Пока онлайн — сервисов с комплексным обслуживанием немного, но у рынка большой потенциал.",
+          "Кому помогут онлайн – сервисы медицинских услуг: Частным лицам – услуги онлайн консультаций, записи, наблюдения врачей. Юридическим лицам – компании могут покупать пакеты обслуживания для сотрудников в дополнение или вместо ДМС, телемедицина дешевле и экономит средства организации.",
+          "Специализация Онлайн сервисы медицинских услуг ... Ограничения, вызванные пандемией COVID-19, предсказуемо явились фактором спроса на телемедицинские консультации."
+        ]
+      },
+      {
+        "title": "Телемедицина для клиник: ответы на главные вопросы - Блог о медмаркетинге НаПоправку",
+        "url": "https://partner.napopravku.ru/blog2/telemeditsina-dlya-klinik-otvety-na-glavnye-voprosy/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Отсюда типичные ... Во-первых, отсутствие отдельного продуманного заранее сценария онлайн-консультации....",
+        "page_age": "2026-02-09T10:31:30",
+        "profile": {
+          "name": "Napopravku",
+          "url": "https://partner.napopravku.ru/blog2/telemeditsina-dlya-klinik-otvety-na-glavnye-voprosy/",
+          "long_name": "partner.napopravku.ru",
+          "img": "https://imgs.search.brave.com/jzy9tnF7YCRAjvd5nY-s6jsKK1cbt8ynKJHjDqhp3pg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzFmZjE3MDg3/YmNmOWUzOTAzZDhj/Mzg5ZjJhMTVjMmZj/MTRkZWM5ZjZhNzg4/YjYwMDg5OWExZjhm/YjkxZjY4YS9wYXJ0/bmVyLm5hcG9wcmF2/a3UucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "partner.napopravku.ru",
+          "hostname": "partner.napopravku.ru",
+          "favicon": "https://imgs.search.brave.com/jzy9tnF7YCRAjvd5nY-s6jsKK1cbt8ynKJHjDqhp3pg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYzFmZjE3MDg3/YmNmOWUzOTAzZDhj/Mzg5ZjJhMTVjMmZj/MTRkZWM5ZjZhNzg4/YjYwMDg5OWExZjhm/YjkxZjY4YS9wYXJ0/bmVyLm5hcG9wcmF2/a3UucnUv",
+          "path": "  › врачу"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/KmpV9mo97QVd-8RDcavR0oxLYvmD7ol_HSEXlpjhKJs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9wYXJ0/bmVyLm5hcG9wcmF2/a3UucnUvYmxvZzIv/d3AtY29udGVudC91/cGxvYWRzLzIwMjYv/MDIvYmxvZy0xMC5w/bmc",
+          "original": "https://partner.napopravku.ru/blog2/wp-content/uploads/2026/02/blog-10.png",
+          "logo": false
+        },
+        "age": "February 9, 2026",
+        "organization": {
+          "type": "organization",
+          "name": "НаПоправку",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Когда этого нет, телемедицина выглядит как упрощенная версия медицины, а не как продуманный сервис. По сути,телемедицина часто оказывается продуктом без продуманного UX. Пока у него нет сценария, границ и роли в пути пациента, он будет проигрывать даже при хорошем спросе. Пациент ожидает от онлайн-консультации: уверенности врача, что онлайн — допустимый формат именно в этом случае;",
+          "Цена — потому что пациент сравнивает риск: «А вдруг не поможет». Имя врача — потому что это якорь доверия. Поэтому в телемедицине в итоге выигрывает тот, у кого все совпало: достаточная скорость, адекватная цена и врач, которому можно доверять.",
+          "Отсюда типичные ошибки, которые допускают клиники при запуске телемедицины: Во-первых, отсутствие отдельного продуманного заранее сценария онлайн-консультации. Врач ведет ее так же, как очный прием, только без осмотра.",
+          "Онлайн-опрос — это не просто «поговорили по видео». Это другой навык: задавать более точные вопросы, просить пациента показать, описать, измерить, структурировать симптомы. Если врача этому не учили, телемедицина начинает проигрывать даже при сильной экспертизе специалиста."
+        ]
+      },
+      {
+        "title": "Онлайн-консультация врача ФНКЦ ФМБА: стоимость консультации специалиста в реальнм времени, запись на онлайн прием",
+        "url": "https://fnkc-fmba.ru/telemeditsina/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Очень понравилась онлайн -консультация с Понкратовой Юлией Анатольевной. Четко, лаконично, заинтересованно. ознакомилась материалами болезни, осветила проблемы, которые могут возникнуть.",
+        "profile": {
+          "name": "Федеральный научно-клинический центр ФМБА России",
+          "url": "https://fnkc-fmba.ru/telemeditsina/",
+          "long_name": "fnkc-fmba.ru",
+          "img": "https://imgs.search.brave.com/RZWQfTkzMM1DaDfOWvyfef1V96PDYBryr52g26-ocAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmI2NDUzN2Uy/NzQwMzllZjdkOWIx/NDdjY2QyNTU3ODM0/NWM5NTE2ZWIyMDMy/OGUyNmIxMWI3YzIy/YzM1NmRmMC9mbmtj/LWZtYmEucnUv"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "location",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "fnkc-fmba.ru",
+          "hostname": "fnkc-fmba.ru",
+          "favicon": "https://imgs.search.brave.com/RZWQfTkzMM1DaDfOWvyfef1V96PDYBryr52g26-ocAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmI2NDUzN2Uy/NzQwMzllZjdkOWIx/NDdjY2QyNTU3ODM0/NWM5NTE2ZWIyMDMy/OGUyNmIxMWI3YzIy/YzM1NmRmMC9mbmtj/LWZtYmEucnUv",
+          "path": "  › главная страница  › онлайн-услуги"
+        },
+        "location": {
+          "title": "ФГБУ ФНКЦ ФМБА России",
+          "url": "https://fnkc-fmba.ru/telemeditsina/",
+          "is_source_local": false,
+          "is_source_both": false,
+          "family_friendly": true,
+          "type": "location_result",
+          "provider_url": "https://fnkc-fmba.ru/telemeditsina/",
+          "zoom_level": 7,
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/NZLl3umqAWZU4pzlpzdL8IyCfVRcznaaQ6FtmrIudqQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9mbmtj/LWZtYmEucnUvaW1n/L2xvZ28uc3Zn",
+            "original": "https://fnkc-fmba.ru/img/logo.svg"
+          },
+          "postal_address": {
+            "type": "PostalAddress",
+            "streetAddress": "115682, г. Москва, Ореховый бульвар д. 28",
+            "displayAddress": "115682, г. Москва, Ореховый бульвар д. 28"
+          },
+          "contact": {
+            "telephone": "+7 (499) 725-44-56"
+          },
+          "profiles": [
+            {
+              "type": "external",
+              "name": "fnkc-fmba.ru",
+              "url": "https://fnkc-fmba.ru/telemeditsina/",
+              "img": "https://imgs.search.brave.com/RZWQfTkzMM1DaDfOWvyfef1V96PDYBryr52g26-ocAo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmI2NDUzN2Uy/NzQwMzllZjdkOWIx/NDdjY2QyNTU3ODM0/NWM5NTE2ZWIyMDMy/OGUyNmIxMWI3YzIy/YzM1NmRmMC9mbmtj/LWZtYmEucnUv"
+            }
+          ],
+          "pictures": {
+            "results": [
+              {
+                "src": "https://imgs.search.brave.com/NZLl3umqAWZU4pzlpzdL8IyCfVRcznaaQ6FtmrIudqQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9mbmtj/LWZtYmEucnUvaW1n/L2xvZ28uc3Zn",
+                "original": "https://fnkc-fmba.ru/img/logo.svg"
+              }
+            ]
+          },
+          "categories": []
+        },
+        "extra_snippets": [
+          "ФНКЦ ФМБА предлагает медицинскую онлайн консультацию врача - специалиста в любом регионе России. Для записи на онлайн прием заполните форму на сайте или позвоните нам по телефону +7 (499)-283-47-11.",
+          "Очень понравилась онлайн -консультация с Понкратовой Юлией Анатольевной. Четко, лаконично, заинтересованно. ознакомилась материалами болезни, осветила проблемы, которые могут возникнуть."
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

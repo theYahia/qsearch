@@ -1,19 +1,19 @@
 // qsearch v0.3 — Own Corpus layer over Brave proxy.
 // Endpoints: POST /search, POST /news, POST /context, POST /index, GET /index/:job_id, GET /corpus/stats, GET /health
+// MUST stay the first import: ESM evaluates the whole import graph before this file's own
+// statements, so .env.local has to be applied from inside an import to reach modules that
+// read process.env at module scope (trust.js, rerank/pipeline.js, sweep/runner.js,
+// backends/brave.js …). Parsing it further down — as this file used to — silently left all
+// of them on the ambient environment.
+import './env.js'
+
 import http from 'node:http'
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { glob as fsGlob } from 'glob'
 import { fileURLToPath } from 'node:url'
-import { dirname, join, resolve, sep } from 'node:path'
+import { dirname, join } from 'node:path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const envPath = join(__dirname, '..', '.env.local')
-if (existsSync(envPath)) {
-  for (const line of readFileSync(envPath, 'utf8').split(/\r?\n/)) {
-    const m = line.match(/^([A-Z_][A-Z0-9_]*)=(.*)$/)
-    if (m) process.env[m[1]] = m[2].trim().replace(/^["']|["']$/g, '')
-  }
-}
 
 const PORT = Number(process.env.PORT) || 8080
 const BRAVE_KEY = process.env.BRAVE_API_KEY
@@ -27,7 +27,7 @@ if (!BRAVE_KEY) {
   console.warn('No BRAVE_API_KEY — using SearXNG as primary backend (free, self-hosted)')
 }
 
-// ── Imports (after env loading) ────────────────────────────────────
+// ── Remaining imports (env already applied by ./env.js above) ──────
 import { braveFetch } from './backends/brave.js'
 import { createSweepRouter } from './sweep/router.js'
 import { parseQueriesText, runSweep } from './sweep/runner.js'
@@ -41,6 +41,7 @@ import { cleanResults, cleanContext, warmModel, localLlmAvailable, CLEAN_MODEL }
 import { sanitizeText, canonicalizeUrl } from './clean/sanitize.js'
 import { MeilisearchCorpus } from './corpus/meilisearch.js'
 import { QdrantCorpus } from './corpus/qdrant.js'
+import { CircuitBreaker } from './corpus/circuit_breaker.js'
 import { embedder as ollamaEmbedderInstance } from './embed/ollama.js'
 import { LlamaCppEmbedder } from './embed/llamacpp.js'
 import { crawl } from './crawl/crawl4ai.js'
@@ -48,11 +49,28 @@ import { createJob, getJob, updateJob } from './jobs/store.js'
 import { syncToObsidian, appendDailyLog } from './obsidian/sync.js'
 import { rerankByTrust } from './search/rerank.js'
 import { ingestBraveDir } from './ingest/brave.js'
-import { QueryCache, inferEndpoint } from './cache.js'
+import { QueryCache, inferEndpoint, COST_PER_CALL } from './cache.js'
+import { snippetToText } from './clean/structured.js'
 import { runSweepContext } from './sweep_context.js'
 import { fetchHtml, extractMainContent } from './fetch/html.js'
 import { runPreSweepCheck } from './sweep/pre_check.js'
 import { runBriefScaffold } from './sweep/brief_gen.js'
+import { verifyCitation } from './verifier/index.js'
+import { authGuard, isLoopbackBind, parseAllowlist } from './middleware/auth.js'
+import { createRateLimiter, parseLimits, rateLimitGuard, DEFAULT_LIMITS } from './middleware/ratelimit.js'
+import { logger, requestId } from './logger.js'
+import {
+  MAX_BODY_BYTES,
+  readBody,
+  parseSearchParams,
+  dedupeByUrl,
+  isPublicPath,
+  routeKey,
+  parseTtlMap,
+  renderRejectedSection
+} from './http/helpers.js'
+import { assertIndexable } from './fetch/path_guard.js'
+import { createBraveAdapters } from './search/brave_adapters.js'
 
 // ── Corpus clients ─────────────────────────────────────────────────
 const MEILI_URL = process.env.MEILISEARCH_URL || 'http://localhost:7700'
@@ -69,6 +87,32 @@ if (!MEILI_KEY || MEILI_KEY === 'masterKey') {
   console.warn('[security] MEILISEARCH_KEY unset/default — tolerated only because bound to loopback. Set a real key before any LAN/VPS exposure.')
   MEILI_KEY = MEILI_KEY || 'masterKey'
 }
+
+// ── Tier 0 hardening (2026-06-23): body cap + auth + rate limit ────
+// Request body size cap (OOM DoS guard). MAX_BODY_BYTES + readBody live in
+// src/http/helpers.js now. Content-Length fast-path stays in the dispatcher below.
+
+// Auth config — only enforced when bound beyond loopback (see authGuard).
+const AUTH_OPTS = {
+  bind: QSEARCH_BIND,
+  apiKey: process.env.QSEARCH_API_KEY || null,
+  ipAllowlist: parseAllowlist(process.env.QSEARCH_IP_ALLOWLIST),
+  trustProxy: process.env.QSEARCH_TRUST_PROXY === 'true'
+}
+// Fail-fast: refuse to expose beyond loopback with no auth configured (never fail open).
+if (!isLoopbackBind(QSEARCH_BIND) && !AUTH_OPTS.apiKey && !AUTH_OPTS.ipAllowlist.length) {
+  throw new Error('QSEARCH_BIND is non-loopback but neither QSEARCH_API_KEY nor QSEARCH_IP_ALLOWLIST is set. ' +
+    'Refusing to expose all endpoints unauthenticated. Set QSEARCH_API_KEY=$(openssl rand -hex 32) in .env.local.')
+}
+
+// Rate limiting — active when exposed (non-loopback) or explicitly enabled. Skipped on
+// loopback by default so a local research sprint (many /sweep calls) is never throttled.
+const RATE_LIMIT_ACTIVE = !isLoopbackBind(QSEARCH_BIND) || process.env.QSEARCH_RATE_LIMIT_ENABLED === 'true'
+const rateLimiter = createRateLimiter({
+  windowMs: Number(process.env.QSEARCH_RATE_WINDOW_MS) || 60_000,
+  limits: process.env.QSEARCH_RATE_LIMITS ? parseLimits(process.env.QSEARCH_RATE_LIMITS) : DEFAULT_LIMITS
+})
+// isPublicPath + routeKey live in src/http/helpers.js now.
 const QDRANT_URL_ENV = process.env.QDRANT_URL || 'http://localhost:6333'
 
 // llama.cpp embedder takes priority over Ollama (used by some deployments). Default → Ollama.
@@ -79,22 +123,9 @@ const meili = new MeilisearchCorpus(MEILI_URL, MEILI_KEY)
 const qdrant = new QdrantCorpus(QDRANT_URL_ENV, embedder)
 
 // ── Filesystem indexing guard (CSO-OPS 2026-05-21 P1-2 + 5.1) ──────
-// /index (glob) and /ingest/brave read caller-supplied paths into the searchable
-// corpus. Two protections: (1) never index secrets/keys regardless of path,
-// (2) optional hard path boundary via QSEARCH_DATA_ROOTS (semicolon-separated).
-const SENSITIVE_FILE_RE = /(^|[/\\])(\.env(\.|$)|.*\.pem$|.*\.key$|id_rsa|id_ed25519|.*\.secret$|credentials)/i
-const ALLOWED_ROOTS = (process.env.QSEARCH_DATA_ROOTS || '')
-  .split(';').map(s => s.trim()).filter(Boolean).map(p => resolve(p))
-function withinAllowedRoots (filePath) {
-  if (!ALLOWED_ROOTS.length) return true // unset → no boundary (loopback-only dev default)
-  const r = resolve(filePath)
-  return ALLOWED_ROOTS.some(root => r === root || r.startsWith(root + sep))
-}
-// Throws if the path must not be ingested. Used per-file in /index and on /ingest dir.
-function assertIndexable (filePath) {
-  if (SENSITIVE_FILE_RE.test(filePath)) throw new Error(`refused sensitive file: ${filePath}`)
-  if (!withinAllowedRoots(filePath)) throw new Error(`path outside QSEARCH_DATA_ROOTS: ${filePath}`)
-}
+// SENSITIVE_FILE_RE + ALLOWED_ROOTS + withinAllowedRoots + assertIndexable live in
+// src/fetch/path_guard.js now. assertIndexable is used per-file in /index and on the
+// /ingest dir to skip secrets / out-of-root files.
 
 // ── SearXNG fallback ───────────────────────────────────────────────
 const searxng = process.env.SEARXNG_URL ? new SearXNGBackend(process.env.SEARXNG_URL) : null
@@ -104,20 +135,22 @@ const searxng = process.env.SEARXNG_URL ? new SearXNGBackend(process.env.SEARXNG
 // via QSEARCH_ACADEMIC_ENABLED=false if you want to route scholarly elsewhere.
 const academic = (process.env.QSEARCH_ACADEMIC_ENABLED !== 'false') ? new AcademicBackend() : null
 
-// Yandex direct backend — only instantiated when both YANDEX_API_KEY and
+// Yandex direct backend — only instantiated when both YANDEX_SEARCH_API_KEY and
 // YANDEX_FOLDER_ID are set. Otherwise domain=ru falls back to SearXNG with
 // language=ru-RU bias (still works, just less Yandex-specific coverage).
+// WORK-413 дефект №7: env var renamed from YANDEX_API_KEY to YANDEX_SEARCH_API_KEY —
+// matches the name every other Yandex Cloud integration in this repo uses.
 let yandex = null
 // rd275: surface why Yandex isn't active so /sweep responses can explain the SearXNG fallback.
 let yandexInitError = null
-if (process.env.YANDEX_API_KEY && process.env.YANDEX_FOLDER_ID) {
+if (process.env.YANDEX_SEARCH_API_KEY && process.env.YANDEX_FOLDER_ID) {
   try { yandex = new YandexBackend() } catch (e) {
     yandexInitError = `init_failed: ${e.message}`
     console.warn(`[yandex] init failed: ${e.message}`)
   }
 } else {
   const missing = []
-  if (!process.env.YANDEX_API_KEY) missing.push('YANDEX_API_KEY')
+  if (!process.env.YANDEX_SEARCH_API_KEY) missing.push('YANDEX_SEARCH_API_KEY')
   if (!process.env.YANDEX_FOLDER_ID) missing.push('YANDEX_FOLDER_ID')
   yandexInitError = `not_configured: missing ${missing.join(' + ')}`
 }
@@ -144,114 +177,53 @@ refreshCorpusStatus().catch(() => {})
 setInterval(() => refreshCorpusStatus().catch(() => {}), 30_000)
 
 // ── Helpers ────────────────────────────────────────────────────────
-function readBody (req) {
-  return new Promise((resolve, reject) => {
-    const chunks = []
-    req.on('data', (c) => chunks.push(c))
-    req.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')))
-    req.on('error', reject)
-  })
-}
-
-function parseSearchParams (req) {
-  if (req.method === 'GET') {
-    const url = new URL(req.url, `http://${req.headers.host}`)
-    return {
-      query: (url.searchParams.get('q') || '').trim(),
-      n_results: url.searchParams.get('n') || url.searchParams.get('n_results'),
-      freshness: url.searchParams.get('freshness'),
-      search_lang: url.searchParams.get('search_lang'),
-      country: url.searchParams.get('country'),
-      safesearch: url.searchParams.get('safesearch')
-    }
-  }
-  return null
-}
-
-function dedupeByUrl (items) {
-  const seen = new Set()
-  return items.filter(r => { if (seen.has(r.url)) return false; seen.add(r.url); return true })
-}
+// readBody / parseSearchParams / dedupeByUrl live in src/http/helpers.js now.
 
 // ── Corpus routing ─────────────────────────────────────────────────
+// Per-backend circuit breakers: between the 30s health polls a flapping/slow backend would otherwise
+// make every corpus search wait out its timeout. The breaker skips a failing backend instantly after a
+// few failures and probes for recovery — so a dead Qdrant degrades to Meilisearch-only in ms, not seconds.
+const CORPUS_TIMEOUT_MS = Number(process.env.QSEARCH_CORPUS_TIMEOUT_MS) || 4000
+
+// Grounding knobs applied to every critical-tier llm/context call. All default to null,
+// i.e. Brave's own defaults, so behaviour is unchanged until one is set. brave_sweep.py has
+// exercised these for months; the server sent only `count` until 2026-08-04.
+// `strict` raises precision at the cost of recall — worth setting when a sweep feeds
+// load-bearing claims rather than scoping.
+const SWEEP_CONTEXT_PARAMS = {
+  context_threshold_mode: process.env.QSEARCH_CTX_THRESHOLD_MODE || null,
+  maximum_number_of_urls: Number(process.env.QSEARCH_CTX_MAX_URLS) || null,
+  maximum_number_of_tokens: Number(process.env.QSEARCH_CTX_MAX_TOKENS) || null,
+  maximum_number_of_tokens_per_url: Number(process.env.QSEARCH_CTX_MAX_TOKENS_PER_URL) || null,
+  maximum_number_of_snippets: Number(process.env.QSEARCH_CTX_MAX_SNIPPETS) || null,
+  maximum_number_of_snippets_per_url: Number(process.env.QSEARCH_CTX_MAX_SNIPPETS_PER_URL) || null
+}
+const meiliBreaker = new CircuitBreaker({ name: 'meili', failureThreshold: 3, cooldownMs: 15_000, timeoutMs: CORPUS_TIMEOUT_MS })
+const qdrantBreaker = new CircuitBreaker({ name: 'qdrant', failureThreshold: 3, cooldownMs: 15_000, timeoutMs: CORPUS_TIMEOUT_MS })
+
 async function corpusSearch (query, n_results) {
   if (corpusStatus.meilisearch === 'unavailable' && corpusStatus.qdrant === 'unavailable') return []
-  const results = await Promise.all([
-    corpusStatus.meilisearch !== 'unavailable' ? meili.search(query, { limit: n_results }) : Promise.resolve([]),
-    (corpusStatus.qdrant !== 'unavailable' && embedder.available) ? qdrant.search(query, { limit: n_results }) : Promise.resolve([])
-  ])
+  // Each backend runs under its breaker with a hard timeout; failure/timeout → [] fallback (never throws),
+  // so one backend being down or slow can't degrade or block the other.
+  const meiliHit = (corpusStatus.meilisearch !== 'unavailable')
+    ? meiliBreaker.run(() => meili.search(query, { limit: n_results }), [])
+    : Promise.resolve([])
+  const qdrantHit = (corpusStatus.qdrant !== 'unavailable' && embedder.available)
+    ? qdrantBreaker.run(() => qdrant.search(query, { limit: n_results }), [])
+    : Promise.resolve([])
+  const results = await Promise.all([meiliHit, qdrantHit])
   return dedupeByUrl(results.flat())
 }
 
-async function searxngAsBraveResponse (query, params, opts = {}) {
-  const t0 = Date.now()
-  const searchOpts = { n_results: params.count || 3 }
-  if (opts.language) searchOpts.language = opts.language
-  if (opts.engines) searchOpts.engines = opts.engines
-  const hits = await searxng.search(query, searchOpts)
-  return { data: { web: { results: hits }, _searxng: true }, ms: Date.now() - t0, searxng: true }
-}
-
-// rd239 ultra-broad: corpus-only lookup. Returns { sufficient, response } where the
-// response is Brave-shaped. On insufficient corpus coverage the router falls through
-// to the broad tier. Thresholds tunable via QSEARCH_ULTRA_BROAD_* env vars.
-async function corpusLookupAsBrave (query, params) {
-  const t0 = Date.now()
-  const r = await meili.corpusLookup(query, {
-    minScore: Number(process.env.QSEARCH_ULTRA_BROAD_MIN_SCORE) || 0.55,
-    maxAgeDays: Number(process.env.QSEARCH_ULTRA_BROAD_MAX_AGE_DAYS) || 30,
-    limit: params.count || 5
-  })
-  if (!r.sufficient) return { sufficient: false }
-  return {
-    sufficient: true,
-    response: {
-      data: {
-        web: { results: r.hits },
-        _corpus: true,
-        _ultra_broad: { count: r.count, avg_score: Number(r.avgScore.toFixed(3)) }
-      },
-      ms: Date.now() - t0,
-      corpus: true
-    }
-  }
-}
-
-async function academicAsBraveResponse (query, params) {
-  const t0 = Date.now()
-  const hits = await academic.search(query, { n_results: params.count || 5 })
-  return { data: { web: { results: hits }, _academic: true }, ms: Date.now() - t0, academic: true }
-}
-
-async function yandexAsBraveResponse (query, params) {
-  const t0 = Date.now()
-  const hits = await yandex.search(query, { n_results: params.count || 10 })
-  return { data: { web: { results: hits }, _yandex: true }, ms: Date.now() - t0, yandex: true }
-}
-
-async function routedBraveFetch (endpoint, query, params) {
-  // No Brave key → SearXNG primary
-  if (!BRAVE_KEY) {
-    if (!searxng) throw new Error('Neither BRAVE_API_KEY nor SEARXNG_URL configured')
-    if (endpoint !== 'web') {
-      // SearXNG only supports web search; news/context not available
-      const e = new Error(`Endpoint ${endpoint} requires Brave API key (SearXNG supports web search only)`)
-      e.status = 501
-      throw e
-    }
-    return await searxngAsBraveResponse(query, params)
-  }
-  try {
-    return await braveFetch(endpoint, query, params)
-  } catch (err) {
-    // Fallback to SearXNG on Brave 5xx/429 (web search only)
-    if (searxng && endpoint === 'web' && (err.status >= 500 || err.status === 429)) {
-      console.warn(`Brave ${err.status} — falling back to SearXNG`)
-      return await searxngAsBraveResponse(query, params)
-    }
-    throw err
-  }
-}
+// Brave-response adapter family (searxng/corpus/academic/yandex/routed Brave) lives
+// in src/search/brave_adapters.js now. Built once with the backend instances bound.
+const {
+  searxngAsBraveResponse,
+  corpusLookupAsBrave,
+  academicAsBraveResponse,
+  yandexAsBraveResponse,
+  routedBraveFetch
+} = createBraveAdapters({ searxng, academic, yandex, meili, braveKey: BRAVE_KEY, braveFetch })
 
 // ── Handlers ───────────────────────────────────────────────────────
 async function handleSearch (req, res) {
@@ -541,15 +513,38 @@ async function handleContext (req, res) {
     return
   }
 
-  const count = Math.min(Math.max(Number(body.n_results) || 3, 1), 10)
-  let braveMs = null
+  // Brave documents count as 1–50 for llm/context. The old ceiling of 10 (default 3) was
+  // this server's own invention and quietly capped the endpoint at a fifth of its range.
+  const count = Math.min(Math.max(Number(body.n_results) || 20, 1), 50)
 
+  // The seven grounding knobs. Until now the server sent `count` and `freshness` and
+  // nothing else, so every server-side context call ran on Brave's defaults — while
+  // brave_sweep.py had been setting all of them for months.
+  //
+  // Idiom: braveFetch skips a param when it is `!= null` (src/backends/brave.js), so `null`
+  // means "omit". Numbers go through Number()||null, otherwise NaN would serialise as
+  // the string "NaN". enable_source_metadata is a boolean and must NOT use `|| null`:
+  // `false || null` is null, which would drop an explicit false instead of sending it.
+  const num = v => Number(v) || null
+  const contextParams = {
+    count,
+    freshness: body.freshness || null,
+    context_threshold_mode: body.context_threshold_mode || null,
+    maximum_number_of_urls: num(body.maximum_number_of_urls),
+    maximum_number_of_tokens: num(body.maximum_number_of_tokens),
+    maximum_number_of_tokens_per_url: num(body.maximum_number_of_tokens_per_url),
+    maximum_number_of_snippets: num(body.maximum_number_of_snippets),
+    maximum_number_of_snippets_per_url: num(body.maximum_number_of_snippets_per_url),
+    enable_source_metadata: body.enable_source_metadata === undefined ? null : Boolean(body.enable_source_metadata),
+    country: body.country || null,
+    search_lang: body.search_lang || null,
+    goggles: Array.isArray(body.goggles) ? body.goggles : (body.goggles || null)
+  }
+
+  let braveMs = null
   let data
   try {
-    ;({ data, ms: braveMs } = await braveFetch('llm/context', query, {
-      count,
-      freshness: body.freshness || null
-    }))
+    ;({ data, ms: braveMs } = await braveFetch('llm/context', query, contextParams))
   } catch (err) {
     res.writeHead(err.status || 502, { 'Content-Type': 'application/json' })
     res.end(JSON.stringify({ error: 'brave_api_error', status: err.status, detail: err.detail || String(err) }))
@@ -562,11 +557,15 @@ async function handleContext (req, res) {
 
   for (const item of grounding) {
     const itemStart = Date.now()
-    const { cleanSnippets, cleaned_markdown } = await cleanContext(item)
+    const { cleaned_markdown } = await cleanContext(item)
     results.push({
       url: item.url,
       title: item.title,
       snippet_count: item.snippets?.length || 0,
+      // Structured payloads (tables, JSON-LD FAQ/Article) arrive serialised inside snippet
+      // strings; cleanContext length-filters and truncates them into prose. Surface what
+      // was in there instead of discarding it — see src/clean/structured.js.
+      snippets: (item.snippets || []).map(snippetToText),
       cleaned_markdown,
       clean_ms: Date.now() - itemStart,
       source: 'brave'
@@ -581,6 +580,9 @@ async function handleContext (req, res) {
     type: 'context',
     brave_endpoint: 'llm/context',
     freshness: body.freshness || null,
+    // Echo the knobs that were actually applied — without this a caller cannot tell a
+    // deliberate `strict` run from one where the parameter was silently dropped.
+    applied: Object.fromEntries(Object.entries(contextParams).filter(([, v]) => v != null)),
     total_results: results.length,
     model: localLlmAvailable ? CLEAN_MODEL?.name : null,
     brave_ms: braveMs,
@@ -626,12 +628,21 @@ async function handleIndex (req, res) {
       let indexed = 0
       try {
         const pattern = url.replace(/\\/g, '/')
-        const files = await fsGlob(pattern)
-        if (!files.length) {
+        const matched = await fsGlob(pattern)
+        if (!matched.length) {
           updateJob(job_id, { status: 'failed', error: `No files matched: ${url}`, finished_at: new Date().toISOString() })
           return
         }
-        for (const filePath of files) {
+        // Cap the working set so a pathological glob (e.g. C:/**/*) can't exhaust memory or run for hours.
+        // Surfaced in the job (never silently dropped) so the operator can narrow the pattern.
+        const MAX_INDEX_FILES = Number(process.env.QSEARCH_MAX_INDEX_FILES) || 5000
+        const files = matched.length > MAX_INDEX_FILES ? matched.slice(0, MAX_INDEX_FILES) : matched
+        if (matched.length > files.length) {
+          const msg = `matched ${matched.length} files, capped to ${files.length} (QSEARCH_MAX_INDEX_FILES); narrow the glob to index the rest`
+          console.warn(`[index-files] ${msg}`)
+          updateJob(job_id, { warning: msg })
+        }
+        const indexOne = async (filePath) => {
           try {
             assertIndexable(filePath) // skip secrets / out-of-root files
             const raw = readFileSync(filePath, 'utf8')
@@ -640,22 +651,20 @@ async function handleIndex (req, res) {
               filePath.split(/[/\\]/).pop().replace(/\.md$/, '')
             const text = raw.replace(/^---[\s\S]*?---\n/m, '').replace(/[#*`>_]/g, '').trim()
             const docUrl = 'file://' + filePath.replace(/\\/g, '/')
-            const doc = {
-              id: docUrl, url: docUrl, title,
-              text: text.slice(0, 10000),
-              description: text.slice(0, 300),
-              namespace,
-              crawled_at: new Date().toISOString()
-            }
-            await meili.index(doc)
+            await meili.index({ id: docUrl, url: docUrl, title, text: text.slice(0, 10000), description: text.slice(0, 300), namespace, crawled_at: new Date().toISOString() })
             indexed++
-            updateJob(job_id, { pages_indexed: indexed })
           } catch (e) {
             console.error('[index-files] skip:', filePath, e.message)
           }
         }
+        // Bounded-concurrency indexing — parallel chunks instead of one-file-at-a-time serial I/O.
+        const CONC = Number(process.env.QSEARCH_INDEX_CONCURRENCY) || 8
+        for (let i = 0; i < files.length; i += CONC) {
+          await Promise.all(files.slice(i, i + CONC).map(indexOne))
+          updateJob(job_id, { pages_indexed: indexed })
+        }
         updateJob(job_id, { status: 'done', pages_crawled: files.length, pages_indexed: indexed, finished_at: new Date().toISOString() })
-        console.log(`[index-files] indexed ${indexed}/${files.length} files`)
+        console.log(`[index-files] indexed ${indexed}/${files.length} files${matched.length > files.length ? ` (capped from ${matched.length})` : ''}`)
         await refreshCorpusStatus()
       } catch (err) {
         updateJob(job_id, { status: 'failed', error: String(err), finished_at: new Date().toISOString() })
@@ -708,25 +717,8 @@ async function handleIndexStatus (req, res, job_id) {
   res.end(JSON.stringify(job, null, 2))
 }
 
-// rd275: render the Layer 8 rejected list as a markdown appendix. Only invoked
-// when ?include_rejected=true on /sweep or /cached_sweep. Lets users tune the
-// QSEARCH_QUALITY_THRESHOLD against composite_score breakdowns from real data.
-function renderRejectedSection (resultsMap) {
-  const lines = ['## Rejected (Layer 8 quality gate)']
-  let anyRejected = false
-  for (const [label, entry] of resultsMap) {
-    if (!entry?._rejected?.length) continue
-    anyRejected = true
-    lines.push('', `### ${label}`)
-    for (const r of entry._rejected) {
-      const parts = r._quality_parts || {}
-      const partsStr = Object.entries(parts).map(([k, v]) => `${k}=${Number(v).toFixed(3)}`).join(' ')
-      lines.push(`- composite=${r._quality_composite} ${partsStr} — ${r.url || r.title || '(no url)'}`)
-    }
-  }
-  if (!anyRejected) lines.push('', '_No rejections — quality gate either disabled or kept every result._')
-  return lines.join('\n')
-}
+// rd275: renderRejectedSection (Layer 8 rejected markdown appendix, used when
+// ?include_rejected=true on /sweep or /cached_sweep) lives in src/http/helpers.js now.
 
 // rd275: GET /backends/status — JSON snapshot of which backends are active and
 // why the others aren't. Beats grepping logs when a user sees SearXNG results
@@ -764,6 +756,35 @@ async function runSweepCanary () {
   }
 }
 
+// Reliability: a present BRAVE_API_KEY can still be revoked (returns 422 SUBSCRIPTION_TOKEN_INVALID
+// on every call, silently burning sweeps — observed 2026-06-06). checkBraveKeyValid surfaces
+// validity in deep health so the canary catches a dead key instead of every sweep failing.
+// Definitive results are cached (10 min TTL) so frequent canary polls don't spend a Brave call
+// each time; transient (null) results are not cached so they re-probe next poll.
+let _braveKeyCheck = { at: 0, result: null }
+async function checkBraveKeyValid () {
+  if (!BRAVE_KEY) return { brave_key_valid: null, reason: 'no_key_configured' }
+  const TTL_MS = 10 * 60 * 1000
+  if (_braveKeyCheck.result && (Date.now() - _braveKeyCheck.at) < TTL_MS) return _braveKeyCheck.result
+  let result
+  try {
+    const base = process.env.BRAVE_BASE_URL || 'https://api.search.brave.com'
+    const url = new URL(`${base}/res/v1/web/search`)
+    url.searchParams.set('q', 'test')
+    url.searchParams.set('count', '1')
+    const r = await fetch(url.toString(), {
+      headers: { Accept: 'application/json', 'X-Subscription-Token': BRAVE_KEY }
+    })
+    if (r.ok) result = { brave_key_valid: true, reason: 'ok' }
+    else if (r.status === 401 || r.status === 403 || r.status === 422) result = { brave_key_valid: false, reason: `http_${r.status}_subscription_token_invalid` }
+    else result = { brave_key_valid: null, reason: `http_${r.status}` } // 429/5xx → transient, don't condemn the key
+  } catch (e) {
+    result = { brave_key_valid: null, reason: `probe_failed: ${e.message}` }
+  }
+  if (result.brave_key_valid !== null) _braveKeyCheck = { at: Date.now(), result } // cache only definitive verdicts
+  return result
+}
+
 // GET /health (liveness) and GET /health?deep=1 (canary sweep — 503 if degraded).
 async function handleHealth (req, res) {
   const base = {
@@ -777,10 +798,20 @@ async function handleHealth (req, res) {
     res.end(JSON.stringify(base))
     return
   }
+  // Freshen corpus reachability so deep health isn't up to 30s stale (a green
+  // /health while Meili is down was the gap — /search would fail silently).
+  await refreshCorpusStatus().catch(() => {})
   const sweep = await runSweepCanary()
-  const degraded = sweep.sweep_ok === false
+  const brave = await checkBraveKeyValid()
+  // Corpus is optional by default (single-backend deployments are valid). Set
+  // QSEARCH_HEALTH_REQUIRE_CORPUS=true on corpus-dependent deployments to 503 when
+  // Meilisearch (the full-text/trust backend) is unreachable.
+  const requireCorpus = process.env.QSEARCH_HEALTH_REQUIRE_CORPUS === 'true'
+  const corpusDown = corpusStatus.meilisearch === 'unavailable'
+  const degraded = sweep.sweep_ok === false || brave.brave_key_valid === false ||
+    (requireCorpus && corpusDown)
   res.writeHead(degraded ? 503 : 200, { 'Content-Type': 'application/json' })
-  res.end(JSON.stringify({ ...base, status: degraded ? 'degraded' : 'ok', sweep }))
+  res.end(JSON.stringify({ ...base, status: degraded ? 'degraded' : 'ok', sweep, brave }))
 }
 
 async function handleCorpusStats (req, res) {
@@ -948,6 +979,7 @@ async function handleSweep (req, res) {
     searxng, academic, yandex, braveKey: BRAVE_KEY,
     braveFetch, searxngAsBraveResponse, academicAsBraveResponse, yandexAsBraveResponse,
     corpusLookup: corpusLookupAsBrave,
+    contextParams: SWEEP_CONTEXT_PARAMS,
     endpointName: '/sweep'
   })
   console.log(`[sweep] starting ${queries.length} queries via priority router (broad→${searxng ? 'SearXNG' : 'Brave'}, focused/critical→${BRAVE_KEY ? 'Brave' : 'SearXNG fallback'}, scholarly→${academic ? 'Academic' : 'disabled'}, ru→${yandex ? 'Yandex' : 'SearXNG+ru-RU'})`)
@@ -1027,35 +1059,92 @@ async function handleSweep (req, res) {
   // Index results into corpus (background, don't block response)
   setImmediate(async () => {
     let indexed = 0
+    let ctxEnriched = 0
+    let ctxOnly = 0
     for (const { label } of queries) {
       const entry = results.get(label)
       if (!entry?.ok) continue
+
+      // Brave LLM Context passages, keyed by canonical URL.
+      //
+      // Until 2026-08-04 this loop walked entry.results only, so context grounding was
+      // never indexed — $43 of the deepest text in the stack (1077 chars/passage against
+      // 261 for a web snippet) went to markdown files and nowhere else. The corpus that
+      // ultra-broad, /pre_sweep_check and trust ranking read had never seen any of it.
+      const ctxByUrl = new Map()
+      for (const g of (entry.context_grounding || [])) {
+        if (!g?.url) continue
+        const text = (g.snippets || []).filter(Boolean).map(snippetToText).join('\n').trim()
+        if (!text) continue
+        const key = canonicalizeUrl(g.url)
+        ctxByUrl.set(key, { url: key, title: g.title || '', text, raw: g.url })
+      }
+
+      const crawledAt = new Date().toISOString()
+
       for (const r of entry.results) {
         if (!r.url) continue
         try {
           const cleanUrl = canonicalizeUrl(r.url)
           const engines = Array.isArray(r.engines) ? r.engines : []
+          const ctx = ctxByUrl.get(cleanUrl)
+          if (ctx) ctxByUrl.delete(cleanUrl) // consumed here; the rest become their own docs
           const doc = {
             url: cleanUrl,
             title: sanitizeText(r.title || ''),
             description: sanitizeText(r.description || ''),
-            text: sanitizeText([r.title, r.description, ...(r.extra_snippets || [])].filter(Boolean).join('\n')),
+            // Context passages ride alongside the web snippets rather than replacing them:
+            // index() spreads the new doc over the existing one, so writing a context-only
+            // `text` here would clobber the web text for that URL.
+            text: sanitizeText([r.title, r.description, ...(r.extra_snippets || []), ctx?.text]
+              .filter(Boolean).join('\n')),
             namespace: 'sweep',
             sweep_label: label,
             engines,
             engine_count: engines.length,
             backend_source: r.source || null,
-            crawled_at: new Date().toISOString()
+            has_context: Boolean(ctx),
+            crawled_at: crawledAt
           }
           await meili.index(doc)
           indexed++
+          if (ctx) ctxEnriched++
         } catch (e) {
           console.error('[sweep] index error:', r.url, e.message)
         }
       }
+
+      // Context routinely surfaces sources the web results did not (measured: 5565
+      // context-only hostnames across 8184 pairs). Those would otherwise stay invisible.
+      for (const ctx of ctxByUrl.values()) {
+        try {
+          await meili.index({
+            url: ctx.url,
+            title: sanitizeText(ctx.title),
+            description: '',
+            text: sanitizeText([ctx.title, ctx.text].filter(Boolean).join('\n')),
+            namespace: 'sweep',
+            sweep_label: label,
+            // It did come from Brave. Leaving engines empty would zero-collapse the doc
+            // under the v1 trust formula (see docs/trust-v2-flip-plan.md).
+            engines: ['brave'],
+            engine_count: 1,
+            backend_source: 'brave_context',
+            has_context: true,
+            crawled_at: crawledAt
+          })
+          indexed++
+          ctxOnly++
+        } catch (e) {
+          console.error('[sweep] context index error:', ctx.url, e.message)
+        }
+      }
     }
     if (indexed) {
-      console.log(`[sweep] indexed ${indexed} results into corpus`)
+      const extra = ctxEnriched || ctxOnly
+        ? ` (${ctxEnriched} enriched with LLM Context, ${ctxOnly} context-only sources)`
+        : ''
+      console.log(`[sweep] indexed ${indexed} results into corpus${extra}`)
       await refreshCorpusStatus()
     }
   })
@@ -1154,19 +1243,7 @@ function sprintMetadataFromReq (req) {
   }
 }
 
-// Parse per-endpoint TTL query params (?ttl_web=7&ttl_news=1&ttl_context=30).
-// Returns null if no ttl_* params present (caller falls back to legacy max_age).
-function parseTtlMap (searchParams) {
-  const map = {}
-  let any = false
-  for (const ep of ['web', 'news', 'context']) {
-    const v = Number(searchParams.get(`ttl_${ep}`))
-    if (Number.isFinite(v) && v > 0) { map[ep] = v; any = true }
-  }
-  const def = Number(searchParams.get('ttl_default'))
-  if (Number.isFinite(def) && def > 0) { map.default = def; any = true }
-  return any ? map : null
-}
+// parseTtlMap (per-endpoint TTL query params) lives in src/http/helpers.js now.
 
 async function handleCachedSweep (req, res) {
   if (!queryCache) {
@@ -1229,6 +1306,7 @@ async function handleCachedSweep (req, res) {
     searxng, academic, yandex, braveKey: BRAVE_KEY,
     braveFetch, searxngAsBraveResponse, academicAsBraveResponse, yandexAsBraveResponse,
     corpusLookup: corpusLookupAsBrave,
+    contextParams: SWEEP_CONTEXT_PARAMS,
     endpointName: '/cached_sweep'
   })
 
@@ -1436,6 +1514,77 @@ async function handleCacheStore (req, res) {
   }
 }
 
+/**
+ * POST /sprint_metric — let an out-of-process sweep report its spend into the ledger.
+ *
+ * Why this exists: brave_sweep.py calls Brave directly and never wrote a sprint_metrics
+ * row, so GET /economy_report reported only the Node share. Measured 2026-08-04: $42.5
+ * visible against $227.69 actually spent — 18.7%. Every "this got cheaper" claim was
+ * being made against a number that omitted 84% of the spend.
+ *
+ * Accepts one metric or a batch (`{metrics: [...]}` or a bare array) — the batch form is
+ * what the historical backfill uses. Cost is computed server-side by recordSprintMetric
+ * from COST_PER_CALL, so no caller can invent its own pricing.
+ *
+ * Body per metric: { backend, queries, endpoint?, sprintId?, topic?, priority?,
+ *                    cacheHits?, cacheMisses?, durationMs?, timestamp? }
+ */
+async function handleSprintMetric (req, res) {
+  if (!queryCache) {
+    res.writeHead(503, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'cache unavailable' }))
+    return
+  }
+  let body
+  try { body = JSON.parse((await readBody(req)) || '{}') } catch {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'invalid JSON body' }))
+    return
+  }
+
+  const metrics = Array.isArray(body) ? body : (Array.isArray(body.metrics) ? body.metrics : [body])
+  if (!metrics.length) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'no metrics supplied' }))
+    return
+  }
+
+  const ids = []
+  const warnings = []
+  try {
+    for (const [i, m] of metrics.entries()) {
+      const backend = typeof m?.backend === 'string' ? m.backend.trim() : ''
+      const queries = Number(m?.queries)
+      if (!backend || !Number.isFinite(queries) || queries < 0) {
+        warnings.push(`metric[${i}]: skipped — backend (string) and queries (number >= 0) required`)
+        continue
+      }
+      // An unknown backend is priced at $0 by recordSprintMetric. Silent $0 is exactly how
+      // spend goes missing, so say it out loud rather than accept a typo'd label.
+      if (COST_PER_CALL[backend] == null) {
+        warnings.push(`metric[${i}]: unknown backend "${backend}" — recorded at $0`)
+      }
+      ids.push(queryCache.recordSprintMetric({
+        sprintId: m.sprintId ?? m.sprint_id ?? null,
+        topic: m.topic ?? null,
+        endpoint: m.endpoint || '/sweep',
+        priority: m.priority ?? null,
+        backend,
+        queries,
+        cacheHits: Number(m.cacheHits ?? m.cache_hits) || 0,
+        cacheMisses: Number(m.cacheMisses ?? m.cache_misses) || 0,
+        durationMs: Number(m.durationMs ?? m.duration_ms) || null,
+        timestamp: m.timestamp ?? null
+      }))
+    }
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ ok: true, recorded: ids.length, skipped: metrics.length - ids.length, ids, warnings }))
+  } catch (err) {
+    res.writeHead(500, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'record failed', detail: String(err), recorded: ids.length, warnings }))
+  }
+}
+
 // Phase 3: local LLM Context endpoint — Brave LLM Context analogue (free, GPU only).
 // Body: { urls: string[], focus_query: string, snippets_per_url?, max_chars_per_url?, timeout_ms? }
 // Returns Brave-context-shape JSON: { query, type, source, results: [{url, title, snippets[], cleaned_markdown, source}], total_fetch_ms, total_clean_ms, cache_hits, cache_misses }
@@ -1627,6 +1776,39 @@ async function handleUrlContent (req, res) {
   }
 }
 
+// POST /verify — single-citation honesty check (the doesitlie verifier, exposed live).
+// Body: { claim: string, url: string }. Returns the verdict + the verbatim supporting excerpt so
+// an agent can decide whether to trust a source it just found. fetchContent guards SSRF on every
+// hop; the judge call is bounded by DOESITLIE_JUDGE_TIMEOUT_MS. verifyCitation never throws — a
+// fetch/judge failure surfaces as verdict 'Error' (with a reason), 'Fabricated' for a dead URL.
+async function handleVerify (req, res) {
+  let body
+  try { body = JSON.parse((await readBody(req)) || '{}') } catch {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'invalid JSON body' }))
+    return
+  }
+  const { claim, url } = body
+  if (!claim || typeof claim !== 'string' || !claim.trim()) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'claim (non-empty string) required' }))
+    return
+  }
+  if (claim.length > 4000) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'claim too long (max 4000 chars)' }))
+    return
+  }
+  if (!url || typeof url !== 'string' || !/^https?:\/\//i.test(url)) {
+    res.writeHead(400, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ error: 'url (http/https string) required' }))
+    return
+  }
+  const verdict = await verifyCitation({ claim: claim.trim(), url })
+  res.writeHead(200, { 'Content-Type': 'application/json' })
+  res.end(JSON.stringify(verdict, null, 2))
+}
+
 // Phase 5: GET /economy_report — markdown report of sprint_metrics.
 // Filters: ?from=<ISO>&to=<ISO>&sprint_id=&topic=&format=markdown|json
 async function handleEconomyReport (req, res) {
@@ -1715,6 +1897,33 @@ const docsMd = readFileSync(join(__dirname, '..', 'public', 'docs.md'), 'utf8')
 
 // ── HTTP Server ────────────────────────────────────────────────────
 const server = http.createServer((req, res) => {
+  // Tier 3: correlation id + per-request access log (skips noisy /health polling).
+  const rid = requestId(req)
+  res.setHeader('X-Request-Id', rid)
+  const startedAt = Date.now()
+  res.on('finish', () => {
+    if (req.url === '/health' || req.url.startsWith('/health?')) return
+    logger.info('request', { request_id: rid, method: req.method, path: routeKey(req.url), status: res.statusCode, ms: Date.now() - startedAt })
+  })
+
+  // Tier 0: body-size fast-reject (honest Content-Length); streaming cap in readBody.
+  if (req.method === 'POST' || req.method === 'PUT') {
+    const cl = Number(req.headers['content-length'])
+    if (Number.isFinite(cl) && cl > MAX_BODY_BYTES) {
+      res.writeHead(413, { 'Content-Type': 'application/json' })
+      res.end(JSON.stringify({ error: 'payload_too_large', max_bytes: MAX_BODY_BYTES, content_length: cl }))
+      return
+    }
+  }
+  // Tier 0: auth (non-loopback only) + rate limit, both skipped for public paths.
+  if (!isPublicPath(req)) {
+    if (!authGuard(req, res, AUTH_OPTS)) return
+    if (RATE_LIMIT_ACTIVE) {
+      const ip = (req.socket?.remoteAddress || '').replace(/^::ffff:/, '')
+      if (!rateLimitGuard(rateLimiter, ip, routeKey(req.url), res)) return
+    }
+  }
+
   if (req.method === 'GET' && (req.url === '/' || req.url === '/index.html')) {
     res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
     res.end(indexHtml)
@@ -1765,6 +1974,10 @@ const server = http.createServer((req, res) => {
     handleCacheStore(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
     return
   }
+  if (req.method === 'POST' && req.url === '/sprint_metric') {
+    handleSprintMetric(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
+    return
+  }
   if (req.method === 'GET' && req.url === '/cache_stats') {
     handleCacheStats(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: String(err) })) })
     return
@@ -1783,6 +1996,10 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === 'POST' && req.url === '/url_content') {
     handleUrlContent(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'url_content failed', detail: String(err) })) })
+    return
+  }
+  if (req.method === 'POST' && req.url === '/verify') {
+    handleVerify(req, res).catch((err) => { if (res.headersSent) return; res.writeHead(500, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ error: 'verify failed', detail: String(err) })) })
     return
   }
   if (req.method === 'GET' && (req.url === '/economy_report' || req.url.startsWith('/economy_report?'))) {
@@ -1848,6 +2065,14 @@ server.headersTimeout = 66000
 // /sweep_context (SSRF), /ingest. Override with QSEARCH_BIND only behind real auth.
 server.listen(PORT, process.env.QSEARCH_BIND || '127.0.0.1', () => {
   console.log(`qsearch v0.4.0 listening on http://localhost:${PORT}`)
+  // Tier 0: surface security posture so exposure without auth is never silent.
+  if (isLoopbackBind(QSEARCH_BIND)) {
+    console.log('[security] bound to loopback — auth disabled (local single-user). Rate limit: ' + (RATE_LIMIT_ACTIVE ? 'ON' : 'off'))
+  } else {
+    const mode = AUTH_OPTS.apiKey ? 'API key' : ''
+    const ipm = AUTH_OPTS.ipAllowlist.length ? `${AUTH_OPTS.ipAllowlist.length} allowlisted IP(s)` : ''
+    console.log(`[security] bound to ${QSEARCH_BIND} — auth ON (${[mode, ipm].filter(Boolean).join(' + ')}), rate limit ON. Body cap ${MAX_BODY_BYTES} bytes.`)
+  }
   // rd275: surface gates that ship OFF by default so users notice they exist.
   // Default is intentionally OFF (no behavior change for existing consumers);
   // flip via env after dogfooding — see docs/QUALITY_GATE_DOGFOOD.md.
@@ -1887,4 +2112,37 @@ server.listen(PORT, process.env.QSEARCH_BIND || '127.0.0.1', () => {
       console.log(`[canary] sweep ok — ${c.results} results from engines: ${c.contributing_engines.join(', ') || '(none named)'}${unresp ? ` | unresponsive: ${unresp}` : ''}`)
     }
   }).catch(() => {})
+})
+
+// ── Tier 3: graceful shutdown + global error handlers (2026-06-23) ──
+// SIGTERM (Docker/PM2 restart) and SIGINT (Ctrl-C) previously killed in-flight
+// /sweep, /index, /sweep_context requests mid-flight. Drain, flush cache, then exit.
+let shuttingDown = false
+function shutdown (signal, code = 0) {
+  if (shuttingDown) return
+  shuttingDown = true
+  console.log(`[shutdown] ${signal} — draining in-flight requests (≤30s)…`)
+  const force = setTimeout(() => {
+    console.error('[shutdown] drain timed out — forcing exit')
+    process.exit(code || 1)
+  }, 30_000)
+  force.unref?.()
+  server.close(() => {
+    try { queryCache?.close() } catch (e) { console.warn('[shutdown] cache close error:', e.message) }
+    clearTimeout(force)
+    console.log('[shutdown] clean exit')
+    process.exit(code)
+  })
+}
+process.on('SIGTERM', () => shutdown('SIGTERM', 0))
+process.on('SIGINT', () => shutdown('SIGINT', 0))
+
+// Never crash silently. An uncaught exception means corrupted state → drain + exit 1.
+// Unhandled rejections are logged loudly but not fatal (many are recoverable in practice).
+process.on('uncaughtException', (err) => {
+  console.error('[fatal] uncaughtException:', err?.stack || err)
+  shutdown('uncaughtException', 1)
+})
+process.on('unhandledRejection', (reason) => {
+  console.error('[fatal] unhandledRejection:', reason?.stack || reason)
 })

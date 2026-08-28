@@ -79,11 +79,16 @@ function authorityFor (result, table) {
   return 0.35
 }
 
+// Saturation point for trust normalization. The fixed 2.0 was arbitrary — if the
+// corpus trust distribution spans e.g. 0.7..30, saturating at 2.0 collapses the top
+// ~6% of URLs to the same value and wastes the signal. Calibrate to the corpus p90
+// (see scripts/corpus_percentile_analysis.js) and set QSEARCH_QUALITY_TRUST_SATURATION.
+// Default 2.0 keeps prior behavior.
+const TRUST_SATURATION = Number(process.env.QSEARCH_QUALITY_TRUST_SATURATION) || 2
+
 function normalizeTrust (trustScore) {
   if (!trustScore || trustScore <= 0) return 0
-  // rerankByTrust returns log(sweep_count+1) × diversity → typically 0..3-ish.
-  // Saturate at 2 for our 0-1 normalization.
-  return Math.min(1, trustScore / 2)
+  return Math.min(1, trustScore / TRUST_SATURATION)
 }
 
 function normalizeLlm (score) {

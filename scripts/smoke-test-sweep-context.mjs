@@ -2,7 +2,7 @@
 // Smoke test for Phase 3 /sweep_context — verifies HTML extraction, fetchHtml timeout/cap,
 // runSweepContext orchestration with mocked LLM. Uses local http server for mock URLs.
 //
-// Run:  node D:/Yahia/active/qsearch/scripts/smoke-test-sweep-context.mjs
+// Run:  node scripts/smoke-test-sweep-context.mjs
 // Exit: 0 = all pass, 1 = any failure
 
 import { fetchHtml, extractMainContent } from '../src/fetch/html.js'

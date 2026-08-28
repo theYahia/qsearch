@@ -1,0 +1,80 @@
+{
+  "generated": "2026-08-05T06:36:00.615Z",
+  "run1": "bench/ru/results.json",
+  "run2": "bench/ru/r4_results_rerun.json",
+  "compared_verdicts": 56,
+  "agreed": 52,
+  "agreement_rate": 0.9285714285714286,
+  "moved": [
+    {
+      "id": "npd_limit_2400000",
+      "side": "web",
+      "from": "Error",
+      "to": "Partial",
+      "group": "web"
+    },
+    {
+      "id": "152fz_crossborder_notice",
+      "side": "web",
+      "from": "Supported",
+      "to": "Partial",
+      "group": "context"
+    },
+    {
+      "id": "skycapital_reputation",
+      "side": "web",
+      "from": "Partial",
+      "to": "Supported",
+      "group": "web"
+    },
+    {
+      "id": "ai_reseller_margin",
+      "side": "context",
+      "from": "Unsupported",
+      "to": "Partial",
+      "group": "web"
+    }
+  ],
+  "groups_run1": {
+    "web": {
+      "n": 10,
+      "w": 7,
+      "c": 3
+    },
+    "context": {
+      "n": 10,
+      "w": 6,
+      "c": 10
+    },
+    "independent": {
+      "n": 8,
+      "w": 5,
+      "c": 5
+    }
+  },
+  "groups_run2": {
+    "web": {
+      "n": 10,
+      "w": 8,
+      "c": 3
+    },
+    "context": {
+      "n": 10,
+      "w": 5,
+      "c": 10
+    },
+    "independent": {
+      "n": 8,
+      "w": 5,
+      "c": 5
+    }
+  },
+  "totals_run1": {
+    "w": 64.28571428571429,
+    "c": 64.28571428571429
+  },
+  "totals_run2": {
+    "w": 64.28571428571429,
+    "c": 64.28571428571429
+  }
+}

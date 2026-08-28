@@ -1,0 +1,722 @@
+{
+  "generated": "2026-08-04T19:01:11.671Z",
+  "k": 5,
+  "candidates": 20,
+  "from": "pairs",
+  "goldenPath": "test/integration/golden/rerank_golden_ru_independent.json",
+  "n": 26,
+  "means": {
+    "baseline": 0.788655986004372,
+    "rerank": 0.7782480740702262,
+    "random": 0.6805620337121735
+  },
+  "lift": -0.010407911934145808,
+  "spread": 0.10809395229219854,
+  "threshold": 0.05,
+  "pool_coverage": 1,
+  "empty_pools": 0,
+  "rows": [
+    {
+      "query": "самозанятый превысил лимит 2,4 млн рублей что делать переход УСН",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 19,
+      "pool_hits": 19,
+      "baseline": 0.8869465982421278,
+      "rerank": 0.7738931964842558,
+      "random": 0.8869465982421278,
+      "stats": {
+        "ran": true,
+        "ms": 17327,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "422-ФЗ статья 4 статья 6 ограничения виды деятельности налог на профессиональный доход что нельзя|focused",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 18,
+      "pool_hits": 18,
+      "baseline": 0.6765142965891182,
+      "rerank": 0.9026211001048622,
+      "random": 0.8573424901769816,
+      "stats": {
+        "ran": true,
+        "ms": 13109,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "НПД посредническая деятельность агентский договор запрет самозанятый перепродажа",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 20,
+      "pool_hits": 20,
+      "baseline": 0.6608397947263838,
+      "rerank": 0.7994765465672333,
+      "random": 0.7994765465672333,
+      "stats": {
+        "ran": true,
+        "ms": 12745,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "договор поручения обработки персональных данных обязательные условия 152-ФЗ",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 20,
+      "pool_hits": 20,
+      "baseline": 1,
+      "rerank": 1,
+      "random": 1,
+      "stats": {
+        "ran": true,
+        "ms": 13023,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "152-ФЗ трансграничная передача персональных данных уведомление РКН 2026",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 19,
+      "pool_hits": 19,
+      "baseline": 0.7170142511432442,
+      "rerank": 0.7840697445111879,
+      "random": 0.746067443829724,
+      "stats": {
+        "ran": true,
+        "ms": 12564,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "федеральный закон НДС эквайринг 2026 изменения статья 149 НК РФ текст нормы комиссия за переводы денежных средств СБП",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 18,
+      "pool_hits": 18,
+      "baseline": 1,
+      "rerank": 0.7599635902818439,
+      "random": 0.543765634986343,
+      "stats": {
+        "ran": true,
+        "ms": 12867,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "легально ли юридическому лицу обменивать рубли на USDC 2026",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 18,
+      "pool_hits": 18,
+      "baseline": 0.6469101885239719,
+      "rerank": 0.3494746300967186,
+      "random": 0.5594401368490773,
+      "stats": {
+        "ran": true,
+        "ms": 11734,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "как российский разработчик принимает оплату за AI приложение токены",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 14,
+      "pool_hits": 14,
+      "baseline": 0.6689670830051391,
+      "rerank": 0.33957710413001896,
+      "random": 0.5076833093745031,
+      "stats": {
+        "ran": true,
+        "ms": 13798,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "422-ФЗ статья 6 часть 2 не признаются объектом налогообложения НПД перечень доходов",
+      "candidates": 19,
+      "kept": 5,
+      "graded": 18,
+      "pool_hits": 18,
+      "baseline": 0.8869465982421278,
+      "rerank": 0.7738931964842558,
+      "random": 0.9125299483251055,
+      "stats": {
+        "ran": true,
+        "ms": 12942,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "115-ФЗ блокировка ИП перевод криптообменник кейсы 2025 2026",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 20,
+      "pool_hits": 20,
+      "baseline": 0.8151510484299677,
+      "rerank": 0.7599635902818439,
+      "random": 1,
+      "stats": {
+        "ran": true,
+        "ms": 12548,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "валютный контроль ИП поступления из-за рубежа лимиты 2026",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 20,
+      "pool_hits": 20,
+      "baseline": 1,
+      "rerank": 0.8573424901769816,
+      "random": 0.5890442449142237,
+      "stats": {
+        "ran": true,
+        "ms": 12763,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "SkyCapital отзывы реальные надёжность развод мошенники скам или нет 2026",
+      "candidates": 19,
+      "kept": 5,
+      "graded": 18,
+      "pool_hits": 18,
+      "baseline": 0.6886039320648765,
+      "rerank": 0.530137188340912,
+      "random": 0.5125203928783814,
+      "stats": {
+        "ran": true,
+        "ms": 13147,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "Казахстан Узбекистан Армения оплата зарубежных сервисов разработчики 2026",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 20,
+      "pool_hits": 20,
+      "baseline": 0.7698724385020871,
+      "rerank": 0.8151510484299677,
+      "random": 0.7738931964842558,
+      "stats": {
+        "ran": true,
+        "ms": 13981,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "НПД самозанятый иностранные клиенты валютная выручка 2026 законность",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 19,
+      "pool_hits": 19,
+      "baseline": 0.9807710461847231,
+      "rerank": 0.5476122933914817,
+      "random": 0.32141844008722237,
+      "stats": {
+        "ran": true,
+        "ms": 13532,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "самозанятый лицензия на собственное программное обеспечение доход НПД можно ли",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 19,
+      "pool_hits": 19,
+      "baseline": 0.521616681216879,
+      "rerank": 0.7089194055617978,
+      "random": 0.613064960635973,
+      "stats": {
+        "ran": true,
+        "ms": 12666,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "A7A5 что это стейблкоин биржа обменник рубль санкции Garantex отзывы 2026",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 17,
+      "pool_hits": 17,
+      "baseline": 0.5181822849033655,
+      "rerank": 0.7860137352654724,
+      "random": 0.9125299483251055,
+      "stats": {
+        "ran": true,
+        "ms": 14622,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "вернётся ли официальный доступ openai anthropic в Россию 2026 2027 разблокировка",
+      "candidates": 19,
+      "kept": 5,
+      "graded": 10,
+      "pool_hits": 10,
+      "baseline": 0.4747306749299608,
+      "rerank": 0.8076572091794476,
+      "random": 0.4003779800820151,
+      "stats": {
+        "ran": true,
+        "ms": 14046,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "152-ФЗ статья 9 согласие на обработку персональных данных несовершеннолетнего consultant.ru|critical",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 19,
+      "pool_hits": 19,
+      "baseline": 1,
+      "rerank": 0.8850729764703047,
+      "random": 0.3744391543733501,
+      "stats": {
+        "ran": true,
+        "ms": 13643,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "152-ФЗ статья 22 исключения уведомление Роскомнадзор оператор не обязан consultant.ru|critical",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 19,
+      "pool_hits": 19,
+      "baseline": 1,
+      "rerank": 1,
+      "random": 0.8573424901769816,
+      "stats": {
+        "ran": true,
+        "ms": 14925,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "политика конфиденциальности обработки персональных данных требования состав 152-ФЗ статья 18.1|critical",
+      "candidates": 19,
+      "kept": 5,
+      "graded": 18,
+      "pool_hits": 18,
+      "baseline": 1,
+      "rerank": 1,
+      "random": 1,
+      "stats": {
+        "ran": true,
+        "ms": 13380,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "242-ФЗ локализация персональных данных граждан РФ на территории России требования базы данных|critical",
+      "candidates": 18,
+      "kept": 5,
+      "graded": 18,
+      "pool_hits": 18,
+      "baseline": 0.5903694098621622,
+      "rerank": 1,
+      "random": 1,
+      "stats": {
+        "ran": true,
+        "ms": 14652,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "273-ФЗ статья 91 лицензирование образовательной деятельности текст consultant.ru|critical",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 20,
+      "pool_hits": 20,
+      "baseline": 0.8387358373645061,
+      "rerank": 0.753741145977712,
+      "random": 0.5092595013431674,
+      "stats": {
+        "ran": true,
+        "ms": 13818,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "ИП самозанятый НПД обязан ли применять контрольно-кассовую технику 54-ФЗ пункт 2.2 статьи 2|critical",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 19,
+      "pool_hits": 19,
+      "baseline": 0.7357689654680096,
+      "rerank": 0.7276840177658224,
+      "random": 0.6244065393518927,
+      "stats": {
+        "ran": true,
+        "ms": 14661,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "статья 18.1 ФЗ-38 о рекламе маркировка интернет-реклама токен ОРД кто обязан|focused",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 20,
+      "pool_hits": 20,
+      "baseline": 0.9125299483251055,
+      "rerank": 1,
+      "random": 0.8151510484299677,
+      "stats": {
+        "ran": true,
+        "ms": 13509,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "152-ФЗ статья 6 часть 1 пункт 1 правовые основания обработки персональных данных текст|critical",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 18,
+      "pool_hits": 18,
+      "baseline": 1,
+      "rerank": 0.8687949224876581,
+      "random": 0.5181822849033655,
+      "stats": {
+        "ran": true,
+        "ms": 13682,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    },
+    {
+      "query": "перепродажа api нейросетей Россия маржа наценка конкуренция демпинг race to zero 2026",
+      "candidates": 20,
+      "kept": 5,
+      "graded": 11,
+      "pool_hits": 11,
+      "baseline": 0.5145845583899205,
+      "rerank": 0.7033907938361063,
+      "random": 0.05973058617951576,
+      "stats": {
+        "ran": true,
+        "ms": 12495,
+        "stage1": {
+          "ran": 1,
+          "skipped": 0
+        },
+        "stage2": {
+          "ran": 1,
+          "calls": 10,
+          "implemented": true
+        },
+        "gate": {
+          "ran": 0,
+          "enabled": false
+        }
+      }
+    }
+  ]
+}

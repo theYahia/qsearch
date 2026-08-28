@@ -1,0 +1,1017 @@
+{
+  "type": "search",
+  "query": {
+    "original": "автосервис нет нормальной программы учёта отзывы форум СТО",
+    "show_strict_warning": false,
+    "altered": "автосервис нет нормальной программы учёта отзывы форум сто",
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "videos",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 19,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "videos": {
+    "type": "videos",
+    "results": [
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=aSAGUzuVTQw",
+        "title": "ТОП НАДЕЖНЫХ АВТО С КОПЕЕЧНЫМ ОБСЛ...",
+        "description": "Проверенная экспресс-раскоксовка Рутек:OZON - https://ozon.ru/t/qy92RYeКомплект 18 - https://ozon.ru/t/zGBRdeNWB - https://www.wildberries.ru/catalog/1964207",
+        "age": "March 4, 2025",
+        "page_age": "2025-03-04T14:01:00",
+        "fetched_content_timestamp": 1745807708,
+        "video": {
+          "duration": "06:54",
+          "creator": "PRO АВТО",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/ZT5kA6tZP4Zpa-JPvjLNfdjIXUoeDYFChxDn40Tvbvk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9h/U0FHVXp1VlRRdy9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/aSAGUzuVTQw/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=9XZFOG0nF14",
+        "title": "НАДЕЖНЫЕ НЕДОРОГИЕ АВТО ДЛЯ ПРОСТОГО ...",
+        "description": "Наш сайт честных обзоров: https://takus.ruМы Вконтакте: https://vk.com/proautochannelМы в Telegram: https://t.me/proautochannelНаш канал на Я.Дзен: https://z",
+        "age": "September 30, 2023",
+        "page_age": "2023-09-30T17:42:33",
+        "fetched_content_timestamp": 1745540572,
+        "video": {
+          "duration": "06:22",
+          "creator": "PRO АВТО",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/rUln3UF7NT_6DGn4Vl2uT1OAhrHUwK1XY6KQ8tx-gfI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS85/WFpGT0cwbkYxNC9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/9XZFOG0nF14/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=vADxk4TWkAo",
+        "title": "Топ 10 дешевых в обслуживании автом...",
+        "description": "Сегодня я расскажу вам о десятке самых дешевых в обслуживании и эксплуатации моделей авто, которые порадуют надежностью и комфортом.Канал Жекос в деле: https...",
+        "age": "September 30, 2022",
+        "page_age": "2022-09-30T15:38:57",
+        "fetched_content_timestamp": 1723725760,
+        "video": {
+          "duration": "14:54",
+          "views": 100912,
+          "creator": "Dima Turok",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/EXoldwO8_qWXoNiMKm2PZ4c2nNAByhl-dIMdY2DDG4g/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS92/QUR4azRUV2tBby9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/vADxk4TWkAo/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=dP8wx_Exjxs",
+        "title": "Топ автомобилей с недорогим обслуж...",
+        "description": "Обслуживание каких автомобилей обходится дешевле всего и как правильно выбрать автомобиль, чтобы отом не пришлось еще вкладываться? Мы узнали в эфире «Новог...",
+        "age": "August 21, 2020",
+        "page_age": "2020-08-21T06:47:52",
+        "fetched_content_timestamp": 1723561312,
+        "video": {
+          "duration": "06:10",
+          "views": 44599,
+          "creator": "ТВК Красноярск",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/aNrB5_-LUxkBL3ir3iE8o7nX6uNgh3hAnxau6cg56Qc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9k/UDh3eF9FeGp4cy9o/cWRlZmF1bHQuanBn",
+          "original": "https://i.ytimg.com/vi/dP8wx_Exjxs/hqdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=ZJA0rkOrFzA",
+        "title": "БЮДЖЕТНЫЕ И ОЧЕНЬ НАДЕЖНЫЕ АВТО. ...",
+        "description": "https://carme.pro/ — Калькулятор, который видит будущее твоего авто.Все проблемы + способы их избежать + точная стоимость владения. Самые надежные машины для...",
+        "age": "June 10, 2025",
+        "page_age": "2025-06-10T18:23:07",
+        "fetched_content_timestamp": 1781425172,
+        "video": {
+          "duration": "05:16",
+          "creator": "с пробегом",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Ltp3tGHK8qy9EBlsxK7whuqUaReBcbvOCKJ6yskqTyA/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9a/SkEwcmtPckZ6QS9o/cWRlZmF1bHQuanBn",
+          "original": "https://i.ytimg.com/vi/ZJA0rkOrFzA/hqdefault.jpg"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Отзывы о Stocrm.ru - программа для автосервиса",
+        "url": "https://otzovik.com/reviews/stocrm_ru-programma_dlya_avtoservisa/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Функции учёта остатков, контроля денежных средств нет, или как то совсем поверхностно реализовано.",
+        "profile": {
+          "name": "Otzovik",
+          "url": "https://otzovik.com/reviews/stocrm_ru-programma_dlya_avtoservisa/",
+          "long_name": "otzovik.com",
+          "img": "https://imgs.search.brave.com/YhklxbIXu1ciRdvGwvEhzGRWNv3XyhCGmlVJj-_CHQw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTk5ZDkwYjky/ZTA5YmZmY2FmZjdm/YmM1YTc1YzRhOThk/NDA5YTQ5ZTcwNGY0/ZTg3MzVmYTUwNDQ1/YjNjN2E1Ni9vdHpv/dmlrLmNvbS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "otzovik.com",
+          "hostname": "otzovik.com",
+          "favicon": "https://imgs.search.brave.com/YhklxbIXu1ciRdvGwvEhzGRWNv3XyhCGmlVJj-_CHQw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTk5ZDkwYjky/ZTA5YmZmY2FmZjdm/YmM1YTc1YzRhOThk/NDA5YTQ5ZTcwNGY0/ZTg3MzVmYTUwNDQ1/YjNjN2E1Ni9vdHpv/dmlrLmNvbS8",
+          "path": "› reviews  › stocrm_ru-programma_dlya_avtoservisa"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/olxkbPWLjsOG-I1Tz7Nbj2Q9bR0pDMRP6wujAwPm6Cs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLm90/em92aWsuY29tL29i/amVjdHMvYi8yMjEw/MDAwLzIyMDE4NTQu/cG5n",
+          "original": "https://i.otzovik.com/objects/b/2210000/2201854.png",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Купил в автосервис и магазин. Работаем с ней пару месяцев, впечатления хорошие. Интеграция сторонних сервисов оплачивается отдельно и это обычная практика, нормально к этому отношусь.",
+          "Удобная и классная программа для автоматизации автосервиса, с ее помощью мы смогли оптимизировать работу нашей СТО с клиентами и складом. Интерфейс удобный, простой и понятный, проблем с освоением программы не возникло.",
+          "Функции учёта остатков, контроля денежных средств нет, или как то совсем поверхностно реализовано. Нагромоздили всего лишнего, только это... ... Долго искал софт который бы отвечал всем нашим потребностям. Причем не только с точки зрения нужд непосредственно автосервиса, но и с точки зрения применения технологий, возможности развития и т.",
+          "Да, есть свои нюансы, но а где их нет?! Менеджеры отзывчивые и помогают с любыми вопросами, за что огромная благодарность... Достоинства: Удобство, наполнение ... Хорошая программа, используем в работе автосервиса."
+        ]
+      },
+      {
+        "title": "Программа для автосервиса в 2026 году: рейтинг и антирейтинг от владельца СТO",
+        "url": "https://timeweb.com/ru/community/articles/programma-dlya-avtoservisa-v-2026-godu-reyting-i-antireyting-ot-vladelca-sto",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Нет функций заказ-наряда, норм времени, учёта запчастей, склада, истории автомобиля. Чтобы «доделать» под СТО – придется много платить, ...",
+        "page_age": "2026-02-11T00:00:00",
+        "profile": {
+          "name": "TimeWeb",
+          "url": "https://timeweb.com/ru/community/articles/programma-dlya-avtoservisa-v-2026-godu-reyting-i-antireyting-ot-vladelca-sto",
+          "long_name": "timeweb.com",
+          "img": "https://imgs.search.brave.com/GF31tmhK1x-UKPWhPxZKBPkB6mw7BWdcUMOrYI7cJys/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjAzYWYzMDhh/NTMxN2VkZDkwZjRk/MDc1OTEyMTk2NDFm/ZmM2Y2EwNWY0NjQw/ODA1NGY5MDg1OWQ1/MWQwNGE0Ny90aW1l/d2ViLmNvbS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "timeweb.com",
+          "hostname": "timeweb.com",
+          "favicon": "https://imgs.search.brave.com/GF31tmhK1x-UKPWhPxZKBPkB6mw7BWdcUMOrYI7cJys/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjAzYWYzMDhh/NTMxN2VkZDkwZjRk/MDc1OTEyMTk2NDFm/ZmM2Y2EwNWY0NjQw/ODA1NGY5MDg1OWQ1/MWQwNGE0Ny90aW1l/d2ViLmNvbS8",
+          "path": "› ru  › community  › articles  › programma-dlya-avtoservisa-v-2026-godu-reyting-i-antireyting-ot-vladelca-sto"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/HUy0FvjTb12truk8LWv5Zn48lPf0SXtniNNLVkqqM6Y/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly90aW1l/d2ViLmNvbS9tZWRp/YS9hcnRpY2xlcy8w/MDAxLzQ1L3RodW1i/XzQ0ODYzX2FydGlj/bGVzX3N0YW5kYXJ0/LnBuZw",
+          "original": "https://timeweb.com/media/articles/0001/45/thumb_44863_articles_standart.png",
+          "logo": false
+        },
+        "age": "February 11, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "Михаил",
+              "thumbnail": {
+                "src": "https://imgs.search.brave.com/X_aXyhMjrjos2kAzMNB33NXe5nc2nyoJN2_gpcrAPZU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly90aW1l/d2ViLmNvbS9ydS9j/b21tdW5pdHkvYXZh/dGFyL2E2L2E2MDc3/OGIyMDE5ZTcwZTg0/OThkNGNhODEwYjBh/ZjhjX3RodW1iLmpw/Zw",
+                "original": "https://timeweb.com/ru/community/avatar/a6/a60778b2019e70e8498d4ca810b0af8c_thumb.jpg"
+              }
+            }
+          ],
+          "date": "Feb 11, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Timeweb",
+            "url": "https://timeweb.com/ru/about/contacts/",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/YQv0L-dhvihujmgEbdGoJbjsGcpiuMy8uFJTrpAmdrM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly90aW1l/d2ViLmNvbS9tZWRp/YS9kZWZhdWx0LzAw/MDEvMDEvZjNlMWY5/YTRiNjA5OWI2MTBm/MjQxODZlNjk4YmQ4/NDdkNmJlZjBkZC5w/bmc",
+              "original": "https://timeweb.com/media/default/0001/01/f3e1f9a4b6099b610f24186e698bd847d6bef0dd.png"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Нет функций заказ-наряда, норм времени, учёта запчастей, склада, истории автомобиля. Чтобы «доделать» под СТО – придется много платить, но всё равно получить «колхозное» решение. Хороши для продажи автозапчастей, НО не для автосервиса.",
+          "И если можно где-то упростить жизнь – почему бы и нет? Напоследок скажу вот что. Рад, что софт для автосервисов наконец начал развиваться, а не стоять на месте! Отрасль взрослеет: меньше хаоса, больше цифр, логики и нормальных процессов.",
+          "Они могут быть полезны как дополнение, но не заменят полноценной СТО-системы. Сложно найти детальные и достоверные отзывы в публичных источниках. На популярных рейтингах 2024-2025 их практически нет.",
+          "В итоге в одной подборке вперемешку оказываются CRM для салонов красоты, программы записи к парикмахеру и вообще решения, которые никак не подходят для автосервисов. И все это подается как «ТОП-10 решений для СТО»."
+        ]
+      },
+      {
+        "title": "Отзывы о программах для автосервиса Autosoft",
+        "url": "https://sto-soft.ru/otzyvy-o-programmah-dlya-avtoservis",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Отзывы о программах для автосервиса Autosoft",
+        "page_age": "2022-01-14T10:15:16",
+        "profile": {
+          "name": "Sto-soft",
+          "url": "https://sto-soft.ru/otzyvy-o-programmah-dlya-avtoservis",
+          "long_name": "sto-soft.ru",
+          "img": "https://imgs.search.brave.com/WqCfxJri1qyYwPyDbR80fSUXtoZO97twLp7qN-lHGSQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNmFkZTM5NTk4/OGQ2OTg2MDBiOWM3/OThlOGQwNjdlZTkx/NzM5YmEyMTcwZmYx/MTY2OWU2ZGRkZmZk/MWQ2N2VlOC9zdG8t/c29mdC5ydS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "sto-soft.ru",
+          "hostname": "sto-soft.ru",
+          "favicon": "https://imgs.search.brave.com/WqCfxJri1qyYwPyDbR80fSUXtoZO97twLp7qN-lHGSQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNmFkZTM5NTk4/OGQ2OTg2MDBiOWM3/OThlOGQwNjdlZTkx/NzM5YmEyMTcwZmYx/MTY2OWU2ZGRkZmZk/MWQ2N2VlOC9zdG8t/c29mdC5ydS8",
+          "path": "› otzyvy-o-programmah-dlya-avtoservis"
+        },
+        "age": "January 14, 2022"
+      },
+      {
+        "title": "ТОП 5 программ для учета автосервиса и СТО",
+        "url": "https://www.tirika.ru/articles/top-5-programm-dlya-ucheta-avtoservisa-i-sto/index.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Еще одной полезной функцией программы возможность вести учет финансов автосервиса. АвтоДилер позволяет автоматически формировать отчеты о доходах и расходах, контролировать задолженности клиентов и оплату работ, управлять зарплатами сотрудников. Если в программе нет какого-то необходимого конкретному пользователю отчёта, то он может воспользоваться встроенным редактором отчётов, что, несомненно, добавляет гибкости программе.",
+        "profile": {
+          "name": "Tirika",
+          "url": "https://www.tirika.ru/articles/top-5-programm-dlya-ucheta-avtoservisa-i-sto/index.html",
+          "long_name": "tirika.ru",
+          "img": "https://imgs.search.brave.com/JZFbGNUDECT1Rh6ArfGUlPc2URCrsyWcf8sN4nBfmiw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjk4N2RmNWY3/MGYyOGJmNGQ2ZTVj/NWVhYWM2M2EyNjNi/MTk3ZTcyOTUwZTk3/MTk4YjRhYWI5NmFh/MDM1Mjg2NC93d3cu/dGlyaWthLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "tirika.ru",
+          "hostname": "www.tirika.ru",
+          "favicon": "https://imgs.search.brave.com/JZFbGNUDECT1Rh6ArfGUlPc2URCrsyWcf8sN4nBfmiw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjk4N2RmNWY3/MGYyOGJmNGQ2ZTVj/NWVhYWM2M2EyNjNi/MTk3ZTcyOTUwZTk3/MTk4YjRhYWI5NmFh/MDM1Mjg2NC93d3cu/dGlyaWthLnJ1Lw",
+          "path": "› articles  › top-5-programm-dlya-ucheta-avtoservisa-i-sto  › index.html"
+        },
+        "extra_snippets": [
+          "Одной из полезных функций программы является возможность составления сметы на ремонтные работы. Автосервис может легко и быстро создавать сметы, определять стоимость работ и запчастей, а также контролировать выполнение работ и расходы.",
+          "Программа предлагает широкий спектр функций и инструментов, которые позволяют эффективно управлять аспектами работы автосервиса. Программа позволяет держать базу как на облаке Нетикс, так и на одном из ваших компьютеров.",
+          "В целом программа автосервиса Нетикс Трицепс является полезным инструментом для автосервисных центров и автомастерских.",
+          "Еще одной полезной функцией программы возможность вести учет финансов автосервиса. АвтоДилер позволяет автоматически формировать отчеты о доходах и расходах, контролировать задолженности клиентов и оплату работ, управлять зарплатами сотрудников. Если в программе нет какого-то необходимого конкретному пользователю отчёта, то он может воспользоваться встроенным редактором отчётов, что, несомненно, добавляет гибкости программе."
+        ]
+      },
+      {
+        "title": "ТОП-20 Программ для автосервиса 2025 - Цены, Отзывы",
+        "url": "https://a2is.ru/catalog/programmy-dlya-kompanij-po-remontu-avto",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Рейтинг лучших программ для автосервиса. Читайте отзывы о системах автоматизации и учета по ремонту автомобилей и техобслуживания. Бесплатно, демонстрация, цены",
+        "profile": {
+          "name": "A2is",
+          "url": "https://a2is.ru/catalog/programmy-dlya-kompanij-po-remontu-avto",
+          "long_name": "a2is.ru",
+          "img": "https://imgs.search.brave.com/ich80x0TxzdOGJ-v1y2JNxgw83Cpai9SJH3aGjw6OT4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjA3YWViOGEz/ZmU0ZmJjZDI2ZTcy/ZWFkYTU3MmNiZTQz/YzBiNTZmNWNhY2I4/Njk1ZmJmNGNmMTEy/NTg3Yzc3ZS9hMmlz/LnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "a2is.ru",
+          "hostname": "a2is.ru",
+          "favicon": "https://imgs.search.brave.com/ich80x0TxzdOGJ-v1y2JNxgw83Cpai9SJH3aGjw6OT4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjA3YWViOGEz/ZmU0ZmJjZDI2ZTcy/ZWFkYTU3MmNiZTQz/YzBiNTZmNWNhY2I4/Njk1ZmJmNGNmMTEy/NTg3Yzc3ZS9hMmlz/LnJ1Lw",
+          "path": "› catalog  › programmy-dlya-kompanij-po-remontu-avto"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/qx-7ef9CuupIampbKcU0u5xawDqvMf6ipu6CfGQrHZc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hMmlz/LnJ1L2ltZy9sb2dv/X3ZrLmpwZw",
+          "original": "https://a2is.ru/img/logo_vk.jpg",
+          "logo": true
+        },
+        "extra_snippets": [
+          "Программа для автосервиса и СТО!",
+          "Автоматизация бизнеса с простой и удобной программой для автомойки, автосервиса, шиномонтажа, детейлинг цента . Расчет стоимости заказа, история клиента, планирования загрузки постов и специалистов – доступное решение для учета на предприятии.",
+          "В программах содержатся: руководства по ремонту, регламенты ТО, электросхемы, нормы времени, объемы жидкостей, расшифровки кодов и многое-многое другое.﻿ Узнайте больше о VINPIN СТО ... Получайте подробные данные о вашем автосервисе с точностью до рубля уже через 3 дня после начала работы.",
+          "Autoshift PRO — современное CRM-решение для автосервисов. Управляйте клиентами, записями, сотрудниками и складом в одном приложении. Контролируйте наличие запчастей, планируйте работы, ведите историю ремонтов и принимайте онлайн-заявки. Полный контроль и автоматизация вашего СТО в одном решении."
+        ]
+      },
+      {
+        "title": "Программа для автосервиса. Подробнее",
+        "url": "https://real-soft.ru/programma_dla_avtoservisa_podrobnee.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Если Вы - владелец автосервиса, и у Вас появилась потребность в учете, запуске программ лояльности клиентов, оформлении кассовых чеков - наша программа для Вас!",
+        "profile": {
+          "name": "Real-soft",
+          "url": "https://real-soft.ru/programma_dla_avtoservisa_podrobnee.html",
+          "long_name": "real-soft.ru",
+          "img": "https://imgs.search.brave.com/RyVRo6zjcL03FP-1sjIQIS2Yv_z3uQyMzJ1iCrmeGvE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZmJkYTdhNjdk/OWQxZjgzMDBkM2Rm/YTAwMGFiZmM0YmRm/M2Y3MThhZmI5M2E1/NjI3Zjc3MmRmYzFk/ZTNhZTIxMi9yZWFs/LXNvZnQucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "real-soft.ru",
+          "hostname": "real-soft.ru",
+          "favicon": "https://imgs.search.brave.com/RyVRo6zjcL03FP-1sjIQIS2Yv_z3uQyMzJ1iCrmeGvE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZmJkYTdhNjdk/OWQxZjgzMDBkM2Rm/YTAwMGFiZmM0YmRm/M2Y3MThhZmI5M2E1/NjI3Zjc3MmRmYzFk/ZTNhZTIxMi9yZWFs/LXNvZnQucnUv",
+          "path": "› programma_dla_avtoservisa_podrobnee.html"
+        },
+        "organization": {
+          "type": "organization",
+          "name": "ООО Рилл-Софт",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Учет заказов, заказ-наряды, контроль выручки, дисконтные системы, расчет зарплаты. Торговля сопутствующими товарами, автоматизация шиномонтажа, автомойки, кафе при автосервисе",
+          "Сбор отзывов через SMS и форму.",
+          "Если Вы - владелец автосервиса, и у Вас появилась потребность в учете, запуске программ лояльности клиентов, оформлении кассовых чеков - наша программа для Вас!",
+          "Программы для автомойки, детейлинга, автосервиса, бухгалтерии, склада, ЖКХ."
+        ]
+      },
+      {
+        "title": "АСУ-Автосервис - обзор, отзывы, аналоги, альтернативы",
+        "url": "https://www.livebusiness.ru/tool/2470/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Я начал пользоваться всё отлично работает и удобно пользоваться,ошибок нет, быстро действуют,огромный каталог магазинов ... Тоже начал пользоваться программой ...",
+        "profile": {
+          "name": "Livebusiness",
+          "url": "https://www.livebusiness.ru/tool/2470/",
+          "long_name": "livebusiness.ru",
+          "img": "https://imgs.search.brave.com/S2N-9cbcnuYxYDLD_LTfoOeOlceL-2wbD14JSFzrJ44/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWJmNDRlODAw/YzRjYTU2YzYzYmU0/YmQzMjI2MjgxNzQ3/ZGMwMjdmM2Y4N2Nk/ODVmOTU5YjhjMmI5/OWMyMGU1ZC93d3cu/bGl2ZWJ1c2luZXNz/LnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "livebusiness.ru",
+          "hostname": "www.livebusiness.ru",
+          "favicon": "https://imgs.search.brave.com/S2N-9cbcnuYxYDLD_LTfoOeOlceL-2wbD14JSFzrJ44/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWJmNDRlODAw/YzRjYTU2YzYzYmU0/YmQzMjI2MjgxNzQ3/ZGMwMjdmM2Y4N2Nk/ODVmOTU5YjhjMmI5/OWMyMGU1ZC93d3cu/bGl2ZWJ1c2luZXNz/LnJ1Lw",
+          "path": "› tool  › 2470"
+        },
+        "extra_snippets": [
+          "Программа для автоматизации СТО, автосервисов, автомоек и шиномонтажа. Возможна работа нескольких сотрудников в одной базе одновременно. Доступна возможность управления и запись на другие филиалы организации....",
+          "Профессиональная программа для автосервиса. Настольная и облачная версии. Расчет стоимости ремонта:",
+          "Я начал пользоваться всё отлично работает и удобно пользоваться,ошибок нет, быстро действуют,огромный каталог магазинов ... Тоже начал пользоваться программой АСУ-Автосервис и могу сказать что нареканий нет.",
+          "В АСУ-Автосервис появились SMS-рассылки Обновление программы АСУ-Автосервис включает в себя интеграцию с сервисом SMS-рассылок webcom, для отправки сообщений из прямо программы."
+        ]
+      },
+      {
+        "title": "Лучшие программы для автосервиса: топ-10, рейтинг 2024 — ТОП-10 Рейтинги на DTF",
+        "url": "https://dtf.ru/topraiting/3157134-luchshie-programmy-dlya-avtoservisa-top-10-reiting-2024",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Мы собрали лучшие программы для автосервиса, которые хорошо зарекомендовали себя по реальным отзывам клиентов в 2024 году.",
+        "page_age": "2024-11-07T08:23:54",
+        "profile": {
+          "name": "DTF",
+          "url": "https://dtf.ru/topraiting/3157134-luchshie-programmy-dlya-avtoservisa-top-10-reiting-2024",
+          "long_name": "dtf.ru",
+          "img": "https://imgs.search.brave.com/edhzoSzvHOVRFmY1XVca9bGfGEPuWtQ52YIYTBQG9YI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTE4YmNlOWIz/YzkxMmFlOTE1NDEy/NGM0Nzc1NjEyYTc2/MDhhZWVkMmQwMTlj/NjRiZWE1ZTA1OTky/ZTE4NzA4MC9kdGYu/cnUv"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "dtf.ru",
+          "hostname": "dtf.ru",
+          "favicon": "https://imgs.search.brave.com/edhzoSzvHOVRFmY1XVca9bGfGEPuWtQ52YIYTBQG9YI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTE4YmNlOWIz/YzkxMmFlOTE1NDEy/NGM0Nzc1NjEyYTc2/MDhhZWVkMmQwMTlj/NjRiZWE1ZTA1OTky/ZTE4NzA4MC9kdGYu/cnUv",
+          "path": "  › топ-10 рейтинги"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/LtBaHVBavyUeu1mNZORvq8JRUvStdjKMer-NPtLk5zU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9hcGku/ZHRmLnJ1L3YyLjEv/Y292ZXIvZmIvYy8z/MTU3MTM0LzE3NDMy/NzkwODYvY292ZXIu/anBn",
+          "original": "https://api.dtf.ru/v2.1/cover/fb/c/3157134/1743279086/cover.jpg",
+          "logo": false
+        },
+        "age": "November 7, 2024",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "ТОП-10 Рейтинги",
+              "url": "https://dtf.ru/topraiting",
+              "thumbnail": {
+                "src": "https://imgs.search.brave.com/E35owUv0UCVAzl2l5rTIOaIS-2x76fSLZOWDIumnEnk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9sZW9u/YXJkby5vc25vdmEu/aW8vNTY5MDJhNDUt/MGVhYi01YmI1LWI0/M2YtOGVhMzIxN2Ez/Y2YwLy0vc2NhbGVf/Y3JvcC8xNDR4Lw",
+                "original": "https://leonardo.osnova.io/56902a45-0eab-5bb5-b43f-8ea3217a3cf0/-/scale_crop/144x/"
+              }
+            }
+          ],
+          "date": "Nov 07, 2024"
+        },
+        "extra_snippets": [
+          "Базовая лицензия на 1С:Автосервис стоит от 31 900 рублей.",
+          "1. Какая программа для автосервиса лучше всего подходит для малого бизнеса? Для малого бизнеса рекомендуется использовать \"АвтоСофт\" или \"РемОнлайн\" из-за их гибкости и доступных тарифов. 2. Сколько стоит лицензия на 1С:Автосервис?",
+          "Краткое описание: Профессиональная CRM-система для автосервисов, предлагающая облачное решение с широким функционалом для автоматизации бизнес-процессов.",
+          "Краткое описание: Универсальная программа для автоматизации бизнеса, подходящая для автосервисов, с возможностью настройки под специфические потребности."
+        ]
+      },
+      {
+        "title": "Вы выбрали - Программы учета для автосервиса",
+        "url": "https://sto-soft.ru/programmy-dlya-avtoservisov",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Отзывы о программе для автосервиса АвтоСервис Express Edition · Продление лицензии программы АвтоПредприятие, АвтоКаталог · Скачать актуальное обновление программ AutoSoft ... Как выбрать программу для автосервиса или выбираем программу для СТО",
+        "page_age": "2026-02-11T10:15:16",
+        "profile": {
+          "name": "Sto-soft",
+          "url": "https://sto-soft.ru/programmy-dlya-avtoservisov",
+          "long_name": "sto-soft.ru",
+          "img": "https://imgs.search.brave.com/WqCfxJri1qyYwPyDbR80fSUXtoZO97twLp7qN-lHGSQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNmFkZTM5NTk4/OGQ2OTg2MDBiOWM3/OThlOGQwNjdlZTkx/NzM5YmEyMTcwZmYx/MTY2OWU2ZGRkZmZk/MWQ2N2VlOC9zdG8t/c29mdC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "sto-soft.ru",
+          "hostname": "sto-soft.ru",
+          "favicon": "https://imgs.search.brave.com/WqCfxJri1qyYwPyDbR80fSUXtoZO97twLp7qN-lHGSQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNmFkZTM5NTk4/OGQ2OTg2MDBiOWM3/OThlOGQwNjdlZTkx/NzM5YmEyMTcwZmYx/MTY2OWU2ZGRkZmZk/MWQ2N2VlOC9zdG8t/c29mdC5ydS8",
+          "path": "› programmy-dlya-avtoservisov"
+        },
+        "age": "February 11, 2026",
+        "extra_snippets": [
+          "Отзывы о программе для автосервиса АвтоСервис Express Edition · Продление лицензии программы АвтоПредприятие, АвтоКаталог · Скачать актуальное обновление программ AutoSoft ... Как выбрать программу для автосервиса или выбираем программу для СТО",
+          "Вы выбрали - Программы учета для автосервиса",
+          "Программы для автосервиса и автомагазина, Каталоги запчастей и каталоги норм-времени на ремонт, Онлайн кассы, Штрих сканеры - можно купить здесь: Нормы времени на ремонт автомобилей ... Как рассчитать стоимость нормочаса для работ на автомобилях Nissan",
+          "Как правильно рассчитывать нормочасы на ремонт автомобилей Газель для автосервисов ... Нормы времени на китайские автомобили: особенности и проблемы · Автонормы 2026 онлайн: время ремонта авто · Как рассчитать стоимость нормочаса для различных авто"
+        ]
+      },
+      {
+        "title": "Все программы для Автосервисов & Автомагазинов (программы для учета) - Часть 2",
+        "url": "https://www.carhelp.info/forums/showthread.php?t=140788",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Все программы для Автосервисов &amp; Автомагазинов (программы для учета) - Часть 2 · Программатор ETSmart USB Lite. ... Что такое Стол заказов автозапчастей?",
+        "page_age": "2017-03-06T00:00:00",
+        "profile": {
+          "name": "Carhelp",
+          "url": "https://www.carhelp.info/forums/showthread.php?t=140788",
+          "long_name": "carhelp.info",
+          "img": "https://imgs.search.brave.com/JUjZWysCF0NbB2B-0ECzD_-U7xJQ0oh1TkF0Vd5he94/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGY1YjQ4MmU4/NTNiZjhjNTY4Mjdj/NWYzNWY2MWJiZTRj/ODc2ZjkzNWQwNDY0/MTUzNjM2MzdkNzRk/ODFkMzhjNi93d3cu/Y2FyaGVscC5pbmZv/Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "carhelp.info",
+          "hostname": "www.carhelp.info",
+          "favicon": "https://imgs.search.brave.com/JUjZWysCF0NbB2B-0ECzD_-U7xJQ0oh1TkF0Vd5he94/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGY1YjQ4MmU4/NTNiZjhjNTY4Mjdj/NWYzNWY2MWJiZTRj/ODc2ZjkzNWQwNDY0/MTUzNjM2MzdkNzRk/ODFkMzhjNi93d3cu/Y2FyaGVscC5pbmZv/Lw",
+          "path": "› forums  › showthread.php"
+        },
+        "age": "March 6, 2017",
+        "extra_snippets": [
+          "Что такое Стол заказов автозапчастей? Программа представляет собой пакет для автоматизации процесса принятия заказов на детали к автомобилям. кейген Это продолжение темы, начало 5148",
+          "Все программы для Автосервисов & Автомагазинов (программы для учета) - Часть 2 · Программатор ETSmart USB Lite. ... Что такое Стол заказов автозапчастей?",
+          "- - - - - - - - - - а если кому нужна вот ссылка АСУ-Автосервис система управления автосервисом, Скачать бесплатно | TOOLHAND · Ответить с цитированием Вверх ▲ ... Всем доброго времени суток, подскажите где можно скачать программу менеджер СТО с кряком?",
+          "Кого интересует программа для гаражного автосервиса, посмотрите вот здесь. Может работать с флешки и по сети. Ответить с цитированием Вверх ▲ ... Добрые люди,скинте гейган для Стол заказов 3.9 или рабочую с кряком любую ниже 4 ой версии."
+        ]
+      },
+      {
+        "title": "Отзывы о программе Программа автоматизации автосервиса и СТО. Универсальная Система Учета 2.0",
+        "url": "https://www.softportal.com/response-27921-programma-avtomatizatsii-avtoservisa-i-sto-universalnaya-sistema-ucheta-1.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Павел про Программа автоматизации автосервиса и СТО. Универсальная Система Учета 2.0 [07-11-2018] · Кстати, возможно отзыв Артема в этом разделе относится к другой ...",
+        "profile": {
+          "name": "Программы",
+          "url": "https://www.softportal.com/response-27921-programma-avtomatizatsii-avtoservisa-i-sto-universalnaya-sistema-ucheta-1.html",
+          "long_name": "softportal.com",
+          "img": "https://imgs.search.brave.com/3Iay-iKt_SxPOI_xSPut8bteaO9ivuwIDVDsQFX3PKs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjQ0NDhjMDgz/NjkwMGUwMmQxMGRm/MzFmOTRjMDQ4OTM2/ZWU0NWQ0Y2I2N2E3/OTgxY2U5YWYzMjUz/NjdiYzZmNS93d3cu/c29mdHBvcnRhbC5j/b20v"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "softportal.com",
+          "hostname": "www.softportal.com",
+          "favicon": "https://imgs.search.brave.com/3Iay-iKt_SxPOI_xSPut8bteaO9ivuwIDVDsQFX3PKs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjQ0NDhjMDgz/NjkwMGUwMmQxMGRm/MzFmOTRjMDQ4OTM2/ZWU0NWQ0Y2I2N2E3/OTgxY2U5YWYzMjUz/NjdiYzZmNS93d3cu/c29mdHBvcnRhbC5j/b20v",
+          "path": "› response-27921-programma-avtomatizatsii-avtoservisa-i-sto-universalnaya-sistema-ucheta-1.html"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/zCGSLB0Hu-sGnjEJRGtXdmLck8kkAgTRtRCoUDHukM4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/c29mdHBvcnRhbC5j/b20vL3d3dy5zb2Z0/cG9ydGFsLmNvbS9p/bWcvU1BMXy5wbmc",
+          "original": "https://www.softportal.com//www.softportal.com/img/SPL_.png",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Программы : Отзывы о программе Программа автоматизации автосервиса и СТО. Универсальная Система Учета 2.0 / Описание Программа автоматизации автосервиса и СТО."
+        ]
+      },
+      {
+        "title": "STOCRM - 26 отзывов клиентов, недостатки и плюсы.",
+        "url": "https://crmindex.ru/products/stocrm/reviews",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "нужно было покупать телефоны дополнительно специальные (—5000 руб) Настройка системы длилась дольше заявленного ( 2 недели вместо 1), никак не могли с мтс договориться Учёт сложен был в обучении · Нормальная система, по крайней мере проще и быстрее чем предыдущая 1с Тех поддержка быстро реагирует Раз в месяц менеджеры звонят спрашивают все ли хорошо, чем помочь, часто по скайпу обучаем новым фишкам персонал В целом нравится, что ребята заботятся о своих автосервисах.",
+        "profile": {
+          "name": "Crmindex",
+          "url": "https://crmindex.ru/products/stocrm/reviews",
+          "long_name": "crmindex.ru",
+          "img": "https://imgs.search.brave.com/lj0LQmnL05UAfHY2S29Zf284WmKi6CKnJjFQDhBHfTY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGYwMTg0MjZm/NjNlN2MzMzNhNzIz/ODM4MDQ2NmNiNzlj/NTBiODFkYjE4YWJk/ZjE3NDFjYjVlZmYz/NDgwODdmYi9jcm1p/bmRleC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "review",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "crmindex.ru",
+          "hostname": "crmindex.ru",
+          "favicon": "https://imgs.search.brave.com/lj0LQmnL05UAfHY2S29Zf284WmKi6CKnJjFQDhBHfTY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGYwMTg0MjZm/NjNlN2MzMzNhNzIz/ODM4MDQ2NmNiNzlj/NTBiODFkYjE4YWJk/ZjE3NDFjYjVlZmYz/NDgwODdmYi9jcm1p/bmRleC5ydS8",
+          "path": "› products  › stocrm  › reviews"
+        },
+        "extra_snippets": [
+          "подключение телефонии отдельная функция стоющая приличных денег не сопоставима с техническими затратами ... Здравствуйте, Матвей! Благодарим вас за положительный отзыв о нашей CRM для автосервиса - STOCRM.",
+          "На фоне шума о црм системах стали рассматривать разные От цен конечно сначала ахр...ли, но деваться не куда, надо что-то менять Остановились на STOCRM, так как она профильная под автосервис, это важно Сначала решили не переходить полностью, а вести в ней только работу с клиентами. Учёт вели по-старинке в альфе Через месяц пошёл результат- клиентов физически стало больше просто из-за фиксации обращений Мы работаем до 8 вечера, но оказывается люди звонят и после ...",
+          "нужно было покупать телефоны дополнительно специальные (—5000 руб) Настройка системы длилась дольше заявленного ( 2 недели вместо 1), никак не могли с мтс договориться Учёт сложен был в обучении · Нормальная система, по крайней мере проще и быстрее чем предыдущая 1с Тех поддержка быстро реагирует Раз в месяц менеджеры звонят спрашивают все ли хорошо, чем помочь, часто по скайпу обучаем новым фишкам персонал В целом нравится, что ребята заботятся о своих автосервисах.",
+          "STOCRM - это программное решение для автосервисов, позволяющее вести клиентскую базу, управлять заказ-нарядами, складскими операциями, осуществлять автоматический заказ автозапчастей, контролировать зарплаты, отслеживать звонки, отправлять SMS-уведомления и выполнять множество других задач 26 отзывов"
+        ]
+      },
+      {
+        "title": "Программы для автосервиса ТОП 100 — VINPIN СТО | Автодата",
+        "url": "https://sto.vinpin.ru/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Программы для автосервисов, входящие в состав VINPIN СТО: Увеличивают средний чек с каждого клиента. Уменьшают время ремонта автомобилей. ... Упрощают и ускоряют работу механиков, электриков, мастеров-приёмщиков и другого персонала СТО. Улучшают отзывы и индекс NPS (индекс готовности рекомендовать) ваших клиентов.",
+        "profile": {
+          "name": "Vinpin",
+          "url": "https://sto.vinpin.ru/",
+          "long_name": "sto.vinpin.ru",
+          "img": "https://imgs.search.brave.com/r7Ng7tdzwtQ03n-Dlj2OLXS1mhmnJHORfwPFMJJwjZA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZGZlNmVlZjBj/NTIwOTQzZmE2ODRm/ZjNiMWJhOTEyN2M2/ZWRlZTRlZGJiNzIy/ZjY3NDVhYTUwYWRj/Nzk0YzdhNy9zdG8u/dmlucGluLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "sto.vinpin.ru",
+          "hostname": "sto.vinpin.ru",
+          "favicon": "https://imgs.search.brave.com/r7Ng7tdzwtQ03n-Dlj2OLXS1mhmnJHORfwPFMJJwjZA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZGZlNmVlZjBj/NTIwOTQzZmE2ODRm/ZjNiMWJhOTEyN2M2/ZWRlZTRlZGJiNzIy/ZjY3NDVhYTUwYWRj/Nzk0YzdhNy9zdG8u/dmlucGluLnJ1Lw",
+          "path": ""
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/uaX0iRcDGvTXhAVtcEPGwgR6i4jD0Wh4u2_O53py5gY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudGlsZGFjZG4u/Y29tL3RpbGQzMDMy/LTYyNjUtNDI2MS1i/MDM4LTM3MzM2NjMw/NjIzNC9uZXctdmlu/cGluLXN0by5wbmc",
+          "original": "https://static.tildacdn.com/tild3032-6265-4261-b038-373366306234/new-vinpin-sto.png",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Программы для автосервиса и СТО (для автомехаников, автоэлектриков и мастеров-приёмщиков): руководства по ремонту авто, регламенты ТО, электросхемы автомобилей, нормы времени по ремонту, объемы жидкостей, расшифровки кодов и многое-многое другое.﻿ ELSA, Autodata (Автодата), WorkShopData, Wurth WOW, TechData, AllData, TecDoc и т.д. Более 100 программ для автосервисов в одной подписке всего за 3000р.",
+          "Руководства по ремонту авто, регламенты ТО, электросхемы автомобилей, нормы времени по ремонту, объемы жидкостей, расшифровки кодов и многое-многое другое.﻿",
+          "Программы для автосервисов, входящие в состав VINPIN СТО: Увеличивают средний чек с каждого клиента. Уменьшают время ремонта автомобилей. ... Упрощают и ускоряют работу механиков, электриков, мастеров-приёмщиков и другого персонала СТО. Улучшают отзывы и индекс NPS (индекс готовности рекомендовать) ваших клиентов.",
+          "Программа для автосервисов — ALLDATA · HYNES PRO WORKSHOPDATA (TechData, ТекДата, Воркшопдата) —программа для мастеров-приемщиков СТО."
+        ]
+      },
+      {
+        "title": "10 лучших CRM для автосервиса. Рейтинг и сравнение CRM",
+        "url": "https://crmindex.ru/for/avtoservisi",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Готовый и современный CRM для автосервисов и СТО: онлайн-запись, база клиентов, нормочасы, касса, заказ-наряды и склад в одной программе. Напоминания в MAX и Telegram. Промокод: GIPIXINDEX (Мы на столько тебя ценим, что помимо низких цен дарим еще и промокод ) ... Уникальная учётная система для малого бизнеса.",
+        "profile": {
+          "name": "Crmindex",
+          "url": "https://crmindex.ru/for/avtoservisi",
+          "long_name": "crmindex.ru",
+          "img": "https://imgs.search.brave.com/lj0LQmnL05UAfHY2S29Zf284WmKi6CKnJjFQDhBHfTY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGYwMTg0MjZm/NjNlN2MzMzNhNzIz/ODM4MDQ2NmNiNzlj/NTBiODFkYjE4YWJk/ZjE3NDFjYjVlZmYz/NDgwODdmYi9jcm1p/bmRleC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "crmindex.ru",
+          "hostname": "crmindex.ru",
+          "favicon": "https://imgs.search.brave.com/lj0LQmnL05UAfHY2S29Zf284WmKi6CKnJjFQDhBHfTY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGYwMTg0MjZm/NjNlN2MzMzNhNzIz/ODM4MDQ2NmNiNzlj/NTBiODFkYjE4YWJk/ZjE3NDFjYjVlZmYz/NDgwODdmYi9jcm1p/bmRleC5ydS8",
+          "path": "› for  › avtoservisi"
+        },
+        "extra_snippets": [
+          "Какая CRM идеально подходит для автосервисов? Мы составили рейтинг лучших. Обзоры CRM с функцией учета клиентов, рассылки, отслеживания истории взаимодействия с клиентами, расчета зарплаты сотрудникам, онлайн-запись клиентов, координации работы персонала",
+          "Готовый и современный CRM для автосервисов и СТО: онлайн-запись, база клиентов, нормочасы, касса, заказ-наряды и склад в одной программе. Напоминания в MAX и Telegram. Промокод: GIPIXINDEX (Мы на столько тебя ценим, что помимо низких цен дарим еще и промокод ) ... Уникальная учётная система для малого бизнеса.",
+          "Пройдите \"Тесты эффективности СТО\" на нашем сайте и получите рекомендации для Вашего сервиса по повышению прибыли. ... Splus поможет навести порядок в автосервисе: просматривать историю заказ–нарядов и оплат по клиентам, историю поступлений и списаний запчастей, начисления и выплаты зарплаты слесарям и мастерам–приемщикам.",
+          "Подходит для компаний любого размера, ориентирована на сервисные центры по ремонту техники, автосервисы, ателье и другие сферы деятельности. ... CRM ПроМастер - программа для учета в сервисном центре и мастерской."
+        ]
+      },
+      {
+        "title": "Автосервис обманывает: популярные схемы",
+        "url": "https://www.rolf.ru/blog/obman_v_avtoservise__kak_ponyat__chto_avtoservis_razvodit_na_dengi/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Loading · LOADING",
+        "profile": {
+          "name": "Rolf",
+          "url": "https://www.rolf.ru/blog/obman_v_avtoservise__kak_ponyat__chto_avtoservis_razvodit_na_dengi/",
+          "long_name": "rolf.ru",
+          "img": "https://imgs.search.brave.com/t7p57GyyAjgE6XfPsiiVRip-Xl63GSk-Jlb_Vu6t0dg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2JjNDU5NjIx/OTMzYTQ3MTcxYzU5/NDJhOWM1ZTBhNzFj/YjIzMDRmNTcyYmU0/NjIyOTE2MWQ2YmRk/NDYyN2Q5ZC93d3cu/cm9sZi5ydS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "rolf.ru",
+          "hostname": "www.rolf.ru",
+          "favicon": "https://imgs.search.brave.com/t7p57GyyAjgE6XfPsiiVRip-Xl63GSk-Jlb_Vu6t0dg/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2JjNDU5NjIx/OTMzYTQ3MTcxYzU5/NDJhOWM1ZTBhNzFj/YjIzMDRmNTcyYmU0/NjIyOTE2MWQ2YmRk/NDYyN2Q5ZC93d3cu/cm9sZi5ydS8",
+          "path": "› blog  › obman_v_avtoservise__kak_ponyat__chto_avtoservis_razvodit_na_dengi"
+        }
+      },
+      {
+        "title": "✅ Бесплатная программа для АвтоСервиса - это быстрый старт Вашего бизнеса на профессиональной системе документооборота Autosoft",
+        "url": "https://sto-soft.ru/besplatnaya-programma-dlya-avtoservisa",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Как рассчитать стоимость нормо-часа · Цены на нормочас в автосервисе и как выбрать эффективную программу для учёта",
+        "page_age": "2026-06-07T10:15:16",
+        "profile": {
+          "name": "Sto-soft",
+          "url": "https://sto-soft.ru/besplatnaya-programma-dlya-avtoservisa",
+          "long_name": "sto-soft.ru",
+          "img": "https://imgs.search.brave.com/WqCfxJri1qyYwPyDbR80fSUXtoZO97twLp7qN-lHGSQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNmFkZTM5NTk4/OGQ2OTg2MDBiOWM3/OThlOGQwNjdlZTkx/NzM5YmEyMTcwZmYx/MTY2OWU2ZGRkZmZk/MWQ2N2VlOC9zdG8t/c29mdC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "sto-soft.ru",
+          "hostname": "sto-soft.ru",
+          "favicon": "https://imgs.search.brave.com/WqCfxJri1qyYwPyDbR80fSUXtoZO97twLp7qN-lHGSQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNmFkZTM5NTk4/OGQ2OTg2MDBiOWM3/OThlOGQwNjdlZTkx/NzM5YmEyMTcwZmYx/MTY2OWU2ZGRkZmZk/MWQ2N2VlOC9zdG8t/c29mdC5ydS8",
+          "path": "› besplatnaya-programma-dlya-avtoservisa"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/6JldVuJEkgD6C2EV6ofTV8WdhfuvGJWLrohG-2_5khE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdG8t/c29mdC5ydS90aHVt/Yi8yL0w3RnJXYmwz/ZE1fTTF0Zmt4azFZ/M1EvMzUwcjM1MC9k/L2FwZWUuanBn",
+          "original": "https://sto-soft.ru/thumb/2/L7FrWbl3dM_M1tfkxk1Y3Q/350r350/d/apee.jpg",
+          "logo": false
+        },
+        "age": "1 month ago",
+        "extra_snippets": [
+          "Бесплатную программу для автосервиса используют как стартовую площадку для начала работы, в дальнейшем приобретая полную версию с переносом всей накопленной информации.",
+          "Как рассчитать стоимость нормо-часа · Цены на нормочас в автосервисе и как выбрать эффективную программу для учёта",
+          "Программы для автосервиса и автомагазина, Каталоги запчастей и каталоги норм-времени на ремонт, Онлайн кассы, Штрих сканеры - можно купить здесь: Нормы времени на ремонт автомобилей ... Как рассчитать стоимость нормочаса для работ на автомобилях Nissan",
+          "Как правильно рассчитывать нормочасы на ремонт автомобилей Газель для автосервисов ... Нормы времени на китайские автомобили: особенности и проблемы · Автонормы 2026 онлайн: время ремонта авто · Как рассчитать стоимость нормочаса для различных авто"
+        ]
+      },
+      {
+        "title": "Отзывы о автосервисах Санкт-Петербурга – мнения посетителей автосервисов на Zoon.ru",
+        "url": "https://spb.zoon.ru/autoservice/reviews",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "С пожеланиями здоровья и благополучия, СТО Инфулл Сервис. ... Приезжал по страховке, делали кузовной ремонт, передний бампер ремонтировали и красили.",
+        "page_age": "2021-07-19T00:00:00",
+        "profile": {
+          "name": "Zoon.ru",
+          "url": "https://spb.zoon.ru/autoservice/reviews",
+          "long_name": "spb.zoon.ru",
+          "img": "https://imgs.search.brave.com/Sr8k8wXhjfhUFb0rsgcuBNkt4RMwVDKubip75davgKU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDlmNTUyYzlj/OGVhM2Y0ZTFkMmFk/Yzg4YmY2YjMzNmMz/OGVjYzMwMzhlMWNl/N2NmNWU5YzE4NWFk/MGY5ZWRmYy9zcGIu/em9vbi5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "spb.zoon.ru",
+          "hostname": "spb.zoon.ru",
+          "favicon": "https://imgs.search.brave.com/Sr8k8wXhjfhUFb0rsgcuBNkt4RMwVDKubip75davgKU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDlmNTUyYzlj/OGVhM2Y0ZTFkMmFk/Yzg4YmY2YjMzNmMz/OGVjYzMwMzhlMWNl/N2NmNWU5YzE4NWFk/MGY5ZWRmYy9zcGIu/em9vbi5ydS8",
+          "path": "› autoservice  › reviews"
+        },
+        "age": "July 19, 2021",
+        "organization": {
+          "type": "organization",
+          "name": "Официальный комментарий заведения",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "По мелочи, например, поменять масло — тоже претензий нет. Делают быстро, всё строго по делу. Это СТО я могу только рекомендовать. Редко сейчас встретишь такие хорошие автосервисы.",
+          "Внимание устроило, Юрий хорошо все посмотрел, быстро оценил, договорились, цена нормальная, средняя по городу. Обсудили все по покраске автомобиля Toyota Land Cruiser, сколько будет стоить, что нужно для этого, стекло заказали, какое надо, записали на услугу.",
+          "С пожеланиями здоровья и благополучия, СТО Инфулл Сервис. ... Приезжал по страховке, делали кузовной ремонт, передний бампер ремонтировали и красили. Машину вернули в нормальном состоянии, уложились в оговоренные сроки, без лишних вопросов.",
+          "Проходил ТО в данном заведении и остался очень доволен, цены соответствуют заявленным, сделали все оперативно, а мастер Николай настоящий профессионал, после осмотра рассказал чем стоит заняться в первую очередь, а что может подождать. Также на… ... Автосервисы • Техническое обслуживание • Слесарный ремонт • Ремонт японских автомобилей •"
+        ]
+      },
+      {
+        "title": "Отзывы о программе для автосервиса",
+        "url": "https://www.usu.kz/programma_dlya_avtoservisa_otzyivyi.php",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Ведение автосервисом учета в Excel становится анахронизмом или привилегией небольших СТО, где наблюдается небольшая номенклатура и малые обороты...",
+        "profile": {
+          "name": "Usu",
+          "url": "https://www.usu.kz/programma_dlya_avtoservisa_otzyivyi.php",
+          "long_name": "usu.kz",
+          "img": "https://imgs.search.brave.com/R84Nf96PtjJEXsrqKMXYlG68at4_yl1UTLxqNhNvw_4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZGQwZjkxOGFj/OTJkOTE2OTM1MmJm/ZTY3ZDY2ZmJkNWE4/NzVkMzlhMTQ0NGI4/MmI2ODdmZDQzZDBm/YjEwMjgzZC93d3cu/dXN1Lmt6Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "video",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "usu.kz",
+          "hostname": "www.usu.kz",
+          "favicon": "https://imgs.search.brave.com/R84Nf96PtjJEXsrqKMXYlG68at4_yl1UTLxqNhNvw_4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZGQwZjkxOGFj/OTJkOTE2OTM1MmJm/ZTY3ZDY2ZmJkNWE4/NzVkMzlhMTQ0NGI4/MmI2ODdmZDQzZDBm/YjEwMjgzZC93d3cu/dXN1Lmt6Lw",
+          "path": "  › усу  › программы для автоматизации бизнеса  › программа автосервис"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Rmy39p-ELhQ-jA1YXQDtsYtgwU8d_rK2rLYpxCN70W4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/dXN1Lmt6L2ltZy90/aF9zYWxvbi5qcGc",
+          "original": "https://www.usu.kz/img/th_salon.jpg",
+          "logo": false
+        },
+        "video": {
+          "duration": "20:00",
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/vLLXjdN8nugHZjfOEJOfXoT-kQZTExQYPUr3YWy7O_w/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/dXN1Lmt6L2ltZy95/b3V0dWJlMjI1LnBu/Zw",
+            "original": "https://www.usu.kz/img/youtube225.png"
+          }
+        },
+        "creative_work": {
+          "name": "Отзывы о программе для автосервиса",
+          "rating": {
+            "ratingValue": 4.7,
+            "bestRating": 5.0,
+            "reviewCount": 176,
+            "is_tripadvisor": false
+          },
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/zkFtsmRdMQoYbN2zM0ejQvuc7osSlMjS0eh5hY8fsNg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/dXN1Lmt6L2ltZy9z/Y3JlZW5zaG90cy9z/dG8vc21hbGwuanBn",
+            "original": "https://www.usu.kz/img/screenshots/sto/small.jpg"
+          }
+        },
+        "extra_snippets": [
+          "Вариант 1. Посмотреть подробный видео-ролик о программе для автоматизации автосервиса · Вариант 2. Посмотреть видео программы для учета длительных работ на СТО",
+          "Ведение автосервисом учета в Excel становится анахронизмом или привилегией небольших СТО, где наблюдается небольшая номенклатура и малые обороты.",
+          "В случае автосервиса это, зачастую, совмещение нескольких видов деятельности: диагностика, реализация комплектующих и ремонт. Для того, чтобы автосервис мог вести полноценную работу, многими применяется та или другая программа для СТО.",
+          "Этот софт для автоматизации автосервиса имеет неограниченные возможности и может применяться любым типом СТО. УСУ автоматизирует для вас любые виды деятельности предприятия."
+        ]
+      },
+      {
+        "title": "Программа для автосервиса - автоматизация и учет в приложении — Контур.Маркет",
+        "url": "https://kontur.ru/market/uslugi/avtoservisy",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Поставьте на автопилот запись клиентов в сервис по ремонту автомобилей. Создавайте заказ-наряды, чтобы в документе отражался набор услуг, товаров, имя мастера ...",
+        "profile": {
+          "name": "Kontur",
+          "url": "https://kontur.ru/market/uslugi/avtoservisy",
+          "long_name": "kontur.ru",
+          "img": "https://imgs.search.brave.com/xqZ5_2QGMDs1MFiMHRD4CwuvFsKF999CFl2SoEev0N4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2U1OGJhNzU5/YjgwMzkxMGRlM2My/NGM4YmZiYjk4NjNm/MGRlYTM3ZDNkYWQw/YjkyYzlmYTUzNDJh/MTMyNjQwNC9rb250/dXIucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "kontur.ru",
+          "hostname": "kontur.ru",
+          "favicon": "https://imgs.search.brave.com/xqZ5_2QGMDs1MFiMHRD4CwuvFsKF999CFl2SoEev0N4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2U1OGJhNzU5/YjgwMzkxMGRlM2My/NGM4YmZiYjk4NjNm/MGRlYTM3ZDNkYWQw/YjkyYzlmYTUzNDJh/MTMyNjQwNC9rb250/dXIucnUv",
+          "path": "  › главная  › решения  › для услуг"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Spa5BGLSc5TFIUBo3pEf5RFo7r1CTYoadl0eskrdeN0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zLmtv/bnR1ci5ydS9jb21t/b24tdjIvaWNvbnMt/cHJvZHVjdHMvbWFy/a2V0L2F2YXRhci9t/YXJrZXQtYXZhdGFy/LTUxMi5wbmc",
+          "original": "https://s.kontur.ru/common-v2/icons-products/market/avatar/market-avatar-512.png",
+          "logo": true
+        },
+        "extra_snippets": [
+          "Если модели вашей кассы нет в списке производителей выше, сфотографируйте ее с двух сторон так, чтобы были видны наименование, наклейки с номерами и штрихкодами.",
+          "Отслеживайте актуальные остатки товара, если продаете в автосервисе масла или фильтры. Остатки автоматически обновляются по данным с кассы.",
+          "Перечень оборудования, с которым умеет работать Контур.Маркет, регулярно пополняется новыми моделями. Если у вас еще нет кассовой техники, отправьте заявку со страницы с кассовым оборудованием, и мы подберем для вас оптимальный комплект."
+        ]
+      },
+      {
+        "title": "Открыть автосервис: плюсы и минусы, стоит ли ввязываться",
+        "url": "https://www.drom.ru/info/misc/31231.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Авообще я вам сейчас глаза открою,нет в провинции нормальных сервисов...есть конторы для развода лохов...все ремонтятся только по блату и у знакомых,просто,что бы не развели..разводят на всём..боле-мене серьёзный ремонт,сразу же отправляют в столицу или советуют контракт и это в Воронеже,где более миллиона жителей,нет ни одного высоко-профессионального сервиса...огромная часть моих знакомых ремонтится и обслуживается в Москве...нет сервисов, не ту...",
+        "page_age": "2020-04-09T23:32:43",
+        "profile": {
+          "name": "Drom",
+          "url": "https://www.drom.ru/info/misc/31231.html",
+          "long_name": "drom.ru",
+          "img": "https://imgs.search.brave.com/EDno8UijcNS-1y8Ud5Dbph6qabfkHAjGuKpj9CAq5nM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWRlNTFhZGJl/NDkxZWQ1YjZiODE0/NGE3ZTg0MGIxYWUx/MDU0NGQ0ODk1NjVm/YTUzMTkxZmRiZGY5/YzMxZThjNC93d3cu/ZHJvbS5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "drom.ru",
+          "hostname": "www.drom.ru",
+          "favicon": "https://imgs.search.brave.com/EDno8UijcNS-1y8Ud5Dbph6qabfkHAjGuKpj9CAq5nM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWRlNTFhZGJl/NDkxZWQ1YjZiODE0/NGE3ZTg0MGIxYWUx/MDU0NGQ0ODk1NjVm/YTUzMTkxZmRiZGY5/YzMxZThjNC93d3cu/ZHJvbS5ydS8",
+          "path": "  › дром  › тест-драйвы и статьи об авто  › разное"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/c7QnqXbDZdawPTaesY67nhofUI4V4aXpfhaA1QCRrTk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zLnJk/cm9tLnJ1LzQvcHVi/cy80NDgzLzMxMjMx/LzE2ODE0NTQuSlBH",
+          "original": "https://s.rdrom.ru/4/pubs/4483/31231/1681454.JPG",
+          "logo": false
+        },
+        "age": "April 9, 2020",
+        "article": {
+          "author": [],
+          "date": "Feb 04, 2015",
+          "publisher": {
+            "type": "organization",
+            "name": "ДРОМ",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/ZRwuAjr7D1v5Y37R8xyTIsR-DSy1oLcc7JCBC2e3hyw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9yLmRy/b20ucnUvaW1hZ2Vz/L2xvZ28vNjB4NjAw/X2Ryb20uanBn",
+              "original": "https://r.drom.ru/images/logo/60x600_drom.jpg"
+            }
+          }
+        },
+        "extra_snippets": [
+          "Наши сограждане боятся заниматься малым бизнесом и правильно делают. Потерять все, что имеешь, включая квартиру и машину, — раз плюнуть. И тем не менее количество мелких неофициальных автосервисов в последние годы только росло.",
+          "Мои отзывы: Mitsubishi Galant Fortis 2013, Suzuki Alto 2011, Nissan Primera 2003, Nissan Teana 2004 ... да ладно, масло поменять врядли дороже 300-400 рублей стоит... Subaru Forester '03 SG5 Turbo VTD правый руль Toyota RAV4 '02 3dr правый руль ... ага. 10 клиентов в день, 1600 в среднем ~ 16000 в день, при учёте (по тексту явно сказано) пятидневной рабочей недели (само по себе ваааще круто!) получается 20-22 рабочих дня получается 352 тысячи за 22 дня.",
+          "Авообще я вам сейчас глаза открою,нет в провинции нормальных сервисов...есть конторы для развода лохов...все ремонтятся только по блату и у знакомых,просто,что бы не развели..разводят на всём..боле-мене серьёзный ремонт,сразу же отправляют в столицу или советуют контракт и это в Воронеже,где более миллиона жителей,нет ни одного высоко-профессионального сервиса...огромная часть моих знакомых ремонтится и обслуживается в Москве...нет сервисов, не ту...",
+          "Из статьи сделал вывод: надо делать бизнес по сдаче помещений автосервисам! :)) Важно быть, а не казаться. ... А у меня не нормальный сервис, я сам по себе."
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

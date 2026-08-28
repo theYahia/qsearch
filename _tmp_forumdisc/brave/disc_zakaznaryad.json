@@ -1,0 +1,977 @@
+{
+  "type": "search",
+  "query": {
+    "original": "форум автосервис программа учёта заказ-нарядов не хватает неудобно",
+    "show_strict_warning": false,
+    "is_navigational": false,
+    "is_news_breaking": false,
+    "spellcheck_off": false,
+    "country": "us",
+    "bad_results": false,
+    "should_fallback": false,
+    "postal_code": "",
+    "city": "",
+    "header_country": "",
+    "more_results_available": true,
+    "state": ""
+  },
+  "mixed": {
+    "type": "mixed",
+    "main": [
+      {
+        "type": "web",
+        "index": 0,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 1,
+        "all": false
+      },
+      {
+        "type": "videos",
+        "all": true
+      },
+      {
+        "type": "web",
+        "index": 2,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 3,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 4,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 5,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 6,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 7,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 8,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 9,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 10,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 11,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 12,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 13,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 14,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 15,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 16,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 17,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 18,
+        "all": false
+      },
+      {
+        "type": "web",
+        "index": 19,
+        "all": false
+      }
+    ],
+    "top": [],
+    "side": []
+  },
+  "videos": {
+    "type": "videos",
+    "results": [
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=FtghgMkU_Wc",
+        "title": "1С:Автосервис: простое решение для ...",
+        "description": "Запись вебинара от 24 сентября 2024 года на тему \"1С:Автосервис: простое решение для непростых задач\".Программ вебинара:Преимущества программы «1С:Автосерви...",
+        "age": "September 25, 2024",
+        "page_age": "2024-09-25T14:49:35",
+        "fetched_content_timestamp": 1742914068,
+        "video": {
+          "duration": "37:30",
+          "views": 205,
+          "creator": "1С-Рарус",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/o75xRHA9_JTOsXx6POF5bLxD4wwKVf9i8ZCibEPc3VY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9G/dGdoZ01rVV9XYy9t/YXhyZXNkZWZhdWx0/LmpwZz9zcXA9LW9h/eW13RW1DSUFLRU5B/RjhxdUtxUU1hOEFF/Qi1BSC1DWUFDMEFX/S0Fnd0lBQkFCR0Nn/Z0lpaF9NQTg9JmFt/cDtycz1BT240Q0xC/TFZqeHJIZ0dEdGZp/TTh6S3RUd2V0RkhZ/NVVB",
+          "original": "https://i.ytimg.com/vi/FtghgMkU_Wc/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGCggIih_MA8=&amp;rs=AOn4CLBLVjxrHgGDtfiM8zKtTwetFHY5UA"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=m6mygWE25jY",
+        "title": "TOP-5 программ для автоматизации ...",
+        "description": "Без автоматизации СТО будет очень сложно! Берет самые популярные CRM для авто бизнеса, с первой страницы Яндекса и выбираем лучшую именно для работы автосерв...",
+        "age": "March 4, 2024",
+        "page_age": "2024-03-04T19:21:15",
+        "fetched_content_timestamp": 1780831842,
+        "video": {
+          "duration": "28:38",
+          "creator": "Auto Soft Lab",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/u4-zvxNCi5CHEw8t08s7cv781-mJyB8SDoz8sERmWr8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9t/Nm15Z1dFMjVqWS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/m6mygWE25jY/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=56GOoaJp8bU",
+        "title": "TOP-7 программ для автоматизации ...",
+        "description": "Для тех кто анализирует рынок программного обеспечения и содержит краткий обзор программ с разделением по параметрам: цена, облако или нет, возможность дораб...",
+        "age": "February 16, 2021",
+        "page_age": "2021-02-16T13:13:04",
+        "fetched_content_timestamp": 1773508483,
+        "video": {
+          "duration": "11:17",
+          "creator": "Auto Soft Lab",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/YBjgVxT_UrCXL0QxTbA05mcp6Rv8wuQ0Ca013o7dHnw/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS81/NkdPb2FKcDhiVS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/56GOoaJp8bU/maxresdefault.jpg"
+        }
+      },
+      {
+        "type": "video_result",
+        "url": "https://www.youtube.com/watch?v=zAD-x20z0mQ",
+        "title": "АВТОСЕРВИС - ГОТОВАЯ CRM система 5 ...",
+        "description": "Автосервис без хлопот! CRM АВТОСЕРВИС — автоматизируй продажи, работы по ремонту, закупку запчастей, получай обратную связь и подогревай клиентов на автопило...",
+        "age": "March 31, 2025",
+        "page_age": "2025-03-31T08:33:21",
+        "fetched_content_timestamp": 1781773186,
+        "video": {
+          "duration": "30:40",
+          "creator": "KALININ consulting Настройка и внедрение Битрикс24",
+          "publisher": "YouTube"
+        },
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "youtube.com",
+          "hostname": "www.youtube.com",
+          "favicon": "https://imgs.search.brave.com/Wg4wjE5SHAargkzePU3eSLmWgVz84BEZk1SjSglJK_U/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTkyZTZiMWU3/YzU3Nzc5YjExYzUy/N2VhZTIxOWNlYjM5/ZGVjN2MyZDY4Nzdh/ZDYzMTYxNmI5N2Rk/Y2Q3N2FkNy93d3cu/eW91dHViZS5jb20v",
+          "path": "› watch"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/37ZLp5s5EC55M-y4seOaF8XgV1SqbOaWNlit0K9I_pM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS96/QUQteDIwejBtUS9t/YXhyZXNkZWZhdWx0/LmpwZw",
+          "original": "https://i.ytimg.com/vi/zAD-x20z0mQ/maxresdefault.jpg"
+        }
+      }
+    ],
+    "mutated_by_goggles": false
+  },
+  "web": {
+    "type": "search",
+    "results": [
+      {
+        "title": "Мини-Гараж: бесплатная программа для автосервисов, автомастерских и СТО | скачать, регистрация",
+        "url": "https://www.kors-soft.ru/opgar1.htm",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Исправлена ошибка привязки моделей и картинки при работе с работами или деталями из заказа-наряда. ... В режиме импорта из Excel (справочники работ и деталей) добавлена возможность определять марку и модель авто для импортируемых позиций (модель может быть только одна). Исправлена ошибка импорта из программы семейства &quot;Автосервис&quot; (неправильно импортировались группы работ, деталей).",
+        "profile": {
+          "name": "Kors-soft",
+          "url": "https://www.kors-soft.ru/opgar1.htm",
+          "long_name": "kors-soft.ru",
+          "img": "https://imgs.search.brave.com/kc1fNPjmjvIRKgMCoq9PKmfRqKA4cl_Kp9D8iHCINlU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWI2MTU2MThm/ODI2MTQyZDgzMTNh/ZWNjNjZjNTIxODUx/Y2ExMzA3MmE0Y2Y4/YWZiMDljNGY4MjRi/MmJjOTc4OC93d3cu/a29ycy1zb2Z0LnJ1/Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "kors-soft.ru",
+          "hostname": "www.kors-soft.ru",
+          "favicon": "https://imgs.search.brave.com/kc1fNPjmjvIRKgMCoq9PKmfRqKA4cl_Kp9D8iHCINlU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWI2MTU2MThm/ODI2MTQyZDgzMTNh/ZWNjNjZjNTIxODUx/Y2ExMzA3MmE0Y2Y4/YWZiMDljNGY4MjRi/MmJjOTc4OC93d3cu/a29ycy1zb2Z0LnJ1/Lw",
+          "path": "› opgar1.htm"
+        },
+        "extra_snippets": [
+          "В режиме \"История заказов-нарядов\" добавлено поле \"Фильтр\" (фильтрация - по колонкам \"Модель\", \"VIN\" и \"Гос.номер\"). ... При импорте данных из программы \"Корс Автосервис\" теперь:",
+          "автоматически привязывается модель в заказе-наряде (если она была выбрана из справочника). При импорте данных из программы \"Лайтик-Автосервис\" теперь переносятся поля справочников работ (деталей): ориг.номер, производитель, номер производителя (в поле доп.номер).",
+          "Исправлена ошибка привязки моделей и картинки при работе с работами или деталями из заказа-наряда. ... В режиме импорта из Excel (справочники работ и деталей) добавлена возможность определять марку и модель авто для импортируемых позиций (модель может быть только одна). Исправлена ошибка импорта из программы семейства \"Автосервис\" (неправильно импортировались группы работ, деталей).",
+          "В режиме \"История\" (заказов-нарядов текущего клиента) добавлена кнопка \"Просмотр\" для доступа к содержимому документа из истории."
+        ]
+      },
+      {
+        "title": "Мини-Автосервис: бесплатная программа учета заказов-нарядов | скачать, регистрация",
+        "url": "http://www.kors.aha.ru/opaut1.htm",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Бесплатная программа составления заказов-нарядов, для учета в автосервисах, автомастерских.",
+        "profile": {
+          "name": "Aha",
+          "url": "http://www.kors.aha.ru/opaut1.htm",
+          "long_name": "kors.aha.ru",
+          "img": "https://imgs.search.brave.com/keTC1pUYz_izicgQCvGXC5Sm3GFTl0odRsWPFzi1qsk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDVhOTkxMDRk/NzAxZDU4NGQzNDc1/YTBmN2U1Y2EwOWI2/YmRjZmViYjc3NWMw/NWFkYjNjZTlmNDY5/MzM2N2UzZS93d3cu/a29ycy5haGEucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "http",
+          "netloc": "kors.aha.ru",
+          "hostname": "www.kors.aha.ru",
+          "favicon": "https://imgs.search.brave.com/keTC1pUYz_izicgQCvGXC5Sm3GFTl0odRsWPFzi1qsk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDVhOTkxMDRk/NzAxZDU4NGQzNDc1/YTBmN2U1Y2EwOWI2/YmRjZmViYjc3NWMw/NWFkYjNjZTlmNDY5/MzM2N2UzZS93d3cu/a29ycy5haGEucnUv",
+          "path": "› opaut1.htm"
+        }
+      },
+      {
+        "title": "Программа для автосервиса - автоматизация и учет в приложении — Контур.Маркет",
+        "url": "https://kontur.ru/market/uslugi/avtoservisy",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Заказ-наряды Учет остатков Онлайн-запись",
+        "profile": {
+          "name": "Kontur",
+          "url": "https://kontur.ru/market/uslugi/avtoservisy",
+          "long_name": "kontur.ru",
+          "img": "https://imgs.search.brave.com/xqZ5_2QGMDs1MFiMHRD4CwuvFsKF999CFl2SoEev0N4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2U1OGJhNzU5/YjgwMzkxMGRlM2My/NGM4YmZiYjk4NjNm/MGRlYTM3ZDNkYWQw/YjkyYzlmYTUzNDJh/MTMyNjQwNC9rb250/dXIucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "kontur.ru",
+          "hostname": "kontur.ru",
+          "favicon": "https://imgs.search.brave.com/xqZ5_2QGMDs1MFiMHRD4CwuvFsKF999CFl2SoEev0N4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvY2U1OGJhNzU5/YjgwMzkxMGRlM2My/NGM4YmZiYjk4NjNm/MGRlYTM3ZDNkYWQw/YjkyYzlmYTUzNDJh/MTMyNjQwNC9rb250/dXIucnUv",
+          "path": "  › главная  › решения  › для услуг"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Spa5BGLSc5TFIUBo3pEf5RFo7r1CTYoadl0eskrdeN0/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zLmtv/bnR1ci5ydS9jb21t/b24tdjIvaWNvbnMt/cHJvZHVjdHMvbWFy/a2V0L2F2YXRhci9t/YXJrZXQtYXZhdGFy/LTUxMi5wbmc",
+          "original": "https://s.kontur.ru/common-v2/icons-products/market/avatar/market-avatar-512.png",
+          "logo": true
+        },
+        "extra_snippets": [
+          "Распечатывайте заказ-наряды для сотрудников и клиентов. Отслеживайте актуальные остатки товара, если продаете в автосервисе масла или фильтры.",
+          "Поставьте на автопилот запись клиентов в сервис по ремонту автомобилей. Создавайте заказ-наряды, чтобы в документе отражался набор услуг, товаров, имя мастера и гарантийные условия.",
+          "Заказ-наряды Учет остатков Онлайн-запись"
+        ]
+      },
+      {
+        "title": "Программа для автосервиса – Учет клиентов",
+        "url": "https://yukosoft.ru/programs/programma-dlya-avtoservisa/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Программы учёта для бизнеса ... – Автоматизация автосервиса – как небольших так и средних автосервисов и СТО – Поддержка работы как с локальной offline базой так и с online базой через интернет – Графическое отображение расписания работ по заказ-нарядам – Быстрый поиск клиентов и автомобилей – Учет клиентов физических и юридическ",
+        "profile": {
+          "name": "Yukosoft",
+          "url": "https://yukosoft.ru/programs/programma-dlya-avtoservisa/",
+          "long_name": "yukosoft.ru",
+          "img": "https://imgs.search.brave.com/RqqHt95s46W44zPkF8LiLUIVQpZMAkGz9uus-p83zLE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWNmM2ZlNzYx/NTYxZDhiYWUxOTdm/NzUyMmE0YzFlOTAz/Yzc4Yjg1MWNhMjUw/MmNiMGUzOTQ3OTVj/N2JmMjcxNy95dWtv/c29mdC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "yukosoft.ru",
+          "hostname": "yukosoft.ru",
+          "favicon": "https://imgs.search.brave.com/RqqHt95s46W44zPkF8LiLUIVQpZMAkGz9uus-p83zLE/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWNmM2ZlNzYx/NTYxZDhiYWUxOTdm/NzUyMmE0YzFlOTAz/Yzc4Yjg1MWNhMjUw/MmNiMGUzOTQ3OTVj/N2JmMjcxNy95dWtv/c29mdC5ydS8",
+          "path": "› programs  › programma-dlya-avtoservisa"
+        },
+        "extra_snippets": [
+          "Программы учёта для бизнеса ... – Автоматизация автосервиса – как небольших так и средних автосервисов и СТО – Поддержка работы как с локальной offline базой так и с online базой через интернет – Графическое отображение расписания работ по заказ-нарядам – Быстрый поиск клиентов и автомобилей – Учет клиентов физических и юридическ",
+          "Оказывая услуги по ремонту авто важно как можно детальнее вести учет клиентов и связанных с ними автомобилей, а так же хранить полную историю работ по заказ-нарядам клиентов. Здесь не обойтись без CRM – программы для учёта клиентов автосервиса.",
+          "Это может быть, например, фото повреждения авто, скан техпаспорта на авто и т.д. Программа для автосервиса позволяет вести детальный учёт работ и запчастей в заказ-нарядах.",
+          "Планировщик записи на сервис (планировщик заданий постов сервиса). Для одного заказ-наряда можно создать несколько заданий в ремзону и разместить эти задания в расписании планировщика постов."
+        ]
+      },
+      {
+        "title": "Ребята, у кого свои сервисы, посоветуйте программу для автомастерской.",
+        "url": "https://forums.drom.ru/it/t1151432531.html",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Основные возможности: Удобное и простое составление заказов-нарядов Учет этапов выполнения работ и оплат для каждого заказа-наряда Печать заказа-наряда в профессиональном виде, легкий перенос ее в Word, Excel, Outlook Express Привязка исполнителя работы для каждой из работ в заказе-наряде Автоматический подсчет количества нормо-часов в",
+        "page_age": "2010-08-08T00:00:00",
+        "profile": {
+          "name": "Drom",
+          "url": "https://forums.drom.ru/it/t1151432531.html",
+          "long_name": "forums.drom.ru",
+          "img": "https://imgs.search.brave.com/sAQm2EjpS39cBvr7aijoKRcTrhNdmzkGvXgqGAhAcQM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWVmNjcyZDk4/ODYxNGY2YzY4MGVk/NmM4NjdhM2U0ZjY2/YzVkODBlZWZkZjVh/NDZkZjVkNDIwOTJh/Mzk2NjA4ZS9mb3J1/bXMuZHJvbS5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "forums.drom.ru",
+          "hostname": "forums.drom.ru",
+          "favicon": "https://imgs.search.brave.com/sAQm2EjpS39cBvr7aijoKRcTrhNdmzkGvXgqGAhAcQM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZWVmNjcyZDk4/ODYxNGY2YzY4MGVk/NmM4NjdhM2U0ZjY2/YzVkODBlZWZkZjVh/NDZkZjVkNDIwOTJh/Mzk2NjA4ZS9mb3J1/bXMuZHJvbS5ydS8",
+          "path": "› it  › t1151432531.html"
+        },
+        "age": "August 8, 2010",
+        "extra_snippets": [
+          "Бесплатная программа Мини-Автосервис предназначена для небольших автосервисов и содержит все основные функции по учету ремонтных операций, автоматической калькуляции заказов-нарядов, учету исполнителей работ.",
+          "подскажите есть ли какаянибудь програмка типа записной книжки в которую можно забивать например на каком пробеге и чё было поменяно, замену жидкостей и всё такое? В ASTAR Автосервис это есть.",
+          "Нет, отвечаю на заданный вопрос. не смущает что вопрос задан три года назад? ))) зы. ASTAR Автосервис - *****! )",
+          "Основные возможности: Удобное и простое составление заказов-нарядов Учет этапов выполнения работ и оплат для каждого заказа-наряда Печать заказа-наряда в профессиональном виде, легкий перенос ее в Word, Excel, Outlook Express Привязка исполнителя работы для каждой из работ в заказе-наряде Автоматический подсчет количества нормо-часов в"
+        ]
+      },
+      {
+        "title": "Заказ-наряды в программе Автосервис - Софт от Pisoft",
+        "url": "https://pisoft.ru/aservis/zakaz",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Журнал учета Заказ-нарядов в программе &quot;Автосервис&quot;.",
+        "profile": {
+          "name": "Pisoft",
+          "url": "https://pisoft.ru/aservis/zakaz",
+          "long_name": "pisoft.ru",
+          "img": "https://imgs.search.brave.com/rLPjKQhw6hDrYFtQwdKdCAhK-FQKa_6Tc6XDFJrxHOY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDU1MjJjOTQ4/ZTFlODVkNDQ0M2U4/MjhiOGFjZDVhZjlj/NGJlYThlNjIyOTBl/NmNmZmIzMjg1NDM3/ZmM0ODdhZC9waXNv/ZnQucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "pisoft.ru",
+          "hostname": "pisoft.ru",
+          "favicon": "https://imgs.search.brave.com/rLPjKQhw6hDrYFtQwdKdCAhK-FQKa_6Tc6XDFJrxHOY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDU1MjJjOTQ4/ZTFlODVkNDQ0M2U4/MjhiOGFjZDVhZjlj/NGJlYThlNjIyOTBl/NmNmZmIzMjg1NDM3/ZmM0ODdhZC9waXNv/ZnQucnUv",
+          "path": "› aservis  › zakaz"
+        },
+        "extra_snippets": [
+          "Журнал учета заказ-нарядов предназначен для оформления и хранения заказ-нарядов на ремонт автомобилей и всего что с ними связано. Это одно из основных рабочих окон программы \"Автосервис\".",
+          "Для выбора фильтра в верхней части окна имеется поле с названием фильтра и кнопка Выбрать фильтр. Те же самые фильтры применяются в Отчетах по заказ-нарядам для расширения их функций.",
+          "На вкладке \"Товары, Работы\" окна заказ-наряда расположены две таблицы со списками, соответственно, Товаров и Работ данного заказ-наряда:",
+          "- \"Утвердить\" или \"разутвердить\" данный Заказ-наряд."
+        ]
+      },
+      {
+        "title": "Топ 10: Программы для автосервисов и автосалонов (для России)",
+        "url": "https://www.livebusiness.ru/tools/autoservice/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Позволяет просматривать историю заказ–нарядов и оплат по клиентам, историю поступлений и списаний запчастей, начисления и выплаты зарплаты слесарям и мастерам–приемщикам, расчитывать стоимость ремонта, используя обновляемый официальный справочник нормативов времени от автопроизводителей, интегрированный с заказ– наря",
+        "page_age": "2026-06-29T03:30:35",
+        "profile": {
+          "name": "Livebusiness",
+          "url": "https://www.livebusiness.ru/tools/autoservice/",
+          "long_name": "livebusiness.ru",
+          "img": "https://imgs.search.brave.com/S2N-9cbcnuYxYDLD_LTfoOeOlceL-2wbD14JSFzrJ44/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWJmNDRlODAw/YzRjYTU2YzYzYmU0/YmQzMjI2MjgxNzQ3/ZGMwMjdmM2Y4N2Nk/ODVmOTU5YjhjMmI5/OWMyMGU1ZC93d3cu/bGl2ZWJ1c2luZXNz/LnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "livebusiness.ru",
+          "hostname": "www.livebusiness.ru",
+          "favicon": "https://imgs.search.brave.com/S2N-9cbcnuYxYDLD_LTfoOeOlceL-2wbD14JSFzrJ44/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWJmNDRlODAw/YzRjYTU2YzYzYmU0/YmQzMjI2MjgxNzQ3/ZGMwMjdmM2Y4N2Nk/ODVmOTU5YjhjMmI5/OWMyMGU1ZC93d3cu/bGl2ZWJ1c2luZXNz/LnJ1Lw",
+          "path": "› tools  › autoservice"
+        },
+        "age": "1 week ago",
+        "extra_snippets": [
+          "Позволяет просматривать историю заказ–нарядов и оплат по клиентам, историю поступлений и списаний запчастей, начисления и выплаты зарплаты слесарям и мастерам–приемщикам, расчитывать стоимость ремонта, используя обновляемый официальный справочник нормативов времени от автопроизводителей, интегрированный с заказ– наря",
+          "Программа для автосервиса. Заказ-наряд, нормы времени. Склад, каталог запчастей, маркировка Честный знак, проценка по 150+ поставщикам. 3 мобильных приложения.",
+          "Узкоспециализированная Online CRM именно для автосервисов и магазинов автозапчастей, в которой вы можете вести клиентов, заказ-наряды, склад, заказывать запчасти, зарплату, звонки, смс и многое другое.",
+          "Онлайн CRM для автосервисов. Универсальный календарь. Клиенты, наряды-заказы, рабочий табель, заметки - все в одном месте. Интеграция с сайтом. Таймлайн отображает заказы и изображение с камер (опционально) в единой шкале времени."
+        ]
+      },
+      {
+        "title": "Бесплатная программа для автосервиса АСУ-Автосервис Lite",
+        "url": "https://toolhand.ru/product/%D0%B0%D1%81%D1%83-%D0%B0%D0%B2%D1%82%D0%BE%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81-lite/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "На тему того, что неудобно вносить, заносить, много времени отбирает, у меня проблем не возникло. Я занимаюсь в сервисе административной ...",
+        "page_age": "2026-03-19T14:55:06",
+        "profile": {
+          "name": "Toolhand",
+          "url": "https://toolhand.ru/product/%D0%B0%D1%81%D1%83-%D0%B0%D0%B2%D1%82%D0%BE%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81-lite/",
+          "long_name": "toolhand.ru",
+          "img": "https://imgs.search.brave.com/g4upx9Oj4PhHt06Tm4dTeVLsaFZPDsjNSgjD-vIxO-Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDVkZDVlOGFk/MDZhMjcyNTBiNjM0/ZTVkYzE5MjEyOTk5/MDY3ZGE1YTBlZWQ0/MDRiZGY1M2ZmM2Ex/ZjMyZTU3My90b29s/aGFuZC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "toolhand.ru",
+          "hostname": "toolhand.ru",
+          "favicon": "https://imgs.search.brave.com/g4upx9Oj4PhHt06Tm4dTeVLsaFZPDsjNSgjD-vIxO-Y/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDVkZDVlOGFk/MDZhMjcyNTBiNjM0/ZTVkYzE5MjEyOTk5/MDY3ZGE1YTBlZWQ0/MDRiZGY1M2ZmM2Ex/ZjMyZTU3My90b29s/aGFuZC5ydS8",
+          "path": "  › главная  › продукты  › асу-автосервис lite"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/Z6tVHpWNd3zMERpNzxVMIdtW8gcVdlMYf4HFURlBjiU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly90b29s/aGFuZC5ydS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxOC8wNS9h/c3UtYS1sb2dvLWxp/dGUucG5n",
+          "original": "https://toolhand.ru/wp-content/uploads/2018/05/asu-a-logo-lite.png",
+          "logo": true
+        },
+        "age": "March 19, 2026",
+        "organization": {
+          "type": "organization",
+          "name": "Toolhand Инструмент для вашего бизнеса",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Андрей, оформляя товары на склад и указывая закупочную цену, в последствие это дает возможность посмотреть прибыль от проданных запчастей, остатки и т.п. Если эта информация не важна для Вас, мы в скором времени выпустим обновление в котором можно добавлять запчасти клиента и они будут привязываться не на склад, а просто к заказ-наряду, мы думаем такой вариант Вас устроит. Спасибо за отзыв. ... Очень нравится программа, небольшой автосервис, около 300 клиентов.",
+          "На тему того, что неудобно вносить, заносить, много времени отбирает, у меня проблем не возникло. Я занимаюсь в сервисе административной работой: заказываю запчасти и расходники, следовательно, сразу многу внести в базу и заносить на склад.",
+          "А то прими запчасти на склад с артикулами и прочим, потом найди запчасти в списке, потом внеси в зказ наряд, вот сижу третий день с тремя машинами, запчастей к каждой по 40-50 штук, и гоняю из каталога в каталог эти запчасти.",
+          "Отличная программа для того чтоб попробовать в общем использование программы для начинающего развиваться автосервиса."
+        ]
+      },
+      {
+        "title": "Splus.ru – Быстрое создание заказов–нарядов",
+        "url": "https://splus.ru/speedmode",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Splus – программа для учета в автосервисе, одно из главных преимуществ которой, это скорость оформления всех необходимых операций. Для оформления заказ–наряда вы можете воспользоваться упрощенным форматом добавления данных: программа сама создаст карточку контрагента, карточки услуг и товаров непосредственно из внесенных вами данных в заказ–наряд.",
+        "profile": {
+          "name": "Splus",
+          "url": "https://splus.ru/speedmode",
+          "long_name": "splus.ru",
+          "img": "https://imgs.search.brave.com/bsPwlUiOvZ_yzacTbgdaec5dJ260wLMkN7UPqv_3HW4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmVjNDJhMTM4/OTg4NjMxMzAzMWYw/ZDVkMWExOWY2YmI4/YzczZjAzMzY5OGVh/MDc0YzRhMDMyN2Qz/ZmIwY2MyOS9zcGx1/cy5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "splus.ru",
+          "hostname": "splus.ru",
+          "favicon": "https://imgs.search.brave.com/bsPwlUiOvZ_yzacTbgdaec5dJ260wLMkN7UPqv_3HW4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmVjNDJhMTM4/OTg4NjMxMzAzMWYw/ZDVkMWExOWY2YmI4/YzczZjAzMzY5OGVh/MDc0YzRhMDMyN2Qz/ZmIwY2MyOS9zcGx1/cy5ydS8",
+          "path": "› speedmode"
+        },
+        "extra_snippets": [
+          "Splus – программа для учета в автосервисе, одно из главных преимуществ которой, это скорость оформления всех необходимых операций. Для оформления заказ–наряда вы можете воспользоваться упрощенным форматом добавления данных: программа сама создаст карточку контрагента, карточки услуг и товаров непосредственно из внесенных вами данных в заказ–наряд.",
+          "Одним из ключевых элементов оптимизации работы автосервиса является использование специализированных онлайн программ учета, включающих в себя инструмент быстрого создания заказов-нарядов.",
+          "Онлайн программа учета с инструментом быстрого создания заказов-нарядов позволяет значительно упростить процесс приема и обработки заказов в автосервисе.",
+          "Благодаря использованию инструмента быстрого создания заказов-нарядов, автосервис может обеспечить более высокое качество обслуживания клиентов."
+        ]
+      },
+      {
+        "title": "Программа \"Автосервис\" - Софт от Pisoft",
+        "url": "https://pisoft.ru/aservis",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Программа &quot;Автосервис&quot; предназначена для полной автоматизации компании автосервиса. Она ведет учет заказ-нарядов, выполненных работ, платежей и взаиморасчетов с клиентами, историю каждого автомобиля, формирует все необходимые для работы документы и отчеты.",
+        "profile": {
+          "name": "Pisoft",
+          "url": "https://pisoft.ru/aservis",
+          "long_name": "pisoft.ru",
+          "img": "https://imgs.search.brave.com/rLPjKQhw6hDrYFtQwdKdCAhK-FQKa_6Tc6XDFJrxHOY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDU1MjJjOTQ4/ZTFlODVkNDQ0M2U4/MjhiOGFjZDVhZjlj/NGJlYThlNjIyOTBl/NmNmZmIzMjg1NDM3/ZmM0ODdhZC9waXNv/ZnQucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "pisoft.ru",
+          "hostname": "pisoft.ru",
+          "favicon": "https://imgs.search.brave.com/rLPjKQhw6hDrYFtQwdKdCAhK-FQKa_6Tc6XDFJrxHOY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDU1MjJjOTQ4/ZTFlODVkNDQ0M2U4/MjhiOGFjZDVhZjlj/NGJlYThlNjIyOTBl/NmNmZmIzMjg1NDM3/ZmM0ODdhZC9waXNv/ZnQucnUv",
+          "path": "› aservis"
+        },
+        "extra_snippets": [
+          "Программа \"Автосервис\" предназначена для полной автоматизации компании автосервиса. Она ведет учет заказ-нарядов, выполненных работ, платежей и взаиморасчетов с клиентами, историю каждого автомобиля, формирует все необходимые для работы документы и отчеты.",
+          "\"Автосервис\" автоматически формирует и печатает полный комплект документов по заказ-наряду.",
+          "Программа \"Автосервис\". Заказ-наряды.",
+          "Программа помнит все: самую подробную информацию о клиентах, об автомобилях и их текущем состоянии, все заказ-наряды и выполненные работы, все контакты с клиентами, все операции с деньгами."
+        ]
+      },
+      {
+        "title": "Программа для автосервиса TEZARIUS. ПО для СТО",
+        "url": "https://tezarius.ru/carservice",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "При создании заказ-наряда, программа автоматически меняет статус брони согласно статусу заказ-наряда. Складской учет, ревизия в автосервисе · Смотреть видеовыбрать тариф · Складской учет, ревизия в автосервисе · Учёт товаров в автосервисе с возможностью добавления в заказ-наряд.",
+        "profile": {
+          "name": "Tezarius",
+          "url": "https://tezarius.ru/carservice",
+          "long_name": "tezarius.ru",
+          "img": "https://imgs.search.brave.com/aGr7ujm1NFN_ppJh9KEv-X_-PQZaBks9HkKsvr8SPwk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDU4NjkwZDli/MTk5NThjNGVkM2Q5/M2RjZDEzYTQ5NTA0/YWQ2MTFkMDRhNGVk/YjUwMmI4M2Y5NGU1/ZWJjYjBjNS90ZXph/cml1cy5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "creative_work",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "tezarius.ru",
+          "hostname": "tezarius.ru",
+          "favicon": "https://imgs.search.brave.com/aGr7ujm1NFN_ppJh9KEv-X_-PQZaBks9HkKsvr8SPwk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNDU4NjkwZDli/MTk5NThjNGVkM2Q5/M2RjZDEzYTQ5NTA0/YWQ2MTFkMDRhNGVk/YjUwMmI4M2Y5NGU1/ZWJjYjBjNS90ZXph/cml1cy5ydS8",
+          "path": "› carservice"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/PiKEwn4hlYwsN85k7hJQCl0JV5SbNjYveXXqkRjlwOE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly90ZXph/cml1cy5ydS9pbWFn/ZXMvbG9nby5zdmc",
+          "original": "https://tezarius.ru/images/logo.svg"
+        },
+        "creative_work": {
+          "name": "Tezarius",
+          "rating": {
+            "ratingValue": 4.8,
+            "bestRating": 5.0,
+            "reviewCount": 124,
+            "is_tripadvisor": false
+          },
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/PiKEwn4hlYwsN85k7hJQCl0JV5SbNjYveXXqkRjlwOE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly90ZXph/cml1cy5ydS9pbWFn/ZXMvbG9nby5zdmc",
+            "original": "https://tezarius.ru/images/logo.svg"
+          }
+        },
+        "extra_snippets": [
+          "Программа для автосервиса. Лучшая программа для автосервиса и СТО. Заказ-наряды, учёт ремонтов, зарплата сотрудникам, учет на складе, подбор запчастей, CRM и многое другое!",
+          "При создании заказ-наряда, программа автоматически меняет статус брони согласно статусу заказ-наряда. Складской учет, ревизия в автосервисе · Смотреть видеовыбрать тариф · Складской учет, ревизия в автосервисе · Учёт товаров в автосервисе с возможностью добавления в заказ-наряд.",
+          "Возможность премировать мастеров фиксировано, так и за прибыль всего автосервиса. Ограничение полномочий сотрудников внутри программы. Запрет провести заказ наряд задним числом, перепровести его, удалить или изменить;",
+          "Смс/WhatsApp оповещения клиентов о готовности автомобиля с указанием полной или частичной задолженности по заказ-наряду;"
+        ]
+      },
+      {
+        "title": "Автосервис - Учет услуг СТО, автомастерских в каталоге RuStore",
+        "url": "https://www.rustore.ru/catalog/app/com.example.autorepair",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Не хватает заказа наряда · Нравится: 1Не нравится: 0 · Максим4 июн 2024 · 5 звезд · Пользуюсь несколько лет. Удобно вести учёт. Нравится: 0Не нравится: 0 ·",
+        "profile": {
+          "name": "RuStore",
+          "url": "https://www.rustore.ru/catalog/app/com.example.autorepair",
+          "long_name": "rustore.ru",
+          "img": "https://imgs.search.brave.com/v9wiMP-6yqySsNbZQWni7p0el4NS0yp7LG8gBJYYtEI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjNkYTkzNmMz/MTcxZGExODQ3NmEy/MDIzYWQyZjM5YTgz/YWNhNDdlM2FlNjhk/MmQ1YTZlZTYyYmY0/MmUzODgzOC93d3cu/cnVzdG9yZS5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "creative_work",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "rustore.ru",
+          "hostname": "www.rustore.ru",
+          "favicon": "https://imgs.search.brave.com/v9wiMP-6yqySsNbZQWni7p0el4NS0yp7LG8gBJYYtEI/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZjNkYTkzNmMz/MTcxZGExODQ3NmEy/MDIzYWQyZjM5YTgz/YWNhNDdlM2FlNjhk/MmQ1YTZlZTYyYmY0/MmUzODgzOC93d3cu/cnVzdG9yZS5ydS8",
+          "path": "  › каталог  › бизнес-сервисы"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/XdX9dltSnTQzXES367rJdC0x6Zz96Og_8fVu62T4hrM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMucnVzdG9yZS5y/dS9pbWdwcm94eS9P/c0xCOVdHUWg2aWRL/aGUyT2QtbXV0aHc4/eWVSZ1NWZTlGRnlW/TG5kNkNjL3ByZXNl/dDphcHBfY2FyZF9p/Y29uL2FIUjBjSE02/THk5emRHRjBhV011/Y25WemRHOXlaUzV5/ZFM5aGNHc3ZNVGN4/T0RrNE9ESXlNeTlq/YjI1MFpXNTBMMGxE/VDA0dk5qY3lPVGxt/WmpjdE5qSTROaTAw/WTJVMkxXSmpZbVV0/TVdReE5tVm1OelZt/TVdSakxuQnVadz09/LndlYnA",
+          "original": "https://static.rustore.ru/imgproxy/OsLB9WGQh6idKhe2Od-muthw8yeRgSVe9FFyVLnd6Cc/preset:app_card_icon/aHR0cHM6Ly9zdGF0aWMucnVzdG9yZS5ydS9hcGsvMTcxODk4ODIyMy9jb250ZW50L0lDT04vNjcyOTlmZjctNjI4Ni00Y2U2LWJjYmUtMWQxNmVmNzVmMWRjLnBuZw==.webp",
+          "logo": true
+        },
+        "creative_work": {
+          "name": "Автосервис - Учет услуг СТО, автомастерских",
+          "rating": {
+            "ratingValue": 4.6,
+            "bestRating": 5.0,
+            "reviewCount": 7,
+            "is_tripadvisor": false
+          },
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/XdX9dltSnTQzXES367rJdC0x6Zz96Og_8fVu62T4hrM/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMucnVzdG9yZS5y/dS9pbWdwcm94eS9P/c0xCOVdHUWg2aWRL/aGUyT2QtbXV0aHc4/eWVSZ1NWZTlGRnlW/TG5kNkNjL3ByZXNl/dDphcHBfY2FyZF9p/Y29uL2FIUjBjSE02/THk5emRHRjBhV011/Y25WemRHOXlaUzV5/ZFM5aGNHc3ZNVGN4/T0RrNE9ESXlNeTlq/YjI1MFpXNTBMMGxE/VDA0dk5qY3lPVGxt/WmpjdE5qSTROaTAw/WTJVMkxXSmpZbVV0/TVdReE5tVm1OelZt/TVdSakxuQnVadz09/LndlYnA",
+            "original": "https://static.rustore.ru/imgproxy/OsLB9WGQh6idKhe2Od-muthw8yeRgSVe9FFyVLnd6Cc/preset:app_card_icon/aHR0cHM6Ly9zdGF0aWMucnVzdG9yZS5ydS9hcGsvMTcxODk4ODIyMy9jb250ZW50L0lDT04vNjcyOTlmZjctNjI4Ni00Y2U2LWJjYmUtMWQxNmVmNzVmMWRjLnBuZw==.webp"
+          }
+        },
+        "extra_snippets": [
+          "Загрузите приложение Автосервис - Учет услуг СТО, автомастерских прямо сейчас на телефон, уже более 914 скачиваний, бесплатно, в официальном магазине приложений для Android RuStore.",
+          "Не хватает заказа наряда · Нравится: 1Не нравится: 0 · Максим4 июн 2024 · 5 звезд · Пользуюсь несколько лет. Удобно вести учёт. Нравится: 0Не нравится: 0 ·",
+          "Из карточки можно открыть список всех документов обслуживания по Авто. * Журнал Автосервиса - журнал документов обслуживания авто за периоды Сегодня/Неделя/Месяц/Все.",
+          "Удобное приложение для учета услуг автомастерских, СТО, автосервиса."
+        ]
+      },
+      {
+        "title": "Программа для АВТОСЕРВИСА заказ-наряд БЕСПЛАТНО",
+        "url": "https://vigodnozap.ru/programma-dlya-avtoservisa/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Программа для АВТОСЕРВИСА заказ-наряд БЕСПЛАТНО ✔ Формирование первичных документов: счета, заказ-наряды, АКТы ✔ Учет и хранение клиентской базы и истории ...",
+        "page_age": "2026-05-18T00:00:00",
+        "profile": {
+          "name": "Vigodnozap",
+          "url": "https://vigodnozap.ru/programma-dlya-avtoservisa/",
+          "long_name": "vigodnozap.ru",
+          "img": "https://imgs.search.brave.com/3PzXj5UYqjsWrPLGPpdaiSYCUPYBV2UXh9IloYlJKms/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjgxMTNkYWMx/NTlmOTdiZDQxNTlj/MTYzYmIzYWJmNzRk/MDEyNzg5M2ViMjc2/OTY4OTNjMzUzZjVl/ODU4ZjQwNS92aWdv/ZG5vemFwLnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "vigodnozap.ru",
+          "hostname": "vigodnozap.ru",
+          "favicon": "https://imgs.search.brave.com/3PzXj5UYqjsWrPLGPpdaiSYCUPYBV2UXh9IloYlJKms/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMjgxMTNkYWMx/NTlmOTdiZDQxNTlj/MTYzYmIzYWJmNzRk/MDEyNzg5M2ViMjc2/OTY4OTNjMzUzZjVl/ODU4ZjQwNS92aWdv/ZG5vemFwLnJ1Lw",
+          "path": "  › главная  › статьи  › программа для автосервиса"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/qGvN2AeBQ1TdGJWBs2gzxP-h9pQ-wYtv36WjZPt2SY4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly92aWdv/ZG5vemFwLnJ1L21l/ZGlhL2ZpbGVzL3Nl/dHRpbmdzL2luc2lk/ZS1wbGFjZWhvbGRl/ci1tYWdhemluLXph/cGNoYXN0ZXEtb25s/aW5lLnBuZw",
+          "original": "https://vigodnozap.ru/media/files/settings/inside-placeholder-magazin-zapchasteq-online.png",
+          "logo": false
+        },
+        "age": "May 18, 2026",
+        "article": {
+          "author": [
+            {
+              "type": "person",
+              "name": "vigodnozap.ru"
+            }
+          ],
+          "date": "May 18, 2026",
+          "publisher": {
+            "type": "organization",
+            "name": "Google",
+            "thumbnail": {
+              "src": "https://imgs.search.brave.com/qGvN2AeBQ1TdGJWBs2gzxP-h9pQ-wYtv36WjZPt2SY4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly92aWdv/ZG5vemFwLnJ1L21l/ZGlhL2ZpbGVzL3Nl/dHRpbmdzL2luc2lk/ZS1wbGFjZWhvbGRl/ci1tYWdhemluLXph/cGNoYXN0ZXEtb25s/aW5lLnBuZw",
+              "original": "https://vigodnozap.ru/media/files/settings/inside-placeholder-magazin-zapchasteq-online.png"
+            }
+          }
+        },
+        "organization": {
+          "type": "organization",
+          "name": "Программа для АВТОСЕРВИСА заказ-наряд БЕСПЛАТНО Интернет магазин",
+          "contact_points": []
+        },
+        "extra_snippets": [
+          "Программа для АВТОСЕРВИСА заказ-наряд БЕСПЛАТНО ✔ Формирование первичных документов: счета, заказ-наряды, АКТы ✔ Учет и хранение клиентской базы и истории обращений",
+          "Данное решение хорошо подойдет для Автосервиса и СТО которые активно развиваются и хотят наращивать свои обороты, данная программа даем несколько больших преимуществ в работе автосервиса. Позволяет быстро и безошибочно находить автозапчасти по своим поставщикам без посещения их сайтов, дает возможность печатать документы типа счетов и Заказ-нарядов",
+          "Подключитесь бесплатно к программе для Автосервиса и СТО с печатью заказ-нарядов, скачивать не нужно.",
+          "При подключении к программе для Автосервиса и СТО вы становитесь пунктом выдачи заказов сайта ВыгодноЗап, это дает вам доп возможности:"
+        ]
+      },
+      {
+        "title": "Мини-Гараж: бесплатная программа для автосервисов, автомастерских и СТО | скачать, регистрация",
+        "url": "http://www.kors.aha.ru/opgar1.htm",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Бесплатная программа составления заказов-нарядов, учета в автосервисах, автомастерских, СТО.",
+        "profile": {
+          "name": "Aha",
+          "url": "http://www.kors.aha.ru/opgar1.htm",
+          "long_name": "kors.aha.ru",
+          "img": "https://imgs.search.brave.com/keTC1pUYz_izicgQCvGXC5Sm3GFTl0odRsWPFzi1qsk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDVhOTkxMDRk/NzAxZDU4NGQzNDc1/YTBmN2U1Y2EwOWI2/YmRjZmViYjc3NWMw/NWFkYjNjZTlmNDY5/MzM2N2UzZS93d3cu/a29ycy5haGEucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "http",
+          "netloc": "kors.aha.ru",
+          "hostname": "www.kors.aha.ru",
+          "favicon": "https://imgs.search.brave.com/keTC1pUYz_izicgQCvGXC5Sm3GFTl0odRsWPFzi1qsk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZDVhOTkxMDRk/NzAxZDU4NGQzNDc1/YTBmN2U1Y2EwOWI2/YmRjZmViYjc3NWMw/NWFkYjNjZTlmNDY5/MzM2N2UzZS93d3cu/a29ycy5haGEucnUv",
+          "path": "› opgar1.htm"
+        }
+      },
+      {
+        "title": "Программа для автосервиса простая и бесплатная, ведение учета в СТО и сфере авто услуг",
+        "url": "https://dokuchet.ru/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Автозаполнение печатных форм: Заказ-Наряд, Счет, Акт, УПД, Накладная, Товарный чек, Квитанция. Информативные отчеты и выгрузки в Excel. Расширение для 1С Автосервис по загрузке нормочасов, марок и моделей авто",
+        "profile": {
+          "name": "Dokuchet",
+          "url": "https://dokuchet.ru/",
+          "long_name": "dokuchet.ru",
+          "img": "https://imgs.search.brave.com/Ox4ir3cmSzNOeQFPoStBXhkbS1-esRNxk8iryS-RRvk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDYyY2ZkMTUy/MTZjZjhmM2U5ZGVi/ZTk5ODhiMGU3YTM2/NjI5OTIyYzI0ZTlk/ZTA3MjEzOGQ3YmRi/ZWNjMDBlMC9kb2t1/Y2hldC5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "dokuchet.ru",
+          "hostname": "dokuchet.ru",
+          "favicon": "https://imgs.search.brave.com/Ox4ir3cmSzNOeQFPoStBXhkbS1-esRNxk8iryS-RRvk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMDYyY2ZkMTUy/MTZjZjhmM2U5ZGVi/ZTk5ODhiMGU3YTM2/NjI5OTIyYzI0ZTlk/ZTA3MjEzOGQ3YmRi/ZWNjMDBlMC9kb2t1/Y2hldC5ydS8",
+          "path": ""
+        },
+        "extra_snippets": [
+          "Автозаполнение печатных форм: Заказ-Наряд, Счет, Акт, УПД, Накладная, Товарный чек, Квитанция. Информативные отчеты и выгрузки в Excel. Расширение для 1С Автосервис по загрузке нормочасов, марок и моделей авто",
+          "Мы работаем над задачей создать быстрый и удобный софт для автосервисов, чтобы упростить Вашу работу и настроить понятный учет. Программа для СТО ДокУчет предоставляет возможность создавать Заказ-Наряды.",
+          "Добавить в Заказ-Наряд работы и запчасти. Установить скидку отдельно на работы и отдельно на запчасти. На каждую работу выбрать исполнителя и контролировать количество работ за период для расчета заработной платы. В программе ДокУчет автосервис возможно вести складской учет по нескольким складам.",
+          "Документами Поступление, Списание, Перемещение и Заказ-Наряд производятся движение товаров по складу. Актуальный контроль остатков и истории по реализации запчастей. Для оптимального распределения рабочего времени, программа для автосервиса имеет документ предварительная запись, с помощью которого вы всегда сможете спланировать загруженность на будущие даты."
+        ]
+      },
+      {
+        "title": "Программа учёта для автосервиса: автоматизация, которая работает",
+        "url": "https://stocrm.ru/programma_uchyota_dlya_avtoservisa/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Именно поэтому всё больше СТО переходят на специализированные программы учёта для автосервиса. С какими проблемами сталкиваются автосервисы без программы учёта? Заказ-наряды теряются или оформляются с ошибками",
+        "profile": {
+          "name": "Stocrm",
+          "url": "https://stocrm.ru/programma_uchyota_dlya_avtoservisa/",
+          "long_name": "stocrm.ru",
+          "img": "https://imgs.search.brave.com/4r34FajWKmmSv4hvDduCYRNRo-mGJfBvxlF_fcMxNO0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjJhYmZiNGFj/ZWNhMjFmMDM4MmRm/OGQ0Y2E5YWEyODNi/M2ViNWJiYTU3YjM3/MjYzZDhhMGEwZjdm/NzUyYmVlOC9zdG9j/cm0ucnUv"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "stocrm.ru",
+          "hostname": "stocrm.ru",
+          "favicon": "https://imgs.search.brave.com/4r34FajWKmmSv4hvDduCYRNRo-mGJfBvxlF_fcMxNO0/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjJhYmZiNGFj/ZWNhMjFmMDM4MmRm/OGQ0Y2E5YWEyODNi/M2ViNWJiYTU3YjM3/MjYzZDhhMGEwZjdm/NzUyYmVlOC9zdG9j/cm0ucnUv",
+          "path": "› programma_uchyota_dlya_avtoservisa"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/sOvgapznVb31nFkcJ_d4o16TF3gWAR20W0IekcFCmK4/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdG9j/cm0ucnUvcHJvZ3Jh/bW1hX3VjaHlvdGFf/ZGx5YV9hdnRvc2Vy/dmlzYS90aWxkMzgz/Mi0zMTYzLTQ0NjQt/YjI2Ni0zMDM3MzU2/NTY1NjJfXy1fX3Jl/c2l6ZV9fNTA0eF9f/Y2hhdGdwdF9pbWFn/ZV8xN19fMjAucG5n",
+          "original": "https://stocrm.ru/programma_uchyota_dlya_avtoservisa/tild3832-3163-4464-b266-303735656562__-__resize__504x__chatgpt_image_17__20.png",
+          "logo": false
+        },
+        "extra_snippets": [
+          "Именно поэтому всё больше СТО переходят на специализированные программы учёта для автосервиса. С какими проблемами сталкиваются автосервисы без программы учёта? Заказ-наряды теряются или оформляются с ошибками",
+          "Учёт заказ-нарядов с фиксацией всех этапов: от приёмки до оплаты · Программа учёта нормо‑часа в автосервисе — автоматический расчёт по каждому мастеру",
+          "Что даёт STOCRM — программа учёта для СТО STOCRM — это не просто таблицы и учёт. Это полноценная система, которая берёт на себя всю рутину: от звонка клиента до закрытия заказ-наряда.",
+          "Финансовая аналитика — отчёты по прибыли, расходам, KPI, зарплатеСистема экономит время на каждом этапе — при этом даёт полный контроль над бизнесом. Почему STOCRM — лучшая программа для учёта автосервиса"
+        ]
+      },
+      {
+        "title": "Программа для заказ нарядов в автосервисе",
+        "url": "https://ususoft.ru/programma_dlya_zakaz_naryadov_v_avtoservise.php",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Программа для заказ нарядов в автосервисе помогает автоматизировать процессы приёма, выполнения и учёта заявок. Такие программы упрощают работу с клиентами, управление запасами, контроль качества и учёт финансов.",
+        "profile": {
+          "name": "Ususoft",
+          "url": "https://ususoft.ru/programma_dlya_zakaz_naryadov_v_avtoservise.php",
+          "long_name": "ususoft.ru",
+          "img": "https://imgs.search.brave.com/ukgVnmPaULxzlL4dPXjN7jDXcLkh7YAg7NOtQhXzwnM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWIwZTcxYjUx/NThiYTNlYmQyZTQ1/OWU1ZDIyNTYwYTQw/MjYzNWVmMjRjOWM4/NzUwZTAxMjNlZjkw/ZjAxZGMxYi91c3Vz/b2Z0LnJ1Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "video",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "ususoft.ru",
+          "hostname": "ususoft.ru",
+          "favicon": "https://imgs.search.brave.com/ukgVnmPaULxzlL4dPXjN7jDXcLkh7YAg7NOtQhXzwnM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMWIwZTcxYjUx/NThiYTNlYmQyZTQ1/OWU1ZDIyNTYwYTQw/MjYzNWVmMjRjOWM4/NzUwZTAxMjNlZjkw/ZjAxZGMxYi91c3Vz/b2Z0LnJ1Lw",
+          "path": "  › главная  › программы для бизнеса"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/EDO3Us_5u4u5ZOo9VZC7fYD2hxecr0i2u5DYaSEpCYI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly91c3Vz/b2Z0LnJ1L2ltZy90/aF9zYWxvbi5qcGc",
+          "original": "https://ususoft.ru/img/th_salon.jpg",
+          "logo": false
+        },
+        "video": {
+          "duration": "03:10",
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/EDO3Us_5u4u5ZOo9VZC7fYD2hxecr0i2u5DYaSEpCYI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly91c3Vz/b2Z0LnJ1L2ltZy90/aF9zYWxvbi5qcGc",
+            "original": "https://ususoft.ru/img/th_salon.jpg"
+          }
+        },
+        "creative_work": {
+          "name": "Программа для заказ нарядов в автосервисе",
+          "rating": {
+            "ratingValue": 4.7,
+            "bestRating": 5.0,
+            "reviewCount": 77,
+            "is_tripadvisor": false
+          },
+          "thumbnail": {
+            "src": "https://imgs.search.brave.com/UR490BwUdx0O4kU-oia31hJBon3EQkgC8q9lOVlhyhc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly91c3Vz/b2Z0LnJ1L2ltZy9h/cHAyX3N0by5qcGc",
+            "original": "https://ususoft.ru/img/app2_sto.jpg"
+          }
+        },
+        "extra_snippets": [
+          "Программа для заказ нарядов в автосервисе помогает автоматизировать процессы приёма, выполнения и учёта заявок. Такие программы упрощают работу с клиентами, управление запасами, контроль качества и учёт финансов.",
+          "CRM для заказ нарядов автосервиса от УСУ позволит вам выстроить качественные взаимодействия со своими клиентами. Через ПО вы сможете легко вести оформление и учёт заказ-нарядов.",
+          "Заказ наряды автосервиса – это специально созданные документы, которые формируются при приемке авто на ремонт или техническое обслуживание.",
+          "Документ позволяет автосервису организовать работу и регламентировать ход ее выполнения. Наряд заказ на ремонт авто имеет свои характерные особенности и включает определенные данные."
+        ]
+      },
+      {
+        "title": "программа для автоматизации автосервисов - Настройка, использование и полезный софт для Windows - Форум автомастеров carmasters.org",
+        "url": "https://carmasters.org/topic/4745-программа-для-автоматизации-автосервисов/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "удобная программа для автоматизации автосервиса. Составление заказов-нарядов, учет клиентов, оплат, учет исполнителей работ и расхода запчастей, учет этапов выполнения заказа-наряда, подсчет количества нормо-часов.пароль: 27856812л- сервис.rar",
+        "page_age": "2016-04-27T10:16:17",
+        "profile": {
+          "name": "Carmasters",
+          "url": "https://carmasters.org/topic/4745-программа-для-автоматизации-автосервисов/",
+          "long_name": "carmasters.org",
+          "img": "https://imgs.search.brave.com/5kLuA4gzah86naHGV6caPuvKHhCxY1lko0cmJ97GTGo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODE2YWYzMzAw/ZTRjZWJhMTRjMDky/NWIzMWY4ZDMyMGIx/M2U0ODQzYmI3ZmM0/MGI1YWExOTRhNzM4/ZTJkNTkyOC9jYXJt/YXN0ZXJzLm9yZy8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "article",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "carmasters.org",
+          "hostname": "carmasters.org",
+          "favicon": "https://imgs.search.brave.com/5kLuA4gzah86naHGV6caPuvKHhCxY1lko0cmJ97GTGo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvODE2YWYzMzAw/ZTRjZWJhMTRjMDky/NWIzMWY4ZDMyMGIx/M2U0ODQzYmI3ZmM0/MGI1YWExOTRhNzM4/ZTJkNTkyOC9jYXJt/YXN0ZXJzLm9yZy8",
+          "path": "  › разное  › настройка, использование и полезный софт для windows"
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/dlBsFgubkWR7Rofwtm4EOgDDEZWJ2PUQzJmESiOOh8o/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jYXJt/YXN0ZXJzLm9yZy91/cGxvYWRzL3Byb2Zp/bGUvcGhvdG8tdGh1/bWItNjM5NC5qcGc",
+          "original": "https://carmasters.org/uploads/profile/photo-thumb-6394.jpg",
+          "logo": false
+        },
+        "age": "April 27, 2016",
+        "article": {
+          "author": [],
+          "date": "Feb 03, 2015"
+        },
+        "extra_snippets": [
+          "удобная программа для автоматизации автосервиса. Составление заказов-нарядов, учет клиентов, оплат, учет исполнителей работ и расхода запчастей, учет этапов выполнения заказа-наряда, подсчет количества нормо-часов.пароль: 27856812л- сервис.rar"
+        ]
+      },
+      {
+        "title": "Splus.ru – онлайн программа для учета в автосервисе",
+        "url": "https://splus.ru/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Учет заказов-нарядов, склада и зарплат · Splus поможет навести порядок в автосервисе: просматривать историю заказ–нарядов и оплат по клиентам, историю поступлений и списаний запчастей, начисления и выплаты зарплаты слесарям и мастерам–приемщикам",
+        "profile": {
+          "name": "Splus",
+          "url": "https://splus.ru/",
+          "long_name": "splus.ru",
+          "img": "https://imgs.search.brave.com/bsPwlUiOvZ_yzacTbgdaec5dJ260wLMkN7UPqv_3HW4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmVjNDJhMTM4/OTg4NjMxMzAzMWYw/ZDVkMWExOWY2YmI4/YzczZjAzMzY5OGVh/MDc0YzRhMDMyN2Qz/ZmIwY2MyOS9zcGx1/cy5ydS8"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "splus.ru",
+          "hostname": "splus.ru",
+          "favicon": "https://imgs.search.brave.com/bsPwlUiOvZ_yzacTbgdaec5dJ260wLMkN7UPqv_3HW4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYmVjNDJhMTM4/OTg4NjMxMzAzMWYw/ZDVkMWExOWY2YmI4/YzczZjAzMzY5OGVh/MDc0YzRhMDMyN2Qz/ZmIwY2MyOS9zcGx1/cy5ydS8",
+          "path": ""
+        },
+        "thumbnail": {
+          "src": "https://imgs.search.brave.com/BVFsAPnG2kkmoyfgcxIVIJFQKdOFXE2lpGNJTUny_pU/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zcGx1/cy5ydS9pbWFnZXMv/dGlsZDYzNjUtMzEz/Ny00OTY0LWE0MzIt/NjEzMTY2NjE2NTY1/X19mYXZpY29uLnBu/Zw",
+          "original": "https://splus.ru/images/tild6365-3137-4964-a432-613166616565__favicon.png",
+          "logo": true
+        },
+        "extra_snippets": [
+          "Всё, что нужно для развития автосервиса в одной программе (CRM и ERP )",
+          "Учет заказов-нарядов, склада и зарплат · Splus поможет навести порядок в автосервисе: просматривать историю заказ–нарядов и оплат по клиентам, историю поступлений и списаний запчастей, начисления и выплаты зарплаты слесарям и мастерам–приемщикам",
+          "Клиенты вашего автосервиса смогут записываться в сервис, отслеживать историю обслуживания и получать рекомендации по ремонту и обслуживанию",
+          "Повышайте квалификацию руководителей своего автосервиса на бесплатных обучающих мероприятиях для клиентов Splus"
+        ]
+      },
+      {
+        "title": "Корс-Гараж: профессиональная программа автоматизации автосервисов, автомастерских и СТО (заказы-наряды, учет исполнителей,...)",
+        "url": "https://www.kors-soft.ru/opgar3.htm",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Профессиональная программа Корс-Гараж для учета заказов-нарядов, учета в автосервисах, автомастерских, учета исполнителей работ",
+        "profile": {
+          "name": "Kors-soft",
+          "url": "https://www.kors-soft.ru/opgar3.htm",
+          "long_name": "kors-soft.ru",
+          "img": "https://imgs.search.brave.com/kc1fNPjmjvIRKgMCoq9PKmfRqKA4cl_Kp9D8iHCINlU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWI2MTU2MThm/ODI2MTQyZDgzMTNh/ZWNjNjZjNTIxODUx/Y2ExMzA3MmE0Y2Y4/YWZiMDljNGY4MjRi/MmJjOTc4OC93d3cu/a29ycy1zb2Z0LnJ1/Lw"
+        },
+        "language": "ru",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+          "scheme": "https",
+          "netloc": "kors-soft.ru",
+          "hostname": "www.kors-soft.ru",
+          "favicon": "https://imgs.search.brave.com/kc1fNPjmjvIRKgMCoq9PKmfRqKA4cl_Kp9D8iHCINlU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWI2MTU2MThm/ODI2MTQyZDgzMTNh/ZWNjNjZjNTIxODUx/Y2ExMzA3MmE0Y2Y4/YWZiMDljNGY4MjRi/MmJjOTc4OC93d3cu/a29ycy1zb2Z0LnJ1/Lw",
+          "path": "› opgar3.htm"
+        },
+        "extra_snippets": [
+          "В режиме \"История\" (заказов-нарядов текущего клиента) добавлена кнопка \"Просмотр\" для доступа к содержимому документа из истории.",
+          "для списков документов или справочников: Ctrl+N - создать, Ctrl+O - копировать, Ctrl+E - изменить, Ctrl+D - удалить (например, находясь в режиме Заказы-наряды, нажмите Ctrl+N для создания нового документа)",
+          "если цены \"по умолчанию\" не заданы, то используется стандартная цена (2-я цена - для заказов-нарядов, 1-я - для складских приходов)",
+          "при выборе клиента в новом заказе-наряде программа ищет последний з/н этого клиента и переносит данные о ТС в текущий з/н;"
+        ]
+      }
+    ],
+    "family_friendly": true
+  }
+}

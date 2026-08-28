@@ -4,7 +4,7 @@
 // hash collision behaviour. Mock-Brave hit/miss flow is exercised via direct API calls
 // (no actual Brave network — the cache module never sees Brave).
 //
-// Run:  node D:/Yahia/active/qsearch/scripts/smoke-test-cache.mjs
+// Run:  node scripts/smoke-test-cache.mjs
 // Exit: 0 = all pass, 1 = any failure
 
 import { QueryCache, inferEndpoint, DEFAULT_TTL } from '../src/cache.js'

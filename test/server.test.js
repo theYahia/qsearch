@@ -218,6 +218,15 @@ describe('qsearch server', () => {
     assert.equal(typeof res.json.model_loaded, 'boolean')
   })
 
+  test('GET /health?deep=1 surfaces brave key validity', async () => {
+    const res = await request(QSEARCH_PORT, 'GET', '/health?deep=1')
+    // SearXNG unconfigured in test → canary null (not degraded); mock Brave 200s → key valid.
+    assert.equal(res.status, 200)
+    assert.ok('brave' in res.json, 'deep health exposes brave field')
+    assert.equal(res.json.brave.brave_key_valid, true)
+    assert.ok('sweep' in res.json)
+  })
+
   // ── GET /skill.md & /docs ──
 
   test('GET /skill.md returns API docs', async () => {
@@ -563,7 +572,7 @@ describe('qsearch server', () => {
 
   test('GET /backends/status — yandex reason matches expected shape', async () => {
     const res = await request(QSEARCH_PORT, 'GET', '/backends/status')
-    // Test process has no YANDEX_API_KEY → not_configured. If user runs with creds, configured.
+    // Test process has no YANDEX_SEARCH_API_KEY → not_configured. If user runs with creds, configured.
     assert.match(res.json.yandex.reason, /^(not_configured|init_failed|configured|unknown)/)
   })
 
@@ -620,6 +629,25 @@ describe('qsearch server', () => {
     const res = await request(QSEARCH_PORT, 'POST', '/research-brief', { topic: 'foo', tier: 'ultradeep' })
     assert.equal(res.status, 400)
     assert.match(res.json.error, /tier must be light\|standard\|heavy/)
+  })
+
+  // ── /verify — single-citation honesty check (the doesitlie verifier, exposed live)
+  test('POST /verify rejects missing claim with 400', async () => {
+    const res = await request(QSEARCH_PORT, 'POST', '/verify', { url: 'https://example.com/' })
+    assert.equal(res.status, 400)
+    assert.match(res.json.error, /claim/)
+  })
+
+  test('POST /verify rejects a non-http url with 400', async () => {
+    const res = await request(QSEARCH_PORT, 'POST', '/verify', { claim: 'a real claim', url: 'ftp://nope.example' })
+    assert.equal(res.status, 400)
+    assert.match(res.json.error, /url/)
+  })
+
+  test('POST /verify rejects an over-long claim with 400', async () => {
+    const res = await request(QSEARCH_PORT, 'POST', '/verify', { claim: 'a'.repeat(4001), url: 'https://example.com/' })
+    assert.equal(res.status, 400)
+    assert.match(res.json.error, /too long/)
   })
 
   // ── rd277: include_rejected query param on /sweep

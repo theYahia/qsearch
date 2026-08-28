@@ -2,7 +2,7 @@
 
 > **Self-contained plan for another Claude session/model to execute.**
 >
-> **Project root:** `D:\Yahia\active\qsearch`
+> **Project root:** `<repo>`
 > **Goal:** Get `io.github.theyahia/qsearch` listed at `registry.modelcontextprotocol.io` so Claude Code, Claude Desktop, and any spec-compliant MCP client can discover qsearch.
 > **Plan written:** 2026-04-28 (verified against `modelcontextprotocol/registry` main branch)
 > **Execute window:** Fri 2026-05-01 (setup + dry-run) → Sun 2026-05-03 (publish)
@@ -324,7 +324,7 @@ Invoke-WebRequest -Uri "https://github.com/modelcontextprotocol/registry/release
 tar xf $env:TEMP\mcp-publisher.tar.gz -C $env:USERPROFILE\bin
 
 # 2. Init + edit server.json
-cd D:\Yahia\active\qsearch
+cd <repo>
 mcp-publisher init
 # (Replace generated server.json with verified spec from Step 2 above)
 

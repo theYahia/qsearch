@@ -1,0 +1,1737 @@
+{
+  "generated": "2026-08-04T18:38:42.647Z",
+  "judge_model": "qwen2.5:14b-instruct",
+  "temperature": 0.1,
+  "meilisearch": {
+    "url": "http://127.0.0.1:7700",
+    "index": "qsearch_corpus"
+  },
+  "hit_limit": 10,
+  "answered_threshold": 2,
+  "text_chars": 1500,
+  "groups": {
+    "covered": [
+      {
+        "q": "SkyCapital отзывы реальные надёжность развод",
+        "hit_count": 10,
+        "yes_count": 8,
+        "no_count": 2,
+        "unparseable_count": 0,
+        "answered": true,
+        "hits": [
+          {
+            "url": "https://coinmania.com/rejting-luchshikh-trejderov/skycapital-group-razoblachenie",
+            "title": "Skycapital Group | Репутация обменного сервиса в отзывах 💥 Верить ли обменнику Sky Capital ❓",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://bitok.blog/skycapital-group-otzyvy",
+            "title": "Отзывы об обменнике Skycapital Group ► ...",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://vc.ru/ai/2960860-oplata-kriptovalyutoy-cherez-sbp",
+            "title": "Всё, что нужно знать об оплате криптой по СБП в 2026 году — AI на vc.ru",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://torforex.com/rejting-trejderov/skycapital-group-otzyvy",
+            "title": "Skycapital Group Отзывы клиентов об обменнике ᐈ Разоблачение обменника криптовалют Sky Capital",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://todzhinsky.ru/invest/sky-capital-trader",
+            "title": "Sky Capital: отзывы и разбор трейдера - Todzhinsky",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://bitok.blog/skycapital-group-ru-otzyvy",
+            "title": "Отзывы об обменнике Skycapital Group Ru ► Проверка репутации фальшивого валютника Sky Capital | Bitok.blog",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://vc.ru/services/2915220-kak-perevesti-bitkoin-v-rubli-na-kartu",
+            "title": "Как биткоин перевести в рубли на карту: пошаговый алгоритм и частые ошибки — Сервисы на vc.ru",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://fjhg.ru/skycapital-%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B-%D1%87%D0%B5%D1%81%D1%82%D0%BD%D0%B0%D1%8F-%D0%BE%D1%86%D0%B5%D0%BD%D0%BA%D0%B0-%D1%83%D1%81%D0%BB%D1%83%D0%B3-%D0%B8-%D0%BC%D0%BD%D0%B5%D0%BD%D0%B8",
+            "title": "Skycapital отзывы: честная оценка услуг и мнения клиентов",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.innov.ru/news/it/otzyv-o-skycapital-kak-i-gde-pokupat-kriptovalyutu-v-2025-godu",
+            "title": "Skycapital отзывы | Где покупать криптовалюту в 2025 году",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://otvet.mail.ru/question/267615069",
+            "title": "О Skycapital отзывы нужны: Есть кто пользовался этой площадкой для обмена крипты, поделитесь? - vasil_7177 | Ответы Mail",
+            "verdict": "YES",
+            "raw": "YES"
+          }
+        ]
+      },
+      {
+        "q": "242-ФЗ локализация персональных данных граждан РФ серверы",
+        "hit_count": 10,
+        "yes_count": 8,
+        "no_count": 2,
+        "unparseable_count": 0,
+        "answered": true,
+        "hits": [
+          {
+            "url": "https://ic-tech.ru/blog/faq/questions-152fz/chto-oznachaet-trebovanie-o-lokalizatsii-personalnyh-dannyh",
+            "title": "Что означает требование о локализации персональных данных?",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://atlant-pravo.ru/hot_line/exclusiveconsults/detail.php?ID=8633",
+            "title": "Локализация персональных данных граждан на территории РФ. - Атлант-право",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.radium-it.ru/brief/pd/localization",
+            "title": "Выполнение требований 242-ФЗ по локализации баз персональных данных",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://rppa.pro/_media/analitika/242_fz.pdf",
+            "title": "1 Локализация баз с персональными данными в РФ Рациональный подход",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.garant.ru/article/669236",
+            "title": "На страже безопасности, или Локализация персональных данных | Аналитические статьи: ГАРАНТ.РУ",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://habr.com/ru/companies/itpark/articles/271061",
+            "title": "Защита персональных данных по N 242-ФЗ: как понять и что делать? / Хабр",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.itweek.ru/gover/article/detail.php?ID=176112",
+            "title": "242-ФЗ: выполнить нельзя обойти - itWeek",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://habr.com/ru/companies/cloud4y/articles/338882",
+            "title": "Краткий FAQ о Федеральном законе N 242-ФЗ / Хабр",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://ic-tech.ru/blog/faq/questions-152fz/obyazatelno-li-hranit-bazy-dannyh-s-personalnymi-dannymi-na-territorii-rossii",
+            "title": "Обязательно ли хранить базы данных с персональными данными на территории России?",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://base.garant.ru/71732844",
+            "title": "Федеральный закон от 29.07.2017 N 242-ФЗ \"О внесении изменений в отдельные законодательные акты Российской Федерации по вопросам применения информационных технологий в сфере охраны здоровья\" | ГАРАНТ",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      },
+      {
+        "q": "A7A5 что это стейблкоин биржа обменник рубль",
+        "hit_count": 10,
+        "yes_count": 9,
+        "no_count": 1,
+        "unparseable_count": 0,
+        "answered": true,
+        "hits": [
+          {
+            "url": "https://www.forbes.ru/investicii/541440-sankcii-psb-sor-i-kriptovaluta-cto-nuzno-znat-o-rublevom-stejblkoine-a7a5",
+            "title": "Санкции, ПСБ, Шор и криптовалюта: что нужно знать о «рублевом» стейблкоине А7А5 | Forbes.ru",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://investfuture.ru/articles/chto-takoe-a7-a5-kripto-rubl-kotoriy-proslavila-financial-times",
+            "title": "Что такое A7A5? Крипто-рубль, который прославила Financial Times | IF | 30.06.2025",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.rbc.ru/crypto/news/67572f719a79472b7e4b5774",
+            "title": "Криптотрейдинг — что это и какие риски есть в торговле криптовалютой :: РБК.Крипто",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://epravda.com.ua/rus/finances/kak-steyblkoin-a7a5-pomogaet-rossii-obhodit-sankcii-i-chto-delaet-es-818625",
+            "title": "Как стейблкоин A7A5 помогает России обходить санкции и что делает ЕС - Экономическая правда",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://kod.ru/blockirovka-crypto-v-russia",
+            "title": "Санкции ударили по российскому крипторынку: что произошло и чем это грозит пользователям",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://ru.beincrypto.com/velikobritaniya-kriptorynok-rossii",
+            "title": "Санкции Великобритании против криптосектора России: что нужно знать",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://ru.beincrypto.com/20-j-paket-sankczij-dobit-kriptu-rf",
+            "title": "Новые санкции ЕС могут превратить крипту россиян в «грязные» фантики",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://coinspot.io/news/law/russia_sng/a7a5-ruble-stablecoin-linked-to-grinex",
+            "title": "Рублевый стейблкоин A7A5 связан с преемником Garantex",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://ru.beincrypto.com/stejblkoin-a7a5-glavnoye",
+            "title": "Рублевый стейблкоин A7A5: что это, как работает и для он нужен",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.rbc.ru/crypto/news/68db8e659a79477c04cc23d9",
+            "title": "Рублевый стейблкоин А7А5 первым в России признан ЦФА. Что это значит :: РБК.Крипто",
+            "verdict": "YES",
+            "raw": "YES"
+          }
+        ]
+      },
+      {
+        "q": "152-ФЗ трансграничная передача персональных данных уведомление",
+        "hit_count": 10,
+        "yes_count": 9,
+        "no_count": 1,
+        "unparseable_count": 0,
+        "answered": true,
+        "hits": [
+          {
+            "url": "https://ant.partners/blog/transgranichnaya-peredacha-pd-uvedomlenie-rkn",
+            "title": "Трансграничная передача персональных данных: уведомление РКН в 2026 ...",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://data-sec.ru/personal-data/cross-border-countries",
+            "title": "Трансграничная передача персональных данных - как осуществить ТП в 2026 году",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.sibucom.ru/publ/3/2047",
+            "title": "Трансграничная передача персональных данных: вызовы и перспективы. Статья юриста Екатерины Шимко для ДК.ру",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://ic-tech.ru/blog/faq/questions-rkn/kak-ukazat-transgranichnuyu-peredachu-pdn-v-uvedomlenii",
+            "title": "Как указать трансграничную передачу персональных данных в уведомлении Роскомнадзора?",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://roskom24.ru/registraciya",
+            "title": "Регистрация в Роскомнадзоре оператора персональных данных",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.klerk.ru/blogs/roskom24/674479",
+            "title": "Регистрация в РКН и уведомление Роскомнадзора в 2026 году: требования для бизнеса",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://4rome.ru/blog/transgranichnaya-peredacha-personalnykh-dannykh-v-2025-godu-kak-izbezhat-shtrafov-i-sokhranit-doveri",
+            "title": "Трансграничная передача персональных данных в 2025: что это, штрафы, подача уведомления | Блог Четвёртый Рим",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.klerk.ru/user/2416162/646367",
+            "title": "Трансграничная передача персональных данных: новые правила и ужесточение ответственности в 2025 году",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.kdelo.ru/art/386914-chto-takoe-transgranichnaya-peredacha-personalnyh-dannyh-i-chto-o-ney-nado-znat-kadroviku",
+            "title": "Трансграничная передача персональных данные: требования и штрафы",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://blog.cortel.cloud/2025/06/26/152-fz-dva-sposoba-vypolnit-vse-trebovaniya-regulyatorov",
+            "title": "152-ФЗ: как выполнить все требования. Пошаговая инструкция",
+            "verdict": "YES",
+            "raw": "YES"
+          }
+        ]
+      },
+      {
+        "q": "273-ФЗ статья 91 лицензирование образовательной деятельности",
+        "hit_count": 10,
+        "yes_count": 10,
+        "no_count": 0,
+        "unparseable_count": 0,
+        "answered": true,
+        "hits": [
+          {
+            "url": "https://9111.ru/laws/273fz/glava_12/statia_91",
+            "title": "Федеральный закон \"Об образовании в Российской Федерации\" № 273-ФЗ. Статья 91. Лицензирование образовательной деятельности - читать на 9111.ru",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.klerk.ru/cdoc/view/04c102e7deda5906c6496f690f394da8/9f2ed63139532c3c77deba97d6636643",
+            "title": "Статья 91. Лицензирование образовательной деятельности - N 273-ФЗ (ред. от 04.08.2023) \"Об образовании в Российской Федерации\" (с изм. и доп., вступ. в силу с 01.09.2023)",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://base.garant.ru/70291362/547649ff63bad80904f288cab03c5176",
+            "title": "Статья 91. Лицензирование образовательной деятельности. Федеральный закон от 29.12.2012 N 273-ФЗ \"Об образовании в Российской Федерации\" (с изменениями и дополнениями) | ГАРАНТ",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://sudact.ru/law/federalnyi-zakon-ot-29122012-n-273-fz-ob/glava-12/statia-91",
+            "title": "Статья 91. Лицензирование образовательной деятельности",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.consultant.ru/document/cons_doc_LAW_140174/dda3cee5868d1739eb34ccd9e8a98085fa2c76e2",
+            "title": "Статья 91. Лицензирование образовательной деятельности \\ КонсультантПлюс",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://zakonobobrazovanii.ru/glava-12/statya-91",
+            "title": "Статья 91. Лицензирование образовательной деятельности",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://rulaws.ru/laws/Federalnyy-zakon-ot-29.12.2012-N-273-FZ/Statya-91",
+            "title": "Ст. 91 закона об образовании в рф. Федеральный закон от 29.12.2012 N 273-ФЗ (ред. от 29.12.2025)",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://legalacts.ru/doc/273_FZ-ob-obrazovanii",
+            "title": "Федеральный закон от 29.12.2012 N 273-ФЗ (ред. от 25.04.2026) \"Об образовании в Российской Федерации\"",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://systems.education/license",
+            "title": "Об образовательной лицензии",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.consultant.ru/law/podborki/kogda_na_obuchenie_nuzhna_licenziya",
+            "title": "Когда на обучение нужна лицензия \\ 2026 год \\ Акты, образцы, формы, договоры \\ КонсультантПлюс",
+            "verdict": "YES",
+            "raw": "YES"
+          }
+        ]
+      },
+      {
+        "q": "договор поручения обработки персональных данных требования",
+        "hit_count": 10,
+        "yes_count": 7,
+        "no_count": 3,
+        "unparseable_count": 0,
+        "answered": true,
+        "hits": [
+          {
+            "url": "https://pod-ft.ru/baza-znaniy/obrabotka-i-zashchita-personalnykh-dannykh-patsientov-v-meditsinskikh-organizatsiyakh",
+            "title": "Обработка персональных данных в медицинских учреждениях: правила 152-ФЗ и 323-ФЗ",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://voicee.ru/resources/blog/transkribaciya-fz-152-riski-inostrannyh-servisov",
+            "title": "Транскрибация и ФЗ-152: чем опасны иностранные сервисы",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://gba.business.ru/dogovor_na_poruchenie_obrabotki_personalnyh_dannyh",
+            "title": "ОФЕРТА на поручение обработки персональных данных",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://cue-to.ru/docs/dogovor-poruchenie-oferta-na-obrabotku-personalnyh-dannyh",
+            "title": "Договор-поручение (оферта) на обработку персональных данных",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://wiki.lexinformatica.ru/index.php/%D0%9E%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA_%D0%BF%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85",
+            "title": "Обработчик персональных данных — Lex Informatica",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://securegpt.ru/blog/ai-personal-data-legal-risks",
+            "title": "ИИ и персональные данные: юридические риски для бизнеса | SecureGPT",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://ru.ivideon.com/contract-assigment-privacy",
+            "title": "Договор-поручение (оферта) на обработку персональных данных",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.consultant.ru/document/cons_doc_LAW_61801/315f051396c88f1e4f827ba3f2ae313d999a1873/",
+            "title": "Статья 6. Условия обработки персональных данных \\ КонсультантПлюс",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://b-152.ru/operator-obrabotchik-pdn",
+            "title": "Модель «Оператор — Обработчик» персональных данных: экспертный анализ, практика и особенности правоприменения",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://zarlaw.ru/lifehacks/articles/operator-operator-ili-operator-obrabotchik-chto-ukazat-v-dogovore-dlya-snizheniya-riskov",
+            "title": "Оператор-Оператор или Оператор-Обработчик: что указать в договоре для снижения рисков",
+            "verdict": "YES",
+            "raw": "YES"
+          }
+        ]
+      },
+      {
+        "q": "самозанятый лицензия на собственное программное обеспечение",
+        "hit_count": 10,
+        "yes_count": 1,
+        "no_count": 9,
+        "unparseable_count": 0,
+        "answered": false,
+        "hits": [
+          {
+            "url": "https://1c.ru/rus/firm1c/become-partner",
+            "title": "1С",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.klerk.ru/blogs/qugo/530563",
+            "title": "ИП на НПД оказывает образовательные услуги. Что нужно знать заказчику?",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.sher.taxi/informaciya",
+            "title": "Работа водителям Яндекс. Такси. Сколько можно заработать на своем авто (легковая / грузовая машина) через таксопарк / самозанятым",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://agregatorcursov.ru/articles/samozanyatyy-prodaet-onlayn-kursy",
+            "title": "Самозанятый онлайн-курсы: налоги, регистрация, платформы 2026 | agregatorcursov.ru",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://vist-m.ru/services/ip-driver",
+            "title": "Открытие ИП для такси 🚗 в Москве под ключ быстро и легально",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://astral.ru/aj/elem/nalogi-na-marketpleysakh-kak-vybrat-sistemu-nalogooblozheniya",
+            "title": "Налоги на маркетплейсах: как выбрать систему налогообложения",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://vc.ru/official_/2862932-arenda-oblachnyh-kass-dlya-marketpleysov",
+            "title": "Лучшая аренда облачных касс для маркетплейсов 2026 | Топ для ИП и ООО 🚀 — Актуальные отзывы 2026 на vc.ru",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://xn--80aapgyievp4gwb.xn--p1ai/blog/dogovor-s-samozanyatym-programmistom",
+            "title": "Может ли программист быть самозанятым в 2026: образец договора",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://pravo.rg.ru/rubrics/question/80001",
+            "title": "Тонкости проведения обучения без лицензии — Юридическая консультация",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://qugo.ru/blog/dogovor-s-samozanyatym-programmistom-usloviya-kotorye-nado-obyazatelno-uchest",
+            "title": "Договор с самозанятым программистом: условия, которые надо обязательно учесть — блог Qugo",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      },
+      {
+        "q": "валютный контроль ИП поступления из-за рубежа",
+        "hit_count": 10,
+        "yes_count": 9,
+        "no_count": 1,
+        "unparseable_count": 0,
+        "answered": true,
+        "hits": [
+          {
+            "url": "https://mellow.io/ru/mellow-media/chto-takoe-valyutnyy-kontrol-i-zachem-on-nuzhen",
+            "title": "Что такое валютный контроль, виды валютного контроля",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://life-trip.ru/kak-legalno-vyvesti-adsense-i-webmoney-na-schet-ip-i-platit-nalogi",
+            "title": "Как вывести Adsense и Webmoney на счет ИП и платить налоги",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.sostav.ru/blogs/289562/95625",
+            "title": "Как получать оплату из-за рубежа физлицу, самозанятому и ИП",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://companies.rbc.ru/news/tcRBd6PjQk/oplata-iz-za-rubezha-dlya-frilanserov-i-mikrobiznesa-luchshie-metodyi-v-2026",
+            "title": "Оплата из-за рубежа для фрилансеров и микробизнеса: лучшие методы в 2026 | РБК Компании",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://nalog-nalog.ru/valyutnye_operacii/valyutnyj-kontrol-v-2021-godu-dlya-yuridicheskih-i-fizicheskih-lic",
+            "title": "Валютный контроль в 2026 году для юридических и физических лиц - nalog-nalog.ru",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://bitoffice.by/blog/samozanyatost-npd-belarus-2026",
+            "title": "Самозанятость в Беларуси 2026: НПД, ставки и регистрация",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://habr.com/ru/articles/310300",
+            "title": "Как официально принимать валютные платежи из-за рубежа в России (ИП) / Хабр",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://harant.ru/questions/q-153051",
+            "title": "Самозанятость и доход из-за рубежа: как легально получать оплату на иностранный счёт? • Вопрос №00153051",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.lockobank.ru/articles/ved/ehksportnye-operacii",
+            "title": "Валютный контроль при экспорте товаров и услуг",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://vc.ru/marketplace/2986860-oplata-v-kitay-cherez-agenta",
+            "title": "Оплата в Китай через агента в 2026: как найти и выбрать безопасный сервис — Маркетплейсы на vc.ru",
+            "verdict": "YES",
+            "raw": "YES"
+          }
+        ]
+      },
+      {
+        "q": "самозанятый превысил лимит 2,4 млн рублей что делать",
+        "hit_count": 10,
+        "yes_count": 10,
+        "no_count": 0,
+        "unparseable_count": 0,
+        "answered": true,
+        "hits": [
+          {
+            "url": "https://zakonguru.com/biznes/samozanyatyj-prevysil-limit.html",
+            "title": "Что делать, если самозанятый превысил лимит в 2,4 млн рублей в год ...",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://qugo.ru/blog/dohod-samozanyatogo-prevysil-limit-chto-delat",
+            "title": "Самозанятый превысил лимит дохода: что делать — блог Qugo",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.moedelo.org/club/article-knowledge/samozanyatyj-prevysil-limit-dohoda-chto-delat",
+            "title": "Самозанятый превысил лимит дохода: что делать, какие могут быть последствия — «Мое Дело»",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.audit-it.ru/articles/account/a84/1090345.html",
+            "title": "Что делать, если самозанятый превысил лимит по доходу",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://allo.tochka.com/question/q/cto-delat-esli-limit-prevysil-samozaniatyi-fizlico",
+            "title": "Что делать, если самозанятый превысил лимит по доходам?",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://moyaudalenka.ru/journal/chto-takoe-limit-dohoda",
+            "title": "Лимит дохода самозанятого в 2025 году: какие поступления учитывать и что делать при превышении | ЖМУ",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.klerk.ru/user/2595456/682934",
+            "title": "Лимит дохода 2,4 млн рублей для самозанятых: что делать, если вы к нему приближаетесь",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.garant.ru/consult/account/1792082",
+            "title": "Порядок налогообложения самозанятого после превышения лимита дохода | Бухучет и отчетность: ГАРАНТ.РУ",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://kdelu.vtb.ru/articles/chto-delat-esli-samozanyatyj-dostig-limita-po-dohodu-24-mln-rublej-v-god",
+            "title": "Что делать, если самозанятый достиг лимита по доходу — 2,4 млн рублей в год?",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://taxilicense.ru/articles/chto-delat-samozanyatomu-esli-dohod-prevy-sit-2-4-mln-rublej-v-god-nuzhno-li-otkry-vat-ip-i-est-li-drugie-varianty",
+            "title": "Что делать самозанятому, если доход превысит 2,4 млн рублей в год ...",
+            "verdict": "YES",
+            "raw": "YES"
+          }
+        ]
+      },
+      {
+        "q": "422-ФЗ статья 4 статья 6 ограничения виды деятельности",
+        "hit_count": 10,
+        "yes_count": 5,
+        "no_count": 5,
+        "unparseable_count": 0,
+        "answered": true,
+        "hits": [
+          {
+            "url": "https://jump.finance/articles/zakon-o-samozanyatykh-fz-422-glavnye-izmeneniya-i-novye-pravila-2025-goda",
+            "title": "ФЗ 422 о самозанятых: изменения в 2025 году, новый закон и последние поправки",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://konsol.pro/blog/ip-na-usn-i-npd-kak-sochetat",
+            "title": "ИП на УСН и НПД: как совмещать налоговые режимы и их преимущества",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://incrussia.ru/learn/akie-vidy-deyatelnosti-dya-samozanyatogo",
+            "title": "Самозанятость: какие виды деятельности разрешены в 2025 году - Инк.",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://kontur.ru/articles/4818",
+            "title": "Самозанятость в 2026: виды деятельности и налоги — Контур",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://astral.ru/aj/elem/samozanyatyy-i-byvshiy-rabotodatel-pravilo-dvukh-let",
+            "title": "Самозанятый и бывший работодатель: правило «двух лет» и чем грозит его нарушение - Астрал.Журнал",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://kontur.ru/sign/spravka/55089-rabotat_s_samozanyatymi_po_zakonu",
+            "title": "Переквалификация самозанятых в трудовые отношения: риски и советы — Контур.Сайн",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://vitvet.com/articles/samozanyatye/nalogovye_riski_samozanyatyj_byvshij_sotrudnik",
+            "title": "Налоговые риски: самозанятый бывший сотрудник | Юрист",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://base.garant.ru/410717950",
+            "title": "Письмо Федеральной налоговой службы от 11.11.2024 N АБ-4-20/12835@ О взаимодействии с налогоплательщиками налога на профессиональный доход в рамках осуществления предпринимательской деятельности | ГАРАНТ",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.klerk.ru/doc/526573",
+            "title": "Минфин РФ: Письмо № 03-11-11/11673 от 18.02.2022",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://base.garant.ru/400483963",
+            "title": "Письмо Департамента налоговой политики Минфина России от 20.02.2021 N 03-11-11/12093 О порядке применения НПД | ГАРАНТ",
+            "verdict": "YES",
+            "raw": "YES"
+          }
+        ]
+      }
+    ],
+    "plausible_uncovered": [
+      {
+        "q": "регистрация товарного знака Роспатент сроки пошлина 2026",
+        "hit_count": 10,
+        "yes_count": 0,
+        "no_count": 10,
+        "unparseable_count": 0,
+        "answered": false,
+        "hits": [
+          {
+            "url": "https://legal-support.ru/information/blog/trademarks/osparivanie-otkaza-rospatenta-v-registracii-tovarnogo-znaka",
+            "title": "Оспаривание отказа Роспатента в регистрации товарного знака в Москве",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.dvitex.ru/poleznoe/biznes/intellektualnaya-sobstvennost/registratsiya-i-patentovanie-prava-na-mobilnoe-prilozhenie-v-rossii",
+            "title": "Регистрация и патентование мобильных приложений⚡| Юристы по интеллектуальной собственности",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.bashukchichkanov.com/press/po-kakim-kriteriyam-vybrat-nazvanie-dlya-kompanii-ili-produkta",
+            "title": "Как выбрать название для компании или продукта: ключевые критерии и ошибки",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://nris.ru/blog/otkaz-v-registracii-tovarnogo-znaka",
+            "title": "Отказ в регистрации товарного знака: причины и дальнейшие действия — подробности у n'RIS",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.bashukchichkanov.com/press/ip-kak-tovarnyy-znak",
+            "title": "Регистрация товарного знака для ИП (индивидуального предпринимателя)",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.bashukchichkanov.com/press/chto-delat-esli-prishel-otkaz-v-registratsii-tovarnogo-znaka",
+            "title": "Отказ в регистрации товарного знака: основные причины, порядок обжалования и стратегия дальнейших действий",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://eacportal.com/blog/otkaz-v-registratsii-tovarnogo-znaka",
+            "title": "Основания для отказа в регистрации товарного знака: какие бывают виды отказов. Отказ в регистрации товарного знака: причины отказа в регистрации товарного знака | ЕАС Портал",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://linkmark.ru/articles/otkrytye-reestry-fips-kakuyu-informaciyu-mozhno-poluchit",
+            "title": "Открытые реестры ФИПС: какую информацию можно получить, поиск патентов по базе ФИПС | Линкмарк",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://svoefermerstvo.ru/svoemedia/articles/zakony-dlja-biznesa-izmenenija-v-marte-2026-goda",
+            "title": "Законы для бизнеса: изменения в марте 2026 года",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://onlinepatent.ru/faq/trademark/po-kakoy-prichine-mogut-otkazat-v-registratsii-tovarnogo-znaka",
+            "title": "Роспатент отказал в регистрации товарного знака - причины",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      },
+      {
+        "q": "нормы СанПиН освещённость групповой комнаты детского сада",
+        "hit_count": 10,
+        "yes_count": 1,
+        "no_count": 9,
+        "unparseable_count": 0,
+        "answered": false,
+        "hits": [
+          {
+            "url": "https://www.mirkvartir.ru/journal/assistant/2025/10/17/normy-insolyacii-v",
+            "title": "Нормы инсоляции в условиях роста плотности застройки: как обеспечить достаточное солнечное освещение — журнал МИР КВАРТИР",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://meganorm.ru/Data2/1/4293842/4293842604.htm",
+            "title": "СанПиН 42-121-4719-88 Санитарные правила устройства, оборудования и содержания общежитий для рабочих, студентов, учащихся средних специальных учебных заведений и профессионально-технических училищ / 42 121 4719 88",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "http://docs.cntd.ru/document/1200003977",
+            "title": "ТСН 30-304-2000 г.Москвы (МГСН 1.01-99) Нормы и правила проектирования планировки и застройки г. Москвы (с Изменениями на 22.09.2020), МГСН от 25 января 2000 года №1.01-99, ТСН от 25 января 2000 года №30-304-2000 г.Москвы",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://law.rufox.ru/view/9/21591.htm",
+            "title": "Законы :: ТСН 30-304-2000 г.Москвы (МГСН 1.01-99) Нормы и правила проектирования планировки и застройки г. Москвы (С Изменениями)Постановление Правительства Москвы от 25.01.2000 N 49МГСН от 25.01.2000 N 1.01-99ТСН от 2000-01-25 N 30-304-2000 г.Москвы - RuFox",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://law.rufox.com/view/9/21591.htm",
+            "title": "Законы :: ТСН 30-304-2000 г.Москвы (МГСН 1.01-99) Нормы и правила проектирования планировки и застройки г. Москвы (С Изменениями)Постановление Правительства Москвы от 25.01.2000 N 49МГСН от 25.01.2000 N 1.01-99ТСН от 2000-01-25 N 30-304-2000 г.Москвы - RuFox",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://strexp.ru/question/ekspertiza-po-insolyaczii",
+            "title": "Экспертиза по инсоляции | ЦЕНТР СТРОИТЕЛЬНЫХ ЭКСПЕРТИЗ",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://mcce.ru/nashi-uslugi/ekspertiza/stroitelnaya-ekspertiza/ekspertiza-insolyaczii",
+            "title": "Экспертиза инсоляции - расчет освещенности территорий и помещений",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://vk.com/@stroymarket.afanasyevo-minimalnye-otstupy-zdanii-stroenii-sooruzhenii-ot-granic-zem",
+            "title": "Минимальные отступы зданий, строений, сооружений от границ земельных участков | VK",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://sudexperts.ru/stati/stati-po-stroitelnoj-ekspertize/raschet-insolyaczii-pomeshhenij",
+            "title": "Расчет инсоляции помещений",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.ekodar.ru/filter/water-wiki/interesno-pochitat/sanpin-normy-pitevoj-vody-1-2-3685-21-pdk-tablica",
+            "title": "Нормы СанПиН на питьевую воду 1.2.3685-21: ПДК (таблица), очистка, фильтры | Экодар",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      },
+      {
+        "q": "как оформить наследство на квартиру без завещания сроки",
+        "hit_count": 10,
+        "yes_count": 2,
+        "no_count": 8,
+        "unparseable_count": 0,
+        "answered": true,
+        "hits": [
+          {
+            "url": "https://blog.domclick.ru/nedvizhimost/post/kak-prodat-kvartiru-esli-sobstvennik-nesovershennoletnij",
+            "title": "Как продать квартиру, если собственник — несовершеннолетний ребенок: продажа квартиры с несовершеннолетними детьми собственниками - Недвижимость - Журнал Домклик",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://regions.ru/obschestvo/kak-oformit-nasledstvo-chtoby-ne-bylo-gryzni-s-rodnej-sovet-jurista-iz-podmoskovja",
+            "title": "Как оформить наследство, чтобы не было грызни с родней: совет юриста из Подмосковья | REGIONS.RU",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "http://www.arkoc.com/topic/zhilishchnye-komissii",
+            "title": "Жилищные комиссии — юридическая консультация",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.drive2.ru/c/714017904349163180",
+            "title": "Регистрация советского мото с отсутствующим реестром регистрации в ГИБДД — Сообщество «Околоколесица (мотоциклы, ATV, гидроциклы)» на DRIVE2",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://noboring-finance.ru/gazeta/kak-partnyorskie-proekty-mogut-pomoch-rasti-biznesu-princip-raschyota-vygody-ot-kooperacii",
+            "title": "Партнерство в бизнесе: виды, как оформить и оценить выгоду от совместных проектов | Нескучные финансы",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.regberry.ru/registraciya-ooo/vyhod-uchastnika-iz-ooo",
+            "title": "Выход участника из ООО, пошаговая инструкция",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.mos.ru/otvet-dokumenti/kak-nayti-notariusa",
+            "title": "Как найти нотариуса - Москва",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://lexakova.ru/notarialnye-dejstviya/notarius-po-nasledstvennym-delam",
+            "title": "Нотариус по наследственным делам в Москве - услуги и консультации нотариальной конторы по оформлению",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://t-j.ru/news/poisk-nasledstva",
+            "title": "Реестр наследственных дел 2025: как проверить наследственное дело онлайн по фамилии",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.sberbank.ru/ru/person/investments/edu/courses/kak-polzovatsya-iis/vychet-na-vznos",
+            "title": "Как оформить и получить вычет на взнос по ИИС? - Сбербанк",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      },
+      {
+        "q": "техосмотр грузового автомобиля периодичность 2026 правила",
+        "hit_count": 10,
+        "yes_count": 0,
+        "no_count": 10,
+        "unparseable_count": 0,
+        "answered": false,
+        "hits": [
+          {
+            "url": "https://www.klerk.ru/blogs/astral/591067",
+            "title": "Путевой лист служебного легкового ...",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://peterburg2.ru/news/tehosmotr-v-2026-godu-novye-pravila-dlya-voditeley-i-shtrafy-235304.html",
+            "title": "Забыли про техосмотр? Кому грозит штраф 2000 рублей в этом году",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://110km.ru/art/sravnenie-cen-osago-na-may-2026-gde-vygodnee-oformit-strahovku-175220.html",
+            "title": "Как меняются предложения страховых компаний - неожиданные результаты расчета",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://svoboda-taxi.ru/kia-k5",
+            "title": "Kia K5 в аренду под такси — комфорт+, выкуп, Яндекс.Такси",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://elpts-info.ru/zavod-moskvich-vypustil-pervyj-konvejernyj-jelektromobil-atom-i-gotovitsja-k-serijnomu-proizvodstvu",
+            "title": "Электромобиль Атом серии PT в преддверии серийного производства",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://mikspolis.ru/osago/taxi",
+            "title": "ОСАГО для такси онлайн рассчитать оформить купить",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://auto.yuga.ru/articles/1032.html",
+            "title": "Сколько на самом деле зарабатывает АвтоВАЗ с Гранты и Весты",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://fomin-clinic.ru/blog/normalnye-znacheniya-kholesterina-v-krovi-u-muzhchin-i-zhenshchin",
+            "title": "Общий холестерин: нормы по возрасту, расшифровка анализа",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.drive2.ru/b/695657709432740492",
+            "title": "Снятие и Постановка на учёт с сохранением номеров 2025 г. — DRIVE2",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.drive2.ru/b/731529826044740332",
+            "title": "Записки перекупа #109. Как по состоянию на 20.04.2026 проверить, на учете ли авто, и сколько было владельцев? — DRIVE2",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      },
+      {
+        "q": "лицензия на образовательную деятельность для автошколы требования к площадке",
+        "hit_count": 10,
+        "yes_count": 0,
+        "no_count": 10,
+        "unparseable_count": 0,
+        "answered": false,
+        "hits": [
+          {
+            "url": "https://skillbox.ru/media/education/materinskiy-kapital-na-obuchenie-detey-instruktsiya-po-ispolzovaniyu",
+            "title": "Материнский капитал на обучение детей: инструкция по использованию",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://blog.whiteedtech.ru/blog/kak-poluchit-litsenziyu-na-obrazovatelnuyu-deyatelnost-dlya-onlajn-shkoly",
+            "title": "Лицензия на образовательную деятельность для онлайн-школы",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://jump.finance/articles/samozanyatyy-obrazovatelnye-uslugi",
+            "title": "Может ли самозанятый вести образовательную деятельность – как получить лицензию",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://companies.rbc.ru/news/uGqx6fe25T/kak-onlajn-shkole-poluchit-obrazovatelnuyu-litsenziyu",
+            "title": "Как онлайн-школе получить образовательную лицензию | РБК Компании",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.ubrr.ru/dlya-biznesa/podderzhka-biznesa/spravochnik-predprinimatelya/obrazovatelnaya-licenziya",
+            "title": "Образовательная лицензия: что это и зачем она нужна / Уральский банк реконструкции и развития",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.klerk.ru/blogs/roskom24/671337",
+            "title": "Лицензия на образовательную деятельность онлайн-школ в 2026: как получить и обезопасить бизнес",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.regberry.ru/malyy-biznes/licenzirovanie-obrazovatelnoy-deyatelnosti",
+            "title": "Как получить лицензию на образовательную деятельность для ИП и организаций в 2026 году",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.kp.ru/money/biznes/litsenziya-na-obrazovatelnuyu-deyatelnost",
+            "title": "Лицензия на образовательную деятельность в 2026 году: как получить, требования, документы, сроки оформления образовательной лицензии для ИП, самозанятых",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://frankmedia.ru/221772",
+            "title": "Лицензия на образовательную деятельность: кому нужна и как ...",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://zenclass.ru/ponyatno/licensetoschool",
+            "title": "Лицензия на образовательную деятельность онлайн: кому нужна и как получить",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      },
+      {
+        "q": "уплата утилизационного сбора при ввозе спецтехники ставки",
+        "hit_count": 10,
+        "yes_count": 3,
+        "no_count": 7,
+        "unparseable_count": 0,
+        "answered": true,
+        "hits": [
+          {
+            "url": "https://tambroker.ru/kalkulyator-rastamozhki-avtomobiley",
+            "title": "Калькулятор растаможки автомобилей",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://ucsol.ru/information/utilizatsionnyj-sbor",
+            "title": "Утилизационный сбор на транспортные средства (ТС) в 2026 году",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://xn---1-6kci4dxa.xn--p1ai/2024/05/25/%D0%BA%D0%B0%D0%BA-%D0%BF%D1%80%D0%B8%D0%B3%D0%BD%D0%B0%D1%82%D1%8C-%D0%B8-%D1%80%D0%B0%D1%81%D1%82%D0%B0%D0%BC%D0%BE%D0%B6%D0%B8%D1%82%D1%8C-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB-4",
+            "title": "Как пригнать и растаможить автомобиль из Армении в Россию | | АВТО-1",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://sib.fm/news/2026/03/25/vvoz-avtomobilej-v-rossiyu-cherez-strany-eaes-poteryaet-vygodu-s-1-aprelya-2026-goda",
+            "title": "Ввоз автомобилей в Россию через страны ЕАЭС потеряет выгоду с 1 апреля 2026 года",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.garant.ru/products/ipo/prime/doc/408452085",
+            "title": "Постановление Правительства Российской Федерации от 13 февраля 2024 г. № 152 “О внесении изменений в постановление Правительства Российской Федерации от 26 декабря 2013 г. N 1291” | Документы ленты ПРАЙМ: ГАРАНТ.РУ",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://dmlogist.com/novosti/osobennosti-utilsbora-s-1-4-2024-pp-rf-152-ot-13-02-2024",
+            "title": "Особенности утильсбора с 1 апреля 2024 года, ПП РФ №152 от 13.02.2024",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://base.garant.ru/408552085",
+            "title": "Постановление Правительства Российской Федерации от 13.02.2024 N 152 \"О внесении изменений в постановление Правительства Российской Федерации от 26.12.2013 N 1291\" | ГАРАНТ",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://ucsol.ru/information/perechen-transportnykh-sredstv-dlya-raschjota-utilsbora",
+            "title": "Перечень стоимости автомобилей Минпромторга для расчета утильсбора при ввозе из стран ЕАЭС",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.klerk.ru/user/1958959/597883",
+            "title": "Схему серого импорта авто в РФ из стран ЕАЭС нивелируют путем корректировки расчета утилизационного сбора",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.autonews.ru/news/65c38a239a7947c0748310d1",
+            "title": "С 1 апреля в России подорожают многие автомобили из-за ограничений параллельного импорта :: Autonews",
+            "verdict": "YES",
+            "raw": "YES"
+          }
+        ]
+      },
+      {
+        "q": "правила содержания домашних животных в многоквартирном доме",
+        "hit_count": 10,
+        "yes_count": 4,
+        "no_count": 6,
+        "unparseable_count": 0,
+        "answered": true,
+        "hits": [
+          {
+            "url": "https://base.garant.ru/72139416/4d6cc5b8235f826b2c67847b967f8695",
+            "title": "Статья 13. Требования к содержанию домашних животных. Федеральный закон от 27.12.2018 N 498-ФЗ \"Об ответственном обращении с животными и о внесении изменений в отдельные законодательные акты Российской Федерации\" (с изменениями и дополнениями) | ГАРАНТ",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://turbinadm.gosuslugi.ru/deyatelnost/napravleniya-deyatelnosti/prokuratura-informiruet/novosti_369.html",
+            "title": "Административная ответственность за нарушение требований к содержанию домашних животных",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://royalcanin.ru/dog-article/zakon-o-vygule-sobak",
+            "title": "Правила выгула собак: закон и требования для владельцев | Royal Canin",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.walkservice.ru/rights.aspx",
+            "title": "Содержание, правила выгула и содержания собак и других домашних животных в Москве и по России",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "http://docs.cntd.ru/document/552045936",
+            "title": "Об ответственном обращении с живот...",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://ppt.ru/trends/pravovye-voprosy-obrashcheniya-s-domashnimi-zhivotnymi",
+            "title": "Правовые вопросы обращения с домашними животными в России: полный гид для владельцев",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "http://cgon.rospotrebnadzor.ru/content/shkola-gramotnogo-potrebitelya/2118",
+            "title": "Нитраты в воде – это опасно?",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://vc.ru/legal/2315448-dokumenty-dlya-prodazhi-podpiski-na-telegram-kanal",
+            "title": "Какие документы нужны для продажи платной подписки на Telegram-канал? — Право на vc.ru",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://chvetochki.ru/finikovaya-palma",
+            "title": "Финиковая пальма уход и содержание в домашних условиях",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://files.stroyinf.ru/Data1/7/7247/index.htm",
+            "title": "СанПиН 4719-88 «Санитарные правила устройства, оборудования и содержания общежитий для рабочих, студентов, учащихся средних специальных учебных заведений и профессионально-технических училищ»",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      },
+      {
+        "q": "порядок увольнения по сокращению штата выплаты компенсации",
+        "hit_count": 10,
+        "yes_count": 4,
+        "no_count": 6,
+        "unparseable_count": 0,
+        "answered": true,
+        "hits": [
+          {
+            "url": "https://www.rbc.ru/education/28/04/2026/69e88a529a79471927d90f94",
+            "title": "Увольнение по сокращению штата в 2026 году: права работника и выплаты — РБК",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%B7%D1%8B%D0%B2_%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D0%BE%D0%B2_%D0%B2_%D0%92%D0%BE%D0%BE%D1%80%D1%83%D0%B6%D1%91%D0%BD%D0%BD%D1%8B%D0%B5_%D0%A1%D0%B8%D0%BB%D1%8B_%D0%A1%D0%A1%D0%A1%D0%A0_(1980-%D0%B5_%D0%B3%D0%BE%D0%B4%D1%8B)",
+            "title": "Призыв студентов в Вооружённые Силы СССР (1980-е годы) — Википедия",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.ubrr.ru/dlya-biznesa/podderzhka-biznesa/spravochnik-predprinimatelya/pravila-i-poryadok-sokrashcheniya",
+            "title": "Сокращение штата в 2026 году: пошаговая инструкция для HR и работодателей",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://www.glavbukh.ru/art/98657-raschety-pri-uvolnenii-po-sokrascheniyu-shtata-v-2025-godu-formuly-primery",
+            "title": "Увольнение по сокращению штата в 2026 году: инструкция для работодателя",
+            "verdict": "YES",
+            "raw": "YES"
+          },
+          {
+            "url": "https://ggmk.by/porjadok-pereraspredelenija-molodyh-specialistov.html",
+            "title": "Порядок перераспределения молодых специалистов",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.libussr.ru/doc_ussr/usr_6001.htm",
+            "title": "\"Инструкция о порядке назначения и выплаты стипендий студентам высших учебных заведений\"",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://aurinko25.livejournal.com/221259.html",
+            "title": "Студенческие чистки 1922-1929: aurinko25 — LiveJournal",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://expert.ru/news/bloomberg-v-ssha-rastet-kolichestvo-sokrashcheniy-v-it-sfere-iz-za-ii",
+            "title": "Bloomberg: в США растет количество сокращений в IT-сфере из-за ИИ | Эксперт",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://buh.ru/articles/trudoustroystvo-inostrantsev-bez-kvot-v-2026-godu.html",
+            "title": "Как трудоустроить иностранца в 2026 году | БУХ.1С - сайт для современного бухгалтера",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.pro-personal.ru/article/1098685-19-m6-raschet-srednego-zarabotka-pri-uvolnenii",
+            "title": "Расчет среднего заработка при увольнении в 2026 году: формула, калькулятор, примеры и особенности для декретниц и совместителей",
+            "verdict": "YES",
+            "raw": "YES"
+          }
+        ]
+      },
+      {
+        "q": "требования пожарной безопасности к складским помещениям класс Ф5.2",
+        "hit_count": 10,
+        "yes_count": 0,
+        "no_count": 10,
+        "unparseable_count": 0,
+        "answered": false,
+        "hits": [
+          {
+            "url": "https://lev-stroi.ru/monolitnye-raboty/vozvedenie-peregorodok",
+            "title": "Возведение монолитных перегородок - ЛВ-Строй",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://gkprofi.ru/library/PTM/pojproizv_5.pdf",
+            "title": "Требования пожарной безопасности к путям эвакуации",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.krasnadzor.ru/gosudarstvennyj-stroitelnyj-nadzor/info-materials-gsn/safety-fire/7684-%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BF%D0%BE%D0%B6%D0%B0%D1%80%D0%BD%D0%BE%D0%B9-%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BA-%D0%BD%D0%B5%D0%B7%D0%B0%D0%B4%D1%8B%D0%BC%D0%BB%D1%8F%D0%B5%D0%BC%D1%8B%D0%BC-%D0%BB%D0%B5%D1%81%D1%82%D0%BD%D0%B8%D1%87%D0%BD%D1%8B%D0%BC-%D0%BA%D0%BB%D0%B5%D1%82%D0%BA%D0%B0%D0%BC",
+            "title": "Требования пожарной безопасности к незадымляемым лестничным клеткам",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://47.mchs.gov.ru/deyatelnost/rabota-s-obrashcheniyami-grazhdan/chasto-zadavaemye-voprosy/voprosy-nadzornoy-deyatelnosti-i-profilakticheskoy-raboty/kakie-trebovaniya-v-oblasti-obespecheniya-pozharnoy-bezopasnosti-ustanovleny-k-minimalnym-protivopozharnym-rasstoyaniyam-razryvam-mezhdu-zhilymi-obshchestvennymi-v-tom-chisle-administrativnymi-bytovymi-zdaniyami-i-sooruzheniyami-raspolozhennymi-na-sosednih-zemelnyh-uchastkah",
+            "title": "Какие требования в области обеспечения пожарной безопасности, установлены к минимальным противопожарным расстояниям (разрывам) между жилыми, общественными (в том числе административными, бытовыми) зданиями и сооружениями, расположенными на соседних земельных участках - Вопрос",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.consultant.ru/document/cons_doc_LAW_78699/1b0a892fe2a5c72908c6a664a5fadaec7f7f44ab",
+            "title": "Статья 89. Требования пожарной безопасности к эвакуационным путям, эвакуационным и аварийным выходам \\ КонсультантПлюс",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.normacs.info/answers/4853",
+            "title": "NormaCS ~ Ответы экспертов ~ О нормативных требованиях пожарной безопасности к высоте ограждений балконов многоквартирных жилых домов",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.t-save.ru/blog/pozharnaya-bezopasnost-normativy-sp-ekspertnoe-mnenie-/na-kakoe-oborudovanie-pri-montazhe-pozharnoy-signalizatsii-nuzhen-pozharnyy-sertifikat",
+            "title": "Когда нужен пожарный сертификат? Компания Техника безопасности",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.doorinhome.ru/blog/tipy-nezadymlyaemyh-lestnic-v-mnogokvartirnyh-domah",
+            "title": "Типы незадымляемых лестничных клеток Н1, Н2, Н3 в многоквартирных домах: полный разбор по актуальным нормам | Компания «Двери в Дом»",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://mpr26.ru/docs/razyasneniya-norm-zakonodatelstva-prokurorom/ob-otvetstvennom-obrashchenii-s-zhivotnymi",
+            "title": "Об ответственном обращении с живот...",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://morozofkk.ru/pisma-mchs/id2738",
+            "title": "Устройство аварийных выходов на балкон, лоджию или террасу, требования пожарной безопасности » Блог Николая Морозова",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      },
+      {
+        "q": "субсидия на газификацию частного дома условия получения",
+        "hit_count": 10,
+        "yes_count": 0,
+        "no_count": 10,
+        "unparseable_count": 0,
+        "answered": false,
+        "hits": [
+          {
+            "url": "https://tatcenter.ru/rubrics/monitor/energeticheskij-suverenitet-i-czifrovaya-transformacziya-analiz-pervogo-dnya-foruma-energoprom-2026",
+            "title": "Энергетический суверенитет и цифровая трансформация: анализ первого дня форума «ЭНЕРГОПРОМ-2026» – Татцентр.ру",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://bpum.ru/subsidiya-na-otkrytie-biznesa",
+            "title": "Субсидия на открытие бизнеса",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.reg.ru/blog/subsidiya-na-otkrytie-biznesa",
+            "title": "Субсидия на открытие бизнеса: как ее получить в 2026 году",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://tourism.tatarstan.ru/subsidiya-na-razvitie-turinfrastrukturi-i.htm",
+            "title": "Субсидия на развитие туринфраструктуры и ...",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://mgorsk.ru/text/gorod/2026/02/27/76285341",
+            "title": "Субсидия на транспортировку для экспортеров Челябинской области в 2026 году - 27 февраля 2026 | МГОРСК.ру",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://cckrb.ru/programs/programma-5",
+            "title": "Субсидия на развитие фермерского хозяйства",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://gcjs.mos.ru/function/subsidies/subsidiya-na-oplatu-zhilogo-pomeshcheniya-i-kommunalnykh-uslug",
+            "title": "Субсидия на оплату жилого помещения и коммунальных ...",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://xn--h1alcedd.xn--d1aqf.xn--p1ai/catalog/ipoteka-dlya-molodykh-semey",
+            "title": "Субсидия на приобретение жилья для молодых семей – Госпрограммы",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://i.moscow/education_grant",
+            "title": "Субсидия на обучение сотрудников от Правительства Москвы | Фонд \"МИК\" - Московский инновационный кластер",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://ruzaregion.ru/deyatelnost/socialnaya_sfera/subsidia",
+            "title": "Субсидия на оплату жилого помещения и коммунальных услуг",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      }
+    ],
+    "alien": [
+      {
+        "q": "цена на бананы в Эквадоре сегодня",
+        "hit_count": 10,
+        "yes_count": 0,
+        "no_count": 10,
+        "unparseable_count": 0,
+        "answered": false,
+        "hits": [
+          {
+            "url": "https://infoprice.by",
+            "title": "INFOPRICE — сервис сравнения цен на продукты в магазинах Минска",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://vc.ru/life/1607410-platformy-dlya-igry-v-steam-i-drugih-launcherah-top-10-luchshih-servisov-dlya-oblachnogo-geiminga-v-stim",
+            "title": "Платформы для игры в Steam и других лаунчерах: ТОП-10 лучших сервисов для облачного гейминга в Стим — Личный опыт на vc.ru",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.hausdorf.ru/catalog/stiralnye-mashiny/ext/stiralnye-mashiny-40-sm",
+            "title": "Стиральные машины 40 см (глубина) с гарантией от производителя и бесплатной доставкой в Москве, отзывы покупателей и инструкции на нашем сайте элитной премиум техники!",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://vc.ru/provod/2962662-tseny-llm-api-tarify-claude-gpt-gemini-v-rublyakh",
+            "title": "Цены LLM API в 2026: точные тарифы Claude, GPT, Gemini в рублях — provod.AI на vc.ru",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://vc.ru/yesai/1227138-telegram-stars-kak-polzovatsya-kak-oplachivat-uslugi-v-botah",
+            "title": "Telegram Stars: как пользоваться, как оплачивать услуги в ботах — YES Ai Bot на vc.ru",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://partnerkin.com/c/34/propellerads",
+            "title": "PropellerAds — 88 отзывов + как работать в партнерской программе",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://dtf.ru/id378305/1712630-torgovye-boty-steam-ocean-ai-na-osnove-neironnoi-seti-dlya-zarabotka-na-steam-market",
+            "title": "Торговые Боты \"Steam Ocean AI\" на основе нейронной сети, для заработка на Steam Market — Александр Моргунов на DTF",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://botseller.ru/blog/skolko-stoit-chat-bot-tarify-sravnenie",
+            "title": "Сколько стоит чат-бот для бизнеса в 2026: полный разбор цен",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://dtf.ru/s/632025-steam-ocean-ai-bots/1712630-torgovye-boty-steam-ocean-ai-na-osnove-neyronnoy-seti-dlya-zarabotka-na-steam-market",
+            "title": "Торговые Боты \"Steam Ocean AI\" на основе нейронной сети, для заработка на Steam Market — Александр Моргунов на DTF",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://divany-akkordeon.ru/katalog/s-ortopedicheskim-matrasom-6",
+            "title": "Диваны аккордеон с ортопедическим матрасом, купить в Москве недорого - Цены в интернет-магазине от 32650 руб.",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      },
+      {
+        "q": "как испечь хлеб на закваске в горах",
+        "hit_count": 10,
+        "yes_count": 0,
+        "no_count": 10,
+        "unparseable_count": 0,
+        "answered": false,
+        "hits": [
+          {
+            "url": "https://www.tgu-dpo.ru/news/2024/04/26/gajd-po-dzenu-dlya-teh-kto-tolko-znakomitsya-s-ploshhadkoj",
+            "title": "Гайд по Дзену для новичков: основы и советы",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "http://remontspravka.com/mozhno-li-zamenit-duhovku-mikrovolno",
+            "title": "Как вместо духовки использовать свч-печь, микроволновка вместо духовки",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://letidor.ru/dom-i-rebenok/detskoe-avtokreslo-srok-godnosti.htm",
+            "title": "Правила жизни: детское автокресло имеет срок годности: Дом и ребенок - Летидор",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://astanahub.com/ru/blog/kak-sozdat-lokalnogo-oflain-golosovogo-assistenta-na-python-s-faster-whisper-i-ollama",
+            "title": "Как создать локального офлайн-голосового ассистента на Python с Faster Whisper и Ollama",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.bitget.com/ru/wiki/1152850",
+            "title": "Tether ERC20: что это и как использовать USDT на Ethereum",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://vc.ru/niksolovov/1775526-luchshie-neiroseti-i-ii-dlya-ucheby-besplatno-v-2026-godu-top-15",
+            "title": "Лучшие нейросети и ИИ для учебы бесплатно в 2026 году (ТОП-15) — Никита на vc.ru",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.vtb.ru/articles/platezhi/pochemu-prosyat-oplatit-sbp",
+            "title": "Почему в магазинах просят платить по СБП или наличными и выгодно ли это покупателю",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://cedrusdata.ru/blog/data-lake-with-trino",
+            "title": "Обработка данных в Data Lake с помощью Trino | Запись выступления | CedrusData",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.researchgate.net/publication/393095861_Sravnenie_modelej_segmentacii_doroznyh_tresin_na_osnove_sovremennyh_nejrosetevyh_arhitektur",
+            "title": "(PDF) Сравнение моделей сегментации дорожных трещин на основе современных нейросетевых архитектур",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://guap.ru/content/aai/sbornik2024.pdf",
+            "title": "МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗ...",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      },
+      {
+        "q": "zzzz qqqq nonexistent gibberish",
+        "hit_count": 1,
+        "yes_count": 0,
+        "no_count": 1,
+        "unparseable_count": 0,
+        "answered": false,
+        "hits": [
+          {
+            "url": "https://damiandabrowski.medium.com/day-80-of-100-days-agentic-engineer-challenge-how-to-minimize-ai-hallucinations-in-cursor-by-90-e2687a82e5ac",
+            "title": "Day 80 of 100 Days Agentic Engineer Challenge: How to minimize AI hallucinations in Cursor by 90% | by Damian Dąbrowski | Medium",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      },
+      {
+        "q": "лучшие маршруты для треккинга в Патагонии в марте",
+        "hit_count": 10,
+        "yes_count": 0,
+        "no_count": 10,
+        "unparseable_count": 0,
+        "answered": false,
+        "hits": [
+          {
+            "url": "https://kontur.ru/aegis/blog/84053-monitoring_deystviy_sotrudnikov",
+            "title": "Мониторинг действий сотрудников: что ...",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://vc.ru/top-raiting/2272614-bezopasnyy-perevod-usdt-seti-komissii-i-instruktsii-dlya-rossii",
+            "title": "Как перевести USDT безопасно и выгодно: сети, комиссии, пошаговые схемы для России — ТОП (Май 2026) на vc.ru",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://dtf.ru/avi/5059143-oplata-v-kitaj-cherez-agenta",
+            "title": "Оплата в Китай через агента: услуги, комиссии и сервисы в 2026 году — Видео на DTF",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://palmira-bc.ru/luchshie-parki-moskvy",
+            "title": "Лучшие парки Москвы для прогулок: ТОП-30 красивых мест (Фото и Карта)",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://tlgrm.ru/channels/travel",
+            "title": "Лучшие каналы жанра «Путешествия и эмиграция» для Telegram",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://vc.ru/ai/2074695-neyroseti-dlya-turagentov",
+            "title": "Лучшие нейросети для турагентов: инструменты искусственного интеллекта для современного туризма — AI на vc.ru",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://stelspb.ru/organizacziya-parallelnogo-importa-v-2025-2026-godah-marshruty-riski-i-luchshie-praktiki",
+            "title": "Организация параллельного импорта в 2025–2026 годах: маршруты, риски и лучшие практики | STEL",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://dtf.ru/id1242435/3639635-250-populyarnyh-telegram-kanalov-luchshie-tg-gruppy-i-chaty-na-russkom-yazyke",
+            "title": "250+ Популярных телеграм каналов – Лучшие тг группы и чаты на русском языке — Vladislav Ch на DTF",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://www.sostav.ru/blogs/287107/83722",
+            "title": "Нейросети для планирования путешествий и маршрутов в 2026 году: ТОП-10 лучших AI",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://mashagpt.ru/blog/neyroset-dlya-puteshestviy-planirovanie",
+            "title": "Нейросеть для путешествий — AI-планирование поездок",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      },
+      {
+        "q": "рецепт том ям с кокосовым молоком пошагово",
+        "hit_count": 10,
+        "yes_count": 0,
+        "no_count": 10,
+        "unparseable_count": 0,
+        "answered": false,
+        "hits": [
+          {
+            "url": "https://allmed.pro/drugs/monural",
+            "title": "Монурал рецепт, инструкция по применению, показания, аналоги, состав",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://maxim-nm.livejournal.com/478208.html",
+            "title": "Унижения в советских поликлиниках.: maxim_nm — LiveJournal",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://progoroduhta.ru/novosti-rossii/84676",
+            "title": "Вкус из детства: настоящие блины по рецепту из советской книжки — идеальный вариант на Масленицу 2026",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://farmedinstvo.info/articles/%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B3%D0%BE-%D1%80%D0%B5%D1%86%D0%B5%D0%BF%D1%82%D0%B0-%D0%BE%D1%82-%D0%B4%D1%80%D0%B5%D0%B2",
+            "title": "История медицинского рецепта: от древней Месопотамии до современной России - Фармединство",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://adindex.ru/publication/analitics/search/2026/01/20/341846.phtml",
+            "title": "Метрики вместо эмоций: как считать эффективность инфлюенс-кампании | Публикации | AdIndex.ru",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://habr.com/ru/articles/667884",
+            "title": "Удачный Шаблон Документации На Api, Который Будут Читать",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://stelki.corestep.ru/kompyuternaya-diagnostika-stop",
+            "title": "Компьютерная диагностика стоп от ортопедического центра CoreStep",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://sh.agency/portfolio/zarya",
+            "title": "ЗАРЯ - SmartHeart",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://adlook.me/blog/articles/statistika-zaprosov-v-google",
+            "title": "Статистика запросов в Google в 2026 году: как посмотреть поисковые запросы, ключевые слова для России и других странах",
+            "verdict": "NO",
+            "raw": "NO"
+          },
+          {
+            "url": "https://kma.biz/blog/kejsy/keysy-dlya-arbitrazha-trafika-vk.html",
+            "title": "Кейсы - Арбитраж трафика через таргет ВК (вконтакте)",
+            "verdict": "NO",
+            "raw": "NO"
+          }
+        ]
+      }
+    ]
+  },
+  "tally": {
+    "covered": {
+      "total": 10,
+      "answered": 9,
+      "not_answered": 1,
+      "errors": 0
+    },
+    "plausible_uncovered": {
+      "total": 10,
+      "answered": 4,
+      "not_answered": 6,
+      "errors": 0
+    },
+    "alien": {
+      "total": 5,
+      "answered": 0,
+      "not_answered": 5,
+      "errors": 0
+    }
+  },
+  "total_judge_calls": 241
+}

@@ -52,7 +52,11 @@ export function qsearchTool (server) {
     freshness: z.string().optional()
       .describe('Time filter: pd (past day), pw (past week), pm (past month), py (past year), or YYYY-MM-DDtoYYYY-MM-DD'),
     search_lang: z.string().optional().describe('Language code, e.g. "en", "ru"'),
-    country: z.string().optional().describe('Country code, e.g. "us", "ru"')
+    country: z.string().optional().describe('Country code, e.g. "us", "ru"'),
+    corpus_first: z.boolean().optional()
+      .describe('Search the local trust corpus before the web (default true). Set false to skip corpus and go straight to the web.'),
+    corpus_only: z.boolean().optional()
+      .describe('Return only corpus hits, never call the web (default false). Use for $0 repeat lookups on already-swept topics.')
   })
 
   server.registerTool(
@@ -105,7 +109,10 @@ export function qsearchTool (server) {
   // --- sweep ---
   const sweepSchema = z.object({
     queries: z.string()
-      .describe('Queries in label|query format, one per line. E.g.: "c1_01|self-hosted search\\nc1_02|SearXNG alternatives"'),
+      .describe('Queries in label|query[|priority][|domain] format, one per line. ' +
+        'priority ∈ ultra-broad (corpus-only, $0) | broad (SearXNG, $0, default) | focused (Brave web) | critical (Brave + LLM Context). ' +
+        'domain ∈ general (default) | scholarly (arxiv+PubMed+S2) | ru (Yandex/SearXNG ru-RU). ' +
+        'E.g.: "c1_01|self-hosted search\\nc2_01|qdrant latency 2026|focused\\nsch_01|crispr off-target|broad|scholarly"'),
     save: z.boolean().optional().default(false)
       .describe('Save parsed_snippets.md to ./data/sweeps/<timestamp>/ on the server')
   })
@@ -127,7 +134,7 @@ export function qsearchTool (server) {
   // --- index_research ---
   const indexResearchSchema = z.object({
     glob: z.string()
-      .describe('Glob pattern matching markdown research files to index. E.g.: "D:/Yahia/active/*/research/*.md"')
+      .describe('Glob pattern matching markdown research files to index. E.g.: "<vault>/**/research/*.md"')
   })
 
   server.registerTool(
@@ -150,10 +157,23 @@ export function qsearchTool (server) {
   )
 
   // --- context_search ---
+  // Anything absent from this shape is stripped before the HTTP call, so a knob the server
+  // understands is invisible to agents until it is declared here.
   const contextSearchSchema = z.object({
     query: z.string().describe('Search query for deep page content extraction'),
-    n_results: z.union([z.number(), z.string()]).transform(Number).pipe(z.number().min(1).max(2)).optional().default(1)
-      .describe('Number of sources (1-2 max — each source has 2-28 snippets, all get cleaned. CPU-bound, ~25s/source. Default 1.)')
+    // Ceiling raised 2 → 10. The cap is a latency guard, not a Brave limit: each source is
+    // cleaned by the local LLM at ~25s. Default stays 1 so nothing gets slower by accident.
+    n_results: z.union([z.number(), z.string()]).transform(Number).pipe(z.number().min(1).max(10)).optional().default(1)
+      .describe('Number of sources (1-10). Each source is locally cleaned at ~25s, so 10 sources ≈ 4 minutes. Default 1.'),
+    context_threshold_mode: z.enum(['disabled', 'strict', 'balanced', 'lenient']).optional()
+      .describe('Grounding strictness. strict = higher precision, fewer passages. Brave default: balanced.'),
+    freshness: z.string().optional().describe('pd | pw | pm | py | YYYY-MM-DDtoYYYY-MM-DD'),
+    country: z.string().length(2).optional().describe('2-letter country, e.g. ru. Raises RU source share on Russian queries.'),
+    search_lang: z.string().optional().describe('Search language, e.g. ru'),
+    maximum_number_of_tokens: z.number().min(1024).max(32768).optional()
+      .describe('Total grounding budget (Brave default 8192)'),
+    maximum_number_of_tokens_per_url: z.number().min(512).max(8192).optional()
+      .describe('Per-source token budget (Brave default 4096)')
   })
 
   server.registerTool(
@@ -260,6 +280,29 @@ export function qsearchTool (server) {
       }
       const text = await r.text()
       return { content: [{ type: 'text', text }] }
+    }
+  )
+
+  // --- verify_citation (the trust layer: does the cited source actually support the claim?) ---
+  const verifyCitationSchema = z.object({
+    claim: z.string().min(3).max(4000).describe('The exact claim/assertion the source is cited for'),
+    url: z.string().url().describe('The single source URL cited for the claim')
+  })
+
+  server.registerTool(
+    'verify_citation',
+    {
+      title: 'Verify Citation (qsearch)',
+      description: 'Check whether a cited source actually SUPPORTS a claim — the doesitlie citation-honesty method, live. Fetches the URL (PDF/HTML/headless render, SSRF-guarded), selects the most relevant passages, and an LLM-as-judge at temperature 0 returns a verdict: Supported | Partial | Unsupported (source is silent on it) | Contradicted (source says the opposite) | Fabricated (URL dead/bogus) | Error (could not fetch). Returns the verbatim supporting excerpt so you can audit it. Use before trusting a citation an agent produced.',
+      inputSchema: verifyCitationSchema.shape,
+      annotations: { readOnlyHint: true, openWorldHint: true }
+    },
+    async (params) => {
+      const v = await callQsearch('/verify', params)
+      const conf = v.confidence != null ? ` (confidence ${v.confidence})` : ''
+      const ev = v.evidence ? `\n\n> ${v.evidence}` : ''
+      const note = v.error ? `\n\n_note: ${v.error}_` : ''
+      return { content: [{ type: 'text', text: `**${v.verdict}**${conf} — ${v.source_url || params.url}${ev}${note}` }] }
     }
   )
 }

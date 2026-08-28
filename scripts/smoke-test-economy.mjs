@@ -2,7 +2,7 @@
 // Smoke test for Phase 5 economy logger — verifies sprint_metrics schema, recordSprintMetric
 // cost computation, and economyReport aggregation/filtering.
 //
-// Run:  node D:/Yahia/active/qsearch/scripts/smoke-test-economy.mjs
+// Run:  node scripts/smoke-test-economy.mjs
 // Exit: 0 = all pass, 1 = any failure
 
 import { QueryCache, COST_PER_CALL } from '../src/cache.js'
