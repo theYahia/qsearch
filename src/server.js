@@ -135,20 +135,22 @@ const searxng = process.env.SEARXNG_URL ? new SearXNGBackend(process.env.SEARXNG
 // via QSEARCH_ACADEMIC_ENABLED=false if you want to route scholarly elsewhere.
 const academic = (process.env.QSEARCH_ACADEMIC_ENABLED !== 'false') ? new AcademicBackend() : null
 
-// Yandex direct backend — only instantiated when both YANDEX_API_KEY and
+// Yandex direct backend — only instantiated when both YANDEX_SEARCH_API_KEY and
 // YANDEX_FOLDER_ID are set. Otherwise domain=ru falls back to SearXNG with
 // language=ru-RU bias (still works, just less Yandex-specific coverage).
+// WORK-413 дефект №7: env var renamed from YANDEX_API_KEY to YANDEX_SEARCH_API_KEY —
+// matches the name every other Yandex Cloud integration in this repo uses.
 let yandex = null
 // rd275: surface why Yandex isn't active so /sweep responses can explain the SearXNG fallback.
 let yandexInitError = null
-if (process.env.YANDEX_API_KEY && process.env.YANDEX_FOLDER_ID) {
+if (process.env.YANDEX_SEARCH_API_KEY && process.env.YANDEX_FOLDER_ID) {
   try { yandex = new YandexBackend() } catch (e) {
     yandexInitError = `init_failed: ${e.message}`
     console.warn(`[yandex] init failed: ${e.message}`)
   }
 } else {
   const missing = []
-  if (!process.env.YANDEX_API_KEY) missing.push('YANDEX_API_KEY')
+  if (!process.env.YANDEX_SEARCH_API_KEY) missing.push('YANDEX_SEARCH_API_KEY')
   if (!process.env.YANDEX_FOLDER_ID) missing.push('YANDEX_FOLDER_ID')
   yandexInitError = `not_configured: missing ${missing.join(' + ')}`
 }

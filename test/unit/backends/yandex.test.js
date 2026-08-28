@@ -3,9 +3,9 @@ import assert from 'node:assert/strict'
 import { YandexBackend } from '../../../src/backends/yandex.js'
 
 describe('YandexBackend', () => {
-  test('throws if YANDEX_API_KEY or YANDEX_FOLDER_ID missing', () => {
+  test('throws if YANDEX_SEARCH_API_KEY or YANDEX_FOLDER_ID missing', () => {
     assert.throws(() => new YandexBackend({ apiKey: '', folderId: '' }),
-      /YANDEX_API_KEY and YANDEX_FOLDER_ID/)
+      /YANDEX_SEARCH_API_KEY and YANDEX_FOLDER_ID/)
   })
 
   test('constructs when both creds provided', () => {
@@ -15,7 +15,7 @@ describe('YandexBackend', () => {
   })
 
   test('live search', async (t) => {
-    if (!process.env.YANDEX_API_KEY || !process.env.YANDEX_FOLDER_ID) {
+    if (!process.env.YANDEX_SEARCH_API_KEY || !process.env.YANDEX_FOLDER_ID) {
       return t.skip('Yandex creds not set — skip integration')
     }
     const b = new YandexBackend()

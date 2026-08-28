@@ -572,7 +572,7 @@ describe('qsearch server', () => {
 
   test('GET /backends/status — yandex reason matches expected shape', async () => {
     const res = await request(QSEARCH_PORT, 'GET', '/backends/status')
-    // Test process has no YANDEX_API_KEY → not_configured. If user runs with creds, configured.
+    // Test process has no YANDEX_SEARCH_API_KEY → not_configured. If user runs with creds, configured.
     assert.match(res.json.yandex.reason, /^(not_configured|init_failed|configured|unknown)/)
   })
 
