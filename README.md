@@ -311,3 +311,7 @@ See [docs/VISION.md](./docs/VISION.md) for the full picture and why federation i
 ## License
 
 Apache-2.0 — see [LICENSE](./LICENSE). Independent. BYOK. Self-hostable. No vendor lock-in.
+
+---
+
+Часть [WWmcp](https://github.com/theYahia/WWmcp) · Telegram: [@vhodvai](https://t.me/vhodvai)
