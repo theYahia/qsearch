@@ -48,3 +48,13 @@ cards/
 _scratch/
 content/
 doesitlie/
+
+# bench / audit artifacts — regenerated locally, never publish (added 2026-09-02)
+_bench_pairs_index.json
+_c0_before_sample.json
+_context_ingest_state.json
+_endpoint_compare.csv
+_endpoint_compare.json
+_spend_audit.json
+AUDIT-RESEARCH-STACK-*.md
+TIER-C-*.md
