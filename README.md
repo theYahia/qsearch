@@ -233,6 +233,15 @@ Returns only URLs found by 3+ engines — your high-trust subset.
 
 ## MCP integration
 
+The MCP server lives in this repo — there is no npm package for it. Run it from source:
+
+```bash
+git clone https://github.com/theYahia/qsearch.git && cd qsearch
+npm install
+npm start            # REST API on :8080 — must be running first
+npm run start:mcp    # MCP server (Streamable HTTP) on :8081
+```
+
 ### Claude Code
 
 Add to `~/.claude/settings.json`:
